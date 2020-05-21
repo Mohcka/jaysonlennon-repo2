@@ -2,12 +2,12 @@
 Fork this repo.
 
 ### Step1
-Set up your fork to track changes on the main repo.
+Set up your fork to track changes on the main repo:
 
 `git remote add upstream git@github.com:042020-dotnet-uta/jaysonlennon-repo2.git`
 
 ### Step 2
-Get the latest information from the main repo.
+Get the latest information from the main repo:
 
 `git fetch upstream`
 
