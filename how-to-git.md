@@ -42,7 +42,7 @@ Retrieve the latest code from the main repo:
 
 ### Step 9
 #### A
-If everything is fine, then you will not get any errors and can proceed to __step 10__.
+If everything is fine, then you will not get any errors and can proceed to __Step 10__.
 
 #### B
 If you get a merge conflict, they must be fixed first.
@@ -79,5 +79,5 @@ Once your branch is pushed to your fork:
   * Click "Create pull request"
   * On the "base" dropdown, select "develop"
   * On the "compare" dropdown, select `my-feature-branch`
-  * If you get a green checkmark, click on "Create pull request"
-    * If you get a red X, then do `git pull upstream develop` again to fix conflicts, 
+  * If you get a _green checkmark_, click on "Create pull request"
+    * If you get a _red X_, then go back to __Step 9__ and repeat the process.
