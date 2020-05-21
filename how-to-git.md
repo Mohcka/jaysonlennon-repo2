@@ -80,4 +80,4 @@ Once your branch is pushed to your fork:
   * On the "base" dropdown, select "develop"
   * On the "compare" dropdown, select `my-feature-branch`
   * If you get a _green checkmark_, click on "Create pull request"
-    * If you get a _red X_, then go back to __Step 9__ and repeat the process.
+    * If you get a _red X_, then go back to __Step 8__ and repeat the process.
