@@ -42,7 +42,7 @@ Retrieve the latest code from the main repo:
 
 ### Step 9
 #### A
-If everything is fine, then you will not get any errors and can proceed to _step 8_.
+If everything is fine, then you will not get any errors and can proceed to __step 10__.
 
 #### B
 If you get a merge conflict, they must be fixed first.
@@ -68,12 +68,12 @@ If the conflict is a file that was deleted and it is no longer needed, you can u
 
 After any conflicts are resolved, run `git add .` followed by `git commit -m "commit message after fixing conflicts"`
 
-### Step 9
+### Step 10
 Push your feature branch into your fork of the repo:
 
 `git push --set-upstream origin my-feature-branch`
 
-### Step 10
+### Step 11
 Once your branch is pushed to your fork:
   * Go to Github on your fork of the repo
   * Click "Create pull request"
