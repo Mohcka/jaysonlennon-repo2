@@ -26,7 +26,8 @@ Commit changes (this can be done as many times as you need):
 `git commit -m "commit message"`
 
 ### Step 8
-Retrieve the latest code from the main repo.
+Retrieve the latest code from the main repo:
+
 `git pull upstream develop`
 
 
