@@ -1,17 +1,21 @@
 ### Step1
 Set up your fork to track changes on the main repo.
+
 `git remote add upstream git@github.com:042020-dotnet-uta/jaysonlennon-repo2.git`
 
 ### Step 2
 Get the latest information from the main repo.
+
 `git fetch upstream`
 
 ### Step 3
 Checkout the develop branch so you have the correct code before you create your feature branch:
+
 `git checkout --track upstream/develop`
 
 ### Step 4
 Checkout your feature branch:
+
 `git checkout -b my-feature-branch`
 
 ### Step 5
@@ -19,10 +23,12 @@ Work on your feature
 
 ### Step 6
 Add the changes (this can be done as many times as you need):
+
 `git add .`
 
 ### Step 7
 Commit changes (this can be done as many times as you need):
+
 `git commit -m "commit message"`
 
 ### Step 8
@@ -59,6 +65,7 @@ After any conflicts are resolved, run `git add .` followed by `git commit -m "co
 
 ### Step 9
 Push your feature branch into your fork of the repo:
+
 `git push --set-upstream origin my-feature-branch`
 
 ### Step 10
