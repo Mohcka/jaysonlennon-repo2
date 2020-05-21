@@ -1,3 +1,6 @@
+### Step 0
+Fork this repo.
+
 ### Step1
 Set up your fork to track changes on the main repo.
 
