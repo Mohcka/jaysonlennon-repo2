@@ -61,6 +61,8 @@ The `=======` acts as a separator between the offending lines, with your code ab
 Make sure to remove `<<<<<<< HEAD`, `=======` and `>>>>>>> upstream/develop` when making your corrections.
 Also note that many IDEs will just let you click on which change you want to keep, so you may not have to manually fix conflicts.
 
+If the conflict is a file that was deleted and it is no longer needed, you can use `git rm filename` to remove it, followed by a `git commit -m "message"`.
+
 After any conflicts are resolved, run `git add .` followed by `git commit -m "commit message after fixing conflicts"`
 
 ### Step 9
