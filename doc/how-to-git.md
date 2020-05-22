@@ -1,5 +1,5 @@
 ### Step 0
-Fork this repo.
+Fork this repo & clone to local machine.
 
 ### Step1
 Set up your fork to track changes on the main repo:
