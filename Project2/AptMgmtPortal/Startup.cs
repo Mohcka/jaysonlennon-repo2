@@ -6,6 +6,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using AptMgmtPortal.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace AptMgmtPortal
 {
@@ -27,6 +29,9 @@ namespace AptMgmtPortal
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddDbContext<AptMgmtDbContext>(options => options
+              .UseSqlServer(Configuration.GetConnectionString("AptMgmtDbContext")));
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>

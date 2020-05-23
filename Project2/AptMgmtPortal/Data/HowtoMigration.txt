@@ -1,0 +1,3 @@
+﻿// -o for changing the output desitination path. 
+Add-Migration Initial -o "Data\AptMgmtMigrations"
+Update-Database
