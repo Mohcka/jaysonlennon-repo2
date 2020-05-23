@@ -23,7 +23,7 @@ stages:
     - task: Docker@2
       displayName: Build an image
       inputs:
+        containerRegistry: 'mynewappContainerRegistry'
         command: 'build'
         Dockerfile: '**/Dockerfile'
-        buildContext: '**/Project2/AptMgmtPortal'
         tags: '$(tag)'
