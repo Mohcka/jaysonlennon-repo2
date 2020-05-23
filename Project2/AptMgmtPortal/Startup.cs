@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 
 namespace AptMgmtPortal
 {
@@ -26,10 +27,17 @@ namespace AptMgmtPortal
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "ClientApp/dist";
+            });
+
+            services.AddMvc();
+
+            services.AddSwaggerGen(c => {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Apartment Management Portal Api", Version = "v1" });
             });
 
             Startup.AddRepositories(services);
@@ -56,6 +64,13 @@ namespace AptMgmtPortal
                 app.UseSpaStaticFiles();
             }
 
+            // IMPORTANT: Swagger must come before UseRouting and UseEndpoints.
+            app.UseSwagger();
+            app.UseSwaggerUI(c => 
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Apartment Management Portal API v1");
+            });
+
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
@@ -77,6 +92,7 @@ namespace AptMgmtPortal
                     spa.UseAngularCliServer(npmScript: "start");
                 }
             });
+
         }
     }
 }
