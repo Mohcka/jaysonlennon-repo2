@@ -230,7 +230,8 @@ _Pvt_Extensions
 # FAKE - F# Make
 .fake/
 
-frontend-host
-*.autosave
+**/frontend-host
+**/*.autosave
 
-.vscode
+**/*.vscode
+**/node_modules
