@@ -14,9 +14,19 @@ npm install @angular/cli
 ## After initial setup
 Open two terminals:
 
-In the first terminal, `cd` to `ClientApp`, then run `../node_modules/@angular/cli/bin/ng build --watch`.
+In the first terminal:
 
-In the second terminal, `cd` to `ClientApp`, then run `./frontend-host --static-dir dist`.
+```
+cd ClientApp
+../node_modules/@angular/cli/bin/ng build --watch
+```
+
+In the second terminal:
+
+```
+cd ClientApp
+./frontend-host --static-dir dist
+```
 
 Open browser to `http://localhost:8000`.
 
