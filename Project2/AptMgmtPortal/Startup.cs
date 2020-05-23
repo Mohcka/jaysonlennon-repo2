@@ -10,6 +10,11 @@ namespace AptMgmtPortal
 {
     public class Startup
     {
+        public static void AddRepositories(IServiceCollection services)
+        {
+            services.AddScoped<Repository.IUser, Repository.User>();
+        }
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -26,6 +31,8 @@ namespace AptMgmtPortal
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            Startup.AddRepositories(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
