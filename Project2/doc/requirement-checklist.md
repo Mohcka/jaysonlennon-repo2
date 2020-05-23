@@ -12,7 +12,7 @@
 - [ ] Server-side validation
 - [ ] Support filtering or pagination on at least one resource
 - [ ] Logging
-- [ ] Implement hypermedia, or, implement an API Description Language, e.g.  using Swashbuckle
+- [X] Implement hypermedia, or, implement an API Description Language, e.g.  using Swashbuckle
 - [ ] _optional_: Implement a custom filter, health check, or middleware, e.g.  exception-handling middleware
 
 # Database
