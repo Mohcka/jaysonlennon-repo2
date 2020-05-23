@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace apt_mgmt_portal
+namespace AptMgmtPortal
 {
     public class Program
     {

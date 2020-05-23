@@ -1,11 +1,11 @@
 {
-  "name": "apt_mgmt_portal",
+  "name": "AptMgmtPortal",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:ssr": "ng run apt_mgmt_portal:server:dev",
+    "build:ssr": "ng run AptMgmtPortal:server:dev",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

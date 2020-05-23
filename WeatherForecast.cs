@@ -1,6 +1,6 @@
 using System;
 
-namespace apt_mgmt_portal
+namespace AptMgmtPortal
 {
     public class WeatherForecast
     {

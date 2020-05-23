@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace apt_mgmt_portal.Controllers
+namespace AptMgmtPortal.Controllers
 {
     [ApiController]
     [Route("[controller]")]
