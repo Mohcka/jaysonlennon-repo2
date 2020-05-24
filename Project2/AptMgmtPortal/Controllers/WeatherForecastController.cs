@@ -33,7 +33,7 @@ namespace AptMgmtPortal.Controllers
       :
           "No production connection string was found"
       ;
-      this._logger.LogInformation("test");
+      this._logger.LogInformation(msg);
 
       var rng = new Random();
       return Enumerable.Range(1, 5).Select(index => new WeatherForecast
