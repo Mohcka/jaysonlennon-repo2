@@ -50,7 +50,7 @@ namespace AptMgmtPortal
 
             // TODO: remove later
             if(Environment.GetEnvironmentVariable("DB_CONNECTION_STRING") != null){
-                System.Console.WriteLine(Environment.GetEnvironmentVariable("DB_CONNECTION_STRING"));
+                System.Console.WriteLine("Found the connection String");
             } else {
                 System.Console.WriteLine("No production connection string was found");
             }
