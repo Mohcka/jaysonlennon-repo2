@@ -26,7 +26,7 @@ namespace AptMgmtPortal.Entity
 
         public int MaintenanceRequestTypeId { get; set; }
         public MaintenanceRequestType MaintenanceRequestType { get; set; }
-
+        public MaintenanceCloseReason CloseReason { get; set; }
 
         public string OpenNotes { get; set; }
         public string ResolutionNotes { get; set; }

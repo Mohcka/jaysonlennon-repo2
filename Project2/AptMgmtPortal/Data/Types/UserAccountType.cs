@@ -1,5 +1,5 @@
 
-namespace AptMgmtPortal.Data
+namespace AptMgmtPortal.Entity
 {
     public enum UserAccountType {
         Admin,

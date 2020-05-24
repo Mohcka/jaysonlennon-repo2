@@ -15,7 +15,8 @@ namespace AptMgmtPortal
     {
         public static void AddRepositories(IServiceCollection services)
         {
-            services.AddScoped<Repository.IUser, Repository.User>();
+            // TODO: Add repositories here as they get implemented.
+            //services.AddScoped<Repository.IUser, Repository.User>();
         }
 
         public Startup(IConfiguration configuration)
