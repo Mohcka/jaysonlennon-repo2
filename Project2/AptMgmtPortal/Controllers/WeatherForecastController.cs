@@ -28,13 +28,6 @@ namespace AptMgmtPortal.Controllers
     [HttpGet]
     public IEnumerable<WeatherForecast> Get()
     {
-      var msg = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING") != null ?
-          "Found the connection String"
-      :
-          "No production connection string was found"
-      ;
-      this._logger.LogInformation(msg);
-
       var rng = new Random();
       return Enumerable.Range(1, 5).Select(index => new WeatherForecast
       {
