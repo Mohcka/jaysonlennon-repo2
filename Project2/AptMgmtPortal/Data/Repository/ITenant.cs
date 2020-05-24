@@ -1,4 +1,4 @@
-using System.Resources;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -6,15 +6,23 @@ using AptMgmtPortal.Entity;
 
 namespace AptMgmtPortal.Repository
 {
+    /// <summary>
+    /// Repository interface for querying the database from the tenant's viewpoint.
+    /// </summary>
     public interface ITenant
     {
+        Task<Tenant> TenantFromId(int tenantId);
+        Task<Tenant> TenantFromUserId(int userId);
+        Task<int> TenantIdFromUserId(int userId);
+
         // Maintenance info uses UserId since it's only possible to make a maintenance
         // request from within the application (either the tenant makes it, or a manager
         // makes it on the tenant's behalf).)
         Task<bool> CancelMaintenanceRequest(int UserId, string resolutionNotes);
         Task<MaintenanceRequest> OpenMaintenanceRequest(int userId,
                                                         MaintenanceRequestType requestType,
-                                                        string openNotes);
+                                                        string openNotes,
+                                                        string unitNumber);
         Task<IEnumerable<MaintenanceRequest>> GetOutstandingMaintenanceRequests(int userId);
         Task<IEnumerable<MaintenanceRequest>> GetMaintenanceRequests(int userId,
                                                                      BillingPeriod period);

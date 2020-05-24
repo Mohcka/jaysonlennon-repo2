@@ -31,6 +31,10 @@ namespace AptMgmtPortal.Data
                 .Property(u => u.UserAccountType)
                 .HasConversion(new EnumToStringConverter<UserAccountType>());
 
+            modelBuilder.Entity<MaintenanceRequest>()
+                .Property(m => m.CloseReason)
+                .HasConversion(new EnumToStringConverter<MaintenanceCloseReason>());
+
             /*
                  preventing efcore from deleting a user
                  with MaintenanceRequest assigned. 
