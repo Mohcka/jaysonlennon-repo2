@@ -1,3 +1,4 @@
+using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -46,6 +47,14 @@ namespace AptMgmtPortal
             });
 
             Startup.AddRepositories(services);
+
+            // TODO: remove later
+            if(Environment.GetEnvironmentVariable("DB_CONNECTION_STRING") != null){
+                System.Console.WriteLine(Environment.GetEnvironmentVariable("DB_CONNECTION_STRING"));
+            } else {
+                System.Console.WriteLine("No production connection string was found");
+            }
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
