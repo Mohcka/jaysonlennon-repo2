@@ -1,0 +1,32 @@
+{
+    "utilities": [
+        {
+            "utilityType": "Water",
+            "usageThisPeriod": 300,
+            "projectedUsageThisPeriod": 600,
+            "billedThisPeriod": 4.0,
+            "projectedBillThisPeriod": 8.0
+        },
+        {
+            "utilityType": "Power",
+            "usageThisPeriod": 14,
+            "projectedUsageThisPeriod": 19.0,
+            "billedThisPeriod": 12.0,
+            "projectedBillThisPeriod": 17.0
+        },
+        {
+            "utilityType": "Trash",
+            "usageThisPeriod": 10,
+            "projectedUsageThisPeriod": 30,
+            "billedThisPeriod": 10,
+            "projectedBillThisPeriod": 30
+        },
+        {
+            "utilityType": "Sewer",
+            "usageThisPeriod": 10,
+            "projectedUsageThisPeriod": 30,
+            "billedThisPeriod": 10,
+            "projectedBillThisPeriod": 30
+        }
+    ]
+}
