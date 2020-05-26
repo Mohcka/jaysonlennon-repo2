@@ -1,17 +1,40 @@
-# ASP.NET Core
-# Build and test ASP.NET Core projects targeting .NET Core.
-# Add steps that run tests, create a NuGet package, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+# Docker
+# Build and push an image to Azure Container Registry
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
 trigger:
-- master
-
-pool:
-  vmImage: 'ubuntu-latest'
-
-variables:
-  buildConfiguration: 'Release'
-
-steps:
-- script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
+  - master
+  
+  resources:
+  - repo: self
+  
+  variables:
+    # Container registry service connection established during pipeline creation
+    dockerRegistryServiceConnection: '664a17d0-b886-4b3b-891e-31c82c1beb4c'
+    imageRepository: '042020dotnetutajaysonlennonrepo'
+    containerRegistry: 'revcontainerregistry.azurecr.io'
+    dockerfilePath: '$(Build.SourcesDirectory)/Project2/AptMgmtPortal/Dockerfile'
+    tag: '$(Build.BuildId)'
+    
+    # Agent VM image name
+    vmImageName: 'ubuntu-latest'
+  
+  stages:
+  - stage: Build
+    displayName: Build and push stage
+    jobs:  
+    - job: Build
+      displayName: Build
+      pool:
+        vmImage: $(vmImageName)
+      steps:
+      - task: Docker@2
+        displayName: Build and push an image to container registry
+        inputs:
+          command: buildAndPush
+          repository: $(imageRepository)
+          dockerfile: $(dockerfilePath)
+          containerRegistry: $(dockerRegistryServiceConnection)
+          tags: |
+            $(tag)
+  
