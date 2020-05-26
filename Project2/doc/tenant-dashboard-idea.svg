@@ -7,31 +7,35 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   sodipodi:docname="tenant-dashboard.svg"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
-   id="svg8"
+   width="838.84088"
+   height="980.9267"
+   viewBox="0 0 221.94331 259.53686"
    version="1.1"
-   viewBox="0 0 210 297"
-   height="1122.5197"
-   width="793.70081">
+   id="svg8"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="tenant-dashboard-idea.svg">
   <defs
      id="defs2" />
   <sodipodi:namedview
-     showborder="false"
-     units="px"
-     showgrid="false"
-     inkscape:document-rotation="0"
-     inkscape:current-layer="layer1"
-     inkscape:document-units="mm"
-     inkscape:cy="385.52725"
-     inkscape:cx="1245.1444"
-     inkscape:zoom="0.5"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0.0"
-     borderopacity="1.0"
-     bordercolor="#666666"
+     fit-margin-bottom="0"
+     fit-margin-right="0"
+     fit-margin-left="0"
+     fit-margin-top="0"
+     id="base"
      pagecolor="#ffffff"
-     id="base" />
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.5"
+     inkscape:cx="147.44144"
+     inkscape:cy="569.4373"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     units="px"
+     showborder="false" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -45,180 +49,181 @@
     </rdf:RDF>
   </metadata>
   <g
-     id="layer1"
+     transform="translate(-122.42349,48.659533)"
+     inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     inkscape:label="Layer 1">
+     id="layer1">
     <rect
-       y="-39.839962"
-       x="122.42349"
-       height="250.71729"
-       width="221.94331"
+       style="fill:#e6e6e6;fill-opacity:0.998331;stroke-width:0.793999"
        id="rect10"
-       style="fill:#e6e6e6;fill-opacity:0.998331;stroke-width:0.793999" />
+       width="221.94331"
+       height="250.71729"
+       x="122.42349"
+       y="-39.839962" />
     <text
-       id="text14"
-       y="-42.226849"
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
        x="128.43945"
-       style="font-size:8.46667px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
-       xml:space="preserve"><tspan
-         style="stroke-width:0.264583"
-         y="-42.226849"
-         x="128.43945"
-         id="tspan12"
-         sodipodi:role="line">Homepage Dashboard</tspan></text>
-    <text
-       id="text18"
-       y="-0.42581344"
-       x="193.41655"
-       style="font-size:8.46667px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
-       xml:space="preserve"><tspan
-         style="stroke-width:0.264583"
-         y="-0.42581344"
-         x="193.41655"
-         id="tspan16"
-         sodipodi:role="line">Rent due: $xxx</tspan><tspan
-         id="tspan20"
-         style="stroke-width:0.264583"
-         y="10.157524"
-         x="193.41655"
-         sodipodi:role="line">Date: 2020-01-01</tspan></text>
-    <text
-       id="text24"
-       y="63.368393"
-       x="145.65831"
-       style="font-size:8.46667px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
-       xml:space="preserve"><tspan
-         style="stroke-width:0.264583"
-         y="63.368393"
-         x="145.65831"
-         id="tspan22"
-         sodipodi:role="line">Utility bill to-date: $xxx</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8.46667px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
-       x="146.09814"
-       y="74.886314"
-       id="text28"><tspan
+       y="-42.226849"
+       id="text14"><tspan
          sodipodi:role="line"
-         id="tspan26"
-         x="146.09814"
-         y="74.886314"
-         style="stroke-width:0.264583">Projected utility bill for this period: $xxx</tspan></text>
-    <rect
-       y="104.65687"
-       x="191.98634"
-       height="43.115658"
-       width="83.637268"
-       id="rect48"
-       style="fill:#ffffff;fill-opacity:0.998331;stroke:#333333;stroke-width:0.793999" />
-    <path
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 192.53156,125.25044 c 0,0 8.58096,12.71696 17.99585,-0.29511 9.4149,-13.01207 19.31084,2.43131 22.27074,4.45103 2.9599,2.01972 10.55558,-8.13794 27.64925,1.1643 0,0 5.68574,-6.3159 14.97509,-4.08841"
-       id="path52"
-       sodipodi:nodetypes="czzcc" />
-    <path
-       sodipodi:nodetypes="czzc"
-       id="path50"
-       d="m 192.53156,125.25044 c 0,0 8.58096,12.71696 17.99585,-0.29511 9.4149,-13.01207 19.31084,2.43131 22.27074,4.45103 2.9599,2.01972 10.55558,-8.13794 27.64925,1.1643"
-       style="fill:none;stroke:#0000ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         id="tspan12"
+         x="128.43945"
+         y="-42.226849"
+         style="stroke-width:0.264583">Homepage Dashboard</tspan></text>
     <text
-       transform="rotate(-68.838497)"
-       id="text60"
-       y="236.15707"
-       x="-100.52285"
-       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="193.41655"
+       y="-0.42581344"
+       id="text18"><tspan
+         sodipodi:role="line"
+         id="tspan16"
+         x="193.41655"
+         y="-0.42581344"
+         style="stroke-width:0.264583">Rent due: $xxx</tspan><tspan
+         sodipodi:role="line"
+         x="193.41655"
+         y="10.157524"
+         style="stroke-width:0.264583"
+         id="tspan20">Date: 2020-01-01</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="145.65831"
+       y="63.368393"
+       id="text24"><tspan
+         sodipodi:role="line"
+         id="tspan22"
+         x="145.65831"
+         y="63.368393"
+         style="stroke-width:0.264583">Utility bill to-date: $xxx</tspan></text>
+    <text
+       id="text28"
+       y="74.886314"
+       x="146.09814"
+       style="font-size:8.46667px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
        xml:space="preserve"><tspan
-         style="font-size:4.23333px;stroke-width:0.264583"
-         y="236.15707"
-         x="-100.52285"
-         id="tspan58"
-         sodipodi:role="line">Start of period</tspan></text>
+         style="stroke-width:0.264583"
+         y="74.886314"
+         x="146.09814"
+         id="tspan26"
+         sodipodi:role="line">Projected utility bill for this period: $xxx</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:0.998331;stroke:#333333;stroke-width:0.793999"
+       id="rect48"
+       width="83.637268"
+       height="43.115658"
+       x="191.98634"
+       y="104.65687" />
+    <path
+       sodipodi:nodetypes="czzcc"
+       id="path52"
+       d="m 192.53156,125.25044 c 0,0 8.58096,12.71696 17.99585,-0.29511 9.4149,-13.01207 19.31084,2.43131 22.27074,4.45103 2.9599,2.01972 10.55558,-8.13794 27.64925,1.1643 0,0 5.68574,-6.3159 14.97509,-4.08841"
+       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       style="fill:none;stroke:#0000ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 192.53156,125.25044 c 0,0 8.58096,12.71696 17.99585,-0.29511 9.4149,-13.01207 19.31084,2.43131 22.27074,4.45103 2.9599,2.01972 10.55558,-8.13794 27.64925,1.1643"
+       id="path50"
+       sodipodi:nodetypes="czzc" />
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
-       x="-69.104111"
-       y="312.31888"
-       id="text64"
+       x="-100.52285"
+       y="236.15707"
+       id="text60"
        transform="rotate(-68.838497)"><tspan
          sodipodi:role="line"
-         id="tspan62"
-         x="-69.104111"
-         y="312.31888"
-         style="font-size:4.23333px;stroke-width:0.264583">End of period</tspan></text>
+         id="tspan58"
+         x="-100.52285"
+         y="236.15707"
+         style="font-size:4.23333px;stroke-width:0.264583">Start of period</tspan></text>
     <text
        transform="rotate(-68.838497)"
-       id="text68"
-       y="298.48251"
-       x="-58.235931"
+       id="text64"
+       y="312.31888"
+       x="-69.104111"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
        xml:space="preserve"><tspan
          style="font-size:4.23333px;stroke-width:0.264583"
-         y="298.48251"
-         x="-58.235931"
-         id="tspan66"
-         sodipodi:role="line">Today</tspan></text>
-    <path
-       id="path70"
-       d="m 196.65405,140.45944 h 8.0486"
-       style="fill:none;stroke:#0000ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    <path
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 196.65405,143.6935 h 8.0486"
-       id="path72" />
-    <text
-       id="text76"
-       y="141.4427"
-       x="206.58588"
-       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
-       xml:space="preserve"><tspan
-         style="font-size:4.23333px;stroke-width:0.264583"
-         y="141.4427"
-         x="206.58588"
-         id="tspan74"
-         sodipodi:role="line">Actual</tspan></text>
+         y="312.31888"
+         x="-69.104111"
+         id="tspan62"
+         sodipodi:role="line">End of period</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
-       x="206.10809"
-       y="145.54527"
-       id="text80"><tspan
+       x="-58.235931"
+       y="298.48251"
+       id="text68"
+       transform="rotate(-68.838497)"><tspan
          sodipodi:role="line"
-         id="tspan78"
-         x="206.10809"
+         id="tspan66"
+         x="-58.235931"
+         y="298.48251"
+         style="font-size:4.23333px;stroke-width:0.264583">Today</tspan></text>
+    <path
+       style="fill:none;stroke:#0000ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 196.65405,140.45944 h 8.0486"
+       id="path70" />
+    <path
+       id="path72"
+       d="m 196.65405,143.6935 h 8.0486"
+       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="206.58588"
+       y="141.4427"
+       id="text76"><tspan
+         sodipodi:role="line"
+         id="tspan74"
+         x="206.58588"
+         y="141.4427"
+         style="font-size:4.23333px;stroke-width:0.264583">Actual</tspan></text>
+    <text
+       id="text80"
+       y="145.54527"
+       x="206.10809"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-size:4.23333px;stroke-width:0.264583"
          y="145.54527"
-         style="font-size:4.23333px;stroke-width:0.264583">Projected</tspan></text>
-    <text
-       id="text86"
-       y="27.201569"
-       x="215.92856"
-       style="font-size:8.46667px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583;fill:#0000ff;"
-       xml:space="preserve"><tspan
-         style="stroke-width:0.264583;fill:#0000ff;"
-         y="27.201569"
-         x="215.92856"
-         id="tspan84"
-         sodipodi:role="line">Pay Now</tspan></text>
-    <text
-       id="text90"
-       y="100.1154"
-       x="189.15842"
-       style="font-size:8.46667px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
-       xml:space="preserve"><tspan
-         style="stroke-width:0.264583"
-         y="100.1154"
-         x="189.15842"
-         id="tspan88"
-         sodipodi:role="line">Utility Bill (Combined)</tspan></text>
+         x="206.10809"
+         id="tspan78"
+         sodipodi:role="line">Projected</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:8.46667px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#0000ff;stroke-width:0.264583"
-       x="189.62442"
-       y="197.76697"
-       id="text100"><tspan
+       x="215.92856"
+       y="27.201569"
+       id="text86"><tspan
          sodipodi:role="line"
-         id="tspan98"
-         x="189.62442"
+         id="tspan84"
+         x="215.92856"
+         y="27.201569"
+         style="fill:#0000ff;stroke-width:0.264583">Pay Now</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="189.15842"
+       y="100.1154"
+       id="text90"><tspan
+         sodipodi:role="line"
+         id="tspan88"
+         x="189.15842"
+         y="100.1154"
+         style="stroke-width:0.264583">Utility Bill (Combined)</tspan></text>
+    <text
+       id="text100"
+       y="197.76697"
+       x="189.62442"
+       style="font-size:8.46667px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#0000ff;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="fill:#0000ff;stroke-width:0.264583"
          y="197.76697"
-         style="fill:#0000ff;stroke-width:0.264583">View Utility Breakdown</tspan></text>
+         x="189.62442"
+         id="tspan98"
+         sodipodi:role="line">View Utility Breakdown</tspan></text>
   </g>
 </svg>
