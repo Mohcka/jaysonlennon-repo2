@@ -1,3 +1,4 @@
+using System;
 using System.Reflection;
 using Xunit;
 using System.Linq;
@@ -61,13 +62,9 @@ namespace TestAptMgmtPortal
                                     "notes",
                                     unitNumber);
 
-                tenant = new Tenant();
+                tenant = TestUtil.NewTenant(db);
                 tenant.UserId = user.UserId;
-
-                db.Tenants.Add(tenant);
-
-                var managerRepo = (IManager)new ManagerRepository(db);
-                unit = TestUtil.NewUnit(db, unitNumber);
+                db.SaveChanges();
 
                 // Maintenance requests are assigned to units, but may be opened by any user of
                 // the application. This means the occupying tenant may open a maintenance request,
@@ -78,6 +75,8 @@ namespace TestAptMgmtPortal
                 // the User is indeed the Tenant of the request. This is accomplished by checking
                 // if the user is occupying the unit, and if so, they will be permitted to cancel
                 // the request.
+                var managerRepo = (IManager)new ManagerRepository(db);
+                unit = TestUtil.NewUnit(db, unitNumber);
                 await managerRepo.AssignTenantToUnit(tenant.TenantId, unitNumber);
             }
 
@@ -177,6 +176,79 @@ namespace TestAptMgmtPortal
 
                 var waterUsage = allUsage.Where(u => u.ResourceType == ResourceType.Water).FirstOrDefault();
                 Assert.Equal(10, waterUsage.Usage);
+            }
+        }
+
+        [Fact]
+        public async void GetsPayment()
+        {
+            var options = TestUtil.GetMemDbOptions("GetsPayment");
+
+            Tenant tenant;
+            Payment payment;
+            using (var db = new AptMgmtDbContext(options))
+            {
+                tenant = TestUtil.NewTenant(db);
+                var repo = (ITenant)new TenantRepository(db);
+                payment = TestUtil.NewPayment(db, tenant.TenantId);
+            }
+
+            using (var db = new AptMgmtDbContext(options))
+            {
+                var repo = (ITenant)new TenantRepository(db);
+                var paymentFromDb = await repo.GetPayment(tenant.TenantId, payment.PaymentId);
+                Assert.Equal(payment.PaymentId, paymentFromDb.PaymentId);
+            }
+        }
+
+        [Fact]
+        public async void GetsPaymentsOfResourceType()
+        {
+            var options = TestUtil.GetMemDbOptions("GetsPaymentsOfResourceType");
+
+            Tenant tenant;
+            Payment payment;
+            BillingPeriod period;
+            using (var db = new AptMgmtDbContext(options))
+            {
+                period = TestUtil.NewBillingPeriod(db);
+                tenant = TestUtil.NewTenant(db);
+
+                var repo = (ITenant)new TenantRepository(db);
+                payment = TestUtil.NewPayment(db, tenant.TenantId);
+                payment.ResourceType = ResourceType.Power;
+                payment.BillingPeriodId = period.BillingPeriodId;
+                payment.Amount = 12;
+
+                // We will query for power payment (above). This should not appear.
+                var waterPayment = TestUtil.NewPayment(db, tenant.TenantId);
+                waterPayment.ResourceType = ResourceType.Water;
+                waterPayment.BillingPeriodId = period.BillingPeriodId;
+                waterPayment.Amount = 6;
+
+                // This is a power payment, but is for a different period.
+                var outOfPeriodPayment = TestUtil.NewPayment(db, tenant.TenantId);
+                outOfPeriodPayment.ResourceType = ResourceType.Power;
+                outOfPeriodPayment.Amount = 10;
+
+                var oldPeriod = TestUtil.NewBillingPeriod(db);
+                oldPeriod.PeriodStart = DateTime.Now - new TimeSpan(22,0,0,0);
+                oldPeriod.PeriodEnd = DateTime.Now - new TimeSpan(20,0,0,0);
+
+                outOfPeriodPayment.BillingPeriodId = oldPeriod.BillingPeriodId;
+
+                db.SaveChanges();
+            }
+
+            using (var db = new AptMgmtDbContext(options))
+            {
+                var repo = (ITenant)new TenantRepository(db);
+
+                var paymentsFromDb = await repo.GetPayments(tenant.TenantId, ResourceType.Power, period);
+                Assert.Single(paymentsFromDb);
+
+                var powerPayment = paymentsFromDb.Single();
+                Assert.Equal(12, powerPayment.Amount);
             }
         }
     }

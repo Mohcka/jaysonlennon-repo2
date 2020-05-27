@@ -82,7 +82,17 @@ namespace TestAptMgmtPortal
             context.SaveChanges();
 
             return period;
+        }
 
+        public static Payment NewPayment(AptMgmtDbContext context, int tenantId)
+        {
+            var payment = new Payment();
+            payment.TenantId = tenantId;
+
+            context.Add(payment);
+            context.SaveChanges();
+
+            return payment;
         }
     }
 }
