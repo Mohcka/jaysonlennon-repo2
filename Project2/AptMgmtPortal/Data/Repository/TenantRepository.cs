@@ -33,6 +33,10 @@ namespace AptMgmtPortal.Data.Repository
             return tenant;
         }
 
+        /// <remarks>
+        /// The userId supplied must be a user that is currently occupying the unit where the maintenanceRequestId is assigned.
+        /// </remarks>
+        /// <returns></returns>
         public async Task<bool> CancelMaintenanceRequest(int userId,
                                                          int maintenanceRequestId,
                                                          string resolutionNotes)

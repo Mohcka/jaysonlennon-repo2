@@ -69,7 +69,15 @@ namespace TestAptMgmtPortal
                 var managerRepo = (IManager)new ManagerRepository(db);
                 unit = TestUtil.NewUnit(db, unitNumber);
 
-                // Tenants must be assigned to a unit in order to cancel requests.
+                // Maintenance requests are assigned to units, but may be opened by any user of
+                // the application. This means the occupying tenant may open a maintenance request,
+                // but only if they have a UserId, and a Manager may also open a maintenance request
+                // on behalf of a Tenant of User.
+                //
+                // In order to cancel a maintenance request, we must have a way to determine if
+                // the User is indeed the Tenant of the request. This is accomplished by checking
+                // if the user is occupying the unit, and if so, they will be permitted to cancel
+                // the request.
                 await managerRepo.AssignTenantToUnit(tenant.TenantId, unitNumber);
             }
 
