@@ -10,20 +10,20 @@
 * The recipient must process the body or return a fault
 * The recipient must process the body and optionally return a fault
 
-3. What HTTP header can be used to send an API key in a REST request?
-* (CORRECT)X-API-Key
-* Authenticate
-* API-Key
-* Authorize
+3. How does SOAP achieve platform independence?
+* (CORRECT)By leveraging existing channels such as HTTP
+* By specifying the format in the message
+* By only communicating with the same platforms
+* SOAP is not platform independent
 
-4. Which URL is following RESTful principles?
-* /User/Get/1
-* (CORRECT)/User/1
-* /GetUser/1
-* /Users?id=1
+4. What file format does SOAP use for messaging?
+* JSON
+* HTTP
+* TXT
+* (CORRECT)XML
 
-5. When should an API version be used when creating a RESTful API?
-* (CORRECT)Always
-* Only when creating a new version
-* Never
-* Only when using REST v2
+5. In which SOAP field is "encodingStyle" defined?
+* (CORRECT)Header
+* Body
+* Envelope
+* Fault

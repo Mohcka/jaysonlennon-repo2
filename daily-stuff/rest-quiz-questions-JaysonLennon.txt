@@ -1,0 +1,29 @@
+1. What HTTP header can be used to send an API key in a REST request?
+* (CORRECT)X-API-Key
+* Authenticate
+* API-Key
+* Authorize
+
+2. Which URL is following RESTful principles?
+* /User/Get/1
+* (CORRECT)/User/1
+* /GetUser/1
+* /Users?id=1
+
+3. When should an API version be used when creating a RESTful API?
+* (CORRECT)Always
+* Only when creating a new version
+* Never
+* Only when using REST v2
+
+4. Which part of the URL 'http://api.example.com/user?sortKey=joinDate' is specifically RESTful?
+* http://api.example.com/
+* api.example.com
+* (CORRECT)/user
+* ?sortKey=joinDate
+
+5. What response header is used to indicate that a REST API response may be cached?
+* Expires
+* ETag
+* (CORRECT)Cache-Control
+* Set-Cache
