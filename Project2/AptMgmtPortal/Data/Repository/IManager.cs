@@ -23,6 +23,7 @@ namespace AptMgmtPortal.Repository
                                                         string internalNotes);
         Task<bool> AssignTenantToUnit(int tenantId, string unitNumber);
         Task<bool> RemoveTenantFromUnit(int tenantId);
+        Task<Unit> GetUnit(string unitNumber);
         Task<IEnumerable<DataModel.Bill>> GetOverdueBills(int tenantId);
         Task<IEnumerable<DataModel.Bill>> GetOverdueBills(int tenantId, BillingPeriod period);
         Task<IEnumerable<DataModel.Bill>> GetOverdueBills(int tenantId, ResourceType resource);
