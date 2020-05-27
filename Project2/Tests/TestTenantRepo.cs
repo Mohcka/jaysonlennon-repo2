@@ -22,7 +22,7 @@ namespace TestAptMgmtPortal
             using (var db = new AptMgmtDbContext(options))
             {
                 user = TestUtil.NewUser(db);
-                var repo = (ITenant) new TenantRepository(db);
+                var repo = (ITenant)new TenantRepository(db);
                 maintRequest = await repo.OpenMaintenanceRequest(
                                     user.UserId,
                                     MaintenanceRequestType.Plumbing,
@@ -32,7 +32,7 @@ namespace TestAptMgmtPortal
 
             using (var db = new AptMgmtDbContext(options))
             {
-                var repo = (ITenant) new TenantRepository(db);
+                var repo = (ITenant)new TenantRepository(db);
                 var requests = await repo.GetOutstandingMaintenanceRequests(user.UserId);
                 Assert.Single(requests);
                 Assert.Equal(maintRequest.MaintenanceRequestId, requests.FirstOrDefault().MaintenanceRequestId);
@@ -53,7 +53,7 @@ namespace TestAptMgmtPortal
             using (var db = new AptMgmtDbContext(options))
             {
                 user = TestUtil.NewUser(db);
-                var tenantRepo = (ITenant) new TenantRepository(db);
+                var tenantRepo = (ITenant)new TenantRepository(db);
 
                 maintRequest = await tenantRepo.OpenMaintenanceRequest(
                                     user.UserId,
@@ -66,7 +66,7 @@ namespace TestAptMgmtPortal
 
                 db.Tenants.Add(tenant);
 
-                var managerRepo = (IManager) new ManagerRepository(db);
+                var managerRepo = (IManager)new ManagerRepository(db);
                 unit = TestUtil.NewUnit(db, unitNumber);
 
                 // Tenants must be assigned to a unit in order to cancel requests.
@@ -75,7 +75,7 @@ namespace TestAptMgmtPortal
 
             using (var db = new AptMgmtDbContext(options))
             {
-                var repo = (ITenant) new TenantRepository(db);
+                var repo = (ITenant)new TenantRepository(db);
                 var canceled = await repo.CancelMaintenanceRequest(user.UserId,
                                                                    maintRequest.MaintenanceRequestId,
                                                                    "test cancel");
@@ -93,7 +93,7 @@ namespace TestAptMgmtPortal
             Tenant tenant;
             using (var db = new AptMgmtDbContext(options))
             {
-                var repo = (ITenant) new TenantRepository(db);
+                var repo = (ITenant)new TenantRepository(db);
                 var tenantInfo = new TenantInfo();
                 tenantInfo.FirstName = "original first name";
                 tenant = await repo.AddTenant(tenantInfo);
@@ -101,7 +101,7 @@ namespace TestAptMgmtPortal
 
             using (var db = new AptMgmtDbContext(options))
             {
-                var repo = (ITenant) new TenantRepository(db);
+                var repo = (ITenant)new TenantRepository(db);
 
                 var newName = "new first name";
 
@@ -125,7 +125,7 @@ namespace TestAptMgmtPortal
             BillingPeriod period;
             using (var db = new AptMgmtDbContext(options))
             {
-                var repo = (ITenant) new TenantRepository(db);
+                var repo = (ITenant)new TenantRepository(db);
                 tenant = TestUtil.NewTenant(db);
 
                 TestUtil.UseResource(db, tenant.TenantId, 5, ResourceType.Power);
@@ -135,7 +135,7 @@ namespace TestAptMgmtPortal
 
             using (var db = new AptMgmtDbContext(options))
             {
-                var repo = (ITenant) new TenantRepository(db);
+                var repo = (ITenant)new TenantRepository(db);
                 var usage = await repo.GetResourceUsage(tenant.TenantId, ResourceType.Power, period);
                 Assert.Equal(10, usage.Usage);
             }
@@ -150,7 +150,7 @@ namespace TestAptMgmtPortal
             BillingPeriod period;
             using (var db = new AptMgmtDbContext(options))
             {
-                var repo = (ITenant) new TenantRepository(db);
+                var repo = (ITenant)new TenantRepository(db);
                 tenant = TestUtil.NewTenant(db);
 
                 TestUtil.UseResource(db, tenant.TenantId, 5, ResourceType.Power);
@@ -160,7 +160,7 @@ namespace TestAptMgmtPortal
 
             using (var db = new AptMgmtDbContext(options))
             {
-                var repo = (ITenant) new TenantRepository(db);
+                var repo = (ITenant)new TenantRepository(db);
                 var allUsage = await repo.GetResourceUsage(tenant.TenantId, period);
                 Assert.Equal(2, allUsage.Count());
 
