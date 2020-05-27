@@ -133,6 +133,7 @@ namespace AptMgmtPortal.Data.Repository
             return await _context.Payments
                                  .Where(p => p.TenantId == tenantId)
                                  .Where(p => p.ResourceType == resource)
+                                 .Where(p => p.BillingPeriodId == period.BillingPeriodId)
                                  .Select(p => p)
                                  .ToListAsync();
         }
