@@ -6,7 +6,7 @@ The application will be responsively designed, taking into account that many use
 
 ## Team
 * David Sawyer
-* Jayson Lennon
+* Jayson Lennon (Team Lead)
 * Michael Walker
 * Sulav Aryal
 
