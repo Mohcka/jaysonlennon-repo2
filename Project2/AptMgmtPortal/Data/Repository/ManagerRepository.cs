@@ -1,6 +1,7 @@
 ﻿using AptMgmtPortal.DataModel;
 using AptMgmtPortal.Entity;
 using AptMgmtPortal.Repository;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +12,32 @@ namespace AptMgmtPortal.Data.Repository
 {
     public class ManagerRepository : IManager
     {
-        public Task<bool> AssignTenantToUnit(int tenantId, string unitNumber)
+        private readonly AptMgmtDbContext _context;
+
+        public ManagerRepository(AptMgmtDbContext aptMgmtDbContext)
         {
-            throw new NotImplementedException();
+            _context = aptMgmtDbContext;
+        }
+
+        
+        public async Task<Unit> GetUnit(string unitNumber)
+        {
+            return await _context.Units
+                                 .Where(u => u.UnitNumber == unitNumber)
+                                 .Select(u => u)
+                                 .FirstOrDefaultAsync();
+        }
+
+        public async Task<bool> AssignTenantToUnit(int tenantId, string unitNumber)
+        {
+            var unit = await GetUnit(unitNumber);
+
+            if (unit.TenantId != null) return false;
+
+            unit.TenantId = tenantId;
+
+            return await _context.SaveChangesAsync() > 0;
+
         }
 
         public Task<bool> CloseMaintenanceRequest(int UserId, MaintenanceCloseReason reason, string resolutionNotes)
@@ -45,6 +69,7 @@ namespace AptMgmtPortal.Data.Repository
         {
             throw new NotImplementedException();
         }
+
 
         public Task<MaintenanceRequest> OpenMaintenanceRequest(int userId, MaintenanceRequestType requestType, string openNotes, string unitNumber, string internalNotes)
         {
