@@ -11,7 +11,7 @@ namespace AptMgmtPortal.Entity {
         {
             this.OpeningMaintenanceRequests = new HashSet<MaintenanceRequest>();
             this.ClosingMaintenanceRequests = new HashSet<MaintenanceRequest>();
-            this.Tenents = new HashSet<Tenant>();
+            this.Tenants = new HashSet<Tenant>();
         }
         public int UserId { get; set; }
         public UserAccountType UserAccountType { get; set; }
@@ -24,6 +24,6 @@ namespace AptMgmtPortal.Entity {
         [InverseProperty(nameof(MaintenanceRequest.ClosingUser))]
         public ICollection<MaintenanceRequest> ClosingMaintenanceRequests { get; set; }
 
-        public ICollection<Tenant> Tenents { get; set; }
+        public ICollection<Tenant> Tenants { get; set; }
     }
 }

@@ -17,8 +17,8 @@ namespace AptMgmtPortal.Entity
         public int BillingPeriodId { get; set; }
         public BillingPeriod BillingPeriods { get; set; }
 
-        public int TenentId { get; set; }
-        public Tenant Tenent { get; set; }
+        public int TenantId { get; set; }
+        public Tenant Tenant { get; set; }
 
     }
 }

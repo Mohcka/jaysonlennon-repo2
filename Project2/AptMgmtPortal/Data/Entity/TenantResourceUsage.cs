@@ -17,6 +17,6 @@ namespace AptMgmtPortal.Entity
         public ResourceType ResourceType { get; set; }
 
         public int TenantId { get; set; }
-        public Tenant Tenent { get; set; }
+        public Tenant Tenant { get; set; }
     }
 }
