@@ -21,15 +21,16 @@ namespace AptMgmtPortal.Entity
         public User OpeningUser { get; set; }
       
         [ForeignKey(nameof(ClosingUser)), Column(Order = 1)]
-        public int ClosingUserId { get; set; }
+        public int? ClosingUserId { get; set; }
         public User ClosingUser { get; set; }
 
         public int MaintenanceRequestTypeId { get; set; }
         public MaintenanceRequestType MaintenanceRequestType { get; set; }
-        public MaintenanceCloseReason CloseReason { get; set; }
+        public MaintenanceCloseReason? CloseReason { get; set; }
 
         public string OpenNotes { get; set; }
         public string ResolutionNotes { get; set; }
         public string InternalNotes { get; set; }
+        public string UnitNumber { get; set; }
     }
 }

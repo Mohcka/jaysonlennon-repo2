@@ -18,7 +18,7 @@ namespace AptMgmtPortal.Repository
         // Maintenance info uses UserId since it's only possible to make a maintenance
         // request from within the application (either the tenant makes it, or a manager
         // makes it on the tenant's behalf).)
-        Task<bool> CancelMaintenanceRequest(int UserId, string resolutionNotes);
+        Task<bool> CancelMaintenanceRequest(int userId, string resolutionNotes);
         Task<MaintenanceRequest> OpenMaintenanceRequest(int userId,
                                                         MaintenanceRequestType requestType,
                                                         string openNotes,

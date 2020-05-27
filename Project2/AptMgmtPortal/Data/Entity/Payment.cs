@@ -12,7 +12,7 @@ namespace AptMgmtPortal.Entity
         public int PaymentId { get; set; }
         [Column(TypeName = "decimal(18,4)")]
         public decimal? Amount { get; set; }
-        public PaymentFor PaymentFor { get; set; }
+        public ResourceType ResourceType { get; set; }
         public DateTimeOffset? Timepaid { get; set; }
         public int BillingPeriodId { get; set; }
         public BillingPeriod BillingPeriods { get; set; }
