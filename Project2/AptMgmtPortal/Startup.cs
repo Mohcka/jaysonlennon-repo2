@@ -1,3 +1,4 @@
+using System.Threading;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -8,17 +9,15 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using AptMgmtPortal.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+
+using AptMgmtPortal.Util.Auth;
+using AptMgmtPortal.Util;
 
 namespace AptMgmtPortal
 {
     public class Startup
     {
-        public static void AddRepositories(IServiceCollection services)
-        {
-            // TODO: Add repositories here as they get implemented.
-            //services.AddScoped<Repository.IUser, Repository.User>();
-        }
-
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -34,6 +33,21 @@ namespace AptMgmtPortal
             services.AddDbContext<AptMgmtDbContext>(options => options
               .UseSqlServer(Configuration.GetConnectionString("AptMgmtDbContext")));
 
+            services.AddLogging(logger => 
+            {
+                Host.CreateDefaultBuilder()
+                .ConfigureLogging(logging => {
+                    logging.ClearProviders();
+                    logging.AddConsole();
+                });
+            });
+
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = ApiKeyAuthenticationOptions.DefaultScheme;
+                options.DefaultChallengeScheme = ApiKeyAuthenticationOptions.DefaultScheme;
+            }).AddApiKeySupport(options => { });
+
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
@@ -42,11 +56,12 @@ namespace AptMgmtPortal
 
             services.AddMvc();
 
-            services.AddSwaggerGen(c => {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Apartment Management Portal Api", Version = "v1" });
-            });
+            services.SetupRepositories();
 
-            Startup.AddRepositories(services);
+            // NOTE: This must come after database and logging setup is complete.
+            services.SetupAuthorization();
+
+            services.SetupSwagger();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -65,25 +80,27 @@ namespace AptMgmtPortal
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
             if (!env.IsDevelopment())
             {
                 app.UseSpaStaticFiles();
             }
 
-            // IMPORTANT: Swagger must come before UseRouting and UseEndpoints.
+            // NOTE: These need to stay in this order.
+            app.UseRouting();
+            app.UseAuthentication();
+            app.UseAuthorization();
+
+            // NOTE: Swagger must come before UseEndpoints and after UseRouting/Authentication/Authorization.
             app.UseSwagger();
-            app.UseSwaggerUI(c => 
+            app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Apartment Management Portal API v1");
             });
 
-            app.UseRouting();
-
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller}/{action=Index}/{id?}");
+                endpoints.MapControllers();
             });
 
             app.UseSpa(spa =>
