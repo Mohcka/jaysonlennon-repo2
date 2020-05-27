@@ -61,7 +61,6 @@ namespace TestAptMgmtPortal
                                     "notes",
                                     unitNumber);
 
-
                 tenant = new Tenant();
                 tenant.UserId = user.UserId;
 
