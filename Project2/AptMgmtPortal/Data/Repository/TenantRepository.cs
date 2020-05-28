@@ -172,6 +172,8 @@ namespace AptMgmtPortal.Repository
         public async Task<bool> IsMaintenanceRequestForUser(int userId, int maintenanceRequestId)
         {
             var tenantId = await TenantIdFromUserId(userId);
+            if (tenantId == null) return false;
+
             var unitNumber = await _context.Units
                                            .Where(u => u.TenantId == tenantId)
                                            .Select(u => u.UnitNumber)
@@ -453,6 +455,23 @@ namespace AptMgmtPortal.Repository
                 StartDate = signedAgreement.StartDate,
                 EndDate = signedAgreement.EndDate,
             };
+        }
+
+        public async Task<IEnumerable<MaintenanceRequest>> GetMaintenanceRequests(int userId, int limit)
+        {
+            var tenantId = await TenantIdFromUserId(userId);
+            if (tenantId == null) return new List<MaintenanceRequest>();
+
+            var unitNumber = await _context.Units
+                                    .Where(u => u.TenantId == tenantId)
+                                    .Select(u => u.UnitNumber)
+                                    .FirstOrDefaultAsync();
+
+            return await _context.MaintenanceRequests
+                .Where(r => r.UnitNumber == unitNumber)
+                .Take(limit)
+                .OrderByDescending(r => r.TimeOpened)
+                .ToListAsync();
         }
     }
 }

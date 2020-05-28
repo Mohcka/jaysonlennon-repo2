@@ -32,6 +32,7 @@ namespace AptMgmtPortal.Repository
         Task<IEnumerable<MaintenanceRequest>> GetOutstandingMaintenanceRequests(int userId);
         Task<IEnumerable<MaintenanceRequest>> GetMaintenanceRequests(int userId,
                                                                      BillingPeriod period);
+        Task<IEnumerable<MaintenanceRequest>> GetMaintenanceRequests(int userId, int limit);
 
         // Bills require a tenantId, since they will be generated and used regardless
         // of whether or not a tenant has a user id.
