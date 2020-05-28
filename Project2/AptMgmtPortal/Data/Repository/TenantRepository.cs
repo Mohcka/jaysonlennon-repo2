@@ -106,7 +106,7 @@ namespace AptMgmtPortal.Repository
 
         public async Task<IEnumerable<DataModel.Bill>> GetBills(int tenantId, BillingPeriod period)
         {
-            if (period == null) return null;
+            if (period == null) return new List<DataModel.Bill>();
 
             var billingRates = await _context.ResourceUsageRates
                                         .Where(r => r.PeriodStart >= period.PeriodStart
@@ -195,7 +195,7 @@ namespace AptMgmtPortal.Repository
         public async Task<IEnumerable<MaintenanceRequest>> GetMaintenanceRequests(int userId,
                                                                                   BillingPeriod period)
         {
-            if (period == null) return null;
+            if (period == null) return new List<MaintenanceRequest>();
 
             return await _context.MaintenanceRequests
                 .Where(m => m.OpeningUserId == userId)
@@ -224,7 +224,7 @@ namespace AptMgmtPortal.Repository
                                                             ResourceType resource,
                                                             BillingPeriod period)
         {
-            if (period == null) return null;
+            if (period == null) return new List<Payment>();
 
             return await _context.Payments
                                  .Where(p => p.TenantId == tenantId)
@@ -255,7 +255,7 @@ namespace AptMgmtPortal.Repository
         public async Task<IEnumerable<DataModel.TenantResourceUsageSummary>> GetResourceUsage(int tenantId,
                                                                                               BillingPeriod period)
         {
-            if (period == null) return null;
+            if (period == null) return new List<DataModel.TenantResourceUsageSummary>();
 
             return await _context.TenantResourceUsages
                     .Where(u => u.TenantId == tenantId)
@@ -373,7 +373,7 @@ namespace AptMgmtPortal.Repository
 
         public async Task<IEnumerable<Tenant>> FindTenantWithFirstName(string firstName)
         {
-            if (String.IsNullOrEmpty(firstName)) return null;
+            if (String.IsNullOrEmpty(firstName)) return new List<Tenant>();
 
             firstName = firstName.ToLower();
             return await _context.Tenants
