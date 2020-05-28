@@ -15,7 +15,7 @@ namespace AptMgmtPortal.Data
         public DbSet<Payment> Payments { get; set; }
         public DbSet<TenantResourceUsage> TenantResourceUsages { get; set; }
         public DbSet<Agreement> Agreements { get; set; }
-        public DbSet<TenantAgreement> TenantAgreements { get; set; }
+        public DbSet<SignedAgreement> SignedAgreements { get; set; }
 
         public AptMgmtDbContext() { }
         public AptMgmtDbContext(DbContextOptions<AptMgmtDbContext> options) : base(options) { }

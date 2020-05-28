@@ -3,9 +3,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AptMgmtPortal.Entity
 {
-    public class TenantAgreement
+    public class SignedAgreement
     {
-        public int TenantAgreementId { get; set; }
+        public int SignedAgreementId { get; set; }
 
         public int TenantId { get; set; }
 

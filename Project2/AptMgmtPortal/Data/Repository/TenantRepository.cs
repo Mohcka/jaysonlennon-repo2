@@ -378,7 +378,7 @@ namespace AptMgmtPortal.Repository
         /// <returns></returns>
         public async Task<IEnumerable<DataModel.Agreement>> GetAgreements(int tenantId)
         {
-            return await _context.TenantAgreements
+            return await _context.SignedAgreements
                 .Where(s => s.TenantId == tenantId)
                 .Join(_context.Agreements,
                       tenantAgreements => tenantAgreements.AgreementId,
@@ -413,7 +413,7 @@ namespace AptMgmtPortal.Repository
         /// <returns></returns>
         public async Task<IEnumerable<AgreementSummary>> GetAgreementSummaries(int tenantId)
         {
-            return await _context.TenantAgreements
+            return await _context.SignedAgreements
                 .Where(s => s.TenantId == tenantId)
                 .Join(_context.Agreements,
                       tenantAgreements => tenantAgreements.AgreementId,
