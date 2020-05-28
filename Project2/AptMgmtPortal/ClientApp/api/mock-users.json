@@ -1,34 +1,36 @@
-[
-  {
-    "id": 0,
-    "name": "Florine"
-  },
-  {
-    "id": 1,
-    "name": "Stark"
-  },
-  {
-    "id": 2,
-    "name": "Rosales"
-  },
-  {
-    "id": 3,
-    "name": "Sheena"
-  },
-  {
-    "id": 4,
-    "name": "Maynard"
-  },
-  {
-    "id": 5,
-    "name": "Carolina"
-  },
-  {
-    "id": 6,
-    "name": "Bradley"
-  },
-  {
-    "id": 7,
-    "name": "Krista"
-  }
-]
+{
+  "users": [
+    {
+      "id": 0,
+      "name": "Florine"
+    },
+    {
+      "id": 1,
+      "name": "Stark"
+    },
+    {
+      "id": 2,
+      "name": "Rosales"
+    },
+    {
+      "id": 3,
+      "name": "Sheena"
+    },
+    {
+      "id": 4,
+      "name": "Maynard"
+    },
+    {
+      "id": 5,
+      "name": "Carolina"
+    },
+    {
+      "id": 6,
+      "name": "Bradley"
+    },
+    {
+      "id": 7,
+      "name": "Krista"
+    }
+  ]
+}
