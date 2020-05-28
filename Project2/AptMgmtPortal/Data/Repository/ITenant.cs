@@ -12,6 +12,7 @@ namespace AptMgmtPortal.Repository
     /// </summary>
     public interface ITenant
     {
+        Task<IEnumerable<Tenant>> FindTenantWithFirstName(string firstName);
         Task<bool> RestEdit(TenantInfo info);
         Task<Tenant> AddTenant(TenantInfo info);
         Task<Tenant> TenantFromId(int tenantId);

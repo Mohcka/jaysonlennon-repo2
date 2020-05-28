@@ -370,5 +370,14 @@ namespace AptMgmtPortal.Repository
 
             return await GetBills(tenantId, billingPeriod);
         }
+
+        public async Task<IEnumerable<Tenant>> FindTenantWithFirstName(string firstName)
+        {
+            firstName = firstName.ToLower();
+            return await _context.Tenants
+                        .Where(t => t.FirstName.ToLower() == firstName)
+                        .Select(t => t)
+                        .ToListAsync();
+        }
     }
 }
