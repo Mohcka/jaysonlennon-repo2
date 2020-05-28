@@ -9,6 +9,7 @@ using AptMgmtPortal.Data;
 using AptMgmtPortal.DataModel;
 using AptMgmtPortal.Repository;
 using AptMgmtPortal.Data.Repository;
+using AptMgmtPortal.Types;
 
 namespace TestAptMgmtPortal
 {

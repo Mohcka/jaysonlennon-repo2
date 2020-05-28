@@ -4,6 +4,7 @@ using Microsoft.Data.Sqlite;
 
 using AptMgmtPortal.Data;
 using AptMgmtPortal.Entity;
+using AptMgmtPortal.Types;
 
 namespace TestAptMgmtPortal
 {
