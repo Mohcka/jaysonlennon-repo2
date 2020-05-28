@@ -1,12 +1,9 @@
-using System.Threading;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.OpenApi.Models;
 using AptMgmtPortal.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -31,7 +28,7 @@ namespace AptMgmtPortal
             services.AddControllersWithViews();
 
             services.AddDbContext<AptMgmtDbContext>(options => options
-              .UseSqlServer(Configuration.GetConnectionString("AptMgmtDbContext")));
+                .UseSqlServer(Configuration.GetConnectionString("AptMgmtDbContext")));
 
             services.AddLogging(logger => 
             {
@@ -65,8 +62,10 @@ namespace AptMgmtPortal
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, AptMgmtDbContext context)
         {
+            context.Database.Migrate();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -115,7 +114,6 @@ namespace AptMgmtPortal
                     spa.UseAngularCliServer(npmScript: "start");
                 }
             });
-
         }
     }
 }
