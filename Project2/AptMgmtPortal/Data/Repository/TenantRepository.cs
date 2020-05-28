@@ -375,7 +375,7 @@ namespace AptMgmtPortal.Repository
         {
             firstName = firstName.ToLower();
             return await _context.Tenants
-                        .Where(t => t.FirstName.ToLower() == firstName)
+                        .Where(t => t.FirstName.ToLower().Contains(firstName))
                         .Select(t => t)
                         .ToListAsync();
         }
