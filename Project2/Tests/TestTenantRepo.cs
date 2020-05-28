@@ -6,7 +6,6 @@ using System.Linq;
 using AptMgmtPortal;
 using AptMgmtPortal.Entity;
 using AptMgmtPortal.Data;
-using AptMgmtPortal.DataModel;
 using AptMgmtPortal.Repository;
 using AptMgmtPortal.Data.Repository;
 using AptMgmtPortal.Types;
@@ -361,6 +360,42 @@ namespace TestAptMgmtPortal
 
                 var waterBill = bills.Where(b => b.Resource == ResourceType.Water).FirstOrDefault();
                 Assert.Equal(waterRate * 5, waterBill.Cost());
+            }
+        }
+
+        [Fact]
+        public async void GetsSignedAgreements()
+        {
+            var options = TestUtil.GetMemDbOptions("GetsSignedAgreements");
+
+            Tenant tenant;
+            Agreement agreement1;
+            Agreement agreement2;
+            SignedAgreement signedAgreement1;
+            SignedAgreement signedAgreement2;
+            using (var db = new AptMgmtDbContext(options))
+            {
+                var repo = (ITenant)new TenantRepository(db);
+                tenant = TestUtil.NewTenant(db);
+
+                agreement1 = TestUtil.NewAgreement(db, "test-agreement1");
+                agreement2 = TestUtil.NewAgreement(db, "test-agreement2");
+
+                signedAgreement1 = TestUtil.SignAgreement(db, agreement1.AgreementId, tenant.TenantId);
+                signedAgreement2 = TestUtil.SignAgreement(db, agreement2.AgreementId, tenant.TenantId);
+            }
+
+            using (var db = new AptMgmtDbContext(options))
+            {
+                var repo = (ITenant)new TenantRepository(db);
+                var signedAgreements = await repo.GetAgreements(tenant.TenantId);
+                Assert.Equal(2, signedAgreements.Count());
+
+                var signed1 = signedAgreements.Where(a => a.AgreementId == agreement1.AgreementId).FirstOrDefault();
+                Assert.Equal("test-agreement1", signed1.Title);
+
+                var signed2 = signedAgreements.Where(a => a.AgreementId == agreement2.AgreementId).FirstOrDefault();
+                Assert.Equal("test-agreement2", signed2.Title);
             }
         }
     }

@@ -112,5 +112,31 @@ namespace TestAptMgmtPortal
 
             return newRate;
         }
+
+        public static Agreement NewAgreement(AptMgmtDbContext context, string title)
+        {
+            var agreement = new Agreement();
+            agreement.Title = title;
+
+            context.Add(agreement);
+            context.SaveChanges();
+
+            return agreement;
+        }
+
+        public static SignedAgreement SignAgreement(AptMgmtDbContext context, int agreementId, int tenantId)
+        {
+            var signedAgreement = new SignedAgreement();
+            signedAgreement.TenantId = tenantId;
+            signedAgreement.AgreementId = agreementId;
+            signedAgreement.SignedDate = DateTime.Now;
+            signedAgreement.StartDate = DateTime.Now - new TimeSpan(5, 0, 0, 0);
+            signedAgreement.EndDate = DateTime.Now + new TimeSpan(5, 0, 0, 0);
+
+            context.Add(signedAgreement);
+            context.SaveChanges();
+
+            return signedAgreement;
+        }
     }
 }
