@@ -373,6 +373,8 @@ namespace AptMgmtPortal.Repository
 
         public async Task<IEnumerable<Tenant>> FindTenantWithFirstName(string firstName)
         {
+            if (String.IsNullOrEmpty(firstName)) return null;
+
             firstName = firstName.ToLower();
             return await _context.Tenants
                         .Where(t => t.FirstName.ToLower().Contains(firstName))
