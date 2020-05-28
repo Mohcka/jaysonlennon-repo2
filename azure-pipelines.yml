@@ -32,6 +32,7 @@ stages:
     steps:
     - bash: |
         dotnet tool install --global dotnet-ef
+        export PATH=$PATH:$HOME/.dotnet/tools
         cd Project2/AptMgmtPortal
         dotnet-ef migrations add InitialCreate
         cd ../Tests
