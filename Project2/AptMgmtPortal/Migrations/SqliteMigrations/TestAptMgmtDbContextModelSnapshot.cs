@@ -16,6 +16,23 @@ namespace AptMgmtPortal.Migrations.SqliteMigrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.4");
 
+            modelBuilder.Entity("AptMgmtPortal.Entity.Agreement", b =>
+                {
+                    b.Property<int>("AgreementId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Text")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("AgreementId");
+
+                    b.ToTable("Agreements");
+                });
+
             modelBuilder.Entity("AptMgmtPortal.Entity.BillingPeriod", b =>
                 {
                     b.Property<int>("BillingPeriodId")
@@ -121,6 +138,32 @@ namespace AptMgmtPortal.Migrations.SqliteMigrations
                     b.HasKey("ResourceUsageRateId");
 
                     b.ToTable("ResourceUsageRates");
+                });
+
+            modelBuilder.Entity("AptMgmtPortal.Entity.SignedAgreement", b =>
+                {
+                    b.Property<int>("SignedAgreementId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("AgreementId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("NVARCHAR(48)");
+
+                    b.Property<DateTime>("SignedDate")
+                        .HasColumnType("NVARCHAR(48)");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("NVARCHAR(48)");
+
+                    b.Property<int>("TenantId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("SignedAgreementId");
+
+                    b.ToTable("SignedAgreements");
                 });
 
             modelBuilder.Entity("AptMgmtPortal.Entity.Tenant", b =>

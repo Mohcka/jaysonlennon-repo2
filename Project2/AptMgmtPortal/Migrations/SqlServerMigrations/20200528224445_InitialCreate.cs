@@ -7,6 +7,20 @@ namespace AptMgmtPortal.Migrations.SqlServerMigrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Agreements",
+                columns: table => new
+                {
+                    AgreementId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Title = table.Column<string>(nullable: true),
+                    Text = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Agreements", x => x.AgreementId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "BillingPeriods",
                 columns: table => new
                 {
@@ -73,6 +87,23 @@ namespace AptMgmtPortal.Migrations.SqlServerMigrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_ResourceUsageRates", x => x.ResourceUsageRateId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "SignedAgreements",
+                columns: table => new
+                {
+                    SignedAgreementId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    TenantId = table.Column<int>(nullable: false),
+                    AgreementId = table.Column<int>(nullable: false),
+                    SignedDate = table.Column<string>(type: "NVARCHAR(48)", nullable: false),
+                    StartDate = table.Column<string>(type: "NVARCHAR(48)", nullable: false),
+                    EndDate = table.Column<string>(type: "NVARCHAR(48)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SignedAgreements", x => x.SignedAgreementId);
                 });
 
             migrationBuilder.CreateTable(
@@ -149,6 +180,9 @@ namespace AptMgmtPortal.Migrations.SqlServerMigrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "Agreements");
+
+            migrationBuilder.DropTable(
                 name: "BillingPeriods");
 
             migrationBuilder.DropTable(
@@ -159,6 +193,9 @@ namespace AptMgmtPortal.Migrations.SqlServerMigrations
 
             migrationBuilder.DropTable(
                 name: "ResourceUsageRates");
+
+            migrationBuilder.DropTable(
+                name: "SignedAgreements");
 
             migrationBuilder.DropTable(
                 name: "TenantResourceUsages");
