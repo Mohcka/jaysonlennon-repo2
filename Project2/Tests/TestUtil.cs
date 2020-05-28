@@ -4,6 +4,7 @@ using Microsoft.Data.Sqlite;
 
 using AptMgmtPortal.Data;
 using AptMgmtPortal.Entity;
+using AptMgmtPortal.Types;
 
 namespace TestAptMgmtPortal
 {
@@ -93,6 +94,23 @@ namespace TestAptMgmtPortal
             context.SaveChanges();
 
             return payment;
+        }
+
+        public static ResourceUsageRate NewResourceRate(AptMgmtDbContext context,
+                                                double rate,
+                                                ResourceType resource,
+                                                BillingPeriod period)
+        {
+            var newRate = new ResourceUsageRate();
+            newRate.PeriodStart = period.PeriodStart;
+            newRate.PeriodEnd = period.PeriodEnd;
+            newRate.Rate = rate;
+            newRate.ResourceType = resource;
+
+            context.Add(newRate);
+            context.SaveChanges();
+
+            return newRate;
         }
     }
 }

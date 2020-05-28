@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 
 using AptMgmtPortal.Entity;
+using AptMgmtPortal.Types;
 
 namespace AptMgmtPortal.Repository
 {
@@ -11,10 +12,12 @@ namespace AptMgmtPortal.Repository
     /// </summary>
     public interface ITenant
     {
+        Task<IEnumerable<Tenant>> FindTenantWithFirstName(string firstName);
+        Task<bool> RestEdit(TenantInfo info);
         Task<Tenant> AddTenant(TenantInfo info);
         Task<Tenant> TenantFromId(int tenantId);
         Task<Tenant> TenantFromUserId(int userId);
-        Task<int> TenantIdFromUserId(int userId);
+        Task<int?> TenantIdFromUserId(int userId);
 
         // Maintenance info uses UserId since it's only possible to make a maintenance
         // request from within the application (either the tenant makes it, or a manager
@@ -32,13 +35,19 @@ namespace AptMgmtPortal.Repository
 
         // Bills require a tenantId, since they will be generated and used regardless
         // of whether or not a tenant has a user id.
-        Task<bool> PayBill(int tenantId, decimal amount, ResourceType resource);
-        Task<DataModel.Bill> GetBill(int tenantId, int billId);
-        Task<IEnumerable<DataModel.Bill>> GetBills(int tenantId,
-                                                   ResourceType resource,
-                                                   BillingPeriod period);
+        Task<bool> PayBill(int tenantId,
+                           double amount,
+                           ResourceType resource,
+                           BillingPeriod period);
+        Task<bool> PayBill(int tenantId,
+                           double amount,
+                           ResourceType resource,
+                           int billingPeriodId);
+        Task<DataModel.Bill> GetBill(int tenantId,
+                                                  ResourceType resource,
+                                                  BillingPeriod period);
         Task<IEnumerable<DataModel.Bill>> GetBills(int tenantId, BillingPeriod period);
-
+        Task<IEnumerable<DataModel.Bill>> GetBills(int tenantId, int billingPeriodId);
         Task<bool> EditPersonalInfo(int tenantId, TenantInfo info);
 
         // Payments require a tenantId, since they are relevant regardless of whether

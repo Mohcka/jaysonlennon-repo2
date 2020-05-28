@@ -19,26 +19,10 @@ namespace AptMgmtPortal.Util.Auth
 
             var existingApiKeys = new List<ApiKey>
             {
-                new ApiKey(1, "tenant 1", "key1", new DateTime(2019, 01, 01),
-                    new List<string>
-                    {
-                        Role.Tenant,
-                    }),
-                new ApiKey(2, "tenant 2", "key2", new DateTime(2019, 01, 01),
-                    new List<string>
-                    {
-                        Role.Tenant,
-                    }),
-                new ApiKey(3, "tenant 3", "key3", new DateTime(2019, 01, 01),
-                    new List<string>
-                    {
-                        Role.Tenant,
-                    }),
-                new ApiKey(4, "management 1", "key4", new DateTime(2019, 06, 01),
-                    new List<string>
-                    {
-                        Role.Manager,
-                    })
+                new ApiKey("tenant 1", "key1", new List<string> { Role.Tenant, }, 1),
+                new ApiKey("tenant 2", "key2", new List<string> { Role.Tenant, }, 2),
+                new ApiKey("tenant 3", "key3", new List<string> { Role.Tenant, }, 3),
+                new ApiKey("management 1", "key4", new List<string> { Role.Manager, }, 4)
             };
 
             _apiKeys = existingApiKeys.ToDictionary(x => x.Key, x => x);

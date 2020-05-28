@@ -19,25 +19,31 @@ namespace AptMgmtPortal.Data
         public AptMgmtDbContext(DbContextOptions<AptMgmtDbContext> options) : base(options) { }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
-        {
-            if (!options.IsConfigured)
-                options
-                    .UseSqlite("Data Source=app.sqlite");
-        }
+        { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>()
                 .Property(u => u.UserAccountType)
-                .HasConversion(new EnumToStringConverter<UserAccountType>());
+                .HasConversion(new EnumToStringConverter<Types.UserAccountType>());
 
             modelBuilder.Entity<MaintenanceRequest>()
                 .Property(m => m.CloseReason)
-                .HasConversion(new EnumToStringConverter<MaintenanceCloseReason>());
+                .HasConversion(new EnumToStringConverter<Types.MaintenanceCloseReason>());
 
             modelBuilder.Entity<Unit>()
                 .HasIndex(u => u.UnitNumber)
                 .IsUnique();
+        }
+    }
+
+    public class TestAptMgmtDbContext : AptMgmtDbContext
+    {
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+            if (!options.IsConfigured)
+                options
+                    .UseSqlite("Data Source=app.sqlite");
         }
     }
 }

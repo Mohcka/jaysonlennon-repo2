@@ -6,8 +6,10 @@ namespace AptMgmtPortal.Util
     {
         public static void SetupRepositories(this IServiceCollection services)
         {
-            // TODO: Add repositories here as they get implemented.
-            //services.AddScoped<Repository.IUser, Repository.User>();
+            services.AddScoped<Repository.ITenant, Repository.TenantRepository>();
+            services.AddScoped<Repository.IManager, Repository.ManagerRepository>();
+            services.AddScoped<Repository.IMisc, Repository.MiscRepository>();
+            services.AddScoped<Repository.IUser, Repository.UserRepository>();
         }
     }
 }

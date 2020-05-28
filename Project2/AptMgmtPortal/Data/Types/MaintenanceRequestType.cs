@@ -1,4 +1,4 @@
-namespace AptMgmtPortal.Entity
+namespace AptMgmtPortal.Types
 {
     public class MaintenanceRequestType
     {
