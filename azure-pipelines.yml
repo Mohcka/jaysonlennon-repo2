@@ -22,7 +22,9 @@ stages:
     steps:
     - bash: |
         cd Project2/AptMgmtPortal
-        dotnet publish -o release
+        dotnet publish -c Release -o release
+        cd release
+        cp ClientApp/dist/index.html hostingstart.html
     - publish: $(System.DefaultWorkingDirectory)/Project2/AptMgmtPortal/release
       artifact: AppRelease
 
