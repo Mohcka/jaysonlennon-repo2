@@ -66,5 +66,6 @@ namespace AptMgmtPortal.Repository
                                                                                  BillingPeriod period);
 
         Task<IEnumerable<DataModel.Agreement>> GetAgreements(int tenantId);
+        Task<IEnumerable<DataModel.AgreementSummary>> GetAgreementSummaries(int tenantId);
     }
 }

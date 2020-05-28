@@ -405,5 +405,28 @@ namespace AptMgmtPortal.Repository
                         .Select(t => t)
                         .ToListAsync();
         }
+
+        /// <summary>
+        /// Returns agreements, excluding the agreement text.
+        /// </summary>
+        /// <param name="tenantId">Tenant ID from which to retrieve the agreements.</param>
+        /// <returns></returns>
+        public async Task<IEnumerable<AgreementSummary>> GetAgreementSummaries(int tenantId)
+        {
+            return await _context.TenantAgreements
+                .Where(s => s.TenantId == tenantId)
+                .Join(_context.Agreements,
+                      tenantAgreements => tenantAgreements.AgreementId,
+                      agreements => agreements.AgreementId,
+                      (ta, a) => new DataModel.AgreementSummary {
+                          AgreementId = ta.AgreementId,
+                          Title = a.Title,
+                          SignedDate = ta.SignedDate,
+                          StartDate = ta.StartDate,
+                          EndDate = ta.EndDate,
+                      })
+                .OrderByDescending(a => a.SignedDate)
+                .ToListAsync();
+        }
     }
 }
