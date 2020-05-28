@@ -75,7 +75,7 @@ stages:
       inputs:
         ConnectionType: 'AzureRM'
         azureSubscription: 'Azure subscription 1(1)(add44282-5490-4beb-b46f-46afb591c142)'
-        appType: 'webAppLinux'
+        appType: 'revp2t3'
         WebAppName: 'pipeline-app-jwl'
         packageForLinux: '$(System.DefaultWorkingDirectory)/release'
         RuntimeStack: 'DOTNETCORE|Latest'
