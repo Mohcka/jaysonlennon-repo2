@@ -77,4 +77,4 @@ stages:
         WebAppName: 'pipeline-app-jwl'
         packageForLinux: '$(System.DefaultWorkingDirectory)/release'
         RuntimeStack: 'DOTNETCORE|Latest'
-        StartupCommand: './citest'
+        StartupCommand: './AptMgmtPortal'
