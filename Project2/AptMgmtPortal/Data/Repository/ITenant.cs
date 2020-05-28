@@ -16,7 +16,7 @@ namespace AptMgmtPortal.Repository
         Task<Tenant> AddTenant(TenantInfo info);
         Task<Tenant> TenantFromId(int tenantId);
         Task<Tenant> TenantFromUserId(int userId);
-        Task<int> TenantIdFromUserId(int userId);
+        Task<int?> TenantIdFromUserId(int userId);
 
         // Maintenance info uses UserId since it's only possible to make a maintenance
         // request from within the application (either the tenant makes it, or a manager

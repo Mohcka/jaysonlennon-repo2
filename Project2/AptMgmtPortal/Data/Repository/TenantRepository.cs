@@ -340,7 +340,7 @@ namespace AptMgmtPortal.Repository
                                  .FirstOrDefaultAsync();
         }
 
-        public async Task<int> TenantIdFromUserId(int userId)
+        public async Task<int?> TenantIdFromUserId(int userId)
         {
             return await _context.Tenants
                                  .Where(t => t.UserId == userId)

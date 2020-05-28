@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace AptMgmtPortal.Migrations.SqliteMigrations
+namespace AptMgmtPortal.Migrations.SqlServerMigrations
 {
     public partial class InitialCreate : Migration
     {
@@ -102,7 +102,7 @@ namespace AptMgmtPortal.Migrations.SqliteMigrations
                     Email = table.Column<string>(nullable: true),
                     FirstName = table.Column<string>(nullable: true),
                     LastName = table.Column<string>(nullable: true),
-                    UserId = table.Column<int>(nullable: false)
+                    UserId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -131,7 +131,8 @@ namespace AptMgmtPortal.Migrations.SqliteMigrations
                         .Annotation("Sqlite:Autoincrement", true),
                     UserAccountType = table.Column<string>(nullable: false),
                     LoginName = table.Column<string>(nullable: true),
-                    Password = table.Column<string>(nullable: true)
+                    Password = table.Column<string>(nullable: true),
+                    ApiKey = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

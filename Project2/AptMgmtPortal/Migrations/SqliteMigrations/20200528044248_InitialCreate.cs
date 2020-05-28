@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace AptMgmtPortal.Migrations.SqlServerMigrations
+namespace AptMgmtPortal.Migrations.SqliteMigrations
 {
     public partial class InitialCreate : Migration
     {
@@ -12,7 +12,7 @@ namespace AptMgmtPortal.Migrations.SqlServerMigrations
                 columns: table => new
                 {
                     BillingPeriodId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Sqlite:Autoincrement", true),
                     PeriodStart = table.Column<DateTime>(nullable: false),
                     PeriodEnd = table.Column<DateTime>(nullable: false)
                 },
@@ -26,7 +26,7 @@ namespace AptMgmtPortal.Migrations.SqlServerMigrations
                 columns: table => new
                 {
                     MaintenanceRequestId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Sqlite:Autoincrement", true),
                     TimeOpened = table.Column<DateTime>(nullable: false),
                     TimeClosed = table.Column<DateTime>(nullable: true),
                     OpeningUserId = table.Column<int>(nullable: false),
@@ -48,7 +48,7 @@ namespace AptMgmtPortal.Migrations.SqlServerMigrations
                 columns: table => new
                 {
                     PaymentId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Sqlite:Autoincrement", true),
                     Amount = table.Column<double>(nullable: false),
                     ResourceType = table.Column<int>(nullable: false),
                     TimePaid = table.Column<DateTime>(nullable: false),
@@ -65,7 +65,7 @@ namespace AptMgmtPortal.Migrations.SqlServerMigrations
                 columns: table => new
                 {
                     ResourceUsageRateId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Sqlite:Autoincrement", true),
                     ResourceType = table.Column<int>(nullable: false),
                     Rate = table.Column<double>(nullable: false),
                     PeriodStart = table.Column<DateTime>(nullable: false),
@@ -81,7 +81,7 @@ namespace AptMgmtPortal.Migrations.SqlServerMigrations
                 columns: table => new
                 {
                     TenantResourceUsageId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Sqlite:Autoincrement", true),
                     SampleTime = table.Column<DateTime>(nullable: false),
                     UsageAmount = table.Column<double>(nullable: false),
                     ResourceType = table.Column<int>(nullable: false),
@@ -97,12 +97,12 @@ namespace AptMgmtPortal.Migrations.SqlServerMigrations
                 columns: table => new
                 {
                     TenantId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Sqlite:Autoincrement", true),
                     PhoneNumber = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: true),
                     FirstName = table.Column<string>(nullable: true),
                     LastName = table.Column<string>(nullable: true),
-                    UserId = table.Column<int>(nullable: false)
+                    UserId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -114,7 +114,7 @@ namespace AptMgmtPortal.Migrations.SqlServerMigrations
                 columns: table => new
                 {
                     UnitId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Sqlite:Autoincrement", true),
                     UnitNumber = table.Column<string>(nullable: true),
                     TenantId = table.Column<int>(nullable: true)
                 },
@@ -128,10 +128,11 @@ namespace AptMgmtPortal.Migrations.SqlServerMigrations
                 columns: table => new
                 {
                     UserId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Sqlite:Autoincrement", true),
                     UserAccountType = table.Column<string>(nullable: false),
                     LoginName = table.Column<string>(nullable: true),
-                    Password = table.Column<string>(nullable: true)
+                    Password = table.Column<string>(nullable: true),
+                    ApiKey = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -142,8 +143,7 @@ namespace AptMgmtPortal.Migrations.SqlServerMigrations
                 name: "IX_Units_UnitNumber",
                 table: "Units",
                 column: "UnitNumber",
-                unique: true,
-                filter: "[UnitNumber] IS NOT NULL");
+                unique: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

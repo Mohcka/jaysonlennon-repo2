@@ -23,7 +23,7 @@ namespace AptMgmtPortal.Util.Auth
             services.AddSingleton<IAuthorizationHandler, OnlyManagersAuthorizationHandler>();
             services.AddSingleton<IAuthorizationHandler, OnlyAdminsAuthorizationHandler>();
 
-            services.AddSingleton<IGetApiKey>(InMemoryAuthorizationSetupFactory.Create);
+            services.AddScoped<IGetApiKey>(DbAuthorizationSetupFactory.Create);
         }
     }
 }
