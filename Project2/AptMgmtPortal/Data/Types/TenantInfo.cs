@@ -1,6 +1,6 @@
 using AptMgmtPortal.Entity;
 
-namespace AptMgmtPortal.Entity
+namespace AptMgmtPortal.Types
 {
     public class TenantInfo
     {
@@ -9,7 +9,7 @@ namespace AptMgmtPortal.Entity
         public string LastName { get; set; }
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
-        public int UserId { get; set; }
+        public int? UserId { get; set; }
 
         public TenantInfo(Tenant tenant)
         {

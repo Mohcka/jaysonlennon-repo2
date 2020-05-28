@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 
 using AptMgmtPortal.Entity;
+using AptMgmtPortal.Types;
 
 namespace AptMgmtPortal.Repository
 {

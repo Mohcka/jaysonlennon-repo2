@@ -25,11 +25,11 @@ namespace AptMgmtPortal.Data
         {
             modelBuilder.Entity<User>()
                 .Property(u => u.UserAccountType)
-                .HasConversion(new EnumToStringConverter<UserAccountType>());
+                .HasConversion(new EnumToStringConverter<Types.UserAccountType>());
 
             modelBuilder.Entity<MaintenanceRequest>()
                 .Property(m => m.CloseReason)
-                .HasConversion(new EnumToStringConverter<MaintenanceCloseReason>());
+                .HasConversion(new EnumToStringConverter<Types.MaintenanceCloseReason>());
 
             modelBuilder.Entity<Unit>()
                 .HasIndex(u => u.UnitNumber)

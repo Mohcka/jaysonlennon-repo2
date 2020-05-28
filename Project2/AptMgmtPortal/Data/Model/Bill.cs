@@ -1,4 +1,5 @@
 using AptMgmtPortal.Entity;
+using AptMgmtPortal.Types;
 
 namespace AptMgmtPortal.DataModel {
     public class Bill {

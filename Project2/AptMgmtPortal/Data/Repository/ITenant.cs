@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 
 using AptMgmtPortal.Entity;
+using AptMgmtPortal.Types;
 
 namespace AptMgmtPortal.Repository
 {
@@ -11,6 +12,7 @@ namespace AptMgmtPortal.Repository
     /// </summary>
     public interface ITenant
     {
+        Task<bool> RestEdit(TenantInfo info);
         Task<Tenant> AddTenant(TenantInfo info);
         Task<Tenant> TenantFromId(int tenantId);
         Task<Tenant> TenantFromUserId(int userId);
@@ -40,6 +42,7 @@ namespace AptMgmtPortal.Repository
                                                   ResourceType resource,
                                                   BillingPeriod period);
         Task<IEnumerable<DataModel.Bill>> GetBills(int tenantId, BillingPeriod period);
+        Task<IEnumerable<DataModel.Bill>> GetBills(int tenantId, int billingPeriodId);
         Task<bool> EditPersonalInfo(int tenantId, TenantInfo info);
 
         // Payments require a tenantId, since they are relevant regardless of whether

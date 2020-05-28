@@ -1,5 +1,5 @@
 using System;
-namespace AptMgmtPortal.Entity
+namespace AptMgmtPortal.Types
 {
     public class Period {
         public DateTime Start { get; set; }

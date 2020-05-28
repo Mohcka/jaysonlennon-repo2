@@ -6,9 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 using AptMgmtPortal.Entity;
-using AptMgmtPortal.Repository;
+using AptMgmtPortal.Data;
+using AptMgmtPortal.Types;
+using AptMgmtPortal.DataModel;
 
-namespace AptMgmtPortal.Data.Repository
+namespace AptMgmtPortal.Repository
 {
     public class TenantRepository : ITenant
     {
@@ -98,6 +100,7 @@ namespace AptMgmtPortal.Data.Repository
 
         public async Task<IEnumerable<DataModel.Bill>> GetBills(int tenantId, BillingPeriod period)
         {
+            if (period == null) return null;
             var billingRates = await _context.ResourceUsageRates
                                         .Where(r => r.PeriodStart >= period.PeriodStart
                                                     && r.PeriodEnd <= period.PeriodEnd)
@@ -316,5 +319,25 @@ namespace AptMgmtPortal.Data.Repository
                                  .FirstOrDefaultAsync();
         }
 
+        public async Task<bool> RestEdit(TenantInfo info)
+        {
+            var tenant = await TenantFromId(info.TenantId);
+            tenant.FirstName = info.FirstName;
+            tenant.LastName = info.LastName;
+            tenant.Email = info.Email;
+            tenant.PhoneNumber = info.PhoneNumber;
+            tenant.UserId = info.UserId;
+
+            return await _context.SaveChangesAsync() > 0;
+        }
+
+        public async Task<IEnumerable<Bill>> GetBills(int tenantId, int billingPeriodId)
+        {
+            var billingPeriod = await _context.BillingPeriods
+                                    .Where(p => p.BillingPeriodId == billingPeriodId)
+                                    .FirstOrDefaultAsync();
+
+            return await GetBills(tenantId, billingPeriod);
+        }
     }
 }

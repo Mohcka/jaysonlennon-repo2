@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AptMgmtPortal.Data.Repository
+namespace AptMgmtPortal.Repository
 {
     public class MiscRepository : IMisc
     {

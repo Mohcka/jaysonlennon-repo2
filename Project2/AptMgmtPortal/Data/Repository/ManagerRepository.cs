@@ -8,7 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AptMgmtPortal.Data.Repository
+using AptMgmtPortal.Data;
+using AptMgmtPortal.Types;
+
+namespace AptMgmtPortal.Repository
 {
     public class ManagerRepository : IManager
     {
