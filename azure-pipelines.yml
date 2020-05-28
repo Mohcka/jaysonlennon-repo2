@@ -51,6 +51,12 @@ stages:
         export PATH=$SONAR_SCANNER_HOME/bin:$PATH
         export SONAR_SCANNER_OPTS="-server"
 
+        dotnet tool install --global dotnet-ef
+        export PATH=$PATH:$HOME/.dotnet/tools
+        cd Project2/AptMgmtPortal
+        dotnet-ef migrations add InitialCreate
+        cd ..
+
         cd Project2/Tests
         dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
         cd ..
