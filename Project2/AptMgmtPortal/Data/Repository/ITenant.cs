@@ -67,5 +67,9 @@ namespace AptMgmtPortal.Repository
 
         Task<IEnumerable<DataModel.Agreement>> GetAgreements(int tenantId);
         Task<IEnumerable<DataModel.AgreementSummary>> GetAgreementSummaries(int tenantId);
+        Task<DataModel.Agreement> SignAgreement(int tenantId,
+                                                int agreementId,
+                                                DateTime startDate,
+                                                DateTime endDate);
     }
 }

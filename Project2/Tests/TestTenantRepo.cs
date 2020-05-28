@@ -398,5 +398,38 @@ namespace TestAptMgmtPortal
                 Assert.Equal("test-agreement2", signed2.Title);
             }
         }
+
+        [Fact]
+        public async void SignsAgreement()
+        {
+            var options = TestUtil.GetMemDbOptions("SignsAgreement");
+
+            Tenant tenant;
+            Agreement agreement;
+            AptMgmtPortal.DataModel.Agreement signedAgreement;
+            using (var db = new AptMgmtDbContext(options))
+            {
+                var repo = (ITenant)new TenantRepository(db);
+                tenant = TestUtil.NewTenant(db);
+
+                agreement = TestUtil.NewAgreement(db, "test-agreement1");
+                signedAgreement = await repo.SignAgreement(tenant.TenantId,
+                                                           agreement.AgreementId,
+                                                           DateTime.Now,
+                                                           DateTime.Now);
+            }
+
+            using (var db = new AptMgmtDbContext(options))
+            {
+                Assert.Equal("test-agreement1", signedAgreement.Title);
+
+                var repo = (ITenant)new TenantRepository(db);
+                var signedAgreements = await repo.GetAgreements(tenant.TenantId);
+
+                Assert.Single(signedAgreements);
+                Assert.Equal("test-agreement1", signedAgreements.FirstOrDefault().Title);
+
+            }
+        }
     }
 }

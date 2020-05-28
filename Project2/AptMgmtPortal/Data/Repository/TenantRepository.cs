@@ -428,5 +428,31 @@ namespace AptMgmtPortal.Repository
                 .OrderByDescending(a => a.SignedDate)
                 .ToListAsync();
         }
+
+        public async Task<DataModel.Agreement> SignAgreement(int tenantId, int agreementId, DateTime startDate, DateTime endDate)
+        {
+            var agreement = await _context.Agreements
+                .Where(a => a.AgreementId == agreementId)
+                .FirstOrDefaultAsync();
+
+            var signedAgreement = new SignedAgreement();
+            signedAgreement.TenantId = tenantId;
+            signedAgreement.AgreementId = agreementId;
+            signedAgreement.SignedDate = DateTime.Now;
+            signedAgreement.StartDate = startDate;
+            signedAgreement.EndDate = endDate;
+
+            _context.Add(signedAgreement);
+            await _context.SaveChangesAsync();
+
+            return new DataModel.Agreement {
+                AgreementId = signedAgreement.AgreementId,
+                Title = agreement.Title,
+                Text = agreement.Text,
+                SignedDate = signedAgreement.SignedDate,
+                StartDate = signedAgreement.StartDate,
+                EndDate = signedAgreement.EndDate,
+            };
+        }
     }
 }
