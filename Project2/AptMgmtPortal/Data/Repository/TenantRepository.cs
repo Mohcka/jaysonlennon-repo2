@@ -23,6 +23,8 @@ namespace AptMgmtPortal.Repository
 
         public async Task<Tenant> AddTenant(TenantInfo info)
         {
+            if (info == null) return null;
+            
             var tenant = new Tenant();
             tenant.FirstName = info.FirstName;
             tenant.LastName = info.LastName;
@@ -53,6 +55,8 @@ namespace AptMgmtPortal.Repository
 
         public async Task<bool> EditPersonalInfo(int tenantId, TenantInfo info)
         {
+            if (info == null) return false;
+
             var tenant = await TenantFromId(tenantId);
             tenant.FirstName = info.FirstName;
             tenant.LastName = info.LastName;
@@ -66,6 +70,8 @@ namespace AptMgmtPortal.Repository
                                                   ResourceType resource,
                                                   BillingPeriod period)
         {
+            if (period == null) return null;
+
             var billingRate = await _context.ResourceUsageRates
                                         .Where(r => r.ResourceType == resource)
                                         .Where(r => r.PeriodStart >= period.PeriodStart
@@ -101,6 +107,7 @@ namespace AptMgmtPortal.Repository
         public async Task<IEnumerable<DataModel.Bill>> GetBills(int tenantId, BillingPeriod period)
         {
             if (period == null) return null;
+
             var billingRates = await _context.ResourceUsageRates
                                         .Where(r => r.PeriodStart >= period.PeriodStart
                                                     && r.PeriodEnd <= period.PeriodEnd)
@@ -188,6 +195,8 @@ namespace AptMgmtPortal.Repository
         public async Task<IEnumerable<MaintenanceRequest>> GetMaintenanceRequests(int userId,
                                                                                   BillingPeriod period)
         {
+            if (period == null) return null;
+
             return await _context.MaintenanceRequests
                 .Where(m => m.OpeningUserId == userId)
                 .AsNoTracking()
@@ -215,6 +224,8 @@ namespace AptMgmtPortal.Repository
                                                             ResourceType resource,
                                                             BillingPeriod period)
         {
+            if (period == null) return null;
+
             return await _context.Payments
                                  .Where(p => p.TenantId == tenantId)
                                  .Where(p => p.ResourceType == resource)
@@ -227,6 +238,8 @@ namespace AptMgmtPortal.Repository
                                                                  ResourceType resource,
                                                                  BillingPeriod period)
         {
+            if (period == null) return null;
+
             var usage = await _context.TenantResourceUsages
                                  .Where(u => u.TenantId == tenantId)
                                  .Where(u => u.ResourceType == resource)
@@ -242,6 +255,8 @@ namespace AptMgmtPortal.Repository
         public async Task<IEnumerable<DataModel.TenantResourceUsageSummary>> GetResourceUsage(int tenantId,
                                                                                               BillingPeriod period)
         {
+            if (period == null) return null;
+
             return await _context.TenantResourceUsages
                     .Where(u => u.TenantId == tenantId)
                     .Where(u => u.SampleTime >= period.PeriodStart && u.SampleTime <= period.PeriodEnd)
@@ -284,6 +299,8 @@ namespace AptMgmtPortal.Repository
                                         ResourceType resource,
                                         BillingPeriod period)
         {
+            if (period == null) return false;
+
             var payment = new Payment();
             payment.Amount = amount;
             payment.ResourceType = resource;
@@ -293,6 +310,18 @@ namespace AptMgmtPortal.Repository
 
             await _context.AddAsync(payment);
             return await _context.SaveChangesAsync() > 0;
+        }
+
+        public async Task<bool> PayBill(int tenantId,
+                                        double amount,
+                                        ResourceType resource,
+                                        int billingPeriodId)
+        {
+            var billingPeriod = await _context.BillingPeriods
+                                        .Where(p => p.BillingPeriodId == billingPeriodId)
+                                        .Select(p => p)
+                                        .FirstOrDefaultAsync();
+            return await PayBill(tenantId, amount, resource, billingPeriod);
         }
 
         public async Task<Tenant> TenantFromId(int tenantId)
@@ -321,6 +350,8 @@ namespace AptMgmtPortal.Repository
 
         public async Task<bool> RestEdit(TenantInfo info)
         {
+            if (info == null) return false;
+
             var tenant = await TenantFromId(info.TenantId);
             tenant.FirstName = info.FirstName;
             tenant.LastName = info.LastName;

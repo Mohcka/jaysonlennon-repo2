@@ -13,12 +13,16 @@ namespace AptMgmtPortal.Controllers.Tenant
     public class BillController : ControllerBase
     {
         private readonly ILogger<BillController> _logger;
-        private readonly Repository.ITenant tenantRepository;
+        private readonly Repository.ITenant TenantRepository;
+        private readonly Repository.IMisc MiscRepository;
 
-        public BillController(ILogger<BillController> logger, Repository.ITenant tenantRepository)
+        public BillController(ILogger<BillController> logger,
+                              Repository.ITenant tenantRepository,
+                              Repository.IMisc miscRepository)
         {
             this._logger = logger;
-            this.tenantRepository = tenantRepository;
+            this.TenantRepository = tenantRepository;
+            this.MiscRepository = miscRepository;
         }
 
         [HttpGet]
@@ -26,8 +30,27 @@ namespace AptMgmtPortal.Controllers.Tenant
         //[Authorize(Policy = Policies.OnlyTenants)]
         public async Task<IActionResult> GetBills(int billingPeriodId)
         {
-            var bills = await tenantRepository.GetBills(0, billingPeriodId);
+            var bills = await TenantRepository.GetBills(0, billingPeriodId);
             return new ObjectResult(bills);
+        }
+
+        [HttpGet]
+        [Route("Bill/{resourceType}")]
+        //[Authorize(Policy = Policies.OnlyTenants)]
+        public async Task<IActionResult> GetBills(ResourceType resource)
+        {
+            var billingPeriod = await MiscRepository.GetCurrentBillingPeriod();
+            var bills = await TenantRepository.GetBill(0, resource, billingPeriod);
+            return new ObjectResult(bills);
+        }
+
+        [HttpPost]
+        [Route("Bill")]
+        //[Authorize(Policy = Policies.OnlyTenants)]
+        public async Task<IActionResult> PostBill(DataModel.PayBill bill)
+        {
+            var paid = await TenantRepository.PayBill(0, bill.Amount, bill.Resource, bill.BillingPeriodId);
+            return new ObjectResult(paid);
         }
     }
 }

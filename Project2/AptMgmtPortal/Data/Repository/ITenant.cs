@@ -38,6 +38,10 @@ namespace AptMgmtPortal.Repository
                            double amount,
                            ResourceType resource,
                            BillingPeriod period);
+        Task<bool> PayBill(int tenantId,
+                           double amount,
+                           ResourceType resource,
+                           int billingPeriodId);
         Task<DataModel.Bill> GetBill(int tenantId,
                                                   ResourceType resource,
                                                   BillingPeriod period);
