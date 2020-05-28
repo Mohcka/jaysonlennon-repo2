@@ -24,7 +24,7 @@ namespace AptMgmtPortal.Repository
         public async Task<Tenant> AddTenant(TenantInfo info)
         {
             if (info == null) return null;
-            
+
             var tenant = new Tenant();
             tenant.FirstName = info.FirstName;
             tenant.LastName = info.LastName;
@@ -369,6 +369,30 @@ namespace AptMgmtPortal.Repository
                                     .FirstOrDefaultAsync();
 
             return await GetBills(tenantId, billingPeriod);
+        }
+
+        /// <summary>
+        /// Retrieves tenant Agreements.
+        /// </summary>
+        /// <param name="tenantId">Tenant ID from which to get agreements.</param>
+        /// <returns></returns>
+        public async Task<IEnumerable<DataModel.Agreement>> GetAgreements(int tenantId)
+        {
+            return await _context.TenantAgreements
+                .Where(s => s.TenantId == tenantId)
+                .Join(_context.Agreements,
+                      tenantAgreements => tenantAgreements.AgreementId,
+                      agreements => agreements.AgreementId,
+                      (ta, a) => new DataModel.Agreement {
+                          AgreementId = ta.AgreementId,
+                          Title = a.Title,
+                          Text = a.Text,
+                          SignedDate = ta.SignedDate,
+                          StartDate = ta.StartDate,
+                          EndDate = ta.EndDate,
+                      })
+                .OrderByDescending(a => a.SignedDate)
+                .ToListAsync();
         }
 
         public async Task<IEnumerable<Tenant>> FindTenantWithFirstName(string firstName)

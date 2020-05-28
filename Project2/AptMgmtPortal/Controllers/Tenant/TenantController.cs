@@ -37,5 +37,11 @@ namespace AptMgmtPortal.Controllers.Tenant
             await tenantRepository.RestEdit(info);
             return new ObjectResult(info);
         }
+
+        public async Task<IActionResult> ShowTenantAgreements(int id)
+        {
+            var agreement = await tenantRepository.GetAgreements(id);
+            return new ObjectResult(agreement);
+        }
     }
 }

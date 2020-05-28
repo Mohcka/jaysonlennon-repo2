@@ -241,3 +241,4 @@ _Pvt_Extensions
 **/*.sqlite*
 
 *~lock*
+/Project2/AptMgmtPortal/ClientApp/spa-host.exe
