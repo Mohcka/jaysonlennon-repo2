@@ -381,15 +381,15 @@ namespace AptMgmtPortal.Repository
             return await _context.SignedAgreements
                 .Where(s => s.TenantId == tenantId)
                 .Join(_context.Agreements,
-                      tenantAgreements => tenantAgreements.AgreementId,
+                      signedAgreements => signedAgreements.AgreementId,
                       agreements => agreements.AgreementId,
-                      (ta, a) => new DataModel.Agreement {
-                          AgreementId = ta.AgreementId,
+                      (sa, a) => new DataModel.Agreement {
+                          AgreementId = sa.AgreementId,
                           Title = a.Title,
                           Text = a.Text,
-                          SignedDate = ta.SignedDate,
-                          StartDate = ta.StartDate,
-                          EndDate = ta.EndDate,
+                          SignedDate = sa.SignedDate,
+                          StartDate = sa.StartDate,
+                          EndDate = sa.EndDate,
                       })
                 .OrderByDescending(a => a.SignedDate)
                 .ToListAsync();
@@ -416,14 +416,14 @@ namespace AptMgmtPortal.Repository
             return await _context.SignedAgreements
                 .Where(s => s.TenantId == tenantId)
                 .Join(_context.Agreements,
-                      tenantAgreements => tenantAgreements.AgreementId,
+                      signedAgreements => signedAgreements.AgreementId,
                       agreements => agreements.AgreementId,
-                      (ta, a) => new DataModel.AgreementSummary {
-                          AgreementId = ta.AgreementId,
+                      (sa, a) => new DataModel.AgreementSummary {
+                          AgreementId = sa.AgreementId,
                           Title = a.Title,
-                          SignedDate = ta.SignedDate,
-                          StartDate = ta.StartDate,
-                          EndDate = ta.EndDate,
+                          SignedDate = sa.SignedDate,
+                          StartDate = sa.StartDate,
+                          EndDate = sa.EndDate,
                       })
                 .OrderByDescending(a => a.SignedDate)
                 .ToListAsync();
