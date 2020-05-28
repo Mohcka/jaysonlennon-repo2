@@ -1,7 +1,7 @@
-# ASP.NET Core
-# Build and test ASP.NET Core projects targeting .NET Core.
-# Add steps that run tests, create a NuGet package, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
 
 trigger:
 - master
@@ -9,9 +9,82 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-variables:
-  buildConfiguration: 'Release'
+stages:
+- stage: Build
+  jobs:
+  - job: build
+    steps:
+    - bash: |
+        cd Project2/AptMgmtPortal
+        dotnet build
+    displayName: 'build'
+  - job: publish
+    steps:
+    - bash: |
+        cd Project2/AptMgmtPortal
+        dotnet publish -o release
+    - publish: $(System.DefaultWorkingDirectory)/Project2/AptMgmtPortal/release
+      artifact: AppRelease
 
-steps:
-- script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
+- stage: Test
+  jobs:
+  - job: test
+    steps:
+    - bash: |
+        dotnet tool install --global dotnet-ef
+        export PATH=$PATH:$HOME/.dotnet/tools
+        cd Project2/AptMgmtPortal
+        dotnet-ef migrations add InitialCreate
+        cd ../Tests
+        dotnet test
+    displayName: 'test'
+
+- stage: Coverage
+  jobs:
+  - job: coverage
+    steps:
+    - bash: |
+        export SONAR_SCANNER_VERSION=4.2.0.1873
+        export SONAR_SCANNER_HOME=$HOME/.sonar/sonar-scanner-$SONAR_SCANNER_VERSION-linux
+        curl --create-dirs -sSLo $HOME/.sonar/sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-$SONAR_SCANNER_VERSION-linux.zip
+        unzip -o $HOME/.sonar/sonar-scanner.zip -d $HOME/.sonar/
+        export PATH=$SONAR_SCANNER_HOME/bin:$PATH
+        export SONAR_SCANNER_OPTS="-server"
+
+        dotnet tool install --global dotnet-ef
+        export PATH=$PATH:$HOME/.dotnet/tools
+        cd Project2/AptMgmtPortal
+        dotnet-ef migrations add InitialCreate
+        cd ..
+
+        cd Project2/Tests
+        dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+        cd ..
+
+        sonar-scanner \
+        -Dsonar.organization=jayson-lennon \
+        -Dsonar.projectKey=jayson-lennon_pipelines \
+        -Dsonar.sources=. \
+        -Dsonar.host.url=https://sonarcloud.io \
+        -Dsonar.login=85880c2ae22b1f231b6730a1c479eb7cbe9b7dcc \
+        -Dsonar.cs.opencover.reportsPaths=Tests/coverage.opencover.xml
+    displayName: 'coverage'
+
+- stage: deploy
+  jobs:
+  - job: deploy
+    steps:
+    - task: DownloadPipelineArtifact@2
+      inputs:
+        buildType: 'current'
+        artifactName: 'AppRelease'
+        targetPath: 'release'
+    - task: AzureRmWebAppDeployment@4
+      inputs:
+        ConnectionType: 'AzureRM'
+        azureSubscription: 'Azure subscription 1(1)(add44282-5490-4beb-b46f-46afb591c142)'
+        appType: 'webAppLinux'
+        WebAppName: 'pipeline-app-jwl'
+        packageForLinux: '$(System.DefaultWorkingDirectory)/release'
+        RuntimeStack: 'DOTNETCORE|Latest'
+        StartupCommand: './citest'

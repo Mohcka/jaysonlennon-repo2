@@ -8,9 +8,10 @@ namespace AptMgmtPortal.Data
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Tenant> Tenants { get; set; }
+        public DbSet<Unit> Units { get; set; }
+        public DbSet<ResourceUsageRate> ResourceUsageRates { get; set; }
         public DbSet<MaintenanceRequest> MaintenanceRequests { get; set; }
         public DbSet<BillingPeriod> BillingPeriods { get; set; }
-        public DbSet<MaintenanceRequestType> MaintenanceRequestTypes { get; set; }
         public DbSet<Payment> Payments { get; set; }
         public DbSet<TenantResourceUsage> TenantResourceUsages { get; set; }
 
@@ -24,7 +25,6 @@ namespace AptMgmtPortal.Data
                     .UseSqlite("Data Source=app.sqlite");
         }
 
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>()
@@ -35,24 +35,9 @@ namespace AptMgmtPortal.Data
                 .Property(m => m.CloseReason)
                 .HasConversion(new EnumToStringConverter<MaintenanceCloseReason>());
 
-            /*
-                 preventing efcore from deleting a user
-                 with MaintenanceRequest assigned. 
-                 Efcore will delete user if we delete maintenanceRequest
-                 otherwise, as default is DeleteVehavior.Cascade
-             */
-
-            modelBuilder.Entity<User>()
-                .HasMany<MaintenanceRequest>(p => p.OpeningMaintenanceRequests)
-                .WithOne(m => m.OpeningUser)
-                .HasForeignKey(d => d.OpeningUserId)
-                .OnDelete(DeleteBehavior.Restrict);
-
-            modelBuilder.Entity<User>()
-             .HasMany<MaintenanceRequest>(p => p.ClosingMaintenanceRequests)
-             .WithOne(m => m.ClosingUser)
-             .HasForeignKey(d => d.ClosingUserId)
-             .OnDelete(DeleteBehavior.Restrict);
+            modelBuilder.Entity<Unit>()
+                .HasIndex(u => u.UnitNumber)
+                .IsUnique();
         }
     }
 }

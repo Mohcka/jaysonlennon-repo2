@@ -231,9 +231,13 @@ _Pvt_Extensions
 .fake/
 
 **/frontend-host
+**/spa-host
+
 **/*.autosave
 
 **/*.vscode
 **/node_modules
 
 **/*.sqlite*
+
+*~lock*

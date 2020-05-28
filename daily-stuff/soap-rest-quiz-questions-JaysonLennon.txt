@@ -1,0 +1,29 @@
+1. What nodes may be present in the "detail" section of a SOAP fault?
+* faultCode
+* faultString
+* faultActor
+* (CORRECT)anything
+
+2. What does the "MustUnderstand" attribute in a SOAP message indicate?
+* (CORRECT)The recipient must process the header or return a fault
+* The recipient must process the header and optionally return a fault
+* The recipient must process the body or return a fault
+* The recipient must process the body and optionally return a fault
+
+3. How does SOAP achieve platform independence?
+* (CORRECT)By leveraging existing channels such as HTTP
+* By specifying the format in the message
+* By only communicating with the same platforms
+* SOAP is not platform independent
+
+4. What file format does SOAP use for messaging?
+* JSON
+* HTTP
+* TXT
+* (CORRECT)XML
+
+5. In which SOAP field is "encodingStyle" defined?
+* (CORRECT)Header
+* Body
+* Envelope
+* Fault

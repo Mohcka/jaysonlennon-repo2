@@ -13,23 +13,18 @@ namespace AptMgmtPortal.Entity
         [Key]
         public int MaintenanceRequestId { get; set; }
       
-        public DateTimeOffset TimeOpened { get; set; }
-        public DateTimeOffset? TimeClosed { get; set; }
+        public DateTime TimeOpened { get; set; }
+        public DateTime? TimeClosed { get; set; }
 
-        [ForeignKey(nameof(OpeningUser)), Column(Order = 0)]
         public int OpeningUserId { get; set; }
-        public User OpeningUser { get; set; }
-      
-        [ForeignKey(nameof(ClosingUser)), Column(Order = 1)]
-        public int ClosingUserId { get; set; }
-        public User ClosingUser { get; set; }
+        public int? ClosingUserId { get; set; }
 
-        public int MaintenanceRequestTypeId { get; set; }
-        public MaintenanceRequestType MaintenanceRequestType { get; set; }
-        public MaintenanceCloseReason CloseReason { get; set; }
+        public string MaintenanceRequestType { get; set; }
+        public MaintenanceCloseReason? CloseReason { get; set; }
 
         public string OpenNotes { get; set; }
         public string ResolutionNotes { get; set; }
         public string InternalNotes { get; set; }
+        public string UnitNumber { get; set; }
     }
 }

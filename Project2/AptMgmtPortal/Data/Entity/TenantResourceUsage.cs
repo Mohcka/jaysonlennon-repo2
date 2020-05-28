@@ -10,13 +10,9 @@ namespace AptMgmtPortal.Entity
     public class TenantResourceUsage
     {
         public int TenantResourceUsageId { get; set; }
-        public DateTimeOffset SampleTime { get; set; }
-        [Column(TypeName = "decimal(18,4)")]
-        public decimal UsageAmount { get; set; }
-
+        public DateTime SampleTime { get; set; }
+        public double UsageAmount { get; set; }
         public ResourceType ResourceType { get; set; }
-
         public int TenantId { get; set; }
-        public Tenant Tenent { get; set; }
     }
 }
