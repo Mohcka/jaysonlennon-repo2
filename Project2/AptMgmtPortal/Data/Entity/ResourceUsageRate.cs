@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
 using AptMgmtPortal.Types;
 
 namespace AptMgmtPortal.Entity
@@ -8,7 +9,11 @@ namespace AptMgmtPortal.Entity
         public int ResourceUsageRateId { get; set; }
         public ResourceType ResourceType { get; set; }
         public double Rate { get; set; }
+
+        [Column(TypeName="NVARCHAR(48)")]
         public DateTime PeriodStart { get; set; }
+
+        [Column(TypeName="NVARCHAR(48)")]
         public DateTime PeriodEnd { get; set; }
     }
 }

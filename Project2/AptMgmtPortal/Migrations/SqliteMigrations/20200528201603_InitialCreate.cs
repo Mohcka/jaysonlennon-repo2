@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace AptMgmtPortal.Migrations.SqlServerMigrations
+namespace AptMgmtPortal.Migrations.SqliteMigrations
 {
     public partial class InitialCreate : Migration
     {
@@ -13,8 +13,8 @@ namespace AptMgmtPortal.Migrations.SqlServerMigrations
                 {
                     BillingPeriodId = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    PeriodStart = table.Column<DateTime>(nullable: false),
-                    PeriodEnd = table.Column<DateTime>(nullable: false)
+                    PeriodStart = table.Column<DateTime>(type: "NVARCHAR(48)", nullable: false),
+                    PeriodEnd = table.Column<DateTime>(type: "NVARCHAR(48)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -27,8 +27,8 @@ namespace AptMgmtPortal.Migrations.SqlServerMigrations
                 {
                     MaintenanceRequestId = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    TimeOpened = table.Column<DateTime>(nullable: false),
-                    TimeClosed = table.Column<DateTime>(nullable: true),
+                    TimeOpened = table.Column<DateTime>(type: "NVARCHAR(48)", nullable: false),
+                    TimeClosed = table.Column<DateTime>(type: "NVARCHAR(48)", nullable: true),
                     OpeningUserId = table.Column<int>(nullable: false),
                     ClosingUserId = table.Column<int>(nullable: true),
                     MaintenanceRequestType = table.Column<string>(nullable: true),
@@ -51,7 +51,7 @@ namespace AptMgmtPortal.Migrations.SqlServerMigrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Amount = table.Column<double>(nullable: false),
                     ResourceType = table.Column<int>(nullable: false),
-                    TimePaid = table.Column<DateTime>(nullable: false),
+                    TimePaid = table.Column<DateTime>(type: "NVARCHAR(48)", nullable: false),
                     BillingPeriodId = table.Column<int>(nullable: false),
                     TenantId = table.Column<int>(nullable: false)
                 },
@@ -68,8 +68,8 @@ namespace AptMgmtPortal.Migrations.SqlServerMigrations
                         .Annotation("Sqlite:Autoincrement", true),
                     ResourceType = table.Column<int>(nullable: false),
                     Rate = table.Column<double>(nullable: false),
-                    PeriodStart = table.Column<DateTime>(nullable: false),
-                    PeriodEnd = table.Column<DateTime>(nullable: false)
+                    PeriodStart = table.Column<DateTime>(type: "NVARCHAR(48)", nullable: false),
+                    PeriodEnd = table.Column<DateTime>(type: "NVARCHAR(48)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -82,7 +82,7 @@ namespace AptMgmtPortal.Migrations.SqlServerMigrations
                 {
                     TenantResourceUsageId = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    SampleTime = table.Column<DateTime>(nullable: false),
+                    SampleTime = table.Column<DateTime>(type: "NVARCHAR(48)", nullable: false),
                     UsageAmount = table.Column<double>(nullable: false),
                     ResourceType = table.Column<int>(nullable: false),
                     TenantId = table.Column<int>(nullable: false)

@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AptMgmtPortal.Migrations.SqliteMigrations
 {
     [DbContext(typeof(TestAptMgmtDbContext))]
-    [Migration("20200528044248_InitialCreate")]
+    [Migration("20200528201603_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,10 +25,10 @@ namespace AptMgmtPortal.Migrations.SqliteMigrations
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("PeriodEnd")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("NVARCHAR(48)");
 
                     b.Property<DateTime>("PeriodStart")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("NVARCHAR(48)");
 
                     b.HasKey("BillingPeriodId");
 
@@ -63,10 +63,10 @@ namespace AptMgmtPortal.Migrations.SqliteMigrations
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime?>("TimeClosed")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("NVARCHAR(48)");
 
                     b.Property<DateTime>("TimeOpened")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("NVARCHAR(48)");
 
                     b.Property<string>("UnitNumber")
                         .HasColumnType("TEXT");
@@ -95,7 +95,7 @@ namespace AptMgmtPortal.Migrations.SqliteMigrations
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("TimePaid")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("NVARCHAR(48)");
 
                     b.HasKey("PaymentId");
 
@@ -109,10 +109,10 @@ namespace AptMgmtPortal.Migrations.SqliteMigrations
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("PeriodEnd")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("NVARCHAR(48)");
 
                     b.Property<DateTime>("PeriodStart")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("NVARCHAR(48)");
 
                     b.Property<double>("Rate")
                         .HasColumnType("REAL");
@@ -161,7 +161,7 @@ namespace AptMgmtPortal.Migrations.SqliteMigrations
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("SampleTime")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("NVARCHAR(48)");
 
                     b.Property<int>("TenantId")
                         .HasColumnType("INTEGER");

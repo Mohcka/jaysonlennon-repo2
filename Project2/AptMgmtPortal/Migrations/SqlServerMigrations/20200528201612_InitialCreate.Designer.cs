@@ -3,32 +3,38 @@ using System;
 using AptMgmtPortal.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AptMgmtPortal.Migrations.SqlServerMigrations
 {
     [DbContext(typeof(AptMgmtDbContext))]
-    [Migration("20200528044257_InitialCreate")]
+    [Migration("20200528201612_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.4");
+                .HasAnnotation("ProductVersion", "3.1.4")
+                .HasAnnotation("Relational:MaxIdentifierLength", 128)
+                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("AptMgmtPortal.Entity.BillingPeriod", b =>
                 {
                     b.Property<int>("BillingPeriodId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("PeriodEnd")
-                        .HasColumnType("TEXT");
+                    b.Property<string>("PeriodEnd")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR(48)");
 
-                    b.Property<DateTime>("PeriodStart")
-                        .HasColumnType("TEXT");
+                    b.Property<string>("PeriodStart")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR(48)");
 
                     b.HasKey("BillingPeriodId");
 
@@ -39,37 +45,39 @@ namespace AptMgmtPortal.Migrations.SqlServerMigrations
                 {
                     b.Property<int>("MaintenanceRequestId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("CloseReason")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("ClosingUserId")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.Property<string>("InternalNotes")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MaintenanceRequestType")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("OpenNotes")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("OpeningUserId")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.Property<string>("ResolutionNotes")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("TimeClosed")
-                        .HasColumnType("TEXT");
+                    b.Property<string>("TimeClosed")
+                        .HasColumnType("NVARCHAR(48)");
 
-                    b.Property<DateTime>("TimeOpened")
-                        .HasColumnType("TEXT");
+                    b.Property<string>("TimeOpened")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR(48)");
 
                     b.Property<string>("UnitNumber")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("MaintenanceRequestId");
 
@@ -80,22 +88,24 @@ namespace AptMgmtPortal.Migrations.SqlServerMigrations
                 {
                     b.Property<int>("PaymentId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<double>("Amount")
-                        .HasColumnType("REAL");
+                        .HasColumnType("float");
 
                     b.Property<int>("BillingPeriodId")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.Property<int>("ResourceType")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.Property<int>("TenantId")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
-                    b.Property<DateTime>("TimePaid")
-                        .HasColumnType("TEXT");
+                    b.Property<string>("TimePaid")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR(48)");
 
                     b.HasKey("PaymentId");
 
@@ -106,19 +116,22 @@ namespace AptMgmtPortal.Migrations.SqlServerMigrations
                 {
                     b.Property<int>("ResourceUsageRateId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("PeriodEnd")
-                        .HasColumnType("TEXT");
+                    b.Property<string>("PeriodEnd")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR(48)");
 
-                    b.Property<DateTime>("PeriodStart")
-                        .HasColumnType("TEXT");
+                    b.Property<string>("PeriodStart")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR(48)");
 
                     b.Property<double>("Rate")
-                        .HasColumnType("REAL");
+                        .HasColumnType("float");
 
                     b.Property<int>("ResourceType")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.HasKey("ResourceUsageRateId");
 
@@ -129,22 +142,23 @@ namespace AptMgmtPortal.Migrations.SqlServerMigrations
                 {
                     b.Property<int>("TenantId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Email")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FirstName")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("UserId")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.HasKey("TenantId");
 
@@ -155,19 +169,21 @@ namespace AptMgmtPortal.Migrations.SqlServerMigrations
                 {
                     b.Property<int>("TenantResourceUsageId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("ResourceType")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
-                    b.Property<DateTime>("SampleTime")
-                        .HasColumnType("TEXT");
+                    b.Property<string>("SampleTime")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR(48)");
 
                     b.Property<int>("TenantId")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.Property<double>("UsageAmount")
-                        .HasColumnType("REAL");
+                        .HasColumnType("float");
 
                     b.HasKey("TenantResourceUsageId");
 
@@ -178,18 +194,20 @@ namespace AptMgmtPortal.Migrations.SqlServerMigrations
                 {
                     b.Property<int>("UnitId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int?>("TenantId")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.Property<string>("UnitNumber")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("UnitId");
 
                     b.HasIndex("UnitNumber")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[UnitNumber] IS NOT NULL");
 
                     b.ToTable("Units");
                 });
@@ -198,20 +216,21 @@ namespace AptMgmtPortal.Migrations.SqlServerMigrations
                 {
                     b.Property<int>("UserId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("ApiKey")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LoginName")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Password")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserAccountType")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("UserId");
 
