@@ -39,7 +39,7 @@ namespace AptMgmtPortal.Util.Auth
                     break;
             }
 
-            return new ApiKey(user.LoginName, apiKey, new List<string> { role });
+            return new ApiKey(user.LoginName, apiKey, new List<string> { role }, user.UserId);
         }
     }
 }

@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
 using AptMgmtPortal.Util.Auth;
+using AptMgmtPortal.Util.Auth.Extensions;
+using System;
 
 namespace AptMgmtPortal.Controllers
 {
@@ -31,6 +33,8 @@ namespace AptMgmtPortal.Controllers
         [Authorize(Policy = Policies.OnlyTenants)]
         public IActionResult OnlyTenants()
         {
+            var userId = this.UserIdFromApiKey();
+            _logger.LogTrace($"authorized user id:{userId}");
             var message = $"Hello from only tenants";
             return new ObjectResult(message);
         }

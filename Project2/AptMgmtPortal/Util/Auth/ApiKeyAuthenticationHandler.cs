@@ -47,7 +47,8 @@ namespace AptMgmtPortal.Util.Auth
             {
                 var claims = new List<Claim>
                 {
-                    new Claim(ClaimTypes.Name, existingApiKey.Owner)
+                    new Claim(ClaimTypes.Name, existingApiKey.Owner),
+                    new Claim(Auth.ClaimType.UserId, existingApiKey.UserId.ToString())
                 };
 
                 claims.AddRange(existingApiKey.Roles.Select(role => new Claim(ClaimTypes.Role, role)));
