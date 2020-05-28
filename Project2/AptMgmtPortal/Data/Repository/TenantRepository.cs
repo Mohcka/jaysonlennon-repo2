@@ -1,12 +1,12 @@
-﻿using AptMgmtPortal.DataModel;
-using AptMgmtPortal.Entity;
-using AptMgmtPortal.Repository;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
+using AptMgmtPortal.Entity;
+using AptMgmtPortal.Repository;
 
 namespace AptMgmtPortal.Data.Repository
 {
@@ -60,19 +60,100 @@ namespace AptMgmtPortal.Data.Repository
             return await _context.SaveChangesAsync() > 0;
         }
 
-        public Task<Bill> GetBill(int tenantId, int billId)
+        public async Task<DataModel.Bill> GetBill(int tenantId,
+                                                  ResourceType resource,
+                                                  BillingPeriod period)
         {
-            throw new NotImplementedException();
+            var billingRate = await _context.ResourceUsageRates
+                                        .Where(r => r.ResourceType == resource)
+                                        .Where(r => r.PeriodStart >= period.PeriodStart
+                                                    && r.PeriodEnd <= period.PeriodEnd)
+                                        .Select(r => r)
+                                        .FirstOrDefaultAsync();
+
+            var totalUsage = await _context.TenantResourceUsages
+                                 .Where(u => u.TenantId == tenantId)
+                                 .Where(u => u.ResourceType == resource)
+                                 .Where(u => u.SampleTime >= period.PeriodStart
+                                             && u.SampleTime <= period.PeriodEnd)
+                                 .SumAsync(u => u.UsageAmount);
+
+            var totalPaid = await _context.Payments
+                                         .Where(p => p.TenantId == tenantId)
+                                         .Where(p => p.ResourceType == resource)
+                                         .Where(p => p.BillingPeriodId == period.BillingPeriodId)
+                                         .SumAsync(p => p.Amount);
+
+            var bill = new DataModel.Bill
+            {
+                Resource = resource,
+                Period = period,
+                Usage = totalUsage,
+                Rate = billingRate.Rate,
+                Paid = totalPaid,
+            };
+
+            return bill;
         }
 
-        public Task<IEnumerable<Bill>> GetBills(int tenantId, ResourceType resource, BillingPeriod period)
+        public async Task<IEnumerable<DataModel.Bill>> GetBills(int tenantId, BillingPeriod period)
         {
-            throw new NotImplementedException();
-        }
+            var billingRates = await _context.ResourceUsageRates
+                                        .Where(r => r.PeriodStart >= period.PeriodStart
+                                                    && r.PeriodEnd <= period.PeriodEnd)
+                                        .Select(r => r)
+                                        .ToListAsync();
 
-        public Task<IEnumerable<Bill>> GetBills(int tenantId, BillingPeriod period)
-        {
-            throw new NotImplementedException();
+            var totalUsages = await _context.TenantResourceUsages
+                                        .Where(u => u.TenantId == tenantId)
+                                        .Where(u => u.SampleTime >= period.PeriodStart
+                                                    && u.SampleTime <= period.PeriodEnd)
+                                        .GroupBy(u => u.ResourceType)
+                                        .Select(gr => new
+                                        {
+                                            Resource = gr.Key,
+                                            Usage = gr.Sum(u => u.UsageAmount)
+                                        })
+                                        .ToListAsync();
+
+            var totalPayments = await _context.Payments
+                                        .Where(p => p.TenantId == tenantId)
+                                        .Where(p => p.BillingPeriodId == period.BillingPeriodId)
+                                        .GroupBy(p => p.ResourceType)
+                                        .Select(gr => new
+                                        {
+                                            Resource = gr.Key,
+                                            Payment = gr.Sum(p => p.Amount),
+                                        })
+                                        .ToListAsync();
+
+
+            var bills = new List<DataModel.Bill>();
+
+            foreach (var resourceUsage in totalUsages)
+            {
+                var rate = billingRates
+                            .Where(r => r.ResourceType == resourceUsage.Resource)
+                            .Select(r => r.Rate)
+                            .FirstOrDefault();
+
+                var payment = totalPayments
+                                .Where(p => p.Resource == resourceUsage.Resource)
+                                .Sum(p => p.Payment);
+
+                var bill = new DataModel.Bill
+                {
+                    Resource = resourceUsage.Resource,
+                    Period = period,
+                    Usage = resourceUsage.Usage,
+                    Rate = rate,
+                    Paid = payment,
+                };
+
+                bills.Add(bill);
+            }
+
+            return bills;
         }
 
         /// <summary>
@@ -81,7 +162,6 @@ namespace AptMgmtPortal.Data.Repository
         public async Task<bool> IsMaintenanceRequestForUser(int userId, int maintenanceRequestId)
         {
             var tenantId = await TenantIdFromUserId(userId);
-            Console.WriteLine($"tenantId = {tenantId}");
             var unitNumber = await _context.Units
                                            .Where(u => u.TenantId == tenantId)
                                            .Select(u => u.UnitNumber)
@@ -128,7 +208,9 @@ namespace AptMgmtPortal.Data.Repository
                                  .FirstOrDefaultAsync();
         }
 
-        public async Task<IEnumerable<Payment>> GetPayments(int tenantId, ResourceType resource, BillingPeriod period)
+        public async Task<IEnumerable<Payment>> GetPayments(int tenantId,
+                                                            ResourceType resource,
+                                                            BillingPeriod period)
         {
             return await _context.Payments
                                  .Where(p => p.TenantId == tenantId)
@@ -138,7 +220,7 @@ namespace AptMgmtPortal.Data.Repository
                                  .ToListAsync();
         }
 
-        public async Task<TenantResourceUsageSummary> GetResourceUsage(int tenantId,
+        public async Task<DataModel.TenantResourceUsageSummary> GetResourceUsage(int tenantId,
                                                                  ResourceType resource,
                                                                  BillingPeriod period)
         {
@@ -147,19 +229,22 @@ namespace AptMgmtPortal.Data.Repository
                                  .Where(u => u.ResourceType == resource)
                                  .Where(u => u.SampleTime >= period.PeriodStart && u.SampleTime <= period.PeriodEnd)
                                  .SumAsync(u => u.UsageAmount);
-            return new TenantResourceUsageSummary {
+            return new DataModel.TenantResourceUsageSummary
+            {
                 ResourceType = resource,
                 Usage = usage,
             };
         }
 
-        public async Task<IEnumerable<TenantResourceUsageSummary>> GetResourceUsage(int tenantId, BillingPeriod period)
+        public async Task<IEnumerable<DataModel.TenantResourceUsageSummary>> GetResourceUsage(int tenantId,
+                                                                                              BillingPeriod period)
         {
             return await _context.TenantResourceUsages
                     .Where(u => u.TenantId == tenantId)
                     .Where(u => u.SampleTime >= period.PeriodStart && u.SampleTime <= period.PeriodEnd)
                     .GroupBy(u => u.ResourceType)
-                    .Select(gr => new TenantResourceUsageSummary {
+                    .Select(gr => new DataModel.TenantResourceUsageSummary
+                    {
                         ResourceType = gr.Key,
                         Usage = gr.Sum(i => i.UsageAmount),
                     })
@@ -191,9 +276,20 @@ namespace AptMgmtPortal.Data.Repository
             return maintenanceRequest;
         }
 
-        public Task<bool> PayBill(int tenantId, decimal amount, ResourceType resource)
+        public async Task<bool> PayBill(int tenantId,
+                                        double amount,
+                                        ResourceType resource,
+                                        BillingPeriod period)
         {
-            throw new NotImplementedException();
+            var payment = new Payment();
+            payment.Amount = amount;
+            payment.ResourceType = resource;
+            payment.BillingPeriodId = period.BillingPeriodId;
+            payment.TenantId = tenantId;
+            payment.TimePaid = DateTime.Now;
+
+            await _context.AddAsync(payment);
+            return await _context.SaveChangesAsync() > 0;
         }
 
         public async Task<Tenant> TenantFromId(int tenantId)
@@ -219,5 +315,6 @@ namespace AptMgmtPortal.Data.Repository
                                  .Select(t => t.TenantId)
                                  .FirstOrDefaultAsync();
         }
+
     }
 }

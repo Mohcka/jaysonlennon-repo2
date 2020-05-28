@@ -6,6 +6,7 @@ using System.Linq;
 using AptMgmtPortal;
 using AptMgmtPortal.Entity;
 using AptMgmtPortal.Data;
+using AptMgmtPortal.DataModel;
 using AptMgmtPortal.Repository;
 using AptMgmtPortal.Data.Repository;
 
@@ -249,6 +250,116 @@ namespace TestAptMgmtPortal
 
                 var powerPayment = paymentsFromDb.Single();
                 Assert.Equal(12, powerPayment.Amount);
+            }
+        }
+
+        [Fact]
+        public async void GetsSingleBill()
+        {
+            var options = TestUtil.GetMemDbOptions("GetsSingleBill");
+
+            const double rate = 3;
+
+            Tenant tenant;
+            BillingPeriod period;
+            using (var db = new AptMgmtDbContext(options))
+            {
+                var repo = (ITenant)new TenantRepository(db);
+                tenant = TestUtil.NewTenant(db);
+
+                TestUtil.UseResource(db, tenant.TenantId, 5, ResourceType.Power);
+                TestUtil.UseResource(db, tenant.TenantId, 5, ResourceType.Power);
+                period = TestUtil.NewBillingPeriod(db);
+
+                TestUtil.NewResourceRate(db, rate, ResourceType.Power, period);
+            }
+
+            using (var db = new AptMgmtDbContext(options))
+            {
+                var repo = (ITenant)new TenantRepository(db);
+                var bill = await repo.GetBill(tenant.TenantId, ResourceType.Power, period);
+                Assert.Equal(rate * 10, bill.Owed());
+            }
+        }
+
+        [Fact]
+        public async void AccurateBillNumbers()
+        {
+            var options = TestUtil.GetMemDbOptions("AccurateBillNumbers");
+
+            const double rate = 1;
+
+            Tenant tenant;
+            BillingPeriod period;
+            using (var db = new AptMgmtDbContext(options))
+            {
+                var repo = (ITenant)new TenantRepository(db);
+                tenant = TestUtil.NewTenant(db);
+
+                TestUtil.UseResource(db, tenant.TenantId, 5, ResourceType.Power);
+                TestUtil.UseResource(db, tenant.TenantId, 5, ResourceType.Power);
+                period = TestUtil.NewBillingPeriod(db);
+
+                TestUtil.NewResourceRate(db, rate, ResourceType.Power, period);
+
+                var payment = TestUtil.NewPayment(db, tenant.TenantId);
+                payment.Amount = 3;     // Should still owe 7
+                payment.BillingPeriodId = period.BillingPeriodId;
+                payment.ResourceType = ResourceType.Power;
+                payment.TenantId = tenant.TenantId;
+
+                db.SaveChanges();
+            }
+
+            using (var db = new AptMgmtDbContext(options))
+            {
+                var repo = (ITenant)new TenantRepository(db);
+                var bill = await repo.GetBill(tenant.TenantId, ResourceType.Power, period);
+                Assert.Equal(3, bill.Paid);
+                Assert.Equal(rate * 7, bill.Owed());
+                Assert.Equal(rate, bill.Rate);
+            }
+        }
+
+        [Fact]
+        public async void GetsBillsInPeriod()
+        {
+            var options = TestUtil.GetMemDbOptions("GetsBillsInPeriod");
+
+            const double powerRate = 3;
+            const double waterRate = 5;
+
+            Tenant tenant;
+            BillingPeriod period;
+            using (var db = new AptMgmtDbContext(options))
+            {
+                var repo = (ITenant)new TenantRepository(db);
+                tenant = TestUtil.NewTenant(db);
+
+                TestUtil.UseResource(db, tenant.TenantId, 5, ResourceType.Power);
+                TestUtil.UseResource(db, tenant.TenantId, 6, ResourceType.Power);
+
+                TestUtil.UseResource(db, tenant.TenantId, 2, ResourceType.Water);
+                TestUtil.UseResource(db, tenant.TenantId, 3, ResourceType.Water);
+
+                period = TestUtil.NewBillingPeriod(db);
+
+                TestUtil.NewResourceRate(db, powerRate, ResourceType.Power, period);
+                TestUtil.NewResourceRate(db, waterRate, ResourceType.Water, period);
+            }
+
+            using (var db = new AptMgmtDbContext(options))
+            {
+                var repo = (ITenant)new TenantRepository(db);
+
+                var bills = await repo.GetBills(tenant.TenantId, period);
+                Assert.Equal(2, bills.Count());
+
+                var powerBill = bills.Where(b => b.Resource == ResourceType.Power).FirstOrDefault();
+                Assert.Equal(powerRate * 11, powerBill.Cost());
+
+                var waterBill = bills.Where(b => b.Resource == ResourceType.Water).FirstOrDefault();
+                Assert.Equal(waterRate * 5, waterBill.Cost());
             }
         }
     }

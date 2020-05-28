@@ -32,13 +32,14 @@ namespace AptMgmtPortal.Repository
 
         // Bills require a tenantId, since they will be generated and used regardless
         // of whether or not a tenant has a user id.
-        Task<bool> PayBill(int tenantId, decimal amount, ResourceType resource);
-        Task<DataModel.Bill> GetBill(int tenantId, int billId);
-        Task<IEnumerable<DataModel.Bill>> GetBills(int tenantId,
-                                                   ResourceType resource,
-                                                   BillingPeriod period);
+        Task<bool> PayBill(int tenantId,
+                           double amount,
+                           ResourceType resource,
+                           BillingPeriod period);
+        Task<DataModel.Bill> GetBill(int tenantId,
+                                                  ResourceType resource,
+                                                  BillingPeriod period);
         Task<IEnumerable<DataModel.Bill>> GetBills(int tenantId, BillingPeriod period);
-
         Task<bool> EditPersonalInfo(int tenantId, TenantInfo info);
 
         // Payments require a tenantId, since they are relevant regardless of whether
