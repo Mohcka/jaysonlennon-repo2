@@ -1,0 +1,58 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "loginName": "Bobbie",
+      "password": "pass",
+      "userAccountType": "manager"
+    },
+    {
+      "id": 2,
+      "loginName": "Dickson",
+      "password": "pass",
+      "userAccountType": "tenant"
+    },
+    {
+      "id": 3,
+      "loginName": "Young",
+      "password": "pass",
+      "userAccountType": "manager"
+    },
+    {
+      "id": 4,
+      "loginName": "Beth",
+      "password": "pass",
+      "userAccountType": "tenant"
+    },
+    {
+      "id": 5,
+      "loginName": "Josie",
+      "password": "pass",
+      "userAccountType": "manager"
+    },
+    {
+      "id": 6,
+      "loginName": "Joann",
+      "password": "pass",
+      "userAccountType": "manager"
+    },
+    {
+      "id": 7,
+      "loginName": "Jennifer",
+      "password": "pass",
+      "userAccountType": "manager"
+    },
+    {
+      "id": 8,
+      "loginName": "Leblanc",
+      "password": "pass",
+      "userAccountType": "manager"
+    },
+    {
+      "id": 9,
+      "loginName": "Arline",
+      "password": "pass",
+      "userAccountType": "tenant"
+    }
+  ]
+}
