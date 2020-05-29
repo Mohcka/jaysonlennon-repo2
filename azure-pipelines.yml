@@ -6,29 +6,27 @@
 trigger:
 - master
 
-pool:
-  vmImage: 'ubuntu-latest'
+resources:
+- repo: self
 
 stages:
-- stage: Build
+- stage: BuildAPI
   jobs:
   - job: build
     steps:
     - bash: |
-        cd Project2/AptMgmtPortal
+        cd Project2/AptMgmtPortalAPI
         dotnet build
     displayName: 'build'
   - job: publish
     steps:
     - bash: |
-        cd Project2/AptMgmtPortal
+        cd Project2/AptMgmtPortalAPI
         dotnet publish -c Release -o release
-        cd release
-        cp ClientApp/dist/index.html hostingstart.html
-    - publish: $(System.DefaultWorkingDirectory)/Project2/AptMgmtPortal/release
-      artifact: AppRelease
+    - publish: $(System.DefaultWorkingDirectory)/Project2/AptMgmtPortalAPI/release
+      artifact: APIRelease
 
-- stage: Test
+- stage: TestAPI
   jobs:
   - job: test
     steps:
@@ -37,7 +35,7 @@ stages:
         dotnet test
     displayName: 'test'
 
-- stage: Coverage
+- stage: CoverageAPI
   jobs:
   - job: coverage
     steps:
@@ -62,14 +60,14 @@ stages:
         -Dsonar.cs.opencover.reportsPaths=Tests/coverage.opencover.xml
     displayName: 'coverage'
 
-- stage: deploy
+- stage: DeployAPI
   jobs:
   - job: deploy
     steps:
     - task: DownloadPipelineArtifact@2
       inputs:
         buildType: 'current'
-        artifactName: 'AppRelease'
+        artifactName: 'APIRelease'
         targetPath: 'release'
     - task: AzureRmWebAppDeployment@4
       inputs:
@@ -79,4 +77,5 @@ stages:
         WebAppName: 'pipeline-app-jwl'
         packageForLinux: '$(System.DefaultWorkingDirectory)/release'
         RuntimeStack: 'DOTNETCORE|Latest'
-        StartupCommand: 'dotnet AptMgmtPortal.dll'
+        StartupCommand: 'dotnet AptMgmtPortalAPI.dll'
+
