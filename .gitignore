@@ -244,3 +244,5 @@ _Pvt_Extensions
 /Project2/AptMgmtPortal/ClientApp/spa-host.exe
 
 **/coverage.opencover.xml
+
+**/justfile

@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../AptMgmtPortal/AptMgmtPortal.csproj" />
+    <ProjectReference Include="../AptMgmtPortalAPI/AptMgmtPortalAPI.csproj" />
   </ItemGroup>
 
 </Project>
