@@ -3,12 +3,12 @@ using System.Reflection;
 using Xunit;
 using System.Linq;
 
-using AptMgmtPortal;
-using AptMgmtPortal.Entity;
-using AptMgmtPortal.Data;
-using AptMgmtPortal.Repository;
-using AptMgmtPortal.Data.Repository;
-using AptMgmtPortal.Types;
+using AptMgmtPortalAPI;
+using AptMgmtPortalAPI.Entity;
+using AptMgmtPortalAPI.Data;
+using AptMgmtPortalAPI.Repository;
+using AptMgmtPortalAPI.Data.Repository;
+using AptMgmtPortalAPI.Types;
 
 namespace TestAptMgmtPortal
 {
@@ -406,7 +406,7 @@ namespace TestAptMgmtPortal
 
             Tenant tenant;
             Agreement agreement;
-            AptMgmtPortal.DataModel.Agreement signedAgreement;
+            AptMgmtPortalAPI.DataModel.Agreement signedAgreement;
             using (var db = new AptMgmtDbContext(options))
             {
                 var repo = (ITenant)new TenantRepository(db);

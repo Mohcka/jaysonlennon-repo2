@@ -2,9 +2,9 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Data.Sqlite;
 
-using AptMgmtPortal.Data;
-using AptMgmtPortal.Entity;
-using AptMgmtPortal.Types;
+using AptMgmtPortalAPI.Data;
+using AptMgmtPortalAPI.Entity;
+using AptMgmtPortalAPI.Types;
 
 namespace TestAptMgmtPortal
 {
