@@ -1,36 +1,58 @@
 {
   "users": [
     {
-      "id": 0,
-      "name": "Florine"
-    },
-    {
       "id": 1,
-      "name": "Stark"
+      "loginName": "Bobbie",
+      "password": "pass",
+      "userAccountType": "manager"
     },
     {
       "id": 2,
-      "name": "Rosales"
+      "loginName": "Dickson",
+      "password": "pass",
+      "userAccountType": "tenant"
     },
     {
       "id": 3,
-      "name": "Sheena"
+      "loginName": "Young",
+      "password": "pass",
+      "userAccountType": "manager"
     },
     {
       "id": 4,
-      "name": "Maynard"
+      "loginName": "Beth",
+      "password": "pass",
+      "userAccountType": "tenant"
     },
     {
       "id": 5,
-      "name": "Carolina"
+      "loginName": "Josie",
+      "password": "pass",
+      "userAccountType": "manager"
     },
     {
       "id": 6,
-      "name": "Bradley"
+      "loginName": "Joann",
+      "password": "pass",
+      "userAccountType": "manager"
     },
     {
       "id": 7,
-      "name": "Krista"
+      "loginName": "Jennifer",
+      "password": "pass",
+      "userAccountType": "manager"
+    },
+    {
+      "id": 8,
+      "loginName": "Leblanc",
+      "password": "pass",
+      "userAccountType": "manager"
+    },
+    {
+      "id": 9,
+      "loginName": "Arline",
+      "password": "pass",
+      "userAccountType": "tenant"
     }
   ]
 }
