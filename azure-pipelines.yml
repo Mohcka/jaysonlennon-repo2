@@ -54,11 +54,11 @@ stages:
         cd ..
 
         sonar-scanner \
-        -Dsonar.organization=jayson-lennon \
-        -Dsonar.projectKey=jayson-lennon_pipelines \
+        -Dsonar.organization=21192782-9959-441f-9311-e9efbb0a57ef \
+        -Dsonar.projectKey=21192782-9959-441f-9311-e9efbb0a57ef \
         -Dsonar.sources=. \
         -Dsonar.host.url=https://sonarcloud.io \
-        -Dsonar.login=85880c2ae22b1f231b6730a1c479eb7cbe9b7dcc \
+        -Dsonar.login=fc44ec84e5d6f1c4cb5d7fd7e841a44b544b5076 \
         -Dsonar.cs.opencover.reportsPaths=Tests/coverage.opencover.xml
     displayName: 'coverage'
 
