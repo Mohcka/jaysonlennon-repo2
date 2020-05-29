@@ -1,0 +1,13 @@
+<h2>Maintenace Requests</h2>
+
+<div *ngIf="!maintenanceRequests">
+  Loading
+</div>
+
+<div *ngIf="maintenanceRequests">
+  <ul>
+    <li *ngFor="let request of maintenanceRequests">
+      {{request.id}}: {{request.category}}
+    </li>
+  </ul>
+</div>
