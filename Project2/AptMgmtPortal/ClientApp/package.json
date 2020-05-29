@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "start:dev": "cross-env NODE_ENV=Development ng serve",
+    "start": "ng serve --prod",
+    "dev": "ng serve",
     "build": "ng build",
     "build:ssr": "ng run AptMgmtPortal:server:dev",
     "test": "ng test",
