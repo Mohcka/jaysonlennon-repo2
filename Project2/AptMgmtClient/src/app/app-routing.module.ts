@@ -8,6 +8,9 @@ import { TenantDetailsComponent } from './components/tenant.components/tenant-de
 import { TenantsComponent } from './components/tenant.components/tenants/tenants.component';
 import { AuthGuard } from './guard/auth.guard';
 import { LoginComponent } from './components/login/login.component';
+import { TenantComponent } from './components/tenant.components/tenant/tenant.component';
+import { TenantPaymentComponent } from './components/tenant.components/tenant-payment/tenant-payment.component';
+import { MaintenanceRequestFormComponent } from './components/maintenance/maintenance-request-form/maintenance-request-form.component';
 
 // Define routes for the application
 const routes: Routes = [
@@ -15,12 +18,19 @@ const routes: Routes = [
   { path: 'counter', component: CounterComponent },
   { path: 'fetch-data', component: FetchDataComponent },
   // * Auth
-  { path: 'login', component: LoginComponent},
+  { path: 'login', component: LoginComponent },
   // * Tenants
+  { path: 'tenant', component: TenantComponent },
+  { path: 'tenant/payment', component: TenantPaymentComponent },
   { path: 'tenants', component: TenantsComponent },
   { path: 'tenant-detail/:id', component: TenantDetailsComponent },
+  { path: 'tenant/:id/maintenance', component: MaintenanceRequestFormComponent },
   // * Maintenance
-  { path: 'maintenance-requests', component: MaintenanceRequestsComponent, canActivate: [AuthGuard] },
+  {
+    path: 'maintenance-requests',
+    component: MaintenanceRequestsComponent,
+    canActivate: [AuthGuard],
+  },
 ];
 
 @NgModule({

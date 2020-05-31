@@ -1,0 +1,44 @@
+{
+  "tenants": [
+    {
+      "id": 1,
+      "firstName": "Blanchard",
+      "lastName": "Parks",
+      "email": "blanchard.parks@email.tv",
+      "phoneNumber": "+1 (953) 405-3595",
+      "userId": 5
+    },
+    {
+      "id": 2,
+      "firstName": "Burke",
+      "lastName": "Marquez",
+      "email": "burke.marquez@email.co.uk",
+      "phoneNumber": "+1 (862) 575-3769",
+      "userId": 2
+    },
+    {
+      "id": 3,
+      "firstName": "Lucile",
+      "lastName": "Lindsay",
+      "email": "lucile.lindsay@email.us",
+      "phoneNumber": "+1 (967) 540-2763",
+      "userId": 3
+    },
+    {
+      "id": 4,
+      "firstName": "Greta",
+      "lastName": "Banks",
+      "email": "greta.banks@email.org",
+      "phoneNumber": "+1 (978) 586-2726",
+      "userId": 5
+    },
+    {
+      "id": 5,
+      "firstName": "Mayer",
+      "lastName": "Alford",
+      "email": "mayer.alford@email.name",
+      "phoneNumber": "+1 (867) 516-2104",
+      "userId": 1
+    }
+  ]
+}

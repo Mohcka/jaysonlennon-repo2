@@ -3,3 +3,5 @@ export enum UserAccountType {
   Manager = 'Manager',
   Tenant = 'Tenant',
 }
+
+export type uct = 'Admin' | 'Manager' | 'Tenant';

@@ -4,7 +4,7 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { User } from '../model/user';
 import * as mockUsers from 'api/mock-users.json';
 import { Tenant } from '../model/tenant';
-import * as mockTenants from 'api/Tenant/index.json';
+import * as mockTenants from 'api/Tenant/mock-tenants.json';
 import { Maintenance } from '../model/maintenance';
 import * as mockMaintenance from 'api/Tenant/Maintenance.json';
 import { Observable } from 'rxjs';

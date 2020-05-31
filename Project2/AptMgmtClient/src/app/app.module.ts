@@ -20,6 +20,9 @@ import { ApiTokenInterceptor } from './helpers/api-token.interceptor';
 import { ErrorInterceptor } from './helpers/error.interceptor';
 import { fakeAuthBackendProvider } from './helpers/fake-auth-backend.interceptor';
 import { LoginComponent } from './components/login/login.component';
+import { TenantComponent } from './components/tenant.components/tenant/tenant.component';
+import { TenantPaymentComponent } from './components/tenant.components/tenant-payment/tenant-payment.component';
+import { MaintenanceRequestFormComponent } from './components/maintenance/maintenance-request-form/maintenance-request-form.component';
 
 // Uses mock api when under development, replaced with a blank module in
 // production
@@ -41,6 +44,9 @@ const inMemApiModule =
     TenantDetailsComponent,
     MaintenanceRequestsComponent,
     LoginComponent,
+    TenantComponent,
+    TenantPaymentComponent,
+    MaintenanceRequestFormComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

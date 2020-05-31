@@ -1,0 +1,18 @@
+<h2>Make a payment</h2>
+<div class="row">
+  <div class="col-xs">
+    <form [formGroup]="paymentForm" (ngSubmit)="logit()">
+
+      <div class="form-group">
+        <label for="amount">Amount</label>
+        <input type="amount" formControlName="amount" class="form-control" id="amount"
+          [ngClass]="{'is-invalid': submitted && f.amount.errors}" />
+        <div *ngIf="submitted && f.amount.errors" class="invalid-feedback">
+          <div *ngIf="f.amount.errors.required">Amount is requried</div>
+        </div>
+      </div>
+
+      <button [disabled]="loading" class="btn btn-primary">Make Payment</button>
+    </form>
+  </div>
+</div>
