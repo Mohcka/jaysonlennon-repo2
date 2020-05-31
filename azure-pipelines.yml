@@ -41,7 +41,7 @@ stages:
         dotnet test
     displayName: 'test'
 
-- stage: CoverageAPI
+- stage: Coverage
   jobs:
   - job: coverage
     steps:
@@ -55,6 +55,10 @@ stages:
 
         cd Project2/Tests
         dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+
+        cd ../AptMgmtClient
+        npm install
+        ./node_modules/@angular/cli/bin/ng test --code-coverage --browsers ChromeHeadless --watch false
         cd ..
 
         sonar-scanner \
@@ -64,6 +68,7 @@ stages:
           -Dsonar.host.url=https://sonarcloud.io \
           -Dsonar.login=372bcd63227329f7907b72e9f304fcfbc34a3e71 \
           -Dsonar.cs.opencover.reportsPaths=Tests/coverage.opencover.xml
+          -Dsonar.javascript.lcov.reportPaths=AptMgmtClient/coverage/lcov.info
     displayName: 'coverage'
 
 - stage: DeployAPI
@@ -84,4 +89,5 @@ stages:
         packageForLinux: '$(System.DefaultWorkingDirectory)/release'
         RuntimeStack: 'DOTNETCORE|Latest'
         StartupCommand: 'dotnet AptMgmtPortalAPI.dll'
+
 
