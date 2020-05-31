@@ -24,13 +24,10 @@ stages:
   jobs:
   - job: build
     steps:
-    - task: Npm@1
-      inputs:
-        command: 'custom'
-        customCommand: 'install -g @angular/cli'
     - bash: |
         cd Project2/AptMgmtClient
-        ng build --prod
+        npm install
+        ./node_modules/@angular/cli/bin/ng build --prod
         
     - publish: $(System.DefaultWorkingDirectory)/Project2/AptMgmtClient/dist
       artifact: ClientRelease
