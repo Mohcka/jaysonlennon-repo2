@@ -21,14 +21,14 @@ stages:
       artifact: APIRelease
 
 - stage: BuildClient
+  - task: Npm@1
+    inputs:
+      command: 'custom'
+      customCommand: 'install -g @angular/cli'
   jobs:
   - job: build
     steps:
     - bash: |
-        mkdir angularcli
-        npm install --prefix $(System.DefaultWorkingDirectory)/angularcli @angular/cli
-        export PATH=$PATH:$(System.DefaultWorkingDirectory)/angularcli/node_modules/@angular/cli/bin
-
         cd Project2/AptMgmtClient
         ng build --prod
         
