@@ -25,6 +25,8 @@ stages:
   - job: build
     steps:
     - bash: |
+        export NPM_CONFIG_PREFIX=$HOME/.npmglobal
+        export PATH=$PATH:$NPM_CONFIG_PREFIX/bin
         npm install -g @angular/cli
         cd Project2/AptMgmtClient
         ng build --prod
