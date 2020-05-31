@@ -25,6 +25,7 @@ stages:
   - job: build
     steps:
     - bash: |
+        npm install -g @angular/cli
         cd Project2/AptMgmtClient
         ng build --prod
     - publish: $(System.DefaultWorkingDirectory)/Project2/AptMgmtClient/dist
