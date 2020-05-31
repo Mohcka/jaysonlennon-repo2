@@ -107,7 +107,7 @@ stages:
         password: 'z7eWeXPgL08JWNfxJsNkXqDKQztodmkjPBEuNllu9FX8uKiyE1Gxd4XHHDpa'
         rootDirectory: 'release'
         filePatterns: '**'
-        remoteDirectory: '/home/site/wwwroot'
+        remoteDirectory: 'site/wwwroot'
         clean: false
         cleanContents: false
         preservePaths: false
