@@ -61,7 +61,7 @@ stages:
         ./node_modules/@angular/cli/bin/ng test --code-coverage --browsers ChromeHeadless --watch false
         echo ------- cating coverage file -------
         cat coverage/lcov.info
-        mv coverage/lcov.info coverage/coverage.lcov
+        mv coverage/lcov.info coverage/lcov.dat
         cd ..
 
         sonar-scanner \
@@ -71,7 +71,7 @@ stages:
           -Dsonar.host.url=https://sonarcloud.io \
           -Dsonar.login=372bcd63227329f7907b72e9f304fcfbc34a3e71 \
           -Dsonar.cs.opencover.reportsPaths=Tests/coverage.opencover.xml
-          -Dsonar.javascript.lcov.reportPaths=$(System.DefaultWorkingDirectory)/Project2/AptMgmtClient/coverage
+          -Dsonar.javascript.lcov.reportPaths=$(System.DefaultWorkingDirectory)/Project2/AptMgmtClient/coverage/lcov.dat
     displayName: 'coverage'
 
 - stage: DeployAPI
