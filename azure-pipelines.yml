@@ -71,7 +71,7 @@ stages:
           -Dsonar.host.url=https://sonarcloud.io \
           -Dsonar.login=372bcd63227329f7907b72e9f304fcfbc34a3e71 \
           -Dsonar.cs.opencover.reportsPaths=Tests/coverage.opencover.xml
-          -Dsonar.javascript.lcov.reportPaths=$(System.DefaultWorkingDirectory)/Project2/AptMgmtClient/coverage/coverage.lcov
+          -Dsonar.javascript.lcov.reportPaths=$(System.DefaultWorkingDirectory)/Project2/AptMgmtClient/coverage
     displayName: 'coverage'
 
 - stage: DeployAPI
