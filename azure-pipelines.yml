@@ -90,4 +90,27 @@ stages:
         RuntimeStack: 'DOTNETCORE|Latest'
         StartupCommand: 'dotnet AptMgmtPortalAPI.dll'
 
+- stage: DeployClient
+  jobs:
+  - job: deploy
+    steps:
+    - task: DownloadPipelineArtifact@2
+      inputs:
+        buildType: 'current'
+        artifactName: 'ClientRelease'
+        targetPath: 'release'
+    - task: FtpUpload@2
+      inputs:
+        credentialsOption: 'inputs'
+        serverUrl: 'ftps://waws-prod-dm1-069.ftp.azurewebsites.windows.net/site/wwwroot'
+        username: 'revp2t3fe\$revp2t3fe'
+        password: 'z7eWeXPgL08JWNfxJsNkXqDKQztodmkjPBEuNllu9FX8uKiyE1Gxd4XHHDpa'
+        rootDirectory: 'release'
+        filePatterns: '**'
+        remoteDirectory: '/home/site/wwwroot'
+        clean: false
+        cleanContents: false
+        preservePaths: false
+        trustSSL: false
+
 
