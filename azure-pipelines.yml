@@ -21,13 +21,13 @@ stages:
       artifact: APIRelease
 
 - stage: BuildClient
-  - task: Npm@1
-    inputs:
-      command: 'custom'
-      customCommand: 'install -g @angular/cli'
   jobs:
   - job: build
     steps:
+    - task: Npm@1
+      inputs:
+        command: 'custom'
+        customCommand: 'install -g @angular/cli'
     - bash: |
         cd Project2/AptMgmtClient
         ng build --prod
