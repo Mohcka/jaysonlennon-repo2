@@ -44,6 +44,8 @@ namespace AptMgmtPortalAPI
             {
                 options.AddDefaultPolicy(
                                   builder => {
+                                      builder.AllowAnyHeader();
+                                      builder.AllowAnyMethod();
                                       builder.WithOrigins(
                                           "http://localhost:4200",
                                           "https://localhost:4200",

@@ -21,21 +21,21 @@ namespace AptMgmtPortalAPI.Data
             DateTime dt12MonthsAgo = dateTime.Subtract(twelveMonth);
 
             #region Users Seed
-            // Seeds User data
+            // Seeds User data. The password for all of these is "password".
             modelBuilder.Entity<User>().HasData(
-                new User { UserId = 1, LoginName = "admin", Password = "password", UserAccountType = Types.UserAccountType.Admin, ApiKey = "test-key1" },
-                new User { UserId = 2, LoginName = "manager", Password = "password", UserAccountType = Types.UserAccountType.Manager, ApiKey = "test-key2" },
-                new User { UserId = 3, LoginName = "jayson", Password = "password", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key3" },
-                new User { UserId = 4, LoginName = "david", Password = "password", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key4" },
-                new User { UserId = 5, LoginName = "michael", Password = "password", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key5" },
-                new User { UserId = 6, LoginName = "sulav", Password = "password", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key6" },
-                new User { UserId = 7, LoginName = "melvin", Password = "password", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key7" },
-                new User { UserId = 8, LoginName = "deon", Password = "password", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key8" },
-                new User { UserId = 9, LoginName = "ruth", Password = "password", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key9" },
-                new User { UserId = 10, LoginName = "frances", Password = "password", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key10" },
-                new User { UserId = 11, LoginName = "linda", Password = "password", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key11" },
-                new User { UserId = 12, LoginName = "regina", Password = "password", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key12" },
-                new User { UserId = 13, LoginName = "sulav2", Password = "password", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key13" }
+                new User { UserId = 1, LoginName = "admin", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Admin, ApiKey = "test-key1" },
+                new User { UserId = 2, LoginName = "manager", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Manager, ApiKey = "test-key2" },
+                new User { UserId = 3, LoginName = "jayson", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key3" },
+                new User { UserId = 4, LoginName = "david", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key4" },
+                new User { UserId = 5, LoginName = "michael", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key5" },
+                new User { UserId = 6, LoginName = "sulav", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key6" },
+                new User { UserId = 7, LoginName = "melvin", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key7" },
+                new User { UserId = 8, LoginName = "deon", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key8" },
+                new User { UserId = 9, LoginName = "ruth", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key9" },
+                new User { UserId = 10, LoginName = "frances", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key10" },
+                new User { UserId = 11, LoginName = "linda", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key11" },
+                new User { UserId = 12, LoginName = "regina", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key12" },
+                new User { UserId = 13, LoginName = "sulav2", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key13" }
 
             );
             #endregion

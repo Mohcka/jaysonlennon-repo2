@@ -1,3 +1,4 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 
 /**
@@ -7,14 +8,13 @@ import { Observable, of } from 'rxjs';
  * @param result - optional value to return as the observable result
  */
 export function handleError<T>(operation = 'operation', result?: T) {
-  return (error: any): Observable<T> => {
-    // TODO: send the error to remote logging infrastructure
-    console.error(error); // log to console instead
-
-    // TODO: better job of transforming error for user consumption
-    console.error(`${operation} failed: ${error.message}`);
-
-    // Let the app keep running by returning an empty result.
+  return (error: HttpErrorResponse): Observable<T> => {
+    if (error === null || error === undefined) {
+      console.error(`${operation} failed: An unknown error occurred.`);
+    } else {
+      console.error(`${operation} failed (code ${error.status}): ${error.message}`);
+    }
+    // Let the app keep running by returning a valid result.
     return of(result as T);
   };
 }

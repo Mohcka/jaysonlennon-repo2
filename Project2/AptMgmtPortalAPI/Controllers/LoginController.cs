@@ -9,7 +9,7 @@ using AptMgmtPortalAPI.Types;
 namespace AptMgmtPortalAPI.Controllers.User
 {
     [ApiController]
-    [Route("/Login")]
+    [Route("/api/v1/Login")]
     public class LoginController : ControllerBase
     {
         private readonly ILogger<LoginController> _logger;
@@ -31,12 +31,14 @@ namespace AptMgmtPortalAPI.Controllers.User
             var user = await _userRepository.Login(loginInfo.UserName, loginInfo.Password);
 
             if (user != null) {
-                var tenantId = await _tenantRepository.TenantIdFromUserId(user.UserId);
-                var userDTO = new DTO.User(user);
-                userDTO.TenantId = tenantId;
-                return new ObjectResult(userDTO);
+                var loginOkDTO = new DTO.LoginOk(user);
+                return new ObjectResult(loginOkDTO);
             } else {
-                return new ObjectResult(false);
+                var error = new DTO.ErrorBuilder()
+                                   .Message("Invalid credentials")
+                                   .Code(401)
+                                   .Build();
+                return error;
             }
         }
     }
