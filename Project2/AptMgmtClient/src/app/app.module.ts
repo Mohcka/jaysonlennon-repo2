@@ -1,7 +1,7 @@
 /// <reference types="node" />
 import { CommonModule } from '@angular/common';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import { NgModule, Provider } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -15,11 +15,13 @@ import { MaintenanceRequestsComponent } from './components/maintenance/maintenan
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { TenantDetailsComponent } from './components/tenant.components/tenant-details/tenant-details.component';
 import { TenantsComponent } from './components/tenant.components/tenants/tenants.component';
-import { InMemoryDataService } from './services/in-memory-data.service';
 import { ApiTokenInterceptor } from './helpers/api-token.interceptor';
 import { ErrorInterceptor } from './helpers/error.interceptor';
-import { fakeAuthBackendProvider } from './helpers/fake-auth-backend.interceptor';
 import { LoginComponent } from './components/login/login.component';
+
+// Used in development builds only
+import { InMemoryDataService } from './services/in-memory-data.service';
+import { fakeAuthBackendProvider } from './helpers/fake-auth-backend.interceptor';
 
 // Uses mock api when under development, replaced with a blank module in
 // production
@@ -29,6 +31,15 @@ const inMemApiModule =
         dataEncapsulation: false,
       })
     : CommonModule;
+
+const providers: Provider[] = [
+    { provide: HTTP_INTERCEPTORS, useClass: ApiTokenInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
+];
+
+if (process.env.NODE_ENV === 'development') {
+  providers.push(fakeAuthBackendProvider);
+}
 
 @NgModule({
   declarations: [
@@ -49,11 +60,7 @@ const inMemApiModule =
     ReactiveFormsModule,
     AppRoutingModule,
   ],
-  providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: ApiTokenInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-    fakeAuthBackendProvider,
-  ],
+  providers: providers,
   bootstrap: [AppComponent],
 })
 export class AppModule {}
