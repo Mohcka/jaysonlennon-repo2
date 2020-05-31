@@ -5,7 +5,7 @@ import { Tenant } from '../model/tenant';
 import { catchError } from 'rxjs/operators';
 import { handleError } from 'src/utils/error-handling';
 import { GenericRest } from './generic-rest.service';
-import { ApiBase } from '../../ApiUrls';
+import { ApiBase } from '../../ApiBase';
 
 @Injectable({
   providedIn: 'root',

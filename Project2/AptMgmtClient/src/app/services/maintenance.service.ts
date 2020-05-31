@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Maintenance } from '../model/maintenance';
 import { GenericRest } from './generic-rest.service';
-import { ApiBase } from '../../ApiUrls';
+import { ApiBase } from '../../ApiBase';
 
 @Injectable({
   providedIn: 'root',
