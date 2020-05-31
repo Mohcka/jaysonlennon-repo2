@@ -80,26 +80,26 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         new
                         {
                             BillingPeriodId = 1,
-                            PeriodEnd = "2020-05-30 18:06:25.3625779",
-                            PeriodStart = "2020-04-30 18:06:25.3518605"
+                            PeriodEnd = "2020-05-31 06:59:43.0544131",
+                            PeriodStart = "2020-05-01 06:59:43.0466512"
                         },
                         new
                         {
                             BillingPeriodId = 2,
-                            PeriodEnd = "2020-05-30 18:06:25.3626418",
-                            PeriodStart = "2020-03-01 18:06:25.3518605"
+                            PeriodEnd = "2020-05-31 06:59:43.0544604",
+                            PeriodStart = "2020-03-02 06:59:43.0466512"
                         },
                         new
                         {
                             BillingPeriodId = 3,
-                            PeriodEnd = "2020-05-30 18:06:25.362645",
-                            PeriodStart = "2019-12-02 18:06:25.3518605"
+                            PeriodEnd = "2020-05-31 06:59:43.0544623",
+                            PeriodStart = "2019-12-03 06:59:43.0466512"
                         },
                         new
                         {
                             BillingPeriodId = 4,
-                            PeriodEnd = "2020-05-30 18:06:25.362646",
-                            PeriodStart = "2019-06-05 18:06:25.3518605"
+                            PeriodEnd = "2020-05-31 06:59:43.0544626",
+                            PeriodStart = "2019-06-06 06:59:43.0466512"
                         });
                 });
 
@@ -156,8 +156,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             OpenNotes = "No water",
                             OpeningUserId = 1,
                             ResolutionNotes = "Fully restored.",
-                            TimeClosed = "2020-05-30 18:06:25.3622374",
-                            TimeOpened = "2020-03-01 18:06:25.3518605",
+                            TimeClosed = "2020-05-31 06:59:43.0541134",
+                            TimeOpened = "2020-03-02 06:59:43.0466512",
                             UnitNumber = "101"
                         },
                         new
@@ -168,7 +168,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             InternalNotes = "Call Comcast",
                             OpenNotes = "No Interet",
                             OpeningUserId = 1,
-                            TimeOpened = "2020-03-01 18:06:25.3518605",
+                            TimeOpened = "2020-03-02 06:59:43.0466512",
                             UnitNumber = "101"
                         },
                         new
@@ -179,7 +179,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             InternalNotes = "Call Plumber",
                             OpenNotes = "No water",
                             OpeningUserId = 1,
-                            TimeOpened = "2019-12-02 18:06:25.3518605",
+                            TimeOpened = "2019-12-03 06:59:43.0466512",
                             UnitNumber = "101"
                         },
                         new
@@ -190,7 +190,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             InternalNotes = "Call Plumber",
                             OpenNotes = "No water",
                             OpeningUserId = 2,
-                            TimeOpened = "2020-03-01 18:06:25.3518605",
+                            TimeOpened = "2020-03-02 06:59:43.0466512",
                             UnitNumber = "102"
                         },
                         new
@@ -200,7 +200,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             InternalNotes = "Call Plumber",
                             OpenNotes = "No water",
                             OpeningUserId = 3,
-                            TimeOpened = "2020-03-01 18:06:25.3518605",
+                            TimeOpened = "2020-03-02 06:59:43.0466512",
                             UnitNumber = "103"
                         },
                         new
@@ -209,7 +209,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             InternalNotes = "Call Plumber",
                             OpenNotes = "No water",
                             OpeningUserId = 4,
-                            TimeOpened = "2020-03-01 18:06:25.3518605",
+                            TimeOpened = "2020-03-02 06:59:43.0466512",
                             UnitNumber = "104"
                         },
                         new
@@ -218,7 +218,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             InternalNotes = "Call Plumber",
                             OpenNotes = "No water",
                             OpeningUserId = 5,
-                            TimeOpened = "2020-03-01 18:06:25.3518605",
+                            TimeOpened = "2020-03-02 06:59:43.0466512",
                             UnitNumber = "105"
                         },
                         new
@@ -227,7 +227,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             InternalNotes = "Call Plumber",
                             OpenNotes = "No water",
                             OpeningUserId = 6,
-                            TimeOpened = "2020-03-01 18:06:25.3518605",
+                            TimeOpened = "2020-03-02 06:59:43.0466512",
                             UnitNumber = "106"
                         },
                         new
@@ -236,7 +236,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             InternalNotes = "Call Plumber",
                             OpenNotes = "No water",
                             OpeningUserId = 7,
-                            TimeOpened = "2020-03-01 18:06:25.3518605",
+                            TimeOpened = "2020-03-02 06:59:43.0466512",
                             UnitNumber = "107"
                         },
                         new
@@ -245,7 +245,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             InternalNotes = "Call Plumber",
                             OpenNotes = "No water",
                             OpeningUserId = 8,
-                            TimeOpened = "2020-03-01 18:06:25.3518605",
+                            TimeOpened = "2020-03-02 06:59:43.0466512",
                             UnitNumber = "108"
                         });
                 });
@@ -285,7 +285,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             BillingPeriodId = 1,
                             ResourceType = 2,
                             TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3615499"
+                            TimePaid = "2020-05-31 06:59:43.0535949"
                         },
                         new
                         {
@@ -294,7 +294,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             BillingPeriodId = 1,
                             ResourceType = 0,
                             TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616084"
+                            TimePaid = "2020-05-31 06:59:43.053642"
                         },
                         new
                         {
@@ -303,7 +303,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             BillingPeriodId = 1,
                             ResourceType = 4,
                             TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616119"
+                            TimePaid = "2020-05-31 06:59:43.0536437"
                         },
                         new
                         {
@@ -312,7 +312,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             BillingPeriodId = 1,
                             ResourceType = 3,
                             TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.361613"
+                            TimePaid = "2020-05-31 06:59:43.053644"
                         },
                         new
                         {
@@ -321,7 +321,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             BillingPeriodId = 1,
                             ResourceType = 1,
                             TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616139"
+                            TimePaid = "2020-05-31 06:59:43.0536442"
                         },
                         new
                         {
@@ -329,8 +329,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 2,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616148"
+                            TenantId = 2,
+                            TimePaid = "2020-05-31 06:59:43.0536445"
                         },
                         new
                         {
@@ -338,8 +338,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 0,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616157"
+                            TenantId = 2,
+                            TimePaid = "2020-05-31 06:59:43.0536447"
                         },
                         new
                         {
@@ -347,8 +347,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 4,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616166"
+                            TenantId = 2,
+                            TimePaid = "2020-05-31 06:59:43.0536449"
                         },
                         new
                         {
@@ -356,8 +356,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 3,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616176"
+                            TenantId = 2,
+                            TimePaid = "2020-05-31 06:59:43.0536452"
                         },
                         new
                         {
@@ -365,8 +365,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 1,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616185"
+                            TenantId = 2,
+                            TimePaid = "2020-05-31 06:59:43.0536454"
                         },
                         new
                         {
@@ -374,8 +374,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 2,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616194"
+                            TenantId = 3,
+                            TimePaid = "2020-05-31 06:59:43.0536456"
                         },
                         new
                         {
@@ -383,8 +383,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 0,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616203"
+                            TenantId = 3,
+                            TimePaid = "2020-05-31 06:59:43.0536459"
                         },
                         new
                         {
@@ -392,8 +392,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 4,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616212"
+                            TenantId = 3,
+                            TimePaid = "2020-05-31 06:59:43.0536461"
                         },
                         new
                         {
@@ -401,8 +401,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 3,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616221"
+                            TenantId = 3,
+                            TimePaid = "2020-05-31 06:59:43.0536463"
                         },
                         new
                         {
@@ -410,8 +410,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 1,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616231"
+                            TenantId = 3,
+                            TimePaid = "2020-05-31 06:59:43.0536466"
                         },
                         new
                         {
@@ -419,8 +419,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 2,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.361624"
+                            TenantId = 4,
+                            TimePaid = "2020-05-31 06:59:43.0536468"
                         },
                         new
                         {
@@ -428,8 +428,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 0,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616249"
+                            TenantId = 4,
+                            TimePaid = "2020-05-31 06:59:43.0536471"
                         },
                         new
                         {
@@ -437,8 +437,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 4,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616258"
+                            TenantId = 4,
+                            TimePaid = "2020-05-31 06:59:43.0536473"
                         },
                         new
                         {
@@ -446,8 +446,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 3,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616267"
+                            TenantId = 4,
+                            TimePaid = "2020-05-31 06:59:43.0536476"
                         },
                         new
                         {
@@ -455,8 +455,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 1,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616277"
+                            TenantId = 4,
+                            TimePaid = "2020-05-31 06:59:43.0536478"
                         },
                         new
                         {
@@ -464,8 +464,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 2,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616286"
+                            TenantId = 5,
+                            TimePaid = "2020-05-31 06:59:43.053648"
                         },
                         new
                         {
@@ -473,8 +473,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 0,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616295"
+                            TenantId = 5,
+                            TimePaid = "2020-05-31 06:59:43.0536482"
                         },
                         new
                         {
@@ -482,8 +482,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 4,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616304"
+                            TenantId = 5,
+                            TimePaid = "2020-05-31 06:59:43.0536485"
                         },
                         new
                         {
@@ -491,8 +491,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 3,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616313"
+                            TenantId = 5,
+                            TimePaid = "2020-05-31 06:59:43.0536487"
                         },
                         new
                         {
@@ -500,8 +500,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 1,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616322"
+                            TenantId = 5,
+                            TimePaid = "2020-05-31 06:59:43.0536489"
                         },
                         new
                         {
@@ -509,8 +509,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 2,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616332"
+                            TenantId = 6,
+                            TimePaid = "2020-05-31 06:59:43.0536492"
                         },
                         new
                         {
@@ -518,8 +518,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 0,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616341"
+                            TenantId = 6,
+                            TimePaid = "2020-05-31 06:59:43.0536494"
                         },
                         new
                         {
@@ -527,8 +527,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 4,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.361635"
+                            TenantId = 6,
+                            TimePaid = "2020-05-31 06:59:43.0536496"
                         },
                         new
                         {
@@ -536,8 +536,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 3,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616359"
+                            TenantId = 6,
+                            TimePaid = "2020-05-31 06:59:43.0536498"
                         },
                         new
                         {
@@ -545,8 +545,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 1,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616368"
+                            TenantId = 6,
+                            TimePaid = "2020-05-31 06:59:43.05365"
                         },
                         new
                         {
@@ -554,8 +554,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 2,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616377"
+                            TenantId = 7,
+                            TimePaid = "2020-05-31 06:59:43.0536503"
                         },
                         new
                         {
@@ -563,8 +563,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 0,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616386"
+                            TenantId = 7,
+                            TimePaid = "2020-05-31 06:59:43.0536505"
                         },
                         new
                         {
@@ -572,8 +572,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 4,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616396"
+                            TenantId = 7,
+                            TimePaid = "2020-05-31 06:59:43.0536507"
                         },
                         new
                         {
@@ -581,8 +581,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 3,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616405"
+                            TenantId = 7,
+                            TimePaid = "2020-05-31 06:59:43.0536509"
                         },
                         new
                         {
@@ -590,8 +590,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 1,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616414"
+                            TenantId = 7,
+                            TimePaid = "2020-05-31 06:59:43.0536512"
                         },
                         new
                         {
@@ -599,8 +599,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 2,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616423"
+                            TenantId = 8,
+                            TimePaid = "2020-05-31 06:59:43.0536514"
                         },
                         new
                         {
@@ -608,8 +608,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 0,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616432"
+                            TenantId = 8,
+                            TimePaid = "2020-05-31 06:59:43.0536517"
                         },
                         new
                         {
@@ -617,8 +617,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 4,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616442"
+                            TenantId = 8,
+                            TimePaid = "2020-05-31 06:59:43.0536519"
                         },
                         new
                         {
@@ -626,8 +626,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 3,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616451"
+                            TenantId = 8,
+                            TimePaid = "2020-05-31 06:59:43.0536522"
                         },
                         new
                         {
@@ -635,8 +635,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 1,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.361646"
+                            TenantId = 8,
+                            TimePaid = "2020-05-31 06:59:43.0536524"
                         },
                         new
                         {
@@ -644,8 +644,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 2,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616469"
+                            TenantId = 9,
+                            TimePaid = "2020-05-31 06:59:43.0536526"
                         },
                         new
                         {
@@ -653,8 +653,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 0,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616479"
+                            TenantId = 9,
+                            TimePaid = "2020-05-31 06:59:43.0536528"
                         },
                         new
                         {
@@ -662,8 +662,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 4,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616488"
+                            TenantId = 9,
+                            TimePaid = "2020-05-31 06:59:43.053653"
                         },
                         new
                         {
@@ -671,8 +671,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 3,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616497"
+                            TenantId = 9,
+                            TimePaid = "2020-05-31 06:59:43.0536532"
                         },
                         new
                         {
@@ -680,8 +680,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 1,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.361665"
+                            TenantId = 9,
+                            TimePaid = "2020-05-31 06:59:43.0536535"
                         },
                         new
                         {
@@ -689,8 +689,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 2,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616662"
+                            TenantId = 10,
+                            TimePaid = "2020-05-31 06:59:43.0536537"
                         },
                         new
                         {
@@ -698,8 +698,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 0,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616671"
+                            TenantId = 10,
+                            TimePaid = "2020-05-31 06:59:43.0536539"
                         },
                         new
                         {
@@ -707,8 +707,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 4,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.361668"
+                            TenantId = 10,
+                            TimePaid = "2020-05-31 06:59:43.0536541"
                         },
                         new
                         {
@@ -716,8 +716,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 3,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.361669"
+                            TenantId = 10,
+                            TimePaid = "2020-05-31 06:59:43.0536543"
                         },
                         new
                         {
@@ -725,8 +725,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Amount = 100.11,
                             BillingPeriodId = 1,
                             ResourceType = 1,
-                            TenantId = 1,
-                            TimePaid = "2020-05-30 18:06:25.3616699"
+                            TenantId = 10,
+                            TimePaid = "2020-05-31 06:59:43.0536545"
                         });
                 });
 
@@ -759,41 +759,41 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         new
                         {
                             ResourceUsageRateId = 1,
-                            PeriodEnd = "2020-05-30 18:06:25.3611618",
-                            PeriodStart = "2020-03-01 18:06:25.3518605",
+                            PeriodEnd = "2020-05-31 06:59:43.0532196",
+                            PeriodStart = "2020-03-02 06:59:43.0466512",
                             Rate = 40.450000000000003,
                             ResourceType = 2
                         },
                         new
                         {
                             ResourceUsageRateId = 2,
-                            PeriodEnd = "2020-05-30 18:06:25.3612618",
-                            PeriodStart = "2020-03-01 18:06:25.3518605",
-                            Rate = 30.449999999999999,
+                            PeriodEnd = "2020-05-31 06:59:43.0533007",
+                            PeriodStart = "2020-03-02 06:59:43.0466512",
+                            Rate = 3.4500000000000002,
                             ResourceType = 0
                         },
                         new
                         {
                             ResourceUsageRateId = 3,
-                            PeriodEnd = "2020-05-30 18:06:25.3612714",
-                            PeriodStart = "2020-03-01 18:06:25.3518605",
+                            PeriodEnd = "2020-05-31 06:59:43.053304",
+                            PeriodStart = "2020-03-02 06:59:43.0466512",
                             Rate = 1100.0,
                             ResourceType = 4
                         },
                         new
                         {
                             ResourceUsageRateId = 4,
-                            PeriodEnd = "2020-05-30 18:06:25.3612724",
-                            PeriodStart = "2020-03-01 18:06:25.3518605",
+                            PeriodEnd = "2020-05-31 06:59:43.0533043",
+                            PeriodStart = "2020-03-02 06:59:43.0466512",
                             Rate = 20.550000000000001,
                             ResourceType = 3
                         },
                         new
                         {
                             ResourceUsageRateId = 5,
-                            PeriodEnd = "2020-05-30 18:06:25.3612733",
-                            PeriodStart = "2020-03-01 18:06:25.3518605",
-                            Rate = 15.75,
+                            PeriodEnd = "2020-05-31 06:59:43.0533046",
+                            PeriodStart = "2020-03-02 06:59:43.0466512",
+                            Rate = 1.75,
                             ResourceType = 1
                         });
                 });
@@ -832,90 +832,90 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             SignedAgreementId = 1,
                             AgreementId = 1,
-                            EndDate = "2020-05-30 18:06:25.3608289",
-                            SignedDate = "2020-03-01 18:06:25.3518605",
-                            StartDate = "2020-03-01 18:06:25.3518605",
+                            EndDate = "2020-05-31 06:59:43.0529101",
+                            SignedDate = "2020-03-02 06:59:43.0466512",
+                            StartDate = "2020-03-02 06:59:43.0466512",
                             TenantId = 1
                         },
                         new
                         {
                             SignedAgreementId = 2,
                             AgreementId = 2,
-                            EndDate = "2020-05-30 18:06:25.3609185",
-                            SignedDate = "2019-12-02 18:06:25.3518605",
-                            StartDate = "2019-12-02 18:06:25.3518605",
+                            EndDate = "2020-05-31 06:59:43.0529912",
+                            SignedDate = "2019-12-03 06:59:43.0466512",
+                            StartDate = "2019-12-03 06:59:43.0466512",
                             TenantId = 2
                         },
                         new
                         {
                             SignedAgreementId = 3,
                             AgreementId = 3,
-                            EndDate = "2020-05-30 18:06:25.3609237",
-                            SignedDate = "2019-06-05 18:06:25.3518605",
-                            StartDate = "2019-06-05 18:06:25.3518605",
+                            EndDate = "2020-05-31 06:59:43.0529937",
+                            SignedDate = "2019-06-06 06:59:43.0466512",
+                            StartDate = "2019-06-06 06:59:43.0466512",
                             TenantId = 3
                         },
                         new
                         {
                             SignedAgreementId = 4,
-                            AgreementId = 4,
-                            EndDate = "2020-05-30 18:06:25.3609248",
-                            SignedDate = "2020-03-01 18:06:25.3518605",
-                            StartDate = "2020-03-01 18:06:25.3518605",
+                            AgreementId = 1,
+                            EndDate = "2020-05-31 06:59:43.052994",
+                            SignedDate = "2020-03-02 06:59:43.0466512",
+                            StartDate = "2020-03-02 06:59:43.0466512",
                             TenantId = 4
                         },
                         new
                         {
                             SignedAgreementId = 5,
-                            AgreementId = 5,
-                            EndDate = "2020-05-30 18:06:25.3609258",
-                            SignedDate = "2019-12-02 18:06:25.3518605",
-                            StartDate = "2019-12-02 18:06:25.3518605",
+                            AgreementId = 2,
+                            EndDate = "2020-05-31 06:59:43.0529943",
+                            SignedDate = "2019-12-03 06:59:43.0466512",
+                            StartDate = "2019-12-03 06:59:43.0466512",
                             TenantId = 5
                         },
                         new
                         {
                             SignedAgreementId = 6,
-                            AgreementId = 6,
-                            EndDate = "2020-05-30 18:06:25.3609267",
-                            SignedDate = "2019-06-05 18:06:25.3518605",
-                            StartDate = "2019-06-05 18:06:25.3518605",
+                            AgreementId = 3,
+                            EndDate = "2020-05-31 06:59:43.0529945",
+                            SignedDate = "2019-06-06 06:59:43.0466512",
+                            StartDate = "2019-06-06 06:59:43.0466512",
                             TenantId = 6
                         },
                         new
                         {
                             SignedAgreementId = 7,
-                            AgreementId = 7,
-                            EndDate = "2020-05-30 18:06:25.3609276",
-                            SignedDate = "2020-03-01 18:06:25.3518605",
-                            StartDate = "2020-03-01 18:06:25.3518605",
+                            AgreementId = 1,
+                            EndDate = "2020-05-31 06:59:43.0529947",
+                            SignedDate = "2020-03-02 06:59:43.0466512",
+                            StartDate = "2020-03-02 06:59:43.0466512",
                             TenantId = 7
                         },
                         new
                         {
                             SignedAgreementId = 8,
-                            AgreementId = 8,
-                            EndDate = "2020-05-30 18:06:25.3609286",
-                            SignedDate = "2019-12-02 18:06:25.3518605",
-                            StartDate = "2019-12-02 18:06:25.3518605",
+                            AgreementId = 2,
+                            EndDate = "2020-05-31 06:59:43.052995",
+                            SignedDate = "2019-12-03 06:59:43.0466512",
+                            StartDate = "2019-12-03 06:59:43.0466512",
                             TenantId = 8
                         },
                         new
                         {
                             SignedAgreementId = 9,
-                            AgreementId = 9,
-                            EndDate = "2020-05-30 18:06:25.3609295",
-                            SignedDate = "2019-06-05 18:06:25.3518605",
-                            StartDate = "2019-06-05 18:06:25.3518605",
+                            AgreementId = 3,
+                            EndDate = "2020-05-31 06:59:43.0529952",
+                            SignedDate = "2019-06-06 06:59:43.0466512",
+                            StartDate = "2019-06-06 06:59:43.0466512",
                             TenantId = 9
                         },
                         new
                         {
                             SignedAgreementId = 10,
-                            AgreementId = 10,
-                            EndDate = "2020-05-30 18:06:25.3609304",
-                            SignedDate = "2020-03-01 18:06:25.3518605",
-                            StartDate = "2020-03-01 18:06:25.3518605",
+                            AgreementId = 1,
+                            EndDate = "2020-05-31 06:59:43.0529954",
+                            SignedDate = "2020-03-02 06:59:43.0466512",
+                            StartDate = "2020-03-02 06:59:43.0466512",
                             TenantId = 10
                         });
                 });
@@ -953,8 +953,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Email = "jayson@gmail.com",
                             FirstName = "Jayson",
                             LastName = "Lennon",
-                            PhoneNumber = "555-1604-317",
-                            UserId = 4
+                            PhoneNumber = "555-164-317",
+                            UserId = 3
                         },
                         new
                         {
@@ -962,8 +962,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Email = "david@gmail.com",
                             FirstName = "David",
                             LastName = "Sawyer",
-                            PhoneNumber = "555-1958-162",
-                            UserId = 5
+                            PhoneNumber = "555-195-162",
+                            UserId = 4
                         },
                         new
                         {
@@ -971,8 +971,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Email = "michael@gmail.com",
                             FirstName = "Michael",
                             LastName = "Walker",
-                            PhoneNumber = "555-3115-412",
-                            UserId = 6
+                            PhoneNumber = "555-115-412",
+                            UserId = 5
                         },
                         new
                         {
@@ -980,8 +980,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Email = "sulav@gmail.com",
                             FirstName = "Sulav",
                             LastName = "Aryal",
-                            PhoneNumber = "555-7873-595",
-                            UserId = 7
+                            PhoneNumber = "555-787-595",
+                            UserId = 6
                         },
                         new
                         {
@@ -989,8 +989,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Email = "melvin@gmail.com",
                             FirstName = "Melvin",
                             LastName = "Johnson",
-                            PhoneNumber = "555-2858-445",
-                            UserId = 8
+                            PhoneNumber = "555-858-445",
+                            UserId = 7
                         },
                         new
                         {
@@ -998,8 +998,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Email = "deon@gmail.com",
                             FirstName = "Deon ",
                             LastName = "Smith",
-                            PhoneNumber = "555-5140-298",
-                            UserId = 9
+                            PhoneNumber = "555-514-298",
+                            UserId = 8
                         },
                         new
                         {
@@ -1007,8 +1007,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Email = "ruth@gmail.com",
                             FirstName = "Ruth ",
                             LastName = "Williams",
-                            PhoneNumber = "555-3037-777",
-                            UserId = 10
+                            PhoneNumber = "555-337-777",
+                            UserId = 9
                         },
                         new
                         {
@@ -1016,8 +1016,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Email = "frances@gmail.com",
                             FirstName = "Frances ",
                             LastName = "Hook",
-                            PhoneNumber = "555-9871-503",
-                            UserId = 11
+                            PhoneNumber = "555-871-503",
+                            UserId = 10
                         },
                         new
                         {
@@ -1025,8 +1025,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Email = "linda@gmail.com",
                             FirstName = "Linda",
                             LastName = "Lopez",
-                            PhoneNumber = "555-6027-558",
-                            UserId = 12
+                            PhoneNumber = "555-607-558",
+                            UserId = 11
                         },
                         new
                         {
@@ -1034,8 +1034,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             Email = "regina@gmail.com",
                             FirstName = "Regina",
                             LastName = "McCoy",
-                            PhoneNumber = "555-5304-625",
-                            UserId = 13
+                            PhoneNumber = "555-504-625",
+                            UserId = 12
                         });
                 });
 
@@ -1068,7 +1068,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 1,
                             ResourceType = 2,
-                            SampleTime = "2020-05-30 18:06:25.3603893",
+                            SampleTime = "2020-05-31 06:59:43.0525686",
                             TenantId = 1,
                             UsageAmount = 100.0
                         },
@@ -1076,7 +1076,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 2,
                             ResourceType = 0,
-                            SampleTime = "2020-05-30 18:06:25.3604692",
+                            SampleTime = "2020-05-31 06:59:43.0526201",
                             TenantId = 1,
                             UsageAmount = 50.549999999999997
                         },
@@ -1084,7 +1084,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 3,
                             ResourceType = 4,
-                            SampleTime = "2020-05-30 18:06:25.3604845",
+                            SampleTime = "2020-05-31 06:59:43.052622",
                             TenantId = 1,
                             UsageAmount = 1100.5
                         },
@@ -1092,7 +1092,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 4,
                             ResourceType = 3,
-                            SampleTime = "2020-05-30 18:06:25.3604857",
+                            SampleTime = "2020-05-31 06:59:43.0526223",
                             TenantId = 1,
                             UsageAmount = 15.56
                         },
@@ -1100,7 +1100,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 5,
                             ResourceType = 1,
-                            SampleTime = "2020-05-30 18:06:25.3604866",
+                            SampleTime = "2020-05-31 06:59:43.0526225",
                             TenantId = 1,
                             UsageAmount = 30.329999999999998
                         },
@@ -1108,7 +1108,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 6,
                             ResourceType = 2,
-                            SampleTime = "2020-05-30 18:06:25.3604875",
+                            SampleTime = "2020-05-31 06:59:43.0526228",
                             TenantId = 2,
                             UsageAmount = 100.0
                         },
@@ -1116,7 +1116,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 7,
                             ResourceType = 0,
-                            SampleTime = "2020-05-30 18:06:25.3604885",
+                            SampleTime = "2020-05-31 06:59:43.052623",
                             TenantId = 2,
                             UsageAmount = 50.549999999999997
                         },
@@ -1124,7 +1124,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 8,
                             ResourceType = 4,
-                            SampleTime = "2020-05-30 18:06:25.3604894",
+                            SampleTime = "2020-05-31 06:59:43.0526232",
                             TenantId = 2,
                             UsageAmount = 1100.5
                         },
@@ -1132,7 +1132,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 9,
                             ResourceType = 3,
-                            SampleTime = "2020-05-30 18:06:25.3604903",
+                            SampleTime = "2020-05-31 06:59:43.0526235",
                             TenantId = 2,
                             UsageAmount = 15.56
                         },
@@ -1140,7 +1140,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 10,
                             ResourceType = 1,
-                            SampleTime = "2020-05-30 18:06:25.3604912",
+                            SampleTime = "2020-05-31 06:59:43.0526237",
                             TenantId = 2,
                             UsageAmount = 30.329999999999998
                         },
@@ -1148,7 +1148,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 11,
                             ResourceType = 2,
-                            SampleTime = "2020-05-30 18:06:25.3604921",
+                            SampleTime = "2020-05-31 06:59:43.0526239",
                             TenantId = 3,
                             UsageAmount = 100.0
                         },
@@ -1156,7 +1156,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 12,
                             ResourceType = 0,
-                            SampleTime = "2020-05-30 18:06:25.360493",
+                            SampleTime = "2020-05-31 06:59:43.0526242",
                             TenantId = 3,
                             UsageAmount = 50.549999999999997
                         },
@@ -1164,7 +1164,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 13,
                             ResourceType = 4,
-                            SampleTime = "2020-05-30 18:06:25.3604939",
+                            SampleTime = "2020-05-31 06:59:43.0526244",
                             TenantId = 3,
                             UsageAmount = 1100.5
                         },
@@ -1172,7 +1172,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 14,
                             ResourceType = 3,
-                            SampleTime = "2020-05-30 18:06:25.3604948",
+                            SampleTime = "2020-05-31 06:59:43.0526246",
                             TenantId = 3,
                             UsageAmount = 15.56
                         },
@@ -1180,7 +1180,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 15,
                             ResourceType = 1,
-                            SampleTime = "2020-05-30 18:06:25.3604958",
+                            SampleTime = "2020-05-31 06:59:43.0526248",
                             TenantId = 3,
                             UsageAmount = 30.329999999999998
                         },
@@ -1188,7 +1188,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 16,
                             ResourceType = 2,
-                            SampleTime = "2020-05-30 18:06:25.3604967",
+                            SampleTime = "2020-05-31 06:59:43.0526251",
                             TenantId = 4,
                             UsageAmount = 100.0
                         },
@@ -1196,7 +1196,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 17,
                             ResourceType = 0,
-                            SampleTime = "2020-05-30 18:06:25.3604976",
+                            SampleTime = "2020-05-31 06:59:43.0526253",
                             TenantId = 4,
                             UsageAmount = 50.549999999999997
                         },
@@ -1204,7 +1204,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 18,
                             ResourceType = 4,
-                            SampleTime = "2020-05-30 18:06:25.3604985",
+                            SampleTime = "2020-05-31 06:59:43.0526255",
                             TenantId = 4,
                             UsageAmount = 1100.5
                         },
@@ -1212,7 +1212,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 19,
                             ResourceType = 3,
-                            SampleTime = "2020-05-30 18:06:25.3604994",
+                            SampleTime = "2020-05-31 06:59:43.0526258",
                             TenantId = 4,
                             UsageAmount = 15.56
                         },
@@ -1220,7 +1220,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 20,
                             ResourceType = 1,
-                            SampleTime = "2020-05-30 18:06:25.3605003",
+                            SampleTime = "2020-05-31 06:59:43.052626",
                             TenantId = 4,
                             UsageAmount = 30.329999999999998
                         },
@@ -1228,7 +1228,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 21,
                             ResourceType = 2,
-                            SampleTime = "2020-05-30 18:06:25.3605012",
+                            SampleTime = "2020-05-31 06:59:43.0526263",
                             TenantId = 5,
                             UsageAmount = 150.0
                         },
@@ -1236,7 +1236,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 22,
                             ResourceType = 0,
-                            SampleTime = "2020-05-30 18:06:25.3605022",
+                            SampleTime = "2020-05-31 06:59:43.0526265",
                             TenantId = 5,
                             UsageAmount = 60.549999999999997
                         },
@@ -1244,7 +1244,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 23,
                             ResourceType = 4,
-                            SampleTime = "2020-05-30 18:06:25.3605031",
+                            SampleTime = "2020-05-31 06:59:43.0526267",
                             TenantId = 5,
                             UsageAmount = 1200.5
                         },
@@ -1252,7 +1252,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 24,
                             ResourceType = 3,
-                            SampleTime = "2020-05-30 18:06:25.360504",
+                            SampleTime = "2020-05-31 06:59:43.052627",
                             TenantId = 5,
                             UsageAmount = 20.559999999999999
                         },
@@ -1260,7 +1260,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 25,
                             ResourceType = 1,
-                            SampleTime = "2020-05-30 18:06:25.3605049",
+                            SampleTime = "2020-05-31 06:59:43.0526272",
                             TenantId = 5,
                             UsageAmount = 40.329999999999998
                         },
@@ -1268,7 +1268,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 26,
                             ResourceType = 2,
-                            SampleTime = "2020-05-30 18:06:25.3605058",
+                            SampleTime = "2020-05-31 06:59:43.0526274",
                             TenantId = 6,
                             UsageAmount = 150.0
                         },
@@ -1276,7 +1276,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 27,
                             ResourceType = 0,
-                            SampleTime = "2020-05-30 18:06:25.3605067",
+                            SampleTime = "2020-05-31 06:59:43.0526276",
                             TenantId = 6,
                             UsageAmount = 60.549999999999997
                         },
@@ -1284,7 +1284,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 28,
                             ResourceType = 4,
-                            SampleTime = "2020-05-30 18:06:25.3605076",
+                            SampleTime = "2020-05-31 06:59:43.0526279",
                             TenantId = 6,
                             UsageAmount = 1200.5
                         },
@@ -1292,7 +1292,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 29,
                             ResourceType = 3,
-                            SampleTime = "2020-05-30 18:06:25.3605085",
+                            SampleTime = "2020-05-31 06:59:43.0526281",
                             TenantId = 6,
                             UsageAmount = 25.559999999999999
                         },
@@ -1300,7 +1300,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 30,
                             ResourceType = 1,
-                            SampleTime = "2020-05-30 18:06:25.3605094",
+                            SampleTime = "2020-05-31 06:59:43.0526283",
                             TenantId = 6,
                             UsageAmount = 31.329999999999998
                         },
@@ -1308,7 +1308,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 31,
                             ResourceType = 2,
-                            SampleTime = "2020-05-30 18:06:25.3605104",
+                            SampleTime = "2020-05-31 06:59:43.0526286",
                             TenantId = 7,
                             UsageAmount = 100.0
                         },
@@ -1316,7 +1316,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 32,
                             ResourceType = 0,
-                            SampleTime = "2020-05-30 18:06:25.3605113",
+                            SampleTime = "2020-05-31 06:59:43.0526288",
                             TenantId = 7,
                             UsageAmount = 50.549999999999997
                         },
@@ -1324,7 +1324,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 33,
                             ResourceType = 4,
-                            SampleTime = "2020-05-30 18:06:25.3605122",
+                            SampleTime = "2020-05-31 06:59:43.052629",
                             TenantId = 7,
                             UsageAmount = 1100.5
                         },
@@ -1332,7 +1332,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 34,
                             ResourceType = 3,
-                            SampleTime = "2020-05-30 18:06:25.3605131",
+                            SampleTime = "2020-05-31 06:59:43.0526292",
                             TenantId = 7,
                             UsageAmount = 15.56
                         },
@@ -1340,7 +1340,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 35,
                             ResourceType = 1,
-                            SampleTime = "2020-05-30 18:06:25.360514",
+                            SampleTime = "2020-05-31 06:59:43.0526295",
                             TenantId = 7,
                             UsageAmount = 30.329999999999998
                         },
@@ -1348,7 +1348,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 36,
                             ResourceType = 2,
-                            SampleTime = "2020-05-30 18:06:25.3605149",
+                            SampleTime = "2020-05-31 06:59:43.0526297",
                             TenantId = 8,
                             UsageAmount = 100.0
                         },
@@ -1356,7 +1356,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 37,
                             ResourceType = 0,
-                            SampleTime = "2020-05-30 18:06:25.3605159",
+                            SampleTime = "2020-05-31 06:59:43.0526299",
                             TenantId = 8,
                             UsageAmount = 50.549999999999997
                         },
@@ -1364,7 +1364,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 38,
                             ResourceType = 4,
-                            SampleTime = "2020-05-30 18:06:25.3605168",
+                            SampleTime = "2020-05-31 06:59:43.0526301",
                             TenantId = 8,
                             UsageAmount = 1100.5
                         },
@@ -1372,7 +1372,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 39,
                             ResourceType = 3,
-                            SampleTime = "2020-05-30 18:06:25.3605177",
+                            SampleTime = "2020-05-31 06:59:43.0526304",
                             TenantId = 8,
                             UsageAmount = 15.56
                         },
@@ -1380,7 +1380,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 40,
                             ResourceType = 1,
-                            SampleTime = "2020-05-30 18:06:25.3605186",
+                            SampleTime = "2020-05-31 06:59:43.0526306",
                             TenantId = 8,
                             UsageAmount = 30.329999999999998
                         },
@@ -1388,7 +1388,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 41,
                             ResourceType = 2,
-                            SampleTime = "2020-05-30 18:06:25.3605195",
+                            SampleTime = "2020-05-31 06:59:43.0526308",
                             TenantId = 9,
                             UsageAmount = 100.0
                         },
@@ -1396,7 +1396,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 42,
                             ResourceType = 0,
-                            SampleTime = "2020-05-30 18:06:25.3605204",
+                            SampleTime = "2020-05-31 06:59:43.052631",
                             TenantId = 9,
                             UsageAmount = 50.549999999999997
                         },
@@ -1404,7 +1404,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 43,
                             ResourceType = 4,
-                            SampleTime = "2020-05-30 18:06:25.3605213",
+                            SampleTime = "2020-05-31 06:59:43.0526313",
                             TenantId = 9,
                             UsageAmount = 1100.5
                         },
@@ -1412,7 +1412,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 44,
                             ResourceType = 3,
-                            SampleTime = "2020-05-30 18:06:25.3605222",
+                            SampleTime = "2020-05-31 06:59:43.0526315",
                             TenantId = 9,
                             UsageAmount = 15.56
                         },
@@ -1420,7 +1420,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 45,
                             ResourceType = 1,
-                            SampleTime = "2020-05-30 18:06:25.3605231",
+                            SampleTime = "2020-05-31 06:59:43.0526317",
                             TenantId = 9,
                             UsageAmount = 30.329999999999998
                         },
@@ -1428,7 +1428,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 46,
                             ResourceType = 2,
-                            SampleTime = "2020-05-30 18:06:25.360524",
+                            SampleTime = "2020-05-31 06:59:43.052632",
                             TenantId = 10,
                             UsageAmount = 100.0
                         },
@@ -1436,7 +1436,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 47,
                             ResourceType = 0,
-                            SampleTime = "2020-05-30 18:06:25.3605249",
+                            SampleTime = "2020-05-31 06:59:43.0526322",
                             TenantId = 10,
                             UsageAmount = 50.549999999999997
                         },
@@ -1444,7 +1444,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 48,
                             ResourceType = 4,
-                            SampleTime = "2020-05-30 18:06:25.3605258",
+                            SampleTime = "2020-05-31 06:59:43.0526324",
                             TenantId = 10,
                             UsageAmount = 1100.5
                         },
@@ -1452,7 +1452,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 49,
                             ResourceType = 3,
-                            SampleTime = "2020-05-30 18:06:25.3605267",
+                            SampleTime = "2020-05-31 06:59:43.0526327",
                             TenantId = 10,
                             UsageAmount = 15.56
                         },
@@ -1460,7 +1460,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             TenantResourceUsageId = 50,
                             ResourceType = 1,
-                            SampleTime = "2020-05-30 18:06:25.3605276",
+                            SampleTime = "2020-05-31 06:59:43.0526329",
                             TenantId = 10,
                             UsageAmount = 30.329999999999998
                         });
@@ -1578,7 +1578,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         new
                         {
                             UserId = 1,
-                            ApiKey = "test-key",
+                            ApiKey = "test-key1",
                             LoginName = "admin",
                             Password = "password",
                             UserAccountType = "Admin"
@@ -1586,7 +1586,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         new
                         {
                             UserId = 2,
-                            ApiKey = "test-key",
+                            ApiKey = "test-key2",
                             LoginName = "manager",
                             Password = "password",
                             UserAccountType = "Manager"
@@ -1594,7 +1594,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         new
                         {
                             UserId = 3,
-                            ApiKey = "test-key",
+                            ApiKey = "test-key3",
                             LoginName = "jayson",
                             Password = "password",
                             UserAccountType = "Tenant"
@@ -1602,7 +1602,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         new
                         {
                             UserId = 4,
-                            ApiKey = "test-key",
+                            ApiKey = "test-key4",
                             LoginName = "david",
                             Password = "password",
                             UserAccountType = "Tenant"
@@ -1610,7 +1610,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         new
                         {
                             UserId = 5,
-                            ApiKey = "test-key",
+                            ApiKey = "test-key5",
                             LoginName = "michael",
                             Password = "password",
                             UserAccountType = "Tenant"
@@ -1618,7 +1618,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         new
                         {
                             UserId = 6,
-                            ApiKey = "test-key",
+                            ApiKey = "test-key6",
                             LoginName = "sulav",
                             Password = "password",
                             UserAccountType = "Tenant"
@@ -1626,7 +1626,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         new
                         {
                             UserId = 7,
-                            ApiKey = "test-key",
+                            ApiKey = "test-key7",
                             LoginName = "melvin",
                             Password = "password",
                             UserAccountType = "Tenant"
@@ -1634,7 +1634,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         new
                         {
                             UserId = 8,
-                            ApiKey = "test-key",
+                            ApiKey = "test-key8",
                             LoginName = "deon",
                             Password = "password",
                             UserAccountType = "Tenant"
@@ -1642,7 +1642,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         new
                         {
                             UserId = 9,
-                            ApiKey = "test-key",
+                            ApiKey = "test-key9",
                             LoginName = "ruth",
                             Password = "password",
                             UserAccountType = "Tenant"
@@ -1650,7 +1650,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         new
                         {
                             UserId = 10,
-                            ApiKey = "test-key",
+                            ApiKey = "test-key10",
                             LoginName = "frances",
                             Password = "password",
                             UserAccountType = "Tenant"
@@ -1658,7 +1658,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         new
                         {
                             UserId = 11,
-                            ApiKey = "test-key",
+                            ApiKey = "test-key11",
                             LoginName = "linda",
                             Password = "password",
                             UserAccountType = "Tenant"
@@ -1666,7 +1666,7 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         new
                         {
                             UserId = 12,
-                            ApiKey = "test-key",
+                            ApiKey = "test-key12",
                             LoginName = "regina",
                             Password = "password",
                             UserAccountType = "Tenant"
@@ -1674,8 +1674,8 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         new
                         {
                             UserId = 13,
-                            ApiKey = "test-key",
-                            LoginName = "sulav",
+                            ApiKey = "test-key13",
+                            LoginName = "sulav2",
                             Password = "password",
                             UserAccountType = "Tenant"
                         });
