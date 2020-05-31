@@ -5,6 +5,7 @@ import { Tenant } from '../model/tenant';
 import { catchError } from 'rxjs/operators';
 import { handleError } from 'src/utils/error-handling';
 import { GenericRest } from './generic-rest.service';
+import { ApiBase } from '../../ApiUrls';
 
 @Injectable({
   providedIn: 'root',
@@ -13,7 +14,7 @@ export class TenantService extends GenericRest<Tenant> {
   // private readonly tenantUrl = 'api/tenant';
 
   constructor(protected http: HttpClient) {
-    super(http, 'api/tenant');
+    super(http, ApiBase.url() + 'tenant');
   }
 
   // public getTenants(): Observable<Tenant[]> {

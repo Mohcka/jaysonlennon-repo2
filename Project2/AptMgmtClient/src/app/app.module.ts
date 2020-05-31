@@ -19,6 +19,8 @@ import { ApiTokenInterceptor } from './helpers/api-token.interceptor';
 import { ErrorInterceptor } from './helpers/error.interceptor';
 import { LoginComponent } from './components/login/login.component';
 
+import { environment } from './../environments/environment';
+
 // Used in development builds only
 import { InMemoryDataService } from './services/in-memory-data.service';
 import { fakeAuthBackendProvider } from './helpers/fake-auth-backend.interceptor';
@@ -26,7 +28,7 @@ import { fakeAuthBackendProvider } from './helpers/fake-auth-backend.interceptor
 // Uses mock api when under development, replaced with a blank module in
 // production
 const inMemApiModule =
-  process.env.NODE_ENV === 'development'
+  process.env.NODE_ENV === 'development' && environment.memoryApi === true
     ? HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
         dataEncapsulation: false,
       })
@@ -37,7 +39,7 @@ const providers: Provider[] = [
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
 ];
 
-if (process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV === 'development' && environment.memoryApi === true) {
   providers.push(fakeAuthBackendProvider);
 }
 
