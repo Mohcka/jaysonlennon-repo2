@@ -26,11 +26,12 @@ stages:
     steps:
     - bash: |
         mkdir angularcli
-        npm install --prefix angularcli @angular/cli
-        export PATH=$PATH:~/angularcli/node_modules/@angular/cli/bin
+        npm install --prefix $(System.DefaultWorkingDirectory)/angularcli @angular/cli
+        export PATH=$PATH:$(System.DefaultWorkingDirectory)/angularcli/node_modules/@angular/cli/bin
 
         cd Project2/AptMgmtClient
         ng build --prod
+        
     - publish: $(System.DefaultWorkingDirectory)/Project2/AptMgmtClient/dist
       artifact: ClientRelease
 
