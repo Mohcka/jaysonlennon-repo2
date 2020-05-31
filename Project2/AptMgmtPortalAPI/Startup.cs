@@ -40,6 +40,19 @@ namespace AptMgmtPortalAPI
                 });
             });
 
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(
+                                  builder => {
+                                      builder.WithOrigins(
+                                          "http://localhost:4200",
+                                          "https://localhost:4200",
+                                          "https://revp2t3fe.azurewebsites.net",
+                                          "http://revp2t3fe.azurewebsites.net"
+                                      );
+                                  });
+            });
+
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = ApiKeyAuthenticationOptions.DefaultScheme;
@@ -85,6 +98,7 @@ namespace AptMgmtPortalAPI
 
             // NOTE: These need to stay in this order.
             app.UseRouting();
+            app.UseCors();
             app.UseAuthentication();
             app.UseAuthorization();
 
