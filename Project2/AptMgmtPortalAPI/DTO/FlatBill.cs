@@ -6,6 +6,7 @@ namespace AptMgmtPortalAPI.DTO {
         public ResourceType Resource { get; set; }
         public DateTime PeriodStart { get; set; }
         public DateTime PeriodEnd { get; set; }
+        public int BillingPeriodId { get; set; }
         public double Usage { get; set; }
         public double Rate { get; set; }
         public double Paid { get; set; }
@@ -16,6 +17,7 @@ namespace AptMgmtPortalAPI.DTO {
             this.Resource = bill.Resource;
             this.PeriodStart = bill.Period.PeriodStart;
             this.PeriodEnd = bill.Period.PeriodEnd;
+            this.BillingPeriodId = bill.Period.BillingPeriodId;
             this.Rate = bill.Rate;
             this.Usage = bill.Usage;
             this.Paid = bill.Paid;
