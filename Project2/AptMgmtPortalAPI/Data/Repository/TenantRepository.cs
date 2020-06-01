@@ -491,8 +491,10 @@ namespace AptMgmtPortalAPI.Repository
                 original.TimeClosed = DateTime.Now;
                 original.CloseReason = MaintenanceCloseReason.CanceledByTenant;
             }
-            original.MaintenanceRequestType = updated.MaintenanceRequestType;
-            original.OpenNotes = updated.OpenNotes;
+            if (original.TimeClosed == null) {
+                original.MaintenanceRequestType = updated.MaintenanceRequestType;
+                original.OpenNotes = updated.OpenNotes;
+            }
 
             await _context.SaveChangesAsync();
 
