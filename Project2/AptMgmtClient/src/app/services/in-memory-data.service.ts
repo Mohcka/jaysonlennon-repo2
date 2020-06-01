@@ -20,9 +20,9 @@ export class InMemoryDataService implements InMemoryDbService {
    */
   public createDb(): { [key: string]: { id: number }[] } {
     const users: User[] = mockUsers.users;
-    const tenant: Tenant[] = mockTenants.tenants;
+    const tenants: Tenant[] = mockTenants.tenants;
     const maintenance: Maintenance[] = mockMaintenance.requests;
-    return { users, tenant, maintenance };
+    return { users, tenants, maintenance };
   }
 
   public genId(resource: { id: number }[]): number {

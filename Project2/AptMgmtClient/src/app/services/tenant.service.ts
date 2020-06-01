@@ -12,7 +12,7 @@ import { ApiBase } from '../../ApiBase';
 })
 export class TenantService extends GenericRest<Tenant> {
   constructor(protected http: HttpClient) {
-    super(http, ApiBase.url() + 'tenant');
+    super(http, ApiBase.url() + 'tenants');
   }
 
   /**

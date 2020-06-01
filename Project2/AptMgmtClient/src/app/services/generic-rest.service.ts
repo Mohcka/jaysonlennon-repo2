@@ -37,13 +37,13 @@ export abstract class GenericRest<T> {
   public update(entity: T): Observable<any> {
     return this.http
       .put(this.apiUrl, entity, this.httpOptions)
-      .pipe(catchError(handleError<any>('updateResource', undefined)));
+      .pipe(catchError(handleError<any>('GenericRest: update', undefined)));
   }
 
   public add(entity: T): Observable<T> {
     return this.http
       .post<T>(this.apiUrl, entity, this.httpOptions)
-      .pipe(catchError(handleError<T>('addResource', undefined)));
+      .pipe(catchError(handleError<T>('GenericRest: add', undefined)));
   }
 
   /**
@@ -56,6 +56,6 @@ export abstract class GenericRest<T> {
 
     return this.http
       .delete<T>(url, this.httpOptions)
-      .pipe(catchError(handleError<T>('deleteResource', undefined)));
+      .pipe(catchError(handleError<T>('GenericRest: delete', undefined)));
   }
 }

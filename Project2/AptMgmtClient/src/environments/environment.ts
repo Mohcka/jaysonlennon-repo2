@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  memoryApi: true,
+  memoryApi: false,
 };
 
 /*
