@@ -73,7 +73,7 @@ export class LoginComponent implements OnInit {
           this.router.navigate([this.returnUrl]);
         },
         (error: HttpErrorResponse) => {
-          this.error = error.error.message;
+          this.error = JSON.stringify(error);
           this.loading = false;
         }
       );

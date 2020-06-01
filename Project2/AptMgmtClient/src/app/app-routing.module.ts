@@ -11,6 +11,7 @@ import { LoginComponent } from './components/login/login.component';
 import { TenantComponent } from './components/tenant.components/tenant/tenant.component';
 import { TenantPaymentComponent } from './components/tenant.components/tenant-payment/tenant-payment.component';
 import { MaintenanceRequestFormComponent } from './components/maintenance/maintenance-request-form/maintenance-request-form.component';
+import { ManagerComponent } from './components/manager.components/manager/manager.component';
 
 // Define routes for the application
 const routes: Routes = [
@@ -24,7 +25,12 @@ const routes: Routes = [
   { path: 'tenant/payment', component: TenantPaymentComponent },
   { path: 'tenants', component: TenantsComponent },
   { path: 'tenant-detail/:id', component: TenantDetailsComponent },
-  { path: 'tenant/:id/maintenance', component: MaintenanceRequestFormComponent },
+  {
+    path: 'tenant/:id/maintenance',
+    component: MaintenanceRequestFormComponent,
+  },
+  // * Manager
+  { path: 'manager', component: ManagerComponent },
   // * Maintenance
   {
     path: 'maintenance-requests',

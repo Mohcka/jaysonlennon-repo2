@@ -32,6 +32,13 @@ export class NavMenuComponent implements OnInit {
     );
   }
 
+  get isTenant(): boolean {
+    return (
+      this.currentUser &&
+      this.currentUser.userAccountType === UserAccountType.Tenant
+    );
+  }
+
   collapse() {
     this.isExpanded = false;
   }

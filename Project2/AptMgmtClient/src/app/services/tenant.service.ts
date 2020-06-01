@@ -6,6 +6,13 @@ import { catchError, tap } from 'rxjs/operators';
 import { handleError } from 'src/utils/error-handling';
 import { GenericRest } from './generic-rest.service';
 import { ApiBase } from '../../ApiBase';
+import { Resource } from 'src/types/Resource';
+
+interface PayBillData {
+  resource: Resource;
+  billingPeriodId: number;
+  amount: number;
+}
 
 @Injectable({
   providedIn: 'root',
@@ -19,12 +26,12 @@ export class TenantService extends GenericRest<Tenant> {
    * Processes a payment request on behalf of the tenant
    * @param id Id of the tenant making rent payment request
    */
-  registerPayment(id: number): Observable<any> {
+  registerPayment(id: number, data: PayBillData): Observable<any> {
     return this.http
       .post<Tenant[]>(
         // TODO: send expected data when api is setup
         `${this.apiUrl}/${id}/rent`,
-        {},
+        data,
         this.httpOptions
       )
       .pipe(catchError(handleError<Tenant>('registerTenantPayment')));

@@ -5,8 +5,9 @@
 <div class="sidenav">
   <a [routerLink]="['/']">Home</a>
   <a>Payments</a>
-  <a [routerLink]="['/maintenance-requests']">Maintenance<br>Requests</a>
-  <a>Lease<br>Agreement</a>
+  <a [routerLink]="['/maintenance-requests']">Maintenance<br />Requests</a>
+  <a>Lease<br />Agreement</a>
+  <a [routerLink]="isManager ? ['/manager'] : ['/tenant']">Details</a>
   <a *ngIf="!currentUser" [routerLink]="['/login']">Login</a>
   <a *ngIf="currentUser" (click)="logout()">Logout</a>
 </div>

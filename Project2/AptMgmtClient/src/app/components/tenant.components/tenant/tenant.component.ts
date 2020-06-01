@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Tenant } from 'src/app/model/tenant';
 import { TenantService } from 'src/app/services/tenant.service';
+import { Resource } from 'src/types/Resource';
 
 @Component({
   templateUrl: './tenant.component.html',
@@ -19,7 +20,11 @@ export class TenantComponent implements OnInit {
 
   registerPayment() {
     this.tenantService
-      .registerPayment(1)
+      .registerPayment(1, {
+        resource: 0,
+        billingPeriodId: Resource.Internet,
+        amount: this.amountDue,
+      })
       .subscribe((_) => (this.amountDue = 0));
   }
 }
