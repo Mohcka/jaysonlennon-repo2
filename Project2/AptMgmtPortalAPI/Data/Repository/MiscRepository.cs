@@ -34,5 +34,14 @@ namespace AptMgmtPortalAPI.Repository
                 .Select(p => p)
                 .FirstOrDefaultAsync();
         }
+
+        public async Task<IEnumerable<ResourceUsageRate>> GetResourceUsageRates(BillingPeriod period)
+        {
+            return await _context.ResourceUsageRates
+                .Where(r => r.PeriodStart <= period.PeriodStart
+                            && r.PeriodEnd >= period.PeriodEnd)
+                .Select(r => r)
+                .ToListAsync();
+        }
     }
 }

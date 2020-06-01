@@ -473,5 +473,38 @@ namespace AptMgmtPortalAPI.Repository
                 .OrderByDescending(r => r.TimeOpened)
                 .ToListAsync();
         }
+
+        public async Task<MaintenanceRequest> GetMaintenanceRequest(int requestId)
+        {
+            return await _context.MaintenanceRequests
+                .Where(r => r.MaintenanceRequestId == requestId)
+                .Select(r => r)
+                .FirstOrDefaultAsync();
+        }
+
+        public async Task<MaintenanceRequest> UpdateMaintenanceRequest(MaintenanceRequest original,
+                                                                       MaintenanceRequestModel updated,
+                                                                       int userId)
+        {
+            if (updated.Closed == true) {
+                original.ClosingUserId = userId;
+                original.TimeClosed = DateTime.Now;
+                original.CloseReason = MaintenanceCloseReason.CanceledByTenant;
+            }
+            original.MaintenanceRequestType = updated.MaintenanceRequestType;
+            original.OpenNotes = updated.OpenNotes;
+
+            await _context.SaveChangesAsync();
+
+            return await GetMaintenanceRequest(original.MaintenanceRequestId);
+        }
+
+        public async Task<string> GetUnitNumber(int tenantId)
+        {
+            return await _context.Units
+                .Where(u => u.TenantId == tenantId)
+                .Select(u => u.UnitNumber)
+                .FirstOrDefaultAsync();
+        }
     }
 }
