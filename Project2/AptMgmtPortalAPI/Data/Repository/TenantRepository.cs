@@ -74,8 +74,8 @@ namespace AptMgmtPortalAPI.Repository
 
             var billingRate = await _context.ResourceUsageRates
                                         .Where(r => r.ResourceType == resource)
-                                        .Where(r => r.PeriodStart >= period.PeriodStart
-                                                    && r.PeriodEnd <= period.PeriodEnd)
+                                        .Where(r => r.PeriodStart <= period.PeriodStart
+                                                    && r.PeriodEnd >= period.PeriodEnd)
                                         .Select(r => r)
                                         .FirstOrDefaultAsync();
 
@@ -109,8 +109,8 @@ namespace AptMgmtPortalAPI.Repository
             if (period == null) return new List<DataModel.Bill>();
 
             var billingRates = await _context.ResourceUsageRates
-                                        .Where(r => r.PeriodStart >= period.PeriodStart
-                                                    && r.PeriodEnd <= period.PeriodEnd)
+                                        .Where(r => r.PeriodStart <= period.PeriodStart
+                                                    && r.PeriodEnd >= period.PeriodEnd)
                                         .Select(r => r)
                                         .ToListAsync();
 

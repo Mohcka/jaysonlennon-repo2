@@ -1,0 +1,52 @@
+#leases {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #leases td, #leases th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #leases tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #leases tr:hover {background-color: #ddd;}
+  
+  #leases th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: blueviolet;
+    color: white;
+  }
+
+  .button {
+    background-color: #f0f0f0;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    float: right;
+    font-weight: bold;
+    border: 2px solid black;
+  }
+
+  .currencyinput {
+    border: 1px inset #ccc;
+}
+.currencyinput input {
+    border: 0;
+}
+
+.container {
+  display: flex;
+}
+.divL, .divR {
+  box-sizing: border-box;
+  padding: 10px;
+}

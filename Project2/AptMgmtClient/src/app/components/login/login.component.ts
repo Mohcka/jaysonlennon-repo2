@@ -1,3 +1,4 @@
+import { HttpErrorResponse } from '@angular/common/http';
 /**
  * Implementation taken from:
  * https://jasonwatmore.com/post/2018/11/22/angular-7-role-based-authorization-tutorial-with-example#login-component-html
@@ -71,8 +72,8 @@ export class LoginComponent implements OnInit {
         (_data) => {
           this.router.navigate([this.returnUrl]);
         },
-        (error) => {
-          this.error = error;
+        (error: HttpErrorResponse) => {
+          this.error = error.error.message;
           this.loading = false;
         }
       );
