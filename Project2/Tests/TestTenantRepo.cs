@@ -364,6 +364,42 @@ namespace TestAptMgmtPortal
         }
 
         [Fact]
+        public async void GetsResourceRates()
+        {
+            var options = TestUtil.GetMemDbOptions("GetsResourceRate");
+
+            const double powerRate = 3;
+            const double waterRate = 5;
+
+            BillingPeriod period;
+            ResourceUsageRate powerRateObj;
+            ResourceUsageRate waterRateObj;
+            using (var db = new AptMgmtDbContext(options))
+            {
+                period = TestUtil.NewBillingPeriod(db);
+
+                powerRateObj = TestUtil.NewResourceRate(db, powerRate, ResourceType.Power, period);
+                waterRateObj = TestUtil.NewResourceRate(db, waterRate, ResourceType.Water, period);
+            }
+
+            using (var db = new AptMgmtDbContext(options))
+            {
+                var repo = (IMisc)new MiscRepository(db);
+                var rates = await repo.GetResourceUsageRates(period);
+
+                var powerRateFromDb = rates.Where(r => r.ResourceType == ResourceType.Power)
+                    .Select(r => r)
+                    .First();
+                Assert.Equal(powerRateObj.Rate, powerRateFromDb.Rate);
+
+                var waterRateFromDb = rates.Where(r => r.ResourceType == ResourceType.Water)
+                    .Select(r => r)
+                    .First();
+                Assert.Equal(waterRateObj.Rate, waterRateFromDb.Rate);
+            }
+        }
+
+        [Fact]
         public async void GetsSignedAgreements()
         {
             var options = TestUtil.GetMemDbOptions("GetsSignedAgreements");

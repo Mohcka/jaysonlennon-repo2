@@ -12,5 +12,6 @@ namespace AptMgmtPortalAPI.Repository
     {
         Task<BillingPeriod> GetCurrentBillingPeriod();
         Task<BillingPeriod> BillingPeriodFromId(int billingPeriodId);
+        Task<IEnumerable<ResourceUsageRate>> GetResourceUsageRates(BillingPeriod period);
     }
 }

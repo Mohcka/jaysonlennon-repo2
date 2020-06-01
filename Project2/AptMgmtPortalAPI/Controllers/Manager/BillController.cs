@@ -35,7 +35,6 @@ namespace AptMgmtPortalAPI.Controllers.Manager
         [Authorize(Policy = Policies.OnlyManagers)]
         public async Task<IActionResult> PostTenantManager(TenantInfo info)
         {
-            await tenantRepository.RestEdit(info);
             return new ObjectResult(info);
         }
     }

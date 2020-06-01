@@ -24,19 +24,19 @@ namespace AptMgmtPortalAPI.Data
             #region Users Seed
             // Seeds User data. The password for all of these is "password".
             modelBuilder.Entity<User>().HasData(
-                new User { UserId = 1, LoginName = "admin", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Admin, ApiKey = "test-key1" },
-                new User { UserId = 2, LoginName = "manager", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Manager, ApiKey = "test-key2" },
-                new User { UserId = 3, LoginName = "jayson", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key3" },
-                new User { UserId = 4, LoginName = "david", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key4" },
-                new User { UserId = 5, LoginName = "michael", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key5" },
-                new User { UserId = 6, LoginName = "sulav", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key6" },
-                new User { UserId = 7, LoginName = "melvin", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key7" },
-                new User { UserId = 8, LoginName = "deon", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key8" },
-                new User { UserId = 9, LoginName = "ruth", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key9" },
-                new User { UserId = 10, LoginName = "frances", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key10" },
-                new User { UserId = 11, LoginName = "linda", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key11" },
-                new User { UserId = 12, LoginName = "regina", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key12" },
-                new User { UserId = 13, LoginName = "sulav2", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key13" }
+                new User { UserId = 1, FirstName = "admin", LastName = "admin", LoginName = "admin", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Admin, ApiKey = "test-key1" },
+                new User { UserId = 2, FirstName = "manager", LastName = "manager", LoginName = "manager", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Manager, ApiKey = "test-key2" },
+                new User { UserId = 3, FirstName = "jayson", LastName = "", LoginName = "jayson", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key3" },
+                new User { UserId = 4, FirstName = "david", LastName = "", LoginName = "david", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key4" },
+                new User { UserId = 5, FirstName = "michael", LastName = "", LoginName = "michael", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key5" },
+                new User { UserId = 6, FirstName = "sulav", LastName = "", LoginName = "sulav", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key6" },
+                new User { UserId = 7, FirstName = "melvin", LastName = "", LoginName = "melvin", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key7" },
+                new User { UserId = 8, FirstName = "deon", LastName = "", LoginName = "deon", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key8" },
+                new User { UserId = 9, FirstName = "ruth", LastName = "", LoginName = "ruth", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key9" },
+                new User { UserId = 10, FirstName = "frances", LastName = "", LoginName = "frances", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key10" },
+                new User { UserId = 11, FirstName = "linda", LastName = "", LoginName = "linda", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key11" },
+                new User { UserId = 12, FirstName = "regina", LastName = "", LoginName = "regina", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key12" },
+                new User { UserId = 13, FirstName = "sulav2", LastName = "", LoginName = "sulav2", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key13" }
 
             );
             #endregion
@@ -248,10 +248,10 @@ namespace AptMgmtPortalAPI.Data
                     ResolutionNotes = "Fully restored.",
 
                 },
-                new MaintenanceRequest { MaintenanceRequestId = 2, OpeningUserId = 1, UnitNumber = "101", TimeOpened = dt3MonthsAgo, OpenNotes = "No Interet", InternalNotes = "Call Comcast", CloseReason = Types.MaintenanceCloseReason.Completed, ClosingUserId = 1 },
-                new MaintenanceRequest { MaintenanceRequestId = 3, OpeningUserId = 1, UnitNumber = "101", TimeOpened = dt6MonthsAgo, OpenNotes = "No water", InternalNotes = "Call Plumber", CloseReason = Types.MaintenanceCloseReason.CanceledByManagement, ClosingUserId = 1 },
-                new MaintenanceRequest { MaintenanceRequestId = 4, OpeningUserId = 2, UnitNumber = "102", TimeOpened = dt3MonthsAgo, OpenNotes = "No water", InternalNotes = "Call Plumber", CloseReason = Types.MaintenanceCloseReason.CanceledByTenant, ClosingUserId = 1 },
-                new MaintenanceRequest { MaintenanceRequestId = 5, OpeningUserId = 3, UnitNumber = "103", TimeOpened = dt3MonthsAgo, OpenNotes = "No water", InternalNotes = "Call Plumber", CloseReason = Types.MaintenanceCloseReason.CanceledByManagement },
+                new MaintenanceRequest { MaintenanceRequestId = 2, OpeningUserId = 1, UnitNumber = "101", TimeOpened = dt3MonthsAgo, OpenNotes = "No Interet", InternalNotes = "Call Comcast", CloseReason = Types.MaintenanceCloseReason.Completed, ClosingUserId = 1, TimeClosed = dt1MonthAgo, ResolutionNotes = "Fixed" },
+                new MaintenanceRequest { MaintenanceRequestId = 3, OpeningUserId = 1, UnitNumber = "101", TimeOpened = dt6MonthsAgo, OpenNotes = "No water", InternalNotes = "Call Plumber", CloseReason = Types.MaintenanceCloseReason.CanceledByManagement, ClosingUserId = 1, TimeClosed = dt1MonthAgo, ResolutionNotes = "Fixed" },
+                new MaintenanceRequest { MaintenanceRequestId = 4, OpeningUserId = 2, UnitNumber = "102", TimeOpened = dt3MonthsAgo, OpenNotes = "No water", InternalNotes = "Call Plumber", CloseReason = Types.MaintenanceCloseReason.CanceledByTenant, ClosingUserId = 1, TimeClosed = dt1MonthAgo, ResolutionNotes = "Fixed" },
+                new MaintenanceRequest { MaintenanceRequestId = 5, OpeningUserId = 3, UnitNumber = "103", TimeOpened = dt3MonthsAgo, OpenNotes = "No water", InternalNotes = "Call Plumber", CloseReason = Types.MaintenanceCloseReason.CanceledByManagement, ClosingUserId = 2, TimeClosed = dt1MonthAgo, ResolutionNotes = "Fixed" },
                 new MaintenanceRequest { MaintenanceRequestId = 6, OpeningUserId = 4, UnitNumber = "104", TimeOpened = dt3MonthsAgo, OpenNotes = "No water", InternalNotes = "Call Plumber" },
                 new MaintenanceRequest { MaintenanceRequestId = 7, OpeningUserId = 5, UnitNumber = "105", TimeOpened = dt3MonthsAgo, OpenNotes = "No water", InternalNotes = "Call Plumber" },
                 new MaintenanceRequest { MaintenanceRequestId = 8, OpeningUserId = 6, UnitNumber = "106", TimeOpened = dt3MonthsAgo, OpenNotes = "No water", InternalNotes = "Call Plumber" },
