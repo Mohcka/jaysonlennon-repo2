@@ -21,7 +21,7 @@ namespace AptMgmtPortalAPI.Repository
             _context = aptMgmtDbContext;
         }
 
-        public async Task<Tenant> AddTenant(TenantInfo info)
+        public async Task<Tenant> AddTenant(Types.TenantInfo info)
         {
             if (info == null) return null;
 
@@ -53,7 +53,7 @@ namespace AptMgmtPortalAPI.Repository
             return await _context.SaveChangesAsync() > 0;
         }
 
-        public async Task<bool> EditPersonalInfo(int tenantId, TenantInfo info)
+        public async Task<bool> EditPersonalInfo(int tenantId, Types.TenantInfo info)
         {
             if (info == null) return false;
 
@@ -350,20 +350,6 @@ namespace AptMgmtPortalAPI.Repository
                                  .FirstOrDefaultAsync();
         }
 
-        public async Task<bool> RestEdit(TenantInfo info)
-        {
-            if (info == null) return false;
-
-            var tenant = await TenantFromId(info.TenantId);
-            tenant.FirstName = info.FirstName;
-            tenant.LastName = info.LastName;
-            tenant.Email = info.Email;
-            tenant.PhoneNumber = info.PhoneNumber;
-            tenant.UserId = info.UserId;
-
-            return await _context.SaveChangesAsync() > 0;
-        }
-
         public async Task<IEnumerable<Bill>> GetBills(int tenantId, int billingPeriodId)
         {
             var billingPeriod = await _context.BillingPeriods
@@ -472,6 +458,57 @@ namespace AptMgmtPortalAPI.Repository
                 .Take(limit)
                 .OrderByDescending(r => r.TimeOpened)
                 .ToListAsync();
+        }
+
+        public async Task<MaintenanceRequest> GetMaintenanceRequest(int requestId)
+        {
+            return await _context.MaintenanceRequests
+                .Where(r => r.MaintenanceRequestId == requestId)
+                .Select(r => r)
+                .FirstOrDefaultAsync();
+        }
+
+        public async Task<MaintenanceRequest> UpdateMaintenanceRequest(MaintenanceRequest original,
+                                                                       MaintenanceRequestModel updated,
+                                                                       int userId)
+        {
+            if (updated.Closed == true) {
+                original.ClosingUserId = userId;
+                original.TimeClosed = DateTime.Now;
+                original.CloseReason = MaintenanceCloseReason.CanceledByTenant;
+            }
+            if (original.TimeClosed == null) {
+                original.MaintenanceRequestType = updated.MaintenanceRequestType;
+                original.OpenNotes = updated.OpenNotes;
+            }
+
+            await _context.SaveChangesAsync();
+
+            return await GetMaintenanceRequest(original.MaintenanceRequestId);
+        }
+
+        public async Task<string> GetUnitNumber(int tenantId)
+        {
+            return await _context.Units
+                .Where(u => u.TenantId == tenantId)
+                .Select(u => u.UnitNumber)
+                .FirstOrDefaultAsync();
+        }
+
+        public async Task<Tenant> UpdateTenantInfo(int tenantId, DTO.TenantInfoDTO newInfo)
+        {
+            var tenant = await TenantFromId(tenantId);
+
+            if (tenant == null) return null;
+
+            tenant.FirstName = newInfo.FirstName;
+            tenant.LastName = newInfo.LastName;
+            tenant.Email = newInfo.Email;
+            tenant.PhoneNumber = newInfo.PhoneNumber;
+
+            await _context.SaveChangesAsync();
+
+            return tenant;
         }
     }
 }

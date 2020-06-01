@@ -46,5 +46,13 @@ namespace AptMgmtPortalAPI.Repository
                             .Select(u => u)
                             .FirstOrDefaultAsync();
         }
+
+        public async Task<User> UserFromId(int userId)
+        {
+            return await _context.Users
+                .Where(u => u.UserId == userId)
+                .Select(u => u)
+                .FirstOrDefaultAsync();
+        }
     }
 }

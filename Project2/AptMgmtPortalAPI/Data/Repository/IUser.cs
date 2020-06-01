@@ -9,5 +9,6 @@ namespace AptMgmtPortalAPI.Repository
     {
         Task<User> Login(string loginName, string password);
         Task<User> UserFromApiKey(string apiKey);
+        Task<User> UserFromId(int userId);
     }
 }
