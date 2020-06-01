@@ -46,3 +46,20 @@
     {{user.loginName}}
   </li>
 </ul>
+
+<div *ngIf="homeInfo">
+  <div>Tenant home page info:</div>
+  <div>billing period start: {{homeInfo.billingPeriodStart}}</div>
+  <div>billing period end: {{homeInfo.billingPeriodEnd}}</div>
+  <div *ngFor="let bill of homeInfo.bills">
+    <hr>
+    <div>Resource: {{bill.resource | resourceAsString }}</div>
+    <div>period start: {{bill.periodStart}}</div>
+    <div>period end: {{bill.periodEnd}}</div>
+    <div>usage: {{bill.usage}}</div>
+    <div>rate: ${{bill.rate}}</div>
+    <div>cost: ${{bill.cost}}</div>
+    <div>paid: ${{bill.paid}}</div>
+    <div>owed: ${{bill.owed}}</div>
+  </div>
+</div>

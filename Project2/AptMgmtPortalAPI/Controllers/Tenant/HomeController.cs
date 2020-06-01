@@ -1,3 +1,4 @@
+using System.Linq;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -42,10 +43,15 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
             }
 
             var currentBillingPeriod = await _miscRepository.GetCurrentBillingPeriod();
+            var bills = await _tenantRepository.GetBills((int)tenantId, currentBillingPeriod);
+            var flatBills = bills.Select(b => new DTO.FlatBill(b)).ToList();
 
-            var rentDueDate = _tenantRepository.GetBill((int)tenantId, ResourceType.Rent, currentBillingPeriod);
+            var homeDTO = new DTO.TenantHome();
+            homeDTO.BillingPeriodStart = currentBillingPeriod.PeriodStart;
+            homeDTO.BillingPeriodEnd = currentBillingPeriod.PeriodEnd;
+            homeDTO.Bills = flatBills;
 
-            return new ObjectResult(rentDueDate);
+            return new ObjectResult(homeDTO);
         }
     }
 }
