@@ -19,9 +19,12 @@ namespace AptMgmtPortalAPI.Repository
             _context = aptMgmtDbContext;
         }
 
-        public Task<BillingPeriod> FromId(int billingPeriodId)
+        public async Task<BillingPeriod> BillingPeriodFromId(int billingPeriodId)
         {
-            throw new NotImplementedException();
+            return await _context.BillingPeriods
+                .Where(p => p.BillingPeriodId == billingPeriodId)
+                .Select(p => p)
+                .FirstOrDefaultAsync();
         }
 
         public async Task<BillingPeriod> GetCurrentBillingPeriod()
@@ -30,6 +33,15 @@ namespace AptMgmtPortalAPI.Repository
                 .OrderByDescending(p => p.PeriodStart)
                 .Select(p => p)
                 .FirstOrDefaultAsync();
+        }
+
+        public async Task<IEnumerable<ResourceUsageRate>> GetResourceUsageRates(BillingPeriod period)
+        {
+            return await _context.ResourceUsageRates
+                .Where(r => r.PeriodStart <= period.PeriodStart
+                            && r.PeriodEnd >= period.PeriodEnd)
+                .Select(r => r)
+                .ToListAsync();
         }
     }
 }

@@ -58,9 +58,11 @@ namespace TestAptMgmtPortal
                                                       double amount,
                                                       ResourceType resourceType)
         {
+            // All test data is 2 years into the future.
+            var testPeriod = new TimeSpan(730, 0, 0, 0);
             var consumedResource = new TenantResourceUsage
             {
-                SampleTime = DateTime.Now,
+                SampleTime = DateTime.Now + testPeriod,
                 UsageAmount = amount,
                 ResourceType = resourceType,
                 TenantId = tenantId,
@@ -75,9 +77,12 @@ namespace TestAptMgmtPortal
         public static BillingPeriod NewBillingPeriod(AptMgmtDbContext context)
         {
             var period = new BillingPeriod();
-            var timeSpan = new TimeSpan(5, 0, 0, 0);
-            period.PeriodStart = DateTime.Now - timeSpan;
-            period.PeriodEnd = DateTime.Now + timeSpan;
+            var timeSpan = new TimeSpan(0,0,5);
+
+            // All test data is 2 years into the future.
+            var testPeriod = new TimeSpan(730, 0, 0, 0);
+            period.PeriodStart = DateTime.Now + testPeriod - timeSpan;
+            period.PeriodEnd = DateTime.Now + testPeriod + timeSpan;
 
             context.Add(period);
             context.SaveChanges();
@@ -126,12 +131,15 @@ namespace TestAptMgmtPortal
 
         public static SignedAgreement SignAgreement(AptMgmtDbContext context, int agreementId, int tenantId)
         {
+            // All test data is 2 years into the future.
+            var testPeriod = new TimeSpan(730, 0, 0, 0);
+
             var signedAgreement = new SignedAgreement();
             signedAgreement.TenantId = tenantId;
             signedAgreement.AgreementId = agreementId;
             signedAgreement.SignedDate = DateTime.Now;
-            signedAgreement.StartDate = DateTime.Now - new TimeSpan(5, 0, 0, 0);
-            signedAgreement.EndDate = DateTime.Now + new TimeSpan(5, 0, 0, 0);
+            signedAgreement.StartDate = DateTime.Now + testPeriod - new TimeSpan(0, 0, 5);
+            signedAgreement.EndDate = DateTime.Now + testPeriod + new TimeSpan(0, 0, 5);
 
             context.Add(signedAgreement);
             context.SaveChanges();

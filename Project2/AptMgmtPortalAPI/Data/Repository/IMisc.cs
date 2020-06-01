@@ -11,6 +11,7 @@ namespace AptMgmtPortalAPI.Repository
     public interface IMisc
     {
         Task<BillingPeriod> GetCurrentBillingPeriod();
-        Task<BillingPeriod> FromId(int billingPeriodId);
+        Task<BillingPeriod> BillingPeriodFromId(int billingPeriodId);
+        Task<IEnumerable<ResourceUsageRate>> GetResourceUsageRates(BillingPeriod period);
     }
 }

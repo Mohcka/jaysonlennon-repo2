@@ -13,7 +13,6 @@ namespace AptMgmtPortalAPI.Repository
     public interface ITenant
     {
         Task<IEnumerable<Tenant>> FindTenantWithFirstName(string firstName);
-        Task<bool> RestEdit(TenantInfo info);
         Task<Tenant> AddTenant(TenantInfo info);
         Task<Tenant> TenantFromId(int tenantId);
         Task<Tenant> TenantFromUserId(int userId);
@@ -33,6 +32,10 @@ namespace AptMgmtPortalAPI.Repository
         Task<IEnumerable<MaintenanceRequest>> GetMaintenanceRequests(int userId,
                                                                      BillingPeriod period);
         Task<IEnumerable<MaintenanceRequest>> GetMaintenanceRequests(int userId, int limit);
+        Task<MaintenanceRequest> GetMaintenanceRequest(int requestId);
+        Task<MaintenanceRequest> UpdateMaintenanceRequest(MaintenanceRequest original,
+                                                          DataModel.MaintenanceRequestModel updated,
+                                                          int userId);
 
         // Bills require a tenantId, since they will be generated and used regardless
         // of whether or not a tenant has a user id.
@@ -72,5 +75,8 @@ namespace AptMgmtPortalAPI.Repository
                                                 int agreementId,
                                                 DateTime startDate,
                                                 DateTime endDate);
+        Task<string> GetUnitNumber(int tenantId);
+
+        Task<Tenant> UpdateTenantInfo(int tenantId, DTO.TenantInfoDTO newInfo);
     }
 }
