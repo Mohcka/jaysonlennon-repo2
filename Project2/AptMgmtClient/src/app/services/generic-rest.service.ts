@@ -19,13 +19,19 @@ export abstract class GenericRest<T> {
   public getAll(): Observable<T[]> {
     return this.http
       .get<T[]>(this.apiUrl)
-      .pipe(catchError(handleError<T[]>('getAll', [])));
+      .pipe(catchError(handleError<T[]>('GenericRest: getAll', [])));
   }
 
   public getOne(id: number): Observable<T> {
     return this.http
       .get<T>(`${this.apiUrl}/${id}`)
-      .pipe(catchError(handleError<T>('getResource', undefined)));
+      .pipe(catchError(handleError<T>('GenericRest: getOne', undefined)));
+  }
+
+  public get(): Observable<T> {
+    return this.http
+      .get<T>(`${this.apiUrl}`)
+      .pipe(catchError(handleError<T>('GenericRest: get', undefined)));
   }
 
   public update(entity: T): Observable<any> {

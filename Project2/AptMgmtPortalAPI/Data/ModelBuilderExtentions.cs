@@ -11,6 +11,7 @@ namespace AptMgmtPortalAPI.Data
         {
 
             DateTime dateTime = DateTime.Now;
+            TimeSpan day = new TimeSpan(1, 0, 0, 0);
             TimeSpan month = new TimeSpan(30, 0, 0, 0, 0);
             TimeSpan threeMonth = new TimeSpan(90, 0, 0, 0, 0);
             TimeSpan sixMonth = new TimeSpan(180, 0, 0, 0, 0);
@@ -21,21 +22,21 @@ namespace AptMgmtPortalAPI.Data
             DateTime dt12MonthsAgo = dateTime.Subtract(twelveMonth);
 
             #region Users Seed
-            // Seeds User data
+            // Seeds User data. The password for all of these is "password".
             modelBuilder.Entity<User>().HasData(
-                new User { UserId = 1, LoginName = "admin", Password = "password", UserAccountType = Types.UserAccountType.Admin, ApiKey = "test-key1" },
-                new User { UserId = 2, LoginName = "manager", Password = "password", UserAccountType = Types.UserAccountType.Manager, ApiKey = "test-key2" },
-                new User { UserId = 3, LoginName = "jayson", Password = "password", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key3" },
-                new User { UserId = 4, LoginName = "david", Password = "password", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key4" },
-                new User { UserId = 5, LoginName = "michael", Password = "password", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key5" },
-                new User { UserId = 6, LoginName = "sulav", Password = "password", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key6" },
-                new User { UserId = 7, LoginName = "melvin", Password = "password", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key7" },
-                new User { UserId = 8, LoginName = "deon", Password = "password", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key8" },
-                new User { UserId = 9, LoginName = "ruth", Password = "password", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key9" },
-                new User { UserId = 10, LoginName = "frances", Password = "password", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key10" },
-                new User { UserId = 11, LoginName = "linda", Password = "password", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key11" },
-                new User { UserId = 12, LoginName = "regina", Password = "password", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key12" },
-                new User { UserId = 13, LoginName = "sulav2", Password = "password", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key13" }
+                new User { UserId = 1, LoginName = "admin", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Admin, ApiKey = "test-key1" },
+                new User { UserId = 2, LoginName = "manager", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Manager, ApiKey = "test-key2" },
+                new User { UserId = 3, LoginName = "jayson", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key3" },
+                new User { UserId = 4, LoginName = "david", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key4" },
+                new User { UserId = 5, LoginName = "michael", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key5" },
+                new User { UserId = 6, LoginName = "sulav", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key6" },
+                new User { UserId = 7, LoginName = "melvin", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key7" },
+                new User { UserId = 8, LoginName = "deon", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key8" },
+                new User { UserId = 9, LoginName = "ruth", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key9" },
+                new User { UserId = 10, LoginName = "frances", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key10" },
+                new User { UserId = 11, LoginName = "linda", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key11" },
+                new User { UserId = 12, LoginName = "regina", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key12" },
+                new User { UserId = 13, LoginName = "sulav2", Password = "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=", UserAccountType = Types.UserAccountType.Tenant, ApiKey = "test-key13" }
 
             );
             #endregion
@@ -76,66 +77,66 @@ namespace AptMgmtPortalAPI.Data
             #region Tenanant Resource Usages Seed
             modelBuilder.Entity<TenantResourceUsage>().HasData(
 
-                new TenantResourceUsage { TenantResourceUsageId = 1, ResourceType = Types.ResourceType.Internet, TenantId = 1, UsageAmount = 100, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 2, ResourceType = Types.ResourceType.Power, TenantId = 1, UsageAmount = 50.55, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 3, ResourceType = Types.ResourceType.Rent, TenantId = 1, UsageAmount = 1100.50, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 4, ResourceType = Types.ResourceType.Trash, TenantId = 1, UsageAmount = 15.56, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 5, ResourceType = Types.ResourceType.Water, TenantId = 1, UsageAmount = 30.33, SampleTime = DateTime.Now },
+                new TenantResourceUsage { TenantResourceUsageId = 1, ResourceType = Types.ResourceType.Internet, TenantId = 1, UsageAmount = 1, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 2, ResourceType = Types.ResourceType.Power, TenantId = 1, UsageAmount = 50.55, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 3, ResourceType = Types.ResourceType.Rent, TenantId = 1, UsageAmount = 1, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 4, ResourceType = Types.ResourceType.Trash, TenantId = 1, UsageAmount = 1, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 5, ResourceType = Types.ResourceType.Water, TenantId = 1, UsageAmount = 40.4, SampleTime = DateTime.Now - day},
 
-                new TenantResourceUsage { TenantResourceUsageId = 6, ResourceType = Types.ResourceType.Internet, TenantId = 2, UsageAmount = 100, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 7, ResourceType = Types.ResourceType.Power, TenantId = 2, UsageAmount = 50.55, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 8, ResourceType = Types.ResourceType.Rent, TenantId = 2, UsageAmount = 1100.50, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 9, ResourceType = Types.ResourceType.Trash, TenantId = 2, UsageAmount = 15.56, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 10, ResourceType = Types.ResourceType.Water, TenantId = 2, UsageAmount = 30.33, SampleTime = DateTime.Now },
+                new TenantResourceUsage { TenantResourceUsageId = 6, ResourceType = Types.ResourceType.Internet, TenantId = 2, UsageAmount = 1, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 7, ResourceType = Types.ResourceType.Power, TenantId = 2, UsageAmount = 50.55, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 8, ResourceType = Types.ResourceType.Rent, TenantId = 2, UsageAmount = 1, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 9, ResourceType = Types.ResourceType.Trash, TenantId = 2, UsageAmount = 1, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 10, ResourceType = Types.ResourceType.Water, TenantId = 2, UsageAmount = 30.33, SampleTime = DateTime.Now - day},
 
-                new TenantResourceUsage { TenantResourceUsageId = 11, ResourceType = Types.ResourceType.Internet, TenantId = 3, UsageAmount = 100, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 12, ResourceType = Types.ResourceType.Power, TenantId = 3, UsageAmount = 50.55, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 13, ResourceType = Types.ResourceType.Rent, TenantId = 3, UsageAmount = 1100.50, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 14, ResourceType = Types.ResourceType.Trash, TenantId = 3, UsageAmount = 15.56, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 15, ResourceType = Types.ResourceType.Water, TenantId = 3, UsageAmount = 30.33, SampleTime = DateTime.Now },
+                new TenantResourceUsage { TenantResourceUsageId = 11, ResourceType = Types.ResourceType.Internet, TenantId = 3, UsageAmount = 1, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 12, ResourceType = Types.ResourceType.Power, TenantId = 3, UsageAmount = 50.55, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 13, ResourceType = Types.ResourceType.Rent, TenantId = 3, UsageAmount = 1, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 14, ResourceType = Types.ResourceType.Trash, TenantId = 3, UsageAmount = 1, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 15, ResourceType = Types.ResourceType.Water, TenantId = 3, UsageAmount = 30.33, SampleTime = DateTime.Now - day},
 
-                new TenantResourceUsage { TenantResourceUsageId = 16, ResourceType = Types.ResourceType.Internet, TenantId = 4, UsageAmount = 100, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 17, ResourceType = Types.ResourceType.Power, TenantId = 4, UsageAmount = 50.55, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 18, ResourceType = Types.ResourceType.Rent, TenantId = 4, UsageAmount = 1100.50, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 19, ResourceType = Types.ResourceType.Trash, TenantId = 4, UsageAmount = 15.56, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 20, ResourceType = Types.ResourceType.Water, TenantId = 4, UsageAmount = 30.33, SampleTime = DateTime.Now },
+                new TenantResourceUsage { TenantResourceUsageId = 16, ResourceType = Types.ResourceType.Internet, TenantId = 4, UsageAmount = 1, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 17, ResourceType = Types.ResourceType.Power, TenantId = 4, UsageAmount = 50.55, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 18, ResourceType = Types.ResourceType.Rent, TenantId = 4, UsageAmount = 1, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 19, ResourceType = Types.ResourceType.Trash, TenantId = 4, UsageAmount = 1, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 20, ResourceType = Types.ResourceType.Water, TenantId = 4, UsageAmount = 30.33, SampleTime = DateTime.Now - day},
 
 
-                new TenantResourceUsage { TenantResourceUsageId = 21, ResourceType = Types.ResourceType.Internet, TenantId = 5, UsageAmount = 150, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 22, ResourceType = Types.ResourceType.Power, TenantId = 5, UsageAmount = 60.55, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 23, ResourceType = Types.ResourceType.Rent, TenantId = 5, UsageAmount = 1200.50, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 24, ResourceType = Types.ResourceType.Trash, TenantId = 5, UsageAmount = 20.56, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 25, ResourceType = Types.ResourceType.Water, TenantId = 5, UsageAmount = 40.33, SampleTime = DateTime.Now },
+                new TenantResourceUsage { TenantResourceUsageId = 21, ResourceType = Types.ResourceType.Internet, TenantId = 5, UsageAmount = 1, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 22, ResourceType = Types.ResourceType.Power, TenantId = 5, UsageAmount = 60.55, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 23, ResourceType = Types.ResourceType.Rent, TenantId = 5, UsageAmount = 1, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 24, ResourceType = Types.ResourceType.Trash, TenantId = 5, UsageAmount = 1, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 25, ResourceType = Types.ResourceType.Water, TenantId = 5, UsageAmount = 40.33, SampleTime = DateTime.Now - day},
 
-                new TenantResourceUsage { TenantResourceUsageId = 26, ResourceType = Types.ResourceType.Internet, TenantId = 6, UsageAmount = 150, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 27, ResourceType = Types.ResourceType.Power, TenantId = 6, UsageAmount = 60.55, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 28, ResourceType = Types.ResourceType.Rent, TenantId = 6, UsageAmount = 1200.50, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 29, ResourceType = Types.ResourceType.Trash, TenantId = 6, UsageAmount = 25.56, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 30, ResourceType = Types.ResourceType.Water, TenantId = 6, UsageAmount = 31.33, SampleTime = DateTime.Now },
+                new TenantResourceUsage { TenantResourceUsageId = 26, ResourceType = Types.ResourceType.Internet, TenantId = 6, UsageAmount = 1, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 27, ResourceType = Types.ResourceType.Power, TenantId = 6, UsageAmount = 60.55, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 28, ResourceType = Types.ResourceType.Rent, TenantId = 6, UsageAmount = 1, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 29, ResourceType = Types.ResourceType.Trash, TenantId = 6, UsageAmount = 1, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 30, ResourceType = Types.ResourceType.Water, TenantId = 6, UsageAmount = 31.33, SampleTime = DateTime.Now - day},
 
-                new TenantResourceUsage { TenantResourceUsageId = 31, ResourceType = Types.ResourceType.Internet, TenantId = 7, UsageAmount = 100, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 32, ResourceType = Types.ResourceType.Power, TenantId = 7, UsageAmount = 50.55, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 33, ResourceType = Types.ResourceType.Rent, TenantId = 7, UsageAmount = 1100.50, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 34, ResourceType = Types.ResourceType.Trash, TenantId = 7, UsageAmount = 15.56, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 35, ResourceType = Types.ResourceType.Water, TenantId = 7, UsageAmount = 30.33, SampleTime = DateTime.Now },
+                new TenantResourceUsage { TenantResourceUsageId = 31, ResourceType = Types.ResourceType.Internet, TenantId = 7, UsageAmount = 1, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 32, ResourceType = Types.ResourceType.Power, TenantId = 7, UsageAmount = 50.55, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 33, ResourceType = Types.ResourceType.Rent, TenantId = 7, UsageAmount = 1, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 34, ResourceType = Types.ResourceType.Trash, TenantId = 7, UsageAmount = 1, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 35, ResourceType = Types.ResourceType.Water, TenantId = 7, UsageAmount = 30.33, SampleTime = DateTime.Now - day},
 
-                new TenantResourceUsage { TenantResourceUsageId = 36, ResourceType = Types.ResourceType.Internet, TenantId = 8, UsageAmount = 100, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 37, ResourceType = Types.ResourceType.Power, TenantId = 8, UsageAmount = 50.55, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 38, ResourceType = Types.ResourceType.Rent, TenantId = 8, UsageAmount = 1100.50, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 39, ResourceType = Types.ResourceType.Trash, TenantId = 8, UsageAmount = 15.56, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 40, ResourceType = Types.ResourceType.Water, TenantId = 8, UsageAmount = 30.33, SampleTime = DateTime.Now },
+                new TenantResourceUsage { TenantResourceUsageId = 36, ResourceType = Types.ResourceType.Internet, TenantId = 8, UsageAmount = 1, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 37, ResourceType = Types.ResourceType.Power, TenantId = 8, UsageAmount = 50.55, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 38, ResourceType = Types.ResourceType.Rent, TenantId = 8, UsageAmount = 1, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 39, ResourceType = Types.ResourceType.Trash, TenantId = 8, UsageAmount = 1, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 40, ResourceType = Types.ResourceType.Water, TenantId = 8, UsageAmount = 30.33, SampleTime = DateTime.Now - day},
 
-                new TenantResourceUsage { TenantResourceUsageId = 41, ResourceType = Types.ResourceType.Internet, TenantId = 9, UsageAmount = 100, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 42, ResourceType = Types.ResourceType.Power, TenantId = 9, UsageAmount = 50.55, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 43, ResourceType = Types.ResourceType.Rent, TenantId = 9, UsageAmount = 1100.50, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 44, ResourceType = Types.ResourceType.Trash, TenantId = 9, UsageAmount = 15.56, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 45, ResourceType = Types.ResourceType.Water, TenantId = 9, UsageAmount = 30.33, SampleTime = DateTime.Now },
+                new TenantResourceUsage { TenantResourceUsageId = 41, ResourceType = Types.ResourceType.Internet, TenantId = 9, UsageAmount = 1, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 42, ResourceType = Types.ResourceType.Power, TenantId = 9, UsageAmount = 50.55, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 43, ResourceType = Types.ResourceType.Rent, TenantId = 9, UsageAmount = 1, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 44, ResourceType = Types.ResourceType.Trash, TenantId = 9, UsageAmount = 1, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 45, ResourceType = Types.ResourceType.Water, TenantId = 9, UsageAmount = 30.33, SampleTime = DateTime.Now - day},
 
-                new TenantResourceUsage { TenantResourceUsageId = 46, ResourceType = Types.ResourceType.Internet, TenantId = 10, UsageAmount = 100, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 47, ResourceType = Types.ResourceType.Power, TenantId = 10, UsageAmount = 50.55, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 48, ResourceType = Types.ResourceType.Rent, TenantId = 10, UsageAmount = 1100.50, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 49, ResourceType = Types.ResourceType.Trash, TenantId = 10, UsageAmount = 15.56, SampleTime = DateTime.Now },
-                new TenantResourceUsage { TenantResourceUsageId = 50, ResourceType = Types.ResourceType.Water, TenantId = 10, UsageAmount = 30.33, SampleTime = DateTime.Now }
+                new TenantResourceUsage { TenantResourceUsageId = 46, ResourceType = Types.ResourceType.Internet, TenantId = 10, UsageAmount = 1, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 47, ResourceType = Types.ResourceType.Power, TenantId = 10, UsageAmount = 50.55, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 48, ResourceType = Types.ResourceType.Rent, TenantId = 10, UsageAmount = 1, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 49, ResourceType = Types.ResourceType.Trash, TenantId = 10, UsageAmount = 1, SampleTime = DateTime.Now - day},
+                new TenantResourceUsage { TenantResourceUsageId = 50, ResourceType = Types.ResourceType.Water, TenantId = 10, UsageAmount = 30.33, SampleTime = DateTime.Now- day }
             );
             #endregion
 
@@ -156,76 +157,76 @@ namespace AptMgmtPortalAPI.Data
 
             #region Resource Usage Rates
             modelBuilder.Entity<ResourceUsageRate>().HasData(
-                new ResourceUsageRate { ResourceUsageRateId = 1, ResourceType = Types.ResourceType.Internet, PeriodStart = dt3MonthsAgo, PeriodEnd = DateTime.Now, Rate = 40.45 },
-                new ResourceUsageRate { ResourceUsageRateId = 2, ResourceType = Types.ResourceType.Power, PeriodStart = dt3MonthsAgo, PeriodEnd = DateTime.Now, Rate = 3.45 },
-                new ResourceUsageRate { ResourceUsageRateId = 3, ResourceType = Types.ResourceType.Rent, PeriodStart = dt3MonthsAgo, PeriodEnd = DateTime.Now, Rate = 1100 },
-                new ResourceUsageRate { ResourceUsageRateId = 4, ResourceType = Types.ResourceType.Trash, PeriodStart = dt3MonthsAgo, PeriodEnd = DateTime.Now, Rate = 20.55 },
-                new ResourceUsageRate { ResourceUsageRateId = 5, ResourceType = Types.ResourceType.Water, PeriodStart = dt3MonthsAgo, PeriodEnd = DateTime.Now, Rate = 1.75 }
+                new ResourceUsageRate { ResourceUsageRateId = 1, ResourceType = Types.ResourceType.Internet, PeriodStart = dt6MonthsAgo, PeriodEnd = DateTime.Now + sixMonth, Rate = 40.45 },
+                new ResourceUsageRate { ResourceUsageRateId = 2, ResourceType = Types.ResourceType.Power, PeriodStart = dt6MonthsAgo, PeriodEnd = DateTime.Now + sixMonth, Rate = 3.45 },
+                new ResourceUsageRate { ResourceUsageRateId = 3, ResourceType = Types.ResourceType.Rent, PeriodStart = dt6MonthsAgo, PeriodEnd = DateTime.Now + sixMonth, Rate = 1100 },
+                new ResourceUsageRate { ResourceUsageRateId = 4, ResourceType = Types.ResourceType.Trash, PeriodStart = dt6MonthsAgo, PeriodEnd = DateTime.Now + sixMonth, Rate = 20.55 },
+                new ResourceUsageRate { ResourceUsageRateId = 5, ResourceType = Types.ResourceType.Water, PeriodStart = dt6MonthsAgo, PeriodEnd = DateTime.Now + sixMonth, Rate = 1.75 }
              );
             #endregion
 
             #region Payment Seed
             modelBuilder.Entity<Payment>().HasData(
 
-                new Payment { PaymentId = 1, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Internet, TenantId = 1, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 2, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Power, TenantId = 1, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 3, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Rent, TenantId = 1, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 4, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Trash, TenantId = 1, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 5, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Water, TenantId = 1, TimePaid = DateTime.Now },
+                new Payment { PaymentId = 1, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Internet, TenantId = 1, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 2, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Power, TenantId = 1, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 3, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Rent, TenantId = 1, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 4, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Trash, TenantId = 1, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 5, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Water, TenantId = 1, TimePaid = DateTime.Now - day},
 
-                new Payment { PaymentId = 6, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Internet, TenantId = 2, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 7, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Power, TenantId = 2, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 8, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Rent, TenantId = 2, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 9, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Trash, TenantId = 2, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 10, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Water, TenantId = 2, TimePaid = DateTime.Now },
+                new Payment { PaymentId = 6, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Internet, TenantId = 2, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 7, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Power, TenantId = 2, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 8, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Rent, TenantId = 2, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 9, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Trash, TenantId = 2, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 10, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Water, TenantId = 2, TimePaid = DateTime.Now - day},
 
-                new Payment { PaymentId = 11, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Internet, TenantId = 3, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 12, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Power, TenantId = 3, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 13, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Rent, TenantId = 3, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 14, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Trash, TenantId = 3, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 15, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Water, TenantId = 3, TimePaid = DateTime.Now },
+                new Payment { PaymentId = 11, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Internet, TenantId = 3, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 12, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Power, TenantId = 3, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 13, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Rent, TenantId = 3, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 14, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Trash, TenantId = 3, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 15, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Water, TenantId = 3, TimePaid = DateTime.Now - day},
 
-                new Payment { PaymentId = 16, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Internet, TenantId = 4, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 17, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Power, TenantId = 4, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 18, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Rent, TenantId = 4, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 19, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Trash, TenantId = 4, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 20, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Water, TenantId = 4, TimePaid = DateTime.Now },
+                new Payment { PaymentId = 16, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Internet, TenantId = 4, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 17, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Power, TenantId = 4, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 18, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Rent, TenantId = 4, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 19, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Trash, TenantId = 4, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 20, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Water, TenantId = 4, TimePaid = DateTime.Now - day},
 
-                new Payment { PaymentId = 21, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Internet, TenantId = 5, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 22, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Power, TenantId = 5, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 23, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Rent, TenantId = 5, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 24, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Trash, TenantId = 5, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 25, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Water, TenantId = 5, TimePaid = DateTime.Now },
+                new Payment { PaymentId = 21, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Internet, TenantId = 5, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 22, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Power, TenantId = 5, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 23, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Rent, TenantId = 5, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 24, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Trash, TenantId = 5, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 25, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Water, TenantId = 5, TimePaid = DateTime.Now - day},
 
-                new Payment { PaymentId = 26, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Internet, TenantId = 6, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 27, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Power, TenantId = 6, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 28, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Rent, TenantId = 6, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 29, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Trash, TenantId = 6, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 30, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Water, TenantId = 6, TimePaid = DateTime.Now },
+                new Payment { PaymentId = 26, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Internet, TenantId = 6, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 27, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Power, TenantId = 6, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 28, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Rent, TenantId = 6, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 29, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Trash, TenantId = 6, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 30, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Water, TenantId = 6, TimePaid = DateTime.Now - day},
 
-                new Payment { PaymentId = 31, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Internet, TenantId = 7, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 32, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Power, TenantId = 7, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 33, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Rent, TenantId = 7, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 34, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Trash, TenantId = 7, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 35, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Water, TenantId = 7, TimePaid = DateTime.Now },
+                new Payment { PaymentId = 31, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Internet, TenantId = 7, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 32, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Power, TenantId = 7, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 33, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Rent, TenantId = 7, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 34, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Trash, TenantId = 7, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 35, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Water, TenantId = 7, TimePaid = DateTime.Now - day},
 
-                new Payment { PaymentId = 36, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Internet, TenantId = 8, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 37, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Power, TenantId = 8, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 38, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Rent, TenantId = 8, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 39, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Trash, TenantId = 8, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 40, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Water, TenantId = 8, TimePaid = DateTime.Now },
+                new Payment { PaymentId = 36, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Internet, TenantId = 8, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 37, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Power, TenantId = 8, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 38, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Rent, TenantId = 8, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 39, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Trash, TenantId = 8, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 40, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Water, TenantId = 8, TimePaid = DateTime.Now - day},
 
-                new Payment { PaymentId = 41, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Internet, TenantId = 9, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 42, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Power, TenantId = 9, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 43, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Rent, TenantId = 9, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 44, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Trash, TenantId = 9, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 45, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Water, TenantId = 9, TimePaid = DateTime.Now },
+                new Payment { PaymentId = 41, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Internet, TenantId = 9, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 42, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Power, TenantId = 9, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 43, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Rent, TenantId = 9, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 44, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Trash, TenantId = 9, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 45, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Water, TenantId = 9, TimePaid = DateTime.Now - day},
 
-                new Payment { PaymentId = 46, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Internet, TenantId = 10, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 47, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Power, TenantId = 10, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 48, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Rent, TenantId = 10, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 49, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Trash, TenantId = 10, TimePaid = DateTime.Now },
-                new Payment { PaymentId = 50, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Water, TenantId = 10, TimePaid = DateTime.Now }
+                new Payment { PaymentId = 46, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Internet, TenantId = 10, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 47, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Power, TenantId = 10, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 48, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Rent, TenantId = 10, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 49, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Trash, TenantId = 10, TimePaid = DateTime.Now - day},
+                new Payment { PaymentId = 50, BillingPeriodId = 1, Amount = 100.11, ResourceType = Types.ResourceType.Water, TenantId = 10, TimePaid = DateTime.Now- day }
 
             );
             #endregion
@@ -262,10 +263,10 @@ namespace AptMgmtPortalAPI.Data
             #region Billing Period Seed
 
             modelBuilder.Entity<BillingPeriod>().HasData(
-                new BillingPeriod { BillingPeriodId = 1, PeriodStart = dt1MonthAgo, PeriodEnd = DateTime.Now },
-                new BillingPeriod { BillingPeriodId = 2, PeriodStart = dt3MonthsAgo, PeriodEnd = DateTime.Now },
-                new BillingPeriod { BillingPeriodId = 3, PeriodStart = dt6MonthsAgo, PeriodEnd = DateTime.Now },
-                new BillingPeriod { BillingPeriodId = 4, PeriodStart = dt12MonthsAgo, PeriodEnd = DateTime.Now }
+                new BillingPeriod { BillingPeriodId = 1, PeriodStart = dt1MonthAgo, PeriodEnd = DateTime.Now + day},
+                new BillingPeriod { BillingPeriodId = 2, PeriodStart = dt3MonthsAgo, PeriodEnd = DateTime.Now + day},
+                new BillingPeriod { BillingPeriodId = 3, PeriodStart = dt6MonthsAgo, PeriodEnd = DateTime.Now + day},
+                new BillingPeriod { BillingPeriodId = 4, PeriodStart = dt12MonthsAgo, PeriodEnd = DateTime.Now + day}
                 );
             #endregion
 

@@ -9,6 +9,8 @@ import { User } from '../model/user';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 
+import { ApiBase } from './../../ApiBase';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -48,8 +50,12 @@ export class AuthenticationService {
    */
   public login(loginName: string, password: string): Observable<User> {
     // TODO: provide a more defined type than `any`
+    const info = {
+      UserName: loginName,
+      Password: password,
+    };
     return this.http
-      .post<any>(`/login`, { loginName, password })
+      .post<any>(ApiBase.url() + `Login`, info)
       .pipe(
         map((user: User) => {
           // Login is successful if the api key was returned!

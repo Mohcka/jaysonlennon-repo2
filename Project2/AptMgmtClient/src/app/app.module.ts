@@ -22,6 +22,8 @@ import { ApiTokenInterceptor } from './helpers/api-token.interceptor';
 import { ErrorInterceptor } from './helpers/error.interceptor';
 import { LoginComponent } from './components/login/login.component';
 
+import { ResourceEnumPipe } from './helpers/resource-enum-pipe';
+
 import { environment } from './../environments/environment';
 
 // Used in development builds only
@@ -62,6 +64,7 @@ if (process.env.NODE_ENV === 'development' && environment.memoryApi === true) {
     TenantPaymentComponent,
     MaintenanceRequestFormComponent,
     ManagerComponent,
+    ResourceEnumPipe,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

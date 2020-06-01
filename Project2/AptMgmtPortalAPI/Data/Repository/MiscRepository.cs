@@ -19,9 +19,12 @@ namespace AptMgmtPortalAPI.Repository
             _context = aptMgmtDbContext;
         }
 
-        public Task<BillingPeriod> FromId(int billingPeriodId)
+        public async Task<BillingPeriod> BillingPeriodFromId(int billingPeriodId)
         {
-            throw new NotImplementedException();
+            return await _context.BillingPeriods
+                .Where(p => p.BillingPeriodId == billingPeriodId)
+                .Select(p => p)
+                .FirstOrDefaultAsync();
         }
 
         public async Task<BillingPeriod> GetCurrentBillingPeriod()
