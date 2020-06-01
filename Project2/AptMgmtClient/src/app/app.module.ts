@@ -33,8 +33,8 @@ import { PaymentManComponent } from './components/manager/payment-man/payment-ma
 // Used in development builds only
 import { InMemoryDataService } from './services/in-memory-data.service';
 import { fakeAuthBackendProvider } from './helpers/fake-auth-backend.interceptor';
-import { LeaseViewComponent } from './lease-view/lease-view.component';
-import { LeaseAddComponent } from './lease-add/lease-add.component';
+import { LeaseViewComponent } from './components/manager/lease-view/lease-view.component';
+import { LeaseAddComponent } from './components/manager/lease-add/lease-add.component';
 
 // Uses mock api when under development, replaced with a blank module in
 // production
