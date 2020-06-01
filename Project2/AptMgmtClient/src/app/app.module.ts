@@ -27,6 +27,7 @@ import { environment } from './../environments/environment';
 // Used in development builds only
 import { InMemoryDataService } from './services/in-memory-data.service';
 import { fakeAuthBackendProvider } from './helpers/fake-auth-backend.interceptor';
+import { ManagerComponent } from './components/manager.components/manager/manager.component';
 
 // Uses mock api when under development, replaced with a blank module in
 // production
@@ -60,6 +61,7 @@ if (process.env.NODE_ENV === 'development' && environment.memoryApi === true) {
     TenantComponent,
     TenantPaymentComponent,
     MaintenanceRequestFormComponent,
+    ManagerComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

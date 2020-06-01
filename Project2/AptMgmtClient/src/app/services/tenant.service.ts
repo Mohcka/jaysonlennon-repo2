@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Tenant } from '../model/tenant';
-import { catchError } from 'rxjs/operators';
+import { catchError, tap } from 'rxjs/operators';
 import { handleError } from 'src/utils/error-handling';
 import { GenericRest } from './generic-rest.service';
 import { ApiBase } from '../../ApiBase';
@@ -11,21 +11,32 @@ import { ApiBase } from '../../ApiBase';
   providedIn: 'root',
 })
 export class TenantService extends GenericRest<Tenant> {
-  // private readonly tenantUrl = 'api/tenant';
-
   constructor(protected http: HttpClient) {
     super(http, ApiBase.url() + 'tenant');
   }
 
-  // public getTenants(): Observable<Tenant[]> {
-  //   return this.http
-  //     .get<Tenant[]>(this.tenantUrl)
-  //     .pipe(catchError(handleError<Tenant[]>('getTenants', [])));
-  // }
+  /**
+   * Processes a payment request on behalf of the tenant
+   * @param id Id of the tenant making rent payment request
+   */
+  registerPayment(id: number): Observable<any> {
+    return this.http
+      .post<Tenant[]>(
+        // TODO: send expected data when api is setup
+        `${this.apiUrl}/${id}/rent`,
+        {},
+        this.httpOptions
+      )
+      .pipe(catchError(handleError<Tenant>('registerTenantPayment')));
+  }
 
-  // public getTenant(id: number): Observable<Tenant> {
-  //   return this.http
-  //     .get<Tenant>(`${this.tenantUrl}/${id}`)
-  //     .pipe(catchError(handleError<Tenant>('getTenant', undefined)));
-  // }
+  /**
+   * Posts a maintenance request for the server to process
+   * @param id The id of the tenant making the request
+   */
+  postMaintenanceRequest(id: number): Observable<any> {
+    return this.http
+      .post<any>(`${this.apiUrl}/${id}/maintenance`, {}, this.httpOptions)
+      .pipe(catchError(handleError<any>('tenantMaintenanceRequest')));
+  }
 }

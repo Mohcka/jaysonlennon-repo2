@@ -17,8 +17,4 @@ export interface User {
    * never expect to receive the password from the server.
    */
   password?: string;
-  buser?: {
-    id: number;
-    name: string;
-  }[];
 }

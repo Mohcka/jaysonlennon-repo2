@@ -1,16 +1,18 @@
-<h2>Tenant Page</h2>
+<h2>Rent</h2>
 <div class="col-6">
   <h4>Due Date</h4>
   {{ dueDate | date }}
   <h4>Pay rent</h4>
-  <p>Amount Due: {{ 1500 | currency: 'USD' }}</p>
-  <button class="btn btn-primary" (click)="registerPayment()">Pay</button>
+  <p>Amount Due: {{ amountDue | currency: 'USD' }}</p>
+  <button class="btn btn-primary" (click)="registerPayment()">
+    Pay
+  </button>
 
-  <h4>Outstanding Maintenance Requests</h4>
+  <!-- <h4>Outstanding Maintenance Requests</h4>
 
   <h4>[insert list of requests here]</h4>
 
   <h4>Make Maintenance Request</h4>
 
-  <app-maintenance-request-form></app-maintenance-request-form>
+  <app-maintenance-request-form></app-maintenance-request-form> -->
 </div>
