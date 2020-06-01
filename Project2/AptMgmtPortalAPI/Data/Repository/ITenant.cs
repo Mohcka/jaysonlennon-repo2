@@ -13,7 +13,6 @@ namespace AptMgmtPortalAPI.Repository
     public interface ITenant
     {
         Task<IEnumerable<Tenant>> FindTenantWithFirstName(string firstName);
-        Task<bool> RestEdit(TenantInfo info);
         Task<Tenant> AddTenant(TenantInfo info);
         Task<Tenant> TenantFromId(int tenantId);
         Task<Tenant> TenantFromUserId(int userId);
@@ -77,5 +76,7 @@ namespace AptMgmtPortalAPI.Repository
                                                 DateTime startDate,
                                                 DateTime endDate);
         Task<string> GetUnitNumber(int tenantId);
+
+        Task<Tenant> UpdateTenantInfo(int tenantId, DTO.TenantInfoDTO newInfo);
     }
 }
