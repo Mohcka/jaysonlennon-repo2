@@ -27,3 +27,6 @@ The application will be responsively designed, taking into account that many use
 ## Third-Party APIs
 * [Google Charts](https://developers.google.com/chart/)
 * [Auth0](https://auth0.com)
+
+
+[Sonarcloud code analysis](https://sonarcloud.io/dashboard?id=21192782-9959-441f-9311-e9efbb0a57ef)

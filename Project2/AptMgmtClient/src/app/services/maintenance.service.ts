@@ -2,14 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Maintenance } from '../model/maintenance';
 import { GenericRest } from './generic-rest.service';
+import { ApiBase } from '../../ApiBase';
 
 @Injectable({
   providedIn: 'root',
 })
 export class MaintenanceService extends GenericRest<Maintenance> {
-  private readonly maintenanceUrl = 'api/maintenace';
   constructor(protected http: HttpClient) {
-    super(http, 'api/maintenance');
+    super(http, ApiBase.url() + 'maintenance');
   }
 
   // public getMaintenaceRequests(): Observable<Maintenance[]> {

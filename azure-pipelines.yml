@@ -16,15 +16,21 @@ stages:
     steps:
     - bash: |
         cd Project2/AptMgmtPortalAPI
-        dotnet build
-    displayName: 'build'
-  - job: publish
-    steps:
-    - bash: |
-        cd Project2/AptMgmtPortalAPI
         dotnet publish -c Release -o release
     - publish: $(System.DefaultWorkingDirectory)/Project2/AptMgmtPortalAPI/release
       artifact: APIRelease
+
+- stage: BuildClient
+  jobs:
+  - job: build
+    steps:
+    - bash: |
+        cd Project2/AptMgmtClient
+        npm install
+        ./node_modules/@angular/cli/bin/ng build --prod
+        
+    - publish: $(System.DefaultWorkingDirectory)/Project2/AptMgmtClient/dist
+      artifact: ClientRelease
 
 - stage: TestAPI
   jobs:
@@ -35,7 +41,7 @@ stages:
         dotnet test
     displayName: 'test'
 
-- stage: CoverageAPI
+- stage: Coverage
   jobs:
   - job: coverage
     steps:
@@ -49,15 +55,20 @@ stages:
 
         cd Project2/Tests
         dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+
+        cd ../AptMgmtClient
+        npm install
+        ./node_modules/@angular/cli/bin/ng test --code-coverage --browsers ChromeHeadless --watch false
         cd ..
 
         sonar-scanner \
-        -Dsonar.organization=21192782-9959-441f-9311-e9efbb0a57ef \
-        -Dsonar.projectKey=21192782-9959-441f-9311-e9efbb0a57ef \
-        -Dsonar.sources=. \
-        -Dsonar.host.url=https://sonarcloud.io \
-        -Dsonar.login=fc44ec84e5d6f1c4cb5d7fd7e841a44b544b5076 \
-        -Dsonar.cs.opencover.reportsPaths=Tests/coverage.opencover.xml
+          -Dsonar.organization=21192782-9959-441f-9311-e9efbb0a57ef \
+          -Dsonar.projectKey=21192782-9959-441f-9311-e9efbb0a57ef \
+          -Dsonar.sources=. \
+          -Dsonar.host.url=https://sonarcloud.io \
+          -Dsonar.login=372bcd63227329f7907b72e9f304fcfbc34a3e71 \
+          -Dsonar.cs.opencover.reportsPaths=Tests/coverage.opencover.xml \
+          -Dsonar.javascript.lcov.reportPaths=$(System.DefaultWorkingDirectory)/Project2/AptMgmtClient/coverage/lcov.info
     displayName: 'coverage'
 
 - stage: DeployAPI
@@ -78,4 +89,28 @@ stages:
         packageForLinux: '$(System.DefaultWorkingDirectory)/release'
         RuntimeStack: 'DOTNETCORE|Latest'
         StartupCommand: 'dotnet AptMgmtPortalAPI.dll'
+
+- stage: DeployClient
+  jobs:
+  - job: deploy
+    steps:
+    - task: DownloadPipelineArtifact@2
+      inputs:
+        buildType: 'current'
+        artifactName: 'ClientRelease'
+        targetPath: 'release'
+    - task: FtpUpload@2
+      inputs:
+        credentialsOption: 'inputs'
+        serverUrl: 'ftps://waws-prod-dm1-069.ftp.azurewebsites.windows.net/site/wwwroot'
+        username: 'revp2t3fe\$revp2t3fe'
+        password: 'z7eWeXPgL08JWNfxJsNkXqDKQztodmkjPBEuNllu9FX8uKiyE1Gxd4XHHDpa'
+        rootDirectory: 'release'
+        filePatterns: '**'
+        remoteDirectory: 'site/wwwroot'
+        clean: false
+        cleanContents: false
+        preservePaths: false
+        trustSSL: false
+
 

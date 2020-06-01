@@ -35,6 +35,26 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                     b.HasKey("AgreementId");
 
                     b.ToTable("Agreements");
+
+                    b.HasData(
+                        new
+                        {
+                            AgreementId = 1,
+                            Text = "This is a really long lease agreement text",
+                            Title = "Lease Agreement"
+                        },
+                        new
+                        {
+                            AgreementId = 2,
+                            Text = "This is a really long utility agreement text",
+                            Title = "Utility Agreement"
+                        },
+                        new
+                        {
+                            AgreementId = 3,
+                            Text = "This is a really long internet connection agreement text",
+                            Title = "Internet Connection Agreement"
+                        });
                 });
 
             modelBuilder.Entity("AptMgmtPortalAPI.Entity.BillingPeriod", b =>
@@ -55,6 +75,32 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                     b.HasKey("BillingPeriodId");
 
                     b.ToTable("BillingPeriods");
+
+                    b.HasData(
+                        new
+                        {
+                            BillingPeriodId = 1,
+                            PeriodEnd = "2020-05-31 06:59:43.0544131",
+                            PeriodStart = "2020-05-01 06:59:43.0466512"
+                        },
+                        new
+                        {
+                            BillingPeriodId = 2,
+                            PeriodEnd = "2020-05-31 06:59:43.0544604",
+                            PeriodStart = "2020-03-02 06:59:43.0466512"
+                        },
+                        new
+                        {
+                            BillingPeriodId = 3,
+                            PeriodEnd = "2020-05-31 06:59:43.0544623",
+                            PeriodStart = "2019-12-03 06:59:43.0466512"
+                        },
+                        new
+                        {
+                            BillingPeriodId = 4,
+                            PeriodEnd = "2020-05-31 06:59:43.0544626",
+                            PeriodStart = "2019-06-06 06:59:43.0466512"
+                        });
                 });
 
             modelBuilder.Entity("AptMgmtPortalAPI.Entity.MaintenanceRequest", b =>
@@ -98,6 +144,110 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                     b.HasKey("MaintenanceRequestId");
 
                     b.ToTable("MaintenanceRequests");
+
+                    b.HasData(
+                        new
+                        {
+                            MaintenanceRequestId = 1,
+                            CloseReason = "Completed",
+                            ClosingUserId = 1,
+                            InternalNotes = "Call Plumber",
+                            MaintenanceRequestType = "Plumbing",
+                            OpenNotes = "No water",
+                            OpeningUserId = 1,
+                            ResolutionNotes = "Fully restored.",
+                            TimeClosed = "2020-05-31 06:59:43.0541134",
+                            TimeOpened = "2020-03-02 06:59:43.0466512",
+                            UnitNumber = "101"
+                        },
+                        new
+                        {
+                            MaintenanceRequestId = 2,
+                            CloseReason = "Completed",
+                            ClosingUserId = 1,
+                            InternalNotes = "Call Comcast",
+                            OpenNotes = "No Interet",
+                            OpeningUserId = 1,
+                            TimeOpened = "2020-03-02 06:59:43.0466512",
+                            UnitNumber = "101"
+                        },
+                        new
+                        {
+                            MaintenanceRequestId = 3,
+                            CloseReason = "CanceledByManagement",
+                            ClosingUserId = 1,
+                            InternalNotes = "Call Plumber",
+                            OpenNotes = "No water",
+                            OpeningUserId = 1,
+                            TimeOpened = "2019-12-03 06:59:43.0466512",
+                            UnitNumber = "101"
+                        },
+                        new
+                        {
+                            MaintenanceRequestId = 4,
+                            CloseReason = "CanceledByTenant",
+                            ClosingUserId = 1,
+                            InternalNotes = "Call Plumber",
+                            OpenNotes = "No water",
+                            OpeningUserId = 2,
+                            TimeOpened = "2020-03-02 06:59:43.0466512",
+                            UnitNumber = "102"
+                        },
+                        new
+                        {
+                            MaintenanceRequestId = 5,
+                            CloseReason = "CanceledByManagement",
+                            InternalNotes = "Call Plumber",
+                            OpenNotes = "No water",
+                            OpeningUserId = 3,
+                            TimeOpened = "2020-03-02 06:59:43.0466512",
+                            UnitNumber = "103"
+                        },
+                        new
+                        {
+                            MaintenanceRequestId = 6,
+                            InternalNotes = "Call Plumber",
+                            OpenNotes = "No water",
+                            OpeningUserId = 4,
+                            TimeOpened = "2020-03-02 06:59:43.0466512",
+                            UnitNumber = "104"
+                        },
+                        new
+                        {
+                            MaintenanceRequestId = 7,
+                            InternalNotes = "Call Plumber",
+                            OpenNotes = "No water",
+                            OpeningUserId = 5,
+                            TimeOpened = "2020-03-02 06:59:43.0466512",
+                            UnitNumber = "105"
+                        },
+                        new
+                        {
+                            MaintenanceRequestId = 8,
+                            InternalNotes = "Call Plumber",
+                            OpenNotes = "No water",
+                            OpeningUserId = 6,
+                            TimeOpened = "2020-03-02 06:59:43.0466512",
+                            UnitNumber = "106"
+                        },
+                        new
+                        {
+                            MaintenanceRequestId = 9,
+                            InternalNotes = "Call Plumber",
+                            OpenNotes = "No water",
+                            OpeningUserId = 7,
+                            TimeOpened = "2020-03-02 06:59:43.0466512",
+                            UnitNumber = "107"
+                        },
+                        new
+                        {
+                            MaintenanceRequestId = 10,
+                            InternalNotes = "Call Plumber",
+                            OpenNotes = "No water",
+                            OpeningUserId = 8,
+                            TimeOpened = "2020-03-02 06:59:43.0466512",
+                            UnitNumber = "108"
+                        });
                 });
 
             modelBuilder.Entity("AptMgmtPortalAPI.Entity.Payment", b =>
@@ -126,6 +276,458 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                     b.HasKey("PaymentId");
 
                     b.ToTable("Payments");
+
+                    b.HasData(
+                        new
+                        {
+                            PaymentId = 1,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 2,
+                            TenantId = 1,
+                            TimePaid = "2020-05-31 06:59:43.0535949"
+                        },
+                        new
+                        {
+                            PaymentId = 2,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 0,
+                            TenantId = 1,
+                            TimePaid = "2020-05-31 06:59:43.053642"
+                        },
+                        new
+                        {
+                            PaymentId = 3,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 4,
+                            TenantId = 1,
+                            TimePaid = "2020-05-31 06:59:43.0536437"
+                        },
+                        new
+                        {
+                            PaymentId = 4,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 3,
+                            TenantId = 1,
+                            TimePaid = "2020-05-31 06:59:43.053644"
+                        },
+                        new
+                        {
+                            PaymentId = 5,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 1,
+                            TenantId = 1,
+                            TimePaid = "2020-05-31 06:59:43.0536442"
+                        },
+                        new
+                        {
+                            PaymentId = 6,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 2,
+                            TenantId = 2,
+                            TimePaid = "2020-05-31 06:59:43.0536445"
+                        },
+                        new
+                        {
+                            PaymentId = 7,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 0,
+                            TenantId = 2,
+                            TimePaid = "2020-05-31 06:59:43.0536447"
+                        },
+                        new
+                        {
+                            PaymentId = 8,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 4,
+                            TenantId = 2,
+                            TimePaid = "2020-05-31 06:59:43.0536449"
+                        },
+                        new
+                        {
+                            PaymentId = 9,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 3,
+                            TenantId = 2,
+                            TimePaid = "2020-05-31 06:59:43.0536452"
+                        },
+                        new
+                        {
+                            PaymentId = 10,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 1,
+                            TenantId = 2,
+                            TimePaid = "2020-05-31 06:59:43.0536454"
+                        },
+                        new
+                        {
+                            PaymentId = 11,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 2,
+                            TenantId = 3,
+                            TimePaid = "2020-05-31 06:59:43.0536456"
+                        },
+                        new
+                        {
+                            PaymentId = 12,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 0,
+                            TenantId = 3,
+                            TimePaid = "2020-05-31 06:59:43.0536459"
+                        },
+                        new
+                        {
+                            PaymentId = 13,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 4,
+                            TenantId = 3,
+                            TimePaid = "2020-05-31 06:59:43.0536461"
+                        },
+                        new
+                        {
+                            PaymentId = 14,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 3,
+                            TenantId = 3,
+                            TimePaid = "2020-05-31 06:59:43.0536463"
+                        },
+                        new
+                        {
+                            PaymentId = 15,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 1,
+                            TenantId = 3,
+                            TimePaid = "2020-05-31 06:59:43.0536466"
+                        },
+                        new
+                        {
+                            PaymentId = 16,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 2,
+                            TenantId = 4,
+                            TimePaid = "2020-05-31 06:59:43.0536468"
+                        },
+                        new
+                        {
+                            PaymentId = 17,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 0,
+                            TenantId = 4,
+                            TimePaid = "2020-05-31 06:59:43.0536471"
+                        },
+                        new
+                        {
+                            PaymentId = 18,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 4,
+                            TenantId = 4,
+                            TimePaid = "2020-05-31 06:59:43.0536473"
+                        },
+                        new
+                        {
+                            PaymentId = 19,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 3,
+                            TenantId = 4,
+                            TimePaid = "2020-05-31 06:59:43.0536476"
+                        },
+                        new
+                        {
+                            PaymentId = 20,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 1,
+                            TenantId = 4,
+                            TimePaid = "2020-05-31 06:59:43.0536478"
+                        },
+                        new
+                        {
+                            PaymentId = 21,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 2,
+                            TenantId = 5,
+                            TimePaid = "2020-05-31 06:59:43.053648"
+                        },
+                        new
+                        {
+                            PaymentId = 22,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 0,
+                            TenantId = 5,
+                            TimePaid = "2020-05-31 06:59:43.0536482"
+                        },
+                        new
+                        {
+                            PaymentId = 23,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 4,
+                            TenantId = 5,
+                            TimePaid = "2020-05-31 06:59:43.0536485"
+                        },
+                        new
+                        {
+                            PaymentId = 24,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 3,
+                            TenantId = 5,
+                            TimePaid = "2020-05-31 06:59:43.0536487"
+                        },
+                        new
+                        {
+                            PaymentId = 25,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 1,
+                            TenantId = 5,
+                            TimePaid = "2020-05-31 06:59:43.0536489"
+                        },
+                        new
+                        {
+                            PaymentId = 26,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 2,
+                            TenantId = 6,
+                            TimePaid = "2020-05-31 06:59:43.0536492"
+                        },
+                        new
+                        {
+                            PaymentId = 27,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 0,
+                            TenantId = 6,
+                            TimePaid = "2020-05-31 06:59:43.0536494"
+                        },
+                        new
+                        {
+                            PaymentId = 28,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 4,
+                            TenantId = 6,
+                            TimePaid = "2020-05-31 06:59:43.0536496"
+                        },
+                        new
+                        {
+                            PaymentId = 29,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 3,
+                            TenantId = 6,
+                            TimePaid = "2020-05-31 06:59:43.0536498"
+                        },
+                        new
+                        {
+                            PaymentId = 30,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 1,
+                            TenantId = 6,
+                            TimePaid = "2020-05-31 06:59:43.05365"
+                        },
+                        new
+                        {
+                            PaymentId = 31,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 2,
+                            TenantId = 7,
+                            TimePaid = "2020-05-31 06:59:43.0536503"
+                        },
+                        new
+                        {
+                            PaymentId = 32,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 0,
+                            TenantId = 7,
+                            TimePaid = "2020-05-31 06:59:43.0536505"
+                        },
+                        new
+                        {
+                            PaymentId = 33,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 4,
+                            TenantId = 7,
+                            TimePaid = "2020-05-31 06:59:43.0536507"
+                        },
+                        new
+                        {
+                            PaymentId = 34,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 3,
+                            TenantId = 7,
+                            TimePaid = "2020-05-31 06:59:43.0536509"
+                        },
+                        new
+                        {
+                            PaymentId = 35,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 1,
+                            TenantId = 7,
+                            TimePaid = "2020-05-31 06:59:43.0536512"
+                        },
+                        new
+                        {
+                            PaymentId = 36,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 2,
+                            TenantId = 8,
+                            TimePaid = "2020-05-31 06:59:43.0536514"
+                        },
+                        new
+                        {
+                            PaymentId = 37,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 0,
+                            TenantId = 8,
+                            TimePaid = "2020-05-31 06:59:43.0536517"
+                        },
+                        new
+                        {
+                            PaymentId = 38,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 4,
+                            TenantId = 8,
+                            TimePaid = "2020-05-31 06:59:43.0536519"
+                        },
+                        new
+                        {
+                            PaymentId = 39,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 3,
+                            TenantId = 8,
+                            TimePaid = "2020-05-31 06:59:43.0536522"
+                        },
+                        new
+                        {
+                            PaymentId = 40,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 1,
+                            TenantId = 8,
+                            TimePaid = "2020-05-31 06:59:43.0536524"
+                        },
+                        new
+                        {
+                            PaymentId = 41,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 2,
+                            TenantId = 9,
+                            TimePaid = "2020-05-31 06:59:43.0536526"
+                        },
+                        new
+                        {
+                            PaymentId = 42,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 0,
+                            TenantId = 9,
+                            TimePaid = "2020-05-31 06:59:43.0536528"
+                        },
+                        new
+                        {
+                            PaymentId = 43,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 4,
+                            TenantId = 9,
+                            TimePaid = "2020-05-31 06:59:43.053653"
+                        },
+                        new
+                        {
+                            PaymentId = 44,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 3,
+                            TenantId = 9,
+                            TimePaid = "2020-05-31 06:59:43.0536532"
+                        },
+                        new
+                        {
+                            PaymentId = 45,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 1,
+                            TenantId = 9,
+                            TimePaid = "2020-05-31 06:59:43.0536535"
+                        },
+                        new
+                        {
+                            PaymentId = 46,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 2,
+                            TenantId = 10,
+                            TimePaid = "2020-05-31 06:59:43.0536537"
+                        },
+                        new
+                        {
+                            PaymentId = 47,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 0,
+                            TenantId = 10,
+                            TimePaid = "2020-05-31 06:59:43.0536539"
+                        },
+                        new
+                        {
+                            PaymentId = 48,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 4,
+                            TenantId = 10,
+                            TimePaid = "2020-05-31 06:59:43.0536541"
+                        },
+                        new
+                        {
+                            PaymentId = 49,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 3,
+                            TenantId = 10,
+                            TimePaid = "2020-05-31 06:59:43.0536543"
+                        },
+                        new
+                        {
+                            PaymentId = 50,
+                            Amount = 100.11,
+                            BillingPeriodId = 1,
+                            ResourceType = 1,
+                            TenantId = 10,
+                            TimePaid = "2020-05-31 06:59:43.0536545"
+                        });
                 });
 
             modelBuilder.Entity("AptMgmtPortalAPI.Entity.ResourceUsageRate", b =>
@@ -152,6 +754,48 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                     b.HasKey("ResourceUsageRateId");
 
                     b.ToTable("ResourceUsageRates");
+
+                    b.HasData(
+                        new
+                        {
+                            ResourceUsageRateId = 1,
+                            PeriodEnd = "2020-05-31 06:59:43.0532196",
+                            PeriodStart = "2020-03-02 06:59:43.0466512",
+                            Rate = 40.450000000000003,
+                            ResourceType = 2
+                        },
+                        new
+                        {
+                            ResourceUsageRateId = 2,
+                            PeriodEnd = "2020-05-31 06:59:43.0533007",
+                            PeriodStart = "2020-03-02 06:59:43.0466512",
+                            Rate = 3.4500000000000002,
+                            ResourceType = 0
+                        },
+                        new
+                        {
+                            ResourceUsageRateId = 3,
+                            PeriodEnd = "2020-05-31 06:59:43.053304",
+                            PeriodStart = "2020-03-02 06:59:43.0466512",
+                            Rate = 1100.0,
+                            ResourceType = 4
+                        },
+                        new
+                        {
+                            ResourceUsageRateId = 4,
+                            PeriodEnd = "2020-05-31 06:59:43.0533043",
+                            PeriodStart = "2020-03-02 06:59:43.0466512",
+                            Rate = 20.550000000000001,
+                            ResourceType = 3
+                        },
+                        new
+                        {
+                            ResourceUsageRateId = 5,
+                            PeriodEnd = "2020-05-31 06:59:43.0533046",
+                            PeriodStart = "2020-03-02 06:59:43.0466512",
+                            Rate = 1.75,
+                            ResourceType = 1
+                        });
                 });
 
             modelBuilder.Entity("AptMgmtPortalAPI.Entity.SignedAgreement", b =>
@@ -182,6 +826,98 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                     b.HasKey("SignedAgreementId");
 
                     b.ToTable("SignedAgreements");
+
+                    b.HasData(
+                        new
+                        {
+                            SignedAgreementId = 1,
+                            AgreementId = 1,
+                            EndDate = "2020-05-31 06:59:43.0529101",
+                            SignedDate = "2020-03-02 06:59:43.0466512",
+                            StartDate = "2020-03-02 06:59:43.0466512",
+                            TenantId = 1
+                        },
+                        new
+                        {
+                            SignedAgreementId = 2,
+                            AgreementId = 2,
+                            EndDate = "2020-05-31 06:59:43.0529912",
+                            SignedDate = "2019-12-03 06:59:43.0466512",
+                            StartDate = "2019-12-03 06:59:43.0466512",
+                            TenantId = 2
+                        },
+                        new
+                        {
+                            SignedAgreementId = 3,
+                            AgreementId = 3,
+                            EndDate = "2020-05-31 06:59:43.0529937",
+                            SignedDate = "2019-06-06 06:59:43.0466512",
+                            StartDate = "2019-06-06 06:59:43.0466512",
+                            TenantId = 3
+                        },
+                        new
+                        {
+                            SignedAgreementId = 4,
+                            AgreementId = 1,
+                            EndDate = "2020-05-31 06:59:43.052994",
+                            SignedDate = "2020-03-02 06:59:43.0466512",
+                            StartDate = "2020-03-02 06:59:43.0466512",
+                            TenantId = 4
+                        },
+                        new
+                        {
+                            SignedAgreementId = 5,
+                            AgreementId = 2,
+                            EndDate = "2020-05-31 06:59:43.0529943",
+                            SignedDate = "2019-12-03 06:59:43.0466512",
+                            StartDate = "2019-12-03 06:59:43.0466512",
+                            TenantId = 5
+                        },
+                        new
+                        {
+                            SignedAgreementId = 6,
+                            AgreementId = 3,
+                            EndDate = "2020-05-31 06:59:43.0529945",
+                            SignedDate = "2019-06-06 06:59:43.0466512",
+                            StartDate = "2019-06-06 06:59:43.0466512",
+                            TenantId = 6
+                        },
+                        new
+                        {
+                            SignedAgreementId = 7,
+                            AgreementId = 1,
+                            EndDate = "2020-05-31 06:59:43.0529947",
+                            SignedDate = "2020-03-02 06:59:43.0466512",
+                            StartDate = "2020-03-02 06:59:43.0466512",
+                            TenantId = 7
+                        },
+                        new
+                        {
+                            SignedAgreementId = 8,
+                            AgreementId = 2,
+                            EndDate = "2020-05-31 06:59:43.052995",
+                            SignedDate = "2019-12-03 06:59:43.0466512",
+                            StartDate = "2019-12-03 06:59:43.0466512",
+                            TenantId = 8
+                        },
+                        new
+                        {
+                            SignedAgreementId = 9,
+                            AgreementId = 3,
+                            EndDate = "2020-05-31 06:59:43.0529952",
+                            SignedDate = "2019-06-06 06:59:43.0466512",
+                            StartDate = "2019-06-06 06:59:43.0466512",
+                            TenantId = 9
+                        },
+                        new
+                        {
+                            SignedAgreementId = 10,
+                            AgreementId = 1,
+                            EndDate = "2020-05-31 06:59:43.0529954",
+                            SignedDate = "2020-03-02 06:59:43.0466512",
+                            StartDate = "2020-03-02 06:59:43.0466512",
+                            TenantId = 10
+                        });
                 });
 
             modelBuilder.Entity("AptMgmtPortalAPI.Entity.Tenant", b =>
@@ -209,6 +945,98 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                     b.HasKey("TenantId");
 
                     b.ToTable("Tenants");
+
+                    b.HasData(
+                        new
+                        {
+                            TenantId = 1,
+                            Email = "jayson@gmail.com",
+                            FirstName = "Jayson",
+                            LastName = "Lennon",
+                            PhoneNumber = "555-164-317",
+                            UserId = 3
+                        },
+                        new
+                        {
+                            TenantId = 2,
+                            Email = "david@gmail.com",
+                            FirstName = "David",
+                            LastName = "Sawyer",
+                            PhoneNumber = "555-195-162",
+                            UserId = 4
+                        },
+                        new
+                        {
+                            TenantId = 3,
+                            Email = "michael@gmail.com",
+                            FirstName = "Michael",
+                            LastName = "Walker",
+                            PhoneNumber = "555-115-412",
+                            UserId = 5
+                        },
+                        new
+                        {
+                            TenantId = 4,
+                            Email = "sulav@gmail.com",
+                            FirstName = "Sulav",
+                            LastName = "Aryal",
+                            PhoneNumber = "555-787-595",
+                            UserId = 6
+                        },
+                        new
+                        {
+                            TenantId = 5,
+                            Email = "melvin@gmail.com",
+                            FirstName = "Melvin",
+                            LastName = "Johnson",
+                            PhoneNumber = "555-858-445",
+                            UserId = 7
+                        },
+                        new
+                        {
+                            TenantId = 6,
+                            Email = "deon@gmail.com",
+                            FirstName = "Deon ",
+                            LastName = "Smith",
+                            PhoneNumber = "555-514-298",
+                            UserId = 8
+                        },
+                        new
+                        {
+                            TenantId = 7,
+                            Email = "ruth@gmail.com",
+                            FirstName = "Ruth ",
+                            LastName = "Williams",
+                            PhoneNumber = "555-337-777",
+                            UserId = 9
+                        },
+                        new
+                        {
+                            TenantId = 8,
+                            Email = "frances@gmail.com",
+                            FirstName = "Frances ",
+                            LastName = "Hook",
+                            PhoneNumber = "555-871-503",
+                            UserId = 10
+                        },
+                        new
+                        {
+                            TenantId = 9,
+                            Email = "linda@gmail.com",
+                            FirstName = "Linda",
+                            LastName = "Lopez",
+                            PhoneNumber = "555-607-558",
+                            UserId = 11
+                        },
+                        new
+                        {
+                            TenantId = 10,
+                            Email = "regina@gmail.com",
+                            FirstName = "Regina",
+                            LastName = "McCoy",
+                            PhoneNumber = "555-504-625",
+                            UserId = 12
+                        });
                 });
 
             modelBuilder.Entity("AptMgmtPortalAPI.Entity.TenantResourceUsage", b =>
@@ -234,6 +1062,408 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                     b.HasKey("TenantResourceUsageId");
 
                     b.ToTable("TenantResourceUsages");
+
+                    b.HasData(
+                        new
+                        {
+                            TenantResourceUsageId = 1,
+                            ResourceType = 2,
+                            SampleTime = "2020-05-31 06:59:43.0525686",
+                            TenantId = 1,
+                            UsageAmount = 100.0
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 2,
+                            ResourceType = 0,
+                            SampleTime = "2020-05-31 06:59:43.0526201",
+                            TenantId = 1,
+                            UsageAmount = 50.549999999999997
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 3,
+                            ResourceType = 4,
+                            SampleTime = "2020-05-31 06:59:43.052622",
+                            TenantId = 1,
+                            UsageAmount = 1100.5
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 4,
+                            ResourceType = 3,
+                            SampleTime = "2020-05-31 06:59:43.0526223",
+                            TenantId = 1,
+                            UsageAmount = 15.56
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 5,
+                            ResourceType = 1,
+                            SampleTime = "2020-05-31 06:59:43.0526225",
+                            TenantId = 1,
+                            UsageAmount = 30.329999999999998
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 6,
+                            ResourceType = 2,
+                            SampleTime = "2020-05-31 06:59:43.0526228",
+                            TenantId = 2,
+                            UsageAmount = 100.0
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 7,
+                            ResourceType = 0,
+                            SampleTime = "2020-05-31 06:59:43.052623",
+                            TenantId = 2,
+                            UsageAmount = 50.549999999999997
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 8,
+                            ResourceType = 4,
+                            SampleTime = "2020-05-31 06:59:43.0526232",
+                            TenantId = 2,
+                            UsageAmount = 1100.5
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 9,
+                            ResourceType = 3,
+                            SampleTime = "2020-05-31 06:59:43.0526235",
+                            TenantId = 2,
+                            UsageAmount = 15.56
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 10,
+                            ResourceType = 1,
+                            SampleTime = "2020-05-31 06:59:43.0526237",
+                            TenantId = 2,
+                            UsageAmount = 30.329999999999998
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 11,
+                            ResourceType = 2,
+                            SampleTime = "2020-05-31 06:59:43.0526239",
+                            TenantId = 3,
+                            UsageAmount = 100.0
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 12,
+                            ResourceType = 0,
+                            SampleTime = "2020-05-31 06:59:43.0526242",
+                            TenantId = 3,
+                            UsageAmount = 50.549999999999997
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 13,
+                            ResourceType = 4,
+                            SampleTime = "2020-05-31 06:59:43.0526244",
+                            TenantId = 3,
+                            UsageAmount = 1100.5
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 14,
+                            ResourceType = 3,
+                            SampleTime = "2020-05-31 06:59:43.0526246",
+                            TenantId = 3,
+                            UsageAmount = 15.56
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 15,
+                            ResourceType = 1,
+                            SampleTime = "2020-05-31 06:59:43.0526248",
+                            TenantId = 3,
+                            UsageAmount = 30.329999999999998
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 16,
+                            ResourceType = 2,
+                            SampleTime = "2020-05-31 06:59:43.0526251",
+                            TenantId = 4,
+                            UsageAmount = 100.0
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 17,
+                            ResourceType = 0,
+                            SampleTime = "2020-05-31 06:59:43.0526253",
+                            TenantId = 4,
+                            UsageAmount = 50.549999999999997
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 18,
+                            ResourceType = 4,
+                            SampleTime = "2020-05-31 06:59:43.0526255",
+                            TenantId = 4,
+                            UsageAmount = 1100.5
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 19,
+                            ResourceType = 3,
+                            SampleTime = "2020-05-31 06:59:43.0526258",
+                            TenantId = 4,
+                            UsageAmount = 15.56
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 20,
+                            ResourceType = 1,
+                            SampleTime = "2020-05-31 06:59:43.052626",
+                            TenantId = 4,
+                            UsageAmount = 30.329999999999998
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 21,
+                            ResourceType = 2,
+                            SampleTime = "2020-05-31 06:59:43.0526263",
+                            TenantId = 5,
+                            UsageAmount = 150.0
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 22,
+                            ResourceType = 0,
+                            SampleTime = "2020-05-31 06:59:43.0526265",
+                            TenantId = 5,
+                            UsageAmount = 60.549999999999997
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 23,
+                            ResourceType = 4,
+                            SampleTime = "2020-05-31 06:59:43.0526267",
+                            TenantId = 5,
+                            UsageAmount = 1200.5
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 24,
+                            ResourceType = 3,
+                            SampleTime = "2020-05-31 06:59:43.052627",
+                            TenantId = 5,
+                            UsageAmount = 20.559999999999999
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 25,
+                            ResourceType = 1,
+                            SampleTime = "2020-05-31 06:59:43.0526272",
+                            TenantId = 5,
+                            UsageAmount = 40.329999999999998
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 26,
+                            ResourceType = 2,
+                            SampleTime = "2020-05-31 06:59:43.0526274",
+                            TenantId = 6,
+                            UsageAmount = 150.0
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 27,
+                            ResourceType = 0,
+                            SampleTime = "2020-05-31 06:59:43.0526276",
+                            TenantId = 6,
+                            UsageAmount = 60.549999999999997
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 28,
+                            ResourceType = 4,
+                            SampleTime = "2020-05-31 06:59:43.0526279",
+                            TenantId = 6,
+                            UsageAmount = 1200.5
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 29,
+                            ResourceType = 3,
+                            SampleTime = "2020-05-31 06:59:43.0526281",
+                            TenantId = 6,
+                            UsageAmount = 25.559999999999999
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 30,
+                            ResourceType = 1,
+                            SampleTime = "2020-05-31 06:59:43.0526283",
+                            TenantId = 6,
+                            UsageAmount = 31.329999999999998
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 31,
+                            ResourceType = 2,
+                            SampleTime = "2020-05-31 06:59:43.0526286",
+                            TenantId = 7,
+                            UsageAmount = 100.0
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 32,
+                            ResourceType = 0,
+                            SampleTime = "2020-05-31 06:59:43.0526288",
+                            TenantId = 7,
+                            UsageAmount = 50.549999999999997
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 33,
+                            ResourceType = 4,
+                            SampleTime = "2020-05-31 06:59:43.052629",
+                            TenantId = 7,
+                            UsageAmount = 1100.5
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 34,
+                            ResourceType = 3,
+                            SampleTime = "2020-05-31 06:59:43.0526292",
+                            TenantId = 7,
+                            UsageAmount = 15.56
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 35,
+                            ResourceType = 1,
+                            SampleTime = "2020-05-31 06:59:43.0526295",
+                            TenantId = 7,
+                            UsageAmount = 30.329999999999998
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 36,
+                            ResourceType = 2,
+                            SampleTime = "2020-05-31 06:59:43.0526297",
+                            TenantId = 8,
+                            UsageAmount = 100.0
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 37,
+                            ResourceType = 0,
+                            SampleTime = "2020-05-31 06:59:43.0526299",
+                            TenantId = 8,
+                            UsageAmount = 50.549999999999997
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 38,
+                            ResourceType = 4,
+                            SampleTime = "2020-05-31 06:59:43.0526301",
+                            TenantId = 8,
+                            UsageAmount = 1100.5
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 39,
+                            ResourceType = 3,
+                            SampleTime = "2020-05-31 06:59:43.0526304",
+                            TenantId = 8,
+                            UsageAmount = 15.56
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 40,
+                            ResourceType = 1,
+                            SampleTime = "2020-05-31 06:59:43.0526306",
+                            TenantId = 8,
+                            UsageAmount = 30.329999999999998
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 41,
+                            ResourceType = 2,
+                            SampleTime = "2020-05-31 06:59:43.0526308",
+                            TenantId = 9,
+                            UsageAmount = 100.0
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 42,
+                            ResourceType = 0,
+                            SampleTime = "2020-05-31 06:59:43.052631",
+                            TenantId = 9,
+                            UsageAmount = 50.549999999999997
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 43,
+                            ResourceType = 4,
+                            SampleTime = "2020-05-31 06:59:43.0526313",
+                            TenantId = 9,
+                            UsageAmount = 1100.5
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 44,
+                            ResourceType = 3,
+                            SampleTime = "2020-05-31 06:59:43.0526315",
+                            TenantId = 9,
+                            UsageAmount = 15.56
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 45,
+                            ResourceType = 1,
+                            SampleTime = "2020-05-31 06:59:43.0526317",
+                            TenantId = 9,
+                            UsageAmount = 30.329999999999998
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 46,
+                            ResourceType = 2,
+                            SampleTime = "2020-05-31 06:59:43.052632",
+                            TenantId = 10,
+                            UsageAmount = 100.0
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 47,
+                            ResourceType = 0,
+                            SampleTime = "2020-05-31 06:59:43.0526322",
+                            TenantId = 10,
+                            UsageAmount = 50.549999999999997
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 48,
+                            ResourceType = 4,
+                            SampleTime = "2020-05-31 06:59:43.0526324",
+                            TenantId = 10,
+                            UsageAmount = 1100.5
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 49,
+                            ResourceType = 3,
+                            SampleTime = "2020-05-31 06:59:43.0526327",
+                            TenantId = 10,
+                            UsageAmount = 15.56
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 50,
+                            ResourceType = 1,
+                            SampleTime = "2020-05-31 06:59:43.0526329",
+                            TenantId = 10,
+                            UsageAmount = 30.329999999999998
+                        });
                 });
 
             modelBuilder.Entity("AptMgmtPortalAPI.Entity.Unit", b =>
@@ -256,6 +1486,68 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         .HasFilter("[UnitNumber] IS NOT NULL");
 
                     b.ToTable("Units");
+
+                    b.HasData(
+                        new
+                        {
+                            UnitId = 1,
+                            TenantId = 1,
+                            UnitNumber = "101"
+                        },
+                        new
+                        {
+                            UnitId = 2,
+                            TenantId = 2,
+                            UnitNumber = "102"
+                        },
+                        new
+                        {
+                            UnitId = 3,
+                            TenantId = 3,
+                            UnitNumber = "103"
+                        },
+                        new
+                        {
+                            UnitId = 4,
+                            TenantId = 4,
+                            UnitNumber = "104"
+                        },
+                        new
+                        {
+                            UnitId = 5,
+                            TenantId = 5,
+                            UnitNumber = "105"
+                        },
+                        new
+                        {
+                            UnitId = 6,
+                            TenantId = 6,
+                            UnitNumber = "106"
+                        },
+                        new
+                        {
+                            UnitId = 7,
+                            TenantId = 7,
+                            UnitNumber = "107"
+                        },
+                        new
+                        {
+                            UnitId = 8,
+                            TenantId = 8,
+                            UnitNumber = "108"
+                        },
+                        new
+                        {
+                            UnitId = 9,
+                            TenantId = 9,
+                            UnitNumber = "109"
+                        },
+                        new
+                        {
+                            UnitId = 10,
+                            TenantId = 10,
+                            UnitNumber = "110"
+                        });
                 });
 
             modelBuilder.Entity("AptMgmtPortalAPI.Entity.User", b =>
@@ -281,6 +1573,112 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                     b.HasKey("UserId");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = 1,
+                            ApiKey = "test-key1",
+                            LoginName = "admin",
+                            Password = "password",
+                            UserAccountType = "Admin"
+                        },
+                        new
+                        {
+                            UserId = 2,
+                            ApiKey = "test-key2",
+                            LoginName = "manager",
+                            Password = "password",
+                            UserAccountType = "Manager"
+                        },
+                        new
+                        {
+                            UserId = 3,
+                            ApiKey = "test-key3",
+                            LoginName = "jayson",
+                            Password = "password",
+                            UserAccountType = "Tenant"
+                        },
+                        new
+                        {
+                            UserId = 4,
+                            ApiKey = "test-key4",
+                            LoginName = "david",
+                            Password = "password",
+                            UserAccountType = "Tenant"
+                        },
+                        new
+                        {
+                            UserId = 5,
+                            ApiKey = "test-key5",
+                            LoginName = "michael",
+                            Password = "password",
+                            UserAccountType = "Tenant"
+                        },
+                        new
+                        {
+                            UserId = 6,
+                            ApiKey = "test-key6",
+                            LoginName = "sulav",
+                            Password = "password",
+                            UserAccountType = "Tenant"
+                        },
+                        new
+                        {
+                            UserId = 7,
+                            ApiKey = "test-key7",
+                            LoginName = "melvin",
+                            Password = "password",
+                            UserAccountType = "Tenant"
+                        },
+                        new
+                        {
+                            UserId = 8,
+                            ApiKey = "test-key8",
+                            LoginName = "deon",
+                            Password = "password",
+                            UserAccountType = "Tenant"
+                        },
+                        new
+                        {
+                            UserId = 9,
+                            ApiKey = "test-key9",
+                            LoginName = "ruth",
+                            Password = "password",
+                            UserAccountType = "Tenant"
+                        },
+                        new
+                        {
+                            UserId = 10,
+                            ApiKey = "test-key10",
+                            LoginName = "frances",
+                            Password = "password",
+                            UserAccountType = "Tenant"
+                        },
+                        new
+                        {
+                            UserId = 11,
+                            ApiKey = "test-key11",
+                            LoginName = "linda",
+                            Password = "password",
+                            UserAccountType = "Tenant"
+                        },
+                        new
+                        {
+                            UserId = 12,
+                            ApiKey = "test-key12",
+                            LoginName = "regina",
+                            Password = "password",
+                            UserAccountType = "Tenant"
+                        },
+                        new
+                        {
+                            UserId = 13,
+                            ApiKey = "test-key13",
+                            LoginName = "sulav2",
+                            Password = "password",
+                            UserAccountType = "Tenant"
+                        });
                 });
 #pragma warning restore 612, 618
         }

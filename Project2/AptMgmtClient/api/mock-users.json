@@ -4,13 +4,7 @@
       "id": 1,
       "loginName": "Bobbie",
       "password": "pass",
-      "userAccountType": "manager",
-      "buser": [
-        {
-          "id": 1,
-          "name": "ok"
-        }
-      ]
+      "userAccountType": "manager"
     },
     {
       "id": 2,
