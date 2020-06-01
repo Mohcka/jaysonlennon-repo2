@@ -1,26 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>AptMgmtPortal</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <script src="https://apis.google.com/js/api:client.js"></script>
+    <script src="googleLogin.js"></script>
+  </head>
+  <body>
+    <app-root>Loading...</app-root>
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-  <script src="https://apis.google.com/js/api:client.js"></script>
-  <script src="googleLogin.js"></script>
-</head>
-
-<body>
-  <div class="header">
-    <h1>Project 2</h1>
-    <p>Apartment Property Management</p>
-  </div>
-  <div class="sidenav">
-    <a href="#">Payments</a>
-    <a href="#">Maintenance<br>Requests</a>
-    <a href="#">Lease<br>Agreement</a>
-  </div>
-  <div <!--*ngIf="loggedOut" -->>
+  <!--
+  <div>
     <a href="#modal1" class="button">Login</a>
     <a href="#modal2" class="button">Register</a>
 
@@ -41,6 +37,7 @@
         </form>
       </div>
     </div>
+
     <div id="modal2" class="modal">
       <a href="#">&times;</a>
       <div class="modal-content">
@@ -63,13 +60,12 @@
 
 
   </div>
-  <div <!--*ngIf="loggedIn" -->>
+  <div >
     <p class="logIn">Welcome, {{user}}</p>
   </div>
   <div class="main">
-    <!-- Angular pages go here-->
   </div>
+-->
 
-</body>
-
+  </body>
 </html>

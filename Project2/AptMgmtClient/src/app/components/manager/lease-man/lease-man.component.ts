@@ -1,5 +1,5 @@
+import { Tenant } from './../../../Tenant';
 import { Component, OnInit } from '@angular/core';
-import { Tenant } from '../Tenant';
 @Component({
   selector: 'app-lease-man',
   templateUrl: './lease-man.component.html',
