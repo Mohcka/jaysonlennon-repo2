@@ -20,5 +20,6 @@ namespace AptMgmtPortalAPI.Repository
                                                 DateTime startDate,
                                                 DateTime endDate);
         Task<IEnumerable<Entity.Agreement>> GetAllAgreements();
+        Task<IEnumerable<DataModel.Agreement>> GetAllSignedAgreements();
     }
 }

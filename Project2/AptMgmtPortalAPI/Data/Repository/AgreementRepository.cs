@@ -26,6 +26,24 @@ namespace AptMgmtPortalAPI.Repository
             return await _context.Agreements.Select(a => a).ToListAsync();
         }
 
+        public async Task<IEnumerable<DataModel.Agreement>> GetAllSignedAgreements()
+        {
+            return await _context.SignedAgreements
+                .Join(_context.Agreements,
+                      signedAgreements => signedAgreements.AgreementId,
+                      agreements => agreements.AgreementId,
+                      (sa, a) => new DataModel.Agreement {
+                          AgreementId = sa.AgreementId,
+                          Title = a.Title,
+                          Text = a.Text,
+                          SignedDate = sa.SignedDate,
+                          StartDate = sa.StartDate,
+                          EndDate = sa.EndDate,
+                      })
+                .OrderByDescending(a => a.SignedDate)
+                .ToListAsync();
+        }
+
         public async Task<DataModel.Agreement> GetSignedAgreement(int agreementId)
         {
             return await _context.SignedAgreements

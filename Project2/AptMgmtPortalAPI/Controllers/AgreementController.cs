@@ -46,6 +46,41 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                     .Build();
                     return err;
                 }
+                var allAgreements = await _agreementRepository.GetAllAgreements();
+                return new ObjectResult(allAgreements);
+            }
+            else if (this.UserInRole(Role.Manager) || this.UserInRole(Role.Admin))
+            {
+                var allAgreements = await _agreementRepository.GetAllAgreements();
+                return new ObjectResult(allAgreements);
+            }
+            else
+            {
+                var err = new DTO.ErrorBuilder()
+                                .Message("You are not authorized to view agreements.")
+                                .Code(403)
+                                .Build();
+                return err;
+            }
+        }
+
+        [HttpGet]
+        [Route("Agreements/Signed")]
+        [Authorize(Policy = Policies.AnyLoggedIn)]
+        public async Task<IActionResult> GetSignedAgreements()
+        {
+            if (this.UserInRole(Role.Tenant))
+            {
+                var userId = this.UserIdFromApiKey();
+                var tenantId = await _tenantRepository.TenantIdFromUserId(userId);
+                if (tenantId == null)
+                {
+                    var err = new DTO.ErrorBuilder()
+                                    .Message("You are not a tenant of this property")
+                                    .Code(403)
+                                    .Build();
+                    return err;
+                }
 
                 var agreements = await _agreementRepository.GetSignedAgreements((int)tenantId);
                 var agreementDTOs = agreements.Select(a => new DTO.AgreementDTO(a)).ToList();
@@ -54,7 +89,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
             }
             else if (this.UserInRole(Role.Manager) || this.UserInRole(Role.Admin))
             {
-                var allAgreements = await _agreementRepository.GetAllAgreements();
+                var allAgreements = await _agreementRepository.GetAllSignedAgreements();
                 return new ObjectResult(allAgreements);
             }
             else
