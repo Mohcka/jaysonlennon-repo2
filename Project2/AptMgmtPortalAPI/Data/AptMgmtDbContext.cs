@@ -36,7 +36,12 @@ namespace AptMgmtPortalAPI.Data
             modelBuilder.Entity<Unit>()
                 .HasIndex(u => u.UnitNumber)
                 .IsUnique();
+
+            modelBuilder.Seed();
         }
+
+       
+
     }
 
     public class TestAptMgmtDbContext : AptMgmtDbContext

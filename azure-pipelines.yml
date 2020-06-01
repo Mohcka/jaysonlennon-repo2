@@ -10,25 +10,29 @@ resources:
 - repo: self
 
 stages:
-- stage: Build
+- stage: BuildAPI
   jobs:
   - job: build
     steps:
     - bash: |
-        cd Project2/AptMgmtPortal
-        dotnet build
-    displayName: 'build'
-  - job: publish
+        cd Project2/AptMgmtPortalAPI
+        dotnet publish -c Release -o release
+    - publish: $(System.DefaultWorkingDirectory)/Project2/AptMgmtPortalAPI/release
+      artifact: APIRelease
+
+- stage: BuildClient
+  jobs:
+  - job: build
     steps:
     - bash: |
-        cd Project2/AptMgmtPortal
-        dotnet publish -c Release -o release
-        cd release
-        cp ClientApp/dist/index.html hostingstart.html
-    - publish: $(System.DefaultWorkingDirectory)/Project2/AptMgmtPortal/release
-      artifact: AppRelease
+        cd Project2/AptMgmtClient
+        npm install
+        ./node_modules/@angular/cli/bin/ng build --prod
+        
+    - publish: $(System.DefaultWorkingDirectory)/Project2/AptMgmtClient/dist
+      artifact: ClientRelease
 
-- stage: Test
+- stage: TestAPI
   jobs:
   - job: test
     steps:
@@ -51,25 +55,30 @@ stages:
 
         cd Project2/Tests
         dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+
+        cd ../AptMgmtClient
+        npm install
+        ./node_modules/@angular/cli/bin/ng test --code-coverage --browsers ChromeHeadless --watch false
         cd ..
 
         sonar-scanner \
-        -Dsonar.organization=21192782-9959-441f-9311-e9efbb0a57ef \
-        -Dsonar.projectKey=21192782-9959-441f-9311-e9efbb0a57ef \
-        -Dsonar.sources=. \
-        -Dsonar.host.url=https://sonarcloud.io \
-        -Dsonar.login=fc44ec84e5d6f1c4cb5d7fd7e841a44b544b5076 \
-        -Dsonar.cs.opencover.reportsPaths=Tests/coverage.opencover.xml
+          -Dsonar.organization=21192782-9959-441f-9311-e9efbb0a57ef \
+          -Dsonar.projectKey=21192782-9959-441f-9311-e9efbb0a57ef \
+          -Dsonar.sources=. \
+          -Dsonar.host.url=https://sonarcloud.io \
+          -Dsonar.login=372bcd63227329f7907b72e9f304fcfbc34a3e71 \
+          -Dsonar.cs.opencover.reportsPaths=Tests/coverage.opencover.xml \
+          -Dsonar.javascript.lcov.reportPaths=$(System.DefaultWorkingDirectory)/Project2/AptMgmtClient/coverage/lcov.info
     displayName: 'coverage'
 
-- stage: deploy
+- stage: DeployAPI
   jobs:
   - job: deploy
     steps:
     - task: DownloadPipelineArtifact@2
       inputs:
         buildType: 'current'
-        artifactName: 'AppRelease'
+        artifactName: 'APIRelease'
         targetPath: 'release'
     - task: AzureRmWebAppDeployment@4
       inputs:
@@ -79,4 +88,29 @@ stages:
         WebAppName: 'pipeline-app-jwl'
         packageForLinux: '$(System.DefaultWorkingDirectory)/release'
         RuntimeStack: 'DOTNETCORE|Latest'
-        StartupCommand: 'dotnet AptMgmtPortal.dll'
+        StartupCommand: 'dotnet AptMgmtPortalAPI.dll'
+
+- stage: DeployClient
+  jobs:
+  - job: deploy
+    steps:
+    - task: DownloadPipelineArtifact@2
+      inputs:
+        buildType: 'current'
+        artifactName: 'ClientRelease'
+        targetPath: 'release'
+    - task: FtpUpload@2
+      inputs:
+        credentialsOption: 'inputs'
+        serverUrl: 'ftps://waws-prod-dm1-069.ftp.azurewebsites.windows.net/site/wwwroot'
+        username: 'revp2t3fe\$revp2t3fe'
+        password: 'z7eWeXPgL08JWNfxJsNkXqDKQztodmkjPBEuNllu9FX8uKiyE1Gxd4XHHDpa'
+        rootDirectory: 'release'
+        filePatterns: '**'
+        remoteDirectory: 'site/wwwroot'
+        clean: false
+        cleanContents: false
+        preservePaths: false
+        trustSSL: false
+
+

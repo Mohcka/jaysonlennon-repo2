@@ -1,0 +1,88 @@
+{
+  "tenants": [
+    {
+      "id": 1,
+      "name": "Rosales",
+      "home": {
+        "name": "Sample tenant",
+        "rent": {
+          "DueDate": "2020-06-01",
+          "amount": 1000.0
+        }
+      },
+      "lease": {
+        "id": 1,
+        "signed": "2019-12-17",
+        "begins": "2020-01-01",
+        "ends": "2020-12-13"
+      },
+      "maintenance": {
+        "requests": [
+          {
+            "id": 1,
+            "status": "closed",
+            "reason": "Completed",
+            "date": "2020-05-06",
+            "category": "Plumbing"
+          },
+          {
+            "id": 2,
+            "status": "closed",
+            "reason": "Completed",
+            "date": "2020-05-07",
+            "category": "Broken Item"
+          },
+          {
+            "id": 3,
+            "status": "closed",
+            "reason": "CcanceledByTenant",
+            "date": "2020-05-08",
+            "category": "Other"
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "name": "Sheena",
+      "home": {
+        "name": "Sample tenant",
+        "rent": {
+          "DueDate": "2020-06-01",
+          "amount": 1000.0
+        }
+      },
+      "lease": {
+        "id": 1,
+        "signed": "2019-12-17",
+        "begins": "2020-01-01",
+        "ends": "2020-12-13"
+      },
+      "maintenance": {
+        "requests": [
+          {
+            "id": 1,
+            "status": "closed",
+            "reason": "Completed",
+            "date": "2020-05-06",
+            "category": "Plumbing"
+          },
+          {
+            "id": 2,
+            "status": "closed",
+            "reason": "Completed",
+            "date": "2020-05-07",
+            "category": "Broken Item"
+          },
+          {
+            "id": 3,
+            "status": "closed",
+            "reason": "CcanceledByTenant",
+            "date": "2020-05-08",
+            "category": "Other"
+          }
+        ]
+      }
+    }
+  ]
+}
