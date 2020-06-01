@@ -1,14 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>AptMgmtPortal</title>
-    <base href="/" />
+<html>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  </head>
-  <body>
-    <app-root>Loading...</app-root>
-  </body>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+  <script src="https://apis.google.com/js/api:client.js"></script>
+  <script src="googleLogin.js"></script>
+</head>
+
+<body>
+  <div class="header">
+    <h1>Project 2</h1>
+    <p>Apartment Property Management</p>
+  </div>
+  <div class="sidenav">
+    <a href="#">Payments</a>
+    <a href="#">Maintenance<br>Requests</a>
+    <a href="#">Lease<br>Agreement</a>
+  </div>
+  <div <!--*ngIf="loggedOut" -->>
+    <a href="#modal1" class="button">Login</a>
+    <a href="#modal2" class="button">Register</a>
+
+    <div id="modal1" class="modal">
+      <a href="#">&times;</a>
+      <div class="modal-content">
+        <form>
+          <h3>Log into your account</h3>
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+          <button type="submit">Login</button>
+          <div id="customBtn" class="customGPlusSignIn">
+            <span class="icon"></span>
+            <span class="buttonText">Sign in with Google</span>
+          </div> 
+        </form>
+      </div>
+    </div>
+    <div id="modal2" class="modal">
+      <a href="#">&times;</a>
+      <div class="modal-content">
+        <form>
+          <H3>Register an account</h3>
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+          <label for="psw"><b>Enter Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+          <label for="psw"><b>Confirm Password</b></label>
+          <input type="password" placeholder="Confirm Password" name="psw" required>
+          <button type="submit">Register</button>
+          <div id="customBtn" class="customGPlusSignIn">
+            <span class="icon"></span>
+            <span class="buttonText">Sign up with Google</span>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+  </div>
+  <div <!--*ngIf="loggedIn" -->>
+    <p class="logIn">Welcome, {{user}}</p>
+  </div>
+  <div class="main">
+    <!-- Angular pages go here-->
+  </div>
+
+</body>
+
 </html>
