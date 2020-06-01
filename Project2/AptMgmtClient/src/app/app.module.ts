@@ -23,9 +23,18 @@ import { ResourceEnumPipe } from './helpers/resource-enum-pipe';
 
 import { environment } from './../environments/environment';
 
+//import { LeaseTenComponent } from './components/tenant/lease-ten/lease-ten.component';
+//import { MaintenanceTenComponent } from './components/tenant/maintenance-ten/maintenance-ten.component';
+import { PaymentTenComponent } from './components/tenant/payment-ten/payment-ten.component';
+//import { LeaseManComponent } from './components/manager/lease-man/lease-man.component';
+//import { MaintenanceManComponent } from './components/manager/maintenance-man/maintenance-man.component';
+import { PaymentManComponent } from './components/manager/payment-man/payment-man.component';
+
 // Used in development builds only
 import { InMemoryDataService } from './services/in-memory-data.service';
 import { fakeAuthBackendProvider } from './helpers/fake-auth-backend.interceptor';
+import { LeaseViewComponent } from './lease-view/lease-view.component';
+import { LeaseAddComponent } from './lease-add/lease-add.component';
 
 // Uses mock api when under development, replaced with a blank module in
 // production
@@ -57,6 +66,14 @@ if (process.env.NODE_ENV === 'development' && environment.memoryApi === true) {
     MaintenanceRequestsComponent,
     LoginComponent,
     ResourceEnumPipe,
+    //LeaseTenComponent,
+    //MaintenanceTenComponent,
+    PaymentTenComponent,
+    //LeaseManComponent,
+    //MaintenanceManComponent,
+    PaymentManComponent,
+    LeaseViewComponent,
+    LeaseAddComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
