@@ -5,6 +5,7 @@ namespace AptMgmtPortalAPI.Util.Auth
         public const string OnlyTenants = "OnlyTenants";
         public const string OnlyManagers = "OnlyManagers";
         public const string OnlyAdmins = "OnlyAdmins";
+        public const string AnyLoggedIn = "AnyLoggedIn";
     }
 
 }
