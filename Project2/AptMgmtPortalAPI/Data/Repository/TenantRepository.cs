@@ -359,29 +359,6 @@ namespace AptMgmtPortalAPI.Repository
             return await GetBills(tenantId, billingPeriod);
         }
 
-        /// <summary>
-        /// Retrieves tenant Agreements.
-        /// </summary>
-        /// <param name="tenantId">Tenant ID from which to get agreements.</param>
-        /// <returns></returns>
-        public async Task<IEnumerable<DataModel.Agreement>> GetAgreements(int tenantId)
-        {
-            return await _context.SignedAgreements
-                .Where(s => s.TenantId == tenantId)
-                .Join(_context.Agreements,
-                      signedAgreements => signedAgreements.AgreementId,
-                      agreements => agreements.AgreementId,
-                      (sa, a) => new DataModel.Agreement {
-                          AgreementId = sa.AgreementId,
-                          Title = a.Title,
-                          Text = a.Text,
-                          SignedDate = sa.SignedDate,
-                          StartDate = sa.StartDate,
-                          EndDate = sa.EndDate,
-                      })
-                .OrderByDescending(a => a.SignedDate)
-                .ToListAsync();
-        }
 
         public async Task<IEnumerable<Tenant>> FindTenantWithFirstName(string firstName)
         {
@@ -392,55 +369,6 @@ namespace AptMgmtPortalAPI.Repository
                         .Where(t => t.FirstName.ToLower().Contains(firstName))
                         .Select(t => t)
                         .ToListAsync();
-        }
-
-        /// <summary>
-        /// Returns agreements, excluding the agreement text.
-        /// </summary>
-        /// <param name="tenantId">Tenant ID from which to retrieve the agreements.</param>
-        /// <returns></returns>
-        public async Task<IEnumerable<AgreementSummary>> GetAgreementSummaries(int tenantId)
-        {
-            return await _context.SignedAgreements
-                .Where(s => s.TenantId == tenantId)
-                .Join(_context.Agreements,
-                      signedAgreements => signedAgreements.AgreementId,
-                      agreements => agreements.AgreementId,
-                      (sa, a) => new DataModel.AgreementSummary {
-                          AgreementId = sa.AgreementId,
-                          Title = a.Title,
-                          SignedDate = sa.SignedDate,
-                          StartDate = sa.StartDate,
-                          EndDate = sa.EndDate,
-                      })
-                .OrderByDescending(a => a.SignedDate)
-                .ToListAsync();
-        }
-
-        public async Task<DataModel.Agreement> SignAgreement(int tenantId, int agreementId, DateTime startDate, DateTime endDate)
-        {
-            var agreement = await _context.Agreements
-                .Where(a => a.AgreementId == agreementId)
-                .FirstOrDefaultAsync();
-
-            var signedAgreement = new SignedAgreement();
-            signedAgreement.TenantId = tenantId;
-            signedAgreement.AgreementId = agreementId;
-            signedAgreement.SignedDate = DateTime.Now;
-            signedAgreement.StartDate = startDate;
-            signedAgreement.EndDate = endDate;
-
-            _context.Add(signedAgreement);
-            await _context.SaveChangesAsync();
-
-            return new DataModel.Agreement {
-                AgreementId = signedAgreement.AgreementId,
-                Title = agreement.Title,
-                Text = agreement.Text,
-                SignedDate = signedAgreement.SignedDate,
-                StartDate = signedAgreement.StartDate,
-                EndDate = signedAgreement.EndDate,
-            };
         }
 
         public async Task<IEnumerable<MaintenanceRequest>> GetMaintenanceRequests(int userId, int limit)
