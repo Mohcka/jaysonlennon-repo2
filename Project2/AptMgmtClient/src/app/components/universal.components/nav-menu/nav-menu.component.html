@@ -4,7 +4,7 @@
 </div>
 <div class="sidenav">
   <a [routerLink]="['/hub']">RouteHub</a>
-  <a [routerLink]="['/']">Home</a>
+  <a (click)="goHome()">Home</a>
   <a>Payments</a>
   <a *ngIf="isTenant" [routerLink]="['/maintenance-requests']">
     Maintenance<br />Requests

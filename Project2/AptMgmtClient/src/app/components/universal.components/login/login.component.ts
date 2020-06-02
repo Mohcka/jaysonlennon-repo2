@@ -70,7 +70,15 @@ export class LoginComponent implements OnInit {
       .pipe(first()) // emits the first value recieved
       .subscribe(
         (_data) => {
-          this.router.navigate([this.returnUrl]);
+          let returnUrl = this.returnUrl;
+          if (returnUrl) {
+            if (this.returnUrl === '' || this.returnUrl === '/') {
+              returnUrl = this.authenticationService.getHomeRoute();
+            }
+          } else {
+              returnUrl = this.authenticationService.getHomeRoute();
+          }
+          this.router.navigate([returnUrl]);
         },
         (error: HttpErrorResponse) => {
           this.error = JSON.stringify(error);
