@@ -50,7 +50,7 @@ namespace AptMgmtPortalAPI.Repository
         {
             return await _context.MaintenanceRequests
                 .Where(r => r.UnitNumber.ToLower() == unitNumber.ToLower())
-                .Where(r => r.TimeClosed != null)
+                .Where(r => r.TimeClosed == null)
                 .ToListAsync();
         }
 

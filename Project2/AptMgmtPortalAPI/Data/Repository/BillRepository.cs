@@ -308,5 +308,6 @@ namespace AptMgmtPortalAPI.Repository
                 .Select(r => r)
                 .ToListAsync();
         }
+
     }
 }
