@@ -1,3 +1,4 @@
+import { TenantListBillsComponent } from './components/tenant.components/tenant-list-bills/tenant-list-bills.component';
 import { UnauthorizedAccessComponent } from './components/universal.components/unauthorized-access/unauthorized-access.component';
 import { UserAccountType } from './../enums/user-account-type';
 import { ManagerHomeComponent } from './components/manager.components/manager-home/manager-home.component';
@@ -31,6 +32,9 @@ const routes: Routes = [
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },
 
   { path: 'tenant/maintenance/list', component: MaintenanceRequestsComponent,
+    canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },
+
+  { path: 'tenant/bill/list', component: TenantListBillsComponent,
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },
 
   // Managers
