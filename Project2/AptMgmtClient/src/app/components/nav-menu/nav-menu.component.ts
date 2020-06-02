@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import { Router } from '@angular/router';
 import { User } from 'src/app/model/user';
-import { UserAccountType } from 'src/app/model/user-account-type';
+import { UserAccountType } from 'src/enums/user-account-type';
 
 @Component({
   selector: 'app-nav-menu',
@@ -30,7 +30,7 @@ export class NavMenuComponent implements OnInit {
   get isManager(): boolean {
     return (
       this.currentUser &&
-      this.currentUser.userAccountType === UserAccountType.Manager
+      Number(this.currentUser.userAccountType) === UserAccountType.Manager
     );
   }
 

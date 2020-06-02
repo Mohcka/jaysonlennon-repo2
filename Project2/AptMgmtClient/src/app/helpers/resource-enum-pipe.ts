@@ -1,6 +1,6 @@
 // https://dzone.com/articles/why-we-shound-not-use-function-inside-angular-temp
 import { Pipe, PipeTransform } from '@angular/core';
-import { Resource } from 'src/types/Resource';
+import { Resource } from 'src/enums/Resource';
 
 @Pipe({
   name: 'resourceAsString',

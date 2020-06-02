@@ -1,0 +1,14 @@
+<h1>Manager maintenance request page</h1>
+<div *ngFor="let request of maintenanceRequests">
+  <div>id: {{request.maintenanceRequestId}}</div>
+  <div>open: {{request.timeOpened}}</div>
+  <div>close: {{request.timeClosed}}</div>
+  <div>open by: {{request.openedBy}}</div>
+  <div>close by: {{request.closedBy}}</div>
+  <div>type: {{request.maintenanceRequestType}}</div>
+  <div>close reason: {{request.closeReason | maintenanceCloseReasonAsString }}</div>
+  <div>open notes: {{request.openNotes}}</div>
+  <div>resolution notes: {{request.resolutionNotes}}</div>
+  <div>unit number: {{request.unitNumber}}</div>
+  <hr>
+</div>

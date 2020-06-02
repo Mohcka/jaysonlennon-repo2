@@ -4,6 +4,7 @@ namespace AptMgmtPortalAPI.DTO
 {
     public class TenantInfoDTO
     {
+        public int TenantId { get; set; }
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
         public string FirstName { get; set; }
@@ -12,6 +13,7 @@ namespace AptMgmtPortalAPI.DTO
         public TenantInfoDTO() {}
 
         public TenantInfoDTO(Entity.Tenant tenant, string unitNumber) {
+            this.TenantId = tenant.TenantId;
             this.PhoneNumber = tenant.PhoneNumber;
             this.Email = tenant.Email;
             this.FirstName = tenant.FirstName;
