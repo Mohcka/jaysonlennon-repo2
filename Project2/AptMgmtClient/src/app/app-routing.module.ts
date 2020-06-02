@@ -3,8 +3,6 @@ import { ManagerGuard } from './guard/manager.guard';
 import { ManagerMaintenanceRequestListComponent } from './components/manager/manager-maintenance-request-list/manager-maintenance-request-list.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CounterComponent } from './components/counter/counter.component';
-import { FetchDataComponent } from './components/fetch-data/fetch-data.component';
 import { HomeComponent } from './components/home/home.component';
 import { MaintenanceRequestsComponent } from './components/maintenance/maintenance-requests/maintenance-requests.component';
 import { TenantDetailsComponent } from './components/tenant.components/tenant-details/tenant-details.component';
@@ -27,8 +25,6 @@ import { PaymentManComponent } from './components/manager/payment-man/payment-ma
 const routes: Routes = [
   { path: 'hub', component: RouterHubComponent },
   { path: '', component: HomeComponent, pathMatch: 'full' },
-  { path: 'counter', component: CounterComponent },
-  { path: 'fetch-data', component: FetchDataComponent },
   // * Auth
   { path: 'login', component: LoginComponent },
   // * Tenants

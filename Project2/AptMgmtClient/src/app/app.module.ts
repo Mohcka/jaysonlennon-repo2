@@ -8,8 +8,6 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CounterComponent } from './components/counter/counter.component';
-import { FetchDataComponent } from './components/fetch-data/fetch-data.component';
 import { HomeComponent } from './components/home/home.component';
 import { MaintenanceRequestsComponent } from './components/maintenance/maintenance-requests/maintenance-requests.component';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
@@ -45,8 +43,6 @@ import { RouterHubComponent } from './components/router-hub/router-hub.component
     AppComponent,
     NavMenuComponent,
     HomeComponent,
-    CounterComponent,
-    FetchDataComponent,
     TenantsComponent,
     TenantDetailsComponent,
     MaintenanceRequestsComponent,
