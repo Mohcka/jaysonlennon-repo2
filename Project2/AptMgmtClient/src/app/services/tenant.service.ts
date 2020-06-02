@@ -19,31 +19,6 @@ export class TenantService extends GenericRest<Tenant> {
   }
 
   /**
-   * Processes a payment request on behalf of the tenant
-   * @param id Id of the tenant making rent payment request
-   */
-  registerPayment(id: number, data: PayBillData): Observable<any> {
-    return this.http
-      .post<Tenant[]>(
-        // TODO: send expected data when api is setup
-        `${this.apiUrl}/${id}/rent`,
-        data,
-        this.httpOptions
-      )
-      .pipe(catchError(handleError<Tenant>('registerTenantPayment')));
-  }
-
-  /**
-   * Sends a request to the server for a tenant to make a payment
-   * @param billData Data the server expects to process the payment
-   */
-  payBill(billData: PayBillData): Observable<any> {
-    return this.http
-      .post<any>(`${this.apiUrl}/bill`, billData, this.httpOptions)
-      .pipe(catchError(handleError<PayBillData>('tenantPayBill')));
-  }
-
-  /**
    * Posts a maintenance request for the server to process
    * @param id The id of the tenant making the request
    */
