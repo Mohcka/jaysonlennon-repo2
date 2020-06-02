@@ -1,5 +1,8 @@
 import { Tenant } from './../../../Tenant';
 import { Component, OnInit } from '@angular/core';
+import { LeaseViewComponent } from './../lease-view/lease-view.component';
+import { LeaseAddComponent } from './../lease-add/lease-add.component';
+
 @Component({
   selector: 'app-lease-man',
   templateUrl: './lease-man.component.html',

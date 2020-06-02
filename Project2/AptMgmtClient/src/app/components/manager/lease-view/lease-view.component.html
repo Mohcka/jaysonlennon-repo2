@@ -1,0 +1,14 @@
+<h3>View Lease Agreements</h3>
+        <table id="leases">
+            <tr>
+                <th *ngFor = "let column of headers">
+                    {{column}}
+                </th>
+            </tr>
+            <tr *ngFor = "let row of rows">
+                <!--There will need to be some sort of logic to determine which leases are expiring soon and highlight them.-->
+                <td *ngFor = "let column of headers">
+                    {{row[column]}}
+                </td>
+            </tr>
+        </table>

@@ -1,0 +1,45 @@
+<form class="container" [formGroup]="myForm" (ngSubmit)="update()">
+    <h1>Add New Tenant</h1>
+    <label for="name"><b>Tenant Name</b></label>
+    <input type="text" placeholder="Tenant Name" name="name" required
+             id="name"
+            >
+    <div [hidden]="name.valid || name.pristine"
+    class="alert alert-danger">
+    Name is required
+    </div>
+    <label for="apt"><b>Apartment:</b></label>
+    <select name="apart" id="apart"
+        required
+         name="apt">
+        <option *ngFor="let apart of apt" [value]="apt">{{apt}}/option>
+    </select>
+    <label for="rent"><b>Monthly Rent</b></label>
+    <span class="currencyinput">$<input type="text" id="rent" name="rent" required
+        ></span>
+        <div [hidden]="rent.valid || rent.pristine"
+         class="alert alert-danger">
+      Rent is required
+    </div>
+    <div class="container">
+        <div>
+            <label for="start"><b>Lease Start:</b></label>
+            <input type="date" id="start" name="start" required
+            >
+            <div [hidden]="name.valid || name.pristine"
+         class="alert alert-danger">
+      Start date is required
+    </div>
+        </div>
+        <div>
+            <label for="end"><b>Lease End:</b></label>
+            <input type="date" id="end" name="end" required
+            >
+            <div [hidden]="name.valid || name.pristine"
+         class="alert alert-danger">
+      End date is required
+    </div>
+        </div>
+    </div>
+    <button type="submit">Add Tenant</button>
+  </form>
