@@ -18,24 +18,21 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
     {
         private readonly ILogger<MaintenanceController> _logger;
         private readonly Repository.ITenant _tenantRepository;
-        private readonly Repository.IMisc _miscRepository;
         private readonly Repository.IUser _userRepository;
         private readonly Repository.IMaintenance _maintenanceRepository;
 
         public MaintenanceController(ILogger<MaintenanceController> logger,
                               Repository.ITenant tenantRepository,
-                              Repository.IMisc miscRepository,
                               Repository.IUser userRepository,
                               Repository.IMaintenance maintenanceRepository)
         {
             this._logger = logger;
             this._tenantRepository = tenantRepository;
-            this._miscRepository = miscRepository;
             this._userRepository = userRepository;
             this._maintenanceRepository = maintenanceRepository;
         }
 
-        private async Task<List<DTO.MaintenanceRequestDTO>> FlattenRequests(IEnumerable<Entity.MaintenanceRequest> requests)
+        private async Task<List<DTO.MaintenanceRequestDTO>> MakeDTORequests(IEnumerable<Entity.MaintenanceRequest> requests)
         {
             var flatRequests = new List<DTO.MaintenanceRequestDTO>();
 
@@ -75,15 +72,15 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                 }
 
                 var requests = await _maintenanceRepository.GetMaintenanceRequests(unitNumber);
-                var flatRequests = await FlattenRequests(requests);
-                return new ObjectResult(flatRequests);
+                var requestDTOs = await MakeDTORequests(requests);
+                return new ObjectResult(requestDTOs);
 
             }
             else if (this.UserInRole(Role.Manager) || this.UserInRole(Role.Admin))
             {
                 var requests = await _maintenanceRepository.GetMaintenanceRequests();
-                var flatRequests = await FlattenRequests(requests);
-                return new ObjectResult(flatRequests);
+                var requestDTOs = await MakeDTORequests(requests);
+                return new ObjectResult(requestDTOs);
             }
             else
             {
