@@ -1,3 +1,4 @@
+import { RouterHubComponent } from './components/router-hub/router-hub.component';
 import { ManagerGuard } from './guard/manager.guard';
 import { ManagerMaintenanceRequestListComponent } from './components/manager/manager-maintenance-request-list/manager-maintenance-request-list.component';
 import { NgModule } from '@angular/core';
@@ -24,6 +25,7 @@ import { PaymentManComponent } from './components/manager/payment-man/payment-ma
 
 // Define routes for the application
 const routes: Routes = [
+  { path: 'hub', component: RouterHubComponent },
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'counter', component: CounterComponent },
   { path: 'fetch-data', component: FetchDataComponent },

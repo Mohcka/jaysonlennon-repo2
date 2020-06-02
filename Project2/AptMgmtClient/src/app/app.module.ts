@@ -38,6 +38,7 @@ import { ManagerComponent } from './components/manager.components/manager/manage
 import { ManagerMaintenanceRequestListComponent } from './components/manager/manager-maintenance-request-list/manager-maintenance-request-list.component';
 import { LeaseViewComponent } from './components/manager/lease-view/lease-view.component';
 import { LeaseAddComponent } from './components/manager/lease-add/lease-add.component';
+import { RouterHubComponent } from './components/router-hub/router-hub.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { LeaseAddComponent } from './components/manager/lease-add/lease-add.comp
     //MaintenanceManComponent,
     PaymentManComponent,
     LeaseViewComponent,
-    LeaseAddComponent
+    LeaseAddComponent,
+    RouterHubComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

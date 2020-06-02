@@ -3,6 +3,7 @@
   <p>Apartment Property Management</p>
 </div>
 <div class="sidenav">
+  <a [routerLink]="['/hub']">RouteHub</a>
   <a [routerLink]="['/']">Home</a>
   <a>Payments</a>
   <a *ngIf="isTenant" [routerLink]="['/maintenance-requests']">
