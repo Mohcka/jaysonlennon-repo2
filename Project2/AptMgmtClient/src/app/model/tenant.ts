@@ -1,8 +1,8 @@
 export interface Tenant {
-  id: number;
-  phoneNumber: string;
-  email: string;
-  firstName: string;
-  lastName: string;
-  userId: number | null;
+  tenantId: number;
+  phoneNumber: string | null;
+  email: string | null;
+  firstName: string | null;
+  lastName: string | null;
+  unitNumber: string | null;
 }

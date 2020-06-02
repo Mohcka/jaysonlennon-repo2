@@ -7,9 +7,9 @@ import { Bill } from 'src/app/model/bill';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import { BillService } from 'src/app/services/bill.service';
 import { MaintenanceService } from 'src/app/services/maintenance.service';
-import { MaintenanceRequest } from 'src/app/model/maintenance';
 import { Agreement } from 'src/app/model/agreement';
 import { AgreementService } from 'src/app/services/agreement.service';
+import { MaintenanceRequest } from 'src/app/model/maintenance-request';
 
 @Component({
   selector: 'app-home',
@@ -65,7 +65,7 @@ export class TenantHomeComponent implements OnInit {
     this.billService
       .payBill({
         // Signed in user should be tenant
-        tenantId: this.authService.currentUserValue.id,
+        tenantId: this.authService.currentUserValue.userId,
         resource: resource,
         billingPeriodId: billingPeriodId,
         amount: amount,

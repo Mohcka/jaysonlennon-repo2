@@ -1,19 +1,14 @@
-export enum MaintenanceCloseReason {
-  Completed,
-  CanceledByManagement,
-  CanceledByTenant
-}
+import { MaintenanceCloseReason } from 'src/enums/maintenance-close-reason';
 
 export interface MaintenanceRequest {
   maintenanceRequestId: number;
-  timeOpened: string;
-  timeClosed: string | null;
-  openingUserId: number;
-  closingUserId: number | null;
+  timeOpened: Date;
+  timeClosed: Date | null;
+  openedBy: string;
+  closedBY: string | null;
   maintenanceRequestType: string;
   closeReason: MaintenanceCloseReason | null;
   openNotes: string;
-  resolutionNotes: string;
-  internalNotes: string;
+  resolutionNotes: string | null;
   unitNumber: string;
 }

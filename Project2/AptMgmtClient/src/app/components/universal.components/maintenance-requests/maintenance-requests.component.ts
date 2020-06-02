@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MaintenanceRequest } from 'src/app/model/maintenance';
 import { MaintenanceService } from 'src/app/services/maintenance.service';
+import { MaintenanceRequest } from 'src/app/model/maintenance-request';
 
 @Component({
   selector: 'app-maintenance-requests',

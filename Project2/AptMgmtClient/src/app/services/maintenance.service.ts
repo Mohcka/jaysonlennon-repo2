@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { MaintenanceRequest } from '../model/maintenance';
 import { GenericRest } from './generic-rest.service';
 import { ApiBase } from '../../ApiBase';
 import { MaintenanceRequestData } from '../model/maintenance-request-data';
