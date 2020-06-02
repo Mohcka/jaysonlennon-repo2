@@ -29,8 +29,8 @@ namespace AptMgmtPortalAPI
             services.AddControllersWithViews();
 
             services.AddDbContext<AptMgmtDbContext>(options => options
-                // .UseSqlServer(Configuration.GetConnectionString("AptMgmtDbContext")));
-                .UseSqlite("Filename=app.sqlite"));
+                .UseSqlServer(Configuration.GetConnectionString("AptMgmtDbContext")));
+                //.UseSqlite("Filename=app.sqlite"));
 
             services.AddLogging(logger => 
             {
