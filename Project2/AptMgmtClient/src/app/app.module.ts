@@ -20,12 +20,14 @@ import { ErrorInterceptor } from './helpers/error.interceptor';
 import { LoginComponent } from './components/login/login.component';
 
 import { ResourceEnumPipe } from './helpers/resource-enum-pipe';
+import { MaintenanceCloseReasonEnumPipe } from './helpers/maintenance-close-reason-pipe';
 
 import { environment } from './../environments/environment';
 
 // Used in development builds only
 import { InMemoryDataService } from './services/in-memory-data.service';
 import { fakeAuthBackendProvider } from './helpers/fake-auth-backend.interceptor';
+import { ManagerMaintenanceRequestListComponent } from './components/manager/manager-maintenance-request-list/manager-maintenance-request-list.component';
 
 // Uses mock api when under development, replaced with a blank module in
 // production
@@ -57,6 +59,8 @@ if (process.env.NODE_ENV === 'development' && environment.memoryApi === true) {
     MaintenanceRequestsComponent,
     LoginComponent,
     ResourceEnumPipe,
+    MaintenanceCloseReasonEnumPipe,
+    ManagerMaintenanceRequestListComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

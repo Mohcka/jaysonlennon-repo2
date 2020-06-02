@@ -1,26 +1,23 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Maintenance } from '../model/maintenance';
-import { GenericRest } from './generic-rest.service';
+import { MaintenanceRequest } from '../model/maintenance-request';
 import { ApiBase } from '../../ApiBase';
+import { Observable } from 'rxjs';
+import { handleError } from 'src/utils/error-handling';
+import { catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
 })
-export class MaintenanceService extends GenericRest<Maintenance> {
-  constructor(protected http: HttpClient) {
-    super(http, ApiBase.url() + 'maintenance');
-  }
+export class MaintenanceService {
 
-  // public getMaintenaceRequests(): Observable<Maintenance[]> {
-  //   return this.http
-  //     .get<Maintenance[]>(this.maintenanceUrl)
-  //     .pipe(catchError(handleError('getMaintenaceRequets', [])));
-  // }
+  private apiUrl = ApiBase.url() + 'Maintenance';
 
-  // public getTenant(id: number): Observable<Maintenance> {
-  //   return this.http
-  //     .get<Maintenance>(`${this.maintenanceUrl}/${id}`)
-  //     .pipe(catchError(handleError<Maintenance>('getTenant', undefined)));
-  // }
+  constructor(protected http: HttpClient) { }
+
+   public getAll(): Observable<MaintenanceRequest[]> {
+     return this.http
+       .get<MaintenanceRequest[]>(this.apiUrl)
+       .pipe(catchError(handleError('getMaintenanceRequests', [])));
+   }
 }

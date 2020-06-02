@@ -1,3 +1,5 @@
+import { ManagerGuard } from './guard/manager.guard';
+import { ManagerMaintenanceRequestListComponent } from './components/manager/manager-maintenance-request-list/manager-maintenance-request-list.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CounterComponent } from './components/counter/counter.component';
@@ -21,6 +23,7 @@ const routes: Routes = [
   { path: 'tenant-detail/:id', component: TenantDetailsComponent },
   // * Maintenance
   { path: 'maintenance-requests', component: MaintenanceRequestsComponent, canActivate: [AuthGuard] },
+  { path: 'manager/maintenance-requests', component: ManagerMaintenanceRequestListComponent, canActivate: [ManagerGuard]}
 ];
 
 @NgModule({

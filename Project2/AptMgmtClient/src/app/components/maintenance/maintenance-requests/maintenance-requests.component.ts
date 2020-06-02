@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Maintenance } from 'src/app/model/maintenance';
+import { MaintenanceRequest } from 'src/app/model/maintenance-request';
 import { MaintenanceService } from 'src/app/services/maintenance.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { MaintenanceService } from 'src/app/services/maintenance.service';
   styleUrls: ['./maintenance-requests.component.css']
 })
 export class MaintenanceRequestsComponent implements OnInit {
-  public maintenanceRequests: Maintenance[];
+  public maintenanceRequests: MaintenanceRequest[];
   constructor(private maintenanceService: MaintenanceService) { }
 
   ngOnInit() {
