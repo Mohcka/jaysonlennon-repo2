@@ -13,15 +13,17 @@ namespace AptMgmtPortalAPI.Repository
     public interface ITenant
     {
         Task<IEnumerable<Tenant>> FindTenantWithFirstName(string firstName);
-        Task<Tenant> AddTenant(TenantInfo info);
+        Task<DTO.TenantInfoDTO> AddTenant(DTO.TenantInfoDTO info);
         Task<Tenant> TenantFromId(int tenantId);
         Task<Tenant> TenantFromUserId(int userId);
         Task<int?> TenantIdFromUserId(int userId);
 
-        Task<bool> EditPersonalInfo(int tenantId, TenantInfo info);
+        Task<Unit> UnitFromTenantId(int tenantId);
+        Task<Unit> AssignToUnit(int tenantId, string unitNumber);
+        Task<Unit> QueryUnit(int unitId);
+        Task<Unit> QueryUnitByNumber(string unitNumber);
+        Task<DTO.TenantInfoDTO> UpdateTenantInfo(int tenantId, DTO.TenantInfoDTO newInfo);
 
-        Task<string> GetUnitNumber(int tenantId);
-
-        Task<Tenant> UpdateTenantInfo(int tenantId, DTO.TenantInfoDTO newInfo);
+        Task<IEnumerable<Tenant>> GetTenants();
     }
 }

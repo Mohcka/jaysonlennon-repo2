@@ -11,7 +11,7 @@ import { mergeMap } from 'rxjs/operators';
 
 import { User } from '../model/user';
 import * as mockUsers from 'api/mock-users.json';
-import { UserAccountType } from '../model/user-account-type';
+import { UserAccountType } from '../../enums/user-account-type';
 import { Injectable } from '@angular/core';
 
 @Injectable()

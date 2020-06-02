@@ -43,69 +43,70 @@ namespace TestAptMgmtPortal
             }
         }
 
-//        [Fact]
-//        public async void CancelsMaintenanceRequest()
-//        {
-//            var options = TestUtil.GetMemDbOptions("CancelsMaintenanceRequest");
-//
-//            var unitNumber = "test unit";
-//            User user;
-//            Tenant tenant;
-//            MaintenanceRequest maintRequest;
-//            Unit unit;
-//
-//            using (var db = new AptMgmtDbContext(options))
-//            {
-//                user = TestUtil.NewUser(db);
-//                var maintenanceRepo = (IMaintenance)new MaintenanceRepository(db);
-//
-//                var requestData = new AptMgmtPortalAPI.DataModel.MaintenanceRequestModel();
-//                requestData.OpenNotes = "notes";
-//                requestData.UnitNumber = unitNumber;
-//                requestData.MaintenanceRequestType = MaintenanceRequestType.Plumbing;
-//
-//                maintRequest = await maintenanceRepo.OpenMaintenanceRequest(user.UserId,, requestData);
-//
-//                tenant = TestUtil.NewTenant(db);
-//                tenant.UserId = user.UserId;
-//                db.SaveChanges();
-//
-//                // Maintenance requests are assigned to units, but may be opened by any user of
-//                // the application. This means the occupying tenant may open a maintenance request,
-//                // but only if they have a UserId, and a Manager may also open a maintenance request
-//                // on behalf of a Tenant of User.
-//                //
-//                // In order to cancel a maintenance request, we must have a way to determine if
-//                // the User is indeed the Tenant of the request. This is accomplished by checking
-//                // if the user is occupying the unit, and if so, they will be permitted to cancel
-//                // the request.
-//                var managerRepo = (IManager)new ManagerRepository(db);
-//                unit = TestUtil.NewUnit(db, unitNumber);
-//                await managerRepo.AssignTenantToUnit(tenant.TenantId, unitNumber);
-//            }
-//
-//            using (var db = new AptMgmtDbContext(options))
-//            {
-//                var repo = (ITenant)new TenantRepository(db);
-//                var canceled = await repo.CancelMaintenanceRequest(user.UserId,
-//                                                                   maintRequest.MaintenanceRequestId,
-//                                                                   "test cancel");
-//                Assert.True(canceled);
-//                var requests = await repo.GetOutstandingMaintenanceRequests(user.UserId);
-//                Assert.Empty(requests);
-//            }
-//        }
+        [Fact]
+        public async void CancelsMaintenanceRequest()
+        {
+            var options = TestUtil.GetMemDbOptions("CancelsMaintenanceRequest");
+
+            var unitNumber = "test unit";
+            User user;
+            Tenant tenant;
+            MaintenanceRequest maintRequest;
+            Unit unit;
+
+            using (var db = new AptMgmtDbContext(options))
+            {
+                user = TestUtil.NewUser(db);
+                var maintenanceRepo = (IMaintenance)new MaintenanceRepository(db);
+
+                var requestData = new AptMgmtPortalAPI.DataModel.MaintenanceRequestModel();
+                requestData.OpenNotes = "notes";
+                requestData.UnitNumber = unitNumber;
+                requestData.MaintenanceRequestType = MaintenanceRequestType.Plumbing;
+
+                maintRequest = await maintenanceRepo.OpenMaintenanceRequest(user.UserId, requestData);
+
+                tenant = TestUtil.NewTenant(db);
+                tenant.UserId = user.UserId;
+                db.SaveChanges();
+
+                // Maintenance requests are assigned to units, but may be opened by any user of
+                // the application. This means the occupying tenant may open a maintenance request,
+                // but only if they have a UserId, and a Manager may also open a maintenance request
+                // on behalf of a Tenant of User.
+                //
+                // In order to cancel a maintenance request, we must have a way to determine if
+                // the User is indeed the Tenant of the request. This is accomplished by checking
+                // if the user is occupying the unit, and if so, they will be permitted to cancel
+                // the request.
+                var tenantRepo = (ITenant)new TenantRepository(db);
+                unit = TestUtil.NewUnit(db, unitNumber);
+                await tenantRepo.AssignToUnit(tenant.TenantId, unitNumber);
+            }
+
+            using (var db = new AptMgmtDbContext(options))
+            {
+                var repo = (IMaintenance)new MaintenanceRepository(db);
+                var canceled = await repo.CancelMaintenanceRequest(user.UserId,
+                                                                   maintRequest.MaintenanceRequestId,
+                                                                   "test cancel");
+                Assert.NotNull(canceled.TimeClosed);
+
+                var requests = await repo.GetOpenMaintenanceRequests(unit.UnitNumber);
+                Assert.Empty(requests);
+            }
+        }
 
         [Fact]
         public async void EditsPersonalInfo()
         {
             var options = TestUtil.GetMemDbOptions("EditsTenantInfo");
 
-            Tenant tenant;
+            AptMgmtPortalAPI.DTO.TenantInfoDTO tenant;
             using (var db = new AptMgmtDbContext(options))
             {
                 var repo = (ITenant)new TenantRepository(db);
-                var tenantInfo = new TenantInfo();
+                var tenantInfo = new AptMgmtPortalAPI.DTO.TenantInfoDTO();
                 tenantInfo.FirstName = "original first name";
                 tenant = await repo.AddTenant(tenantInfo);
             }
@@ -116,13 +117,11 @@ namespace TestAptMgmtPortal
 
                 var newName = "new first name";
 
-                var tenantInfo = new TenantInfo(tenant);
+                var tenantInfo = new AptMgmtPortalAPI.DTO.TenantInfoDTO();
                 tenantInfo.FirstName = newName;
 
-                var status = await repo.EditPersonalInfo(tenant.TenantId, tenantInfo);
-                Assert.True(status);
+                var newInfo = await repo.UpdateTenantInfo(tenant.TenantId, tenantInfo);
 
-                var newInfo = await repo.TenantFromId(tenant.TenantId);
                 Assert.Equal(newName, newInfo.FirstName);
             }
         }
