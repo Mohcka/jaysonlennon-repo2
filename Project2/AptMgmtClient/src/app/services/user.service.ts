@@ -2,12 +2,12 @@ import { Injectable, Inject } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { User } from '../model/user';
-import * as USERS from 'api/mock-users.json';
+//import * as USERS from 'api/mock-users.json';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
 import { ApiBase } from './../../ApiBase';
-import { handleError } from 'src/utils/error-handling';
+//import { handleError } from 'src/utils/error-handling';
 
 @Injectable({
   providedIn: 'root',
@@ -26,7 +26,7 @@ export class UserService {
   public getUsers(): Observable<User[]> {
     return this.http.get<User[]>(this.usersUrl) //change for put and post
       .pipe(
-        catchError(handleError<User[]>('getUsers', [])) //square is a array
+        //catchError(handleError<User[]>('getUsers', [])) //square is a array
       );
   }
 
