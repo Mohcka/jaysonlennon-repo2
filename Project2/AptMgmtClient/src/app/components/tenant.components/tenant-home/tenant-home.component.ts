@@ -47,7 +47,7 @@ export class TenantHomeComponent implements OnInit {
 
   public getTenantMaintenanceRequests(): void {
     this.maintenanceService
-      .get()
+      .getAll()
       .subscribe((mR) => (this.maintenanceRequests = mR));
   }
 

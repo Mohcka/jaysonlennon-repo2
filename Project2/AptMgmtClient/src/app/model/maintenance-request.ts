@@ -5,7 +5,7 @@ export interface MaintenanceRequest {
   timeOpened: Date;
   timeClosed: Date | null;
   openedBy: string;
-  closedBY: string | null;
+  closedBy: string | null;
   maintenanceRequestType: string;
   closeReason: MaintenanceCloseReason | null;
   openNotes: string;
