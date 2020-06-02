@@ -52,7 +52,7 @@ export class TenantHomeComponent implements OnInit {
   }
 
   getTenantAgreements(): void {
-    this.agreementService.get().subscribe((data) => (this.agreements = data));
+    this.agreementService.getAgreements().subscribe((data) => (this.agreements = data));
   }
 
   public cancelTenantRequest(): void {}
