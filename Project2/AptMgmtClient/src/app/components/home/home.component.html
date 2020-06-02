@@ -1,13 +1,12 @@
 
-<div *ngIf="homeInfo">
-  <div>Tenant home page info:</div>
-  <div>billing period start: {{homeInfo.billingPeriodStart}}</div>
-  <div>billing period end: {{homeInfo.billingPeriodEnd}}</div>
-  <div *ngFor="let bill of homeInfo.bills">
+<div *ngIf="bills">
+  <div *ngFor="let bill of bills">
     <hr>
+    <div>Tenant id: {{bill.tenantId}}</div>
     <div>Resource: {{bill.resource | resourceAsString }}</div>
     <div>period start: {{bill.periodStart}}</div>
     <div>period end: {{bill.periodEnd}}</div>
+    <div>period id: {{bill.billingPeriodId}}</div>
     <div>usage: {{bill.usage}}</div>
     <div>rate: ${{bill.rate}}</div>
     <div>cost: ${{bill.cost}}</div>

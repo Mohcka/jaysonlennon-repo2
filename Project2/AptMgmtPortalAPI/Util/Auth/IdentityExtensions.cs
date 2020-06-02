@@ -9,5 +9,8 @@ namespace AptMgmtPortalAPI.Util.Auth.Extensions
             var claim = controller.User.FindFirst(claim => claim.Type == Auth.ClaimType.UserId).Value;
             return Int32.Parse(claim);
         }
+        public static bool UserInRole(this ControllerBase controller, string role) {
+            return controller.HttpContext.User.IsInRole(role);
+        }
     }
 }

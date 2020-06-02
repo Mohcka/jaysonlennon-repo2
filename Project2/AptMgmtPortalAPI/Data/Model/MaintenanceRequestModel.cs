@@ -10,5 +10,6 @@ namespace AptMgmtPortalAPI.DataModel {
         public bool Closed { get; set; }
         public string MaintenanceRequestType { get; set; }
         public string OpenNotes { get; set; }
+        public string UnitNumber { get; set; }
     }
 }

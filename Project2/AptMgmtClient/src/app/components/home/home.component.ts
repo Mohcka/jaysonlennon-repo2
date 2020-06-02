@@ -2,7 +2,7 @@ import { TenantHomeService } from './../../services/tenant-home.service';
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { User } from '../../model/user';
-import { TenantHome } from 'src/app/model/tenant-home';
+import { Bill } from 'src/app/model/bill';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +11,7 @@ import { TenantHome } from 'src/app/model/tenant-home';
 export class HomeComponent implements OnInit {
 
   public users: User[] = [];
-  public homeInfo: TenantHome;
+  public bills: Bill[];
 
   constructor(
     private userService: UserService,
@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
   }
 
   public getHomeData() {
-    this.tenantHomeService.get().subscribe(data => this.homeInfo = data);
+    this.tenantHomeService.get().subscribe(data => this.bills = data);
   }
 
   public getUsers(): void {
