@@ -104,7 +104,7 @@ stages:
         credentialsOption: 'inputs'
         serverUrl: 'ftps://waws-prod-dm1-069.ftp.azurewebsites.windows.net/site/wwwroot'
         username: 'revp2t3fe\$revp2t3fe'
-        password: 'z7eWeXPgL08JWNfxJsNkXqDKQztodmkjPBEuNllu9FX8uKiyE1Gxd4XHHDpa'
+        password: $(FTPpassword)
         rootDirectory: 'release'
         filePatterns: '**'
         remoteDirectory: 'site/wwwroot'
@@ -112,5 +112,7 @@ stages:
         cleanContents: false
         preservePaths: false
         trustSSL: false
+
+
 
 
