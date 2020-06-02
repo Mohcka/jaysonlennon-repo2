@@ -11,6 +11,8 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
 import { BillService } from 'src/app/services/bill.service';
 import { MaintenanceService } from 'src/app/services/maintenance.service';
 import { MaintenanceRequest } from 'src/app/model/maintenance';
+import { Agreement } from 'src/app/model/agreement';
+import { AgreementService } from 'src/app/services/agreement.service';
 
 @Component({
   selector: 'app-home',
@@ -20,12 +22,14 @@ export class HomeComponent implements OnInit {
   public users: User[] = [];
   public bills: Bill[];
   public maintenanceRequests: MaintenanceRequest[];
+  public agreements: Agreement[];
 
   constructor(
     private userService: UserService,
     private tenantHomeService: TenantBillsService,
     private billService: BillService,
     private maintenanceService: MaintenanceService,
+    private agreementService: AgreementService,
     public authService: AuthenticationService
   ) {}
 
@@ -33,6 +37,7 @@ export class HomeComponent implements OnInit {
     this.getUsers();
     this.getHomeData();
     this.getTenantMaintenanceRequests();
+    this.getTenantAgreements();
   }
 
   public getHomeData() {
@@ -49,9 +54,11 @@ export class HomeComponent implements OnInit {
       .subscribe((mR) => (this.maintenanceRequests = mR));
   }
 
-  public cancelTenantRequest(): void {
-
+  getTenantAgreements(): void {
+    this.agreementService.get().subscribe((data) => (this.agreements = data));
   }
+
+  public cancelTenantRequest(): void {}
 
   public payBill(
     resource: Resource,

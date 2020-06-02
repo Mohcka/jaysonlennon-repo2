@@ -84,3 +84,29 @@
     </tbody>
   </table>
 </div>
+
+<div *ngIf="agreements" class="offset-2">
+  <h2>{{ authService.currentUserValue.loginName }}'s Agreements</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Agreement#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Agreement</th>
+        <th scope="col">Signed Date</th>
+        <th scope="col">Start Date</th>
+        <th scope="col">EndDate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let agreement of agreements">
+        <th scope="row">{{ agreement.agreementId }}</th>
+        <td>{{ agreement.title }}</td>
+        <td>{{ agreement.text }}</td>
+        <td>{{ agreement.signedDate | date }}</td>
+        <td>{{ agreement.startDate | date }}</td>
+        <td>{{ agreement.endDate | date }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
