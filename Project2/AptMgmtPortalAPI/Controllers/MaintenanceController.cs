@@ -61,8 +61,8 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                     .Build();
                     return err;
                 }
-                var unitNumber = await _tenantRepository.GetUnitNumber((int)tenantId);
-                if (String.IsNullOrEmpty(unitNumber))
+                var unit = await _tenantRepository.UnitFromTenantId((int)tenantId);
+                if (unit == null)
                 {
                     var err = new DTO.ErrorBuilder()
                                     .Message("Tenant not assigned a unit.")
@@ -71,7 +71,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                     return err;
                 }
 
-                var requests = await _maintenanceRepository.GetMaintenanceRequests(unitNumber);
+                var requests = await _maintenanceRepository.GetMaintenanceRequests(unit.UnitNumber);
                 var requestDTOs = await MakeDTORequests(requests);
                 return new ObjectResult(requestDTOs);
 
@@ -110,8 +110,8 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                     return err;
                 }
 
-                var unitNumber = await _tenantRepository.GetUnitNumber((int)tenantId);
-                if (String.IsNullOrEmpty(unitNumber))
+                var unit = await _tenantRepository.UnitFromTenantId((int)tenantId);
+                if (unit == null)
                 {
                     var err = new DTO.ErrorBuilder()
                                     .Message("Tenant not assigned a unit.")
@@ -122,12 +122,12 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
 
                 // Set the unit number to the tenant's unit number so they cannot schedule maintenance for other
                 // tenants.
-                model.UnitNumber = unitNumber;
+                model.UnitNumber = unit.UnitNumber;
 
                 var existingRequest = await _maintenanceRepository.GetMaintenanceRequest(model.MaintenanceRequestId);
                 if (existingRequest != null)
                 {
-                    if (existingRequest.UnitNumber == unitNumber)
+                    if (existingRequest.UnitNumber == unit.UnitNumber)
                     {
                         existingRequest = await _maintenanceRepository.UpdateMaintenanceRequest(existingRequest, model, userId);
                         var flatRequest = await DTO.MaintenanceRequestDTO.Build(existingRequest, _userRepository);
