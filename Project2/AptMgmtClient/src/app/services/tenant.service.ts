@@ -16,22 +16,29 @@ export class TenantService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
   };
 
-  getTenants(): Observable<Tenant[]> {
+  public getTenants(): Observable<Tenant[]> {
     return this.http
       .get<Tenant[]>(ApiBase.url() + 'Tenants')
       .pipe(catchError(handleError<Tenant[]>('tenant.service(getTenants)', [])));
   }
 
-  getTenant(): Observable<Tenant> {
+  public getTenant(): Observable<Tenant> {
     return this.http
       .get<Tenant>(ApiBase.url() + `Tenant`)
       .pipe(catchError(handleError<null>('tenant.service(getTenant)')));
   }
 
-  getTenantById(id: number): Observable<Tenant> {
+  public getTenantById(id: number): Observable<Tenant> {
     return this.http
       .get<Tenant>(ApiBase.url() + `Tenant/${id}`)
       .pipe(catchError(handleError<null>('tenant.service(getTenantById)')));
+  }
+
+  public updateTenant(tenant: Tenant): Observable<Tenant> {
+    return this.http.post<Tenant>(ApiBase.url() + 'Tenant', tenant, this.httpOptions)
+      .pipe(
+        catchError(handleError<Tenant>('tenant.service(updateTenant)'))
+      );
   }
 
 

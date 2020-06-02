@@ -16,13 +16,13 @@ export class AgreementService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
   };
 
-  getAgreements(): Observable<Agreement[]> {
+  public getAgreements(): Observable<Agreement[]> {
     return this.http
       .get<Agreement[]>(ApiBase.url() + 'Agreements')
       .pipe(catchError(handleError<Agreement[]>('agreement.service(getAgreements)', [])));
   }
 
-  signAgreement(data: Agreement): Observable<Agreement> {
+  public signAgreement(data: Agreement): Observable<Agreement> {
     return this.http
       .post<Agreement>(ApiBase.url() + 'Agreements', data, this.httpOptions)
       .pipe(catchError(handleError<null>('agreement.service(signAgreement)')));

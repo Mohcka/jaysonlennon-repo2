@@ -20,23 +20,19 @@ export class BillService {
 
   constructor(protected http: HttpClient) { }
 
-  /**
-   * Sends a request to the server for a tenant to make a payment
-   * @param billData Data the server expects to process the payment
-   */
-  payBill(billData: PayBillData): Observable<Bill> {
+  public payBill(billData: PayBillData): Observable<Bill> {
     return this.http
       .post<Bill>(ApiBase.url() + 'Bill', billData, this.httpOptions)
       .pipe(catchError(handleError<Bill>('bill.service(payBill)')));
   }
 
-  getBillsInCurrentPeriod(): Observable<Bill[]> {
+  public getBillsInCurrentPeriod(): Observable<Bill[]> {
     return this.http
       .get<Bill[]>(ApiBase.url() + 'Bills')
       .pipe(catchError(handleError<Bill[]>('bill.serice(getBillsInCurrentPeriod)', [])));
   }
 
-  getBillsInPeriod(period: number): Observable<Bill[]> {
+  public getBillsInPeriod(period: number): Observable<Bill[]> {
     return this.http
       .get<Bill[]>(ApiBase.url() + `Bills/${period}`)
       .pipe(catchError(handleError<Bill[]>('bill.serice(getBillsInPeriod)', [])));
