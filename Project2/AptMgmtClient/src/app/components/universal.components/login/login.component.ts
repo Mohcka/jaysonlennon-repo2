@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
   ) {
     // go back home if logged in
     if (this.authenticationService.currentUserValue) {
-      this.router.navigate(['/']);
+      this.router.navigate([this.authenticationService.getHomeRoute()]);
     }
   }
 

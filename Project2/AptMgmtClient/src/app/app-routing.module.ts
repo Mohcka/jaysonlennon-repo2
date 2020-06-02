@@ -1,7 +1,7 @@
+import { UnauthorizedAccessComponent } from './components/universal.components/unauthorized-access/unauthorized-access.component';
 import { UserAccountType } from './../enums/user-account-type';
 import { ManagerHomeComponent } from './components/manager.components/manager-home/manager-home.component';
 import { RouterHubComponent } from './components/universal.components/router-hub/router-hub.component';
-import { ManagerGuard } from './guard/manager.guard';
 import { ManagerMaintenanceRequestListComponent } from './components/manager.components/manager-maintenance-request-list/manager-maintenance-request-list.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -18,29 +18,30 @@ const routes: Routes = [
   // Universal routes
   { path: 'hub', component: RouterHubComponent },
   { path: 'login', component: LoginComponent },
+  { path: '403', component: UnauthorizedAccessComponent },
 
   // Tenants
   { path: 'tenant', component: TenantHomeComponent,
-    canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant]} },
+    canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },
 
   { path: 'tenant/tenantInfo/:id', component: TenantDetailsComponent,
-    canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant]} },
+    canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },
 
   { path: 'tenant/maintenance/new', component: MaintenanceRequestFormComponent,
-    canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant]} },
+    canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },
 
   { path: 'tenant/maintenance/list', component: MaintenanceRequestsComponent,
-    canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant]} },
+    canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },
 
   // Managers
   { path: 'manager', component: ManagerHomeComponent,
-    canActivate: [AuthGuard], data: { roles: [UserAccountType.Manager] }, },
+    canActivate: [AuthGuard], data: { roles: [UserAccountType.Manager] } },
 
   { path: 'manager/tenants/list', component: ManagerListTenantsComponent,
-    canActivate: [AuthGuard], data: { roles: [UserAccountType.Manager] }, },
+    canActivate: [AuthGuard], data: { roles: [UserAccountType.Manager] } },
 
   { path: 'manager/maintenance/list', component: ManagerMaintenanceRequestListComponent,
-    canActivate: [AuthGuard], data: { roles: [UserAccountType.Manager] }, },
+    canActivate: [AuthGuard], data: { roles: [UserAccountType.Manager] } },
 ];
 
 @NgModule({

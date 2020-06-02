@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 
 import { ApiBase } from './../../ApiBase';
+import { UserAccountType } from 'src/enums/user-account-type';
 
 @Injectable({
   providedIn: 'root',
@@ -78,4 +79,15 @@ export class AuthenticationService {
     localStorage.removeItem('currentUser');
     this.currentUserSubject.next(null);
   }
+
+  public getHomeRoute(): string {
+    switch (this.currentUserValue.userAccountType)
+    {
+      case UserAccountType.Admin: return '/manager';
+      case UserAccountType.Manager: return '/manager';
+      case UserAccountType.Tenant: return '/tenant';
+      default: return '/';
+    }
+  }
+
 }

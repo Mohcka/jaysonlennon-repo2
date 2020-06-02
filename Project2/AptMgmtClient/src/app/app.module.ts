@@ -23,6 +23,7 @@ import { RouterHubComponent } from './components/universal.components/router-hub
 import { ResourceEnumPipe } from './helpers/resource-enum-pipe';
 import { MaintenanceCloseReasonEnumPipe } from './helpers/maintenance-close-reason-pipe';
 import { ManagerListTenantsComponent } from './components/manager.components/manager-list-tenants/manager-list-tenants.component';
+import { UnauthorizedAccessComponent } from './components/universal.components/unauthorized-access/unauthorized-access.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ManagerListTenantsComponent } from './components/manager.components/man
     MaintenanceRequestFormComponent,
     LoginComponent,
     RouterHubComponent,
+    UnauthorizedAccessComponent,
 
     // Components - Tenant
     TenantHomeComponent,
