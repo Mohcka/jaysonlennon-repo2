@@ -5,6 +5,7 @@ export interface Bill {
     resource: Resource;
     periodStart: Date;
     periodEnd: Date;
+    billingPeriodId: number;
     usage: number;
     rate: number;
     paid: number;
