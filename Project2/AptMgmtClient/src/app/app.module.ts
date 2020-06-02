@@ -34,31 +34,10 @@ import { PaymentTenComponent } from './components/tenant/payment-ten/payment-ten
 //import { MaintenanceManComponent } from './components/manager/maintenance-man/maintenance-man.component';
 import { PaymentManComponent } from './components/manager/payment-man/payment-man.component';
 
-// Used in development builds only
-import { InMemoryDataService } from './services/in-memory-data.service';
-import { fakeAuthBackendProvider } from './helpers/fake-auth-backend.interceptor';
 import { ManagerComponent } from './components/manager.components/manager/manager.component';
 import { ManagerMaintenanceRequestListComponent } from './components/manager/manager-maintenance-request-list/manager-maintenance-request-list.component';
 import { LeaseViewComponent } from './components/manager/lease-view/lease-view.component';
 import { LeaseAddComponent } from './components/manager/lease-add/lease-add.component';
-
-// Uses mock api when under development, replaced with a blank module in
-// production
-const inMemApiModule =
-  process.env.NODE_ENV === 'development' && environment.memoryApi === true
-    ? HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
-        dataEncapsulation: false,
-      })
-    : CommonModule;
-
-const providers: Provider[] = [
-    { provide: HTTP_INTERCEPTORS, useClass: ApiTokenInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
-];
-
-if (process.env.NODE_ENV === 'development' && environment.memoryApi === true) {
-  providers.push(fakeAuthBackendProvider);
-}
 
 @NgModule({
   declarations: [
@@ -90,11 +69,13 @@ if (process.env.NODE_ENV === 'development' && environment.memoryApi === true) {
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
-    inMemApiModule,
     ReactiveFormsModule,
     AppRoutingModule,
   ],
-  providers: providers,
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: ApiTokenInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
