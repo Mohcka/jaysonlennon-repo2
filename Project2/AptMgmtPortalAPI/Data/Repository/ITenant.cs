@@ -18,25 +18,6 @@ namespace AptMgmtPortalAPI.Repository
         Task<Tenant> TenantFromUserId(int userId);
         Task<int?> TenantIdFromUserId(int userId);
 
-        // Maintenance info uses UserId since it's only possible to make a maintenance
-        // request from within the application (either the tenant makes it, or a manager
-        // makes it on the tenant's behalf).)
-        Task<bool> CancelMaintenanceRequest(int userId,
-                                            int maintenanceRequestId,
-                                            string resolutionNotes);
-        Task<MaintenanceRequest> OpenMaintenanceRequest(int userId,
-                                                        string requestType,
-                                                        string openNotes,
-                                                        string unitNumber);
-        Task<IEnumerable<MaintenanceRequest>> GetOutstandingMaintenanceRequests(int userId);
-        Task<IEnumerable<MaintenanceRequest>> GetMaintenanceRequests(int userId,
-                                                                     BillingPeriod period);
-        Task<IEnumerable<MaintenanceRequest>> GetMaintenanceRequests(int userId, int limit);
-        Task<MaintenanceRequest> GetMaintenanceRequest(int requestId);
-        Task<MaintenanceRequest> UpdateMaintenanceRequest(MaintenanceRequest original,
-                                                          DataModel.MaintenanceRequestModel updated,
-                                                          int userId);
-
         // Bills require a tenantId, since they will be generated and used regardless
         // of whether or not a tenant has a user id.
         Task<bool> PayBill(int tenantId,

@@ -11,6 +11,7 @@ namespace AptMgmtPortalAPI.Util
             services.AddScoped<Repository.IMisc, Repository.MiscRepository>();
             services.AddScoped<Repository.IUser, Repository.UserRepository>();
             services.AddScoped<Repository.IAgreement, Repository.AgreementRepository>();
+            services.AddScoped<Repository.IMaintenance, Repository.MaintenanceRepository>();
         }
     }
 }

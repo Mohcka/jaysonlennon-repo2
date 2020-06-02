@@ -37,21 +37,6 @@ namespace AptMgmtPortalAPI.Repository
             return tenant;
         }
 
-        /// <remarks>
-        /// The userId supplied must be a user that is currently occupying the unit where the maintenanceRequestId is assigned.
-        /// </remarks>
-        /// <returns></returns>
-        public async Task<bool> CancelMaintenanceRequest(int userId,
-                                                         int maintenanceRequestId,
-                                                         string resolutionNotes)
-        {
-            var maintenanceRequest = await GetMaintenanceRequest(userId, maintenanceRequestId);
-            maintenanceRequest.ResolutionNotes = resolutionNotes;
-            maintenanceRequest.TimeClosed = DateTime.Now;
-            maintenanceRequest.ClosingUserId = userId;
-
-            return await _context.SaveChangesAsync() > 0;
-        }
 
         public async Task<bool> EditPersonalInfo(int tenantId, Types.TenantInfo info)
         {
@@ -166,52 +151,6 @@ namespace AptMgmtPortalAPI.Repository
             return bills;
         }
 
-        /// <summary>
-        /// Determines if the maintenance request is for this specific user.
-        /// </summary>
-        public async Task<bool> IsMaintenanceRequestForUser(int userId, int maintenanceRequestId)
-        {
-            var tenantId = await TenantIdFromUserId(userId);
-            if (tenantId == null) return false;
-
-            var unitNumber = await _context.Units
-                                           .Where(u => u.TenantId == tenantId)
-                                           .Select(u => u.UnitNumber)
-                                           .FirstOrDefaultAsync();
-            return await _context.MaintenanceRequests
-                .Where(r => r.UnitNumber == unitNumber)
-                .FirstOrDefaultAsync() != null;
-        }
-
-        public async Task<MaintenanceRequest> GetMaintenanceRequest(int userId, int maintenanceRequestId)
-        {
-            // Ensure that only maintenance requests for this user can be accessed.
-            if (!await IsMaintenanceRequestForUser(userId, maintenanceRequestId)) return null;
-
-            return await _context.MaintenanceRequests
-                .Where(r => r.MaintenanceRequestId == maintenanceRequestId)
-                .Select(r => r)
-                .FirstOrDefaultAsync();
-        }
-
-        public async Task<IEnumerable<MaintenanceRequest>> GetMaintenanceRequests(int userId,
-                                                                                  BillingPeriod period)
-        {
-            if (period == null) return new List<MaintenanceRequest>();
-
-            return await _context.MaintenanceRequests
-                .Where(m => m.OpeningUserId == userId)
-                .AsNoTracking()
-                .ToListAsync();
-        }
-
-        public async Task<IEnumerable<MaintenanceRequest>> GetOutstandingMaintenanceRequests(int userId)
-        {
-            return await _context.MaintenanceRequests
-                .Where(m => m.OpeningUserId == userId && m.ClosingUserId == null)
-                .AsNoTracking()
-                .ToListAsync();
-        }
 
         public async Task<Payment> GetPayment(int tenantId, int paymentId)
         {
@@ -271,30 +210,6 @@ namespace AptMgmtPortalAPI.Repository
                     .ToListAsync();
         }
 
-        public async Task<MaintenanceRequest> OpenMaintenanceRequest(int userId,
-                                                                     string requestType,
-                                                                     string openNotes,
-                                                                     string unitNumber)
-        {
-            var user = await _context.Users
-                                        .Where(u => u.UserId == userId)
-                                        .AsNoTracking()
-                                        .FirstOrDefaultAsync();
-
-            MaintenanceRequest maintenanceRequest = new MaintenanceRequest
-            {
-                OpeningUserId = user.UserId,
-                TimeOpened = DateTime.Now,
-                // I am assuming we are getting object of type MaintenanceRequestType
-                MaintenanceRequestType = requestType,
-                OpenNotes = openNotes,
-                UnitNumber = unitNumber
-            };
-
-            _context.MaintenanceRequests.Add(maintenanceRequest);
-            await _context.SaveChangesAsync();
-            return maintenanceRequest;
-        }
 
         public async Task<bool> PayBill(int tenantId,
                                         double amount,
@@ -369,50 +284,6 @@ namespace AptMgmtPortalAPI.Repository
                         .Where(t => t.FirstName.ToLower().Contains(firstName))
                         .Select(t => t)
                         .ToListAsync();
-        }
-
-        public async Task<IEnumerable<MaintenanceRequest>> GetMaintenanceRequests(int userId, int limit)
-        {
-            var tenantId = await TenantIdFromUserId(userId);
-            if (tenantId == null) return new List<MaintenanceRequest>();
-
-            var unitNumber = await _context.Units
-                                    .Where(u => u.TenantId == tenantId)
-                                    .Select(u => u.UnitNumber)
-                                    .FirstOrDefaultAsync();
-
-            return await _context.MaintenanceRequests
-                .Where(r => r.UnitNumber == unitNumber)
-                .Take(limit)
-                .OrderByDescending(r => r.TimeOpened)
-                .ToListAsync();
-        }
-
-        public async Task<MaintenanceRequest> GetMaintenanceRequest(int requestId)
-        {
-            return await _context.MaintenanceRequests
-                .Where(r => r.MaintenanceRequestId == requestId)
-                .Select(r => r)
-                .FirstOrDefaultAsync();
-        }
-
-        public async Task<MaintenanceRequest> UpdateMaintenanceRequest(MaintenanceRequest original,
-                                                                       MaintenanceRequestModel updated,
-                                                                       int userId)
-        {
-            if (updated.Closed == true) {
-                original.ClosingUserId = userId;
-                original.TimeClosed = DateTime.Now;
-                original.CloseReason = MaintenanceCloseReason.CanceledByTenant;
-            }
-            if (original.TimeClosed == null) {
-                original.MaintenanceRequestType = updated.MaintenanceRequestType;
-                original.OpenNotes = updated.OpenNotes;
-            }
-
-            await _context.SaveChangesAsync();
-
-            return await GetMaintenanceRequest(original.MaintenanceRequestId);
         }
 
         public async Task<string> GetUnitNumber(int tenantId)
