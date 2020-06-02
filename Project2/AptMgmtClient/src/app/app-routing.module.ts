@@ -15,6 +15,12 @@ import { TenantPaymentComponent } from './components/tenant.components/tenant-pa
 import { MaintenanceRequestFormComponent } from './components/maintenance/maintenance-request-form/maintenance-request-form.component';
 import { ManagerComponent } from './components/manager.components/manager/manager.component';
 import { UserAccountType } from './model/user-account-type';
+//import { LeaseTenComponent } from './components/tenant/lease-ten/lease-ten.component';
+//import { MaintenanceTenComponent } from './components/tenant/maintenance-ten/maintenance-ten.component';
+import { PaymentTenComponent } from './components/tenant/payment-ten/payment-ten.component';
+//import { LeaseManComponent } from './components/manager/lease-man/lease-man.component';
+//import { MaintenanceManComponent } from './components/manager/maintenance-man/maintenance-man.component';
+import { PaymentManComponent } from './components/manager/payment-man/payment-man.component';
 
 // Define routes for the application
 const routes: Routes = [
@@ -40,11 +46,16 @@ const routes: Routes = [
     data: { roles: [UserAccountType.Manager] },
   },
   // * Maintenance
-  {
-    path: 'maintenance-requests',
-    component: MaintenanceRequestsComponent,
-    canActivate: [AuthGuard],
-  },
+  { path: 'maintenance-requests', component: MaintenanceRequestsComponent, canActivate: [AuthGuard] },
+ // { path: 'manager/maintenance', component: MaintenanceManComponent },
+ // { path: 'tenant/maintenance', component: MaintenanceTenComponent },
+  
+  // * Payments Pages
+  { path: 'manager/payment', component: PaymentManComponent },
+  { path: 'tenant/payment', component: PaymentTenComponent },
+  // * Lease Pages
+ // { path: 'manager/lease', component: LeaseManComponent },
+ // { path: 'tenant/lease', component: LeaseTenComponent },
 ];
 
 @NgModule({

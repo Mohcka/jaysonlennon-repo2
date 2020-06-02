@@ -27,11 +27,20 @@ import { MaintenanceCloseReasonEnumPipe } from './helpers/maintenance-close-reas
 
 import { environment } from './../environments/environment';
 
+//import { LeaseTenComponent } from './components/tenant/lease-ten/lease-ten.component';
+//import { MaintenanceTenComponent } from './components/tenant/maintenance-ten/maintenance-ten.component';
+import { PaymentTenComponent } from './components/tenant/payment-ten/payment-ten.component';
+//import { LeaseManComponent } from './components/manager/lease-man/lease-man.component';
+//import { MaintenanceManComponent } from './components/manager/maintenance-man/maintenance-man.component';
+import { PaymentManComponent } from './components/manager/payment-man/payment-man.component';
+
 // Used in development builds only
 import { InMemoryDataService } from './services/in-memory-data.service';
 import { fakeAuthBackendProvider } from './helpers/fake-auth-backend.interceptor';
 import { ManagerComponent } from './components/manager.components/manager/manager.component';
 import { ManagerMaintenanceRequestListComponent } from './components/manager/manager-maintenance-request-list/manager-maintenance-request-list.component';
+import { LeaseViewComponent } from './components/manager/lease-view/lease-view.component';
+import { LeaseAddComponent } from './components/manager/lease-add/lease-add.component';
 
 // Uses mock api when under development, replaced with a blank module in
 // production
@@ -69,6 +78,14 @@ if (process.env.NODE_ENV === 'development' && environment.memoryApi === true) {
     ResourceEnumPipe,
     MaintenanceCloseReasonEnumPipe,
     ManagerMaintenanceRequestListComponent,
+    //LeaseTenComponent,
+    //MaintenanceTenComponent,
+    PaymentTenComponent,
+    //LeaseManComponent,
+    //MaintenanceManComponent,
+    PaymentManComponent,
+    LeaseViewComponent,
+    LeaseAddComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
