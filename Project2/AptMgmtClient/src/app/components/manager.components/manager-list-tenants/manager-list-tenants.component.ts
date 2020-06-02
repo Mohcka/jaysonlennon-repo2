@@ -21,7 +21,7 @@ export class ManagerListTenantsComponent implements OnInit {
 
   public getTenants(): void {
     this.tenantService
-      .getAll()
+      .getTenants()
       .subscribe((tenants) => (this.tenants = tenants));
   }
 }

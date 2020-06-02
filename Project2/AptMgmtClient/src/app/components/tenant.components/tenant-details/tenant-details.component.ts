@@ -24,7 +24,7 @@ export class TenantDetailsComponent implements OnInit {
   public getTenant(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.tenantService
-      .getOne(id)
+      .getTenantById(id)
       .subscribe((tenant) => (this.targetTenant = tenant));
   }
 }
