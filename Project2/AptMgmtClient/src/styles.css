@@ -1,6 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* Provide sufficient contrast against white background */
+.container {
+  padding-left: 10px !important;
+  margin-left: 200px !important;
+}
+
 a {
   color: #0366d6;
 }
@@ -76,11 +81,11 @@ input[type=checkbox] {
   }
 #modal1:target {
   display: block;
-  width: 300px;
+  width: 500px;
   }
 #modal2:target {
   display: block;
-  width: 300px;
+  width: 500px;
   }
 [id^=modal] a {
   float: right;
@@ -133,16 +138,6 @@ button:hover {
   padding: 16px;
 }
 
-@media screen and (max-width: 300px) {
-  span.psw {
-    display: block;
-    float: none;
-  }
-  .cancelbtn {
-    width: 100%;
-  }
-}
-
 .sidenav {
   height: 100vh;
   width: 200px;
@@ -168,6 +163,7 @@ button:hover {
 
 .main {
   margin-left: 200px;
+
 }
 #customBtn {
       display: inline-block;
@@ -205,4 +201,13 @@ span.buttonText {
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
 }
