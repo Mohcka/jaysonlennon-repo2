@@ -37,13 +37,10 @@ import { PaymentManComponent } from './components/manager/payment-man/payment-ma
 // Used in development builds only
 import { InMemoryDataService } from './services/in-memory-data.service';
 import { fakeAuthBackendProvider } from './helpers/fake-auth-backend.interceptor';
-<<<<<<< HEAD
 import { ManagerComponent } from './components/manager.components/manager/manager.component';
 import { ManagerMaintenanceRequestListComponent } from './components/manager/manager-maintenance-request-list/manager-maintenance-request-list.component';
-=======
 import { LeaseViewComponent } from './components/manager/lease-view/lease-view.component';
 import { LeaseAddComponent } from './components/manager/lease-add/lease-add.component';
->>>>>>> 0ae922e2c487b6b41407316001f1831ce1f88d95
 
 // Uses mock api when under development, replaced with a blank module in
 // production
@@ -79,10 +76,8 @@ if (process.env.NODE_ENV === 'development' && environment.memoryApi === true) {
     MaintenanceRequestFormComponent,
     ManagerComponent,
     ResourceEnumPipe,
-<<<<<<< HEAD
     MaintenanceCloseReasonEnumPipe,
     ManagerMaintenanceRequestListComponent,
-=======
     //LeaseTenComponent,
     //MaintenanceTenComponent,
     PaymentTenComponent,
@@ -91,7 +86,6 @@ if (process.env.NODE_ENV === 'development' && environment.memoryApi === true) {
     PaymentManComponent,
     LeaseViewComponent,
     LeaseAddComponent
->>>>>>> 0ae922e2c487b6b41407316001f1831ce1f88d95
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
