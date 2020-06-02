@@ -1,59 +1,46 @@
-import { RouterHubComponent } from './components/router-hub/router-hub.component';
+import { UserAccountType } from './../enums/user-account-type';
+import { ManagerHomeComponent } from './components/manager.components/manager-home/manager-home.component';
+import { RouterHubComponent } from './components/universal.components/router-hub/router-hub.component';
 import { ManagerGuard } from './guard/manager.guard';
-import { ManagerMaintenanceRequestListComponent } from './components/manager/manager-maintenance-request-list/manager-maintenance-request-list.component';
+import { ManagerMaintenanceRequestListComponent } from './components/manager.components/manager-maintenance-request-list/manager-maintenance-request-list.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
-import { MaintenanceRequestsComponent } from './components/maintenance/maintenance-requests/maintenance-requests.component';
+import { TenantHomeComponent } from './components/tenant.components/tenant-home/tenant-home.component';
+import { MaintenanceRequestsComponent } from './components/universal.components/maintenance-requests/maintenance-requests.component';
 import { TenantDetailsComponent } from './components/tenant.components/tenant-details/tenant-details.component';
-import { TenantsComponent } from './components/tenant.components/tenants/tenants.component';
 import { AuthGuard } from './guard/auth.guard';
-import { LoginComponent } from './components/login/login.component';
-import { TenantComponent } from './components/tenant.components/tenant/tenant.component';
-import { TenantPaymentComponent } from './components/tenant.components/tenant-payment/tenant-payment.component';
-import { MaintenanceRequestFormComponent } from './components/maintenance/maintenance-request-form/maintenance-request-form.component';
-import { ManagerComponent } from './components/manager.components/manager/manager.component';
-import { UserAccountType } from './model/user-account-type';
-//import { LeaseTenComponent } from './components/tenant/lease-ten/lease-ten.component';
-//import { MaintenanceTenComponent } from './components/tenant/maintenance-ten/maintenance-ten.component';
-import { PaymentTenComponent } from './components/tenant/payment-ten/payment-ten.component';
-//import { LeaseManComponent } from './components/manager/lease-man/lease-man.component';
-//import { MaintenanceManComponent } from './components/manager/maintenance-man/maintenance-man.component';
-import { PaymentManComponent } from './components/manager/payment-man/payment-man.component';
+import { LoginComponent } from './components/universal.components/login/login.component';
+import { MaintenanceRequestFormComponent } from './components/universal.components/maintenance-request-form/maintenance-request-form.component';
+import { ManagerListTenantsComponent } from './components/manager.components/manager-list-tenants/manager-list-tenants.component';
 
 // Define routes for the application
 const routes: Routes = [
+  // Universal routes
   { path: 'hub', component: RouterHubComponent },
-  { path: '', component: HomeComponent, pathMatch: 'full' },
-  // * Auth
   { path: 'login', component: LoginComponent },
-  // * Tenants
-  { path: 'tenant', component: TenantComponent },
-  { path: 'tenant/payment', component: TenantPaymentComponent },
-  { path: 'tenants', component: TenantsComponent },
-  { path: 'tenant-detail/:id', component: TenantDetailsComponent },
-  {
-    path: 'create/maintenance',
-    component: MaintenanceRequestFormComponent,
-  },
-  // * Manager
-  {
-    path: 'manager',
-    component: ManagerComponent,
-    canActivate: [AuthGuard],
-    data: { roles: [UserAccountType.Manager] },
-  },
-  // * Maintenance
-  { path: 'maintenance-requests', component: MaintenanceRequestsComponent, canActivate: [AuthGuard] },
- // { path: 'manager/maintenance', component: MaintenanceManComponent },
- // { path: 'tenant/maintenance', component: MaintenanceTenComponent },
-  
-  // * Payments Pages
-  { path: 'manager/payment', component: PaymentManComponent },
-  { path: 'tenant/payment', component: PaymentTenComponent },
-  // * Lease Pages
- // { path: 'manager/lease', component: LeaseManComponent },
- // { path: 'tenant/lease', component: LeaseTenComponent },
+
+  // Tenants
+  { path: 'tenant', component: TenantHomeComponent,
+    canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant]} },
+
+  { path: 'tenant/tenantInfo/:id', component: TenantDetailsComponent,
+    canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant]} },
+
+  { path: 'tenant/maintenance/new', component: MaintenanceRequestFormComponent,
+    canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant]} },
+
+  { path: 'tenant/maintenance/list', component: MaintenanceRequestsComponent,
+    canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant]} },
+
+  // Managers
+  { path: 'manager', component: ManagerHomeComponent,
+    canActivate: [AuthGuard], data: { roles: [UserAccountType.Manager] }, },
+
+  { path: 'manager/tenants/list', component: ManagerListTenantsComponent,
+    canActivate: [AuthGuard], data: { roles: [UserAccountType.Manager] }, },
+
+  { path: 'manager/maintenance/list', component: ManagerMaintenanceRequestListComponent,
+    canActivate: [AuthGuard], data: { roles: [UserAccountType.Manager] }, },
 ];
 
 @NgModule({

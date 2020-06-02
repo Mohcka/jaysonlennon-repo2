@@ -1,11 +1,8 @@
-import { TenantBillsService } from './../../services/tenant-home.service';
+import { TenantBillsService } from '../../../services/tenant-home.service';
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../services/user.service';
-import { User } from '../../model/user';
-// import { TenantHome } from 'src/app/model/tenant-home';
+import { UserService } from '../../../services/user.service';
+import { User } from '../../../model/user';
 import { Resource } from 'src/enums/Resource';
-import { PayBillData } from 'src/app/model/pay-bill-data';
-import { TenantService } from 'src/app/services/tenant.service';
 import { Bill } from 'src/app/model/bill';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import { BillService } from 'src/app/services/bill.service';
@@ -16,9 +13,9 @@ import { AgreementService } from 'src/app/services/agreement.service';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html',
+  templateUrl: './tenant-home.component.html',
 })
-export class HomeComponent implements OnInit {
+export class TenantHomeComponent implements OnInit {
   public users: User[] = [];
   public bills: Bill[];
   public maintenanceRequests: MaintenanceRequest[];

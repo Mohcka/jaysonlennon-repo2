@@ -1,4 +1,4 @@
-import { UserAccountType } from './user-account-type';
+import { UserAccountType } from 'src/enums/user-account-type';
 
 export interface User {
   id: number;

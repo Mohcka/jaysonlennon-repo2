@@ -4,10 +4,10 @@ import { Tenant } from '../../../model/tenant';
 
 @Component({
   selector: 'app-tenants',
-  templateUrl: './tenants.component.html',
-  styleUrls: ['./tenants.component.css'],
+  templateUrl: './manager-list-tenants.component.html',
+  styleUrls: ['./manager-list-tenants.component.css'],
 })
-export class TenantsComponent implements OnInit {
+export class ManagerListTenantsComponent implements OnInit {
   /**
    * Tenant data to be presented to the user
    */
