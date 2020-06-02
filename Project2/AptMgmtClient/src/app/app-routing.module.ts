@@ -12,6 +12,7 @@ import { TenantComponent } from './components/tenant.components/tenant/tenant.co
 import { TenantPaymentComponent } from './components/tenant.components/tenant-payment/tenant-payment.component';
 import { MaintenanceRequestFormComponent } from './components/maintenance/maintenance-request-form/maintenance-request-form.component';
 import { ManagerComponent } from './components/manager.components/manager/manager.component';
+import { UserAccountType } from './model/user-account-type';
 
 // Define routes for the application
 const routes: Routes = [
@@ -30,7 +31,12 @@ const routes: Routes = [
     component: MaintenanceRequestFormComponent,
   },
   // * Manager
-  { path: 'manager', component: ManagerComponent },
+  {
+    path: 'manager',
+    component: ManagerComponent,
+    canActivate: [AuthGuard],
+    data: { roles: [UserAccountType.Manager] },
+  },
   // * Maintenance
   {
     path: 'maintenance-requests',

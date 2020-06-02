@@ -34,9 +34,9 @@ export abstract class GenericRest<T> {
       .pipe(catchError(handleError<T>('GenericRest: get', undefined)));
   }
 
-  public update(entity: T): Observable<any> {
+  public update(data: any): Observable<any> {
     return this.http
-      .put(this.apiUrl, entity, this.httpOptions)
+      .put(this.apiUrl, data, this.httpOptions)
       .pipe(catchError(handleError<any>('GenericRest: update', undefined)));
   }
 

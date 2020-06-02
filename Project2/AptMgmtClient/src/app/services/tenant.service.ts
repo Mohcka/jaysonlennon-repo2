@@ -7,19 +7,15 @@ import { handleError } from 'src/utils/error-handling';
 import { GenericRest } from './generic-rest.service';
 import { ApiBase } from '../../ApiBase';
 import { Resource } from 'src/types/Resource';
-
-interface PayBillData {
-  resource: Resource;
-  billingPeriodId: number;
-  amount: number;
-}
+import { Bill } from '../model/bill';
+import { PayBillData } from '../model/pay-bill-data';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TenantService extends GenericRest<Tenant> {
   constructor(protected http: HttpClient) {
-    super(http, ApiBase.url() + 'tenants');
+    super(http, ApiBase.url() + 'tenant');
   }
 
   /**
@@ -35,6 +31,16 @@ export class TenantService extends GenericRest<Tenant> {
         this.httpOptions
       )
       .pipe(catchError(handleError<Tenant>('registerTenantPayment')));
+  }
+
+  /**
+   * Sends a request to the server for a tenant to make a payment
+   * @param billData Data the server expects to process the payment
+   */
+  payBill(billData: PayBillData): Observable<any> {
+    return this.http
+      .post<any>(`${this.apiUrl}/bill`, billData, this.httpOptions)
+      .pipe(catchError(handleError<PayBillData>('tenantPayBill')));
   }
 
   /**

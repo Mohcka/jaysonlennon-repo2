@@ -1,17 +1,24 @@
-
-<div *ngIf="homeInfo">
+<div class="offset-2"><h2>Welcome</h2></div>
+<div *ngIf="homeInfo" class="offset-2">
   <div>Tenant home page info:</div>
-  <div>billing period start: {{homeInfo.billingPeriodStart}}</div>
-  <div>billing period end: {{homeInfo.billingPeriodEnd}}</div>
+  <div>billing period start: {{ homeInfo.billingPeriodStart | date }}</div>
+  <div>billing period end: {{ homeInfo.billingPeriodEnd | date }}</div>
   <div *ngFor="let bill of homeInfo.bills">
-    <hr>
-    <div>Resource: {{bill.resource | resourceAsString }}</div>
-    <div>period start: {{bill.periodStart}}</div>
-    <div>period end: {{bill.periodEnd}}</div>
-    <div>usage: {{bill.usage}}</div>
-    <div>rate: ${{bill.rate}}</div>
-    <div>cost: ${{bill.cost}}</div>
-    <div>paid: ${{bill.paid}}</div>
-    <div>owed: ${{bill.owed}}</div>
+    <hr />
+    <div>Resource: {{ bill.resource | resourceAsString }}</div>
+    <div>period start: {{ bill.periodStart | date }}</div>
+    <div>period end: {{ bill.periodEnd | date }}</div>
+    <div>usage: {{ bill.usage | currency: 'USD' }}</div>
+    <div>rate: {{ bill.rate | currency: 'USD' }}</div>
+    <div>cost: {{ bill.cost | currency: 'USD' }}</div>
+    <div>paid: {{ bill.paid | currency: 'USD' }}</div>
+    <div>owed: {{ bill.owed | currency: 'USD' }}</div>
+    <button
+      class="btn btn-primary"
+      *ngIf="bill.owed > 0"
+      (click)="payBill(bill.resource, bill.billingPeriodId, bill.owed)"
+    >
+      Pay {{ bill.resource | resourceAsString }}
+    </button>
   </div>
 </div>

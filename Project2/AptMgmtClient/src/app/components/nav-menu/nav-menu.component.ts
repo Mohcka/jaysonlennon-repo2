@@ -21,6 +21,8 @@ export class NavMenuComponent implements OnInit {
     this.authenticationService.currentUser.subscribe(
       (u) => (this.currentUser = u)
     );
+
+    // console.log(`Is Manager ${this.currentUser.userAccountType}`);
   }
 
   ngOnInit() {}

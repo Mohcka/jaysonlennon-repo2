@@ -7,7 +7,7 @@ export interface User {
    * The user's specified role, can either be
    * tenant, manager or admin
    */
-  userAccountType: string;
+  userAccountType: UserAccountType;
   /**
    * Key used to authenticated user's request
    */
