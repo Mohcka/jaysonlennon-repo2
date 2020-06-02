@@ -6,7 +6,7 @@ import { catchError, tap } from 'rxjs/operators';
 import { handleError } from 'src/utils/error-handling';
 import { GenericRest } from './generic-rest.service';
 import { ApiBase } from '../../ApiBase';
-import { Resource } from 'src/types/Resource';
+import { Resource } from 'src/enums/Resource';
 import { Bill } from '../model/bill';
 import { PayBillData } from '../model/pay-bill-data';
 

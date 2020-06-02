@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { User } from '../../model/user';
 // import { TenantHome } from 'src/app/model/tenant-home';
-import { Resource } from 'src/types/Resource';
+import { Resource } from 'src/enums/Resource';
 import { PayBillData } from 'src/app/model/pay-bill-data';
 import { TenantService } from 'src/app/services/tenant.service';
 import { Bill } from 'src/app/model/bill';

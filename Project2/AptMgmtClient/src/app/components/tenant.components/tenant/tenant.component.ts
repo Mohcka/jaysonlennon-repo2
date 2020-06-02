@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Tenant } from 'src/app/model/tenant';
 import { TenantService } from 'src/app/services/tenant.service';
-import { Resource } from 'src/types/Resource';
+import { Resource } from 'src/enums/Resource';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({

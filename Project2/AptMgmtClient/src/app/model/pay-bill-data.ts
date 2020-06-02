@@ -1,4 +1,4 @@
-import { Resource } from 'src/types/Resource';
+import { Resource } from 'src/enums/Resource';
 
 export interface PayBillData {
   tenantId: number;
