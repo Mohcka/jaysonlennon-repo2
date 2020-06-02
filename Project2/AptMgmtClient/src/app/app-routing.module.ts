@@ -27,7 +27,7 @@ const routes: Routes = [
   { path: 'tenants', component: TenantsComponent },
   { path: 'tenant-detail/:id', component: TenantDetailsComponent },
   {
-    path: 'tenant/:id/maintenance',
+    path: 'create/maintenance',
     component: MaintenanceRequestFormComponent,
   },
   // * Manager

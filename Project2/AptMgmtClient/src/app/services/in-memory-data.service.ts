@@ -5,7 +5,7 @@ import { User } from '../model/user';
 import * as mockUsers from 'api/mock-users.json';
 import { Tenant } from '../model/tenant';
 import * as mockTenants from 'api/Tenant/mock-tenants.json';
-import { Maintenance } from '../model/maintenance';
+import { MaintenanceRequest } from '../model/maintenance';
 import * as mockMaintenance from 'api/Tenant/Maintenance.json';
 import { Observable } from 'rxjs';
 
@@ -19,9 +19,9 @@ export class InMemoryDataService implements InMemoryDbService {
    * Creates the in memory database
    */
   public createDb(): { [key: string]: { id: number }[] } {
-    const users: User[] = mockUsers.users;
+    const users: any[] = mockUsers.users;
     const tenants: Tenant[] = mockTenants.tenants;
-    const maintenance: Maintenance[] = mockMaintenance.requests;
+    const maintenance: any[] = mockMaintenance.requests;
     return { users, tenants, maintenance };
   }
 

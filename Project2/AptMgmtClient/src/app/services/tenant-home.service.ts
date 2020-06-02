@@ -9,7 +9,7 @@ import { Bill } from '../model/bill';
   providedIn: 'root'
 })
 
-export class TenantHomeService extends GenericRest<Bill[]> {
+export class TenantBillsService extends GenericRest<Bill[]> {
   constructor(protected http: HttpClient) {
     super(http, ApiBase.url() + 'Bills');
   }

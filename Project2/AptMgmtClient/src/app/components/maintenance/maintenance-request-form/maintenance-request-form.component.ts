@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MaintenanceService } from 'src/app/services/maintenance.service';
 
 @Component({
   selector: 'app-maintenance-request-form',
@@ -27,6 +28,7 @@ export class MaintenanceRequestFormComponent implements OnInit {
   ];
 
   constructor(
+    private maintenanceService: MaintenanceService,
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
     private router: Router
@@ -48,5 +50,12 @@ export class MaintenanceRequestFormComponent implements OnInit {
     console.log('maintenance request submitted');
     console.log(this.f.type.value);
     console.log(this.f.notes.value);
+
+    this.maintenanceService
+      .createNewRequest({
+        openNotes: this.f.notes.value,
+        maintenanceRequestType: this.f.type.value,
+      })
+      .subscribe((_) => this.router.navigate(['/']));
   }
 }
