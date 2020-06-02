@@ -21,7 +21,7 @@ namespace AptMgmtPortalAPI.Repository
             _context = aptMgmtDbContext;
         }
 
-        public async Task<Tenant> AddTenant(Types.TenantInfo info)
+        public async Task<DTO.TenantInfoDTO> AddTenant(DTO.TenantInfoDTO info)
         {
             if (info == null) return null;
 
@@ -30,25 +30,13 @@ namespace AptMgmtPortalAPI.Repository
             tenant.LastName = info.LastName;
             tenant.Email = info.Email;
             tenant.PhoneNumber = info.PhoneNumber;
-            tenant.UserId = info.UserId;
 
             _context.Add(tenant);
+
+            await AssignToUnit(tenant.TenantId, info.UnitNumber);
+
             await _context.SaveChangesAsync();
-            return tenant;
-        }
-
-
-        public async Task<bool> EditPersonalInfo(int tenantId, Types.TenantInfo info)
-        {
-            if (info == null) return false;
-
-            var tenant = await TenantFromId(tenantId);
-            tenant.FirstName = info.FirstName;
-            tenant.LastName = info.LastName;
-            tenant.Email = info.Email;
-            tenant.PhoneNumber = info.PhoneNumber;
-
-            return await _context.SaveChangesAsync() > 0;
+            return new DTO.TenantInfoDTO(tenant, info.UnitNumber);
         }
 
         public async Task<Tenant> TenantFromId(int tenantId)
@@ -86,28 +74,88 @@ namespace AptMgmtPortalAPI.Repository
                         .ToListAsync();
         }
 
-        public async Task<string> GetUnitNumber(int tenantId)
+        public async Task<Unit> UnitFromTenantId(int tenantId)
         {
             return await _context.Units
                 .Where(u => u.TenantId == tenantId)
-                .Select(u => u.UnitNumber)
+                .Select(u => u)
                 .FirstOrDefaultAsync();
         }
 
-        public async Task<Tenant> UpdateTenantInfo(int tenantId, DTO.TenantInfoDTO newInfo)
+        public async Task<DTO.TenantInfoDTO> UpdateTenantInfo(int tenantId, DTO.TenantInfoDTO newInfo)
         {
             var tenant = await TenantFromId(tenantId);
 
-            if (tenant == null) return null;
+            if (tenant == null) return await AddTenant(newInfo);
 
             tenant.FirstName = newInfo.FirstName;
             tenant.LastName = newInfo.LastName;
             tenant.Email = newInfo.Email;
             tenant.PhoneNumber = newInfo.PhoneNumber;
 
+            var unit = await AssignToUnit(tenantId, newInfo.UnitNumber);
+
             await _context.SaveChangesAsync();
 
-            return tenant;
+            if (unit == null) {
+                return new DTO.TenantInfoDTO(tenant, null);
+            } else {
+                return new DTO.TenantInfoDTO(tenant, unit.UnitNumber);
+            }
+        }
+
+        public async Task<IEnumerable<Tenant>> GetTenants()
+        {
+            return await _context.Tenants
+                .Select(t => t)
+                .ToListAsync();
+        }
+
+        public async Task<Unit> AssignToUnit(int tenantId, string unitNumber)
+        {
+            Unit unit;
+            if (String.IsNullOrEmpty(unitNumber))
+            {
+                unit = await _context.Units
+                    .Where(u => u.TenantId == tenantId)
+                    .Select(u => u)
+                    .FirstOrDefaultAsync();
+
+                if (unit == null) return null;
+
+                unit.TenantId = null;
+            }
+            else
+            {
+                unit = await _context.Units
+                    .Where(u => u.UnitNumber.ToLower() == unitNumber.ToLower())
+                    .Select(u => u)
+                    .FirstOrDefaultAsync();
+
+                if (unit == null) return null;
+
+                unit.TenantId = tenantId;
+            }
+
+            await _context.SaveChangesAsync();
+
+            return unit;
+        }
+
+        public async Task<Unit> QueryUnit(int unitId)
+        {
+            return await _context.Units
+                .Where(u => u.UnitId == unitId)
+                .Select(u => u)
+                .FirstOrDefaultAsync();
+        }
+
+        public async Task<Unit> QueryUnitByNumber(string unitNumber)
+        {
+            return await _context.Units
+                .Where(u => u.UnitNumber.ToLower() == unitNumber.ToLower())
+                .Select(u => u)
+                .FirstOrDefaultAsync();
         }
     }
 }
