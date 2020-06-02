@@ -20,7 +20,7 @@ export class FakeAuthBackendInterceptor implements HttpInterceptor {
     request: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
-    const users: User[] = mockUsers.users;
+    const users: any[] = mockUsers.users;
 
     const authHeader = request.headers.get('X-Api-Key');
     const isLoggedIn = authHeader && authHeader.startsWith('api-key');

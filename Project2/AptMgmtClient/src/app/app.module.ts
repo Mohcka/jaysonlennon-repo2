@@ -15,6 +15,9 @@ import { MaintenanceRequestsComponent } from './components/maintenance/maintenan
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { TenantDetailsComponent } from './components/tenant.components/tenant-details/tenant-details.component';
 import { TenantsComponent } from './components/tenant.components/tenants/tenants.component';
+import { TenantComponent } from './components/tenant.components/tenant/tenant.component';
+import { TenantPaymentComponent } from './components/tenant.components/tenant-payment/tenant-payment.component';
+import { MaintenanceRequestFormComponent } from './components/maintenance/maintenance-request-form/maintenance-request-form.component';
 import { ApiTokenInterceptor } from './helpers/api-token.interceptor';
 import { ErrorInterceptor } from './helpers/error.interceptor';
 import { LoginComponent } from './components/login/login.component';
@@ -27,6 +30,7 @@ import { environment } from './../environments/environment';
 // Used in development builds only
 import { InMemoryDataService } from './services/in-memory-data.service';
 import { fakeAuthBackendProvider } from './helpers/fake-auth-backend.interceptor';
+import { ManagerComponent } from './components/manager.components/manager/manager.component';
 import { ManagerMaintenanceRequestListComponent } from './components/manager/manager-maintenance-request-list/manager-maintenance-request-list.component';
 
 // Uses mock api when under development, replaced with a blank module in
@@ -58,6 +62,10 @@ if (process.env.NODE_ENV === 'development' && environment.memoryApi === true) {
     TenantDetailsComponent,
     MaintenanceRequestsComponent,
     LoginComponent,
+    TenantComponent,
+    TenantPaymentComponent,
+    MaintenanceRequestFormComponent,
+    ManagerComponent,
     ResourceEnumPipe,
     MaintenanceCloseReasonEnumPipe,
     ManagerMaintenanceRequestListComponent,

@@ -1,16 +1,112 @@
+<!-- <div class="offset-2"><h2>Welcome</h2></div>
+<div *ngIf="homeInfo" class="offset-2">
+  <div>Tenant home page info:</div>
+  <div>billing period start: {{ homeInfo.billingPeriodStart | date }}</div>
+  <div>billing period end: {{ homeInfo.billingPeriodEnd | date }}</div>
+  <div *ngFor="let bill of homeInfo.bills">
+    <hr />
+    <div>Resource: {{ bill.resource | resourceAsString }}</div>
+    <div>period start: {{ bill.periodStart | date }}</div>
+    <div>period end: {{ bill.periodEnd | date }}</div>
+    <div>usage: {{ bill.usage | currency: 'USD' }}</div>
+    <div>rate: {{ bill.rate | currency: 'USD' }}</div>
+    <div>cost: {{ bill.cost | currency: 'USD' }}</div>
+    <div>paid: {{ bill.paid | currency: 'USD' }}</div>
+    <div>owed: {{ bill.owed | currency: 'USD' }}</div>
+    <button
+      class="btn btn-primary"
+      *ngIf="bill.owed > 0"
+      (click)="payBill(bill.resource, bill.billingPeriodId, bill.owed)"
+    >
+      Pay {{ bill.resource | resourceAsString }}
+    </button> -->
 
-<div *ngIf="bills">
+<div *ngIf="bills" class="offset-2">
+  <h2>Bills for {{ authService.currentUserValue.loginName }}</h2>
   <div *ngFor="let bill of bills">
-    <hr>
-    <div>Tenant id: {{bill.tenantId}}</div>
-    <div>Resource: {{bill.resource | resourceAsString }}</div>
-    <div>period start: {{bill.periodStart}}</div>
-    <div>period end: {{bill.periodEnd}}</div>
-    <div>period id: {{bill.billingPeriodId}}</div>
-    <div>usage: {{bill.usage}}</div>
-    <div>rate: ${{bill.rate}}</div>
-    <div>cost: ${{bill.cost}}</div>
-    <div>paid: ${{bill.paid}}</div>
-    <div>owed: ${{bill.owed}}</div>
+    <hr />
+    <div>Tenant id: {{ bill.tenantId }}</div>
+    <div>Resource: {{ bill.resource | resourceAsString }}</div>
+    <div>period start: {{ bill.periodStart | date }}</div>
+    <div>period end: {{ bill.periodEnd | date }}</div>
+    <div>period id: {{ bill.billingPeriodId }}</div>
+    <div>usage: {{ bill.usage }}</div>
+    <div>rate: {{ bill.rate | currency: 'USD' }}</div>
+    <div>cost: {{ bill.cost | currency: 'USD' }}</div>
+    <div>paid: {{ bill.paid | currency: 'USD' }}</div>
+    <div>owed: {{ bill.owed | currency: 'USD' }}</div>
+    <button
+      class="btn btn-primary"
+      *ngIf="bill.owed > 0"
+      (click)="payBill(bill.resource, bill.billingPeriodId, bill.owed)"
+    >
+      Pay {{ bill.resource | resourceAsString }}
+    </button>
   </div>
+</div>
+
+<!-- <div *ngIf="maintenanceRequests" class="offset-2">
+  <h2>{{ authService.currentUserValue.loginName }}'s Mainteance Requests</h2>
+  <a class="btn btn-primary" [routerLink]="['/create/maintenance']"
+    >Create New Request</a
+  >
+  <ul>
+    <div *ngFor="let request of maintenanceRequests">
+      <div>{{ request | json }}</div>
+    </div>
+  </ul>
+</div> -->
+
+<div *ngIf="maintenanceRequests" class="offset-2">
+  <h2>{{ authService.currentUserValue.loginName }}'s Mainteance Requests</h2>
+  <a class="btn btn-primary" [routerLink]="['/create/maintenance']">
+    Create New Request
+  </a>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Request#</th>
+        <th scope="col">Handle</th>
+        <th scope="col">Requester</th>
+        <th scope="col">Time created</th>
+        <th scope="col">Reason</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let request of maintenanceRequests">
+        <th scope="row">{{ request.maintenanceRequestId }}</th>
+        <td>{{ request.maintenanceRequestType }}</td>
+        <td>{{ request.openedBy }}</td>
+        <td>{{ request.timeOpened | date: 'MM/dd/yy HH:mm' }}</td>
+        <td>{{ request.openNotes }}</td>
+        <td><button class="btn btn-danger">Cancel</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="agreements" class="offset-2">
+  <h2>{{ authService.currentUserValue.loginName }}'s Agreements</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Agreement#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Agreement</th>
+        <th scope="col">Signed Date</th>
+        <th scope="col">Start Date</th>
+        <th scope="col">EndDate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let agreement of agreements">
+        <th scope="row">{{ agreement.agreementId }}</th>
+        <td>{{ agreement.title }}</td>
+        <td>{{ agreement.text }}</td>
+        <td>{{ agreement.signedDate | date }}</td>
+        <td>{{ agreement.startDate | date }}</td>
+        <td>{{ agreement.endDate | date }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>

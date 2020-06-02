@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { handleError } from 'src/utils/error-handling';
@@ -10,6 +10,10 @@ import { handleError } from 'src/utils/error-handling';
  */
 @Injectable()
 export abstract class GenericRest<T> {
+  protected httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+  };
+
   constructor(protected http: HttpClient, protected apiUrl: string) {}
 
   public getAll(): Observable<T[]> {
@@ -28,5 +32,30 @@ export abstract class GenericRest<T> {
     return this.http
       .get<T>(`${this.apiUrl}`)
       .pipe(catchError(handleError<T>('GenericRest: get', undefined)));
+  }
+
+  public update(data: any): Observable<any> {
+    return this.http
+      .put(this.apiUrl, data, this.httpOptions)
+      .pipe(catchError(handleError<any>('GenericRest: update', undefined)));
+  }
+
+  public add(entity: T): Observable<T> {
+    return this.http
+      .post<T>(this.apiUrl, entity, this.httpOptions)
+      .pipe(catchError(handleError<T>('GenericRest: add', undefined)));
+  }
+
+  /**
+   * Send a request to the server to delete the specified entity
+   * @param entity Either the entity or the entity's id
+   */
+  public delete(entity: T | number): Observable<T> {
+    const id = typeof entity === 'number' ? entity : (entity as any).id;
+    const url = `${this.apiUrl}/${id}`;
+
+    return this.http
+      .delete<T>(url, this.httpOptions)
+      .pipe(catchError(handleError<T>('GenericRest: delete', undefined)));
   }
 }

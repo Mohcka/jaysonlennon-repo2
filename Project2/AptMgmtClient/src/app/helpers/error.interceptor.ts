@@ -17,9 +17,7 @@ import { AuthenticationService } from '../services/authentication.service';
 
 @Injectable()
 export class ErrorInterceptor implements HttpInterceptor {
-  constructor(
-    private authtenticationService: AuthenticationService
-  ) {}
+  constructor(private authtenticationService: AuthenticationService) {}
 
   intercept(
     request: HttpRequest<any>,
@@ -40,7 +38,7 @@ export class ErrorInterceptor implements HttpInterceptor {
         // const error = err.error
         //   ? err.error.message
         //   : 'An error has occured' || err.statusTest;
-        // console.log(err);
+        console.log(err);
         return throwError(err);
       })
     );

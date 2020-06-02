@@ -1,23 +1,28 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { MaintenanceRequest } from '../model/maintenance-request';
+import { MaintenanceRequest } from '../model/maintenance';
+import { GenericRest } from './generic-rest.service';
 import { ApiBase } from '../../ApiBase';
+import { MaintenanceRequestData } from '../model/maintenance-request-data';
 import { Observable } from 'rxjs';
-import { handleError } from 'src/utils/error-handling';
 import { catchError } from 'rxjs/operators';
+import { handleError } from 'src/utils/error-handling';
 
 @Injectable({
   providedIn: 'root',
 })
-export class MaintenanceService {
+export class MaintenanceService extends GenericRest<any> {
+  constructor(protected http: HttpClient) {
+    super(http, ApiBase.url() + 'maintenance');
+  }
 
-  private apiUrl = ApiBase.url() + 'Maintenance';
+  createNewRequest(data: MaintenanceRequestData): Observable<any> {
+    return this.http
+      .post<any>(this.apiUrl, data, this.httpOptions)
+      .pipe(catchError(handleError<any>('maintenance: createNewRequest')));
+  }
 
-  constructor(protected http: HttpClient) { }
-
-   public getAll(): Observable<MaintenanceRequest[]> {
-     return this.http
-       .get<MaintenanceRequest[]>(this.apiUrl)
-       .pipe(catchError(handleError('getMaintenanceRequests', [])));
-   }
+  cancelRequest(): Observable<any> {
+    return; // TODO: implement
+  }
 }

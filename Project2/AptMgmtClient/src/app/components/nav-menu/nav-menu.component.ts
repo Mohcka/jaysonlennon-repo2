@@ -21,6 +21,8 @@ export class NavMenuComponent implements OnInit {
     this.authenticationService.currentUser.subscribe(
       (u) => (this.currentUser = u)
     );
+
+    // console.log(`Is Manager ${this.currentUser.userAccountType}`);
   }
 
   ngOnInit() {}
@@ -29,6 +31,13 @@ export class NavMenuComponent implements OnInit {
     return (
       this.currentUser &&
       Number(this.currentUser.userAccountType) === UserAccountType.Manager
+    );
+  }
+
+  get isTenant(): boolean {
+    return (
+      this.currentUser &&
+      this.currentUser.userAccountType === UserAccountType.Tenant
     );
   }
 

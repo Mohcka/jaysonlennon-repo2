@@ -4,8 +4,8 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { User } from '../model/user';
 import * as mockUsers from 'api/mock-users.json';
 import { Tenant } from '../model/tenant';
-import * as mockTenants from 'api/Tenant/index.json';
-import { MaintenanceRequest } from '../model/maintenance-request';
+import * as mockTenants from 'api/Tenant/mock-tenants.json';
+import { MaintenanceRequest } from '../model/maintenance';
 import * as mockMaintenance from 'api/Tenant/Maintenance.json';
 import { Observable } from 'rxjs';
 
@@ -19,10 +19,10 @@ export class InMemoryDataService implements InMemoryDbService {
    * Creates the in memory database
    */
   public createDb(): { [key: string]: { id: number }[] } {
-    const users: User[] = mockUsers.users;
-    const tenant: Tenant[] = mockTenants.tenants;
-    //const maintenance: MaintenanceRequest[] = mockMaintenance.requests;
-    return { users, tenant };
+    const users: any[] = mockUsers.users;
+    const tenants: Tenant[] = mockTenants.tenants;
+    const maintenance: any[] = mockMaintenance.requests;
+    return { users, tenants, maintenance };
   }
 
   public genId(resource: { id: number }[]): number {

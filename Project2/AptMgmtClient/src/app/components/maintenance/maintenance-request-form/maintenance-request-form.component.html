@@ -1,0 +1,33 @@
+<div class="offset-2">
+  <form [formGroup]="maintenanceRequestForm" (ngSubmit)="onSubmit()">
+    <label for="exampleFormControlInput1">Maintenance Request Type</label>
+    <select
+      id="exampleFormControlInput1"
+      class="custom-select"
+      formControlName="type"
+    >
+      <option *ngFor="let type of maintenanceRequestTypes" value="{{ type }}">{{
+        type
+      }}</option>
+    </select>
+
+    <div class="form-group">
+      <label for="notes">Notes</label>
+      <textarea
+        type="notes"
+        formControlName="notes"
+        class="form-control"
+        id="notes"
+        [ngClass]="{ 'is-invalid': submitted && f.notes.errors }"
+      ></textarea>
+      <div *ngIf="submitted && f.notes.errors" class="invalid-feedback">
+        <div *ngIf="f.notes.errors.required">Notes is requried</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button [disabled]="loading" class="btn btn-primary">Submit</button>
+      <div *ngIf="loading">Processing</div>
+    </div>
+  </form>
+</div>

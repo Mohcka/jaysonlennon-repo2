@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MaintenanceRequest } from 'src/app/model/maintenance-request';
+import { MaintenanceRequest } from 'src/app/model/maintenance';
 import { MaintenanceService } from 'src/app/services/maintenance.service';
 
 @Component({

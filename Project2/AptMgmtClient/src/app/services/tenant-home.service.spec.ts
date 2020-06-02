@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { TenantHomeService } from './tenant-home.service';
+import { TenantBillsService } from './tenant-home.service';
 
 describe('TenantHomeService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: TenantHomeService = TestBed.get(TenantHomeService);
+    const service: TenantBillsService = TestBed.get(TenantBillsService);
     expect(service).toBeTruthy();
   });
 });

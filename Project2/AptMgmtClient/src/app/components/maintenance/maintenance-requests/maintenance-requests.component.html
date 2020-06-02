@@ -1,13 +1,15 @@
-<h2>Maintenace Requests</h2>
+<div class="offset-2">
+  <h2>Maintenace Requests</h2>
+  <button class="col-3 btn btn-primary">Create New Request</button>
+  <div *ngIf="!maintenanceRequests">
+    Loading
+  </div>
 
-<div *ngIf="!maintenanceRequests">
-  Loading
-</div>
-
-<div *ngIf="maintenanceRequests">
-  <ul>
-    <li *ngFor="let request of maintenanceRequests">
-      {{request.id}}: {{request.category}}
-    </li>
-  </ul>
+  <div *ngIf="maintenanceRequests">
+    <ul>
+      <li *ngFor="let request of maintenanceRequests">
+        <!-- {{ request.id }}: {{ request.category }} -->
+      </li>
+    </ul>
+  </div>
 </div>
