@@ -11,15 +11,22 @@ import { Bill } from '../model/bill';
 @Injectable({
   providedIn: 'root',
 })
-export class BillService extends GenericRest<Bill | Bill[]> {
-  constructor(protected http: HttpClient) {
-    super(http, ApiBase.url() + 'bills');
-  }
+export class BillService {
+
+  private httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+  };
+
+  constructor(protected http: HttpClient) { }
 
   public payBill(billData: PayBillData): Observable<Bill> {
     return this.http
       .post<Bill>(ApiBase.url() + 'Bill', billData, this.httpOptions)
-      .pipe(catchError(handleError<Bill>('bill.service(payBill)')));
+      .pipe(
+        catchError(
+          handleError<Bill>('bill.service(payBill)')
+        )
+      );
   }
 
   public getBillsInCurrentPeriod(): Observable<Bill[]> {
@@ -42,7 +49,7 @@ export class BillService extends GenericRest<Bill | Bill[]> {
 
   public getUnpaidBills(): Observable<Bill[]> {
     return this.http
-      .get<Bill[]>(this.apiUrl + '/Unpaid')
+      .get<Bill[]>(ApiBase.url() + 'Bills/Unpaid')
       .pipe(catchError(handleError<Bill[]>('getUnpaidBills')));
   }
 }
