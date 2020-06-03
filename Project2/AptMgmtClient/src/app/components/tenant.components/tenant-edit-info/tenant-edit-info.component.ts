@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/services/authentication.service';
+import { Tenant } from 'src/app/model/tenant';
+import { TenantService } from 'src/app/services/tenant.service';
 
 @Component({
   selector: 'app-tenant-edit-info',
@@ -10,6 +12,7 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
 })
 export class TenantEditInfoComponent implements OnInit {
   public tenantForm: FormGroup;
+  public tenant: Tenant;
   /**
    * loading state provided to view component
    */
@@ -25,27 +28,38 @@ export class TenantEditInfoComponent implements OnInit {
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
     private router: Router,
-    private authService: AuthenticationService
-  ) {
-    // go back home if logged in
-    if (this.authService.currentUserValue) {
-      this.router.navigate([this.authService.getHomeRoute()]);
-    }
+    private authService: AuthenticationService,
+    private tenantService: TenantService
+  ) {}
+
+  ngOnInit() {
+    this.tenantForm = this.formBuilder.group({
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      email: ['', Validators.required],
+      phoneNumber: ['', Validators.required],
+    });
+
+    this.getTenant();
+  }
+
+  public getTenant(): void {
+    this.tenantService.getTenant().subscribe((tenant) => {
+      this.tenant = tenant;
+
+      // update form with tenants details
+      this.tenantForm.patchValue({
+        firstName: tenant.firstName,
+        lastName: tenant.lastName,
+        email: tenant.email,
+        phoneNumber: tenant.phoneNumber,
+      });
+    });
   }
 
   // convencience getter for easy access to form fields
   get f() {
     return this.tenantForm.controls;
-  }
-
-  ngOnInit() {
-    this.tenantForm = this.formBuilder.group({
-      firstName: [this.authService.currentUserValue.firstName, Validators.required],
-      lastName: [this.authService.currentUserValue.lastName, Validators.required],
-    });
-
-    // get return url from route parameters or default to '/'
-    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
   }
 
   onSubmit() {
@@ -57,6 +71,24 @@ export class TenantEditInfoComponent implements OnInit {
     }
 
     this.loading = true;
-    // TODO: finish
+
+    const updatedTenant: Tenant = {
+      tenantId: this.tenant.tenantId,
+      phoneNumber: this.f.phoneNumber.value,
+      email: this.f.email.value,
+      firstName: this.f.firstName.value,
+      lastName: this.f.lastName.value,
+      unitNumber: this.tenant.unitNumber,
+    };
+
+    this.tenantService.updateTenant(updatedTenant).subscribe(
+      (_data) => {
+        this.router.navigate(['/tenant']);
+      },
+      (err) => {
+        this.error = JSON.stringify(err);
+        this.loading = false;
+      }
+    );
   }
 }
