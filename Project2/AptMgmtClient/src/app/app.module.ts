@@ -17,7 +17,6 @@ import { MaintenanceRequestFormComponent } from './components/universal.componen
 import { ApiTokenInterceptor } from './helpers/api-token.interceptor';
 import { ErrorInterceptor } from './helpers/error.interceptor';
 import { LoginComponent } from './components/universal.components/login/login.component';
-import { ManagerMaintenanceRequestListComponent } from './components/manager.components/manager-maintenance-request-list/manager-maintenance-request-list.component';
 import { RouterHubComponent } from './components/universal.components/router-hub/router-hub.component';
 
 import { ResourceEnumPipe } from './helpers/resource-enum-pipe';
@@ -49,16 +48,15 @@ import { TenantEditInfoComponent } from './components/tenant.components/tenant-e
     TenantPageListBillsComponent,
     TenantPageListAgreementsComponent,
     TenantPageBillPayComponent,
+    TenantEditInfoComponent,
 
     // Manager components
     ManagerHomeComponent,
-    ManagerMaintenanceRequestListComponent,
     ManagerListTenantsComponent,
 
     // Pipes
     ResourceEnumPipe,
     MaintenanceCloseReasonEnumPipe,
-    TenantEditInfoComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

@@ -4,7 +4,6 @@ import { UnauthorizedAccessComponent } from './components/universal.components/u
 import { UserAccountType } from './../enums/user-account-type';
 import { ManagerHomeComponent } from './components/manager.components/manager-home/manager-home.component';
 import { RouterHubComponent } from './components/universal.components/router-hub/router-hub.component';
-import { ManagerMaintenanceRequestListComponent } from './components/manager.components/manager-maintenance-request-list/manager-maintenance-request-list.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TenantHomeComponent } from './components/tenant.components/tenant-home/tenant-home.component';
