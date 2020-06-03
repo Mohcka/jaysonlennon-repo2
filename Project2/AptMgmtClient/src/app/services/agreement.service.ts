@@ -1,14 +1,30 @@
 import { Injectable } from '@angular/core';
-import { GenericRest } from './generic-rest.service';
 import { Agreement } from '../model/agreement';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ApiBase } from 'src/ApiBase';
+import { Observable } from 'rxjs';
+import { catchError } from 'rxjs/operators';
+import { handleError } from 'src/utils/error-handling';
 
 @Injectable({
   providedIn: 'root',
 })
-export class AgreementService extends GenericRest<any> {
-  constructor(protected http: HttpClient) {
-    super(http, ApiBase.url() + 'agreements');
+export class AgreementService {
+  constructor(protected http: HttpClient) { }
+
+  private httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+  };
+
+  public getAgreements(): Observable<Agreement[]> {
+    return this.http
+      .get<Agreement[]>(ApiBase.url() + 'Agreements')
+      .pipe(catchError(handleError<Agreement[]>('agreement.service(getAgreements)', [])));
+  }
+
+  public signAgreement(data: Agreement): Observable<Agreement> {
+    return this.http
+      .post<Agreement>(ApiBase.url() + 'Agreements', data, this.httpOptions)
+      .pipe(catchError(handleError<null>('agreement.service(signAgreement)')));
   }
 }

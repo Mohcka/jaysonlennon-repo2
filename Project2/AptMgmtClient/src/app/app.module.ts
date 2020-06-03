@@ -24,6 +24,9 @@ import { ResourceEnumPipe } from './helpers/resource-enum-pipe';
 import { MaintenanceCloseReasonEnumPipe } from './helpers/maintenance-close-reason-pipe';
 import { ManagerListTenantsComponent } from './components/manager.components/manager-list-tenants/manager-list-tenants.component';
 import { BillComponent } from './components/tenant.components/bill/bill.component';
+import { UnauthorizedAccessComponent } from './components/universal.components/unauthorized-access/unauthorized-access.component';
+import { TenantPageBillPayComponent } from './components/tenant.components/tenant-page-bill-pay/tenant-page-bill-pay.component';
+import { TenantPageListBillsComponent } from './components/tenant.components/tenant-page-list-bills/tenant-page-list-bills.component';
 
 @NgModule({
   declarations: [
@@ -35,12 +38,17 @@ import { BillComponent } from './components/tenant.components/bill/bill.componen
     MaintenanceRequestFormComponent,
     LoginComponent,
     RouterHubComponent,
+    UnauthorizedAccessComponent,
 
-    // Components - Tenant
+    // Tenant components
     TenantHomeComponent,
     TenantDetailsComponent,
 
-    // Components - Manager
+    // Tenant pages
+    TenantPageListBillsComponent,
+    TenantPageBillPayComponent,
+
+    // Manager components
     ManagerHomeComponent,
     ManagerMaintenanceRequestListComponent,
     ManagerListTenantsComponent,

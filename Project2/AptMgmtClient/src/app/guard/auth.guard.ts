@@ -1,3 +1,4 @@
+import { UserAccountType } from './../../enums/user-account-type';
 /**
  * Implementation taken from:
  * https://jasonwatmore.com/post/2020/05/15/angular-9-role-based-authorization-tutorial-with-example#auth-guard-ts
@@ -24,23 +25,18 @@ export class AuthGuard implements CanActivate {
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     const currentUser = this.authenticationService.currentUserValue;
-    // Check if the current route is restricted
-    // TODO: check roles.
     if (currentUser) {
-      if (
-        route.data.userAccountTypes &&
-        route.data.userAccountTypes.indexOf(currentUser.userAccountType) === -1
-      ) {
-        // route not authorized, redicrecting to home page
-        this.router.navigate(['/']);
+      if (route.data.roles.find((el: UserAccountType) => el === currentUser.userAccountType)) {
+        // User is authorized.
+        return true;
+      } else {
+        // User is not authorized.
+        this.router.navigate(['403']);
         return false;
       }
-
-      // authorization cleared
-      return true;
     }
 
-    // not logged in, redirect to login page
+    // User is not logged in.
     this.router.navigate(['/login'], { queryParams: { returnUrl: state.url } });
     return false;
   }

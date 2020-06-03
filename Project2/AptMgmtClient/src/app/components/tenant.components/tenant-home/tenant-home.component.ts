@@ -1,4 +1,4 @@
-import { TenantBillsService } from '../../../services/tenant-home.service';
+import { PayBillData } from 'src/app/model/pay-bill-data';
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../../services/user.service';
 import { User } from '../../../model/user';
@@ -10,6 +10,8 @@ import { MaintenanceService } from 'src/app/services/maintenance.service';
 import { Agreement } from 'src/app/model/agreement';
 import { AgreementService } from 'src/app/services/agreement.service';
 import { MaintenanceRequest } from 'src/app/model/maintenance-request';
+import { TenantService } from 'src/app/services/tenant.service';
+import { Tenant } from 'src/app/model/tenant';
 
 @Component({
   selector: 'app-home',
@@ -20,56 +22,56 @@ export class TenantHomeComponent implements OnInit {
   public bills: Bill[];
   public maintenanceRequests: MaintenanceRequest[];
   public agreements: Agreement[];
+  public tenant: Tenant;
 
   constructor(
     private userService: UserService,
-    private tenantHomeService: TenantBillsService,
     private billService: BillService,
     private maintenanceService: MaintenanceService,
     private agreementService: AgreementService,
+    private tenantService: TenantService,
     public authService: AuthenticationService
   ) {}
 
   public ngOnInit() {
     this.getUsers();
-    this.getHomeData();
     this.getTenantMaintenanceRequests();
     this.getTenantAgreements();
+    this.getTenantInfo();
+    this.getBills();
   }
 
-  public getHomeData() {
-    this.tenantHomeService.get().subscribe((data) => (this.bills = data));
+  public getTenantInfo(): void {
+    this.tenantService.getTenant().subscribe((tenant) => this.tenant = tenant);
   }
 
   public getUsers(): void {
     this.userService.getUsers().subscribe((users) => (this.users = users));
   }
 
+  public getBills(): void {
+    this.billService.getBillsInCurrentPeriod().subscribe((bills) => this.bills = bills);
+  }
+
   public getTenantMaintenanceRequests(): void {
     this.maintenanceService
-      .get()
+      .getAll()
       .subscribe((mR) => (this.maintenanceRequests = mR));
   }
 
   getTenantAgreements(): void {
-    this.agreementService.get().subscribe((data) => (this.agreements = data));
+    this.agreementService.getAgreements().subscribe((data) => (this.agreements = data));
   }
 
   public cancelTenantRequest(): void {}
 
-  public payBill(
-    resource: Resource,
-    billingPeriodId: number,
-    amount: number
-  ): void {
-    this.billService
-      .payBill({
-        // Signed in user should be tenant
-        tenantId: this.authService.currentUserValue.userId,
+  public payBill(resource: Resource,billingPeriodId: number,amount: number): void {
+    const payBillInfo: PayBillData = {
+        tenantId: this.tenant.tenantId,
         resource: resource,
         billingPeriodId: billingPeriodId,
         amount: amount,
-      })
-      .subscribe((_) => this.getHomeData());
+    };
+    this.billService.payBill(payBillInfo).subscribe((_) => this.getBills());
   }
 }

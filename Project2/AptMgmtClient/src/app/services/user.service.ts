@@ -6,26 +6,39 @@ import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
 import { ApiBase } from './../../ApiBase';
-//import { handleError } from 'src/utils/error-handling';
+import { handleError } from 'src/utils/error-handling';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserService {
-  /**
-   * The base url for making api requests for users resources
-   */
-  private readonly usersUrl = ApiBase.url() + 'users'; // API + endpoint
+
+  private readonly apiUrl = ApiBase.url() + 'User'; // API + endpoint
+
+  private httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+  };
 
   constructor(private http: HttpClient) {}
 
-  /**
-   * Requests to fetch all the users from the api
-   */
   public getUsers(): Observable<User[]> {
-    return this.http.get<User[]>(this.usersUrl) //change for put and post
+    return this.http.get<User[]>(this.apiUrl)
       .pipe(
-        //catchError(handleError<User[]>('getUsers', [])) //square is a array
+        catchError(handleError<User[]>('user.service(getUsers)', []))
+      );
+  }
+
+  public getUser(id: number): Observable<User> {
+    return this.http.get<User>(this.apiUrl + `/${id}`)
+      .pipe(
+        catchError(handleError<null>('user.service(getUser)'))
+      );
+  }
+
+  public updateUser(user: User): Observable<User> {
+    return this.http.post<User>(this.apiUrl, user, this.httpOptions)
+      .pipe(
+        catchError(handleError<User>('user.service(updateUser)'))
       );
   }
 

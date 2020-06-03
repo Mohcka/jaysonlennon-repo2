@@ -49,6 +49,10 @@ export class NavMenuComponent implements OnInit {
     this.isExpanded = !this.isExpanded;
   }
 
+  goHome() {
+    this.router.navigate([this.authenticationService.getHomeRoute()]);
+  }
+
   /**
    * Logs user out and removes relative data from local storage
    */
