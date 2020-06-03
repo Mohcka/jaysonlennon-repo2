@@ -21,6 +21,7 @@ export class MaintenanceRequestFormComponent implements OnInit {
   public returnUrl: string;
   public error = '';
 
+  // TODO: Get maintenance request type samples from server
   public maintenanceRequestTypes: string[] = [
     'Plumbing',
     'Upholstry',
