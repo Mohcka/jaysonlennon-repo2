@@ -81,14 +81,6 @@ export class MaintenanceRequestFormComponent implements OnInit {
   }
 
   onSubmit(): void {
-    // TODO: submit form to server
-    console.log('maintenance request submitted');
-    console.log(this.f.type.value);
-    console.log(this.f.notes.value);
-    console.log(this.f.tenantUnit.value);
-
-    // return;
-
     this.submitted = true;
 
     // stop if form is invalid
