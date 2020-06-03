@@ -1,27 +1,38 @@
-<!-- <div class="offset-2"><h2>Welcome</h2></div>
-<div *ngIf="homeInfo" class="offset-2">
-  <div>Tenant home page info:</div>
-  <div>billing period start: {{ homeInfo.billingPeriodStart | date }}</div>
-  <div>billing period end: {{ homeInfo.billingPeriodEnd | date }}</div>
-  <div *ngFor="let bill of homeInfo.bills">
-    <hr />
-    <div>Resource: {{ bill.resource | resourceAsString }}</div>
-    <div>period start: {{ bill.periodStart | date }}</div>
-    <div>period end: {{ bill.periodEnd | date }}</div>
-    <div>usage: {{ bill.usage | currency: 'USD' }}</div>
-    <div>rate: {{ bill.rate | currency: 'USD' }}</div>
-    <div>cost: {{ bill.cost | currency: 'USD' }}</div>
-    <div>paid: {{ bill.paid | currency: 'USD' }}</div>
-    <div>owed: {{ bill.owed | currency: 'USD' }}</div>
-    <button
-      class="btn btn-primary"
-      *ngIf="bill.owed > 0"
-      (click)="payBill(bill.resource, bill.billingPeriodId, bill.owed)"
-    >
-      Pay {{ bill.resource | resourceAsString }}
-    </button> -->
+<h2>Welcome {{ this.authService.currentUserValue.loginName }}</h2>
+<hr />
 
-<div *ngIf="bills" class="offset-2">
+<h4>Due payments</h4>
+<ul class="list-group col-3">
+  <li
+    class="list-group-item d-flex justify-content-between align-items-center"
+    *ngFor="let unpaidBill of unpaidBills"
+  >
+    <div style="font-size: large;">
+      {{ unpaidBill.resource | resourceAsString }}
+    </div>
+    <div>
+      <a
+        class="btn btn-primary"
+        [routerLink]="[
+          '/tenant/bill/pay',
+          unpaidBill.billingPeriodId,
+          unpaidBill.resource
+        ]"
+        >View Bill</a
+      >
+    </div>
+  </li>
+</ul>
+
+<hr />
+
+<a class="btn btn-primary" [routerLink]="['/tenant/maintenance/list']">
+  Check your maintenance requests
+</a>
+
+<hr />
+
+<!-- <div *ngIf="bills">
   <h2>Bills for {{ authService.currentUserValue.loginName }}</h2>
   <div *ngFor="let bill of bills">
     <hr />
@@ -43,21 +54,9 @@
       Pay {{ bill.resource | resourceAsString }}
     </button>
   </div>
-</div>
-
-<!-- <div *ngIf="maintenanceRequests" class="offset-2">
-  <h2>{{ authService.currentUserValue.loginName }}'s Mainteance Requests</h2>
-  <a class="btn btn-primary" [routerLink]="['/create/maintenance']"
-    >Create New Request</a
-  >
-  <ul>
-    <div *ngFor="let request of maintenanceRequests">
-      <div>{{ request | json }}</div>
-    </div>
-  </ul>
 </div> -->
 
-<div *ngIf="maintenanceRequests" class="offset-2">
+<div *ngIf="maintenanceRequests">
   <h2>{{ authService.currentUserValue.loginName }}'s Mainteance Requests</h2>
   <a class="btn btn-primary" [routerLink]="['/create/maintenance']">
     Create New Request

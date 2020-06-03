@@ -20,6 +20,7 @@ import { Tenant } from 'src/app/model/tenant';
 export class TenantHomeComponent implements OnInit {
   public users: User[] = [];
   public bills: Bill[];
+  public unpaidBills: Bill[];
   public maintenanceRequests: MaintenanceRequest[];
   public agreements: Agreement[];
   public tenant: Tenant;
@@ -39,10 +40,13 @@ export class TenantHomeComponent implements OnInit {
     this.getTenantAgreements();
     this.getTenantInfo();
     this.getBills();
+    this.getUnpaidBills();
   }
 
   public getTenantInfo(): void {
-    this.tenantService.getTenant().subscribe((tenant) => this.tenant = tenant);
+    this.tenantService
+      .getTenant()
+      .subscribe((tenant) => (this.tenant = tenant));
   }
 
   public getUsers(): void {
@@ -50,7 +54,15 @@ export class TenantHomeComponent implements OnInit {
   }
 
   public getBills(): void {
-    this.billService.getBillsInCurrentPeriod().subscribe((bills) => this.bills = bills);
+    this.billService
+      .getBillsInCurrentPeriod()
+      .subscribe((bills) => (this.bills = bills));
+  }
+
+  public getUnpaidBills(): void {
+    this.billService
+      .getUnpaidBills()
+      .subscribe((unpaidBills) => (this.unpaidBills = unpaidBills));
   }
 
   public getTenantMaintenanceRequests(): void {
@@ -60,17 +72,23 @@ export class TenantHomeComponent implements OnInit {
   }
 
   getTenantAgreements(): void {
-    this.agreementService.getAgreements().subscribe((data) => (this.agreements = data));
+    this.agreementService
+      .getAgreements()
+      .subscribe((data) => (this.agreements = data));
   }
 
   public cancelTenantRequest(): void {}
 
-  public payBill(resource: Resource,billingPeriodId: number,amount: number): void {
+  public payBill(
+    resource: Resource,
+    billingPeriodId: number,
+    amount: number
+  ): void {
     const payBillInfo: PayBillData = {
-        tenantId: this.tenant.tenantId,
-        resource: resource,
-        billingPeriodId: billingPeriodId,
-        amount: amount,
+      tenantId: this.tenant.tenantId,
+      resource: resource,
+      billingPeriodId: billingPeriodId,
+      amount: amount,
     };
     this.billService.payBill(payBillInfo).subscribe((_) => this.getBills());
   }
