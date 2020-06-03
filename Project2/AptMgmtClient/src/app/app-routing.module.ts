@@ -14,6 +14,7 @@ import { AuthGuard } from './guard/auth.guard';
 import { LoginComponent } from './components/universal.components/login/login.component';
 import { MaintenanceRequestFormComponent } from './components/universal.components/maintenance-request-form/maintenance-request-form.component';
 import { ManagerListTenantsComponent } from './components/manager.components/manager-list-tenants/manager-list-tenants.component';
+import { BillComponent } from './components/tenant.components/bill/bill.component';
 import { TenantPageListBillsComponent } from './components/tenant.components/tenant-page-list-bills/tenant-page-list-bills.component';
 
 // Define routes for the application
@@ -26,6 +27,9 @@ const routes: Routes = [
   // Tenants
   { path: 'tenant', component: TenantHomeComponent,
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },
+
+  { path: 'tenant/bill/:id/:resource', component: BillComponent,
+    canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant]} },
 
   { path: 'tenant/tenantInfo/:id', component: TenantDetailsComponent,
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },

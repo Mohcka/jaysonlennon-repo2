@@ -11,14 +11,10 @@ import { Bill } from '../model/bill';
 @Injectable({
   providedIn: 'root',
 })
-
-export class BillService {
-
-  private httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
-  };
-
-  constructor(protected http: HttpClient) { }
+export class BillService extends GenericRest<Bill | Bill[]> {
+  constructor(protected http: HttpClient) {
+    super(http, ApiBase.url() + 'bills');
+  }
 
   public payBill(billData: PayBillData): Observable<Bill> {
     return this.http
@@ -29,12 +25,24 @@ export class BillService {
   public getBillsInCurrentPeriod(): Observable<Bill[]> {
     return this.http
       .get<Bill[]>(ApiBase.url() + 'Bills')
-      .pipe(catchError(handleError<Bill[]>('bill.serice(getBillsInCurrentPeriod)', [])));
+      .pipe(
+        catchError(
+          handleError<Bill[]>('bill.serice(getBillsInCurrentPeriod)', [])
+        )
+      );
   }
 
   public getBillsInPeriod(period: number): Observable<Bill[]> {
     return this.http
       .get<Bill[]>(ApiBase.url() + `Bills/${period}`)
-      .pipe(catchError(handleError<Bill[]>('bill.serice(getBillsInPeriod)', [])));
+      .pipe(
+        catchError(handleError<Bill[]>('bill.serice(getBillsInPeriod)', []))
+      );
+  }
+
+  public getUnpaidBills(): Observable<Bill[]> {
+    return this.http
+      .get<Bill[]>(this.apiUrl + '/Unpaid')
+      .pipe(catchError(handleError<Bill[]>('getUnpaidBills')));
   }
 }
