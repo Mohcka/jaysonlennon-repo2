@@ -12,16 +12,13 @@ namespace AptMgmtPortalAPI.Repository
     /// </summary>
     public interface IAgreement
     {
-        Task<IEnumerable<DataModel.Agreement>> GetSignedAgreements(int tenantId);
-        Task<DataModel.Agreement> GetSignedAgreement(int agreementId);
-        Task<IEnumerable<DataModel.AgreementSummary>> GetSignedAgreementSummaries(int tenantId);
-        Task<DataModel.Agreement> SignAgreement(int tenantId,
-                                                int agreementId,
-                                                DateTime startDate,
-                                                DateTime endDate);
-        Task<IEnumerable<Entity.Agreement>> GetAllAgreements();
-        Task<IEnumerable<DataModel.Agreement>> GetAllSignedAgreements();
-
-        Task<Agreement> UpdateAgreementTemplate(Agreement agreement);
+        Task<Agreement> AddAgreement(int tenantId,
+                                           int agreementTemplateId,
+                                           DateTime startDate,
+                                           DateTime endDate);
+        Task<IEnumerable<DataModel.Agreement>> GetAgreements();
+        Task<IEnumerable<DataModel.Agreement>> GetAgreements(int tenantId);
+        Task<DataModel.Agreement> GetAgreement(int agreementId);
+        Task<Agreement> UpdateAgreement(Agreement updated);
     }
 }

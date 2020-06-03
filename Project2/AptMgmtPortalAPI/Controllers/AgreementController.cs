@@ -30,61 +30,6 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
         }
 
         [HttpGet]
-        [Route("AgreementTemplates")]
-        [Authorize(Policy = Policies.AnyLoggedIn)]
-        public async Task<IActionResult> GetAgreementTemplates()
-        {
-            if (this.UserInRole(Role.Tenant))
-            {
-                var userId = this.UserIdFromApiKey();
-                var tenantId = await _tenantRepository.TenantIdFromUserId(userId);
-                if (tenantId == null)
-                {
-                    var err = new DTO.ErrorBuilder()
-                                    .Message("You are not a tenant of this property")
-                                    .Code(403)
-                                    .Build();
-                    return err;
-                }
-                var allAgreements = await _agreementRepository.GetAllAgreements();
-                return new ObjectResult(allAgreements);
-            }
-            else if (this.UserInRole(Role.Manager) || this.UserInRole(Role.Admin))
-            {
-                var allAgreements = await _agreementRepository.GetAllAgreements();
-                return new ObjectResult(allAgreements);
-            }
-            else
-            {
-                var err = new DTO.ErrorBuilder()
-                                .Message("You are not authorized to view agreements.")
-                                .Code(403)
-                                .Build();
-                return err;
-            }
-        }
-
-        [HttpPost]
-        [Route("AgreementTemplate")]
-        [Authorize(Policy = Policies.AnyLoggedIn)]
-        public async Task<IActionResult> UpdateAgreementTemplate(Entity.Agreement agreement)
-        {
-            if (this.UserInRole(Role.Manager) || this.UserInRole(Role.Admin))
-            {
-                var updatedAgreement = await _agreementRepository.UpdateAgreementTemplate(agreement);
-                return new ObjectResult(updatedAgreement);
-            }
-            else
-            {
-                var err = new DTO.ErrorBuilder()
-                                .Message("You are not authorized to update agreement templates.")
-                                .Code(403)
-                                .Build();
-                return err;
-            }
-        }
-
-        [HttpGet]
         [Route("Agreements")]
         [Authorize(Policy = Policies.AnyLoggedIn)]
         public async Task<IActionResult> GetAgreements()
@@ -102,14 +47,13 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                     return err;
                 }
 
-                var agreements = await _agreementRepository.GetSignedAgreements((int)tenantId);
-                var agreementDTOs = agreements.Select(a => new DTO.AgreementDTO(a)).ToList();
+                var agreements = await _agreementRepository.GetAgreements((int)tenantId);
 
-                return new ObjectResult(agreementDTOs);
+                return new ObjectResult(agreements);
             }
             else if (this.UserInRole(Role.Manager) || this.UserInRole(Role.Admin))
             {
-                var allAgreements = await _agreementRepository.GetAllSignedAgreements();
+                var allAgreements = await _agreementRepository.GetAgreements();
                 return new ObjectResult(allAgreements);
             }
             else
@@ -129,7 +73,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
         {
             if (this.UserInRole(Role.Admin) || this.UserInRole(Role.Manager))
             {
-                var agreements = await _agreementRepository.GetSignedAgreements((int)tenantId);
+                var agreements = await _agreementRepository.GetAgreements((int)tenantId);
                 if (agreements.Count() == 0)
                 {
                     var err = new DTO.ErrorBuilder()
@@ -138,8 +82,31 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                     .Build();
                     return err;
                 }
-                var agreementDTOs = agreements.Select(a => new DTO.AgreementDTO(a)).ToList();
-                return new ObjectResult(agreementDTOs);
+                return new ObjectResult(agreements);
+            }
+            else if (this.UserInRole(Role.Tenant))
+            {
+                var userId = this.UserIdFromApiKey();
+                var checkTenantId = await _tenantRepository.TenantIdFromUserId(userId);
+                if (checkTenantId == null)
+                {
+                    var err = new DTO.ErrorBuilder()
+                                    .Message("You are not a tenant of this property")
+                                    .Code(403)
+                                    .Build();
+                    return err;
+                }
+                if ((int)checkTenantId != tenantId)
+                {
+                    var err = new DTO.ErrorBuilder()
+                                    .Message("No agreements found.")
+                                    .Code(404)
+                                    .Build();
+                    return err;
+                }
+
+                var agreements = await _agreementRepository.GetAgreements(tenantId);
+                return new ObjectResult(agreements);
             }
             else
             {
@@ -171,9 +138,9 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                     return err;
                 }
 
-                var agreements = await _agreementRepository.GetSignedAgreements((int)tenantId);
+                var agreements = await _agreementRepository.GetAgreements((int)tenantId);
                 // TODO: make this less terrible
-                var targetAgreement = agreements.Where(a => a.AgreementId == agreementId).FirstOrDefault();
+                var targetAgreement = agreements.Where(a => a.AgreementTemplateId == agreementId).FirstOrDefault();
                 if (targetAgreement == null)
                 {
                     var err = new DTO.ErrorBuilder()
@@ -183,12 +150,11 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                     return err;
                 }
 
-                var targetAgreementAsDTO = new DTO.AgreementDTO(targetAgreement);
-                return new ObjectResult(targetAgreementAsDTO);
+                return new ObjectResult(targetAgreement);
             }
             else if (this.UserInRole(Role.Manager) || this.UserInRole(Role.Admin))
             {
-                var agreement = await _agreementRepository.GetSignedAgreement(agreementId);
+                var agreement = await _agreementRepository.GetAgreement(agreementId);
                 if (agreement == null)
                 {
                     var err = new DTO.ErrorBuilder()
@@ -197,8 +163,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                     .Build();
                     return err;
                 }
-                var agreementAsDTO = new DTO.AgreementDTO(agreement);
-                return new ObjectResult(agreementAsDTO);
+                return new ObjectResult(agreement);
             }
             else
             {
@@ -213,7 +178,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
         [HttpPost]
         [Route("Agreement")]
         [Authorize(Policy = Policies.AnyLoggedIn)]
-        public async Task<IActionResult> SignAgreement(DTO.SignAgreementDTO signAgreement)
+        public async Task<IActionResult> UpdateAgreement(Entity.Agreement newInfo)
         {
             if (this.UserInRole(Role.Tenant))
             {
@@ -228,30 +193,39 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                     return err;
                 }
 
-                var agreement = await _agreementRepository.SignAgreement((int)tenantId,
-                    signAgreement.AgreementId,
-                    signAgreement.StartDate,
-                    signAgreement.EndDate);
-
-                if (agreement == null)
+                var existingAgreement = await _agreementRepository.GetAgreement(newInfo.AgreementId);
+                if (existingAgreement == null)
                 {
                     var err = new DTO.ErrorBuilder()
-                                    .Message("Unable to find that agreement id.")
+                                    .Message("Agreement not found.(1)")
                                     .Code(404)
                                     .Build();
                     return err;
                 }
-                else
+
+                if (existingAgreement.TenantId != tenantId)
                 {
-                    var agreementDTO = new DTO.AgreementDTO(agreement);
-                    return new ObjectResult(agreementDTO);
+                    var err = new DTO.ErrorBuilder()
+                                    .Message("Agreement not found.(2)")
+                                    .Code(404)
+                                    .Build();
+                    return err;
                 }
+
+                var updated = await _agreementRepository.UpdateAgreement(newInfo);
+
+                return new ObjectResult(updated);
+            }
+            else if (this.UserInRole(Role.Manager) || this.UserInRole(Role.Admin))
+            {
+                var updated = await _agreementRepository.UpdateAgreement(newInfo);
+                return new ObjectResult(updated);
             }
             else
             {
                 var err = new DTO.ErrorBuilder()
-                                .Message("Only tenants may sign agreements.")
-                                .Code(400)
+                                .Message("You are not authorized to update agreements")
+                                .Code(403)
                                 .Build();
                 return err;
             }

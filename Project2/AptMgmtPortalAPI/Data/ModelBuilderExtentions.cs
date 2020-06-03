@@ -141,17 +141,17 @@ namespace AptMgmtPortalAPI.Data
             #endregion
 
             #region Signed Agreement Seed
-            modelBuilder.Entity<SignedAgreement>().HasData(
-                new SignedAgreement { SignedAgreementId = 1, AgreementId = 1, SignedDate = dt3MonthsAgo, StartDate = dt3MonthsAgo, EndDate = DateTime.Now, TenantId = 1 },
-                new SignedAgreement { SignedAgreementId = 2, AgreementId = 2, SignedDate = dt6MonthsAgo, StartDate = dt6MonthsAgo, EndDate = DateTime.Now, TenantId = 2 },
-                new SignedAgreement { SignedAgreementId = 3, AgreementId = 3, SignedDate = dt12MonthsAgo, StartDate = dt12MonthsAgo, EndDate = DateTime.Now, TenantId = 3 },
-                new SignedAgreement { SignedAgreementId = 4, AgreementId = 1, SignedDate = dt3MonthsAgo, StartDate = dt3MonthsAgo, EndDate = DateTime.Now, TenantId = 4 },
-                new SignedAgreement { SignedAgreementId = 5, AgreementId = 2, SignedDate = dt6MonthsAgo, StartDate = dt6MonthsAgo, EndDate = DateTime.Now, TenantId = 5 },
-                new SignedAgreement { SignedAgreementId = 6, AgreementId = 3, SignedDate = dt12MonthsAgo, StartDate = dt12MonthsAgo, EndDate = DateTime.Now, TenantId = 6 },
-                new SignedAgreement { SignedAgreementId = 7, AgreementId = 1, SignedDate = dt3MonthsAgo, StartDate = dt3MonthsAgo, EndDate = DateTime.Now, TenantId = 7 },
-                new SignedAgreement { SignedAgreementId = 8, AgreementId = 2, SignedDate = dt6MonthsAgo, StartDate = dt6MonthsAgo, EndDate = DateTime.Now, TenantId = 8 },
-                new SignedAgreement { SignedAgreementId = 9, AgreementId = 3, SignedDate = dt12MonthsAgo, StartDate = dt12MonthsAgo, EndDate = DateTime.Now, TenantId = 9 },
-                new SignedAgreement { SignedAgreementId = 10, AgreementId = 1, SignedDate = dt3MonthsAgo, StartDate = dt3MonthsAgo, EndDate = DateTime.Now, TenantId = 10 }
+            modelBuilder.Entity<Agreement>().HasData(
+                new Agreement { AgreementId = 1, AgreementTemplateId = 1, SignedDate = dt3MonthsAgo, StartDate = dt3MonthsAgo, EndDate = DateTime.Now, TenantId = 1 },
+                new Agreement { AgreementId = 2, AgreementTemplateId = 2, SignedDate = dt6MonthsAgo, StartDate = dt6MonthsAgo, EndDate = DateTime.Now, TenantId = 2 },
+                new Agreement { AgreementId = 3, AgreementTemplateId = 3, SignedDate = dt12MonthsAgo, StartDate = dt12MonthsAgo, EndDate = DateTime.Now, TenantId = 3 },
+                new Agreement { AgreementId = 4, AgreementTemplateId = 1, SignedDate = dt3MonthsAgo, StartDate = dt3MonthsAgo, EndDate = DateTime.Now, TenantId = 4 },
+                new Agreement { AgreementId = 5, AgreementTemplateId = 2, SignedDate = dt6MonthsAgo, StartDate = dt6MonthsAgo, EndDate = DateTime.Now, TenantId = 5 },
+                new Agreement { AgreementId = 6, AgreementTemplateId = 3, SignedDate = dt12MonthsAgo, StartDate = dt12MonthsAgo, EndDate = DateTime.Now, TenantId = 6 },
+                new Agreement { AgreementId = 7, AgreementTemplateId = 1, SignedDate = dt3MonthsAgo, StartDate = dt3MonthsAgo, EndDate = DateTime.Now, TenantId = 7 },
+                new Agreement { AgreementId = 8, AgreementTemplateId = 2, SignedDate = dt6MonthsAgo, StartDate = dt6MonthsAgo, EndDate = DateTime.Now, TenantId = 8 },
+                new Agreement { AgreementId = 9, AgreementTemplateId = 3, SignedDate = dt12MonthsAgo, StartDate = dt12MonthsAgo, EndDate = DateTime.Now, TenantId = 9 },
+                new Agreement { AgreementId = 10, AgreementTemplateId = 1, SignedDate = dt3MonthsAgo, StartDate = dt3MonthsAgo, EndDate = DateTime.Now, TenantId = 10 }
                 );
             #endregion
 
@@ -271,10 +271,10 @@ namespace AptMgmtPortalAPI.Data
             #endregion
 
             #region Agreement Seed
-            modelBuilder.Entity<Agreement>().HasData(
-                new Agreement { AgreementId = 1, Title = "Lease Agreement", Text = "This is a really long lease agreement text" },
-                new Agreement { AgreementId = 2, Title = "Utility Agreement", Text = "This is a really long utility agreement text" },
-                new Agreement { AgreementId = 3, Title = "Internet Connection Agreement", Text = "This is a really long internet connection agreement text" }
+            modelBuilder.Entity<AgreementTemplate>().HasData(
+                new AgreementTemplate { AgreementTemplateId = 1, Title = "Lease Agreement", Text = "This is a really long lease agreement text" },
+                new AgreementTemplate { AgreementTemplateId = 2, Title = "Utility Agreement", Text = "This is a really long utility agreement text" },
+                new AgreementTemplate { AgreementTemplateId = 3, Title = "Internet Connection Agreement", Text = "This is a really long internet connection agreement text" }
             );
             #endregion
 

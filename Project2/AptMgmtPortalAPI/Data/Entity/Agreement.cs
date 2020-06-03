@@ -1,15 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AptMgmtPortalAPI.Entity
 {
     public class Agreement
     {
         public int AgreementId { get; set; }
-        public string Title { get; set; }
-        public string Text { get; set; }
+
+        public int TenantId { get; set; }
+
+        public int AgreementTemplateId { get; set;  }
+
+        [Column(TypeName="NVARCHAR(48)")]
+        public DateTime? SignedDate { get; set; }
+
+        [Column(TypeName="NVARCHAR(48)")]
+        public DateTime StartDate { get; set; }
+
+        [Column(TypeName="NVARCHAR(48)")]
+        public DateTime EndDate { get; set; }
     }
 }

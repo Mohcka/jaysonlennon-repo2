@@ -407,10 +407,10 @@ namespace TestAptMgmtPortal
             var options = TestUtil.GetMemDbOptions("GetsSignedAgreements");
 
             Tenant tenant;
-            Agreement agreement1;
-            Agreement agreement2;
-            SignedAgreement signedAgreement1;
-            SignedAgreement signedAgreement2;
+            AgreementTemplate agreement1;
+            AgreementTemplate agreement2;
+            Agreement signedAgreement1;
+            Agreement signedAgreement2;
             using (var db = new AptMgmtDbContext(options))
             {
                 var repo = (ITenant)new TenantRepository(db);
@@ -419,20 +419,20 @@ namespace TestAptMgmtPortal
                 agreement1 = TestUtil.NewAgreement(db, "test-agreement1");
                 agreement2 = TestUtil.NewAgreement(db, "test-agreement2");
 
-                signedAgreement1 = TestUtil.SignAgreement(db, agreement1.AgreementId, tenant.TenantId);
-                signedAgreement2 = TestUtil.SignAgreement(db, agreement2.AgreementId, tenant.TenantId);
+                signedAgreement1 = TestUtil.SignAgreement(db, agreement1.AgreementTemplateId, tenant.TenantId);
+                signedAgreement2 = TestUtil.SignAgreement(db, agreement2.AgreementTemplateId, tenant.TenantId);
             }
 
             using (var db = new AptMgmtDbContext(options))
             {
                 var repo = (IAgreement)new AgreementRepository(db);
-                var signedAgreements = await repo.GetSignedAgreements(tenant.TenantId);
+                var signedAgreements = await repo.GetAgreements(tenant.TenantId);
                 Assert.Equal(2, signedAgreements.Count());
 
-                var signed1 = signedAgreements.Where(a => a.AgreementId == agreement1.AgreementId).FirstOrDefault();
+                var signed1 = signedAgreements.Where(a => a.AgreementTemplateId == agreement1.AgreementTemplateId).FirstOrDefault();
                 Assert.Equal("test-agreement1", signed1.Title);
 
-                var signed2 = signedAgreements.Where(a => a.AgreementId == agreement2.AgreementId).FirstOrDefault();
+                var signed2 = signedAgreements.Where(a => a.AgreementTemplateId == agreement2.AgreementTemplateId).FirstOrDefault();
                 Assert.Equal("test-agreement2", signed2.Title);
             }
         }
@@ -443,7 +443,7 @@ namespace TestAptMgmtPortal
             var options = TestUtil.GetMemDbOptions("SignsAgreement");
 
             Tenant tenant;
-            Agreement agreement;
+            AgreementTemplate agreement;
             AptMgmtPortalAPI.DataModel.Agreement signedAgreement;
             using (var db = new AptMgmtDbContext(options))
             {
@@ -452,7 +452,7 @@ namespace TestAptMgmtPortal
 
                 agreement = TestUtil.NewAgreement(db, "test-agreement1");
                 signedAgreement = await repo.SignAgreement(tenant.TenantId,
-                                                           agreement.AgreementId,
+                                                           agreement.AgreementTemplateId,
                                                            DateTime.Now,
                                                            DateTime.Now);
             }
@@ -462,7 +462,7 @@ namespace TestAptMgmtPortal
                 Assert.Equal("test-agreement1", signedAgreement.Title);
 
                 var repo = (IAgreement)new AgreementRepository(db);
-                var signedAgreements = await repo.GetSignedAgreements(tenant.TenantId);
+                var signedAgreements = await repo.GetAgreements(tenant.TenantId);
 
                 Assert.Single(signedAgreements);
                 Assert.Equal("test-agreement1", signedAgreements.FirstOrDefault().Title);

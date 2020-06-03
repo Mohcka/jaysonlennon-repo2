@@ -118,9 +118,9 @@ namespace TestAptMgmtPortal
             return newRate;
         }
 
-        public static Agreement NewAgreement(AptMgmtDbContext context, string title)
+        public static AgreementTemplate NewAgreement(AptMgmtDbContext context, string title)
         {
-            var agreement = new Agreement();
+            var agreement = new AgreementTemplate();
             agreement.Title = title;
 
             context.Add(agreement);
@@ -129,14 +129,14 @@ namespace TestAptMgmtPortal
             return agreement;
         }
 
-        public static SignedAgreement SignAgreement(AptMgmtDbContext context, int agreementId, int tenantId)
+        public static Agreement SignAgreement(AptMgmtDbContext context, int agreementId, int tenantId)
         {
             // All test data is 2 years into the future.
             var testPeriod = new TimeSpan(730, 0, 0, 0);
 
-            var signedAgreement = new SignedAgreement();
+            var signedAgreement = new Agreement();
             signedAgreement.TenantId = tenantId;
-            signedAgreement.AgreementId = agreementId;
+            signedAgreement.AgreementTemplateId = agreementId;
             signedAgreement.SignedDate = DateTime.Now;
             signedAgreement.StartDate = DateTime.Now + testPeriod - new TimeSpan(0, 0, 5);
             signedAgreement.EndDate = DateTime.Now + testPeriod + new TimeSpan(0, 0, 5);

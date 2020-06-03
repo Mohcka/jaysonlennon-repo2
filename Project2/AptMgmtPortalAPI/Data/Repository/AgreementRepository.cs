@@ -9,6 +9,7 @@ using AptMgmtPortalAPI.Entity;
 using AptMgmtPortalAPI.Data;
 using AptMgmtPortalAPI.Types;
 using AptMgmtPortalAPI.DataModel;
+using AptMgmtPortalAPI.DTO;
 
 namespace AptMgmtPortalAPI.Repository
 {
@@ -21,21 +22,18 @@ namespace AptMgmtPortalAPI.Repository
             _context = aptMgmtDbContext;
         }
 
-        public async Task<IEnumerable<Entity.Agreement>> GetAllAgreements()
+        public async Task<IEnumerable<DataModel.Agreement>> GetAgreements()
         {
-            return await _context.Agreements.Select(a => a).ToListAsync();
-        }
-
-        public async Task<IEnumerable<DataModel.Agreement>> GetAllSignedAgreements()
-        {
-            return await _context.SignedAgreements
-                .Join(_context.Agreements,
-                      signedAgreements => signedAgreements.AgreementId,
-                      agreements => agreements.AgreementId,
-                      (sa, a) => new DataModel.Agreement {
+            return await _context.Agreements
+                .Join(_context.AgreementTemplates,
+                      signedAgreements => signedAgreements.AgreementTemplateId,
+                      templates => templates.AgreementTemplateId,
+                      (sa, ta) => new DataModel.Agreement {
                           AgreementId = sa.AgreementId,
-                          Title = a.Title,
-                          Text = a.Text,
+                          AgreementTemplateId = ta.AgreementTemplateId,
+                          TenantId = sa.TenantId,
+                          Title = ta.Title,
+                          Text = ta.Text,
                           SignedDate = sa.SignedDate,
                           StartDate = sa.StartDate,
                           EndDate = sa.EndDate,
@@ -44,17 +42,19 @@ namespace AptMgmtPortalAPI.Repository
                 .ToListAsync();
         }
 
-        public async Task<DataModel.Agreement> GetSignedAgreement(int agreementId)
+        public async Task<DataModel.Agreement> GetAgreement(int agreementId)
         {
-            return await _context.SignedAgreements
+            return await _context.Agreements
                 .Where(s => s.AgreementId == agreementId)
-                .Join(_context.Agreements,
-                      signedAgreements => signedAgreements.AgreementId,
-                      agreements => agreements.AgreementId,
-                      (sa, a) => new DataModel.Agreement {
+                .Join(_context.AgreementTemplates,
+                      signedAgreements => signedAgreements.AgreementTemplateId,
+                      templates => templates.AgreementTemplateId,
+                      (sa, ta) => new DataModel.Agreement {
                           AgreementId = sa.AgreementId,
-                          Title = a.Title,
-                          Text = a.Text,
+                          AgreementTemplateId = ta.AgreementTemplateId,
+                          TenantId = sa.TenantId,
+                          Title = ta.Title,
+                          Text = ta.Text,
                           SignedDate = sa.SignedDate,
                           StartDate = sa.StartDate,
                           EndDate = sa.EndDate,
@@ -67,17 +67,19 @@ namespace AptMgmtPortalAPI.Repository
         /// </summary>
         /// <param name="tenantId">Tenant ID from which to get agreements.</param>
         /// <returns></returns>
-        public async Task<IEnumerable<DataModel.Agreement>> GetSignedAgreements(int tenantId)
+        public async Task<IEnumerable<DataModel.Agreement>> GetAgreements(int tenantId)
         {
-            return await _context.SignedAgreements
+            return await _context.Agreements
                 .Where(s => s.TenantId == tenantId)
-                .Join(_context.Agreements,
-                      signedAgreements => signedAgreements.AgreementId,
-                      agreements => agreements.AgreementId,
-                      (sa, a) => new DataModel.Agreement {
+                .Join(_context.AgreementTemplates,
+                      signedAgreements => signedAgreements.AgreementTemplateId,
+                      templates => templates.AgreementTemplateId,
+                      (sa, ta) => new DataModel.Agreement {
                           AgreementId = sa.AgreementId,
-                          Title = a.Title,
-                          Text = a.Text,
+                          AgreementTemplateId = ta.AgreementTemplateId,
+                          TenantId = sa.TenantId,
+                          Title = ta.Title,
+                          Text = ta.Text,
                           SignedDate = sa.SignedDate,
                           StartDate = sa.StartDate,
                           EndDate = sa.EndDate,
@@ -86,71 +88,38 @@ namespace AptMgmtPortalAPI.Repository
                 .ToListAsync();
         }
 
-        /// <summary>
-        /// Returns agreements, excluding the agreement text.
-        /// </summary>
-        /// <param name="tenantId">Tenant ID from which to retrieve the agreements.</param>
-        /// <returns></returns>
-        public async Task<IEnumerable<AgreementSummary>> GetSignedAgreementSummaries(int tenantId)
-        {
-            return await _context.SignedAgreements
-                .Where(s => s.TenantId == tenantId)
-                .Join(_context.Agreements,
-                      signedAgreements => signedAgreements.AgreementId,
-                      agreements => agreements.AgreementId,
-                      (sa, a) => new DataModel.AgreementSummary {
-                          AgreementId = sa.AgreementId,
-                          Title = a.Title,
-                          SignedDate = sa.SignedDate,
-                          StartDate = sa.StartDate,
-                          EndDate = sa.EndDate,
-                      })
-                .OrderByDescending(a => a.SignedDate)
-                .ToListAsync();
-        }
-
-        public async Task<DataModel.Agreement> SignAgreement(int tenantId, int agreementId, DateTime startDate, DateTime endDate)
-        {
-            var agreement = await _context.Agreements
-                .Where(a => a.AgreementId == agreementId)
-                .FirstOrDefaultAsync();
-
-            if (agreement == null) return null;
-
-            var signedAgreement = new SignedAgreement();
-            signedAgreement.TenantId = tenantId;
-            signedAgreement.AgreementId = agreementId;
-            signedAgreement.SignedDate = DateTime.Now;
-            signedAgreement.StartDate = startDate;
-            signedAgreement.EndDate = endDate;
-
-            _context.Add(signedAgreement);
-            await _context.SaveChangesAsync();
-
-            return new DataModel.Agreement {
-                AgreementId = signedAgreement.AgreementId,
-                Title = agreement.Title,
-                Text = agreement.Text,
-                SignedDate = signedAgreement.SignedDate,
-                StartDate = signedAgreement.StartDate,
-                EndDate = signedAgreement.EndDate,
-            };
-        }
-
-        public async Task<Entity.Agreement> UpdateAgreementTemplate(Entity.Agreement agreement)
+        public async Task<Entity.Agreement> UpdateAgreement(Entity.Agreement updated)
         {
             var existingAgreement = await _context.Agreements
-                .Where(a => a.AgreementId == agreement.AgreementId)
+                .Where(a => a.AgreementId == updated.AgreementId)
                 .Select(a => a)
                 .FirstOrDefaultAsync();
 
             if (existingAgreement == null) {
-                await _context.AddAsync(agreement);
+                await _context.AddAsync(updated);
+                await _context.SaveChangesAsync();
+                return updated;
             } else {
-                existingAgreement.Title = agreement.Title;
-                existingAgreement.Text = agreement.Text;
+                existingAgreement.AgreementTemplateId = updated.AgreementTemplateId;
+                existingAgreement.StartDate = updated.StartDate;
+                existingAgreement.EndDate = updated.EndDate;
+                existingAgreement.SignedDate = existingAgreement.SignedDate;
+                existingAgreement.TenantId = existingAgreement.TenantId;
+                await _context.SaveChangesAsync();
+                return existingAgreement;
             }
 
+        }
+
+        public async Task<Entity.Agreement> AddAgreement(int tenantId, int agreementTemplateId, DateTime startDate, DateTime endDate)
+        {
+            var agreement = new Entity.Agreement();
+            agreement.AgreementTemplateId = agreementTemplateId;
+            agreement.TenantId = tenantId;
+            agreement.StartDate = startDate;
+            agreement.EndDate = endDate;
+
+            await _context.AddAsync(agreement);
             await _context.SaveChangesAsync();
 
             return agreement;

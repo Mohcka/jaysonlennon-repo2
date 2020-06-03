@@ -10,6 +10,7 @@ namespace AptMgmtPortalAPI.Util
             services.AddScoped<Repository.IBill, Repository.BillRepository>();
             services.AddScoped<Repository.IUser, Repository.UserRepository>();
             services.AddScoped<Repository.IAgreement, Repository.AgreementRepository>();
+            services.AddScoped<Repository.IAgreementTemplate, Repository.AgreementTemplateRepository>();
             services.AddScoped<Repository.IMaintenance, Repository.MaintenanceRepository>();
         }
     }

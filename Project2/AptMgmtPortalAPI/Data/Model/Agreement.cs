@@ -3,6 +3,8 @@ using System;
 namespace AptMgmtPortalAPI.DataModel {
     public class Agreement {
         public int AgreementId { get; set; }
+        public int AgreementTemplateId { get; set; }
+        public int TenantId { get; set; }
         public string Title { get; set; }
         public string Text { get; set; }
         public DateTime? SignedDate { get; set; }
