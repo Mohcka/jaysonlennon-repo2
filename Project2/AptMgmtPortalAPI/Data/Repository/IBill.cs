@@ -37,5 +37,8 @@ namespace AptMgmtPortalAPI.Repository
         Task<IEnumerable<DataModel.TenantResourceUsageSummary>> GetResourceUsage(int tenantId, BillingPeriod period);
 
         Task<IEnumerable<ResourceUsageRate>> GetResourceUsageRates(BillingPeriod period);
+
+        Task<IEnumerable<DataModel.ProjectedResourceUsage>> GetProjectedResourceUsages(int tenantId, BillingPeriod period);
+        Task<DataModel.ProjectedResourceUsage> GetProjectedResourceUsage(int tenantId, ResourceType resource, BillingPeriod period);
     }
 }

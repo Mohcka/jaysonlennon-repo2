@@ -73,7 +73,8 @@ namespace AptMgmtPortalAPI.Repository
                                         .Where(u => u.SampleTime >= period.PeriodStart
                                                     && u.SampleTime <= period.PeriodEnd)
                                         .GroupBy(u => new { u.TenantId, u.ResourceType })
-                                        .Select(gr => new {
+                                        .Select(gr => new
+                                        {
                                             Resource = gr.Key.ResourceType,
                                             Usage = gr.Sum(u => u.UsageAmount),
                                             TenantId = gr.Key.TenantId
@@ -309,5 +310,52 @@ namespace AptMgmtPortalAPI.Repository
                 .ToListAsync();
         }
 
+        public async Task<IEnumerable<ProjectedResourceUsage>> GetProjectedResourceUsages(int tenantId, BillingPeriod period)
+        {
+            var usages = await GetResourceUsage(tenantId, period);
+            var usageRates = await GetResourceUsageRates(period);
+
+            var projections = new List<ProjectedResourceUsage>();
+
+            foreach (var usage in usages)
+            {
+                var sampledDays = (DateTime.Now - period.PeriodStart).TotalDays + 1;
+
+                var projectedUsageTotal = Util.ResourceProjection.TotalForPeriod(usage.Usage,
+                                                                                 period.PeriodStart,
+                                                                                 period.PeriodEnd,
+                                                                                 DateTime.Now);
+
+                var rate = usageRates
+                    .Where(r => r.ResourceType == usage.ResourceType)
+                    .Select(r => r)
+                    .FirstOrDefault();
+                if (rate == null) continue;
+
+                var projected = new ProjectedResourceUsage
+                {
+                    TenantId = tenantId,
+                    Resource = usage.ResourceType,
+                    Period = period,
+                    ActualUsage = usage.Usage,
+                    ProjectedUsageTotal = projectedUsageTotal,
+                    DaysRemainingInPeriod = (period.PeriodEnd - DateTime.Now).TotalDays,
+                    AverageDailyUsage = usage.Usage / sampledDays,
+                    Rate = rate.Rate,
+                };
+
+                projections.Add(projected);
+            }
+
+            return projections;
+        }
+
+        public async Task<ProjectedResourceUsage> GetProjectedResourceUsage(int tenantId, ResourceType resource, BillingPeriod period)
+        {
+            return (await GetProjectedResourceUsages(tenantId, period))
+                .Where(p => p.Resource == resource)
+                .Select(p => p)
+                .FirstOrDefault();
+        }
     }
 }
