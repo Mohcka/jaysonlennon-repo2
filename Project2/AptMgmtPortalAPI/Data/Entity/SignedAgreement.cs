@@ -12,7 +12,7 @@ namespace AptMgmtPortalAPI.Entity
         public int AgreementId { get; set;  }
 
         [Column(TypeName="NVARCHAR(48)")]
-        public DateTime SignedDate { get; set; }
+        public DateTime? SignedDate { get; set; }
 
         [Column(TypeName="NVARCHAR(48)")]
         public DateTime StartDate { get; set; }
