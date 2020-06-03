@@ -92,5 +92,35 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
 
             }
         }
+
+        [HttpDelete]
+        [Route("Unit")]
+        [Authorize(Policy = Policies.AnyLoggedIn)]
+        public async Task<IActionResult> DeleteUnit(int unitId) 
+        {
+            if (this.UserInRole(Role.Admin) || this.UserInRole(Role.Manager)) 
+            {
+              
+                var deleted =await _tenantRepository.DeleteUnit(unitId);
+                if (!deleted) 
+                {
+                    var err = new DTO.ErrorBuilder()
+                                   .Message("Unit not found.")
+                                   .Code(404)
+                                   .Build();
+                    return err;
+                }
+                return new ObjectResult(deleted);
+
+            }
+            else
+            {
+                var err = new DTO.ErrorBuilder()
+                                 .Message("You are not authorized to query units.")
+                                 .Code(403)
+                                 .Build();
+                return err;
+            }
+        }
     }
 }
