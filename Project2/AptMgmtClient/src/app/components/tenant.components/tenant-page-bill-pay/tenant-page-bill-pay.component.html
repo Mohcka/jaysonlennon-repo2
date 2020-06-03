@@ -1,0 +1,15 @@
+<h1>Tenant pay single bill page</h1>
+<h3>this page should use a bill component to display the billing info</h3>
+
+<div *ngIf="bill">
+  <div>Tenant id: {{ bill.tenantId }}</div>
+  <div>Resource: {{ bill.resource | resourceAsString }}</div>
+  <div>period start: {{ bill.periodStart | date }}</div>
+  <div>period end: {{ bill.periodEnd | date }}</div>
+  <div>period id: {{ bill.billingPeriodId }}</div>
+  <div>usage: {{ bill.usage }}</div>
+  <div>rate: {{ bill.rate | currency: 'USD' }}</div>
+  <div>cost: {{ bill.cost | currency: 'USD' }}</div>
+  <div>paid: {{ bill.paid | currency: 'USD' }}</div>
+  <div>owed: {{ bill.owed | currency: 'USD' }}</div>
+</div>

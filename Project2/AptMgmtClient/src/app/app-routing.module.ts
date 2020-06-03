@@ -1,4 +1,4 @@
-import { TenantListBillsComponent } from './components/tenant.components/tenant-list-bills/tenant-list-bills.component';
+import { TenantPageBillPayComponent } from './components/tenant.components/tenant-page-bill-pay/tenant-page-bill-pay.component';
 import { UnauthorizedAccessComponent } from './components/universal.components/unauthorized-access/unauthorized-access.component';
 import { UserAccountType } from './../enums/user-account-type';
 import { ManagerHomeComponent } from './components/manager.components/manager-home/manager-home.component';
@@ -13,6 +13,7 @@ import { AuthGuard } from './guard/auth.guard';
 import { LoginComponent } from './components/universal.components/login/login.component';
 import { MaintenanceRequestFormComponent } from './components/universal.components/maintenance-request-form/maintenance-request-form.component';
 import { ManagerListTenantsComponent } from './components/manager.components/manager-list-tenants/manager-list-tenants.component';
+import { TenantPageListBillsComponent } from './components/tenant.components/tenant-page-list-bills/tenant-page-list-bills.component';
 
 // Define routes for the application
 const routes: Routes = [
@@ -34,7 +35,10 @@ const routes: Routes = [
   { path: 'tenant/maintenance/list', component: MaintenanceRequestsComponent,
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },
 
-  { path: 'tenant/bill/list', component: TenantListBillsComponent,
+  { path: 'tenant/bill/list', component: TenantPageListBillsComponent,
+    canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },
+
+  { path: 'tenant/bill/pay', component: TenantPageBillPayComponent,
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },
 
   // Managers

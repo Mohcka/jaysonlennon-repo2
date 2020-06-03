@@ -3,11 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { Bill } from 'src/app/model/bill';
 
 @Component({
-  selector: 'app-tenant-list-bills',
-  templateUrl: './tenant-list-bills.component.html',
-  styleUrls: ['./tenant-list-bills.component.css']
+  selector: 'app-tenant-page-list-bills',
+  templateUrl: './tenant-page-list-bills.component.html',
+  styleUrls: ['./tenant-page-list-bills.component.css']
 })
-export class TenantListBillsComponent implements OnInit {
+export class TenantPageListBillsComponent implements OnInit {
 
   public bills: Bill[];
 
