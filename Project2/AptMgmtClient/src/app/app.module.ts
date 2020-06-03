@@ -26,6 +26,7 @@ import { ManagerListTenantsComponent } from './components/manager.components/man
 import { UnauthorizedAccessComponent } from './components/universal.components/unauthorized-access/unauthorized-access.component';
 import { TenantPageBillPayComponent } from './components/tenant.components/tenant-page-bill-pay/tenant-page-bill-pay.component';
 import { TenantPageListBillsComponent } from './components/tenant.components/tenant-page-list-bills/tenant-page-list-bills.component';
+import { TenantPageListAgreementsComponent } from './components/tenant.components/tenant-page-list-agreements/tenant-page-list-agreements.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { TenantPageListBillsComponent } from './components/tenant.components/ten
 
     // Tenant pages
     TenantPageListBillsComponent,
+    TenantPageListAgreementsComponent,
     TenantPageBillPayComponent,
 
     // Manager components
