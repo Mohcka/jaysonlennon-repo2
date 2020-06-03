@@ -46,90 +46,90 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             AgreementId = 1,
                             AgreementTemplateId = 1,
-                            EndDate = new DateTime(2020, 6, 3, 9, 17, 45, 126, DateTimeKind.Local).AddTicks(4103),
-                            SignedDate = new DateTime(2020, 3, 5, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
-                            StartDate = new DateTime(2020, 3, 5, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
+                            EndDate = new DateTime(2020, 6, 3, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(5821),
+                            SignedDate = new DateTime(2020, 3, 5, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
+                            StartDate = new DateTime(2020, 3, 5, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
                             TenantId = 1
                         },
                         new
                         {
                             AgreementId = 2,
                             AgreementTemplateId = 2,
-                            EndDate = new DateTime(2020, 6, 3, 9, 17, 45, 126, DateTimeKind.Local).AddTicks(5622),
-                            SignedDate = new DateTime(2019, 12, 6, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
-                            StartDate = new DateTime(2019, 12, 6, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
+                            EndDate = new DateTime(2020, 6, 3, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(6748),
+                            SignedDate = new DateTime(2019, 12, 6, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
+                            StartDate = new DateTime(2019, 12, 6, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
                             TenantId = 2
                         },
                         new
                         {
                             AgreementId = 3,
                             AgreementTemplateId = 3,
-                            EndDate = new DateTime(2020, 6, 3, 9, 17, 45, 126, DateTimeKind.Local).AddTicks(5675),
-                            SignedDate = new DateTime(2019, 6, 9, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
-                            StartDate = new DateTime(2019, 6, 9, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
+                            EndDate = new DateTime(2020, 6, 3, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(6777),
+                            SignedDate = new DateTime(2019, 6, 9, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
+                            StartDate = new DateTime(2019, 6, 9, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
                             TenantId = 3
                         },
                         new
                         {
                             AgreementId = 4,
                             AgreementTemplateId = 1,
-                            EndDate = new DateTime(2020, 6, 3, 9, 17, 45, 126, DateTimeKind.Local).AddTicks(5681),
-                            SignedDate = new DateTime(2020, 3, 5, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
-                            StartDate = new DateTime(2020, 3, 5, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
+                            EndDate = new DateTime(2020, 6, 3, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(6781),
+                            SignedDate = new DateTime(2020, 3, 5, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
+                            StartDate = new DateTime(2020, 3, 5, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
                             TenantId = 4
                         },
                         new
                         {
                             AgreementId = 5,
                             AgreementTemplateId = 2,
-                            EndDate = new DateTime(2020, 6, 3, 9, 17, 45, 126, DateTimeKind.Local).AddTicks(5685),
-                            SignedDate = new DateTime(2019, 12, 6, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
-                            StartDate = new DateTime(2019, 12, 6, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
+                            EndDate = new DateTime(2020, 6, 3, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(6784),
+                            SignedDate = new DateTime(2019, 12, 6, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
+                            StartDate = new DateTime(2019, 12, 6, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
                             TenantId = 5
                         },
                         new
                         {
                             AgreementId = 6,
                             AgreementTemplateId = 3,
-                            EndDate = new DateTime(2020, 6, 3, 9, 17, 45, 126, DateTimeKind.Local).AddTicks(5947),
-                            SignedDate = new DateTime(2019, 6, 9, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
-                            StartDate = new DateTime(2019, 6, 9, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
+                            EndDate = new DateTime(2020, 6, 3, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(6787),
+                            SignedDate = new DateTime(2019, 6, 9, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
+                            StartDate = new DateTime(2019, 6, 9, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
                             TenantId = 6
                         },
                         new
                         {
                             AgreementId = 7,
                             AgreementTemplateId = 1,
-                            EndDate = new DateTime(2020, 6, 3, 9, 17, 45, 126, DateTimeKind.Local).AddTicks(5952),
-                            SignedDate = new DateTime(2020, 3, 5, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
-                            StartDate = new DateTime(2020, 3, 5, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
+                            EndDate = new DateTime(2020, 6, 3, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(6790),
+                            SignedDate = new DateTime(2020, 3, 5, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
+                            StartDate = new DateTime(2020, 3, 5, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
                             TenantId = 7
                         },
                         new
                         {
                             AgreementId = 8,
                             AgreementTemplateId = 2,
-                            EndDate = new DateTime(2020, 6, 3, 9, 17, 45, 126, DateTimeKind.Local).AddTicks(5956),
-                            SignedDate = new DateTime(2019, 12, 6, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
-                            StartDate = new DateTime(2019, 12, 6, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
+                            EndDate = new DateTime(2020, 6, 3, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(6793),
+                            SignedDate = new DateTime(2019, 12, 6, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
+                            StartDate = new DateTime(2019, 12, 6, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
                             TenantId = 8
                         },
                         new
                         {
                             AgreementId = 9,
                             AgreementTemplateId = 3,
-                            EndDate = new DateTime(2020, 6, 3, 9, 17, 45, 126, DateTimeKind.Local).AddTicks(5960),
-                            SignedDate = new DateTime(2019, 6, 9, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
-                            StartDate = new DateTime(2019, 6, 9, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
+                            EndDate = new DateTime(2020, 6, 3, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(6796),
+                            SignedDate = new DateTime(2019, 6, 9, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
+                            StartDate = new DateTime(2019, 6, 9, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
                             TenantId = 9
                         },
                         new
                         {
                             AgreementId = 10,
                             AgreementTemplateId = 1,
-                            EndDate = new DateTime(2020, 6, 3, 9, 17, 45, 126, DateTimeKind.Local).AddTicks(5965),
-                            SignedDate = new DateTime(2020, 3, 5, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
-                            StartDate = new DateTime(2020, 3, 5, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
+                            EndDate = new DateTime(2020, 6, 3, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(6799),
+                            SignedDate = new DateTime(2020, 3, 5, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
+                            StartDate = new DateTime(2020, 3, 5, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
                             TenantId = 10
                         });
                 });
@@ -191,26 +191,26 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         new
                         {
                             BillingPeriodId = 1,
-                            PeriodEnd = new DateTime(2020, 6, 4, 9, 17, 45, 130, DateTimeKind.Local).AddTicks(230),
-                            PeriodStart = new DateTime(2020, 5, 4, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440)
+                            PeriodEnd = new DateTime(2020, 6, 4, 9, 33, 0, 5, DateTimeKind.Local).AddTicks(2923),
+                            PeriodStart = new DateTime(2020, 5, 4, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626)
                         },
                         new
                         {
                             BillingPeriodId = 2,
-                            PeriodEnd = new DateTime(2020, 6, 4, 9, 17, 45, 130, DateTimeKind.Local).AddTicks(1208),
-                            PeriodStart = new DateTime(2020, 3, 5, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440)
+                            PeriodEnd = new DateTime(2020, 6, 4, 9, 33, 0, 5, DateTimeKind.Local).AddTicks(3429),
+                            PeriodStart = new DateTime(2020, 3, 5, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626)
                         },
                         new
                         {
                             BillingPeriodId = 3,
-                            PeriodEnd = new DateTime(2020, 6, 4, 9, 17, 45, 130, DateTimeKind.Local).AddTicks(1261),
-                            PeriodStart = new DateTime(2019, 12, 6, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440)
+                            PeriodEnd = new DateTime(2020, 6, 4, 9, 33, 0, 5, DateTimeKind.Local).AddTicks(3450),
+                            PeriodStart = new DateTime(2019, 12, 6, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626)
                         },
                         new
                         {
                             BillingPeriodId = 4,
-                            PeriodEnd = new DateTime(2020, 6, 4, 9, 17, 45, 130, DateTimeKind.Local).AddTicks(1266),
-                            PeriodStart = new DateTime(2019, 6, 9, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440)
+                            PeriodEnd = new DateTime(2020, 6, 4, 9, 33, 0, 5, DateTimeKind.Local).AddTicks(3453),
+                            PeriodStart = new DateTime(2019, 6, 9, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626)
                         });
                 });
 
@@ -265,8 +265,8 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             OpenNotes = "No water",
                             OpeningUserId = 1,
                             ResolutionNotes = "Fully restored.",
-                            TimeClosed = new DateTime(2020, 6, 3, 9, 17, 45, 129, DateTimeKind.Local).AddTicks(3329),
-                            TimeOpened = new DateTime(2020, 3, 5, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
+                            TimeClosed = new DateTime(2020, 6, 3, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(9674),
+                            TimeOpened = new DateTime(2020, 3, 5, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
                             UnitNumber = "101"
                         },
                         new
@@ -278,8 +278,8 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             OpenNotes = "No Interet",
                             OpeningUserId = 1,
                             ResolutionNotes = "Fixed",
-                            TimeClosed = new DateTime(2020, 5, 4, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
-                            TimeOpened = new DateTime(2020, 3, 5, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
+                            TimeClosed = new DateTime(2020, 5, 4, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
+                            TimeOpened = new DateTime(2020, 3, 5, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
                             UnitNumber = "101"
                         },
                         new
@@ -291,8 +291,8 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             OpenNotes = "No water",
                             OpeningUserId = 1,
                             ResolutionNotes = "Fixed",
-                            TimeClosed = new DateTime(2020, 5, 4, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
-                            TimeOpened = new DateTime(2019, 12, 6, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
+                            TimeClosed = new DateTime(2020, 5, 4, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
+                            TimeOpened = new DateTime(2019, 12, 6, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
                             UnitNumber = "101"
                         },
                         new
@@ -304,8 +304,8 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             OpenNotes = "No water",
                             OpeningUserId = 2,
                             ResolutionNotes = "Fixed",
-                            TimeClosed = new DateTime(2020, 5, 4, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
-                            TimeOpened = new DateTime(2020, 3, 5, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
+                            TimeClosed = new DateTime(2020, 5, 4, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
+                            TimeOpened = new DateTime(2020, 3, 5, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
                             UnitNumber = "102"
                         },
                         new
@@ -317,8 +317,8 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             OpenNotes = "No water",
                             OpeningUserId = 3,
                             ResolutionNotes = "Fixed",
-                            TimeClosed = new DateTime(2020, 5, 4, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
-                            TimeOpened = new DateTime(2020, 3, 5, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
+                            TimeClosed = new DateTime(2020, 5, 4, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
+                            TimeOpened = new DateTime(2020, 3, 5, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
                             UnitNumber = "103"
                         },
                         new
@@ -327,7 +327,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             InternalNotes = "Call Plumber",
                             OpenNotes = "No water",
                             OpeningUserId = 4,
-                            TimeOpened = new DateTime(2020, 3, 5, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
+                            TimeOpened = new DateTime(2020, 3, 5, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
                             UnitNumber = "104"
                         },
                         new
@@ -336,7 +336,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             InternalNotes = "Call Plumber",
                             OpenNotes = "No water",
                             OpeningUserId = 5,
-                            TimeOpened = new DateTime(2020, 3, 5, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
+                            TimeOpened = new DateTime(2020, 3, 5, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
                             UnitNumber = "105"
                         },
                         new
@@ -345,7 +345,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             InternalNotes = "Call Plumber",
                             OpenNotes = "No water",
                             OpeningUserId = 6,
-                            TimeOpened = new DateTime(2020, 3, 5, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
+                            TimeOpened = new DateTime(2020, 3, 5, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
                             UnitNumber = "106"
                         },
                         new
@@ -354,7 +354,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             InternalNotes = "Call Plumber",
                             OpenNotes = "No water",
                             OpeningUserId = 7,
-                            TimeOpened = new DateTime(2020, 3, 5, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
+                            TimeOpened = new DateTime(2020, 3, 5, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
                             UnitNumber = "107"
                         },
                         new
@@ -363,7 +363,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             InternalNotes = "Call Plumber",
                             OpenNotes = "No water",
                             OpeningUserId = 8,
-                            TimeOpened = new DateTime(2020, 3, 5, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
+                            TimeOpened = new DateTime(2020, 3, 5, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
                             UnitNumber = "108"
                         });
                 });
@@ -401,7 +401,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 2,
                             TenantId = 1,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(2998)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(3823)
                         },
                         new
                         {
@@ -410,7 +410,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 0,
                             TenantId = 1,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4075)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4372)
                         },
                         new
                         {
@@ -419,7 +419,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 4,
                             TenantId = 1,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4118)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4393)
                         },
                         new
                         {
@@ -428,7 +428,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 3,
                             TenantId = 1,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4123)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4396)
                         },
                         new
                         {
@@ -437,7 +437,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 1,
                             TenantId = 1,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4127)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4400)
                         },
                         new
                         {
@@ -446,7 +446,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 2,
                             TenantId = 2,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4131)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4403)
                         },
                         new
                         {
@@ -455,7 +455,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 0,
                             TenantId = 2,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4136)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4406)
                         },
                         new
                         {
@@ -464,7 +464,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 4,
                             TenantId = 2,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4141)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4409)
                         },
                         new
                         {
@@ -473,7 +473,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 3,
                             TenantId = 2,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4145)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4411)
                         },
                         new
                         {
@@ -482,7 +482,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 1,
                             TenantId = 2,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4149)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4415)
                         },
                         new
                         {
@@ -491,7 +491,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 2,
                             TenantId = 3,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4153)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4418)
                         },
                         new
                         {
@@ -500,7 +500,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 0,
                             TenantId = 3,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4157)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4421)
                         },
                         new
                         {
@@ -509,7 +509,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 4,
                             TenantId = 3,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4161)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4487)
                         },
                         new
                         {
@@ -518,7 +518,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 3,
                             TenantId = 3,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4165)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4491)
                         },
                         new
                         {
@@ -527,7 +527,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 1,
                             TenantId = 3,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4170)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4493)
                         },
                         new
                         {
@@ -536,7 +536,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 2,
                             TenantId = 4,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4174)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4496)
                         },
                         new
                         {
@@ -545,7 +545,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 0,
                             TenantId = 4,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4178)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4499)
                         },
                         new
                         {
@@ -554,7 +554,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 4,
                             TenantId = 4,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4182)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4501)
                         },
                         new
                         {
@@ -563,7 +563,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 3,
                             TenantId = 4,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4185)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4504)
                         },
                         new
                         {
@@ -572,7 +572,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 1,
                             TenantId = 4,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4189)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4507)
                         },
                         new
                         {
@@ -581,7 +581,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 2,
                             TenantId = 5,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4193)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4510)
                         },
                         new
                         {
@@ -590,7 +590,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 0,
                             TenantId = 5,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4198)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4512)
                         },
                         new
                         {
@@ -599,7 +599,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 4,
                             TenantId = 5,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4202)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4517)
                         },
                         new
                         {
@@ -608,7 +608,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 3,
                             TenantId = 5,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4206)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4519)
                         },
                         new
                         {
@@ -617,7 +617,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 1,
                             TenantId = 5,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4210)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4522)
                         },
                         new
                         {
@@ -626,7 +626,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 2,
                             TenantId = 6,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4214)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4525)
                         },
                         new
                         {
@@ -635,7 +635,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 0,
                             TenantId = 6,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4217)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4527)
                         },
                         new
                         {
@@ -644,7 +644,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 4,
                             TenantId = 6,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4221)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4530)
                         },
                         new
                         {
@@ -653,7 +653,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 3,
                             TenantId = 6,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4225)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4533)
                         },
                         new
                         {
@@ -662,7 +662,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 1,
                             TenantId = 6,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4229)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4536)
                         },
                         new
                         {
@@ -671,7 +671,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 2,
                             TenantId = 7,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4234)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4538)
                         },
                         new
                         {
@@ -680,7 +680,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 0,
                             TenantId = 7,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4238)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4541)
                         },
                         new
                         {
@@ -689,7 +689,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 4,
                             TenantId = 7,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4242)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4545)
                         },
                         new
                         {
@@ -698,7 +698,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 3,
                             TenantId = 7,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4246)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4547)
                         },
                         new
                         {
@@ -707,7 +707,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 1,
                             TenantId = 7,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4250)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4550)
                         },
                         new
                         {
@@ -716,7 +716,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 2,
                             TenantId = 8,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4254)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4553)
                         },
                         new
                         {
@@ -725,7 +725,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 0,
                             TenantId = 8,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4258)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4556)
                         },
                         new
                         {
@@ -734,7 +734,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 4,
                             TenantId = 8,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4262)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4558)
                         },
                         new
                         {
@@ -743,7 +743,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 3,
                             TenantId = 8,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4266)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4561)
                         },
                         new
                         {
@@ -752,7 +752,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 1,
                             TenantId = 8,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4271)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4564)
                         },
                         new
                         {
@@ -761,7 +761,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 2,
                             TenantId = 9,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4275)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4568)
                         },
                         new
                         {
@@ -770,7 +770,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 0,
                             TenantId = 9,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4279)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4570)
                         },
                         new
                         {
@@ -779,7 +779,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 4,
                             TenantId = 9,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4283)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4573)
                         },
                         new
                         {
@@ -788,7 +788,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 3,
                             TenantId = 9,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4286)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4576)
                         },
                         new
                         {
@@ -797,7 +797,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 1,
                             TenantId = 9,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4290)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4579)
                         },
                         new
                         {
@@ -806,7 +806,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 2,
                             TenantId = 10,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4294)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4582)
                         },
                         new
                         {
@@ -815,7 +815,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 0,
                             TenantId = 10,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4299)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4584)
                         },
                         new
                         {
@@ -824,7 +824,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 4,
                             TenantId = 10,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4302)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4587)
                         },
                         new
                         {
@@ -833,7 +833,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 3,
                             TenantId = 10,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4306)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4590)
                         },
                         new
                         {
@@ -842,7 +842,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             BillingPeriodId = 1,
                             ResourceType = 1,
                             TenantId = 10,
-                            TimePaid = new DateTime(2020, 6, 2, 9, 17, 45, 128, DateTimeKind.Local).AddTicks(4311)
+                            TimePaid = new DateTime(2020, 6, 2, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(4592)
                         });
                 });
 
@@ -872,40 +872,40 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         new
                         {
                             ResourceUsageRateId = 1,
-                            PeriodEnd = new DateTime(2020, 11, 30, 9, 17, 45, 127, DateTimeKind.Local).AddTicks(2519),
-                            PeriodStart = new DateTime(2019, 12, 6, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
+                            PeriodEnd = new DateTime(2020, 11, 30, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(9360),
+                            PeriodStart = new DateTime(2019, 12, 6, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
                             Rate = 40.450000000000003,
                             ResourceType = 2
                         },
                         new
                         {
                             ResourceUsageRateId = 2,
-                            PeriodEnd = new DateTime(2020, 11, 30, 9, 17, 45, 127, DateTimeKind.Local).AddTicks(4567),
-                            PeriodStart = new DateTime(2019, 12, 6, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
+                            PeriodEnd = new DateTime(2020, 11, 30, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(311),
+                            PeriodStart = new DateTime(2019, 12, 6, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
                             Rate = 3.4500000000000002,
                             ResourceType = 0
                         },
                         new
                         {
                             ResourceUsageRateId = 3,
-                            PeriodEnd = new DateTime(2020, 11, 30, 9, 17, 45, 127, DateTimeKind.Local).AddTicks(4622),
-                            PeriodStart = new DateTime(2019, 12, 6, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
+                            PeriodEnd = new DateTime(2020, 11, 30, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(342),
+                            PeriodStart = new DateTime(2019, 12, 6, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
                             Rate = 1100.0,
                             ResourceType = 4
                         },
                         new
                         {
                             ResourceUsageRateId = 4,
-                            PeriodEnd = new DateTime(2020, 11, 30, 9, 17, 45, 127, DateTimeKind.Local).AddTicks(4627),
-                            PeriodStart = new DateTime(2019, 12, 6, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
+                            PeriodEnd = new DateTime(2020, 11, 30, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(346),
+                            PeriodStart = new DateTime(2019, 12, 6, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
                             Rate = 20.550000000000001,
                             ResourceType = 3
                         },
                         new
                         {
                             ResourceUsageRateId = 5,
-                            PeriodEnd = new DateTime(2020, 11, 30, 9, 17, 45, 127, DateTimeKind.Local).AddTicks(4632),
-                            PeriodStart = new DateTime(2019, 12, 6, 9, 17, 45, 108, DateTimeKind.Local).AddTicks(6440),
+                            PeriodEnd = new DateTime(2020, 11, 30, 9, 33, 0, 4, DateTimeKind.Local).AddTicks(349),
+                            PeriodStart = new DateTime(2019, 12, 6, 9, 32, 59, 994, DateTimeKind.Local).AddTicks(7626),
                             Rate = 1.75,
                             ResourceType = 1
                         });
@@ -1056,7 +1056,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 1,
                             ResourceType = 2,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(7469),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(838),
                             TenantId = 1,
                             UsageAmount = 1.0
                         },
@@ -1064,7 +1064,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 2,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8510),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1553),
                             TenantId = 1,
                             UsageAmount = 50.549999999999997
                         },
@@ -1072,7 +1072,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 3,
                             ResourceType = 4,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8549),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1580),
                             TenantId = 1,
                             UsageAmount = 1.0
                         },
@@ -1080,7 +1080,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 4,
                             ResourceType = 3,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8554),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1584),
                             TenantId = 1,
                             UsageAmount = 1.0
                         },
@@ -1088,7 +1088,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 5,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8558),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1586),
                             TenantId = 1,
                             UsageAmount = 40.399999999999999
                         },
@@ -1096,7 +1096,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 6,
                             ResourceType = 2,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8563),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1589),
                             TenantId = 2,
                             UsageAmount = 1.0
                         },
@@ -1104,7 +1104,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 7,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8567),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1592),
                             TenantId = 2,
                             UsageAmount = 50.549999999999997
                         },
@@ -1112,7 +1112,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 8,
                             ResourceType = 4,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8571),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1596),
                             TenantId = 2,
                             UsageAmount = 1.0
                         },
@@ -1120,7 +1120,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 9,
                             ResourceType = 3,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8575),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1599),
                             TenantId = 2,
                             UsageAmount = 1.0
                         },
@@ -1128,7 +1128,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 10,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8579),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1602),
                             TenantId = 2,
                             UsageAmount = 30.329999999999998
                         },
@@ -1136,7 +1136,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 11,
                             ResourceType = 2,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8583),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1605),
                             TenantId = 3,
                             UsageAmount = 1.0
                         },
@@ -1144,7 +1144,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 12,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8587),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1607),
                             TenantId = 3,
                             UsageAmount = 50.549999999999997
                         },
@@ -1152,7 +1152,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 13,
                             ResourceType = 4,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8591),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1610),
                             TenantId = 3,
                             UsageAmount = 1.0
                         },
@@ -1160,7 +1160,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 14,
                             ResourceType = 3,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8596),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1613),
                             TenantId = 3,
                             UsageAmount = 1.0
                         },
@@ -1168,7 +1168,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 15,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8599),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1616),
                             TenantId = 3,
                             UsageAmount = 30.329999999999998
                         },
@@ -1176,7 +1176,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 16,
                             ResourceType = 2,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8603),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1619),
                             TenantId = 4,
                             UsageAmount = 1.0
                         },
@@ -1184,7 +1184,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 17,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8607),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1622),
                             TenantId = 4,
                             UsageAmount = 50.549999999999997
                         },
@@ -1192,7 +1192,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 18,
                             ResourceType = 4,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8611),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1625),
                             TenantId = 4,
                             UsageAmount = 1.0
                         },
@@ -1200,7 +1200,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 19,
                             ResourceType = 3,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8615),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1627),
                             TenantId = 4,
                             UsageAmount = 1.0
                         },
@@ -1208,7 +1208,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 20,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8619),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1631),
                             TenantId = 4,
                             UsageAmount = 30.329999999999998
                         },
@@ -1216,7 +1216,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 21,
                             ResourceType = 2,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8623),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1634),
                             TenantId = 5,
                             UsageAmount = 1.0
                         },
@@ -1224,7 +1224,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 22,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8628),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1636),
                             TenantId = 5,
                             UsageAmount = 60.549999999999997
                         },
@@ -1232,7 +1232,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 23,
                             ResourceType = 4,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8631),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1640),
                             TenantId = 5,
                             UsageAmount = 1.0
                         },
@@ -1240,7 +1240,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 24,
                             ResourceType = 3,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8635),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1643),
                             TenantId = 5,
                             UsageAmount = 1.0
                         },
@@ -1248,7 +1248,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 25,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8639),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1645),
                             TenantId = 5,
                             UsageAmount = 40.329999999999998
                         },
@@ -1256,7 +1256,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 26,
                             ResourceType = 2,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8643),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1648),
                             TenantId = 6,
                             UsageAmount = 1.0
                         },
@@ -1264,7 +1264,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 27,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8647),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1651),
                             TenantId = 6,
                             UsageAmount = 60.549999999999997
                         },
@@ -1272,7 +1272,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 28,
                             ResourceType = 4,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8650),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1654),
                             TenantId = 6,
                             UsageAmount = 1.0
                         },
@@ -1280,7 +1280,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 29,
                             ResourceType = 3,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8654),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1657),
                             TenantId = 6,
                             UsageAmount = 1.0
                         },
@@ -1288,7 +1288,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 30,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8658),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1659),
                             TenantId = 6,
                             UsageAmount = 31.329999999999998
                         },
@@ -1296,7 +1296,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 31,
                             ResourceType = 2,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8662),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1662),
                             TenantId = 7,
                             UsageAmount = 1.0
                         },
@@ -1304,7 +1304,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 32,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8666),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1664),
                             TenantId = 7,
                             UsageAmount = 50.549999999999997
                         },
@@ -1312,7 +1312,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 33,
                             ResourceType = 4,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8671),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1667),
                             TenantId = 7,
                             UsageAmount = 1.0
                         },
@@ -1320,7 +1320,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 34,
                             ResourceType = 3,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8675),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1670),
                             TenantId = 7,
                             UsageAmount = 1.0
                         },
@@ -1328,7 +1328,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 35,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8679),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1673),
                             TenantId = 7,
                             UsageAmount = 30.329999999999998
                         },
@@ -1336,7 +1336,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 36,
                             ResourceType = 2,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8682),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1675),
                             TenantId = 8,
                             UsageAmount = 1.0
                         },
@@ -1344,7 +1344,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 37,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8686),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1678),
                             TenantId = 8,
                             UsageAmount = 50.549999999999997
                         },
@@ -1352,7 +1352,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 38,
                             ResourceType = 4,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8690),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1680),
                             TenantId = 8,
                             UsageAmount = 1.0
                         },
@@ -1360,7 +1360,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 39,
                             ResourceType = 3,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8694),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1683),
                             TenantId = 8,
                             UsageAmount = 1.0
                         },
@@ -1368,7 +1368,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 40,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8698),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1687),
                             TenantId = 8,
                             UsageAmount = 30.329999999999998
                         },
@@ -1376,7 +1376,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 41,
                             ResourceType = 2,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8701),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1689),
                             TenantId = 9,
                             UsageAmount = 1.0
                         },
@@ -1384,7 +1384,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 42,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8706),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1692),
                             TenantId = 9,
                             UsageAmount = 50.549999999999997
                         },
@@ -1392,7 +1392,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 43,
                             ResourceType = 4,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8710),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1695),
                             TenantId = 9,
                             UsageAmount = 1.0
                         },
@@ -1400,7 +1400,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 44,
                             ResourceType = 3,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8713),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1697),
                             TenantId = 9,
                             UsageAmount = 1.0
                         },
@@ -1408,7 +1408,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 45,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8717),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1700),
                             TenantId = 9,
                             UsageAmount = 30.329999999999998
                         },
@@ -1416,7 +1416,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 46,
                             ResourceType = 2,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8722),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1703),
                             TenantId = 10,
                             UsageAmount = 1.0
                         },
@@ -1424,7 +1424,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 47,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8726),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1705),
                             TenantId = 10,
                             UsageAmount = 50.549999999999997
                         },
@@ -1432,7 +1432,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 48,
                             ResourceType = 4,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8730),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1708),
                             TenantId = 10,
                             UsageAmount = 1.0
                         },
@@ -1440,7 +1440,7 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 49,
                             ResourceType = 3,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8734),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1711),
                             TenantId = 10,
                             UsageAmount = 1.0
                         },
@@ -1448,9 +1448,1609 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             TenantResourceUsageId = 50,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 2, 9, 17, 45, 125, DateTimeKind.Local).AddTicks(8738),
+                            SampleTime = new DateTime(2020, 6, 2, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1713),
                             TenantId = 10,
                             UsageAmount = 30.329999999999998
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 51,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 6, 1, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1716),
+                            TenantId = 1,
+                            UsageAmount = 30.460000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 52,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 31, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1762),
+                            TenantId = 1,
+                            UsageAmount = 29.850000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 53,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 30, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1765),
+                            TenantId = 1,
+                            UsageAmount = 5.3300000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 54,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 29, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1768),
+                            TenantId = 1,
+                            UsageAmount = 50.670000000000002
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 55,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 28, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1770),
+                            TenantId = 1,
+                            UsageAmount = 40.780000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 56,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 27, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1773),
+                            TenantId = 1,
+                            UsageAmount = 30.07
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 57,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 26, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1776),
+                            TenantId = 1,
+                            UsageAmount = 31.359999999999999
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 58,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 25, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1779),
+                            TenantId = 1,
+                            UsageAmount = 20.530000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 59,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 24, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1782),
+                            TenantId = 1,
+                            UsageAmount = 10.73
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 60,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 23, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1785),
+                            TenantId = 1,
+                            UsageAmount = 30.210000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 61,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 6, 1, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1788),
+                            TenantId = 1,
+                            UsageAmount = 10.41
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 62,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 31, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1791),
+                            TenantId = 1,
+                            UsageAmount = 15.42
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 63,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 30, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1794),
+                            TenantId = 1,
+                            UsageAmount = 6.4299999999999997
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 64,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 29, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1796),
+                            TenantId = 1,
+                            UsageAmount = 31.460000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 65,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 28, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1799),
+                            TenantId = 1,
+                            UsageAmount = 10.17
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 66,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 27, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1865),
+                            TenantId = 1,
+                            UsageAmount = 16.93
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 67,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 26, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1868),
+                            TenantId = 1,
+                            UsageAmount = 15.74
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 68,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 25, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1871),
+                            TenantId = 1,
+                            UsageAmount = 16.600000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 69,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 24, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1874),
+                            TenantId = 1,
+                            UsageAmount = 14.41
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 70,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 23, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1877),
+                            TenantId = 1,
+                            UsageAmount = 16.32
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 71,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 6, 1, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1879),
+                            TenantId = 2,
+                            UsageAmount = 31.460000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 72,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 31, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1882),
+                            TenantId = 2,
+                            UsageAmount = 25.850000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 73,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 30, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1885),
+                            TenantId = 2,
+                            UsageAmount = 5.3300000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 74,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 29, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1888),
+                            TenantId = 2,
+                            UsageAmount = 50.670000000000002
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 75,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 28, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1890),
+                            TenantId = 2,
+                            UsageAmount = 40.780000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 76,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 27, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1894),
+                            TenantId = 2,
+                            UsageAmount = 29.07
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 77,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 26, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1897),
+                            TenantId = 2,
+                            UsageAmount = 30.359999999999999
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 78,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 25, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1900),
+                            TenantId = 2,
+                            UsageAmount = 20.530000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 79,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 24, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1903),
+                            TenantId = 2,
+                            UsageAmount = 5.7300000000000004
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 80,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 23, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1906),
+                            TenantId = 2,
+                            UsageAmount = 40.210000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 81,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 6, 1, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1909),
+                            TenantId = 2,
+                            UsageAmount = 11.41
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 82,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 31, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1912),
+                            TenantId = 2,
+                            UsageAmount = 14.42
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 83,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 30, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1917),
+                            TenantId = 2,
+                            UsageAmount = 9.4299999999999997
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 84,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 29, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1920),
+                            TenantId = 2,
+                            UsageAmount = 25.460000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 85,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 28, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1922),
+                            TenantId = 2,
+                            UsageAmount = 10.17
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 86,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 27, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1925),
+                            TenantId = 2,
+                            UsageAmount = 16.93
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 87,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 26, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1928),
+                            TenantId = 2,
+                            UsageAmount = 5.7400000000000002
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 88,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 25, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1932),
+                            TenantId = 2,
+                            UsageAmount = 26.600000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 89,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 24, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1935),
+                            TenantId = 2,
+                            UsageAmount = 14.41
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 90,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 23, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1938),
+                            TenantId = 2,
+                            UsageAmount = 16.32
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 91,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 6, 1, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1941),
+                            TenantId = 3,
+                            UsageAmount = 9.4600000000000009
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 92,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 31, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1943),
+                            TenantId = 3,
+                            UsageAmount = 23.850000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 93,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 30, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1947),
+                            TenantId = 3,
+                            UsageAmount = 5.3300000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 94,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 29, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1950),
+                            TenantId = 3,
+                            UsageAmount = 30.670000000000002
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 95,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 28, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1952),
+                            TenantId = 3,
+                            UsageAmount = 45.780000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 96,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 27, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1955),
+                            TenantId = 3,
+                            UsageAmount = 30.07
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 97,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 26, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1958),
+                            TenantId = 3,
+                            UsageAmount = 32.359999999999999
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 98,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 25, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1962),
+                            TenantId = 3,
+                            UsageAmount = 25.530000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 99,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 24, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1966),
+                            TenantId = 3,
+                            UsageAmount = 11.73
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 100,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 23, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1970),
+                            TenantId = 3,
+                            UsageAmount = 31.210000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 101,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 6, 1, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1974),
+                            TenantId = 3,
+                            UsageAmount = 15.41
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 102,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 31, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1978),
+                            TenantId = 3,
+                            UsageAmount = 25.420000000000002
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 103,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 30, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1981),
+                            TenantId = 3,
+                            UsageAmount = 16.43
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 104,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 29, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1985),
+                            TenantId = 3,
+                            UsageAmount = 11.460000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 105,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 28, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1990),
+                            TenantId = 3,
+                            UsageAmount = 50.170000000000002
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 106,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 27, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1994),
+                            TenantId = 3,
+                            UsageAmount = 26.93
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 107,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 26, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(1998),
+                            TenantId = 3,
+                            UsageAmount = 15.74
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 108,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 25, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2003),
+                            TenantId = 3,
+                            UsageAmount = 6.5999999999999996
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 109,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 24, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2007),
+                            TenantId = 3,
+                            UsageAmount = 24.41
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 110,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 23, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2012),
+                            TenantId = 3,
+                            UsageAmount = 13.32
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 111,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 6, 1, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2016),
+                            TenantId = 4,
+                            UsageAmount = 3.46
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 112,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 31, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2022),
+                            TenantId = 4,
+                            UsageAmount = 29.850000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 113,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 30, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2027),
+                            TenantId = 4,
+                            UsageAmount = 5.3300000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 114,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 29, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2030),
+                            TenantId = 4,
+                            UsageAmount = 10.67
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 115,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 28, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2034),
+                            TenantId = 4,
+                            UsageAmount = 40.780000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 116,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 27, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2038),
+                            TenantId = 4,
+                            UsageAmount = 20.07
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 117,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 26, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2043),
+                            TenantId = 4,
+                            UsageAmount = 11.359999999999999
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 118,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 25, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2046),
+                            TenantId = 4,
+                            UsageAmount = 10.529999999999999
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 119,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 24, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2049),
+                            TenantId = 4,
+                            UsageAmount = 15.73
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 120,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 23, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2052),
+                            TenantId = 4,
+                            UsageAmount = 3.21
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 121,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 6, 1, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2054),
+                            TenantId = 4,
+                            UsageAmount = 13.41
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 122,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 31, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2057),
+                            TenantId = 4,
+                            UsageAmount = 30.420000000000002
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 123,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 30, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2060),
+                            TenantId = 4,
+                            UsageAmount = 16.43
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 124,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 29, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2063),
+                            TenantId = 4,
+                            UsageAmount = 11.460000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 125,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 28, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2065),
+                            TenantId = 4,
+                            UsageAmount = 10.17
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 126,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 27, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2069),
+                            TenantId = 4,
+                            UsageAmount = 16.93
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 127,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 26, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2071),
+                            TenantId = 4,
+                            UsageAmount = 15.74
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 128,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 25, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2074),
+                            TenantId = 4,
+                            UsageAmount = 26.600000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 129,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 24, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2077),
+                            TenantId = 4,
+                            UsageAmount = 4.4100000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 130,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 23, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2081),
+                            TenantId = 4,
+                            UsageAmount = 16.32
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 131,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 6, 1, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2084),
+                            TenantId = 5,
+                            UsageAmount = 10.460000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 132,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 31, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2087),
+                            TenantId = 5,
+                            UsageAmount = 19.850000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 133,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 30, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2089),
+                            TenantId = 5,
+                            UsageAmount = 15.33
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 134,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 29, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2092),
+                            TenantId = 5,
+                            UsageAmount = 10.67
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 135,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 28, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2095),
+                            TenantId = 5,
+                            UsageAmount = 10.779999999999999
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 136,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 27, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2098),
+                            TenantId = 5,
+                            UsageAmount = 10.07
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 137,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 26, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2100),
+                            TenantId = 5,
+                            UsageAmount = 11.359999999999999
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 138,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 25, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2103),
+                            TenantId = 5,
+                            UsageAmount = 10.529999999999999
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 139,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 24, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2106),
+                            TenantId = 5,
+                            UsageAmount = 10.73
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 140,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 23, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2109),
+                            TenantId = 5,
+                            UsageAmount = 10.210000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 141,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 6, 1, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2111),
+                            TenantId = 5,
+                            UsageAmount = 11.41
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 142,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 31, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2114),
+                            TenantId = 5,
+                            UsageAmount = 11.42
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 143,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 30, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2117),
+                            TenantId = 5,
+                            UsageAmount = 16.43
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 144,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 29, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2120),
+                            TenantId = 5,
+                            UsageAmount = 11.460000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 145,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 28, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2122),
+                            TenantId = 5,
+                            UsageAmount = 10.17
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 146,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 27, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2125),
+                            TenantId = 5,
+                            UsageAmount = 11.93
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 147,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 26, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2129),
+                            TenantId = 5,
+                            UsageAmount = 11.74
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 148,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 25, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2131),
+                            TenantId = 5,
+                            UsageAmount = 11.6
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 149,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 24, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2134),
+                            TenantId = 5,
+                            UsageAmount = 11.41
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 150,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 23, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2137),
+                            TenantId = 5,
+                            UsageAmount = 11.32
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 151,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 6, 1, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2140),
+                            TenantId = 6,
+                            UsageAmount = 20.460000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 152,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 31, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2142),
+                            TenantId = 6,
+                            UsageAmount = 20.850000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 153,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 30, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2145),
+                            TenantId = 6,
+                            UsageAmount = 25.329999999999998
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 154,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 29, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2148),
+                            TenantId = 6,
+                            UsageAmount = 20.670000000000002
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 155,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 28, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2150),
+                            TenantId = 6,
+                            UsageAmount = 20.780000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 156,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 27, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2153),
+                            TenantId = 6,
+                            UsageAmount = 20.07
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 157,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 26, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2156),
+                            TenantId = 6,
+                            UsageAmount = 21.359999999999999
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 158,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 25, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2159),
+                            TenantId = 6,
+                            UsageAmount = 20.530000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 159,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 24, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2161),
+                            TenantId = 6,
+                            UsageAmount = 20.73
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 160,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 23, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2164),
+                            TenantId = 6,
+                            UsageAmount = 20.210000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 161,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 6, 1, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2167),
+                            TenantId = 6,
+                            UsageAmount = 10.41
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 162,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 31, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2170),
+                            TenantId = 6,
+                            UsageAmount = 15.42
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 163,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 30, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2173),
+                            TenantId = 6,
+                            UsageAmount = 16.43
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 164,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 29, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2176),
+                            TenantId = 6,
+                            UsageAmount = 11.460000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 165,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 28, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2179),
+                            TenantId = 6,
+                            UsageAmount = 10.17
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 166,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 27, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2182),
+                            TenantId = 6,
+                            UsageAmount = 16.93
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 167,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 26, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2185),
+                            TenantId = 6,
+                            UsageAmount = 15.74
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 168,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 25, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2188),
+                            TenantId = 6,
+                            UsageAmount = 16.600000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 169,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 24, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2191),
+                            TenantId = 6,
+                            UsageAmount = 14.41
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 170,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 23, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2193),
+                            TenantId = 6,
+                            UsageAmount = 16.32
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 171,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 6, 1, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2196),
+                            TenantId = 7,
+                            UsageAmount = 30.460000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 172,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 31, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2199),
+                            TenantId = 7,
+                            UsageAmount = 39.850000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 173,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 30, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2202),
+                            TenantId = 7,
+                            UsageAmount = 35.329999999999998
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 174,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 29, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2204),
+                            TenantId = 7,
+                            UsageAmount = 30.670000000000002
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 175,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 28, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2207),
+                            TenantId = 7,
+                            UsageAmount = 30.780000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 176,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 27, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2210),
+                            TenantId = 7,
+                            UsageAmount = 35.07
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 177,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 26, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2212),
+                            TenantId = 7,
+                            UsageAmount = 31.359999999999999
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 178,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 25, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2215),
+                            TenantId = 7,
+                            UsageAmount = 30.530000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 179,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 24, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2218),
+                            TenantId = 7,
+                            UsageAmount = 30.73
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 180,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 23, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2221),
+                            TenantId = 7,
+                            UsageAmount = 30.210000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 181,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 6, 1, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2223),
+                            TenantId = 7,
+                            UsageAmount = 30.41
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 182,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 31, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2226),
+                            TenantId = 7,
+                            UsageAmount = 35.420000000000002
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 183,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 30, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2230),
+                            TenantId = 7,
+                            UsageAmount = 36.43
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 184,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 29, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2232),
+                            TenantId = 7,
+                            UsageAmount = 31.460000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 185,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 28, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2235),
+                            TenantId = 7,
+                            UsageAmount = 30.170000000000002
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 186,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 27, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2238),
+                            TenantId = 7,
+                            UsageAmount = 36.93
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 187,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 26, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2241),
+                            TenantId = 7,
+                            UsageAmount = 35.740000000000002
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 188,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 25, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2243),
+                            TenantId = 7,
+                            UsageAmount = 36.600000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 189,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 24, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2246),
+                            TenantId = 7,
+                            UsageAmount = 34.409999999999997
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 190,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 23, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2249),
+                            TenantId = 7,
+                            UsageAmount = 36.32
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 191,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 6, 1, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2252),
+                            TenantId = 8,
+                            UsageAmount = 9.4600000000000009
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 192,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 31, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2254),
+                            TenantId = 8,
+                            UsageAmount = 9.8499999999999996
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 193,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 30, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2257),
+                            TenantId = 8,
+                            UsageAmount = 9.3300000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 194,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 29, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2260),
+                            TenantId = 8,
+                            UsageAmount = 9.6699999999999999
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 195,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 28, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2262),
+                            TenantId = 8,
+                            UsageAmount = 9.7799999999999994
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 196,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 27, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2265),
+                            TenantId = 8,
+                            UsageAmount = 9.0700000000000003
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 197,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 26, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2268),
+                            TenantId = 8,
+                            UsageAmount = 31.359999999999999
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 198,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 25, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2271),
+                            TenantId = 8,
+                            UsageAmount = 9.5299999999999994
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 199,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 24, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2274),
+                            TenantId = 8,
+                            UsageAmount = 9.7300000000000004
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 200,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 23, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2276),
+                            TenantId = 8,
+                            UsageAmount = 40.210000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 201,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 6, 1, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2280),
+                            TenantId = 8,
+                            UsageAmount = 10.41
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 202,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 31, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2283),
+                            TenantId = 8,
+                            UsageAmount = 10.42
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 203,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 30, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2286),
+                            TenantId = 8,
+                            UsageAmount = 10.43
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 204,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 29, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2288),
+                            TenantId = 8,
+                            UsageAmount = 10.460000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 205,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 28, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2291),
+                            TenantId = 8,
+                            UsageAmount = 10.17
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 206,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 27, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2294),
+                            TenantId = 8,
+                            UsageAmount = 10.93
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 207,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 26, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2296),
+                            TenantId = 8,
+                            UsageAmount = 35.740000000000002
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 208,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 25, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2300),
+                            TenantId = 8,
+                            UsageAmount = 16.600000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 209,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 24, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2302),
+                            TenantId = 8,
+                            UsageAmount = 14.41
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 210,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 23, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2305),
+                            TenantId = 8,
+                            UsageAmount = 16.32
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 211,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 6, 1, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2308),
+                            TenantId = 9,
+                            UsageAmount = 31.460000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 212,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 31, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2311),
+                            TenantId = 9,
+                            UsageAmount = 29.850000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 213,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 30, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2313),
+                            TenantId = 9,
+                            UsageAmount = 25.329999999999998
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 214,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 29, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2316),
+                            TenantId = 9,
+                            UsageAmount = 10.67
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 215,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 28, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2319),
+                            TenantId = 9,
+                            UsageAmount = 40.780000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 216,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 27, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2321),
+                            TenantId = 9,
+                            UsageAmount = 10.07
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 217,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 26, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2324),
+                            TenantId = 9,
+                            UsageAmount = 1.3600000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 218,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 25, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2327),
+                            TenantId = 9,
+                            UsageAmount = 20.530000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 219,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 24, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2331),
+                            TenantId = 9,
+                            UsageAmount = 10.73
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 220,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 23, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2334),
+                            TenantId = 9,
+                            UsageAmount = 30.210000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 221,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 6, 1, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2336),
+                            TenantId = 9,
+                            UsageAmount = 20.41
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 222,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 31, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2339),
+                            TenantId = 9,
+                            UsageAmount = 25.420000000000002
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 223,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 30, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2342),
+                            TenantId = 9,
+                            UsageAmount = 26.43
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 224,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 29, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2345),
+                            TenantId = 9,
+                            UsageAmount = 21.460000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 225,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 28, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2347),
+                            TenantId = 9,
+                            UsageAmount = 20.170000000000002
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 226,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 27, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2350),
+                            TenantId = 9,
+                            UsageAmount = 6.9299999999999997
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 227,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 26, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2353),
+                            TenantId = 9,
+                            UsageAmount = 5.7400000000000002
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 228,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 25, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2355),
+                            TenantId = 9,
+                            UsageAmount = 6.5999999999999996
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 229,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 24, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2358),
+                            TenantId = 9,
+                            UsageAmount = 4.4100000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 230,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 23, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2361),
+                            TenantId = 9,
+                            UsageAmount = 6.3200000000000003
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 231,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 6, 1, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2364),
+                            TenantId = 10,
+                            UsageAmount = 30.460000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 232,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 31, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2367),
+                            TenantId = 10,
+                            UsageAmount = 29.850000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 233,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 30, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2369),
+                            TenantId = 10,
+                            UsageAmount = 35.329999999999998
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 234,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 29, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2373),
+                            TenantId = 10,
+                            UsageAmount = 30.670000000000002
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 235,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 28, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2376),
+                            TenantId = 10,
+                            UsageAmount = 30.780000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 236,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 27, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2379),
+                            TenantId = 10,
+                            UsageAmount = 10.07
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 237,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 26, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2464),
+                            TenantId = 10,
+                            UsageAmount = 10.359999999999999
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 238,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 25, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2468),
+                            TenantId = 10,
+                            UsageAmount = 10.529999999999999
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 239,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 24, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2471),
+                            TenantId = 10,
+                            UsageAmount = 10.73
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 240,
+                            ResourceType = 0,
+                            SampleTime = new DateTime(2020, 5, 23, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2474),
+                            TenantId = 10,
+                            UsageAmount = 10.210000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 241,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 6, 1, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2476),
+                            TenantId = 10,
+                            UsageAmount = 20.41
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 242,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 31, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2479),
+                            TenantId = 10,
+                            UsageAmount = 25.420000000000002
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 243,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 30, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2482),
+                            TenantId = 10,
+                            UsageAmount = 26.43
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 244,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 29, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2485),
+                            TenantId = 10,
+                            UsageAmount = 21.460000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 245,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 28, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2487),
+                            TenantId = 10,
+                            UsageAmount = 20.170000000000002
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 246,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 27, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2493),
+                            TenantId = 10,
+                            UsageAmount = 16.93
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 247,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 26, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2495),
+                            TenantId = 10,
+                            UsageAmount = 15.74
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 248,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 25, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2498),
+                            TenantId = 10,
+                            UsageAmount = 16.600000000000001
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 249,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 24, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2501),
+                            TenantId = 10,
+                            UsageAmount = 14.41
+                        },
+                        new
+                        {
+                            TenantResourceUsageId = 250,
+                            ResourceType = 1,
+                            SampleTime = new DateTime(2020, 5, 23, 9, 33, 0, 3, DateTimeKind.Local).AddTicks(2504),
+                            TenantId = 10,
+                            UsageAmount = 16.32
                         });
                 });
 
