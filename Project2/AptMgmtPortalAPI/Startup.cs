@@ -94,11 +94,6 @@ namespace AptMgmtPortalAPI
 
             app.UseHttpsRedirection();
 
-            if (!env.IsDevelopment())
-            {
-                app.UseSpaStaticFiles();
-            }
-
             // NOTE: These need to stay in this order.
             app.UseRouting();
             app.UseCors();
