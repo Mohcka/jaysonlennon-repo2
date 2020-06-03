@@ -142,7 +142,7 @@ namespace AptMgmtPortalAPI.Repository
             return unit;
         }
 
-        public async Task<Unit> QueryUnit(int unitId)
+        public async Task<Unit> GetUnit(int unitId)
         {
             return await _context.Units
                 .Where(u => u.UnitId == unitId)
@@ -156,6 +156,30 @@ namespace AptMgmtPortalAPI.Repository
                 .Where(u => u.UnitNumber.ToLower() == unitNumber.ToLower())
                 .Select(u => u)
                 .FirstOrDefaultAsync();
+        }
+
+        public async Task<IEnumerable<Unit>> GetUnits()
+        {
+            return await _context.Units.Select(u => u).ToListAsync();
+        }
+
+        public async Task<Unit> UpdateUnit(Unit unit)
+        {
+            var existingUnit = await _context.Units
+                .Where(u => u.UnitId == unit.UnitId)
+                .Select(u => u)
+                .FirstOrDefaultAsync();
+
+            if (existingUnit == null) {
+                await _context.AddAsync(unit);
+            } else {
+                existingUnit.UnitNumber = unit.UnitNumber;
+                existingUnit.TenantId = unit.TenantId;
+            }
+
+            await _context.SaveChangesAsync();
+
+            return unit;
         }
     }
 }
