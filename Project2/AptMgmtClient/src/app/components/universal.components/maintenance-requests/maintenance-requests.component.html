@@ -1,22 +1,14 @@
-<!-- <div class="offset-2">
-  <h2>Maintenace Requests</h2>
-  <button class="col-3 btn btn-primary">Create New Request</button>
-  <div *ngIf="!maintenanceRequests">
-    Loading
-  </div>
-
-  <div *ngIf="maintenanceRequests">
-    <ul class="list-group">
-      <li *ngFor="let request of maintenanceRequests">
-        {{ request.id }}: {{ request.category }}
-      </li>
-    </ul>
-  </div>
-</div> -->
-
 <div *ngIf="maintenanceRequests">
-  <h2>{{ authService.currentUserValue.loginName }}'s Mainteance Requests</h2>
-  <a class="btn btn-primary" [routerLink]="['/tenant/maintenance/new']">
+  <h2 *ngIf="isTenant">
+    {{ authService.currentUserValue.loginName }}'s Mainteance Requests
+  </h2>
+  <h2 *ngIf="isManager">Maintenance Requests</h2>
+  <a
+    class="btn btn-primary"
+    [routerLink]="[
+      isManager ? '/manager/maintenance/new' : '/tenant/maintenance/new'
+    ]"
+  >
     Create New Request
   </a>
   <table class="table">
@@ -25,7 +17,9 @@
         <th scope="col">Request#</th>
         <th scope="col">Handle</th>
         <th scope="col">Requester</th>
-        <th scope="col">Time created</th>
+        <th scope="col">Unit Number</th>
+        <th scope="col">Time Created</th>
+        <th scope="col">Status</th>
         <th scope="col">Reason</th>
       </tr>
     </thead>
@@ -34,9 +28,29 @@
         <th scope="row">{{ request.maintenanceRequestId }}</th>
         <td>{{ request.maintenanceRequestType }}</td>
         <td>{{ request.openedBy }}</td>
+        <td>{{ request.unitNumber }}</td>
         <td>{{ request.timeOpened | date: 'MM/dd/yy HH:mm' }}</td>
+        <td>
+          <span *ngIf="request.timeClosed">
+            Closed by: {{ request.closedBy }}<br />
+            on: {{ request.timeClosed | date: 'MM/dd/yy HH:mm' }}<br/>
+            Reason: {{ request.closeReason | maintenanceCloseReasonAsString }}
+          </span>
+          <span *ngIf="!request.timeClosed">Open</span>
+        </td>
         <td>{{ request.openNotes }}</td>
-        <td><button class="btn btn-danger">Cancel</button></td>
+        <td>
+          <button
+            *ngIf="!request.closedBy"
+            class="btn btn-primary"
+            (click)="cancelRequest(request)"
+          >
+            Cancel
+          </button>
+          <button *ngIf="request.closedBy" class="btn btn-secondary" disabled>
+            Closed
+          </button>
+        </td>
       </tr>
     </tbody>
   </table>

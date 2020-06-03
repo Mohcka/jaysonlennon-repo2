@@ -56,7 +56,10 @@ const routes: Routes = [
   { path: 'manager/tenants/list', component: ManagerListTenantsComponent,
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Manager] } },
 
-  { path: 'manager/maintenance/list', component: ManagerMaintenanceRequestListComponent,
+  { path: 'manager/maintenance/list', component: MaintenanceRequestsComponent,
+    canActivate: [AuthGuard], data: { roles: [UserAccountType.Manager] } },
+
+  { path: 'manager/maintenance/new', component: MaintenanceRequestFormComponent,
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Manager] } },
 ];
 
