@@ -1,3 +1,4 @@
+import { AgreementTemplate } from './../model/agreement-template';
 import { Injectable } from '@angular/core';
 import { Agreement } from '../model/agreement';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -26,5 +27,17 @@ export class AgreementService {
     return this.http
       .post<Agreement>(ApiBase.url() + 'Agreements', data, this.httpOptions)
       .pipe(catchError(handleError<null>('agreement.service(signAgreement)')));
+  }
+
+  public getAgreementTemplates(): Observable<Agreement[]> {
+    return this.http
+      .get<Agreement[]>(ApiBase.url() + 'AgreementTemplates')
+      .pipe(catchError(handleError<Agreement[]>('agreement.service(getAgreementTemplates)', [])));
+  }
+
+  public addAgreementTemplate(data: AgreementTemplate): Observable<AgreementTemplate> {
+    return this.http
+      .post<AgreementTemplate>(ApiBase.url() + 'AgreementTemplate', data, this.httpOptions)
+      .pipe(catchError(handleError<null>('agreement.service(addAgreementTemplate)')));
   }
 }

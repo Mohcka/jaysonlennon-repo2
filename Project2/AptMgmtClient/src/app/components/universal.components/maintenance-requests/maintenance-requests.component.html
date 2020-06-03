@@ -1,4 +1,4 @@
-<div class="offset-2">
+<!-- <div class="offset-2">
   <h2>Maintenace Requests</h2>
   <button class="col-3 btn btn-primary">Create New Request</button>
   <div *ngIf="!maintenanceRequests">
@@ -6,10 +6,38 @@
   </div>
 
   <div *ngIf="maintenanceRequests">
-    <ul>
+    <ul class="list-group">
       <li *ngFor="let request of maintenanceRequests">
-        <!-- {{ request.id }}: {{ request.category }} -->
+        {{ request.id }}: {{ request.category }}
       </li>
     </ul>
   </div>
+</div> -->
+
+<div *ngIf="maintenanceRequests">
+  <h2>{{ authService.currentUserValue.loginName }}'s Mainteance Requests</h2>
+  <a class="btn btn-primary" [routerLink]="['/tenant/maintenance/new']">
+    Create New Request
+  </a>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Request#</th>
+        <th scope="col">Handle</th>
+        <th scope="col">Requester</th>
+        <th scope="col">Time created</th>
+        <th scope="col">Reason</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let request of maintenanceRequests">
+        <th scope="row">{{ request.maintenanceRequestId }}</th>
+        <td>{{ request.maintenanceRequestType }}</td>
+        <td>{{ request.openedBy }}</td>
+        <td>{{ request.timeOpened | date: 'MM/dd/yy HH:mm' }}</td>
+        <td>{{ request.openNotes }}</td>
+        <td><button class="btn btn-danger">Cancel</button></td>
+      </tr>
+    </tbody>
+  </table>
 </div>

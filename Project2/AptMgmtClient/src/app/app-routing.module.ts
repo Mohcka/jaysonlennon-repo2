@@ -1,3 +1,4 @@
+import { TenantPageListAgreementsComponent } from './components/tenant.components/tenant-page-list-agreements/tenant-page-list-agreements.component';
 import { TenantPageBillPayComponent } from './components/tenant.components/tenant-page-bill-pay/tenant-page-bill-pay.component';
 import { UnauthorizedAccessComponent } from './components/universal.components/unauthorized-access/unauthorized-access.component';
 import { UserAccountType } from './../enums/user-account-type';
@@ -14,6 +15,7 @@ import { LoginComponent } from './components/universal.components/login/login.co
 import { MaintenanceRequestFormComponent } from './components/universal.components/maintenance-request-form/maintenance-request-form.component';
 import { ManagerListTenantsComponent } from './components/manager.components/manager-list-tenants/manager-list-tenants.component';
 import { TenantPageListBillsComponent } from './components/tenant.components/tenant-page-list-bills/tenant-page-list-bills.component';
+import { TenantEditInfoComponent } from './components/tenant.components/tenant-edit-info/tenant-edit-info.component';
 
 // Define routes for the application
 const routes: Routes = [
@@ -24,6 +26,9 @@ const routes: Routes = [
 
   // Tenants
   { path: 'tenant', component: TenantHomeComponent,
+    canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },
+
+  { path: 'tenant/edit', component: TenantEditInfoComponent,
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },
 
   { path: 'tenant/tenantInfo/:id', component: TenantDetailsComponent,
@@ -38,7 +43,10 @@ const routes: Routes = [
   { path: 'tenant/bill/list', component: TenantPageListBillsComponent,
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },
 
-  { path: 'tenant/bill/pay', component: TenantPageBillPayComponent,
+  { path: 'tenant/bill/pay/:periodId/:resourceTypeId', component: TenantPageBillPayComponent,
+    canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },
+
+  { path: 'tenant/agreement/list', component: TenantPageListAgreementsComponent,
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },
 
   // Managers

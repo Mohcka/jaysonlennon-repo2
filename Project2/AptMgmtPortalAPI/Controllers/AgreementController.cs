@@ -30,9 +30,9 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
         }
 
         [HttpGet]
-        [Route("Agreements")]
+        [Route("AgreementTemplates")]
         [Authorize(Policy = Policies.AnyLoggedIn)]
-        public async Task<IActionResult> GetAgreements()
+        public async Task<IActionResult> GetAgreementTemplates()
         {
             if (this.UserInRole(Role.Tenant))
             {
@@ -64,10 +64,30 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
             }
         }
 
-        [HttpGet]
-        [Route("Agreements/Signed")]
+        [HttpPost]
+        [Route("AgreementTemplate")]
         [Authorize(Policy = Policies.AnyLoggedIn)]
-        public async Task<IActionResult> GetSignedAgreements()
+        public async Task<IActionResult> UpdateAgreementTemplate(Entity.Agreement agreement)
+        {
+            if (this.UserInRole(Role.Manager) || this.UserInRole(Role.Admin))
+            {
+                var updatedAgreement = await _agreementRepository.UpdateAgreementTemplate(agreement);
+                return new ObjectResult(updatedAgreement);
+            }
+            else
+            {
+                var err = new DTO.ErrorBuilder()
+                                .Message("You are not authorized to update agreement templates.")
+                                .Code(403)
+                                .Build();
+                return err;
+            }
+        }
+
+        [HttpGet]
+        [Route("Agreements")]
+        [Authorize(Policy = Policies.AnyLoggedIn)]
+        public async Task<IActionResult> GetAgreements()
         {
             if (this.UserInRole(Role.Tenant))
             {

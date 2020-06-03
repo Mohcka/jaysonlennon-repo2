@@ -21,6 +21,7 @@ export class MaintenanceRequestFormComponent implements OnInit {
   public returnUrl: string;
   public error = '';
 
+  // TODO: Get maintenance request type samples from server
   public maintenanceRequestTypes: string[] = [
     'Plumbing',
     'Upholstry',
@@ -51,11 +52,18 @@ export class MaintenanceRequestFormComponent implements OnInit {
     console.log(this.f.type.value);
     console.log(this.f.notes.value);
 
+    this.submitted = true;
+
+    // stop if form is invalid
+    if (this.maintenanceRequestForm.invalid) {
+      return;
+    }
+
     this.maintenanceService
       .createNewRequest({
         openNotes: this.f.notes.value,
         maintenanceRequestType: this.f.type.value,
       })
-      .subscribe((_) => this.router.navigate(['/']));
+      .subscribe((_) => this.router.navigate(['/tenant/maintenance/list']));
   }
 }

@@ -78,8 +78,11 @@ namespace AptMgmtPortalAPI
             try
             {
                 context.Database.Migrate();
+                context.SaveChanges();
             }
-            catch {}
+            catch (Exception e) {
+                Console.WriteLine($"Failed to apply migrations: {e}");
+            }
 
             if (env.IsDevelopment())
             {

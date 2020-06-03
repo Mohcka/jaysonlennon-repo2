@@ -2,14 +2,49 @@
 <h3>this page should use a bill component to display the billing info</h3>
 
 <div *ngIf="bill">
-  <div>Tenant id: {{ bill.tenantId }}</div>
-  <div>Resource: {{ bill.resource | resourceAsString }}</div>
-  <div>period start: {{ bill.periodStart | date }}</div>
-  <div>period end: {{ bill.periodEnd | date }}</div>
-  <div>period id: {{ bill.billingPeriodId }}</div>
-  <div>usage: {{ bill.usage }}</div>
-  <div>rate: {{ bill.rate | currency: 'USD' }}</div>
-  <div>cost: {{ bill.cost | currency: 'USD' }}</div>
-  <div>paid: {{ bill.paid | currency: 'USD' }}</div>
-  <div>owed: {{ bill.owed | currency: 'USD' }}</div>
+  <h2>{{ bill.resource | resourceAsString }}</h2>
+  <div>
+    <hr />
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Period Starts</th>
+          <th scope="col">Period Ends</th>
+          <th scope="col">Usage</th>
+          <th scope="col">Rate</th>
+          <th scope="col">Cost</th>
+          <th scope="col">Paid</th>
+          <th scope="col">Owed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ bill.periodStart | date }}</td>
+          <td>{{ bill.periodEnd | date }}</td>
+          <td>{{ bill.usage }}</td>
+          <td>{{ bill.rate | currency: 'USD' }}</td>
+          <td>{{ bill.paid | currency: 'USD' }}</td>
+          <td>{{ bill.cost | currency: 'USD' }}</td>
+          <td>{{ bill.owed | currency: 'USD' }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="display: inline-block;">
+      <button
+        *ngIf="bill.owed > 0"
+        class="btn btn-primary"
+        (click)="
+          payBill(bill.resource, bill.billingPeriodId, bill.owed)
+        "
+      >
+        Pay {{ bill.resource | resourceAsString }}
+      </button>
+      <button *ngIf="bill.owed <= 0" class="btn btn-secondary" disabled>
+        Bill Paid
+      </button>
+    </div>
+  </div>
 </div>
+
+<div *ngIf="!bill">Processing...</div>

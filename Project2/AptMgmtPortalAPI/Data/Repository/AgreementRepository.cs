@@ -136,5 +136,24 @@ namespace AptMgmtPortalAPI.Repository
                 EndDate = signedAgreement.EndDate,
             };
         }
+
+        public async Task<Entity.Agreement> UpdateAgreementTemplate(Entity.Agreement agreement)
+        {
+            var existingAgreement = await _context.Agreements
+                .Where(a => a.AgreementId == agreement.AgreementId)
+                .Select(a => a)
+                .FirstOrDefaultAsync();
+
+            if (existingAgreement == null) {
+                await _context.AddAsync(agreement);
+            } else {
+                existingAgreement.Title = agreement.Title;
+                existingAgreement.Text = agreement.Text;
+            }
+
+            await _context.SaveChangesAsync();
+
+            return agreement;
+        }
     }
 }
