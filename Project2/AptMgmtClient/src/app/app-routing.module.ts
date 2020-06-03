@@ -43,7 +43,7 @@ const routes: Routes = [
   { path: 'tenant/bill/list', component: TenantPageListBillsComponent,
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },
 
-  { path: 'tenant/bill/pay', component: TenantPageBillPayComponent,
+  { path: 'tenant/bill/pay/:periodId/:resourceTypeId', component: TenantPageBillPayComponent,
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },
 
   { path: 'tenant/agreement/list', component: TenantPageListAgreementsComponent,

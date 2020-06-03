@@ -2,6 +2,9 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 import { BillService } from 'src/app/services/bill.service';
 import { Component, OnInit } from '@angular/core';
 import { Bill } from 'src/app/model/bill';
+import { Resource } from 'src/enums/Resource';
+import { TenantService } from 'src/app/services/tenant.service';
+import { Tenant } from 'src/app/model/tenant';
 
 @Component({
   selector: 'app-tenant-page-bill-pay',
@@ -11,23 +14,45 @@ import { Bill } from 'src/app/model/bill';
 export class TenantPageBillPayComponent implements OnInit {
 
   public bill: Bill;
+  public tenant: Tenant;
 
   constructor(private billService: BillService,
-              private route: ActivatedRoute) { }
+              private tenantService: TenantService,
+              private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.getBill();
+    this.getTenant();
   }
 
   getBill(): void {
-    const billingPeriod = this.route.snapshot.queryParams['periodId'];
-    const resource = this.route.snapshot.queryParams['resource'];
-
+    const billingPeriod = this.activatedRoute.snapshot.paramMap.get('periodId');
+    const resourceTypeId = this.activatedRoute.snapshot.paramMap.get('resourceTypeId');
     this.billService
-      .getBillsInPeriod(billingPeriod)
+      .getBillsInPeriod(Number(billingPeriod))
       .subscribe(bills => {
-        this.bill = bills.filter(b => b.resource === Number(resource)).pop();
+        this.bill = bills.filter(b => b.resource === Number(resourceTypeId)).pop();
       });
+
+  }
+
+  getTenant(): void {
+    this.tenantService.getTenant().subscribe(tenant => this.tenant = tenant);
+  }
+
+  public payBill(
+    resource: Resource,
+    billingPeriodId: number,
+    amount: number
+  ): void {
+    this.billService
+      .payBill({
+        tenantId: this.tenant.tenantId,
+        resource: resource,
+        billingPeriodId: billingPeriodId,
+        amount: amount,
+      })
+      .subscribe((_) => this.getBill());
   }
 
 }
