@@ -23,6 +23,7 @@ import { RouterHubComponent } from './components/universal.components/router-hub
 import { ResourceEnumPipe } from './helpers/resource-enum-pipe';
 import { MaintenanceCloseReasonEnumPipe } from './helpers/maintenance-close-reason-pipe';
 import { ManagerListTenantsComponent } from './components/manager.components/manager-list-tenants/manager-list-tenants.component';
+import { BillComponent } from './components/tenant.components/bill/bill.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { ManagerListTenantsComponent } from './components/manager.components/man
     // Pipes
     ResourceEnumPipe,
     MaintenanceCloseReasonEnumPipe,
+    BillComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

@@ -12,16 +12,16 @@ import { handleError } from 'src/utils/error-handling';
 })
 export class BillService extends GenericRest<any> {
   constructor(protected http: HttpClient) {
-    super(http, ApiBase.url() + 'bill');
+    super(http, ApiBase.url() + 'bills');
   }
 
   /**
    * Sends a request to the server for a tenant to make a payment
    * @param billData Data the server expects to process the payment
    */
-  payBill(billData: PayBillData): Observable<any> {
+  payBill(billData: PayBillData): Observable<PayBillData> {
     return this.http
-      .post<any>(`${this.apiUrl}`, billData, this.httpOptions)
+      .post<PayBillData>(`${ApiBase.url()}/bill`, billData, this.httpOptions)
       .pipe(catchError(handleError<PayBillData>('tenantPayBill')));
   }
 }
