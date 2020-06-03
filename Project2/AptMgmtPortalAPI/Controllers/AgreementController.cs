@@ -140,7 +140,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
 
                 var agreements = await _agreementRepository.GetAgreements((int)tenantId);
                 // TODO: make this less terrible
-                var targetAgreement = agreements.Where(a => a.AgreementTemplateId == agreementId).FirstOrDefault();
+                var targetAgreement = agreements.Where(a => a.AgreementId == agreementId).FirstOrDefault();
                 if (targetAgreement == null)
                 {
                     var err = new DTO.ErrorBuilder()
