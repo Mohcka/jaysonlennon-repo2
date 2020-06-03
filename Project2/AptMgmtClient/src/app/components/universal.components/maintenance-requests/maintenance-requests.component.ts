@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MaintenanceService } from 'src/app/services/maintenance.service';
 import { MaintenanceRequest } from 'src/app/model/maintenance-request';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({
   selector: 'app-maintenance-requests',
@@ -9,7 +10,7 @@ import { MaintenanceRequest } from 'src/app/model/maintenance-request';
 })
 export class MaintenanceRequestsComponent implements OnInit {
   public maintenanceRequests: MaintenanceRequest[];
-  constructor(private maintenanceService: MaintenanceService) { }
+  constructor(private maintenanceService: MaintenanceService, public authService: AuthenticationService) { }
 
   ngOnInit() {
     this.getAllRequests();
