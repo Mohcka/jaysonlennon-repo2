@@ -21,6 +21,8 @@ namespace AptMgmtPortalAPI.Data
             DateTime dt6MonthsAgo = dateTime.Subtract(sixMonth);
             DateTime dt12MonthsAgo = dateTime.Subtract(twelveMonth);
 
+            
+
             #region Users Seed
             // Seeds User data. The password for all of these is "password".
             modelBuilder.Entity<User>().HasData(
@@ -136,7 +138,258 @@ namespace AptMgmtPortalAPI.Data
                 new TenantResourceUsage { TenantResourceUsageId = 47, ResourceType = Types.ResourceType.Power, TenantId = 10, UsageAmount = 50.55, SampleTime = DateTime.Now - day},
                 new TenantResourceUsage { TenantResourceUsageId = 48, ResourceType = Types.ResourceType.Rent, TenantId = 10, UsageAmount = 1, SampleTime = DateTime.Now - day},
                 new TenantResourceUsage { TenantResourceUsageId = 49, ResourceType = Types.ResourceType.Trash, TenantId = 10, UsageAmount = 1, SampleTime = DateTime.Now - day},
-                new TenantResourceUsage { TenantResourceUsageId = 50, ResourceType = Types.ResourceType.Water, TenantId = 10, UsageAmount = 30.33, SampleTime = DateTime.Now- day }
+                new TenantResourceUsage { TenantResourceUsageId = 50, ResourceType = Types.ResourceType.Water, TenantId = 10, UsageAmount = 30.33, SampleTime = DateTime.Now- day },
+
+
+                // Tenenat 1 power usages
+                new TenantResourceUsage { TenantResourceUsageId = 51, ResourceType = Types.ResourceType.Power, TenantId = 1, UsageAmount = 30.46, SampleTime = DateTime.Now - TimeSpan.FromDays(2) },
+                new TenantResourceUsage { TenantResourceUsageId = 52, ResourceType = Types.ResourceType.Power, TenantId = 1, UsageAmount = 29.85, SampleTime = DateTime.Now - TimeSpan.FromDays(3) },
+                new TenantResourceUsage { TenantResourceUsageId = 53, ResourceType = Types.ResourceType.Power, TenantId = 1, UsageAmount = 05.33, SampleTime = DateTime.Now - TimeSpan.FromDays(4) },
+                new TenantResourceUsage { TenantResourceUsageId = 54, ResourceType = Types.ResourceType.Power, TenantId = 1, UsageAmount = 50.67, SampleTime = DateTime.Now - TimeSpan.FromDays(5) },
+                new TenantResourceUsage { TenantResourceUsageId = 55, ResourceType = Types.ResourceType.Power, TenantId = 1, UsageAmount = 40.78, SampleTime = DateTime.Now - TimeSpan.FromDays(6) },
+                new TenantResourceUsage { TenantResourceUsageId = 56, ResourceType = Types.ResourceType.Power, TenantId = 1, UsageAmount = 30.07, SampleTime = DateTime.Now - TimeSpan.FromDays(7) },
+                new TenantResourceUsage { TenantResourceUsageId = 57, ResourceType = Types.ResourceType.Power, TenantId = 1, UsageAmount = 31.36, SampleTime = DateTime.Now - TimeSpan.FromDays(8) },
+                new TenantResourceUsage { TenantResourceUsageId = 58, ResourceType = Types.ResourceType.Power, TenantId = 1, UsageAmount = 20.53, SampleTime = DateTime.Now - TimeSpan.FromDays(9) },
+                new TenantResourceUsage { TenantResourceUsageId = 59, ResourceType = Types.ResourceType.Power, TenantId = 1, UsageAmount = 10.73, SampleTime = DateTime.Now - TimeSpan.FromDays(10) },
+                new TenantResourceUsage { TenantResourceUsageId = 60, ResourceType = Types.ResourceType.Power, TenantId = 1, UsageAmount = 30.21, SampleTime = DateTime.Now - TimeSpan.FromDays(11) },
+
+
+                // Tenant 1 Water usages 
+                new TenantResourceUsage { TenantResourceUsageId = 61, ResourceType = Types.ResourceType.Water, TenantId = 1, UsageAmount = 10.41, SampleTime = DateTime.Now - TimeSpan.FromDays(2) },
+                new TenantResourceUsage { TenantResourceUsageId = 62, ResourceType = Types.ResourceType.Water, TenantId = 1, UsageAmount = 15.42, SampleTime = DateTime.Now - TimeSpan.FromDays(3) },
+                new TenantResourceUsage { TenantResourceUsageId = 63, ResourceType = Types.ResourceType.Water, TenantId = 1, UsageAmount = 06.43, SampleTime = DateTime.Now - TimeSpan.FromDays(4) },
+                new TenantResourceUsage { TenantResourceUsageId = 64, ResourceType = Types.ResourceType.Water, TenantId = 1, UsageAmount = 31.46, SampleTime = DateTime.Now - TimeSpan.FromDays(5) },
+                new TenantResourceUsage { TenantResourceUsageId = 65, ResourceType = Types.ResourceType.Water, TenantId = 1, UsageAmount = 10.17, SampleTime = DateTime.Now - TimeSpan.FromDays(6) },
+                new TenantResourceUsage { TenantResourceUsageId = 66, ResourceType = Types.ResourceType.Water, TenantId = 1, UsageAmount = 16.93, SampleTime = DateTime.Now - TimeSpan.FromDays(7) },
+                new TenantResourceUsage { TenantResourceUsageId = 67, ResourceType = Types.ResourceType.Water, TenantId = 1, UsageAmount = 15.74, SampleTime = DateTime.Now - TimeSpan.FromDays(8) },
+                new TenantResourceUsage { TenantResourceUsageId = 68, ResourceType = Types.ResourceType.Water, TenantId = 1, UsageAmount = 16.60, SampleTime = DateTime.Now - TimeSpan.FromDays(9) },
+                new TenantResourceUsage { TenantResourceUsageId = 69, ResourceType = Types.ResourceType.Water, TenantId = 1, UsageAmount = 14.41, SampleTime = DateTime.Now - TimeSpan.FromDays(10) },
+                new TenantResourceUsage { TenantResourceUsageId = 70, ResourceType = Types.ResourceType.Water, TenantId = 1, UsageAmount = 16.32, SampleTime = DateTime.Now - TimeSpan.FromDays(11) },
+
+                // Tenenat 2 power usages
+                new TenantResourceUsage { TenantResourceUsageId = 71, ResourceType = Types.ResourceType.Power, TenantId = 2, UsageAmount = 31.46, SampleTime = DateTime.Now - TimeSpan.FromDays(2) },
+                new TenantResourceUsage { TenantResourceUsageId = 72, ResourceType = Types.ResourceType.Power, TenantId = 2, UsageAmount = 25.85, SampleTime = DateTime.Now - TimeSpan.FromDays(3) },
+                new TenantResourceUsage { TenantResourceUsageId = 73, ResourceType = Types.ResourceType.Power, TenantId = 2, UsageAmount = 05.33, SampleTime = DateTime.Now - TimeSpan.FromDays(4) },
+                new TenantResourceUsage { TenantResourceUsageId = 74, ResourceType = Types.ResourceType.Power, TenantId = 2, UsageAmount = 50.67, SampleTime = DateTime.Now - TimeSpan.FromDays(5) },
+                new TenantResourceUsage { TenantResourceUsageId = 75, ResourceType = Types.ResourceType.Power, TenantId = 2, UsageAmount = 40.78, SampleTime = DateTime.Now - TimeSpan.FromDays(6) },
+                new TenantResourceUsage { TenantResourceUsageId = 76, ResourceType = Types.ResourceType.Power, TenantId = 2, UsageAmount = 29.07, SampleTime = DateTime.Now - TimeSpan.FromDays(7) },
+                new TenantResourceUsage { TenantResourceUsageId = 77, ResourceType = Types.ResourceType.Power, TenantId = 2, UsageAmount = 30.36, SampleTime = DateTime.Now - TimeSpan.FromDays(8) },
+                new TenantResourceUsage { TenantResourceUsageId = 78, ResourceType = Types.ResourceType.Power, TenantId = 2, UsageAmount = 20.53, SampleTime = DateTime.Now - TimeSpan.FromDays(9) },
+                new TenantResourceUsage { TenantResourceUsageId = 79, ResourceType = Types.ResourceType.Power, TenantId = 2, UsageAmount = 05.73, SampleTime = DateTime.Now - TimeSpan.FromDays(10) },
+                new TenantResourceUsage { TenantResourceUsageId = 80, ResourceType = Types.ResourceType.Power, TenantId = 2, UsageAmount = 40.21, SampleTime = DateTime.Now - TimeSpan.FromDays(11) },
+
+
+                // Tenant 2 Water usages 
+                new TenantResourceUsage { TenantResourceUsageId = 81, ResourceType = Types.ResourceType.Water, TenantId = 2, UsageAmount = 11.41, SampleTime = DateTime.Now - TimeSpan.FromDays(2) },
+                new TenantResourceUsage { TenantResourceUsageId = 82, ResourceType = Types.ResourceType.Water, TenantId = 2, UsageAmount = 14.42, SampleTime = DateTime.Now - TimeSpan.FromDays(3) },
+                new TenantResourceUsage { TenantResourceUsageId = 83, ResourceType = Types.ResourceType.Water, TenantId = 2, UsageAmount = 09.43, SampleTime = DateTime.Now - TimeSpan.FromDays(4) },
+                new TenantResourceUsage { TenantResourceUsageId = 84, ResourceType = Types.ResourceType.Water, TenantId = 2, UsageAmount = 25.46, SampleTime = DateTime.Now - TimeSpan.FromDays(5) },
+                new TenantResourceUsage { TenantResourceUsageId = 85, ResourceType = Types.ResourceType.Water, TenantId = 2, UsageAmount = 10.17, SampleTime = DateTime.Now - TimeSpan.FromDays(6) },
+                new TenantResourceUsage { TenantResourceUsageId = 86, ResourceType = Types.ResourceType.Water, TenantId = 2, UsageAmount = 16.93, SampleTime = DateTime.Now - TimeSpan.FromDays(7) },
+                new TenantResourceUsage { TenantResourceUsageId = 87, ResourceType = Types.ResourceType.Water, TenantId = 2, UsageAmount = 05.74, SampleTime = DateTime.Now - TimeSpan.FromDays(8) },
+                new TenantResourceUsage { TenantResourceUsageId = 88, ResourceType = Types.ResourceType.Water, TenantId = 2, UsageAmount = 26.60, SampleTime = DateTime.Now - TimeSpan.FromDays(9) },
+                new TenantResourceUsage { TenantResourceUsageId = 89, ResourceType = Types.ResourceType.Water, TenantId = 2, UsageAmount = 14.41, SampleTime = DateTime.Now - TimeSpan.FromDays(10) },
+                new TenantResourceUsage { TenantResourceUsageId = 90, ResourceType = Types.ResourceType.Water, TenantId = 2, UsageAmount = 16.32, SampleTime = DateTime.Now - TimeSpan.FromDays(11) },
+
+                // Tenenat 3 power usages
+                new TenantResourceUsage { TenantResourceUsageId = 91, ResourceType = Types.ResourceType.Power, TenantId = 3, UsageAmount = 09.46, SampleTime = DateTime.Now - TimeSpan.FromDays(2) },
+                new TenantResourceUsage { TenantResourceUsageId = 92, ResourceType = Types.ResourceType.Power, TenantId = 3, UsageAmount = 23.85, SampleTime = DateTime.Now - TimeSpan.FromDays(3) },
+                new TenantResourceUsage { TenantResourceUsageId = 93, ResourceType = Types.ResourceType.Power, TenantId = 3, UsageAmount = 05.33, SampleTime = DateTime.Now - TimeSpan.FromDays(4) },
+                new TenantResourceUsage { TenantResourceUsageId = 94, ResourceType = Types.ResourceType.Power, TenantId = 3, UsageAmount = 30.67, SampleTime = DateTime.Now - TimeSpan.FromDays(5) },
+                new TenantResourceUsage { TenantResourceUsageId = 95, ResourceType = Types.ResourceType.Power, TenantId = 3, UsageAmount = 45.78, SampleTime = DateTime.Now - TimeSpan.FromDays(6) },
+                new TenantResourceUsage { TenantResourceUsageId = 96, ResourceType = Types.ResourceType.Power, TenantId = 3, UsageAmount = 30.07, SampleTime = DateTime.Now - TimeSpan.FromDays(7) },
+                new TenantResourceUsage { TenantResourceUsageId = 97, ResourceType = Types.ResourceType.Power, TenantId = 3, UsageAmount = 32.36, SampleTime = DateTime.Now - TimeSpan.FromDays(8) },
+                new TenantResourceUsage { TenantResourceUsageId = 98, ResourceType = Types.ResourceType.Power, TenantId = 3, UsageAmount = 25.53, SampleTime = DateTime.Now - TimeSpan.FromDays(9) },
+                new TenantResourceUsage { TenantResourceUsageId = 99, ResourceType = Types.ResourceType.Power, TenantId = 3, UsageAmount = 11.73, SampleTime = DateTime.Now - TimeSpan.FromDays(10) },
+                new TenantResourceUsage { TenantResourceUsageId = 100, ResourceType = Types.ResourceType.Power,TenantId = 3, UsageAmount = 31.21, SampleTime = DateTime.Now - TimeSpan.FromDays(11) },
+
+
+                // Tenant 3 Water usages 
+                new TenantResourceUsage { TenantResourceUsageId = 101, ResourceType = Types.ResourceType.Water, TenantId = 3, UsageAmount = 15.41, SampleTime = DateTime.Now - TimeSpan.FromDays(2) },
+                new TenantResourceUsage { TenantResourceUsageId = 102, ResourceType = Types.ResourceType.Water, TenantId = 3, UsageAmount = 25.42, SampleTime = DateTime.Now - TimeSpan.FromDays(3) },
+                new TenantResourceUsage { TenantResourceUsageId = 103, ResourceType = Types.ResourceType.Water, TenantId = 3, UsageAmount = 16.43, SampleTime = DateTime.Now - TimeSpan.FromDays(4) },
+                new TenantResourceUsage { TenantResourceUsageId = 104, ResourceType = Types.ResourceType.Water, TenantId = 3, UsageAmount = 11.46, SampleTime = DateTime.Now - TimeSpan.FromDays(5) },
+                new TenantResourceUsage { TenantResourceUsageId = 105, ResourceType = Types.ResourceType.Water, TenantId = 3, UsageAmount = 50.17, SampleTime = DateTime.Now - TimeSpan.FromDays(6) },
+                new TenantResourceUsage { TenantResourceUsageId = 106, ResourceType = Types.ResourceType.Water, TenantId = 3, UsageAmount = 26.93, SampleTime = DateTime.Now - TimeSpan.FromDays(7) },
+                new TenantResourceUsage { TenantResourceUsageId = 107, ResourceType = Types.ResourceType.Water, TenantId = 3, UsageAmount = 15.74, SampleTime = DateTime.Now - TimeSpan.FromDays(8) },
+                new TenantResourceUsage { TenantResourceUsageId = 108, ResourceType = Types.ResourceType.Water, TenantId = 3, UsageAmount = 06.60, SampleTime = DateTime.Now - TimeSpan.FromDays(9) },
+                new TenantResourceUsage { TenantResourceUsageId = 109, ResourceType = Types.ResourceType.Water, TenantId = 3, UsageAmount = 24.41, SampleTime = DateTime.Now - TimeSpan.FromDays(10) },
+                new TenantResourceUsage { TenantResourceUsageId = 110, ResourceType = Types.ResourceType.Water, TenantId = 3, UsageAmount = 13.32, SampleTime = DateTime.Now - TimeSpan.FromDays(11) },
+            
+                // Tenenat 4 power usages
+                new TenantResourceUsage { TenantResourceUsageId = 111, ResourceType = Types.ResourceType.Power, TenantId = 4, UsageAmount = 03.46, SampleTime = DateTime.Now - TimeSpan.FromDays(2) },
+                new TenantResourceUsage { TenantResourceUsageId = 112, ResourceType = Types.ResourceType.Power, TenantId = 4, UsageAmount = 29.85, SampleTime = DateTime.Now - TimeSpan.FromDays(3) },
+                new TenantResourceUsage { TenantResourceUsageId = 113, ResourceType = Types.ResourceType.Power, TenantId = 4, UsageAmount = 05.33, SampleTime = DateTime.Now - TimeSpan.FromDays(4) },
+                new TenantResourceUsage { TenantResourceUsageId = 114, ResourceType = Types.ResourceType.Power, TenantId = 4, UsageAmount = 10.67, SampleTime = DateTime.Now - TimeSpan.FromDays(5) },
+                new TenantResourceUsage { TenantResourceUsageId = 115, ResourceType = Types.ResourceType.Power, TenantId = 4, UsageAmount = 40.78, SampleTime = DateTime.Now - TimeSpan.FromDays(6) },
+                new TenantResourceUsage { TenantResourceUsageId = 116, ResourceType = Types.ResourceType.Power, TenantId = 4, UsageAmount = 20.07, SampleTime = DateTime.Now - TimeSpan.FromDays(7) },
+                new TenantResourceUsage { TenantResourceUsageId = 117, ResourceType = Types.ResourceType.Power, TenantId = 4, UsageAmount = 11.36, SampleTime = DateTime.Now - TimeSpan.FromDays(8) },
+                new TenantResourceUsage { TenantResourceUsageId = 118, ResourceType = Types.ResourceType.Power, TenantId = 4, UsageAmount = 10.53, SampleTime = DateTime.Now - TimeSpan.FromDays(9) },
+                new TenantResourceUsage { TenantResourceUsageId = 119, ResourceType = Types.ResourceType.Power, TenantId = 4, UsageAmount = 15.73, SampleTime = DateTime.Now - TimeSpan.FromDays(10) },
+                new TenantResourceUsage { TenantResourceUsageId = 120, ResourceType = Types.ResourceType.Power, TenantId = 4, UsageAmount = 03.21, SampleTime = DateTime.Now - TimeSpan.FromDays(11) },
+
+
+                // Tenant 4 Water usages 
+                new TenantResourceUsage { TenantResourceUsageId = 121, ResourceType = Types.ResourceType.Water, TenantId = 4, UsageAmount = 13.41, SampleTime = DateTime.Now - TimeSpan.FromDays(2) },
+                new TenantResourceUsage { TenantResourceUsageId = 122, ResourceType = Types.ResourceType.Water, TenantId = 4, UsageAmount = 30.42, SampleTime = DateTime.Now - TimeSpan.FromDays(3) },
+                new TenantResourceUsage { TenantResourceUsageId = 123, ResourceType = Types.ResourceType.Water, TenantId = 4, UsageAmount = 16.43, SampleTime = DateTime.Now - TimeSpan.FromDays(4) },
+                new TenantResourceUsage { TenantResourceUsageId = 124, ResourceType = Types.ResourceType.Water, TenantId = 4, UsageAmount = 11.46, SampleTime = DateTime.Now - TimeSpan.FromDays(5) },
+                new TenantResourceUsage { TenantResourceUsageId = 125, ResourceType = Types.ResourceType.Water, TenantId = 4, UsageAmount = 10.17, SampleTime = DateTime.Now - TimeSpan.FromDays(6) },
+                new TenantResourceUsage { TenantResourceUsageId = 126, ResourceType = Types.ResourceType.Water, TenantId = 4, UsageAmount = 16.93, SampleTime = DateTime.Now - TimeSpan.FromDays(7) },
+                new TenantResourceUsage { TenantResourceUsageId = 127, ResourceType = Types.ResourceType.Water, TenantId = 4, UsageAmount = 15.74, SampleTime = DateTime.Now - TimeSpan.FromDays(8) },
+                new TenantResourceUsage { TenantResourceUsageId = 128, ResourceType = Types.ResourceType.Water, TenantId = 4, UsageAmount = 26.60, SampleTime = DateTime.Now - TimeSpan.FromDays(9) },
+                new TenantResourceUsage { TenantResourceUsageId = 129, ResourceType = Types.ResourceType.Water, TenantId = 4, UsageAmount = 04.41, SampleTime = DateTime.Now - TimeSpan.FromDays(10) },
+                new TenantResourceUsage { TenantResourceUsageId = 130, ResourceType = Types.ResourceType.Water, TenantId = 4, UsageAmount = 16.32, SampleTime = DateTime.Now - TimeSpan.FromDays(11) },
+
+                // Tenenat 5 power usages
+                new TenantResourceUsage { TenantResourceUsageId = 131, ResourceType = Types.ResourceType.Power, TenantId = 5, UsageAmount = 10.46, SampleTime = DateTime.Now - TimeSpan.FromDays(2) },
+                new TenantResourceUsage { TenantResourceUsageId = 132, ResourceType = Types.ResourceType.Power, TenantId = 5, UsageAmount = 19.85, SampleTime = DateTime.Now - TimeSpan.FromDays(3) },
+                new TenantResourceUsage { TenantResourceUsageId = 133, ResourceType = Types.ResourceType.Power, TenantId = 5, UsageAmount = 15.33, SampleTime = DateTime.Now - TimeSpan.FromDays(4) },
+                new TenantResourceUsage { TenantResourceUsageId = 134, ResourceType = Types.ResourceType.Power, TenantId = 5, UsageAmount = 10.67, SampleTime = DateTime.Now - TimeSpan.FromDays(5) },
+                new TenantResourceUsage { TenantResourceUsageId = 135, ResourceType = Types.ResourceType.Power, TenantId = 5, UsageAmount = 10.78, SampleTime = DateTime.Now - TimeSpan.FromDays(6) },
+                new TenantResourceUsage { TenantResourceUsageId = 136, ResourceType = Types.ResourceType.Power, TenantId = 5, UsageAmount = 10.07, SampleTime = DateTime.Now - TimeSpan.FromDays(7) },
+                new TenantResourceUsage { TenantResourceUsageId = 137, ResourceType = Types.ResourceType.Power, TenantId = 5, UsageAmount = 11.36, SampleTime = DateTime.Now - TimeSpan.FromDays(8) },
+                new TenantResourceUsage { TenantResourceUsageId = 138, ResourceType = Types.ResourceType.Power, TenantId = 5, UsageAmount = 10.53, SampleTime = DateTime.Now - TimeSpan.FromDays(9) },
+                new TenantResourceUsage { TenantResourceUsageId = 139, ResourceType = Types.ResourceType.Power, TenantId = 5, UsageAmount = 10.73, SampleTime = DateTime.Now - TimeSpan.FromDays(10) },
+                new TenantResourceUsage { TenantResourceUsageId = 140, ResourceType = Types.ResourceType.Power, TenantId = 5, UsageAmount = 10.21, SampleTime = DateTime.Now - TimeSpan.FromDays(11) },
+
+
+                // Tenant 5 Water usages 
+                new TenantResourceUsage { TenantResourceUsageId = 141, ResourceType = Types.ResourceType.Water, TenantId = 5, UsageAmount = 11.41, SampleTime = DateTime.Now - TimeSpan.FromDays(2) },
+                new TenantResourceUsage { TenantResourceUsageId = 142, ResourceType = Types.ResourceType.Water, TenantId = 5, UsageAmount = 11.42, SampleTime = DateTime.Now - TimeSpan.FromDays(3) },
+                new TenantResourceUsage { TenantResourceUsageId = 143, ResourceType = Types.ResourceType.Water, TenantId = 5, UsageAmount = 16.43, SampleTime = DateTime.Now - TimeSpan.FromDays(4) },
+                new TenantResourceUsage { TenantResourceUsageId = 144, ResourceType = Types.ResourceType.Water, TenantId = 5, UsageAmount = 11.46, SampleTime = DateTime.Now - TimeSpan.FromDays(5) },
+                new TenantResourceUsage { TenantResourceUsageId = 145, ResourceType = Types.ResourceType.Water, TenantId = 5, UsageAmount = 10.17, SampleTime = DateTime.Now - TimeSpan.FromDays(6) },
+                new TenantResourceUsage { TenantResourceUsageId = 146, ResourceType = Types.ResourceType.Water, TenantId = 5, UsageAmount = 11.93, SampleTime = DateTime.Now - TimeSpan.FromDays(7) },
+                new TenantResourceUsage { TenantResourceUsageId = 147, ResourceType = Types.ResourceType.Water, TenantId = 5, UsageAmount = 11.74, SampleTime = DateTime.Now - TimeSpan.FromDays(8) },
+                new TenantResourceUsage { TenantResourceUsageId = 148, ResourceType = Types.ResourceType.Water, TenantId = 5, UsageAmount = 11.60, SampleTime = DateTime.Now - TimeSpan.FromDays(9) },
+                new TenantResourceUsage { TenantResourceUsageId = 149, ResourceType = Types.ResourceType.Water, TenantId = 5, UsageAmount = 11.41, SampleTime = DateTime.Now - TimeSpan.FromDays(10) },
+                new TenantResourceUsage { TenantResourceUsageId = 150, ResourceType = Types.ResourceType.Water, TenantId = 5, UsageAmount = 11.32, SampleTime = DateTime.Now - TimeSpan.FromDays(11) },
+
+                // Tenenat 6 power usages
+                new TenantResourceUsage { TenantResourceUsageId = 151, ResourceType = Types.ResourceType.Power, TenantId = 6, UsageAmount = 20.46, SampleTime = DateTime.Now - TimeSpan.FromDays(2) },
+                new TenantResourceUsage { TenantResourceUsageId = 152, ResourceType = Types.ResourceType.Power, TenantId = 6, UsageAmount = 20.85, SampleTime = DateTime.Now - TimeSpan.FromDays(3) },
+                new TenantResourceUsage { TenantResourceUsageId = 153, ResourceType = Types.ResourceType.Power, TenantId = 6, UsageAmount = 25.33, SampleTime = DateTime.Now - TimeSpan.FromDays(4) },
+                new TenantResourceUsage { TenantResourceUsageId = 154, ResourceType = Types.ResourceType.Power, TenantId = 6, UsageAmount = 20.67, SampleTime = DateTime.Now - TimeSpan.FromDays(5) },
+                new TenantResourceUsage { TenantResourceUsageId = 155, ResourceType = Types.ResourceType.Power, TenantId = 6, UsageAmount = 20.78, SampleTime = DateTime.Now - TimeSpan.FromDays(6) },
+                new TenantResourceUsage { TenantResourceUsageId = 156, ResourceType = Types.ResourceType.Power, TenantId = 6, UsageAmount = 20.07, SampleTime = DateTime.Now - TimeSpan.FromDays(7) },
+                new TenantResourceUsage { TenantResourceUsageId = 157, ResourceType = Types.ResourceType.Power, TenantId = 6, UsageAmount = 21.36, SampleTime = DateTime.Now - TimeSpan.FromDays(8) },
+                new TenantResourceUsage { TenantResourceUsageId = 158, ResourceType = Types.ResourceType.Power, TenantId = 6, UsageAmount = 20.53, SampleTime = DateTime.Now - TimeSpan.FromDays(9) },
+                new TenantResourceUsage { TenantResourceUsageId = 159, ResourceType = Types.ResourceType.Power, TenantId = 6, UsageAmount = 20.73, SampleTime = DateTime.Now - TimeSpan.FromDays(10) },
+                new TenantResourceUsage { TenantResourceUsageId = 160, ResourceType = Types.ResourceType.Power, TenantId = 6, UsageAmount = 20.21, SampleTime = DateTime.Now - TimeSpan.FromDays(11) },
+
+
+                // Tenant 6 Water usages 
+                new TenantResourceUsage { TenantResourceUsageId = 161, ResourceType = Types.ResourceType.Water, TenantId = 6, UsageAmount = 10.41, SampleTime = DateTime.Now - TimeSpan.FromDays(2) },
+                new TenantResourceUsage { TenantResourceUsageId = 162, ResourceType = Types.ResourceType.Water, TenantId = 6, UsageAmount = 15.42, SampleTime = DateTime.Now - TimeSpan.FromDays(3) },
+                new TenantResourceUsage { TenantResourceUsageId = 163, ResourceType = Types.ResourceType.Water, TenantId = 6, UsageAmount = 16.43, SampleTime = DateTime.Now - TimeSpan.FromDays(4) },
+                new TenantResourceUsage { TenantResourceUsageId = 164, ResourceType = Types.ResourceType.Water, TenantId = 6, UsageAmount = 11.46, SampleTime = DateTime.Now - TimeSpan.FromDays(5) },
+                new TenantResourceUsage { TenantResourceUsageId = 165, ResourceType = Types.ResourceType.Water, TenantId = 6, UsageAmount = 10.17, SampleTime = DateTime.Now - TimeSpan.FromDays(6) },
+                new TenantResourceUsage { TenantResourceUsageId = 166, ResourceType = Types.ResourceType.Water, TenantId = 6, UsageAmount = 16.93, SampleTime = DateTime.Now - TimeSpan.FromDays(7) },
+                new TenantResourceUsage { TenantResourceUsageId = 167, ResourceType = Types.ResourceType.Water, TenantId = 6, UsageAmount = 15.74, SampleTime = DateTime.Now - TimeSpan.FromDays(8) },
+                new TenantResourceUsage { TenantResourceUsageId = 168, ResourceType = Types.ResourceType.Water, TenantId = 6, UsageAmount = 16.60, SampleTime = DateTime.Now - TimeSpan.FromDays(9) },
+                new TenantResourceUsage { TenantResourceUsageId = 169, ResourceType = Types.ResourceType.Water, TenantId = 6, UsageAmount = 14.41, SampleTime = DateTime.Now - TimeSpan.FromDays(10) },
+                new TenantResourceUsage { TenantResourceUsageId = 170, ResourceType = Types.ResourceType.Water, TenantId = 6, UsageAmount = 16.32, SampleTime = DateTime.Now - TimeSpan.FromDays(11) },
+
+                // Tenenat 7 power usages
+                new TenantResourceUsage { TenantResourceUsageId = 171, ResourceType = Types.ResourceType.Power, TenantId = 7, UsageAmount = 30.46, SampleTime = DateTime.Now - TimeSpan.FromDays(2) },
+                new TenantResourceUsage { TenantResourceUsageId = 172, ResourceType = Types.ResourceType.Power, TenantId = 7, UsageAmount = 39.85, SampleTime = DateTime.Now - TimeSpan.FromDays(3) },
+                new TenantResourceUsage { TenantResourceUsageId = 173, ResourceType = Types.ResourceType.Power, TenantId = 7, UsageAmount = 35.33, SampleTime = DateTime.Now - TimeSpan.FromDays(4) },
+                new TenantResourceUsage { TenantResourceUsageId = 174, ResourceType = Types.ResourceType.Power, TenantId = 7, UsageAmount = 30.67, SampleTime = DateTime.Now - TimeSpan.FromDays(5) },
+                new TenantResourceUsage { TenantResourceUsageId = 175, ResourceType = Types.ResourceType.Power, TenantId = 7, UsageAmount = 30.78, SampleTime = DateTime.Now - TimeSpan.FromDays(6) },
+                new TenantResourceUsage { TenantResourceUsageId = 176, ResourceType = Types.ResourceType.Power, TenantId = 7, UsageAmount = 35.07, SampleTime = DateTime.Now - TimeSpan.FromDays(7) },
+                new TenantResourceUsage { TenantResourceUsageId = 177, ResourceType = Types.ResourceType.Power, TenantId = 7, UsageAmount = 31.36, SampleTime = DateTime.Now - TimeSpan.FromDays(8) },
+                new TenantResourceUsage { TenantResourceUsageId = 178, ResourceType = Types.ResourceType.Power, TenantId = 7, UsageAmount = 30.53, SampleTime = DateTime.Now - TimeSpan.FromDays(9) },
+                new TenantResourceUsage { TenantResourceUsageId = 179, ResourceType = Types.ResourceType.Power, TenantId = 7, UsageAmount = 30.73, SampleTime = DateTime.Now - TimeSpan.FromDays(10) },
+                new TenantResourceUsage { TenantResourceUsageId = 180, ResourceType = Types.ResourceType.Power, TenantId = 7, UsageAmount = 30.21, SampleTime = DateTime.Now - TimeSpan.FromDays(11) },
+
+
+                // Tenant 7 Water usages 
+                new TenantResourceUsage { TenantResourceUsageId = 181, ResourceType = Types.ResourceType.Water, TenantId = 7, UsageAmount = 30.41, SampleTime = DateTime.Now - TimeSpan.FromDays(2) },
+                new TenantResourceUsage { TenantResourceUsageId = 182, ResourceType = Types.ResourceType.Water, TenantId = 7, UsageAmount = 35.42, SampleTime = DateTime.Now - TimeSpan.FromDays(3) },
+                new TenantResourceUsage { TenantResourceUsageId = 183, ResourceType = Types.ResourceType.Water, TenantId = 7, UsageAmount = 36.43, SampleTime = DateTime.Now - TimeSpan.FromDays(4) },
+                new TenantResourceUsage { TenantResourceUsageId = 184, ResourceType = Types.ResourceType.Water, TenantId = 7, UsageAmount = 31.46, SampleTime = DateTime.Now - TimeSpan.FromDays(5) },
+                new TenantResourceUsage { TenantResourceUsageId = 185, ResourceType = Types.ResourceType.Water, TenantId = 7, UsageAmount = 30.17, SampleTime = DateTime.Now - TimeSpan.FromDays(6) },
+                new TenantResourceUsage { TenantResourceUsageId = 186, ResourceType = Types.ResourceType.Water, TenantId = 7, UsageAmount = 36.93, SampleTime = DateTime.Now - TimeSpan.FromDays(7) },
+                new TenantResourceUsage { TenantResourceUsageId = 187, ResourceType = Types.ResourceType.Water, TenantId = 7, UsageAmount = 35.74, SampleTime = DateTime.Now - TimeSpan.FromDays(8) },
+                new TenantResourceUsage { TenantResourceUsageId = 188, ResourceType = Types.ResourceType.Water, TenantId = 7, UsageAmount = 36.60, SampleTime = DateTime.Now - TimeSpan.FromDays(9) },
+                new TenantResourceUsage { TenantResourceUsageId = 189, ResourceType = Types.ResourceType.Water, TenantId = 7, UsageAmount = 34.41, SampleTime = DateTime.Now - TimeSpan.FromDays(10) },
+                new TenantResourceUsage { TenantResourceUsageId = 190, ResourceType = Types.ResourceType.Water, TenantId = 7, UsageAmount = 36.32, SampleTime = DateTime.Now - TimeSpan.FromDays(11) },
+
+                // Tenenat 8 power usages
+                new TenantResourceUsage { TenantResourceUsageId = 191, ResourceType = Types.ResourceType.Power, TenantId = 8, UsageAmount = 09.46, SampleTime = DateTime.Now - TimeSpan.FromDays(2) },
+                new TenantResourceUsage { TenantResourceUsageId = 192, ResourceType = Types.ResourceType.Power, TenantId = 8, UsageAmount = 09.85, SampleTime = DateTime.Now - TimeSpan.FromDays(3) },
+                new TenantResourceUsage { TenantResourceUsageId = 193, ResourceType = Types.ResourceType.Power, TenantId = 8, UsageAmount = 09.33, SampleTime = DateTime.Now - TimeSpan.FromDays(4) },
+                new TenantResourceUsage { TenantResourceUsageId = 194, ResourceType = Types.ResourceType.Power, TenantId = 8, UsageAmount = 09.67, SampleTime = DateTime.Now - TimeSpan.FromDays(5) },
+                new TenantResourceUsage { TenantResourceUsageId = 195, ResourceType = Types.ResourceType.Power, TenantId = 8, UsageAmount = 09.78, SampleTime = DateTime.Now - TimeSpan.FromDays(6) },
+                new TenantResourceUsage { TenantResourceUsageId = 196, ResourceType = Types.ResourceType.Power, TenantId = 8, UsageAmount = 09.07, SampleTime = DateTime.Now - TimeSpan.FromDays(7) },
+                new TenantResourceUsage { TenantResourceUsageId = 197, ResourceType = Types.ResourceType.Power, TenantId = 8, UsageAmount = 31.36, SampleTime = DateTime.Now - TimeSpan.FromDays(8) },
+                new TenantResourceUsage { TenantResourceUsageId = 198, ResourceType = Types.ResourceType.Power, TenantId = 8, UsageAmount = 09.53, SampleTime = DateTime.Now - TimeSpan.FromDays(9) },
+                new TenantResourceUsage { TenantResourceUsageId = 199, ResourceType = Types.ResourceType.Power, TenantId = 8, UsageAmount = 09.73, SampleTime = DateTime.Now - TimeSpan.FromDays(10) },
+                new TenantResourceUsage { TenantResourceUsageId = 200, ResourceType = Types.ResourceType.Power, TenantId = 8, UsageAmount = 40.21, SampleTime = DateTime.Now - TimeSpan.FromDays(11) },
+
+
+                // Tenant 8 Water usages 
+                new TenantResourceUsage { TenantResourceUsageId = 201, ResourceType = Types.ResourceType.Water, TenantId = 8, UsageAmount = 10.41, SampleTime = DateTime.Now - TimeSpan.FromDays(2) },
+                new TenantResourceUsage { TenantResourceUsageId = 202, ResourceType = Types.ResourceType.Water, TenantId = 8, UsageAmount = 10.42, SampleTime = DateTime.Now - TimeSpan.FromDays(3) },
+                new TenantResourceUsage { TenantResourceUsageId = 203, ResourceType = Types.ResourceType.Water, TenantId = 8, UsageAmount = 10.43, SampleTime = DateTime.Now - TimeSpan.FromDays(4) },
+                new TenantResourceUsage { TenantResourceUsageId = 204, ResourceType = Types.ResourceType.Water, TenantId = 8, UsageAmount = 10.46, SampleTime = DateTime.Now - TimeSpan.FromDays(5) },
+                new TenantResourceUsage { TenantResourceUsageId = 205, ResourceType = Types.ResourceType.Water, TenantId = 8, UsageAmount = 10.17, SampleTime = DateTime.Now - TimeSpan.FromDays(6) },
+                new TenantResourceUsage { TenantResourceUsageId = 206, ResourceType = Types.ResourceType.Water, TenantId = 8, UsageAmount = 10.93, SampleTime = DateTime.Now - TimeSpan.FromDays(7) },
+                new TenantResourceUsage { TenantResourceUsageId = 207, ResourceType = Types.ResourceType.Water, TenantId = 8, UsageAmount = 35.74, SampleTime = DateTime.Now - TimeSpan.FromDays(8) },
+                new TenantResourceUsage { TenantResourceUsageId = 208, ResourceType = Types.ResourceType.Water, TenantId = 8, UsageAmount = 16.60, SampleTime = DateTime.Now - TimeSpan.FromDays(9) },
+                new TenantResourceUsage { TenantResourceUsageId = 209, ResourceType = Types.ResourceType.Water, TenantId = 8, UsageAmount = 14.41, SampleTime = DateTime.Now - TimeSpan.FromDays(10) },
+                new TenantResourceUsage { TenantResourceUsageId = 210, ResourceType = Types.ResourceType.Water, TenantId = 8, UsageAmount = 16.32, SampleTime = DateTime.Now - TimeSpan.FromDays(11) },
+
+                // Tenenat 9 power usages
+                new TenantResourceUsage { TenantResourceUsageId = 211, ResourceType = Types.ResourceType.Power, TenantId = 9, UsageAmount = 31.46, SampleTime = DateTime.Now - TimeSpan.FromDays(2) },
+                new TenantResourceUsage { TenantResourceUsageId = 212, ResourceType = Types.ResourceType.Power, TenantId = 9, UsageAmount = 29.85, SampleTime = DateTime.Now - TimeSpan.FromDays(3) },
+                new TenantResourceUsage { TenantResourceUsageId = 213, ResourceType = Types.ResourceType.Power, TenantId = 9, UsageAmount = 25.33, SampleTime = DateTime.Now - TimeSpan.FromDays(4) },
+                new TenantResourceUsage { TenantResourceUsageId = 214, ResourceType = Types.ResourceType.Power, TenantId = 9, UsageAmount = 10.67, SampleTime = DateTime.Now - TimeSpan.FromDays(5) },
+                new TenantResourceUsage { TenantResourceUsageId = 215, ResourceType = Types.ResourceType.Power, TenantId = 9, UsageAmount = 40.78, SampleTime = DateTime.Now - TimeSpan.FromDays(6) },
+                new TenantResourceUsage { TenantResourceUsageId = 216, ResourceType = Types.ResourceType.Power, TenantId = 9, UsageAmount = 10.07, SampleTime = DateTime.Now - TimeSpan.FromDays(7) },
+                new TenantResourceUsage { TenantResourceUsageId = 217, ResourceType = Types.ResourceType.Power, TenantId = 9, UsageAmount = 01.36, SampleTime = DateTime.Now - TimeSpan.FromDays(8) },
+                new TenantResourceUsage { TenantResourceUsageId = 218, ResourceType = Types.ResourceType.Power, TenantId = 9, UsageAmount = 20.53, SampleTime = DateTime.Now - TimeSpan.FromDays(9) },
+                new TenantResourceUsage { TenantResourceUsageId = 219, ResourceType = Types.ResourceType.Power, TenantId = 9, UsageAmount = 10.73, SampleTime = DateTime.Now - TimeSpan.FromDays(10) },
+                new TenantResourceUsage { TenantResourceUsageId = 220, ResourceType = Types.ResourceType.Power, TenantId = 9, UsageAmount = 30.21, SampleTime = DateTime.Now - TimeSpan.FromDays(11) },
+
+
+                // Tenant 9 Water usages 
+                new TenantResourceUsage { TenantResourceUsageId = 221, ResourceType = Types.ResourceType.Water, TenantId = 9, UsageAmount = 20.41, SampleTime = DateTime.Now - TimeSpan.FromDays(2) },
+                new TenantResourceUsage { TenantResourceUsageId = 222, ResourceType = Types.ResourceType.Water, TenantId = 9, UsageAmount = 25.42, SampleTime = DateTime.Now - TimeSpan.FromDays(3) },
+                new TenantResourceUsage { TenantResourceUsageId = 223, ResourceType = Types.ResourceType.Water, TenantId = 9, UsageAmount = 26.43, SampleTime = DateTime.Now - TimeSpan.FromDays(4) },
+                new TenantResourceUsage { TenantResourceUsageId = 224, ResourceType = Types.ResourceType.Water, TenantId = 9, UsageAmount = 21.46, SampleTime = DateTime.Now - TimeSpan.FromDays(5) },
+                new TenantResourceUsage { TenantResourceUsageId = 225, ResourceType = Types.ResourceType.Water, TenantId = 9, UsageAmount = 20.17, SampleTime = DateTime.Now - TimeSpan.FromDays(6) },
+                new TenantResourceUsage { TenantResourceUsageId = 226, ResourceType = Types.ResourceType.Water, TenantId = 9, UsageAmount = 06.93, SampleTime = DateTime.Now - TimeSpan.FromDays(7) },
+                new TenantResourceUsage { TenantResourceUsageId = 227, ResourceType = Types.ResourceType.Water, TenantId = 9, UsageAmount = 05.74, SampleTime = DateTime.Now - TimeSpan.FromDays(8) },
+                new TenantResourceUsage { TenantResourceUsageId = 228, ResourceType = Types.ResourceType.Water, TenantId = 9, UsageAmount = 06.60, SampleTime = DateTime.Now - TimeSpan.FromDays(9) },
+                new TenantResourceUsage { TenantResourceUsageId = 229, ResourceType = Types.ResourceType.Water, TenantId = 9, UsageAmount = 04.41, SampleTime = DateTime.Now - TimeSpan.FromDays(10) },
+                new TenantResourceUsage { TenantResourceUsageId = 230, ResourceType = Types.ResourceType.Water, TenantId = 9, UsageAmount = 06.32, SampleTime = DateTime.Now - TimeSpan.FromDays(11) },
+
+                // Tenenat 10 power usages
+                new TenantResourceUsage { TenantResourceUsageId = 231, ResourceType = Types.ResourceType.Power, TenantId = 10, UsageAmount = 30.46, SampleTime = DateTime.Now - TimeSpan.FromDays(2) },
+                new TenantResourceUsage { TenantResourceUsageId = 232, ResourceType = Types.ResourceType.Power, TenantId = 10, UsageAmount = 29.85, SampleTime = DateTime.Now - TimeSpan.FromDays(3) },
+                new TenantResourceUsage { TenantResourceUsageId = 233, ResourceType = Types.ResourceType.Power, TenantId = 10, UsageAmount = 35.33, SampleTime = DateTime.Now - TimeSpan.FromDays(4) },
+                new TenantResourceUsage { TenantResourceUsageId = 234, ResourceType = Types.ResourceType.Power, TenantId = 10, UsageAmount = 30.67, SampleTime = DateTime.Now - TimeSpan.FromDays(5) },
+                new TenantResourceUsage { TenantResourceUsageId = 235, ResourceType = Types.ResourceType.Power, TenantId = 10, UsageAmount = 30.78, SampleTime = DateTime.Now - TimeSpan.FromDays(6) },
+                new TenantResourceUsage { TenantResourceUsageId = 236, ResourceType = Types.ResourceType.Power, TenantId = 10, UsageAmount = 10.07, SampleTime = DateTime.Now - TimeSpan.FromDays(7) },
+                new TenantResourceUsage { TenantResourceUsageId = 237, ResourceType = Types.ResourceType.Power, TenantId = 10, UsageAmount = 10.36, SampleTime = DateTime.Now - TimeSpan.FromDays(8) },
+                new TenantResourceUsage { TenantResourceUsageId = 238, ResourceType = Types.ResourceType.Power, TenantId = 10, UsageAmount = 10.53, SampleTime = DateTime.Now - TimeSpan.FromDays(9) },
+                new TenantResourceUsage { TenantResourceUsageId = 239, ResourceType = Types.ResourceType.Power, TenantId = 10, UsageAmount = 10.73, SampleTime = DateTime.Now - TimeSpan.FromDays(10) },
+                new TenantResourceUsage { TenantResourceUsageId = 240, ResourceType = Types.ResourceType.Power, TenantId = 10, UsageAmount = 10.21, SampleTime = DateTime.Now - TimeSpan.FromDays(11) },
+
+
+                // Tenant 10 Water usages 
+                new TenantResourceUsage { TenantResourceUsageId = 241, ResourceType = Types.ResourceType.Water, TenantId = 10, UsageAmount = 20.41, SampleTime = DateTime.Now - TimeSpan.FromDays(2) },
+                new TenantResourceUsage { TenantResourceUsageId = 242, ResourceType = Types.ResourceType.Water, TenantId = 10, UsageAmount = 25.42, SampleTime = DateTime.Now - TimeSpan.FromDays(3) },
+                new TenantResourceUsage { TenantResourceUsageId = 243, ResourceType = Types.ResourceType.Water, TenantId = 10, UsageAmount = 26.43, SampleTime = DateTime.Now - TimeSpan.FromDays(4) },
+                new TenantResourceUsage { TenantResourceUsageId = 244, ResourceType = Types.ResourceType.Water, TenantId = 10, UsageAmount = 21.46, SampleTime = DateTime.Now - TimeSpan.FromDays(5) },
+                new TenantResourceUsage { TenantResourceUsageId = 245, ResourceType = Types.ResourceType.Water, TenantId = 10, UsageAmount = 20.17, SampleTime = DateTime.Now - TimeSpan.FromDays(6) },
+                new TenantResourceUsage { TenantResourceUsageId = 246, ResourceType = Types.ResourceType.Water, TenantId = 10, UsageAmount = 16.93, SampleTime = DateTime.Now - TimeSpan.FromDays(7) },
+                new TenantResourceUsage { TenantResourceUsageId = 247, ResourceType = Types.ResourceType.Water, TenantId = 10, UsageAmount = 15.74, SampleTime = DateTime.Now - TimeSpan.FromDays(8) },
+                new TenantResourceUsage { TenantResourceUsageId = 248, ResourceType = Types.ResourceType.Water, TenantId = 10, UsageAmount = 16.60, SampleTime = DateTime.Now - TimeSpan.FromDays(9) },
+                new TenantResourceUsage { TenantResourceUsageId = 249, ResourceType = Types.ResourceType.Water, TenantId = 10, UsageAmount = 14.41, SampleTime = DateTime.Now - TimeSpan.FromDays(10) },
+                new TenantResourceUsage { TenantResourceUsageId = 250, ResourceType = Types.ResourceType.Water, TenantId = 10, UsageAmount = 16.32, SampleTime = DateTime.Now - TimeSpan.FromDays(11) }
             );
             #endregion
 
@@ -162,6 +415,7 @@ namespace AptMgmtPortalAPI.Data
                 new ResourceUsageRate { ResourceUsageRateId = 3, ResourceType = Types.ResourceType.Rent, PeriodStart = dt6MonthsAgo, PeriodEnd = DateTime.Now + sixMonth, Rate = 1100 },
                 new ResourceUsageRate { ResourceUsageRateId = 4, ResourceType = Types.ResourceType.Trash, PeriodStart = dt6MonthsAgo, PeriodEnd = DateTime.Now + sixMonth, Rate = 20.55 },
                 new ResourceUsageRate { ResourceUsageRateId = 5, ResourceType = Types.ResourceType.Water, PeriodStart = dt6MonthsAgo, PeriodEnd = DateTime.Now + sixMonth, Rate = 1.75 }
+
              );
             #endregion
 
