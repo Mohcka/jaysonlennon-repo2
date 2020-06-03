@@ -55,20 +55,18 @@ export class AuthenticationService {
       UserName: loginName,
       Password: password,
     };
-    return this.http
-      .post<any>(ApiBase.url() + `Login`, info)
-      .pipe(
-        map((user: User) => {
-          // Login is successful if the api key was returned!
-          if (user && user.apiKey) {
-            // store user details and api key in local storage so logged in state persists
-            // between refreshes
-            localStorage.setItem('currentUser', JSON.stringify(user));
-            this.currentUserSubject.next(user);
-          }
-          return user;
-        })
-      );
+    return this.http.post<any>(ApiBase.url() + `Login`, info).pipe(
+      map((user: User) => {
+        // Login is successful if the api key was returned!
+        if (user && user.apiKey) {
+          // store user details and api key in local storage so logged in state persists
+          // between refreshes
+          localStorage.setItem('currentUser', JSON.stringify(user));
+          this.currentUserSubject.next(user);
+        }
+        return user;
+      })
+    );
   }
 
   /**
@@ -81,8 +79,7 @@ export class AuthenticationService {
   }
 
   public getHomeRoute(): string {
-    switch (this.currentUserValue.userAccountType)
-    {
+    switch (this.currentUserValue.userAccountType) {
       case UserAccountType.Admin: return '/manager';
       case UserAccountType.Manager: return '/manager';
       case UserAccountType.Tenant: return '/tenant';
@@ -90,4 +87,17 @@ export class AuthenticationService {
     }
   }
 
+  public currentUserIsTenant(): boolean {
+    return (
+      this.currentUserValue &&
+      this.currentUserValue.userAccountType === UserAccountType.Tenant
+    );
+  }
+
+  public currentUserIsManager(): boolean {
+    return (
+      this.currentUserValue &&
+      this.currentUserValue.userAccountType === UserAccountType.Manager
+    );
+  }
 }
