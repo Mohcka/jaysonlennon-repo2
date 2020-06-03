@@ -181,5 +181,13 @@ namespace AptMgmtPortalAPI.Repository
 
             return unit;
         }
+
+        public async Task<int> DeleteUnit(int unitId)
+        {
+            var unit = new Unit { UnitId = unitId };
+            _context.Units.Remove(unit);
+            var deleted =  await _context.SaveChangesAsync();
+            return deleted;
+        }
     }
 }

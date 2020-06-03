@@ -21,9 +21,11 @@ namespace AptMgmtPortalAPI.Repository
         Task<Unit> UnitFromTenantId(int tenantId);
         Task<Unit> AssignToUnit(int tenantId, string unitNumber);
         Task<Unit> GetUnit(int unitId);
+        
         Task<Unit> QueryUnitByNumber(string unitNumber);
         Task<IEnumerable<Unit>> GetUnits();
         Task<Unit> UpdateUnit(Unit unit);
+        Task<int> DeleteUnit(int unitId);
         Task<DTO.TenantInfoDTO> UpdateTenantInfo(int tenantId, DTO.TenantInfoDTO newInfo);
 
         Task<IEnumerable<Tenant>> GetTenants();
