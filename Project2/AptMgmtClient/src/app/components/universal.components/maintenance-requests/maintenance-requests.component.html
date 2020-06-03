@@ -19,7 +19,7 @@
         <th scope="col">Requester</th>
         <th scope="col">Unit Number</th>
         <th scope="col">Time Created</th>
-        <th scope="col">Closed Status</th>
+        <th scope="col">Status</th>
         <th scope="col">Reason</th>
       </tr>
     </thead>
@@ -36,7 +36,7 @@
             on: {{ request.timeClosed | date: 'MM/dd/yy HH:mm' }}<br/>
             Reason: {{ request.closeReason | maintenanceCloseReasonAsString }}
           </span>
-          <span *ngIf="!request.timeClosed">N/A</span>
+          <span *ngIf="!request.timeClosed">Open</span>
         </td>
         <td>{{ request.openNotes }}</td>
         <td>
