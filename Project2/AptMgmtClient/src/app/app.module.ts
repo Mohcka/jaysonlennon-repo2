@@ -27,6 +27,7 @@ import { UnauthorizedAccessComponent } from './components/universal.components/u
 import { TenantPageBillPayComponent } from './components/tenant.components/tenant-page-bill-pay/tenant-page-bill-pay.component';
 import { TenantPageListBillsComponent } from './components/tenant.components/tenant-page-list-bills/tenant-page-list-bills.component';
 import { TenantPageListAgreementsComponent } from './components/tenant.components/tenant-page-list-agreements/tenant-page-list-agreements.component';
+import { TenantEditInfoComponent } from './components/tenant.components/tenant-edit-info/tenant-edit-info.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { TenantPageListAgreementsComponent } from './components/tenant.component
     // Pipes
     ResourceEnumPipe,
     MaintenanceCloseReasonEnumPipe,
+    TenantEditInfoComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

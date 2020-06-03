@@ -1,0 +1,81 @@
+<div>
+  <h2>Edit</h2>
+  <form [formGroup]="tenantForm" (ngSubmit)="onSubmit()">
+    <fieldset [disabled]="!tenant || loading">
+      <div class="form-row">
+        <div class="form-group col">
+          <label for="firstName">First Name</label>
+          <input
+            type="text"
+            formControlName="firstName"
+            class="form-control"
+            id="firstName"
+            [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"
+          />
+          <div *ngIf="submitted && f.firstName.errors">
+            <div *ngIf="f.firstName.errors.required">
+              First name is required
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group col">
+          <label for="lastName">Last Name</label>
+          <input
+            type="text"
+            formControlName="lastName"
+            class="form-control"
+            id="lastName"
+            [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }"
+          />
+          <div *ngIf="submitted && f.lastName.errors">
+            <div *ngIf="f.lastName.errors.required">Last name is required</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col">
+          <label for="email">Email</label>
+          <input
+            type="text"
+            formControlName="email"
+            class="form-control"
+            id="email"
+            [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+          />
+          <div *ngIf="submitted && f.email.errors">
+            <div *ngIf="f.email.errors.required">
+              Email is required
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group col">
+          <label for="phoneNumber">Phone#</label>
+          <input
+            type="text"
+            formControlName="phoneNumber"
+            class="form-control"
+            id="phoneNumber"
+            [ngClass]="{ 'is-invalid': submitted && f.phoneNumber.errors }"
+          />
+          <div *ngIf="submitted && f.phoneNumber.errors">
+            <div *ngIf="f.phoneNumber.errors.required">Phone# is required</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <button
+          [disabled]="loading"
+          [class.disabled]="loading"
+          class="btn btn-primary"
+        >
+          Update
+        </button>
+        <div *ngIf="error" class="alert-danger">{{error}}</div>
+      </div>
+    </fieldset>
+  </form>
+</div>
