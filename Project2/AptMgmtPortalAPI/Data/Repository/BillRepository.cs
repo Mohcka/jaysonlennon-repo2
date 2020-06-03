@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -356,6 +357,39 @@ namespace AptMgmtPortalAPI.Repository
                 .Where(p => p.Resource == resource)
                 .Select(p => p)
                 .FirstOrDefault();
+        }
+
+        public async Task<IEnumerable<MeteredResourceEntry>> GetDailyResourceUsage(int tenantId, ResourceType resource, BillingPeriod period)
+        {
+            return await _context.TenantResourceUsages
+                .Where(u => u.TenantId == tenantId)
+                .Where(u => u.ResourceType == resource)
+                .Where(u => u.SampleTime >= period.PeriodStart
+                            && u.SampleTime <= period.PeriodEnd)
+                .OrderBy(u => u.SampleTime)
+                .Select(u => new MeteredResourceEntry {
+                    TenantId = tenantId,
+                    SampleTime = u.SampleTime,
+                    UsageAmount = u.UsageAmount,
+                    ResourceType = u.ResourceType,
+                })
+                .ToListAsync();
+        }
+
+        public async Task<IEnumerable<MeteredResourceEntry>> GetDailyResourceUsage(int tenantId, BillingPeriod period)
+        {
+            return await _context.TenantResourceUsages
+                .Where(u => u.TenantId == tenantId)
+                .Where(u => u.SampleTime >= period.PeriodStart
+                            && u.SampleTime <= period.PeriodEnd)
+                .OrderBy(u => u.SampleTime)
+                .Select(u => new MeteredResourceEntry {
+                    TenantId = tenantId,
+                    SampleTime = u.SampleTime,
+                    UsageAmount = u.UsageAmount,
+                    ResourceType = u.ResourceType,
+                })
+                .ToListAsync();
         }
     }
 }

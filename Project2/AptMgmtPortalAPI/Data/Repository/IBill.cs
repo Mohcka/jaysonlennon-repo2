@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -40,5 +41,7 @@ namespace AptMgmtPortalAPI.Repository
 
         Task<IEnumerable<DataModel.ProjectedResourceUsage>> GetProjectedResourceUsages(int tenantId, BillingPeriod period);
         Task<DataModel.ProjectedResourceUsage> GetProjectedResourceUsage(int tenantId, ResourceType resource, BillingPeriod period);
+        Task<IEnumerable<DataModel.MeteredResourceEntry>> GetDailyResourceUsage(int tenantId, ResourceType resource, BillingPeriod period);
+        Task<IEnumerable<DataModel.MeteredResourceEntry>> GetDailyResourceUsage(int tenantId, BillingPeriod period);
     }
 }

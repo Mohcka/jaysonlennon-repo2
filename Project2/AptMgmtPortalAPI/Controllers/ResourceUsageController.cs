@@ -28,6 +28,72 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
         }
 
         [HttpGet]
+        [Route("DailyUsages")]
+        [Authorize(Policy = Policies.AnyLoggedIn)]
+        public async Task<IActionResult> GetAllDailyResourceUsage()
+        {
+            var currentBillingPeriod = await _billRepository.GetCurrentBillingPeriod();
+            if (this.UserInRole(Role.Tenant))
+            {
+                var userId = this.UserIdFromApiKey();
+                var tenantId = await _tenantRepository.TenantIdFromUserId(userId);
+                if (tenantId == null)
+                {
+                    var err = new DTO.ErrorBuilder()
+                                    .Message("Not a tenant")
+                                    .Code(400)
+                                    .Build();
+                    return err;
+                }
+
+                var usages = await _billRepository.GetDailyResourceUsage((int)tenantId, currentBillingPeriod);
+
+                return new ObjectResult(usages);
+            }
+            else
+            {
+                var err = new DTO.ErrorBuilder()
+                                .Message("You are not authorized to view resource usage.")
+                                .Code(403)
+                                .Build();
+                return err;
+            }
+        }
+
+        [HttpGet]
+        [Route("DailyUsage")]
+        [Authorize(Policy = Policies.AnyLoggedIn)]
+        public async Task<IActionResult> GetDailyResourceUsage(ResourceType resource)
+        {
+            var currentBillingPeriod = await _billRepository.GetCurrentBillingPeriod();
+            if (this.UserInRole(Role.Tenant))
+            {
+                var userId = this.UserIdFromApiKey();
+                var tenantId = await _tenantRepository.TenantIdFromUserId(userId);
+                if (tenantId == null)
+                {
+                    var err = new DTO.ErrorBuilder()
+                                    .Message("Not a tenant")
+                                    .Code(400)
+                                    .Build();
+                    return err;
+                }
+
+                var usages = await _billRepository.GetDailyResourceUsage((int)tenantId, resource, currentBillingPeriod);
+
+                return new ObjectResult(usages);
+            }
+            else
+            {
+                var err = new DTO.ErrorBuilder()
+                                .Message("You are not authorized to view resource usage.")
+                                .Code(403)
+                                .Build();
+                return err;
+            }
+        }
+
+        [HttpGet]
         [Route("ResourceProjections")]
         [Authorize(Policy = Policies.AnyLoggedIn)]
         public async Task<IActionResult> GetResourceProjectionsInPeriod()
