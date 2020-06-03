@@ -1,3 +1,4 @@
+using System.Net;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -96,13 +97,13 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
         [HttpDelete]
         [Route("Unit")]
         [Authorize(Policy = Policies.AnyLoggedIn)]
-        public async Task<IActionResult> DeleteUnit(int unitId) 
+        public async Task<IActionResult> DeleteUnit(int unitId)
         {
-            if (this.UserInRole(Role.Admin) || this.UserInRole(Role.Manager)) 
+            if (this.UserInRole(Role.Admin) || this.UserInRole(Role.Manager))
             {
-              
-                var deleted =await _tenantRepository.DeleteUnit(unitId);
-                if (!deleted) 
+
+                var deleted = await _tenantRepository.DeleteUnit(unitId);
+                if (!deleted)
                 {
                     var err = new DTO.ErrorBuilder()
                                    .Message("Unit not found.")
@@ -110,13 +111,15 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                    .Build();
                     return err;
                 }
-                return new ObjectResult(deleted);
+                var ok = new ObjectResult(new { });
+                ok.StatusCode = 200;
+                return ok;
 
             }
             else
             {
                 var err = new DTO.ErrorBuilder()
-                                 .Message("You are not authorized to query units.")
+                                 .Message("You are not authorized to delete units.")
                                  .Code(403)
                                  .Build();
                 return err;
