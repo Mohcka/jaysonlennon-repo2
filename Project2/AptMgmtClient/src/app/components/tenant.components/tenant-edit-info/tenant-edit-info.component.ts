@@ -83,7 +83,7 @@ export class TenantEditInfoComponent implements OnInit {
 
     this.tenantService.updateTenant(updatedTenant).subscribe(
       (_data) => {
-        this.router.navigate(['/tenant']);
+        this.router.navigate([this.authService.getHomeRoute()]);
       },
       (err) => {
         this.error = JSON.stringify(err);
