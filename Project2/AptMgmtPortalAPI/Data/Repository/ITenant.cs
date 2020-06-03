@@ -25,7 +25,7 @@ namespace AptMgmtPortalAPI.Repository
         Task<Unit> QueryUnitByNumber(string unitNumber);
         Task<IEnumerable<Unit>> GetUnits();
         Task<Unit> UpdateUnit(Unit unit);
-        Task<int> DeleteUnit(int unitId);
+        Task<bool> DeleteUnit(int unitId);
         Task<DTO.TenantInfoDTO> UpdateTenantInfo(int tenantId, DTO.TenantInfoDTO newInfo);
 
         Task<IEnumerable<Tenant>> GetTenants();

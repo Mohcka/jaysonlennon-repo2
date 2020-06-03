@@ -182,12 +182,20 @@ namespace AptMgmtPortalAPI.Repository
             return unit;
         }
 
-        public async Task<int> DeleteUnit(int unitId)
+        public async Task<bool> DeleteUnit(int unitId)
         {
-            var unit = new Unit { UnitId = unitId };
-            _context.Units.Remove(unit);
-            var deleted =  await _context.SaveChangesAsync();
-            return deleted;
+            // We need to query the unit from the database before deleting it.
+            var unit = await _context.Units.Where(u => u.UnitId == unitId).FirstOrDefaultAsync();
+
+            // If we can't find it, then return false since we didn't delete anything.
+            if (unit == null) return false;
+
+            // Schedule unit for deletion.
+            _context.Remove(unit);
+
+            // If something goes wrong, this will return false so the caller will
+            // know to retry the request.
+            return await _context.SaveChangesAsync() > 0;
         }
     }
 }

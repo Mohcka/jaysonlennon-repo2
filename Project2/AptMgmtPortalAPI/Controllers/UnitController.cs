@@ -100,17 +100,18 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
         {
             if (this.UserInRole(Role.Admin) || this.UserInRole(Role.Manager)) 
             {
-                var unit = await _tenantRepository.GetUnit(unitId);
-                if (unit == null)
+              
+                var deleted =await _tenantRepository.DeleteUnit(unitId);
+                if (!deleted) 
                 {
                     var err = new DTO.ErrorBuilder()
-                                    .Message("Unit not found.")
-                                    .Code(404)
-                                    .Build();
+                                   .Message("Unit not found.")
+                                   .Code(404)
+                                   .Build();
                     return err;
                 }
-                var deleted = _tenantRepository.DeleteUnit(unitId);
                 return new ObjectResult(deleted);
+
             }
             else
             {
