@@ -19,15 +19,12 @@ import { Tenant } from 'src/app/model/tenant';
 })
 export class TenantHomeComponent implements OnInit {
   public users: User[] = [];
-  public bills: Bill[];
-  public unpaidBills: Bill[];
   public maintenanceRequests: MaintenanceRequest[];
   public agreements: Agreement[];
   public tenant: Tenant;
 
   constructor(
     private userService: UserService,
-    private billService: BillService,
     private maintenanceService: MaintenanceService,
     private agreementService: AgreementService,
     private tenantService: TenantService,
@@ -39,8 +36,6 @@ export class TenantHomeComponent implements OnInit {
     this.getTenantMaintenanceRequests();
     this.getTenantAgreements();
     this.getTenantInfo();
-    this.getBills();
-    this.getUnpaidBills();
   }
 
   public getTenantInfo(): void {
@@ -51,18 +46,6 @@ export class TenantHomeComponent implements OnInit {
 
   public getUsers(): void {
     this.userService.getUsers().subscribe((users) => (this.users = users));
-  }
-
-  public getBills(): void {
-    this.billService
-      .getBillsInCurrentPeriod()
-      .subscribe((bills) => (this.bills = bills));
-  }
-
-  public getUnpaidBills(): void {
-    this.billService
-      .getUnpaidBills()
-      .subscribe((unpaidBills) => (this.unpaidBills = unpaidBills));
   }
 
   public getTenantMaintenanceRequests(): void {
@@ -78,18 +61,4 @@ export class TenantHomeComponent implements OnInit {
   }
 
   public cancelTenantRequest(): void {}
-
-  public payBill(
-    resource: Resource,
-    billingPeriodId: number,
-    amount: number
-  ): void {
-    const payBillInfo: PayBillData = {
-      tenantId: this.tenant.tenantId,
-      resource: resource,
-      billingPeriodId: billingPeriodId,
-      amount: amount,
-    };
-    this.billService.payBill(payBillInfo).subscribe((_) => this.getBills());
-  }
 }

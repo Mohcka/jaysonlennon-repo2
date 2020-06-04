@@ -47,7 +47,7 @@
 
 <hr>
 
-<div *ngIf="!usageData || !usageSummary">Loading usage data...</div>
+<div *ngIf="hasDetails && (!usageData || !usageSummary)">Loading usage data...</div>
 <div *ngIf="usageSummary && usageData">
   <app-tenant-resource-usage-detail
     [usageSummary]="usageSummary"

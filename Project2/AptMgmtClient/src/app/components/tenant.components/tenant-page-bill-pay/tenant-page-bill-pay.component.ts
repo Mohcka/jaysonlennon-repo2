@@ -18,10 +18,11 @@ export class TenantPageBillPayComponent implements OnInit {
 
   public bill: Bill;
   public tenant: Tenant;
-  
+
   usageSummary: ResourceUsageProjection;
   usageData: MeteredResouceUsageEntry[];
   unitName: string;
+  hasDetails = false;
 
   constructor(private billService: BillService,
               private tenantService: TenantService,
@@ -55,6 +56,7 @@ export class TenantPageBillPayComponent implements OnInit {
   getBill(): void {
     const billingPeriod = this.activatedRoute.snapshot.paramMap.get('periodId');
     const resourceTypeId = this.activatedRoute.snapshot.paramMap.get('resourceTypeId');
+    if (Number(resourceTypeId) === 0 || Number(resourceTypeId) === 1) { this.hasDetails = true; }
     this.billService
       .getBillsInPeriod(Number(billingPeriod))
       .subscribe(bills => {

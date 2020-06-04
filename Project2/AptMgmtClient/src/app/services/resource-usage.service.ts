@@ -66,7 +66,7 @@ export class ResourceUsageService {
 
   public getProjectionForResource(resource: Resource): Observable<ResourceUsageProjection> {
     return this.http
-      .get<ResourceUsageProjection>(ApiBase.url() + `ResourceProjection`)
+      .get<ResourceUsageProjection>(ApiBase.url() + `ResourceProjection?resource=${resource}`)
       .pipe(
         catchError(
           handleError<ResourceUsageProjection>('resource-usage.service(getProjectionForResource)')
