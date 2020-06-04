@@ -57,6 +57,6 @@ export class ManagerCreateAgreementTempalteComponent implements OnInit {
         text: this.f.text.value,
       })
       .toPromise()
-      .then((_) => this.router.navigate(['/']));
+      .then((_) => this.router.navigate([this.authService.getHomeRoute()]));
   }
 }

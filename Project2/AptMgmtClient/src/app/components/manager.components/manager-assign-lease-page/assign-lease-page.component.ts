@@ -111,7 +111,7 @@ export class AssignLeasePageComponent implements OnInit {
       })
       .toPromise()
       .then((_) => {
-        this.router.navigate(['/']);
+        this.router.navigate([this.authService.getHomeRoute()]);
       });
   }
 
