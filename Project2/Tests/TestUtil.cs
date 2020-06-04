@@ -34,6 +34,17 @@ namespace TestAptMgmtPortal
             return tenant;
         }
 
+        public static User NewUserWithAnAPIKey(AptMgmtDbContext context)
+        {
+            var user = new User
+            {
+                ApiKey = "test-key100"
+            };
+            context.Add(user);
+            context.SaveChanges();
+            return user;
+        }
+
         public static User NewUser(AptMgmtDbContext context)
         {
             var user = new User();
