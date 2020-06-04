@@ -96,6 +96,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                     .Build();
                     return err;
                 }
+                newUser.Password = "(hashed)";
                 return new ObjectResult(newUser);
             }
         }
