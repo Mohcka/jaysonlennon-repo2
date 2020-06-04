@@ -34,6 +34,7 @@ import { LeaseAgreementsOageComponent } from './components/universal.components/
 import { ManagerCreateAgreementTempalteComponent } from './components/manager.components/manager-create-agreement-template/manager-create-agreement-template.component';
 import { ManagerCreateTenantPageComponent } from './components/manager.components/manager-create-tenant-page/manager-create-tenant-page.component';
 import { TenantSignupPageComponent } from './components/tenant.components/tenant-signup-page/tenant-signup-page.component';
+import { AppIndexComponent } from './components/universal.components/app-index/app-index.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { TenantSignupPageComponent } from './components/tenant.components/tenant
     LoginComponent,
     RouterHubComponent,
     UnauthorizedAccessComponent,
+    AppIndexComponent,
 
     // Tenant components
     TenantHomeComponent,

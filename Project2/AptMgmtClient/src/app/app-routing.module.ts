@@ -1,3 +1,4 @@
+import { AppIndexComponent } from './components/universal.components/app-index/app-index.component';
 import { TenantPageViewResourceUsageComponent } from './components/tenant.components/tenant-page-view-resource-usage/tenant-page-view-resource-usage.component';
 import { TenantPageListAgreementsComponent } from './components/tenant.components/tenant-page-list-agreements/tenant-page-list-agreements.component';
 import { TenantPageBillPayComponent } from './components/tenant.components/tenant-page-bill-pay/tenant-page-bill-pay.component';
@@ -25,6 +26,7 @@ import { TenantSignupPageComponent } from './components/tenant.components/tenant
 // Define routes for the application
 const routes: Routes = [
   // Universal routes
+  { path: '', component: AppIndexComponent },
   { path: 'hub', component: RouterHubComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: TenantSignupPageComponent, },
@@ -33,8 +35,7 @@ const routes: Routes = [
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Admin, UserAccountType.Tenant, UserAccountType.Manager]}},
   { path: 'agreements', component: LeaseAgreementsOageComponent,
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Admin, UserAccountType.Tenant, UserAccountType.Manager]}},
-  { path: 'agreements', component: LeaseAgreementsOageComponent,
-    canActivate: [AuthGuard], data: { roles: [UserAccountType.Admin, UserAccountType.Tenant, UserAccountType.Manager]}},
+
 
   // Tenants
   { path: 'tenant', component: TenantHomeComponent,

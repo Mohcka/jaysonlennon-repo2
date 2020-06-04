@@ -84,6 +84,7 @@ export class AuthenticationService {
   }
 
   public getHomeRoute(): string {
+    if (this.currentUserValue === null) { return '/'; }
     switch (this.currentUserValue.userAccountType) {
       case UserAccountType.Admin: return '/manager';
       case UserAccountType.Manager: return '/manager';
