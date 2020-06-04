@@ -3,6 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { MeteredResouceUsageEntry } from 'src/app/model/metered-resource-usage-entry';
 import { ChartType } from 'angular-google-charts';
 import { Resource } from 'src/enums/Resource';
+import { DecimalPipe } from '@angular/common';
 
 @Component({
   selector: 'app-tenant-resource-usage-detail',
@@ -20,6 +21,7 @@ export class TenantResourceUsageDetailComponent implements OnInit {
   chartOptions: any;
 
   resourceType: Resource;
+  unitName: string;
 
   constructor() { }
 
@@ -27,7 +29,24 @@ export class TenantResourceUsageDetailComponent implements OnInit {
     this.resourceType = this.usageSummary.resource;
     this.buildChartData();
     this.configureOptions();
+    this.configureUnitName();
     this.chartOptionsReady = true;
+  }
+
+  configureUnitName() {
+    switch (this.resourceType) {
+      case Resource.Power: this.unitName = 'kWh'; break;
+      case Resource.Water: this.unitName = 'cu.ft.'; break;
+      default: this.unitName = '';
+    }
+  }
+
+  billingPeriodFormat(date: Date) {
+    const dateObj = new Date(date);
+    const month = new Intl.DateTimeFormat('en-US', { month: '2-digit' }).format(dateObj);
+    const day = new Intl.DateTimeFormat('en-US', { day: '2-digit' }).format(dateObj);
+    const year = new Intl.DateTimeFormat('en-US', { year: 'numeric' }).format(dateObj);
+    return `${year}-${month}-${day}`;
   }
 
   buildChartData() {
@@ -97,7 +116,7 @@ export class TenantResourceUsageDetailComponent implements OnInit {
       title: '',
       colors: [],
       hAxis: {
-        title: 'Day of the month',
+        title: 'Day',
         showTextEvery: 7
       },
       legend: {
