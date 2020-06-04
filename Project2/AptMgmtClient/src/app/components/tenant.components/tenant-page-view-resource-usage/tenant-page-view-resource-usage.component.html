@@ -1,0 +1,12 @@
+<h1>Utility Usage Breakdown</h1>
+
+
+<div *ngIf="!resourceUsageSummaries && !resourceUsageData">Loading utility data...</div>
+<div *ngIf="resourceUsageSummaries && resourceUsageData">
+  <div *ngFor="let summary of resourceUsageSummaries">
+    <app-tenant-resource-usage-detail
+      [usageSummary]="summary"
+      [usageData]="resourceUsageData[summary.resource]">
+    </app-tenant-resource-usage-detail>
+  </div>
+</div>

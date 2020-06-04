@@ -4,7 +4,7 @@ export interface Agreement {
   tenantId: number;
   title: string;
   text: string;
-  signedDate: Date | null;
-  startDate: Date | null;
-  endDate: Date | null;
+  signedDate: Date | string | null;
+  startDate: Date | string | null;
+  endDate: Date | string | null;
 }

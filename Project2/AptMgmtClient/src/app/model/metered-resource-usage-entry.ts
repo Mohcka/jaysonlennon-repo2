@@ -1,9 +1,9 @@
-import { Resource } from "src/enums/Resource";
+import { Resource } from 'src/enums/Resource';
 
 export interface MeteredResouceUsageEntry
 {
-  TenantId: number;
-  SampleTime: Date;
-  UsageAmount: number;
-  ResourceType: Resource;
+  tenantId: number;
+  sampleTime: Date;
+  usageAmount: number;
+  resourceType: Resource;
 }
