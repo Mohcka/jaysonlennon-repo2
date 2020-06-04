@@ -69,6 +69,11 @@ export class AuthenticationService {
     );
   }
 
+  public loginFromAccountCreation(user: User): void {
+    localStorage.setItem('currentUser', JSON.stringify(user));
+    this.currentUserSubject.next(user);
+  }
+
   /**
    * Logs user out
    */

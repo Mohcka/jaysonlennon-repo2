@@ -38,7 +38,7 @@ export class UserService {
   public updateUser(user: User): Observable<User> {
     return this.http.post<User>(this.apiUrl, user, this.httpOptions)
       .pipe(
-        catchError(handleError<User>('user.service(updateUser)'))
+        // catchError(handleError<User>('user.service(updateUser)'))
       );
   }
 
