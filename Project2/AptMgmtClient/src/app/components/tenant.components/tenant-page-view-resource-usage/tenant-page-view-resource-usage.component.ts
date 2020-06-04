@@ -11,6 +11,7 @@ import { Dictionary } from 'src/app/model/dictionary';
 })
 export class TenantPageViewResourceUsageComponent implements OnInit {
 
+
   resourceUsageData: Dictionary<MeteredResouceUsageEntry[]>;
   resourceUsageSummaries: ResourceUsageProjection[];
 

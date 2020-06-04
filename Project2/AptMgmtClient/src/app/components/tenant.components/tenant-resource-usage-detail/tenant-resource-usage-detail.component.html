@@ -14,10 +14,10 @@
 </div>
 <div>
   <p>usage data</p>
-  <div *ngFor="let entry of usageData">
-    <div>time: {{entry.sampleTime}}</div>
-    <div>usage: {{entry.usageAmount}}</div>
-    <hr>
+  <div *ngIf="chartOptionsReady">
+    <google-chart
+    *ngIf="usageSummary.resource == 0 || usageSummary.resource == 1"
+    [options]="chartOptions" [type]="chartType" [data]="chartData"></google-chart>
   </div>
 </div>
 <hr>
