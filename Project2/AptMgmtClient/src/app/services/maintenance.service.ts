@@ -25,7 +25,7 @@ export class MaintenanceService {
   public createNewRequest(data: MaintenanceRequestData): Observable<MaintenanceRequest> {
     return this.http
       .post<MaintenanceRequest>(this.apiUrl, data, this.httpOptions)
-      .pipe(catchError(handleError<null>('maintenance.service(createNewRequest)')));
+      .pipe(/* catchError(handleError<null>('maintenance.service(createNewRequest)')) */);
   }
 
   public cancelRequest(data: MaintenanceRequestUpdate): Observable<MaintenanceRequest> {
@@ -38,7 +38,7 @@ export class MaintenanceService {
   public updateRequest(data: MaintenanceRequestUpdate): Observable<MaintenanceRequest> {
     return this.http
       .post<MaintenanceRequest>(this.apiUrl, data, this.httpOptions)
-      .pipe(catchError(handleError<null>('maintenance.service(updateRequest)')));
+      .pipe(/* catchError(handleError<null>('maintenance.service(updateRequest)')) */);
   }
 
   public getAll(): Observable<MaintenanceRequest[]> {

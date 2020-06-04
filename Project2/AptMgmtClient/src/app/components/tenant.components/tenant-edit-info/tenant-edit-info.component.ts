@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import { Tenant } from 'src/app/model/tenant';
 import { TenantService } from 'src/app/services/tenant.service';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-tenant-edit-info',
@@ -85,8 +86,11 @@ export class TenantEditInfoComponent implements OnInit {
       (_data) => {
         this.router.navigate([this.authService.getHomeRoute()]);
       },
-      (err) => {
-        this.error = JSON.stringify(err);
+      (error: HttpErrorResponse) => {
+        this.error =
+          error.error && error.error.message
+            ? error.error.message
+            : JSON.stringify(error);
         this.loading = false;
       }
     );
