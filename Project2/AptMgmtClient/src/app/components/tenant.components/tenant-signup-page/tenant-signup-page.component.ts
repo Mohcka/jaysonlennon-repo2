@@ -1,3 +1,4 @@
+import { AuthenticationService } from './../../../services/authentication.service';
 import { Component, OnInit } from '@angular/core';
 import {
   FormGroup,
@@ -13,6 +14,7 @@ import { TenantService } from 'src/app/services/tenant.service';
 import { UserAccountType } from 'src/enums/user-account-type';
 import { first } from 'rxjs/operators';
 import { HttpErrorResponse } from '@angular/common/http';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-tenant-signup-page',
@@ -37,7 +39,8 @@ export class TenantSignupPageComponent implements OnInit {
     private userService: UserService,
     private tenantService: TenantService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private authenticationService: AuthenticationService
   ) {}
 
   ngOnInit(): void {
@@ -86,7 +89,10 @@ export class TenantSignupPageComponent implements OnInit {
       .pipe(first())
       .toPromise()
       .then(
-        (_) => this.router.navigate(['/']),
+        (user) => {
+          this.authenticationService.loginFromAccountCreation(user);
+          this.router.navigate([this.authenticationService.getHomeRoute()]);
+        },
         (error: HttpErrorResponse) => {
           this.error =
             error.error && error.error.message

@@ -1,3 +1,5 @@
+import { AuthenticationService } from './../../../services/authentication.service';
+import { Unit } from './../../../model/unit';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -24,23 +26,28 @@ export class ManagerCreateTenantPageComponent implements OnInit {
   public submitted = false;
   public returnUrl: string;
   public error = '';
+  public emptyUnits: Unit[] = [];
 
   constructor(
     private formBuilder: FormBuilder,
     private tenantService: TenantService,
     private unitService: UnitService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private authenticationService: AuthenticationService
   ) {}
 
   ngOnInit(): void {
     this.tenantCreationForm = this.formBuilder.group({
       tenantEmail: ['', Validators.email],
-      unitNumber: [
-        '',
-        [Validators.required, Validators.min(101), Validators.max(999)],
-      ],
+      unitNumber: [ '', Validators.required ],
     });
+
+    this.getEmptyUnits();
+  }
+
+  getEmptyUnits(): void {
+    this.unitService.getUnits().subscribe(units => this.emptyUnits = units.filter(u => u.tenantId === null))
   }
 
   get f() {
@@ -59,7 +66,7 @@ export class ManagerCreateTenantPageComponent implements OnInit {
     const newTeanant: Tenant = {
       tenantId: 0,
       email: this.f.tenantEmail.value,
-      unitNumber: null,
+      unitNumber: this.f.unitNumber.value,
       phoneNumber: null,
       firstName: null,
       lastName: null,
@@ -73,9 +80,7 @@ export class ManagerCreateTenantPageComponent implements OnInit {
       .pipe(first())
       .toPromise()
       .then(
-        (createdTenant) => {
-          this.addTenantsUnit(createdTenant.tenantId);
-        },
+        (_) => this.router.navigate([this.authenticationService.getHomeRoute()]),
         (error: HttpErrorResponse) => {
           this.error =
             error.error && error.error.message
@@ -84,50 +89,5 @@ export class ManagerCreateTenantPageComponent implements OnInit {
           this.loading = false;
         }
       );
-  }
-
-  private addTenantsUnit(tenantId: number): void {
-    this.unitService
-      .updateUnit({
-        unitId: 0,
-        unitNumber: this.f.unitNumber.value + '',
-        tenantId: tenantId,
-      })
-      .toPromise()
-      .then(
-        (_) => this.router.navigate(['/']),
-        (error: HttpErrorResponse) => {
-          this.error =
-            error.error && error.error.message
-              ? error.error.message
-              : JSON.stringify(error);
-          this.loading = false;
-        }
-      );
-  }
-
-  /**
-   * Confirms that the value of two formControls are matching
-   *
-   * @param controlName Name of the form control to compare
-   * @param matchingControlName Name of the formControl to compare values of the first formControl
-   * @see https://www.itsolutionstuff.com/post/angular-validation-password-and-confirm-passwordexample.html
-   */
-  confirmValidator(controlName: string, matchingControlName: string) {
-    return (formGroup: FormGroup) => {
-      const control = formGroup.controls[controlName];
-      const matchingControl = formGroup.controls[matchingControlName];
-
-      // Return if matching controll has other errors than mattching
-      if (matchingControl.errors && !matchingControl.errors.confirmValidator) {
-        return;
-      }
-
-      if (control.value !== matchingControl.value) {
-        matchingControl.setErrors({ confirmValidator: true });
-      } else {
-        matchingControl.setErrors(null);
-      }
-    };
   }
 }

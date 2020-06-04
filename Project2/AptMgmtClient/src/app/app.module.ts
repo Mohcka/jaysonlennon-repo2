@@ -58,6 +58,7 @@ import { TenantSignupPageComponent } from './components/tenant.components/tenant
     TenantPageBillPayComponent,
     TenantEditInfoComponent,
     TenantPageViewResourceUsageComponent,
+    TenantSignupPageComponent,
 
     // Manager components
     ManagerHomeComponent,
@@ -65,12 +66,11 @@ import { TenantSignupPageComponent } from './components/tenant.components/tenant
     AssignLeasePageComponent,
     LeaseAgreementsOageComponent,
     ManagerCreateAgreementTempalteComponent,
+    ManagerCreateTenantPageComponent,
 
     // Pipes
     ResourceEnumPipe,
     MaintenanceCloseReasonEnumPipe,
-    ManagerCreateTenantPageComponent,
-    TenantSignupPageComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
