@@ -1,0 +1,96 @@
+<div>
+  <h2>Sign Up</h2>
+  <form [formGroup]="tenantCreationForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="tenantEmail">Tenant's email</label>
+      <input
+        type="text"
+        formControlName="tenantEmail"
+        class="form-control"
+        id="tenantEmail"
+        [ngClass]="{ 'is-invalid': submitted && f.tenantEmail.errors }"
+      />
+      <div *ngIf="submitted && f.tenantEmail.errors" class="invalid-feedback">
+        <div *ngIf="f.tenantEmail.errors.required">An email is required</div>
+        <div *ngIf="f.tenantEmail.errors.email">Please enter a valid email</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="tenantPassword">Password</label>
+      <input
+        type="password"
+        formControlName="tenantPassword"
+        class="form-control"
+        id="tenantPassword"
+        [ngClass]="{ 'is-invalid': submitted && f.tenantPassword.errors }"
+      />
+      <div
+        *ngIf="submitted && f.tenantPassword.errors"
+        class="invalid-feedback"
+      >
+        <div *ngIf="f.tenantPassword.errors.required">Password is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="tenantConfirmPassword">Confirm Password</label>
+      <input
+        type="password"
+        formControlName="tenantConfirmPassword"
+        class="form-control"
+        id="tenantConfirmPassword"
+        [ngClass]="{
+          'is-invalid': submitted && f.tenantConfirmPassword.errors
+        }"
+      />
+      <div
+        *ngIf="submitted && f.tenantConfirmPassword.errors"
+        class="invalid-feedback"
+      >
+        <div *ngIf="f.tenantConfirmPassword.errors.required">
+          Comfirm Password is required
+        </div>
+        <div *ngIf="f.tenantConfirmPassword.errors.confirmValidator">
+          Passwords do not match
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="firstName">Tenant's first name</label>
+      <input
+        type="text"
+        formControlName="firstName"
+        class="form-control"
+        id="firstName"
+        [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"
+      />
+      <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+        <div *ngIf="f.firstName.errors.required">An first name is required</div>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label for="firstName">Tenant's last name</label>
+      <input
+        type="text"
+        formControlName="lastName"
+        class="form-control"
+        id="lastName"
+        [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }"
+      />
+      <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+        <div *ngIf="f.lastName.errors.required">An last name is required</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button [disabled]="loading" class="btn btn-primary">
+        Create Tenant
+      </button>
+      <div *ngIf="loading">Processing...</div>
+    </div>
+    <div *ngIf="error" class="alert-danger">{{ error }}</div>
+  </form>
+</div>

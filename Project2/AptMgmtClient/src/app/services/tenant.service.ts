@@ -37,7 +37,7 @@ export class TenantService {
   public updateTenant(tenant: Tenant): Observable<Tenant> {
     return this.http.post<Tenant>(ApiBase.url() + 'Tenant', tenant, this.httpOptions)
       .pipe(
-        catchError(handleError<Tenant>('tenant.service(updateTenant)'))
+        // catchError(handleError<Tenant>('tenant.service(updateTenant)'))
       );
   }
 

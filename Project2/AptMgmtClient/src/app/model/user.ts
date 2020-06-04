@@ -1,7 +1,7 @@
 import { UserAccountType } from 'src/enums/user-account-type';
 
 export interface User {
-  userId: number;
+  userId?: number;
   loginName: string;
   userAccountType: UserAccountType;
   firstName: string;
