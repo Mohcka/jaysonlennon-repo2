@@ -3,16 +3,31 @@
   <p>Apartment Property Management</p>
 </div>
 <div class="sidenav">
+  <span *ngIf="currentUser">
+
+    <span *ngIf="isManager">
+      <a>Assign Lease</a>
+      <a>Create Lease Template</a>
+    </span>
+
+    <span *ngIf="isTenant">
+      <a [routerLink]="['/tenant/bill/list']">Bills</a>
+      <a [routerLink]="['/tenant/edit']">Edit Info</a>
+    </span>
+
+    <a>Maintenance Request</a>
+    <a>Lease Agreements</a>
+  </span>
   <a [routerLink]="['/hub']">RouteHub</a>
   <a (click)="goHome()">Home</a>
   <a>Payments</a>
-  <a *ngIf="isTenant" [routerLink]="['/maintenance-requests']">
-    Maintenance<br />Requests
-  </a>
-  <a>Lease<br />Agreement</a>
-  <a *ngIf="currentUser" [routerLink]="isManager ? ['/manager'] : ['/tenant']">
-    Details
-  </a>
+    <a *ngIf="isTenant" [routerLink]="['/maintenance-requests']">
+      Maintenance<br />Requests
+    </a>
+    <a>Lease<br />Agreement</a>
+    <a *ngIf="currentUser" [routerLink]="isManager ? ['/manager'] : ['/tenant']">
+      Details
+    </a>
   <a *ngIf="!currentUser" [routerLink]="['/login']">Login</a>
   <a *ngIf="currentUser" (click)="logout()">Logout</a>
 </div>
