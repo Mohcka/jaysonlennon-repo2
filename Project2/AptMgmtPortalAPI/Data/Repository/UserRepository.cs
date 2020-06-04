@@ -57,6 +57,16 @@ namespace AptMgmtPortalAPI.Repository
             await _context.AddAsync(user);
             await _context.SaveChangesAsync();
 
+            var tenant = await _context.Tenants
+                .Where(t => t.Email == user.LoginName)
+                .Select(t => t)
+                .FirstOrDefaultAsync();
+            
+            if (tenant == null) return null;
+
+            tenant.UserId = user.UserId;
+            await _context.SaveChangesAsync();
+
             return user;
         }
 
