@@ -38,9 +38,10 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
         [Authorize(Policy = Policies.AnyLoggedIn)]
         public async Task<IActionResult> GetSpecificUserInfo(int userId)
         {
-            if (this.HttpContext.User.IsInRole(Role.Admin) || this.HttpContext.User.IsInRole(Role.Manager)) {
+            if (this.HttpContext.User.IsInRole(Role.Admin) || this.HttpContext.User.IsInRole(Role.Manager))
+            {
                 var thisUserId = this.UserIdFromApiKey();
-                
+
                 var user = await _userRepository.UserFromId(userId);
                 if (user == null)
                 {
@@ -54,7 +55,9 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                 var userDTO = new DTO.UserDTO(user);
                 return new ObjectResult(userDTO);
 
-            } else {
+            }
+            else
+            {
                 var err = new DTO.ErrorBuilder()
                                 .Message("You do not have the proper authorization to view user accounts.")
                                 .Code(403)
@@ -64,34 +67,37 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
         }
 
         [HttpPost]
-        [Authorize(Policy = Policies.AnyLoggedIn)]
         public async Task<IActionResult> SetUserInfo(DTO.UserDTO userInfo)
         {
-            if (this.HttpContext.User.IsInRole(Role.Manager))
+            // When user already logged in...
+            if (this.UserInRole(Role.Tenant))
             {
-                if (userInfo.UserAccountType == UserAccountType.Admin)
+                var thisUserId = this.UserIdFromApiKey();
+                // Ensure a tenant cannot updated information for another user.
+                userInfo.UserId = thisUserId;
+
+                var updatedUser = await _userRepository.UpdateUserInfo(userInfo);
+                return new ObjectResult(updatedUser);
+            }
+            else if (this.UserInRole(Role.Manager) || this.UserInRole(Role.Admin))
+            {
+                var updatedUser = await _userRepository.UpdateUserInfo(userInfo);
+                return new ObjectResult(updatedUser);
+            }
+            else
+            {
+                userInfo.UserAccountType = UserAccountType.Tenant;
+                var newUser = await _userRepository.TryCreateAccount(userInfo);
+                if (newUser == null)
                 {
                     var err = new DTO.ErrorBuilder()
-                                    .Message("You do not have the proper authorization to edit Admin user accounts.")
-                                    .Code(403)
+                                    .Message("Unable to create account, tenant information not found.")
+                                    .Code(404)
                                     .Build();
                     return err;
                 }
+                return new ObjectResult(newUser);
             }
-            else if (this.HttpContext.User.IsInRole(Role.Tenant))
-            {
-                var err = new DTO.ErrorBuilder()
-                                .Message("You do not have the proper authorization to edit user accounts.")
-                                .Code(403)
-                                .Build();
-                return err;
-            }
-
-            var user = await _userRepository.UpdateUserInfo(userInfo);
-
-            var userDTO = new DTO.UserDTO(user);
-
-            return new ObjectResult(userDTO);
         }
     }
 }

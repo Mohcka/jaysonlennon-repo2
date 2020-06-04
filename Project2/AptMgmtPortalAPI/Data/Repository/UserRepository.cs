@@ -69,6 +69,7 @@ namespace AptMgmtPortalAPI.Repository
             user.LastName = userInfo.LastName;
             user.LoginName = userInfo.LoginName;
             user.Password = Util.Hash.Sha256(userInfo.Password);
+            user.ApiKey = userInfo.ApiKey;
 
             await _context.SaveChangesAsync();
 
@@ -101,6 +102,26 @@ namespace AptMgmtPortalAPI.Repository
                 .Where(u => u.UserId == userId)
                 .Select(u => u)
                 .FirstOrDefaultAsync();
+        }
+
+        public async Task<Entity.User> TryCreateAccount(DTO.UserDTO userInfo) {
+            var userExists = await _context.Users
+                .Where(u => u.LoginName == userInfo.LoginName)
+                .Select(u => u)
+                .FirstOrDefaultAsync();
+
+            // User account was already made.
+            if (userExists != null) return null;
+
+            var tenant = await _context.Tenants
+                .Where(t => t.Email == userInfo.LoginName)
+                .Select(t => t)
+                .FirstOrDefaultAsync();
+            
+            // No tenant found with corresponding login name, so cannot create account.
+            if (tenant == null) return null;
+
+            return await NewUser(userInfo);
         }
     }
 }

@@ -13,5 +13,6 @@ namespace AptMgmtPortalAPI.Repository
         Task<User> UpdateUserInfo(int userId, DTO.UserDTO userInfo);
         Task<User> UpdateUserInfo(DTO.UserDTO userInfo);
         Task<User> NewUser(DTO.UserDTO userInfo);
+        Task<User> TryCreateAccount(DTO.UserDTO userInfo);
     }
 }
