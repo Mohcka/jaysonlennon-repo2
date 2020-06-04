@@ -35,6 +35,7 @@ import { ManagerCreateTenantPageComponent } from './components/manager.component
 import { TenantSignupPageComponent } from './components/tenant.components/tenant-signup-page/tenant-signup-page.component';
 import { AppIndexComponent } from './components/universal.components/app-index/app-index.component';
 import { LeaseAgreementTextComponent } from './components/universal.components/lease-agreement-text/lease-agreement-text.component';
+import { ManagerPageListAgreementsComponent } from './components/manager.components/manager-page-list-agreements/manager-page-list-agreements.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +70,7 @@ import { LeaseAgreementTextComponent } from './components/universal.components/l
     AssignLeasePageComponent,
     ManagerCreateAgreementTempalteComponent,
     ManagerCreateTenantPageComponent,
+    ManagerPageListAgreementsComponent,
 
     // Pipes
     ResourceEnumPipe,
