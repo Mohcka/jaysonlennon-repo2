@@ -76,12 +76,15 @@ export class LoginComponent implements OnInit {
               returnUrl = this.authenticationService.getHomeRoute();
             }
           } else {
-              returnUrl = this.authenticationService.getHomeRoute();
+            returnUrl = this.authenticationService.getHomeRoute();
           }
           this.router.navigate([returnUrl]);
         },
         (error: HttpErrorResponse) => {
-          this.error = JSON.stringify(error);
+          this.error =
+            error.error && error.error.message
+              ? error.error.message
+              : JSON.stringify(error);
           this.loading = false;
         }
       );

@@ -1,6 +1,6 @@
 <div>
   <h2>Add new Tenant</h2>
-  <form [formGroup]="tenantCreationForm" (ngSubmit)="(onSubmit())">
+  <form [formGroup]="tenantCreationForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="tenantEmail">Tenant's email</label>
       <input
@@ -12,45 +12,25 @@
       />
       <div *ngIf="submitted && f.tenantEmail.errors" class="invalid-feedback">
         <div *ngIf="f.tenantEmail.errors.required">An email is required</div>
+        <div *ngIf="f.tenantEmail.errors.email">
+          Please enter a valid email adress
+        </div>
       </div>
     </div>
 
     <div class="form-group">
-      <label for="tenantPassword">Password</label>
+      <label for="unitNumber">Unit Number</label>
       <input
-        type="text"
-        formControlName="tenantPassword"
+        type="number"
+        formControlName="unitNumber"
         class="form-control"
-        id="tenantPassword"
-        [ngClass]="{ 'is-invalid': submitted && f.tenantPassword.errors }"
+        id="unitNumber"
+        [ngClass]="{ 'is-invalid': submitted && f.unitNumber.errors }"
       />
-      <div
-        *ngIf="submitted && f.tenantPassword.errors"
-        class="invalid-feedback"
-      >
-        <div *ngIf="f.tenantPassword.errors.required">Password is required</div>
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="tenantConfirmPassword">Confirm Password</label>
-      <input
-        type="text"
-        formControlName="tenantConfirmPassword"
-        class="form-control"
-        id="tenantConfirmPassword"
-        [ngClass]="{
-          'is-invalid': submitted && f.tenantConfirmPassword.errors
-        }"
-      />
-      <div
-        *ngIf="submitted && f.tenantConfirmPassword.errors"
-        class="invalid-feedback"
-      >
-        <div *ngIf="f.tenantConfirmPassword.errors.required">
-          Comfirm Password is required
-        </div>
-        <div *ngIf="f.tenantConfirmPassword.errors.confirmValidator">
-          Passwords do not match
+      <div *ngIf="submitted && f.unitNumber.errors" class="invalid-feedback">
+        <div *ngIf="f.unitNumber.errors.required">Unit number is required</div>
+        <div *ngIf="f.unitNumber.errors.min || f.unitNumber.errors.max">
+          Please enter a valid unit number
         </div>
       </div>
     </div>

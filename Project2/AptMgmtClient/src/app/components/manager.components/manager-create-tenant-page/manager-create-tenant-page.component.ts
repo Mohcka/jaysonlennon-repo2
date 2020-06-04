@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { TenantService } from 'src/app/services/tenant.service';
+import { Tenant } from 'src/app/model/tenant';
+import { first } from 'rxjs/operators';
+import { HttpErrorResponse } from '@angular/common/http';
+import { UnitService } from 'src/app/services/unit.service';
 
 @Component({
   selector: 'app-manager-create-tenant-page',
@@ -22,24 +27,20 @@ export class ManagerCreateTenantPageComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
+    private tenantService: TenantService,
+    private unitService: UnitService,
     private route: ActivatedRoute,
     private router: Router
   ) {}
 
   ngOnInit(): void {
-    this.tenantCreationForm = this.formBuilder.group(
-      {
-        tenantEmail: ['', Validators.required],
-        tenantPassword: ['', Validators.required],
-        tenantConfirmPassword: ['', Validators.required],
-      },
-      {
-        validators: this.confirmValidator(
-          'tenantPassword',
-          'tenantConfirmPassword'
-        ),
-      }
-    );
+    this.tenantCreationForm = this.formBuilder.group({
+      tenantEmail: ['', Validators.email],
+      unitNumber: [
+        '',
+        [Validators.required, Validators.min(101), Validators.max(999)],
+      ],
+    });
   }
 
   get f() {
@@ -52,6 +53,57 @@ export class ManagerCreateTenantPageComponent implements OnInit {
     if (this.tenantCreationForm.invalid) {
       return;
     }
+
+    // return;
+
+    const newTeanant: Tenant = {
+      tenantId: 0,
+      email: this.f.tenantEmail.value,
+      unitNumber: null,
+      phoneNumber: null,
+      firstName: null,
+      lastName: null,
+    };
+
+    // console.log(this.f.unitNumber.value);
+    // return;
+
+    this.tenantService
+      .updateTenant(newTeanant)
+      .pipe(first())
+      .toPromise()
+      .then(
+        (createdTenant) => {
+          this.addTenantsUnit(createdTenant.tenantId);
+        },
+        (error: HttpErrorResponse) => {
+          this.error =
+            error.error && error.error.message
+              ? error.error.message
+              : JSON.stringify(error);
+          this.loading = false;
+        }
+      );
+  }
+
+  private addTenantsUnit(tenantId: number): void {
+    this.unitService
+      .updateUnit({
+        unitId: 0,
+        unitNumber: this.f.unitNumber.value + '',
+        tenantId: tenantId,
+      })
+      .toPromise()
+      .then(
+        (_) => this.router.navigate(['/']),
+        (error: HttpErrorResponse) => {
+          this.error =
+            error.error && error.error.message
+              ? error.error.message
+              : JSON.stringify(error);
+          this.loading = false;
+        }
+      );
   }
 
   /**

@@ -27,6 +27,7 @@ const routes: Routes = [
   // Universal routes
   { path: 'hub', component: RouterHubComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'signup', component: TenantSignupPageComponent, },
   { path: '403', component: UnauthorizedAccessComponent },
   { path: 'maintenance', component: MaintenanceRequestsComponent,
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Admin, UserAccountType.Tenant, UserAccountType.Manager]}},
@@ -37,9 +38,6 @@ const routes: Routes = [
 
   // Tenants
   { path: 'tenant', component: TenantHomeComponent,
-    canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },
-
-  { path: 'tenant/signup', component: TenantSignupPageComponent,
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },
 
   { path: 'tenant/edit', component: TenantEditInfoComponent,
