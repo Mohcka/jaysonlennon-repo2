@@ -25,7 +25,7 @@ export class AgreementService {
 
   public signAgreement(data: Agreement): Observable<Agreement> {
     return this.http
-      .post<Agreement>(ApiBase.url() + 'Agreements', data, this.httpOptions)
+      .post<Agreement>(ApiBase.url() + 'Agreement', data, this.httpOptions)
       .pipe(catchError(handleError<null>('agreement.service(signAgreement)')));
   }
 

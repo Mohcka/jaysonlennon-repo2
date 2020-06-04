@@ -15,6 +15,9 @@ import { MaintenanceRequestFormComponent } from './components/universal.componen
 import { ManagerListTenantsComponent } from './components/manager.components/manager-list-tenants/manager-list-tenants.component';
 import { TenantPageListBillsComponent } from './components/tenant.components/tenant-page-list-bills/tenant-page-list-bills.component';
 import { TenantEditInfoComponent } from './components/tenant.components/tenant-edit-info/tenant-edit-info.component';
+import { AssignLeasePageComponent } from './components/manager.components/manager-assign-lease-page/assign-lease-page.component';
+import { ManagerCreateAgreementTempalteComponent } from './components/manager.components/manager-create-agreement-template/manager-create-agreement-template.component';
+import { LeaseAgreementsOageComponent } from './components/universal.components/lease-agreements-page/lease-agreements-page.component';
 
 // Define routes for the application
 const routes: Routes = [
@@ -22,6 +25,8 @@ const routes: Routes = [
   { path: 'hub', component: RouterHubComponent },
   { path: 'login', component: LoginComponent },
   { path: '403', component: UnauthorizedAccessComponent },
+  { path: 'agreements', component: LeaseAgreementsOageComponent,
+    canActivate: [AuthGuard], data: { roles: [UserAccountType.Admin, UserAccountType.Tenant, UserAccountType.Manager]}},
 
   // Tenants
   { path: 'tenant', component: TenantHomeComponent,
@@ -59,6 +64,12 @@ const routes: Routes = [
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Manager] } },
 
   { path: 'manager/maintenance/new', component: MaintenanceRequestFormComponent,
+    canActivate: [AuthGuard], data: { roles: [UserAccountType.Manager] } },
+
+  { path: 'manager/lease-agreement/assign', component: AssignLeasePageComponent,
+    canActivate: [AuthGuard], data: { roles: [UserAccountType.Manager] } },
+
+  { path: 'manager/lease-agreement/new-template', component: ManagerCreateAgreementTempalteComponent,
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Manager] } },
 ];
 

@@ -27,6 +27,9 @@ import { TenantPageBillPayComponent } from './components/tenant.components/tenan
 import { TenantPageListBillsComponent } from './components/tenant.components/tenant-page-list-bills/tenant-page-list-bills.component';
 import { TenantPageListAgreementsComponent } from './components/tenant.components/tenant-page-list-agreements/tenant-page-list-agreements.component';
 import { TenantEditInfoComponent } from './components/tenant.components/tenant-edit-info/tenant-edit-info.component';
+import { AssignLeasePageComponent } from './components/manager.components/manager-assign-lease-page/assign-lease-page.component';
+import { LeaseAgreementsOageComponent } from './components/universal.components/lease-agreements-page/lease-agreements-page.component';
+import { ManagerCreateAgreementTempalteComponent } from './components/manager.components/manager-create-agreement-template/manager-create-agreement-template.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +60,9 @@ import { TenantEditInfoComponent } from './components/tenant.components/tenant-e
     // Pipes
     ResourceEnumPipe,
     MaintenanceCloseReasonEnumPipe,
+    AssignLeasePageComponent,
+    LeaseAgreementsOageComponent,
+    ManagerCreateAgreementTempalteComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
