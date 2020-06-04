@@ -1,6 +1,6 @@
 <div *ngIf="!bill">Loading summary...</div>
 <div *ngIf="bill">
-  <h2>{{ bill.resource | resourceAsString }}</h2>
+  <h2>{{ bill.resource | resourceAsString }} usage summary</h2>
   <div>
     <hr />
     <table class="table">
@@ -44,6 +44,8 @@
     </div>
   </div>
 </div>
+
+<hr>
 
 <div *ngIf="!usageData || !usageSummary">Loading usage data...</div>
 <div *ngIf="usageSummary && usageData">
