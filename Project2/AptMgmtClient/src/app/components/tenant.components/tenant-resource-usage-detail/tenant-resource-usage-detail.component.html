@@ -1,0 +1,23 @@
+<p>tenant-resource-usage-detail works!</p>
+<div>
+  <div>usage summary</div>
+  <div>resource: {{usageSummary.resource | resourceAsString }}</div>
+  <div>billingPeriodStart: {{usageSummary.billingPeriodStart}}</div>
+  <div>billingPeriodEnd: {{usageSummary.billingPeriodEnd}}</div>
+  <div>actualUsage: {{usageSummary.actualUsage}}</div>
+  <div>projectedUsageTotal: {{usageSummary.projectedUsageTotal}}</div>
+  <div>daysRemainingInPeriod: {{usageSummary.daysRemainingInPeriod}}</div>
+  <div>averageDailyUsage: {{usageSummary.averageDailyUsage}}</div>
+  <div>rate: {{usageSummary.rate}}</div>
+  <div>currentCost: {{usageSummary.currentCost}}</div>
+  <div>projectedCost: {{usageSummary.projectedCost}}</div>
+</div>
+<div>
+  <p>usage data</p>
+  <div *ngFor="let entry of usageData">
+    <div>time: {{entry.sampleTime}}</div>
+    <div>usage: {{entry.usageAmount}}</div>
+    <hr>
+  </div>
+</div>
+<hr>

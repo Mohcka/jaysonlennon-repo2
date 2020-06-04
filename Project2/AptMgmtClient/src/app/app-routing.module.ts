@@ -1,3 +1,4 @@
+import { TenantPageViewResourceUsageComponent } from './components/tenant.components/tenant-page-view-resource-usage/tenant-page-view-resource-usage.component';
 import { TenantPageListAgreementsComponent } from './components/tenant.components/tenant-page-list-agreements/tenant-page-list-agreements.component';
 import { TenantPageBillPayComponent } from './components/tenant.components/tenant-page-bill-pay/tenant-page-bill-pay.component';
 import { UnauthorizedAccessComponent } from './components/universal.components/unauthorized-access/unauthorized-access.component';
@@ -46,6 +47,9 @@ const routes: Routes = [
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },
 
   { path: 'tenant/agreement/list', component: TenantPageListAgreementsComponent,
+    canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },
+
+  { path: 'tenant/resource/home', component: TenantPageViewResourceUsageComponent,
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },
 
   // Managers

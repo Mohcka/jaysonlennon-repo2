@@ -1,3 +1,4 @@
+import { TenantPageViewResourceUsageComponent } from './components/tenant.components/tenant-page-view-resource-usage/tenant-page-view-resource-usage.component';
 import { ManagerHomeComponent } from './components/manager.components/manager-home/manager-home.component';
 /// <reference types="node" />
 import { CommonModule } from '@angular/common';
@@ -27,6 +28,7 @@ import { TenantPageBillPayComponent } from './components/tenant.components/tenan
 import { TenantPageListBillsComponent } from './components/tenant.components/tenant-page-list-bills/tenant-page-list-bills.component';
 import { TenantPageListAgreementsComponent } from './components/tenant.components/tenant-page-list-agreements/tenant-page-list-agreements.component';
 import { TenantEditInfoComponent } from './components/tenant.components/tenant-edit-info/tenant-edit-info.component';
+import { TenantResourceUsageDetailComponent } from './components/tenant.components/tenant-resource-usage-detail/tenant-resource-usage-detail.component';
 
 @NgModule({
   declarations: [
@@ -43,12 +45,14 @@ import { TenantEditInfoComponent } from './components/tenant.components/tenant-e
     // Tenant components
     TenantHomeComponent,
     TenantDetailsComponent,
+    TenantResourceUsageDetailComponent,
 
     // Tenant pages
     TenantPageListBillsComponent,
     TenantPageListAgreementsComponent,
     TenantPageBillPayComponent,
     TenantEditInfoComponent,
+    TenantPageViewResourceUsageComponent,
 
     // Manager components
     ManagerHomeComponent,

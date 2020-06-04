@@ -1,0 +1,12 @@
+<h1>View resource usages</h1>
+
+<div *ngIf="!resourceUsageSummaries && !resourceUsageData">Loading resource data...</div>
+<div *ngIf="resourceUsageSummaries && resourceUsageData">
+  <div *ngFor="let summary of resourceUsageSummaries">
+    <div>{{summary.currentCost}}</div>
+    <app-tenant-resource-usage-detail
+      [usageSummary]="summary"
+      [usageData]="resourceUsageData[summary.resource]">
+    </app-tenant-resource-usage-detail>
+  </div>
+</div>
