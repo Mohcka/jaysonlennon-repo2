@@ -53,6 +53,17 @@ namespace TestAptMgmtPortal
             return user;
         }
 
+        public static AptMgmtPortalAPI.DTO.UserDTO NewUserDtoWithCredential(AptMgmtDbContext context)
+        {
+            var userDto = new AptMgmtPortalAPI.DTO.UserDTO 
+            {
+                FirstName = "original first name",
+                LoginName = "testUser",
+                Password = "testpassword"
+            };
+            return userDto;
+        }
+
         public static Unit NewUnit(AptMgmtDbContext context, string unitNumber)
         {
             var unit = new Unit();

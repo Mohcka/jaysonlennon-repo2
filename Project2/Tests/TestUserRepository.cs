@@ -34,7 +34,7 @@ namespace TestAptMgmtPortal
         }
 
         [Fact]
-        public async void EditsUserInfo()
+        public async void EditsUserInfoWithId()
         {
             var options = TestUtil.GetMemDbOptions("EditsUserInfo");
 
@@ -43,13 +43,7 @@ namespace TestAptMgmtPortal
             using (var db = new AptMgmtDbContext(options))
             {
                 var repo = (IUser)new UserRepository(mock.Object, db);
-                var userInfo = new AptMgmtPortalAPI.DTO.UserDTO
-                {
-                    FirstName = "original first name",
-                    LoginName = "testUser",
-                    Password = "password"
-                };
-
+                var userInfo = TestUtil.NewUserDtoWithCredential(db);
                 user = await repo.NewUser(userInfo);
             }
 
@@ -66,5 +60,60 @@ namespace TestAptMgmtPortal
                 Assert.Equal(newName, newInfo.FirstName);
             }
         }
+
+        [Fact]
+        public async void EditsUserInfo()
+        {
+            var options = TestUtil.GetMemDbOptions("EditsUserInfo");
+            var mock = new Mock<ILogger<UserRepository>>();
+            AptMgmtPortalAPI.Entity.User user;
+            using (var db = new AptMgmtDbContext(options))
+            {
+                var repo = (IUser)new UserRepository(mock.Object, db);
+                var userInfo = TestUtil.NewUserDtoWithCredential(db);
+                user = await repo.NewUser(userInfo);
+            }
+
+            using (var db = new AptMgmtDbContext(options))
+            {
+                var repo = (IUser)new UserRepository(mock.Object, db);
+                var newName = "new first name";
+                var userInfo = new AptMgmtPortalAPI.DTO.UserDTO
+                {
+                    UserId = user.UserId,
+                    FirstName = newName,
+                    LoginName = user.LoginName,
+                    Password = user.Password
+                };
+                var newInfo = await repo.UpdateUserInfo(userInfo);
+                Assert.Equal(newName, newInfo.FirstName);
+            }
+        }
+
+        [Fact]
+        public async void TestsLoginMethodInUserRepository()
+        {
+            var options = TestUtil.GetMemDbOptions("TestLoginMethod");
+            var mock = new Mock<ILogger<UserRepository>>();
+            AptMgmtPortalAPI.Entity.User user;
+            using (var db = new AptMgmtDbContext(options))
+            {
+                var repo = (IUser)new UserRepository(mock.Object, db);
+                var userInfo = TestUtil.NewUserDtoWithCredential(db);
+                user = await repo.NewUser(userInfo);
+            }
+            using (var db = new AptMgmtDbContext(options))
+            {
+                var repo = (IUser)new UserRepository(mock.Object, db);
+                var userLogin = new User {
+                    LoginName = "testuser",
+                    Password = "testpassword"
+                };
+                var checkLogin = await repo.Login(userLogin.LoginName, userLogin.Password);
+                Assert.Equal(user.LoginName, checkLogin.LoginName);
+                Assert.Equal(user.Password, checkLogin.Password);
+            }
+        }
+
     }
 }
