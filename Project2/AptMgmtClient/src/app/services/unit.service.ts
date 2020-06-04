@@ -32,7 +32,7 @@ export class UnitService {
   public updateUnit(tenant: Unit): Observable<Unit> {
     return this.http.post<Unit>(ApiBase.url() + 'Unit', tenant, this.httpOptions)
       .pipe(
-        catchError(handleError<Unit>('tenant.service(updateUnit)'))
+        // catchError(handleError<Unit>('tenant.service(updateUnit)'))
       );
   }
 }
