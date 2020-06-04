@@ -24,9 +24,9 @@ const routes: Routes = [
   // Universal routes
   { path: 'hub', component: RouterHubComponent },
   { path: 'login', component: LoginComponent },
+  { path: '403', component: UnauthorizedAccessComponent },
   { path: 'agreements', component: LeaseAgreementsOageComponent,
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Admin, UserAccountType.Tenant, UserAccountType.Manager]}},
-  { path: '403', component: UnauthorizedAccessComponent },
 
   // Tenants
   { path: 'tenant', component: TenantHomeComponent,
