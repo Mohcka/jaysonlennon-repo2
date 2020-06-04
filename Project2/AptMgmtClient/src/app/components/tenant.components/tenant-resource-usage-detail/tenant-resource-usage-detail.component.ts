@@ -44,8 +44,6 @@ export class TenantResourceUsageDetailComponent implements OnInit {
       secondSampleDate = this.usageData[0].sampleTime;
     }
 
-    this.chartData = this.usageData.map(e => [this.formatDate(e.sampleTime.toString()), e.usageAmount]);
-
     this.expandChartData(firstSampleDate, secondSampleDate);
   }
 
@@ -58,23 +56,38 @@ export class TenantResourceUsageDetailComponent implements OnInit {
 
   // Fills out the chart data until the end of the period.
   expandChartData(firstSampleDate: Date, lastSampleDate: Date) {
-    const paddedChartData: (string | number)[][] = [];
-
+    // TODO: this hurts
     const periodStart = new Date(this.usageSummary.billingPeriodStart.toString());
     const periodEnd = new Date(this.usageSummary.billingPeriodEnd.toString());
-    const daysRemaining = this.usageSummary.daysRemainingInPeriod;
 
-    let firstSampleDate2 = new Date(firstSampleDate.toString());
-    let way = firstSampleDate2.getTime() - periodStart.getTime();
-    const numDaysEnd = new Date(firstSampleDate.toString());
-
-    const lastSamplingDate = new Date(periodEnd);
-    lastSamplingDate.setDate(lastSamplingDate.getDate() - daysRemaining);
-
-    for (let i = 1; i <= daysRemaining; i++) {
-      const date = new Date(lastSamplingDate);
+    // Add empty entries prior to metered entries, if needed.
+    const firstSampleDateObj = new Date(firstSampleDate.toString());
+    let numEmptyStartDays = (firstSampleDateObj.getTime() - periodStart.getTime()) / 86400000;
+    if (numEmptyStartDays < 1) {
+      numEmptyStartDays = 0;
+    }
+    for (let i = 0; i < numEmptyStartDays; i++) {
+      const date = new Date(periodStart);
       date.setDate(date.getDate() + i);
+      this.chartData.push([this.formatDate(date.toString()), 0]);
+    }
 
+    // Add metered entries.
+    for (let i = 0; i < this.usageData.length; i++) {
+      const entry = this.usageData[i];
+      const formattedDate = this.formatDate(entry.sampleTime.toString());
+      this.chartData.push([formattedDate, entry.usageAmount]);
+    }
+
+    // Add empty entries after metered entries, if needed.
+    const lastSampleDateObj = new Date(lastSampleDate.toString());
+    let numEmptyEndDays = (periodEnd.getTime() - lastSampleDateObj.getTime()) / 86400000;
+    if (numEmptyEndDays < 1) {
+      numEmptyEndDays = 0;
+    }
+    for (let i = 1; i <= numEmptyEndDays; i++) {
+      const date = new Date(lastSampleDateObj);
+      date.setDate(date.getDate() + i);
       this.chartData.push([this.formatDate(date.toString()), 0]);
     }
   }
@@ -83,17 +96,21 @@ export class TenantResourceUsageDetailComponent implements OnInit {
     const options = {
       title: '',
       colors: [],
+      hAxis: {
+        title: 'Day of the month',
+        showTextEvery: 7
+      },
       legend: {
         position: 'none'
       },
     };
     switch (this.resourceType) {
       case Resource.Water:
-        options.title = 'Water Usage in cu.ft./day';
+        options.title = 'Water Usage in cubic feet';
         options.colors = ['blue'];
         break;
       case Resource.Power:
-        options.title = 'Power Usage in kWh/day';
+        options.title = 'Power Usage in kWh';
         options.colors = ['green'];
         break;
       default: break;

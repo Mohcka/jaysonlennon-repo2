@@ -1,12 +1,10 @@
 import { TenantPageViewResourceUsageComponent } from './components/tenant.components/tenant-page-view-resource-usage/tenant-page-view-resource-usage.component';
 import { ManagerHomeComponent } from './components/manager.components/manager-home/manager-home.component';
-/// <reference types="node" />
-import { CommonModule } from '@angular/common';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule, Provider } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { GoogleChartsModule } from 'angular-google-charts';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -67,6 +65,7 @@ import { TenantResourceUsageDetailComponent } from './components/tenant.componen
     HttpClientModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    GoogleChartsModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: ApiTokenInterceptor, multi: true },
