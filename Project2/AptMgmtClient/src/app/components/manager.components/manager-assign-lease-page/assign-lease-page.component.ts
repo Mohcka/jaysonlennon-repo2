@@ -86,7 +86,7 @@ export class AssignLeasePageComponent implements OnInit {
       });
   }
 
-  onSubmit(agreement: Agreement): void {
+  onSubmit(): void {
     // console.log(+this.f.tenantId.value);
     // console.log(+this.f.agreementTemplateId.value);
     // console.log(this.f.startDate.value);
@@ -103,7 +103,10 @@ export class AssignLeasePageComponent implements OnInit {
 
     this.agreementService
       .signAgreement({
-        ...agreement,
+        agreementId: 0,
+        title: null,
+        text: null,
+        signedDate: null,
         tenantId: +this.f.tenantId.value,
         agreementTemplateId: +this.f.agreementTemplateId.value,
         startDate: this.f.startDate.value,
