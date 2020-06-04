@@ -38,6 +38,7 @@ namespace AptMgmtPortalAPI.Repository
             tenant.PhoneNumber = info.PhoneNumber;
 
             _context.Add(tenant);
+            await _context.SaveChangesAsync();
 
             await AssignToUnit(tenant.TenantId, info.UnitNumber);
 
