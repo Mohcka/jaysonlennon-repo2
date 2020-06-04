@@ -28,7 +28,8 @@ namespace AptMgmtPortalAPI.Repository
                 .Join(_context.AgreementTemplates,
                       signedAgreements => signedAgreements.AgreementTemplateId,
                       templates => templates.AgreementTemplateId,
-                      (sa, ta) => new DataModel.Agreement {
+                      (sa, ta) => new DataModel.Agreement
+                      {
                           AgreementId = sa.AgreementId,
                           AgreementTemplateId = ta.AgreementTemplateId,
                           TenantId = sa.TenantId,
@@ -49,7 +50,8 @@ namespace AptMgmtPortalAPI.Repository
                 .Join(_context.AgreementTemplates,
                       signedAgreements => signedAgreements.AgreementTemplateId,
                       templates => templates.AgreementTemplateId,
-                      (sa, ta) => new DataModel.Agreement {
+                      (sa, ta) => new DataModel.Agreement
+                      {
                           AgreementId = sa.AgreementId,
                           AgreementTemplateId = ta.AgreementTemplateId,
                           TenantId = sa.TenantId,
@@ -74,7 +76,8 @@ namespace AptMgmtPortalAPI.Repository
                 .Join(_context.AgreementTemplates,
                       signedAgreements => signedAgreements.AgreementTemplateId,
                       templates => templates.AgreementTemplateId,
-                      (sa, ta) => new DataModel.Agreement {
+                      (sa, ta) => new DataModel.Agreement
+                      {
                           AgreementId = sa.AgreementId,
                           AgreementTemplateId = ta.AgreementTemplateId,
                           TenantId = sa.TenantId,
@@ -95,18 +98,27 @@ namespace AptMgmtPortalAPI.Repository
                 .Select(a => a)
                 .FirstOrDefaultAsync();
 
-            if (existingAgreement == null) {
+            if (existingAgreement == null)
+            {
                 await _context.AddAsync(updated);
                 await _context.SaveChangesAsync();
                 return updated;
-            } else {
+            }
+            else
+            {
+                Console.WriteLine($"updated start date = {updated.StartDate}");
                 existingAgreement.AgreementTemplateId = updated.AgreementTemplateId;
-                existingAgreement.StartDate = updated.StartDate;
-                existingAgreement.EndDate = updated.EndDate;
-                existingAgreement.SignedDate = existingAgreement.SignedDate;
-                existingAgreement.TenantId = existingAgreement.TenantId;
+                if (updated.StartDate != null) existingAgreement.StartDate = updated.StartDate;
+                if (updated.EndDate != null) existingAgreement.EndDate = updated.EndDate;
+                if (updated.SignedDate != null) existingAgreement.SignedDate = updated.SignedDate;
+                existingAgreement.TenantId = updated.TenantId;
+
                 await _context.SaveChangesAsync();
-                return existingAgreement;
+
+                return await _context.Agreements
+                    .Where(a => a.AgreementId == updated.AgreementId)
+                    .Select(a => a)
+                    .FirstOrDefaultAsync();
             }
 
         }
