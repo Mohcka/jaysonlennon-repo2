@@ -77,11 +77,25 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                 userInfo.UserId = thisUserId;
 
                 var updatedUser = await _userRepository.UpdateUserInfo(userInfo);
+                if (updatedUser == null) {
+                    var err = new DTO.ErrorBuilder()
+                                    .Message("User already exists with that login information or user not found.")
+                                    .Code(409)
+                                    .Build();
+                    return err;
+                }
                 return new ObjectResult(updatedUser);
             }
             else if (this.UserInRole(Role.Manager) || this.UserInRole(Role.Admin))
             {
                 var updatedUser = await _userRepository.UpdateUserInfo(userInfo);
+                if (updatedUser == null) {
+                    var err = new DTO.ErrorBuilder()
+                                    .Message("User already exists with that login information or user not found.")
+                                    .Code(409)
+                                    .Build();
+                    return err;
+                }
                 return new ObjectResult(updatedUser);
             }
             else
@@ -91,7 +105,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                 if (newUser == null)
                 {
                     var err = new DTO.ErrorBuilder()
-                                    .Message("Unable to create account, tenant information not found.")
+                                    .Message("Unable to create account, tenant information not found or already exists.")
                                     .Code(404)
                                     .Build();
                     return err;

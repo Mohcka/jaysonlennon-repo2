@@ -42,6 +42,12 @@ namespace AptMgmtPortalAPI.Repository
 
         public async Task<Entity.User> NewUser(DTO.UserDTO userInfo)
         {
+            var loginAlreadyExists = await _context.Users
+                .Where(u => u.LoginName.ToLower() == userInfo.LoginName.ToLower())
+                .CountAsync() > 0;
+
+            if (loginAlreadyExists) return null;
+
             if (userInfo == null) return null;
             if (String.IsNullOrEmpty(userInfo.Password)) return null;
             if (String.IsNullOrEmpty(userInfo.LoginName)) return null;
@@ -72,6 +78,13 @@ namespace AptMgmtPortalAPI.Repository
 
         public async Task<Entity.User> UpdateUserInfo(int userId, DTO.UserDTO userInfo)
         {
+            var loginAlreadyExists = await _context.Users
+                .Where(u => u.LoginName.ToLower() == userInfo.LoginName.ToLower())
+                .Where(u => u.UserId != userId)
+                .CountAsync() > 0;
+
+            if (loginAlreadyExists) return null;
+
             var user = await UserFromId(userId);
             if (user == null) return null;
 
@@ -79,7 +92,7 @@ namespace AptMgmtPortalAPI.Repository
             user.LastName = userInfo.LastName;
             user.LoginName = userInfo.LoginName;
             user.Password = Util.Hash.Sha256(userInfo.Password);
-            user.ApiKey = userInfo.ApiKey;
+            if (!String.IsNullOrEmpty(userInfo.ApiKey)) user.ApiKey = userInfo.ApiKey;
 
             await _context.SaveChangesAsync();
 
