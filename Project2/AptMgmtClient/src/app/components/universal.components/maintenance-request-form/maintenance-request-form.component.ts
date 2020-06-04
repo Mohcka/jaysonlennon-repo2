@@ -7,6 +7,7 @@ import { TenantService } from 'src/app/services/tenant.service';
 import { Tenant } from 'src/app/model/tenant';
 import { ResourcesStrArr } from 'src/enums/Resource';
 import { MaintenanceRequestData } from 'src/app/model/maintenance-request-data';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-maintenance-request-form',
@@ -100,12 +101,18 @@ export class MaintenanceRequestFormComponent implements OnInit {
       };
     }
 
-    this.maintenanceService
-      .createNewRequest(maintenanceRequestData)
-      .subscribe((_) =>
+    this.maintenanceService.createNewRequest(maintenanceRequestData).subscribe(
+      (_) =>
         this.router.navigate([
           `/${this.isManager ? 'manager' : 'tenant'}/maintenance/list`,
-        ])
-      );
+        ]),
+      (error: HttpErrorResponse) => {
+        this.error =
+          error.error && error.error.message
+            ? error.error.message
+            : JSON.stringify(error);
+        this.loading = false;
+      }
+    );
   }
 }

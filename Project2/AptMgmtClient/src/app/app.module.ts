@@ -32,6 +32,9 @@ import { TenantEditInfoComponent } from './components/tenant.components/tenant-e
 import { AssignLeasePageComponent } from './components/manager.components/manager-assign-lease-page/assign-lease-page.component';
 import { LeaseAgreementsOageComponent } from './components/universal.components/lease-agreements-page/lease-agreements-page.component';
 import { ManagerCreateAgreementTempalteComponent } from './components/manager.components/manager-create-agreement-template/manager-create-agreement-template.component';
+import { ManagerCreateTenantPageComponent } from './components/manager.components/manager-create-tenant-page/manager-create-tenant-page.component';
+import { TenantSignupPageComponent } from './components/tenant.components/tenant-signup-page/tenant-signup-page.component';
+import { AppIndexComponent } from './components/universal.components/app-index/app-index.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +47,7 @@ import { ManagerCreateAgreementTempalteComponent } from './components/manager.co
     LoginComponent,
     RouterHubComponent,
     UnauthorizedAccessComponent,
+    AppIndexComponent,
 
     // Tenant components
     TenantHomeComponent,
@@ -56,6 +60,7 @@ import { ManagerCreateAgreementTempalteComponent } from './components/manager.co
     TenantPageBillPayComponent,
     TenantEditInfoComponent,
     TenantPageViewResourceUsageComponent,
+    TenantSignupPageComponent,
 
     // Manager components
     ManagerHomeComponent,
@@ -63,10 +68,11 @@ import { ManagerCreateAgreementTempalteComponent } from './components/manager.co
     AssignLeasePageComponent,
     LeaseAgreementsOageComponent,
     ManagerCreateAgreementTempalteComponent,
+    ManagerCreateTenantPageComponent,
 
     // Pipes
     ResourceEnumPipe,
-    MaintenanceCloseReasonEnumPipe
+    MaintenanceCloseReasonEnumPipe,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

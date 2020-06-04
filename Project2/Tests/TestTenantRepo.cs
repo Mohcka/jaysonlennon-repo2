@@ -107,6 +107,7 @@ namespace TestAptMgmtPortal
             {
                 var repo = (ITenant)new TenantRepository(db);
                 var tenantInfo = new AptMgmtPortalAPI.DTO.TenantInfoDTO();
+                tenantInfo.Email = "testDtoemail@test.com";
                 tenantInfo.FirstName = "original first name";
                 tenant = await repo.AddTenant(tenantInfo);
             }
@@ -118,6 +119,7 @@ namespace TestAptMgmtPortal
                 var newName = "new first name";
 
                 var tenantInfo = new AptMgmtPortalAPI.DTO.TenantInfoDTO();
+                tenantInfo.Email = "testDtoemail@test.com";
                 tenantInfo.FirstName = newName;
 
                 var newInfo = await repo.UpdateTenantInfo(tenant.TenantId, tenantInfo);
@@ -434,6 +436,178 @@ namespace TestAptMgmtPortal
 
                 var signed2 = signedAgreements.Where(a => a.AgreementTemplateId == agreement2.AgreementTemplateId).FirstOrDefault();
                 Assert.Equal("test-agreement2", signed2.Title);
+            }
+        }
+
+        [Fact]
+        public async void GetsAllTenants()
+        {
+            var options = TestUtil.GetMemDbOptions("GetsAllTenants");
+            var count = 0;
+            using (var db = new AptMgmtDbContext(options))
+            {
+                var repo = (ITenant)new TenantRepository(db);
+                var tenant = TestUtil.NewTenant(db);
+                var tenants = await repo.GetTenants();
+                count = tenants.Count();
+            }
+            using (var db = new AptMgmtDbContext(options))
+            {
+                ITenant repo = (ITenant)new TenantRepository(db);
+                var getTenants = await repo.GetTenants();
+                var tenantCount = getTenants.Count();
+                Assert.Equal(tenantCount,count);
+            }
+        }
+
+        [Fact]
+        public async void DeleteUnit()
+        {
+            var options = TestUtil.GetMemDbOptions("DeleteUnit");
+            Unit unit = new Unit();
+            using (var db = new AptMgmtDbContext(options))
+            {
+                unit = TestUtil.NewUnit(db);
+            }
+            using (var db = new AptMgmtDbContext(options))
+            {
+                var repo = (ITenant)new TenantRepository(db);
+                var unitDel = await repo.DeleteUnit(unit.TenantId ?? default);
+                Assert.True(unitDel);
+            }
+        }
+
+        [Fact]
+        public async void UpdateUnit()
+        {
+            var options = TestUtil.GetMemDbOptions("UpdateUnit");
+            Unit unit = new Unit();
+            using (var db = new AptMgmtDbContext(options))
+            {
+                unit = TestUtil.NewUnit(db);
+                var tenant = TestUtil.NewTenant(db);
+                unit.TenantId = tenant.TenantId;
+                var repo = (ITenant)new TenantRepository(db);
+                var updateUnit = await repo.UpdateUnit(unit);
+
+            }
+            using (var db = new AptMgmtDbContext(options))
+            {
+                var repo = (ITenant)new TenantRepository(db);
+                var unitUpdate = await repo.UnitFromTenantId(unit.TenantId ?? default);
+                Assert.Equal(unitUpdate.TenantId, unit.TenantId);
+            }
+        }
+
+        [Fact]
+        public async void FindTenentWithFirstName()
+        {
+            var options = TestUtil.GetMemDbOptions("FindTenantWithFirstName");
+            Tenant tenant;
+            var firstName = "";
+            using (var db = new AptMgmtDbContext(options))
+            {
+                tenant = TestUtil.NewTenant(db);             
+            }
+            using (var db = new AptMgmtDbContext(options))
+            {
+                var repo = (ITenant)new TenantRepository(db);
+                var getTenant = await repo.FindTenantWithFirstName(tenant.FirstName);
+                firstName = getTenant
+                    .Where(t => t.FirstName == tenant.FirstName)
+                    .Select(t => t.FirstName)
+                    .FirstOrDefault();
+                Assert.Equal(firstName, tenant.FirstName);
+            }
+        }
+
+        [Fact]
+        public async void TenantFromId()
+        {
+            var options = TestUtil.GetMemDbOptions("TenantFromId");
+            Tenant tenant;
+            Tenant tenantFromId;
+            using (var db = new AptMgmtDbContext(options))
+            {
+                tenant = TestUtil.NewTenant(db);
+                var repo = (ITenant)new TenantRepository(db);
+                tenantFromId = await repo.TenantFromId(tenant.TenantId);
+            }
+            using (var db = new AptMgmtDbContext(options))
+            {
+                var repo = (ITenant)new TenantRepository(db);
+                var getTenant = await repo.GetTenants();
+                var getTenantFromId = getTenant.Where(t => t.TenantId == tenantFromId.TenantId).FirstOrDefault();
+                Assert.Equal(getTenantFromId.TenantId, tenantFromId.TenantId);
+            }
+        }
+
+        [Fact]
+        public async void TenantFromUserId()
+        {
+            var options = TestUtil.GetMemDbOptions("TenantFromUserId");
+            Tenant tenant;
+            using (var db = new AptMgmtDbContext(options))
+            {
+                tenant = TestUtil.NewTenant(db);
+            }
+            using (var db = new AptMgmtDbContext(options))
+            {
+                var repo = (ITenant)new TenantRepository(db);
+                var getTenant = await repo.TenantFromUserId(tenant.UserId ?? default);
+                Assert.Equal(tenant.UserId, getTenant.UserId);
+            }
+        }
+
+        [Fact]
+        public async void TenantIdFromUserId()
+        {
+            var options = TestUtil.GetMemDbOptions("TenantIdFromUserId");
+            Tenant tenant;
+            int? tenantId = 0;
+            using (var db = new AptMgmtDbContext(options))
+            {
+                tenant = TestUtil.NewTenant(db);
+            }
+            using (var db = new AptMgmtDbContext(options))
+            {
+                var repo = (ITenant)new TenantRepository(db);
+                tenantId = await repo.TenantIdFromUserId(tenant.UserId ?? default);
+                Assert.Equal(tenantId,tenant.TenantId);
+            }
+        }
+
+        [Fact]
+        public async void GetUnitById()
+        {
+            var options = TestUtil.GetMemDbOptions("UnitFromId");
+            Unit unit;
+            using (var db = new AptMgmtDbContext(options))
+            {
+                unit = TestUtil.NewUnit(db);
+            }
+            using (var db = new AptMgmtDbContext(options))
+            {
+                var repo = (ITenant)new TenantRepository(db);
+                var unitById = await repo.GetUnit(unit.UnitId);
+                Assert.Equal(unitById.UnitId, unit.UnitId);
+            }
+        }
+
+        [Fact]
+        public async void QueryUnitByNumber()
+        {
+            var options = TestUtil.GetMemDbOptions("UnitByNumber");
+            Unit unit;
+            using (var db = new AptMgmtDbContext(options))
+            {
+                unit = TestUtil.NewUnit(db);
+            }
+            using (var db = new AptMgmtDbContext(options))
+            {
+                var repo = (ITenant)new TenantRepository(db);
+                var unitByNumber = await repo.QueryUnitByNumber(unit.UnitNumber);
+                Assert.Equal(unitByNumber.UnitNumber, unit.UnitNumber);
             }
         }
     }

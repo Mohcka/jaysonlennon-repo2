@@ -29,9 +29,23 @@ namespace TestAptMgmtPortal
         public static Tenant NewTenant(AptMgmtDbContext context)
         {
             var tenant = new Tenant();
+            tenant.FirstName = "testFirstName";
+            tenant.Email = "newtestemail@test.com";
+            tenant.UserId = TestUtil.NewUser(context).UserId;
             context.Add(tenant);
             context.SaveChanges();
             return tenant;
+        }
+
+        public static Unit NewUnit(AptMgmtDbContext context) 
+        {
+            
+            var unit = new Unit();
+            unit.UnitNumber = "3111";
+            unit.TenantId = TestUtil.NewTenant(context).TenantId;
+            context.Add(unit);
+            context.SaveChanges();
+            return unit;
         }
 
         public static User NewUserWithAnAPIKey(AptMgmtDbContext context)
@@ -62,6 +76,21 @@ namespace TestAptMgmtPortal
                 Password = "testpassword"
             };
             return userDto;
+        }
+
+        public static (AptMgmtPortalAPI.DTO.UserDTO, Tenant) UserInfoAndTenantForUserRepo(AptMgmtDbContext context) 
+        {
+            var userInfo = TestUtil.NewUserDtoWithCredential(context);
+            var tenant = new Tenant
+            {
+                Email = "testUser",
+                UserId = userInfo.UserId,
+                FirstName = "original first name",
+            };
+            context.Add(tenant);
+            context.SaveChanges();
+            return (userInfo,tenant);
+
         }
 
         public static Unit NewUnit(AptMgmtDbContext context, string unitNumber)

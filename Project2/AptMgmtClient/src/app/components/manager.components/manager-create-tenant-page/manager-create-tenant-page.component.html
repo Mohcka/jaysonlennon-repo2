@@ -1,0 +1,66 @@
+<div>
+  <h2>Add new Tenant</h2>
+  <form [formGroup]="tenantCreationForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="tenantEmail">Tenant's email</label>
+      <input
+        type="text"
+        formControlName="tenantEmail"
+        class="form-control"
+        id="tenantEmail"
+        [ngClass]="{ 'is-invalid': submitted && f.tenantEmail.errors }"
+      />
+      <div *ngIf="submitted && f.tenantEmail.errors" class="invalid-feedback">
+        <div *ngIf="f.tenantEmail.errors.required">An email is required</div>
+        <div *ngIf="f.tenantEmail.errors.email">
+          Please enter a valid email adress
+        </div>
+      </div>
+    </div>
+
+    <!--
+    <div class="form-group">
+      <label for="unitNumber">Unit Number</label>
+      <input
+        type="number"
+        formControlName="unitNumber"
+        class="form-control"
+        id="unitNumber"
+        [ngClass]="{ 'is-invalid': submitted && f.unitNumber.errors }"
+      />
+      <div *ngIf="submitted && f.unitNumber.errors" class="invalid-feedback">
+        <div *ngIf="f.unitNumber.errors.required">Unit number is required</div>
+        <div *ngIf="f.unitNumber.errors.min || f.unitNumber.errors.max">
+          Please enter a valid unit number
+        </div>
+      </div>
+    </div>
+  -->
+
+    <div class="form-group">
+      <label for="unitNumber">Unit Number</label>
+      <select
+        id="unitNumber"
+        formControlName="unitNumber"
+        class="custom-select"
+        [disabled]="!emptyUnits"
+      >
+        <option value="" selected>-- Unit Number --</option>
+        <option *ngFor="let unit of emptyUnits" value="{{ unit.unitNumber }}">
+          {{ unit.unitNumber }}
+        </option>
+      </select>
+      <div *ngIf="submitted && f.unitNumber.errors" class="invalid-feedback">
+        Please select a unit number
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button [disabled]="loading" class="btn btn-primary">
+        Create Tenant
+      </button>
+      <div *ngIf="loading">Processing...</div>
+    </div>
+    <div *ngIf="error" class="alert-danger">{{ error }}</div>
+  </form>
+</div>

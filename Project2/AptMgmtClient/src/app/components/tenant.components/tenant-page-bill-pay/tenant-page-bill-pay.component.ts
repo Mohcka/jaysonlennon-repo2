@@ -8,6 +8,7 @@ import { TenantService } from 'src/app/services/tenant.service';
 import { Tenant } from 'src/app/model/tenant';
 import { ResourceUsageProjection } from 'src/app/model/resource-usage-projection';
 import { MeteredResouceUsageEntry } from 'src/app/model/metered-resource-usage-entry';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-tenant-page-bill-pay',
@@ -15,7 +16,6 @@ import { MeteredResouceUsageEntry } from 'src/app/model/metered-resource-usage-e
   styleUrls: ['./tenant-page-bill-pay.component.css']
 })
 export class TenantPageBillPayComponent implements OnInit {
-
   public bill: Bill;
   public tenant: Tenant;
 
@@ -23,6 +23,7 @@ export class TenantPageBillPayComponent implements OnInit {
   usageData: MeteredResouceUsageEntry[];
   unitName: string;
   hasDetails = false;
+  error: string = '';
 
   constructor(private billService: BillService,
               private tenantService: TenantService,
@@ -84,7 +85,12 @@ export class TenantPageBillPayComponent implements OnInit {
         billingPeriodId: billingPeriodId,
         amount: amount,
       })
-      .subscribe((_) => this.getBill());
+      .subscribe((_) => this.getBill(), (error: HttpErrorResponse) => {
+        this.error =
+          error.error && error.error.message
+            ? error.error.message
+            : JSON.stringify(error);
+      });
   }
 
 }

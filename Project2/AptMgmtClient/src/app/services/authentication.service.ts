@@ -69,6 +69,11 @@ export class AuthenticationService {
     );
   }
 
+  public loginFromAccountCreation(user: User): void {
+    localStorage.setItem('currentUser', JSON.stringify(user));
+    this.currentUserSubject.next(user);
+  }
+
   /**
    * Logs user out
    */
@@ -79,6 +84,7 @@ export class AuthenticationService {
   }
 
   public getHomeRoute(): string {
+    if (this.currentUserValue === null) { return '/'; }
     switch (this.currentUserValue.userAccountType) {
       case UserAccountType.Admin: return '/manager';
       case UserAccountType.Manager: return '/manager';
