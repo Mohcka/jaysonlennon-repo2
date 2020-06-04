@@ -1,9 +1,11 @@
+import { TenantService } from 'src/app/services/tenant.service';
 import { Component, OnInit } from '@angular/core';
 import { MaintenanceService } from 'src/app/services/maintenance.service';
 import { MaintenanceRequest } from 'src/app/model/maintenance-request';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import { MaintenanceRequestData } from 'src/app/model/maintenance-request-data';
 import { MaintenanceRequestUpdate } from 'src/app/model/maintenance-update';
+import { Tenant } from 'src/app/model/tenant';
 
 @Component({
   selector: 'app-maintenance-requests',
@@ -12,13 +14,21 @@ import { MaintenanceRequestUpdate } from 'src/app/model/maintenance-update';
 })
 export class MaintenanceRequestsComponent implements OnInit {
   public maintenanceRequests: MaintenanceRequest[];
+  tenant: Tenant;
+
   constructor(
     private maintenanceService: MaintenanceService,
-    public authService: AuthenticationService
+    public authService: AuthenticationService,
+    public tenantService: TenantService
   ) {}
 
   ngOnInit() {
     this.getAllRequests();
+    this.getTenant();
+  }
+
+  getTenant(): void {
+    this.tenantService.getTenant().subscribe(t => this.tenant = t);
   }
 
   get isManager(): boolean {

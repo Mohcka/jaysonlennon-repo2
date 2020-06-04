@@ -1,6 +1,6 @@
 <div *ngIf="maintenanceRequests">
-  <h2 *ngIf="isTenant">
-    {{ authService.currentUserValue.loginName }}'s Mainteance Requests
+  <h2 *ngIf="isTenant && tenant">
+    {{ tenant.firstName }}'s Maintenance Requests
   </h2>
   <h2 *ngIf="isManager">Maintenance Requests</h2>
   <a
