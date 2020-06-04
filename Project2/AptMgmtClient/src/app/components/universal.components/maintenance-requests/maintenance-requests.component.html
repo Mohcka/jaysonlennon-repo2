@@ -14,18 +14,16 @@
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">Request#</th>
-        <th scope="col">Handle</th>
+        <th scope="col">Category</th>
         <th scope="col">Requester</th>
         <th scope="col">Unit Number</th>
         <th scope="col">Time Created</th>
         <th scope="col">Status</th>
-        <th scope="col">Reason</th>
+        <th scope="col">Notes</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let request of maintenanceRequests">
-        <th scope="row">{{ request.maintenanceRequestId }}</th>
         <td>{{ request.maintenanceRequestType }}</td>
         <td>{{ request.openedBy }}</td>
         <td>{{ request.unitNumber }}</td>
