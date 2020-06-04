@@ -91,7 +91,7 @@ namespace TestAptMgmtPortal
         }
 
         [Fact]
-        public async void TestsLoginMethodInUserRepository()
+        public async void Login()
         {
             var options = TestUtil.GetMemDbOptions("TestLoginMethod");
             var mock = new Mock<ILogger<UserRepository>>();

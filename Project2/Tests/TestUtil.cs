@@ -29,9 +29,22 @@ namespace TestAptMgmtPortal
         public static Tenant NewTenant(AptMgmtDbContext context)
         {
             var tenant = new Tenant();
+            tenant.FirstName = "testFirstName";
+            tenant.UserId = TestUtil.NewUser(context).UserId;
             context.Add(tenant);
             context.SaveChanges();
             return tenant;
+        }
+
+        public static Unit NewUnit(AptMgmtDbContext context) 
+        {
+            
+            var unit = new Unit();
+            unit.UnitNumber = "111";
+            unit.TenantId = TestUtil.NewTenant(context).TenantId;
+            context.Add(unit);
+            context.SaveChanges();
+            return unit;
         }
 
         public static User NewUserWithAnAPIKey(AptMgmtDbContext context)
