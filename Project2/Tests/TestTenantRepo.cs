@@ -107,6 +107,7 @@ namespace TestAptMgmtPortal
             {
                 var repo = (ITenant)new TenantRepository(db);
                 var tenantInfo = new AptMgmtPortalAPI.DTO.TenantInfoDTO();
+                tenantInfo.Email = "testDtoemail@test.com";
                 tenantInfo.FirstName = "original first name";
                 tenant = await repo.AddTenant(tenantInfo);
             }
@@ -118,6 +119,7 @@ namespace TestAptMgmtPortal
                 var newName = "new first name";
 
                 var tenantInfo = new AptMgmtPortalAPI.DTO.TenantInfoDTO();
+                tenantInfo.Email = "testDtoemail@test.com";
                 tenantInfo.FirstName = newName;
 
                 var newInfo = await repo.UpdateTenantInfo(tenant.TenantId, tenantInfo);
@@ -459,7 +461,7 @@ namespace TestAptMgmtPortal
         }
 
         [Fact]
-        public async void TestsDeleteUnitMethod()
+        public async void DeleteUnit()
         {
             var options = TestUtil.GetMemDbOptions("DeleteUnit");
             Unit unit = new Unit();

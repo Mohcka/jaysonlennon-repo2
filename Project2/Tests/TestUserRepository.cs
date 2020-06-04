@@ -44,6 +44,15 @@ namespace TestAptMgmtPortal
             {
                 var repo = (IUser)new UserRepository(mock.Object, db);
                 var userInfo = TestUtil.NewUserDtoWithCredential(db);
+                var tenant = new Tenant
+                {
+                    Email = "testUser",
+                    UserId = userInfo.UserId,
+                    FirstName = "original first name",
+                };
+                db.Add(tenant);
+                db.SaveChanges();
+
                 user = await repo.NewUser(userInfo);
             }
 
@@ -51,11 +60,10 @@ namespace TestAptMgmtPortal
             {
                 var repo = (IUser)new UserRepository(mock.Object, db);
                 var newName = "new first name";
-                var userInfo = new AptMgmtPortalAPI.DTO.UserDTO { 
-                    FirstName = newName,
-                    LoginName = user.LoginName,
-                    Password = user.Password
-                };
+                var userInfo = new AptMgmtPortalAPI.DTO.UserDTO();
+                userInfo.FirstName = newName;
+                userInfo.LoginName = user.LoginName;
+                userInfo.Password = user.Password;
                 var newInfo = await repo.UpdateUserInfo(user.UserId, userInfo);
                 Assert.Equal(newName, newInfo.FirstName);
             }
@@ -70,8 +78,8 @@ namespace TestAptMgmtPortal
             using (var db = new AptMgmtDbContext(options))
             {
                 var repo = (IUser)new UserRepository(mock.Object, db);
-                var userInfo = TestUtil.NewUserDtoWithCredential(db);
-                user = await repo.NewUser(userInfo);
+                var userInfoandTenant = TestUtil.UserInfoAndTenantForUserRepo(db);
+                user = await repo.NewUser(userInfo: userInfoandTenant.Item1);
             }
 
             using (var db = new AptMgmtDbContext(options))
@@ -99,8 +107,8 @@ namespace TestAptMgmtPortal
             using (var db = new AptMgmtDbContext(options))
             {
                 var repo = (IUser)new UserRepository(mock.Object, db);
-                var userInfo = TestUtil.NewUserDtoWithCredential(db);
-                user = await repo.NewUser(userInfo);
+                var userInfoandTenant = TestUtil.UserInfoAndTenantForUserRepo(db);
+                user = await repo.NewUser(userInfo: userInfoandTenant.Item1);
             }
             using (var db = new AptMgmtDbContext(options))
             {
