@@ -1,11 +1,13 @@
+import { TenantResourceUsageDetailComponent } from './components/tenant.components/tenant-resource-usage-detail/tenant-resource-usage-detail.component';
+import { TenantPageViewResourceUsageComponent } from './components/tenant.components/tenant-page-view-resource-usage/tenant-page-view-resource-usage.component';
 import { ManagerHomeComponent } from './components/manager.components/manager-home/manager-home.component';
 /// <reference types="node" />
-import { CommonModule } from '@angular/common';
+import { GoogleChartsModule } from 'angular-google-charts';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule, Provider } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { CommonModule, DecimalPipe } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -46,12 +48,14 @@ import { ManagerCreateAgreementTempalteComponent } from './components/manager.co
     // Tenant components
     TenantHomeComponent,
     TenantDetailsComponent,
+    TenantResourceUsageDetailComponent,
 
     // Tenant pages
     TenantPageListBillsComponent,
     TenantPageListAgreementsComponent,
     TenantPageBillPayComponent,
     TenantEditInfoComponent,
+    TenantPageViewResourceUsageComponent,
 
     // Manager components
     ManagerHomeComponent,
@@ -62,17 +66,18 @@ import { ManagerCreateAgreementTempalteComponent } from './components/manager.co
 
     // Pipes
     ResourceEnumPipe,
-    MaintenanceCloseReasonEnumPipe,
+    MaintenanceCloseReasonEnumPipe
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    GoogleChartsModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: ApiTokenInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
   ],
   bootstrap: [AppComponent],
 })
