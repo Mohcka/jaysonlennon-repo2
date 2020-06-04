@@ -1,5 +1,5 @@
 export interface AgreementTemplate {
-    agreementTemplateId: number | null;
+    agreementTemplateId?: number | null;
     title: string;
     text: string;
 }

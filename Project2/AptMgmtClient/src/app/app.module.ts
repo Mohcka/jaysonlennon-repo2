@@ -1,10 +1,11 @@
-import { TenantPageViewResourceUsageComponent } from './components/tenant.components/tenant-page-view-resource-usage/tenant-page-view-resource-usage.component';
 import { ManagerHomeComponent } from './components/manager.components/manager-home/manager-home.component';
+/// <reference types="node" />
+import { CommonModule } from '@angular/common';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule, Provider } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { GoogleChartsModule } from 'angular-google-charts';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,7 +27,9 @@ import { TenantPageBillPayComponent } from './components/tenant.components/tenan
 import { TenantPageListBillsComponent } from './components/tenant.components/tenant-page-list-bills/tenant-page-list-bills.component';
 import { TenantPageListAgreementsComponent } from './components/tenant.components/tenant-page-list-agreements/tenant-page-list-agreements.component';
 import { TenantEditInfoComponent } from './components/tenant.components/tenant-edit-info/tenant-edit-info.component';
-import { TenantResourceUsageDetailComponent } from './components/tenant.components/tenant-resource-usage-detail/tenant-resource-usage-detail.component';
+import { AssignLeasePageComponent } from './components/manager.components/manager-assign-lease-page/assign-lease-page.component';
+import { LeaseAgreementsOageComponent } from './components/universal.components/lease-agreements-page/lease-agreements-page.component';
+import { ManagerCreateAgreementTempalteComponent } from './components/manager.components/manager-create-agreement-template/manager-create-agreement-template.component';
 
 @NgModule({
   declarations: [
@@ -43,18 +46,19 @@ import { TenantResourceUsageDetailComponent } from './components/tenant.componen
     // Tenant components
     TenantHomeComponent,
     TenantDetailsComponent,
-    TenantResourceUsageDetailComponent,
 
     // Tenant pages
     TenantPageListBillsComponent,
     TenantPageListAgreementsComponent,
     TenantPageBillPayComponent,
     TenantEditInfoComponent,
-    TenantPageViewResourceUsageComponent,
 
     // Manager components
     ManagerHomeComponent,
     ManagerListTenantsComponent,
+    AssignLeasePageComponent,
+    LeaseAgreementsOageComponent,
+    ManagerCreateAgreementTempalteComponent,
 
     // Pipes
     ResourceEnumPipe,
@@ -65,7 +69,6 @@ import { TenantResourceUsageDetailComponent } from './components/tenant.componen
     HttpClientModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    GoogleChartsModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: ApiTokenInterceptor, multi: true },

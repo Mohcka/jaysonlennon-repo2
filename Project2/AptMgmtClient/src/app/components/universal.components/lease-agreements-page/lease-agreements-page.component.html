@@ -1,0 +1,35 @@
+<table class="table">
+  <thead>
+    <th scope="col">Agreement#</th>
+    <th scope="col">Title</th>
+    <th scope="col">Start Date</th>
+    <th scope="col">End Date</th>
+    <th scope="col">Signed Date</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let agreement of agreements">
+      <th scope="row">{{ agreement.agreementId }}</th>
+      <td>{{ agreement.title }}</td>
+      <td>{{ agreement.startDate | date }}</td>
+      <td>{{ agreement.endDate | date }}</td>
+      <td>
+        <span *ngIf="agreement.signedDate">{{
+          agreement.signedDate | date
+        }}</span>
+        <span *ngIf="!agreement.signedDate">Not Signed</span>
+      </td>
+      <td>
+        <button
+          *ngIf="!agreement.signedDate"
+          class="btn btn-primary"
+          (click)="signAgreement(agreement)"
+        >
+          Sign
+        </button>
+        <button *ngIf="agreement.signedDate" class="btn btn-secondary" disabled>
+          Signed
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
