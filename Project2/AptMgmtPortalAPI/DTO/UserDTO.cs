@@ -9,6 +9,7 @@ namespace AptMgmtPortalAPI.DTO {
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Password { get; set; }
+        public string ApiKey { get; set; }
         public UserDTO() { }
         public UserDTO(Entity.User user) {
             this.UserId = user.UserId;
@@ -16,6 +17,7 @@ namespace AptMgmtPortalAPI.DTO {
             this.LoginName = user.LoginName;
             this.FirstName = user.FirstName;
             this.LastName = user.LastName;
+            this.ApiKey = user.ApiKey;
         }
     }
 }

@@ -161,11 +161,25 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                 info.UnitNumber = unitNumber.UnitNumber;
 
                 var tenant = await _tenantRepository.UpdateTenantInfo((int)tenantId, info);
+                if (tenant == null) {
+                    var err = new DTO.ErrorBuilder()
+                                    .Message("Tenant already exists with that login information.")
+                                    .Code(409)
+                                    .Build();
+                    return err;
+                }
                 return new ObjectResult(tenant);
             }
             else if (this.UserInRole(Role.Manager) || this.UserInRole(Role.Admin))
             {
                 var tenant = await _tenantRepository.UpdateTenantInfo(info.TenantId, info);
+                if (tenant == null) {
+                    var err = new DTO.ErrorBuilder()
+                                    .Message("Tenant already exists with that login information.")
+                                    .Code(409)
+                                    .Build();
+                    return err;
+                }
                 return new ObjectResult(tenant);
             }
             else

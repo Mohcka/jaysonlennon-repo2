@@ -23,6 +23,12 @@ namespace AptMgmtPortalAPI.Repository
 
         public async Task<DTO.TenantInfoDTO> AddTenant(DTO.TenantInfoDTO info)
         {
+            var emailAlreadyExists = await _context.Tenants
+                .Where(t => t.Email.ToLower() == info.Email.ToLower())
+                .CountAsync() > 0;
+
+            if (emailAlreadyExists) return null;
+
             if (info == null) return null;
 
             var tenant = new Tenant();
@@ -84,6 +90,13 @@ namespace AptMgmtPortalAPI.Repository
 
         public async Task<DTO.TenantInfoDTO> UpdateTenantInfo(int tenantId, DTO.TenantInfoDTO newInfo)
         {
+            var emailAlreadyExists = await _context.Tenants
+                .Where(t => t.Email.ToLower() == newInfo.Email.ToLower())
+                .Where(t => t.TenantId != tenantId)
+                .CountAsync() > 0;
+            
+            if (emailAlreadyExists) return null;
+
             var tenant = await TenantFromId(tenantId);
 
             if (tenant == null) return await AddTenant(newInfo);
