@@ -7,6 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Agreement } from 'src/app/model/agreement';
 import { Tenant } from 'src/app/model/tenant';
 import { AgreementTemplate } from 'src/app/model/agreement-template';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-assign-lease-page',
@@ -113,9 +114,18 @@ export class AssignLeasePageComponent implements OnInit {
         endDate: this.f.endDate.value,
       })
       .toPromise()
-      .then((_) => {
-        this.router.navigate([this.authService.getHomeRoute()]);
-      });
+      .then(
+        (_) => {
+          this.router.navigate([this.authService.getHomeRoute()]);
+        },
+        (error: HttpErrorResponse) => {
+          this.error =
+            error.error && error.error.message
+              ? error.error.message
+              : JSON.stringify(error);
+          this.loading = false;
+        }
+      );
   }
 
   /**

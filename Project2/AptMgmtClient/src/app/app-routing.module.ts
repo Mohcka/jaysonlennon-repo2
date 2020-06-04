@@ -19,12 +19,15 @@ import { TenantEditInfoComponent } from './components/tenant.components/tenant-e
 import { AssignLeasePageComponent } from './components/manager.components/manager-assign-lease-page/assign-lease-page.component';
 import { ManagerCreateAgreementTempalteComponent } from './components/manager.components/manager-create-agreement-template/manager-create-agreement-template.component';
 import { LeaseAgreementsOageComponent } from './components/universal.components/lease-agreements-page/lease-agreements-page.component';
+import { ManagerCreateTenantPageComponent } from './components/manager.components/manager-create-tenant-page/manager-create-tenant-page.component';
+import { TenantSignupPageComponent } from './components/tenant.components/tenant-signup-page/tenant-signup-page.component';
 
 // Define routes for the application
 const routes: Routes = [
   // Universal routes
   { path: 'hub', component: RouterHubComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'signup', component: TenantSignupPageComponent, },
   { path: '403', component: UnauthorizedAccessComponent },
   { path: 'maintenance', component: MaintenanceRequestsComponent,
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Admin, UserAccountType.Tenant, UserAccountType.Manager]}},
@@ -66,6 +69,9 @@ const routes: Routes = [
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Manager] } },
 
   { path: 'manager/tenants/list', component: ManagerListTenantsComponent,
+    canActivate: [AuthGuard], data: { roles: [UserAccountType.Manager] } },
+
+  { path: 'manager/tenants/create', component: ManagerCreateTenantPageComponent,
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Manager] } },
 
   { path: 'manager/maintenance/list', component: MaintenanceRequestsComponent,
