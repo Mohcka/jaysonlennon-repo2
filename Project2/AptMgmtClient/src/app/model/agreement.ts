@@ -5,6 +5,6 @@ export interface Agreement {
   title: string;
   text: string;
   signedDate: Date | null;
-  startDate: Date;
-  endDate: Date;
+  startDate: Date | null;
+  endDate: Date | null;
 }

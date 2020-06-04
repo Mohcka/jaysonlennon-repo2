@@ -15,9 +15,9 @@ namespace AptMgmtPortalAPI.Entity
         public DateTime? SignedDate { get; set; }
 
         [Column(TypeName="NVARCHAR(48)")]
-        public DateTime StartDate { get; set; }
+        public DateTime? StartDate { get; set; }
 
         [Column(TypeName="NVARCHAR(48)")]
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
     }
 }
