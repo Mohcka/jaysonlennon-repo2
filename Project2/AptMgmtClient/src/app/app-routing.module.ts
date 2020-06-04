@@ -26,6 +26,10 @@ const routes: Routes = [
   { path: 'hub', component: RouterHubComponent },
   { path: 'login', component: LoginComponent },
   { path: '403', component: UnauthorizedAccessComponent },
+  { path: 'maintenance', component: MaintenanceRequestsComponent,
+    canActivate: [AuthGuard], data: { roles: [UserAccountType.Admin, UserAccountType.Tenant, UserAccountType.Manager]}},
+  { path: 'agreements', component: LeaseAgreementsOageComponent,
+    canActivate: [AuthGuard], data: { roles: [UserAccountType.Admin, UserAccountType.Tenant, UserAccountType.Manager]}},
   { path: 'agreements', component: LeaseAgreementsOageComponent,
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Admin, UserAccountType.Tenant, UserAccountType.Manager]}},
 
