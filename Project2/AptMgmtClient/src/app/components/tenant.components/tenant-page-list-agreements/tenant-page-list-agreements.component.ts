@@ -27,7 +27,27 @@ export class TenantPageListAgreementsComponent implements OnInit {
   }
 
   getAgreements(): void {
-    this.agreementService.getAgreements().subscribe(agreements => this.agreements = agreements);
+    this.agreementService.getAgreements().subscribe(agreements => {
+      this.agreements = agreements;
+      this.agreements.sort((a, b) => {
+        if (a.title < b.title) { return -1; }
+        if (a.title > b.title) { return 1; }
+        return 0;
+      });
+    });
   }
 
+  signAgreement(agreement: Agreement): void {
+    console.log(new Date().toISOString());
+    this.agreementService
+      .signAgreement({
+        ...agreement,
+        signedDate: new Date().toISOString(),
+      })
+      .toPromise()
+      .then(
+        (_) => this.getAgreements(),
+        (err) => console.error(err)
+      );
+  }
 }
