@@ -7,7 +7,6 @@ import { Tenant } from 'src/app/model/tenant';
 @Component({
   selector: 'app-manager-page-list-agreements',
   templateUrl: './manager-page-list-agreements.component.html',
-  styleUrls: ['./manager-page-list-agreements.component.css']
 })
 export class ManagerPageListAgreementsComponent implements OnInit {
 

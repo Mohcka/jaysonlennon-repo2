@@ -25,25 +25,25 @@ export abstract class GenericRest<T> {
   public getOne(id: number): Observable<T> {
     return this.http
       .get<T>(`${this.apiUrl}/${id}`)
-      .pipe(catchError(handleError<T>('GenericRest: getOne', undefined)));
+      .pipe(catchError(handleError<T>('GenericRest: getOne')));
   }
 
   public get(): Observable<T> {
     return this.http
       .get<T>(`${this.apiUrl}`)
-      .pipe(catchError(handleError<T>('GenericRest: get', undefined)));
+      .pipe(catchError(handleError<T>('GenericRest: get')));
   }
 
   public update(data: any): Observable<any> {
     return this.http
       .put(this.apiUrl, data, this.httpOptions)
-      .pipe(catchError(handleError<any>('GenericRest: update', undefined)));
+      .pipe(catchError(handleError<any>('GenericRest: update')));
   }
 
   public add(entity: T): Observable<T> {
     return this.http
       .post<T>(this.apiUrl, entity, this.httpOptions)
-      .pipe(catchError(handleError<T>('GenericRest: add', undefined)));
+      .pipe(catchError(handleError<T>('GenericRest: add')));
   }
 
   /**
@@ -56,6 +56,6 @@ export abstract class GenericRest<T> {
 
     return this.http
       .delete<T>(url, this.httpOptions)
-      .pipe(catchError(handleError<T>('GenericRest: delete', undefined)));
+      .pipe(catchError(handleError<T>('GenericRest: delete')));
   }
 }

@@ -1,7 +1,4 @@
 <div *ngIf="maintenanceRequests">
-  <h2 *ngIf="isTenant && tenant">
-    {{ tenant.firstName }}'s Maintenance Requests
-  </h2>
   <h2 *ngIf="isManager">Maintenance Requests</h2>
   <a
     class="btn btn-primary"
@@ -12,6 +9,9 @@
     Create New Request
   </a>
   <table class="table">
+    <caption *ngIf="isTenant && tenant">
+      {{ tenant.firstName }}'s Maintenance Requests
+    </caption>
     <thead>
       <tr>
         <th scope="col">Category</th>

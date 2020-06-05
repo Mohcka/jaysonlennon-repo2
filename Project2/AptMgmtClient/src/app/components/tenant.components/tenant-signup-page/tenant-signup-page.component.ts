@@ -4,8 +4,6 @@ import {
   FormGroup,
   FormBuilder,
   Validators,
-  ValidatorFn,
-  AbstractControl,
 } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
@@ -14,12 +12,10 @@ import { TenantService } from 'src/app/services/tenant.service';
 import { UserAccountType } from 'src/enums/user-account-type';
 import { first } from 'rxjs/operators';
 import { HttpErrorResponse } from '@angular/common/http';
-import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-tenant-signup-page',
   templateUrl: './tenant-signup-page.component.html',
-  styleUrls: ['./tenant-signup-page.component.css'],
 })
 export class TenantSignupPageComponent implements OnInit {
   public tenantCreationForm: FormGroup;

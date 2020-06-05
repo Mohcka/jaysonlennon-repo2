@@ -1,9 +1,9 @@
 import { MeteredResouceUsageEntry } from './../model/metered-resource-usage-entry';
 import { ResourceUsageProjection } from './../model/resource-usage-projection';
 import { Injectable } from '@angular/core';
-import { HttpHeaders, HttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { catchError, map } from 'rxjs/operators';
+import { catchError } from 'rxjs/operators';
 import { handleError } from 'src/utils/error-handling';
 import { ApiBase } from 'src/ApiBase';
 import { Resource } from 'src/enums/Resource';

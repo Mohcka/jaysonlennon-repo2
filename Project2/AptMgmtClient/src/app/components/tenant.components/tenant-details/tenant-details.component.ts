@@ -7,7 +7,6 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-tenant-details',
   templateUrl: './tenant-details.component.html',
-  styleUrls: ['./tenant-details.component.css'],
 })
 export class TenantDetailsComponent implements OnInit {
   public targetTenant: Tenant = undefined;

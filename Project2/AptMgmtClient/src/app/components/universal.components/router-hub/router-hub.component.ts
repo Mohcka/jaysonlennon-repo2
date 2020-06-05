@@ -5,7 +5,6 @@ import { User } from 'src/app/model/user';
 @Component({
   selector: 'app-router-hub',
   templateUrl: './router-hub.component.html',
-  styleUrls: ['./router-hub.component.css']
 })
 export class RouterHubComponent implements OnInit {
 

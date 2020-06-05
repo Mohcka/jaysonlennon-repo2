@@ -13,7 +13,6 @@ import { HttpErrorResponse } from '@angular/common/http';
 @Component({
   selector: 'app-tenant-page-bill-pay',
   templateUrl: './tenant-page-bill-pay.component.html',
-  styleUrls: ['./tenant-page-bill-pay.component.css']
 })
 export class TenantPageBillPayComponent implements OnInit {
   public bill: Bill;

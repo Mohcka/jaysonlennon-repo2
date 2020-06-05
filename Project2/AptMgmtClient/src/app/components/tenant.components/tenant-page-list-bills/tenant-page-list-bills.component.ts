@@ -9,7 +9,6 @@ import { TenantService } from 'src/app/services/tenant.service';
 @Component({
   selector: 'app-tenant-page-list-bills',
   templateUrl: './tenant-page-list-bills.component.html',
-  styleUrls: ['./tenant-page-list-bills.component.css']
 })
 export class TenantPageListBillsComponent implements OnInit {
 

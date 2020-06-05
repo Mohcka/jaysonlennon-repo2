@@ -6,7 +6,6 @@ import { Agreement } from 'src/app/model/agreement';
 @Component({
   selector: 'app-lease-agreement-text',
   templateUrl: './lease-agreement-text.component.html',
-  styleUrls: ['./lease-agreement-text.component.css']
 })
 export class LeaseAgreementTextComponent implements OnInit {
 

@@ -1,6 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { GenericRest } from './generic-rest.service';
 import { ApiBase } from '../../ApiBase';
 import { MaintenanceRequestData } from '../model/maintenance-request-data';
 import { Observable } from 'rxjs';

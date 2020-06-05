@@ -12,7 +12,6 @@ import { UnitService } from 'src/app/services/unit.service';
 @Component({
   selector: 'app-manager-create-tenant-page',
   templateUrl: './manager-create-tenant-page.component.html',
-  styleUrls: ['./manager-create-tenant-page.component.css'],
 })
 export class ManagerCreateTenantPageComponent implements OnInit {
   public tenantCreationForm: FormGroup;
