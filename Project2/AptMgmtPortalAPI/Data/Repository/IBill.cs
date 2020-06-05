@@ -1,3 +1,4 @@
+using System;
 using AptMgmtPortalAPI.Entity;
 using AptMgmtPortalAPI.Types;
 using System.Collections.Generic;
@@ -37,8 +38,8 @@ namespace AptMgmtPortalAPI.Repository
 
         Task<IEnumerable<ResourceUsageRate>> GetResourceUsageRates(BillingPeriod period);
 
-        Task<IEnumerable<DataModel.ProjectedResourceUsage>> GetProjectedResourceUsages(int tenantId, BillingPeriod period);
-        Task<DataModel.ProjectedResourceUsage> GetProjectedResourceUsage(int tenantId, ResourceType resource, BillingPeriod period);
+        Task<IEnumerable<DataModel.ProjectedResourceUsage>> GetProjectedResourceUsages(int tenantId, BillingPeriod period, DateTime now);
+        Task<DataModel.ProjectedResourceUsage> GetProjectedResourceUsage(int tenantId, ResourceType resource, BillingPeriod period, DateTime now);
         Task<IEnumerable<DataModel.MeteredResourceEntry>> GetDailyResourceUsage(int tenantId, ResourceType resource, BillingPeriod period);
         Task<IEnumerable<DataModel.MeteredResourceEntry>> GetDailyResourceUsage(int tenantId, BillingPeriod period);
     }
