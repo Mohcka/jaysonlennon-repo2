@@ -1,32 +1,43 @@
 <div *ngIf="!agreements && !tenant">Loading agreements...</div>
 <div *ngIf="agreements && tenant" class="offset-2">
   <table class="table">
-    <caption>{{tenant.firstName}}'s Agreements</caption>
+    <caption>
+      {{
+        tenant.firstName
+      }}'s Agreements
+    </caption>
     <thead>
       <tr>
         <th scope="col">Title</th>
-        <th scope="col">Signed Date</th>
         <th scope="col">Effective Date</th>
         <th scope="col">End Date</th>
+        <th scope="col">Signed Date</th>
         <th scope="col"></th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let agreement of agreements">
         <td>{{ agreement.title }}</td>
-        <td>
-          <span *ngIf="agreement.signedDate">{{
-            agreement.signedDate | date
-          }}</span>
-          <span *ngIf="!agreement.signedDate">Not Signed</span>
-        </td>
         <td>{{ agreement.startDate | date }}</td>
         <td>{{ agreement.endDate | date }}</td>
         <td>
+          <span *ngIf="agreement.signedDate">
+            {{ agreement.signedDate | date }}
+          </span>
+          <span *ngIf="!agreement.signedDate">Not Signed</span>
+        </td>
+        <td>
           <div class="button-container">
             <div>
-              <a [routerLink]="['/tenant/agreement/detail', agreement.agreementId]"
-                  class="btn btn-primary">View</a>
+              <a
+                [routerLink]="[
+                  '/tenant/agreement/detail',
+                  agreement.agreementId
+                ]"
+                class="btn btn-primary"
+              >
+                View
+              </a>
             </div>
             <button
               *ngIf="!agreement.signedDate"
@@ -35,7 +46,11 @@
             >
               Sign
             </button>
-            <button *ngIf="agreement.signedDate" class="btn btn-secondary" disabled>
+            <button
+              *ngIf="agreement.signedDate"
+              class="btn btn-secondary"
+              disabled
+            >
               Signed
             </button>
           </div>
