@@ -41,6 +41,10 @@ export class NavMenuComponent implements OnInit {
     );
   }
 
+  leaseAgreementsPage(): string {
+    return `${this.authenticationService.getHomeRoute()}/agreement/list`;
+  }
+
   collapse() {
     this.isExpanded = false;
   }

@@ -30,11 +30,12 @@ import { TenantPageListBillsComponent } from './components/tenant.components/ten
 import { TenantPageListAgreementsComponent } from './components/tenant.components/tenant-page-list-agreements/tenant-page-list-agreements.component';
 import { TenantEditInfoComponent } from './components/tenant.components/tenant-edit-info/tenant-edit-info.component';
 import { AssignLeasePageComponent } from './components/manager.components/manager-assign-lease-page/assign-lease-page.component';
-import { LeaseAgreementsOageComponent } from './components/universal.components/lease-agreements-page/lease-agreements-page.component';
 import { ManagerCreateAgreementTempalteComponent } from './components/manager.components/manager-create-agreement-template/manager-create-agreement-template.component';
 import { ManagerCreateTenantPageComponent } from './components/manager.components/manager-create-tenant-page/manager-create-tenant-page.component';
 import { TenantSignupPageComponent } from './components/tenant.components/tenant-signup-page/tenant-signup-page.component';
 import { AppIndexComponent } from './components/universal.components/app-index/app-index.component';
+import { LeaseAgreementTextComponent } from './components/universal.components/lease-agreement-text/lease-agreement-text.component';
+import { ManagerPageListAgreementsComponent } from './components/manager.components/manager-page-list-agreements/manager-page-list-agreements.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { AppIndexComponent } from './components/universal.components/app-index/a
     RouterHubComponent,
     UnauthorizedAccessComponent,
     AppIndexComponent,
+    LeaseAgreementTextComponent,
 
     // Tenant components
     TenantHomeComponent,
@@ -66,9 +68,9 @@ import { AppIndexComponent } from './components/universal.components/app-index/a
     ManagerHomeComponent,
     ManagerListTenantsComponent,
     AssignLeasePageComponent,
-    LeaseAgreementsOageComponent,
     ManagerCreateAgreementTempalteComponent,
     ManagerCreateTenantPageComponent,
+    ManagerPageListAgreementsComponent,
 
     // Pipes
     ResourceEnumPipe,

@@ -50,117 +50,117 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                         {
                             AgreementId = 1,
                             AgreementTemplateId = 1,
-                            EndDate = "2020-07-04 12:28:48.540557",
-                            SignedDate = "2020-03-06 12:28:48.5326159",
-                            StartDate = "2020-03-06 12:28:48.5326159",
+                            EndDate = "2020-07-04 16:08:57.0739822",
+                            SignedDate = "2020-03-06 16:08:57.0665499",
+                            StartDate = "2020-03-06 16:08:57.0665499",
                             TenantId = 1
                         },
                         new
                         {
                             AgreementId = 2,
                             AgreementTemplateId = 2,
-                            EndDate = "2020-07-04 12:28:48.5406602",
-                            SignedDate = "2019-12-07 12:28:48.5326159",
-                            StartDate = "2019-12-07 12:28:48.5326159",
+                            EndDate = "2020-07-04 16:08:57.0740818",
+                            SignedDate = "2019-12-07 16:08:57.0665499",
+                            StartDate = "2019-12-07 16:08:57.0665499",
                             TenantId = 2
                         },
                         new
                         {
                             AgreementId = 3,
                             AgreementTemplateId = 3,
-                            EndDate = "2020-07-04 12:28:48.5406634",
-                            SignedDate = "2019-06-10 12:28:48.5326159",
-                            StartDate = "2019-06-10 12:28:48.5326159",
+                            EndDate = "2020-07-04 16:08:57.0740847",
+                            SignedDate = "2019-06-10 16:08:57.0665499",
+                            StartDate = "2019-06-10 16:08:57.0665499",
                             TenantId = 3
                         },
                         new
                         {
                             AgreementId = 4,
                             AgreementTemplateId = 1,
-                            EndDate = "2020-07-04 12:28:48.5406638",
-                            SignedDate = "2020-03-06 12:28:48.5326159",
-                            StartDate = "2020-03-06 12:28:48.5326159",
+                            EndDate = "2020-07-04 16:08:57.0740853",
+                            SignedDate = "2020-03-06 16:08:57.0665499",
+                            StartDate = "2020-03-06 16:08:57.0665499",
                             TenantId = 4
                         },
                         new
                         {
                             AgreementId = 5,
                             AgreementTemplateId = 2,
-                            EndDate = "2020-07-04 12:28:48.5406641",
-                            SignedDate = "2019-12-07 12:28:48.5326159",
-                            StartDate = "2019-12-07 12:28:48.5326159",
+                            EndDate = "2020-07-04 16:08:57.0740857",
+                            SignedDate = "2019-12-07 16:08:57.0665499",
+                            StartDate = "2019-12-07 16:08:57.0665499",
                             TenantId = 5
                         },
                         new
                         {
                             AgreementId = 6,
                             AgreementTemplateId = 3,
-                            EndDate = "2020-07-04 12:28:48.5406646",
-                            SignedDate = "2019-06-10 12:28:48.5326159",
-                            StartDate = "2019-06-10 12:28:48.5326159",
+                            EndDate = "2020-07-04 16:08:57.0740861",
+                            SignedDate = "2019-06-10 16:08:57.0665499",
+                            StartDate = "2019-06-10 16:08:57.0665499",
                             TenantId = 6
                         },
                         new
                         {
                             AgreementId = 7,
                             AgreementTemplateId = 1,
-                            EndDate = "2020-07-04 12:28:48.540665",
-                            SignedDate = "2020-03-06 12:28:48.5326159",
-                            StartDate = "2020-03-06 12:28:48.5326159",
+                            EndDate = "2020-07-04 16:08:57.0740865",
+                            SignedDate = "2020-03-06 16:08:57.0665499",
+                            StartDate = "2020-03-06 16:08:57.0665499",
                             TenantId = 7
                         },
                         new
                         {
                             AgreementId = 8,
                             AgreementTemplateId = 2,
-                            EndDate = "2020-07-04 12:28:48.5406653",
-                            SignedDate = "2019-12-07 12:28:48.5326159",
-                            StartDate = "2019-12-07 12:28:48.5326159",
+                            EndDate = "2020-07-04 16:08:57.0740869",
+                            SignedDate = "2019-12-07 16:08:57.0665499",
+                            StartDate = "2019-12-07 16:08:57.0665499",
                             TenantId = 8
                         },
                         new
                         {
                             AgreementId = 9,
                             AgreementTemplateId = 3,
-                            EndDate = "2020-07-04 12:28:48.5406656",
-                            SignedDate = "2019-06-10 12:28:48.5326159",
-                            StartDate = "2019-06-10 12:28:48.5326159",
+                            EndDate = "2020-07-04 16:08:57.0740873",
+                            SignedDate = "2019-06-10 16:08:57.0665499",
+                            StartDate = "2019-06-10 16:08:57.0665499",
                             TenantId = 9
                         },
                         new
                         {
                             AgreementId = 10,
                             AgreementTemplateId = 1,
-                            EndDate = "2020-07-04 12:28:48.5406658",
-                            SignedDate = "2020-03-06 12:28:48.5326159",
-                            StartDate = "2020-03-06 12:28:48.5326159",
+                            EndDate = "2020-07-04 16:08:57.0740878",
+                            SignedDate = "2020-03-06 16:08:57.0665499",
+                            StartDate = "2020-03-06 16:08:57.0665499",
                             TenantId = 10
                         },
                         new
                         {
                             AgreementId = 11,
                             AgreementTemplateId = 1,
-                            EndDate = "2020-07-04 12:28:48.5406661",
-                            SignedDate = "2020-03-06 12:28:48.5326159",
-                            StartDate = "2020-03-06 12:28:48.5326159",
+                            EndDate = "2020-07-04 16:08:57.0740881",
+                            SignedDate = "2020-03-06 16:08:57.0665499",
+                            StartDate = "2020-03-06 16:08:57.0665499",
                             TenantId = 11
                         },
                         new
                         {
                             AgreementId = 12,
                             AgreementTemplateId = 2,
-                            EndDate = "2020-07-04 12:28:48.5406664",
-                            SignedDate = "2020-03-06 12:28:48.5326159",
-                            StartDate = "2020-03-06 12:28:48.5326159",
+                            EndDate = "2020-07-04 16:08:57.0740884",
+                            SignedDate = "2020-03-06 16:08:57.0665499",
+                            StartDate = "2020-03-06 16:08:57.0665499",
                             TenantId = 11
                         },
                         new
                         {
                             AgreementId = 13,
                             AgreementTemplateId = 3,
-                            EndDate = "2020-07-04 12:28:48.5406667",
-                            SignedDate = "2020-03-06 12:28:48.5326159",
-                            StartDate = "2020-03-06 12:28:48.5326159",
+                            EndDate = "2020-07-04 16:08:57.0740886",
+                            SignedDate = "2020-03-06 16:08:57.0665499",
+                            StartDate = "2020-03-06 16:08:57.0665499",
                             TenantId = 11
                         });
                 });
@@ -188,32 +188,59 @@ namespace AptMgmtPortalAPI.Migrations.SqlServerMigrations
                             AgreementTemplateId = 1,
                             Text = @"
 1. PROPERTY: TENANT agrees to rent from LANDLORD and LANDLORD agrees to rent to TENANT, City of Loose Coupling, State of Texas (the PREMISES).
+
 2. USE OF THE PREMISES: The TENANT may use the PREMISES only as a single-family residence.
+
 3. UTILITIES: The TENANT will pay for the following utilities: Water and Sewer, Electricity, Garbage Removal, Gas, Oil.
+
 4. EVICTION: If the TENANT does not pay the rent within 30 days of the date when it is due, the TENANT may be evicted. The LANDLORD may also evict the TENANT if the TENANT does not comply with all of the terms of this Lease, or for any other causes allowed by law. If evicted, the TENANT must continue to pay the rent for the rest of the term. The TENANT must also pay all costs, including reasonable attorney fees, related to the eviction and the collection of any monies owed to the LANDLORD, along with the cost of re-entering, re-renting, cleaning and repairing the PREMISES. Rent received from any new tenant during the remaining term of this lease will be applied by the LANDLORD to reduce rent only, which may be owed by the TENANT. 
+
 5. PAYMENTS BY LANDLORD: If the TENANT fails to comply with the terms of this Lease, the LANDLORD may take any required action and charge the cost, including reasonable attorney fees, to the TENANT. Failure to pay such costs upon demand is a violation of this Lease.
+
 6. CARE OF THE PREMISES: The TENANT has examined the PREMISES, including (where applicable) the living quarters, all facilities, furniture and appliances, and is satisfied with its present physical condition. The TENANT agrees to maintain the PREMISES in as good condition as it is at the start of this Lease except for ordinary wear and tear. The TENANT must pay for all repairs, replacements, and damages, whether or not caused by the act or neglect of the TENANT. The TENANT will remove all of the TENANT's property at the end of this Lease. Any property that is left becomes the property of the LANDLORD and may be thrown out. All of TENANT'S garbage will be disposed of properly by TENANT in the appropriate receptacles for garbage collection. Accumulations of garbage in and around the PREMISES or depositing by TENANT or those residing with TENANT of garbage in areas not designated and designed as garbage receptacles shall constitute a violation of this lease. TENANT shall generally maintain the PREMISES in a neat and orderly condition. Damage or destruction by TENANT, TENANT's employees or TENANT's visitors of the PREMISES shall constitute a violation of this Lease.
+
 7. DESTRUCTION OF PREMISES: If the PREMISES are destroyed through no fault of the TENANT, the TENANT's employees or TENANT's visitors, then the Lease will end, and the TENANT will pay rent up to the date of destruction.
+
 8. INTERRUPTION OF SERVICES: The LANDLORD is not responsible for any inconvenience or interruption of services due to repairs, improvements or for any reason beyond the LANDLORD’s control.
+
 9. ALTERATIONS: The TENANT must get the LANDLORD's prior written consent to alter, improve, paint or wallpaper the PREMISES. Alterations, additions, and improvements become the LANDLORD's property.
+
 10. COMPLIANCE WITH LAWS: The TENANT must comply with laws, orders, rules, and requirements of governmental authorities and insurance companies which have issued or are about to issue policies covering the PREMISES and/or its contents.
+
 11. NO WAIVER BY LANDLORD: The LANDLORD does not give up or waive any rights by accepting rent or by failing to enforce any terms of this Lease.
+
 12. NO ASSIGNMENT OR SUBLEASE: The TENANT may not sublease the PREMISES or assign this Lease without the LANDLORD's prior written consent.
+
 13. ENTRY BY LANDLORD: Upon reasonable notice, the LANDLORD may enter the PREMISES to provide services, inspect, repair, improve or show it. The TENANT must notify the LANDLORD if the TENANT is away for 14 days or more. In case of an emergency or the TENANT's absence, the LANDLORD may enter the PREMISES without the TENANT's consent. 
+
 14. QUIET ENJOYMENT: The TENANT may live in and use the PREMISES without interference subject to the terms of this Lease.
+
 15. SUBORDINATION: This Lease and the TENANT's rights are subject and subordinate to present and future mortgages on the property which include the PREMISES. The LANDLORD may execute any papers on the TENANT's behalf as the TENANT's attorney in fact to accomplish this.
+
 16. HAZARDOUS USE: The TENANT will not keep anything in the PREMISES which is dangerous, flammable, explosive or which might increase the danger of fire or any other hazard, or which would increase LANDLORD's fire or hazard insurance.
+
 17. INJURY OR DAMAGE: The TENANT will be responsible for any injury or damage caused by the act or neglect of the TENANT, the TENANT's employees or TENANT's visitors. The LANDLORD is not responsible for any injury or damage unless due to the negligence or improper conduct of the LANDLORD.
+
 18. RENEWALS AND CHANGES IN LEASE: Upon expiration of the rental term provided for above, this lease shall automatically renew itself, indefinitely, for successive one-month periods, unless modified by the parties. The LANDLORD may modify this lease or offer the TENANT a new lease by forwarding to the TENANT a copy of the proposed changes or a copy of the new lease. If changes in this lease or a new lease are offered, the TENANT must notify the LANDLORD of the TENANT's decision to stay within thirty (30) days of the date the proposed changes or the copy of the new lease is received by the TENANT. If the TENANT fails to accept the lease changes or the new lease within thirty (30) days of the date the proposed changes or new lease is offered, the TENANT may be evicted by the LANDLORD, as provided for in State law. Nevertheless, if the rent is increased by the lease changes or new lease, the TENANT will be obligated to pay the new rent, regardless of whether the TENANT has affirmatively accepted the lease changes or new lease, if the TENANT continues to occupy the property on the date the new rent becomes effective.
+
 19. PETS: No dogs, cats, or other animals are allowed on the PREMISES without the LANDLORD's prior written consent.
+
 20. NOTICES: All notices provided by this Lease must be written and delivered personally or by certified mail, return receipt requested, to the parties at their addresses listed above, or to such other address as the parties may from time to time designate. Notices to the LANDLORD must also be sent to the LANDLORD's agent listed above (if any).
+
 21. SIGNS: The TENANT may not put any sign or projection (such as a T.V. or radio antenna) in or out of the windows or exteriors of the PREMISES without the LANDLORD's prior written consent.
+
 22. HOLDOVER RENT: Should this Lease be terminated, either through a valid notice of dispossession by the LANDLORD, or through order of a court, and should TENANT remain on the PREMISES thereafter, then TENANT shall be liable to pay rent at a rate of double the base rent provided for under this lease, from the date of termination until such time as TENANT vacates the PREMISES, whether TENANT vacates the PREMISES voluntarily or through enforcement of an order for eviction.
+
 23. VALIDITY OF LEASE: If a clause or provision of this Lease is legally invalid, the rest of this Lease remains in effect. If a clause or provision of this lease is ambiguous, and it may be interpreted in a manner either consistent or inconsistent with existing law, it shall be interpreted in a manner consistent with existing law.
+
 24. PARTIES: The LANDLORD and each of the TENANTS are bound by this Lease. All parties who lawfully succeed to their rights and responsibilities are also bound.
+
 25. GENDER: The use of any particular gender (masculine, feminine or neuter) and case (singular or plural) in this Lease is for convenience, only. No inference is to be drawn therefrom. The correct gender and case is to be freely substituted throughout, as appropriate.
+
 26. TENANT'S ACKNOWLEDGMENT: The TENANT acknowledges having read all of the terms and conditions of this lease and the attached rules and regulations. TENANT acknowledges that no oral representations have been made to him by the LANDLORD or the LANDLORD's agent(s) other than the representations contained in this Lease. The TENANT acknowledges that he/she is relying only upon the promises and representations contained in this Lease.
+
 27. ENTIRE LEASE: All promises the LANDLORD has made are contained in this written Lease. This Lease can only be changed by an agreement in writing by both the TENANT and the LANDLORD.
+
 28. SIGNATURES: The LANDLORD and the TENANT agree to the terms of this Lease. If this Lease is made by a corporation, its proper corporate officers sign and its corporate seal is affixed.
                 ",
                             Title = "Lease Agreement"
@@ -243,6 +270,7 @@ Risk and Title of Goods & Property
 Warranty
 
 Sender.Company has, to the best of their knowledge has provided installation and quality parts for overall best quality of product. Furthermore all parts will be warrantied for a 12 month period after installation for any technical defects.
+
 Acceptance
 
 By signing below, Customer understands and accepts all terms and conditions outlined in this electrical services agreement.
@@ -256,11 +284,13 @@ By signing below, Customer understands and accepts all terms and conditions outl
 Internet Service Agreement
 
 Terms of use.
+
 Term
 
 The Agreement will run from START DATE until the services in this Agreement have been provided in full unless premature termination is allowed by this Agreement.
 
 The length of the Agreement may be changed provided that both Sender.Company and Signer.Company give prior notice via written consent.
+
 Payment, Pricing, and Tax
 
 Sender.Company will pay PAYMENT to Signer.Company for the services detailed in this Agreement.
@@ -283,6 +313,7 @@ Any intellectual property which is produced under this Agreement is exclusively 
 Signer.Company may only use the intellectual property with explicit permission from Sender.Company.
 
 Signer.Company will be liable for any damages arising from the unpermitted use of the intellectual property.
+
 Licensing
 
 If Sender.Company buys any equipment as part of the Service, Signer.Company grants Sender.Company a limited license to use software provided with the equipment subject to the following terms:
@@ -296,6 +327,7 @@ If Sender.Company buys any equipment as part of the Service, Signer.Company gran
 Indemnification
 
 Each party agrees to indemnify the other party and its respective permitted successors, assigns, officers, affiliates, agents and employees against attorney’s fees and any claims and costs resulting from any actions or omissions of the indemnifying party or its permitted successors, assigns, officers, affiliates, agents and employees in relation to this Agreement, unless paid as part of a relevant insurance policy or required by applicable law.
+
 Termination
 
     If any of the following events occur in respect to one party, the other party may terminate the agreement at their sole discretion with prior written notice:
@@ -307,6 +339,7 @@ Termination
 Export Compliance
 
 Transferring of technologies across national boundaries are regulated by United States law. Sender.Company agrees not to export any technologies transmitted via Signer.Company prior to obtaining any relevant export licenses or official government approval.
+
 Force Majeure
 
 Force Majeure refers to any act beyond the reasonable control of either party, including but not limited to acts of God, fires, and war.
@@ -314,28 +347,31 @@ Force Majeure refers to any act beyond the reasonable control of either party, i
 In the case of events of Force Majeure interfering with the completion of this Agreement, neither party shall be held responsible by the other.
 
 If either party’s agreed obligations are restricted by Force Majeure, the affected party must take reasonable action to fulfill their obligations. The other party must continue to fulfill their own agreed obligations.
+
 Notice and Payment
 
 Any notices or other forms of communication between Signer.Company and Sender.Company must be delivered via written notice to the following addresses:
 
-Address
-
-To Sender.Company:
 Laws
 
 This Agreement is governable in relation to the laws of LAW.
+
 Successors
 
 This agreement will be binding for and will inure to the benefit of the Parties hereto, their administrators, successors, assigns and heirs.
+
 Assignability
 
 The obligations of Signer.Company shall not be transferred in any way or for any reason to another party, unless Sender.Company has given prior notice via approval in writing.
+
 Waiver
 
 Any waiver of any default by either Party shall not be accepted as a waiver of any subsequent or prior default of other or the same provisions of this agreement.
+
 Severability
 
 If any elements of this Agreement become invalid or unenforceable, all other elements of the Agreement will remain valid and enforceable.
+
 Integration
 
 This Agreement represents the entire agreement between Sender.Company and Signer.Company, relevant to the content of the Agreement.
@@ -367,32 +403,32 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         new
                         {
                             BillingPeriodId = 1,
-                            PeriodEnd = "2020-03-06 12:28:48.5425459",
-                            PeriodStart = "2020-02-05 12:28:48.5424944"
+                            PeriodEnd = "2020-03-06 16:08:57.0761615",
+                            PeriodStart = "2020-02-05 16:08:57.0760989"
                         },
                         new
                         {
                             BillingPeriodId = 2,
-                            PeriodEnd = "2020-04-05 12:28:48.5426017",
-                            PeriodStart = "2020-03-06 12:28:48.5425994"
+                            PeriodEnd = "2020-04-05 16:08:57.0762272",
+                            PeriodStart = "2020-03-06 16:08:57.0762243"
                         },
                         new
                         {
                             BillingPeriodId = 3,
-                            PeriodEnd = "2020-05-05 12:28:48.5426031",
-                            PeriodStart = "2020-04-05 12:28:48.5426028"
+                            PeriodEnd = "2020-05-05 16:08:57.0762293",
+                            PeriodStart = "2020-04-05 16:08:57.0762289"
                         },
                         new
                         {
                             BillingPeriodId = 4,
-                            PeriodEnd = "2020-05-20 12:28:48.5426036",
-                            PeriodStart = "2020-05-05 12:28:48.5426034"
+                            PeriodEnd = "2020-05-20 16:08:57.07623",
+                            PeriodStart = "2020-05-05 16:08:57.0762297"
                         },
                         new
                         {
                             BillingPeriodId = 5,
-                            PeriodEnd = "2020-06-19 12:28:48.5426041",
-                            PeriodStart = "2020-05-20 12:28:48.5426039"
+                            PeriodEnd = "2020-06-19 16:08:57.0762308",
+                            PeriodStart = "2020-05-20 16:08:57.0762304"
                         });
                 });
 
@@ -449,8 +485,8 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             OpenNotes = "No water",
                             OpeningUserId = 1,
                             ResolutionNotes = "Fully restored.",
-                            TimeClosed = "2020-06-04 12:28:48.5421317",
-                            TimeOpened = "2020-03-06 12:28:48.5326159",
+                            TimeClosed = "2020-06-04 16:08:57.0757286",
+                            TimeOpened = "2020-03-06 16:08:57.0665499",
                             UnitNumber = "101"
                         },
                         new
@@ -462,8 +498,8 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             OpenNotes = "No Interet",
                             OpeningUserId = 1,
                             ResolutionNotes = "Fixed",
-                            TimeClosed = "2020-05-05 12:28:48.5326159",
-                            TimeOpened = "2020-03-06 12:28:48.5326159",
+                            TimeClosed = "2020-05-05 16:08:57.0665499",
+                            TimeOpened = "2020-03-06 16:08:57.0665499",
                             UnitNumber = "101"
                         },
                         new
@@ -475,8 +511,8 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             OpenNotes = "Dirty water",
                             OpeningUserId = 1,
                             ResolutionNotes = "Fixed",
-                            TimeClosed = "2020-05-05 12:28:48.5326159",
-                            TimeOpened = "2019-12-07 12:28:48.5326159",
+                            TimeClosed = "2020-05-05 16:08:57.0665499",
+                            TimeOpened = "2019-12-07 16:08:57.0665499",
                             UnitNumber = "101"
                         },
                         new
@@ -488,8 +524,8 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             OpenNotes = "Low water pressure",
                             OpeningUserId = 2,
                             ResolutionNotes = "Fixed",
-                            TimeClosed = "2020-05-05 12:28:48.5326159",
-                            TimeOpened = "2020-03-06 12:28:48.5326159",
+                            TimeClosed = "2020-05-05 16:08:57.0665499",
+                            TimeOpened = "2020-03-06 16:08:57.0665499",
                             UnitNumber = "102"
                         },
                         new
@@ -501,8 +537,8 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             OpenNotes = "No water",
                             OpeningUserId = 3,
                             ResolutionNotes = "Fixed",
-                            TimeClosed = "2020-05-05 12:28:48.5326159",
-                            TimeOpened = "2020-03-06 12:28:48.5326159",
+                            TimeClosed = "2020-05-05 16:08:57.0665499",
+                            TimeOpened = "2020-03-06 16:08:57.0665499",
                             UnitNumber = "103"
                         },
                         new
@@ -511,7 +547,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             InternalNotes = "Call electric company",
                             OpenNotes = "Power out",
                             OpeningUserId = 4,
-                            TimeOpened = "2020-03-06 12:28:48.5326159",
+                            TimeOpened = "2020-03-06 16:08:57.0665499",
                             UnitNumber = "104"
                         },
                         new
@@ -520,7 +556,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             InternalNotes = "Call plumber",
                             OpenNotes = "Low water pressure",
                             OpeningUserId = 5,
-                            TimeOpened = "2020-03-06 12:28:48.5326159",
+                            TimeOpened = "2020-03-06 16:08:57.0665499",
                             UnitNumber = "105"
                         },
                         new
@@ -529,7 +565,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             InternalNotes = "Call Plumber",
                             OpenNotes = "No hot water",
                             OpeningUserId = 6,
-                            TimeOpened = "2020-03-06 12:28:48.5326159",
+                            TimeOpened = "2020-03-06 16:08:57.0665499",
                             UnitNumber = "106"
                         },
                         new
@@ -538,7 +574,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             InternalNotes = "Send maintenance",
                             OpenNotes = "Oven not working",
                             OpeningUserId = 7,
-                            TimeOpened = "2020-03-06 12:28:48.5326159",
+                            TimeOpened = "2020-03-06 16:08:57.0665499",
                             UnitNumber = "107"
                         },
                         new
@@ -547,7 +583,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             InternalNotes = "Send maintenance",
                             OpenNotes = "Dead lightbulb",
                             OpeningUserId = 8,
-                            TimeOpened = "2020-03-06 12:28:48.5326159",
+                            TimeOpened = "2020-03-06 16:08:57.0665499",
                             UnitNumber = "108"
                         },
                         new
@@ -559,8 +595,8 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             OpenNotes = "Low water pressure",
                             OpeningUserId = 13,
                             ResolutionNotes = "Fixed",
-                            TimeClosed = "2020-05-22 12:28:48.5422661",
-                            TimeOpened = "2020-05-21 12:28:48.5422642",
+                            TimeClosed = "2020-05-22 16:08:57.0758816",
+                            TimeOpened = "2020-05-21 16:08:57.0758799",
                             UnitNumber = "111"
                         },
                         new
@@ -569,7 +605,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             InternalNotes = "Call electric company",
                             OpenNotes = "Power out",
                             OpeningUserId = 2,
-                            TimeOpened = "2020-05-25 12:28:48.5422665",
+                            TimeOpened = "2020-05-25 16:08:57.0758821",
                             UnitNumber = "111"
                         },
                         new
@@ -578,7 +614,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             InternalNotes = "Send maintenance",
                             OpenNotes = "Leaky faucet",
                             OpeningUserId = 13,
-                            TimeOpened = "2020-05-28 12:28:48.5422668",
+                            TimeOpened = "2020-05-28 16:08:57.0758826",
                             UnitNumber = "111"
                         },
                         new
@@ -587,7 +623,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             InternalNotes = "Call plumber",
                             OpenNotes = "Clogged toilet",
                             OpeningUserId = 13,
-                            TimeOpened = "2020-06-01 12:28:48.542267",
+                            TimeOpened = "2020-06-01 16:08:57.075883",
                             UnitNumber = "111"
                         });
                 });
@@ -627,7 +663,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 2,
                             TenantId = 1,
-                            TimePaid = "2020-06-03 12:28:48.54148"
+                            TimePaid = "2020-06-03 16:08:57.0749308"
                         },
                         new
                         {
@@ -636,7 +672,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 0,
                             TenantId = 1,
-                            TimePaid = "2020-06-03 12:28:48.5415386"
+                            TimePaid = "2020-06-03 16:08:57.0750088"
                         },
                         new
                         {
@@ -645,7 +681,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 4,
                             TenantId = 1,
-                            TimePaid = "2020-06-03 12:28:48.5415408"
+                            TimePaid = "2020-06-03 16:08:57.0750129"
                         },
                         new
                         {
@@ -654,7 +690,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 3,
                             TenantId = 1,
-                            TimePaid = "2020-06-03 12:28:48.5415411"
+                            TimePaid = "2020-06-03 16:08:57.0750135"
                         },
                         new
                         {
@@ -663,7 +699,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 1,
                             TenantId = 1,
-                            TimePaid = "2020-06-03 12:28:48.5415415"
+                            TimePaid = "2020-06-03 16:08:57.0750139"
                         },
                         new
                         {
@@ -672,7 +708,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 2,
                             TenantId = 2,
-                            TimePaid = "2020-06-03 12:28:48.5415421"
+                            TimePaid = "2020-06-03 16:08:57.0750144"
                         },
                         new
                         {
@@ -681,7 +717,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 0,
                             TenantId = 2,
-                            TimePaid = "2020-06-03 12:28:48.5415424"
+                            TimePaid = "2020-06-03 16:08:57.0750148"
                         },
                         new
                         {
@@ -690,7 +726,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 4,
                             TenantId = 2,
-                            TimePaid = "2020-06-03 12:28:48.5415428"
+                            TimePaid = "2020-06-03 16:08:57.0750152"
                         },
                         new
                         {
@@ -699,7 +735,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 3,
                             TenantId = 2,
-                            TimePaid = "2020-06-03 12:28:48.5415432"
+                            TimePaid = "2020-06-03 16:08:57.0750158"
                         },
                         new
                         {
@@ -708,7 +744,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 1,
                             TenantId = 2,
-                            TimePaid = "2020-06-03 12:28:48.5415436"
+                            TimePaid = "2020-06-03 16:08:57.0750163"
                         },
                         new
                         {
@@ -717,7 +753,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 2,
                             TenantId = 3,
-                            TimePaid = "2020-06-03 12:28:48.5415442"
+                            TimePaid = "2020-06-03 16:08:57.0750167"
                         },
                         new
                         {
@@ -726,7 +762,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 0,
                             TenantId = 3,
-                            TimePaid = "2020-06-03 12:28:48.5415446"
+                            TimePaid = "2020-06-03 16:08:57.0750171"
                         },
                         new
                         {
@@ -735,7 +771,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 4,
                             TenantId = 3,
-                            TimePaid = "2020-06-03 12:28:48.5415449"
+                            TimePaid = "2020-06-03 16:08:57.0750175"
                         },
                         new
                         {
@@ -744,7 +780,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 3,
                             TenantId = 3,
-                            TimePaid = "2020-06-03 12:28:48.5415452"
+                            TimePaid = "2020-06-03 16:08:57.0750181"
                         },
                         new
                         {
@@ -753,7 +789,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 1,
                             TenantId = 3,
-                            TimePaid = "2020-06-03 12:28:48.5415455"
+                            TimePaid = "2020-06-03 16:08:57.0750187"
                         },
                         new
                         {
@@ -762,7 +798,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 2,
                             TenantId = 4,
-                            TimePaid = "2020-06-03 12:28:48.5415458"
+                            TimePaid = "2020-06-03 16:08:57.0750193"
                         },
                         new
                         {
@@ -771,7 +807,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 0,
                             TenantId = 4,
-                            TimePaid = "2020-06-03 12:28:48.5415461"
+                            TimePaid = "2020-06-03 16:08:57.0750199"
                         },
                         new
                         {
@@ -780,7 +816,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 4,
                             TenantId = 4,
-                            TimePaid = "2020-06-03 12:28:48.5415464"
+                            TimePaid = "2020-06-03 16:08:57.0750205"
                         },
                         new
                         {
@@ -789,7 +825,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 3,
                             TenantId = 4,
-                            TimePaid = "2020-06-03 12:28:48.5415469"
+                            TimePaid = "2020-06-03 16:08:57.0750209"
                         },
                         new
                         {
@@ -798,7 +834,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 1,
                             TenantId = 4,
-                            TimePaid = "2020-06-03 12:28:48.5415472"
+                            TimePaid = "2020-06-03 16:08:57.0750213"
                         },
                         new
                         {
@@ -807,7 +843,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 2,
                             TenantId = 5,
-                            TimePaid = "2020-06-03 12:28:48.5415475"
+                            TimePaid = "2020-06-03 16:08:57.0750217"
                         },
                         new
                         {
@@ -816,7 +852,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 0,
                             TenantId = 5,
-                            TimePaid = "2020-06-03 12:28:48.5415478"
+                            TimePaid = "2020-06-03 16:08:57.0750221"
                         },
                         new
                         {
@@ -825,7 +861,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 4,
                             TenantId = 5,
-                            TimePaid = "2020-06-03 12:28:48.5415481"
+                            TimePaid = "2020-06-03 16:08:57.0750226"
                         },
                         new
                         {
@@ -834,7 +870,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 3,
                             TenantId = 5,
-                            TimePaid = "2020-06-03 12:28:48.5415484"
+                            TimePaid = "2020-06-03 16:08:57.075023"
                         },
                         new
                         {
@@ -843,7 +879,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 1,
                             TenantId = 5,
-                            TimePaid = "2020-06-03 12:28:48.5415487"
+                            TimePaid = "2020-06-03 16:08:57.0750234"
                         },
                         new
                         {
@@ -852,7 +888,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 2,
                             TenantId = 6,
-                            TimePaid = "2020-06-03 12:28:48.541549"
+                            TimePaid = "2020-06-03 16:08:57.0750238"
                         },
                         new
                         {
@@ -861,7 +897,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 0,
                             TenantId = 6,
-                            TimePaid = "2020-06-03 12:28:48.5415493"
+                            TimePaid = "2020-06-03 16:08:57.0750242"
                         },
                         new
                         {
@@ -870,7 +906,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 4,
                             TenantId = 6,
-                            TimePaid = "2020-06-03 12:28:48.5415495"
+                            TimePaid = "2020-06-03 16:08:57.0750246"
                         },
                         new
                         {
@@ -879,7 +915,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 3,
                             TenantId = 6,
-                            TimePaid = "2020-06-03 12:28:48.5415499"
+                            TimePaid = "2020-06-03 16:08:57.075025"
                         },
                         new
                         {
@@ -888,7 +924,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 1,
                             TenantId = 6,
-                            TimePaid = "2020-06-03 12:28:48.5415502"
+                            TimePaid = "2020-06-03 16:08:57.0750254"
                         },
                         new
                         {
@@ -897,7 +933,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 2,
                             TenantId = 7,
-                            TimePaid = "2020-06-03 12:28:48.5415505"
+                            TimePaid = "2020-06-03 16:08:57.0750258"
                         },
                         new
                         {
@@ -906,7 +942,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 0,
                             TenantId = 7,
-                            TimePaid = "2020-06-03 12:28:48.5415508"
+                            TimePaid = "2020-06-03 16:08:57.0750262"
                         },
                         new
                         {
@@ -915,7 +951,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 4,
                             TenantId = 7,
-                            TimePaid = "2020-06-03 12:28:48.5415512"
+                            TimePaid = "2020-06-03 16:08:57.0750266"
                         },
                         new
                         {
@@ -924,7 +960,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 3,
                             TenantId = 7,
-                            TimePaid = "2020-06-03 12:28:48.5415514"
+                            TimePaid = "2020-06-03 16:08:57.0750269"
                         },
                         new
                         {
@@ -933,7 +969,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 1,
                             TenantId = 7,
-                            TimePaid = "2020-06-03 12:28:48.5415517"
+                            TimePaid = "2020-06-03 16:08:57.0750273"
                         },
                         new
                         {
@@ -942,7 +978,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 2,
                             TenantId = 8,
-                            TimePaid = "2020-06-03 12:28:48.5415519"
+                            TimePaid = "2020-06-03 16:08:57.0750279"
                         },
                         new
                         {
@@ -951,7 +987,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 0,
                             TenantId = 8,
-                            TimePaid = "2020-06-03 12:28:48.5415522"
+                            TimePaid = "2020-06-03 16:08:57.0750283"
                         },
                         new
                         {
@@ -960,7 +996,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 4,
                             TenantId = 8,
-                            TimePaid = "2020-06-03 12:28:48.5415525"
+                            TimePaid = "2020-06-03 16:08:57.0750287"
                         },
                         new
                         {
@@ -969,7 +1005,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 3,
                             TenantId = 8,
-                            TimePaid = "2020-06-03 12:28:48.5415528"
+                            TimePaid = "2020-06-03 16:08:57.0750291"
                         },
                         new
                         {
@@ -978,7 +1014,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 1,
                             TenantId = 8,
-                            TimePaid = "2020-06-03 12:28:48.5415531"
+                            TimePaid = "2020-06-03 16:08:57.0750295"
                         },
                         new
                         {
@@ -987,7 +1023,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 2,
                             TenantId = 9,
-                            TimePaid = "2020-06-03 12:28:48.5415534"
+                            TimePaid = "2020-06-03 16:08:57.0750302"
                         },
                         new
                         {
@@ -996,7 +1032,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 0,
                             TenantId = 9,
-                            TimePaid = "2020-06-03 12:28:48.5415537"
+                            TimePaid = "2020-06-03 16:08:57.0750306"
                         },
                         new
                         {
@@ -1005,7 +1041,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 4,
                             TenantId = 9,
-                            TimePaid = "2020-06-03 12:28:48.5415539"
+                            TimePaid = "2020-06-03 16:08:57.075031"
                         },
                         new
                         {
@@ -1014,7 +1050,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 3,
                             TenantId = 9,
-                            TimePaid = "2020-06-03 12:28:48.5415542"
+                            TimePaid = "2020-06-03 16:08:57.0750314"
                         },
                         new
                         {
@@ -1023,7 +1059,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 1,
                             TenantId = 9,
-                            TimePaid = "2020-06-03 12:28:48.5415544"
+                            TimePaid = "2020-06-03 16:08:57.0750318"
                         },
                         new
                         {
@@ -1032,7 +1068,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 2,
                             TenantId = 10,
-                            TimePaid = "2020-06-03 12:28:48.5415547"
+                            TimePaid = "2020-06-03 16:08:57.0750322"
                         },
                         new
                         {
@@ -1041,7 +1077,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 0,
                             TenantId = 10,
-                            TimePaid = "2020-06-03 12:28:48.541555"
+                            TimePaid = "2020-06-03 16:08:57.0750326"
                         },
                         new
                         {
@@ -1050,7 +1086,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 4,
                             TenantId = 10,
-                            TimePaid = "2020-06-03 12:28:48.5415552"
+                            TimePaid = "2020-06-03 16:08:57.075033"
                         },
                         new
                         {
@@ -1059,7 +1095,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 3,
                             TenantId = 10,
-                            TimePaid = "2020-06-03 12:28:48.5415555"
+                            TimePaid = "2020-06-03 16:08:57.0750334"
                         },
                         new
                         {
@@ -1068,7 +1104,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 1,
                             TenantId = 10,
-                            TimePaid = "2020-06-03 12:28:48.5415557"
+                            TimePaid = "2020-06-03 16:08:57.0750337"
                         });
                 });
 
@@ -1101,40 +1137,40 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         new
                         {
                             ResourceUsageRateId = 1,
-                            PeriodEnd = "2020-12-01 12:28:48.540983",
-                            PeriodStart = "2019-12-07 12:28:48.5326159",
+                            PeriodEnd = "2020-12-01 16:08:57.0743674",
+                            PeriodStart = "2019-12-07 16:08:57.0665499",
                             Rate = 50.0,
                             ResourceType = 2
                         },
                         new
                         {
                             ResourceUsageRateId = 2,
-                            PeriodEnd = "2020-12-01 12:28:48.5410835",
-                            PeriodStart = "2019-12-07 12:28:48.5326159",
+                            PeriodEnd = "2020-12-01 16:08:57.0744628",
+                            PeriodStart = "2019-12-07 16:08:57.0665499",
                             Rate = 0.13,
                             ResourceType = 0
                         },
                         new
                         {
                             ResourceUsageRateId = 3,
-                            PeriodEnd = "2020-12-01 12:28:48.5410866",
-                            PeriodStart = "2019-12-07 12:28:48.5326159",
+                            PeriodEnd = "2020-12-01 16:08:57.0744658",
+                            PeriodStart = "2019-12-07 16:08:57.0665499",
                             Rate = 1100.0,
                             ResourceType = 4
                         },
                         new
                         {
                             ResourceUsageRateId = 4,
-                            PeriodEnd = "2020-12-01 12:28:48.5410869",
-                            PeriodStart = "2019-12-07 12:28:48.5326159",
+                            PeriodEnd = "2020-12-01 16:08:57.0744662",
+                            PeriodStart = "2019-12-07 16:08:57.0665499",
                             Rate = 30.0,
                             ResourceType = 3
                         },
                         new
                         {
                             ResourceUsageRateId = 5,
-                            PeriodEnd = "2020-12-01 12:28:48.5410875",
-                            PeriodStart = "2019-12-07 12:28:48.5326159",
+                            PeriodEnd = "2020-12-01 16:08:57.0744665",
+                            PeriodStart = "2019-12-07 16:08:57.0665499",
                             Rate = 0.10000000000000001,
                             ResourceType = 1
                         });
@@ -1297,7 +1333,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 1,
                             ResourceType = 2,
-                            SampleTime = "2020-06-03 12:28:48.5400072",
+                            SampleTime = "2020-06-03 16:08:57.0734841",
                             TenantId = 1,
                             UsageAmount = 1.0
                         },
@@ -1305,7 +1341,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 2,
                             ResourceType = 0,
-                            SampleTime = "2020-06-03 12:28:48.5400812",
+                            SampleTime = "2020-06-03 16:08:57.0735465",
                             TenantId = 1,
                             UsageAmount = 50.549999999999997
                         },
@@ -1313,7 +1349,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 3,
                             ResourceType = 4,
-                            SampleTime = "2020-06-03 12:28:48.540084",
+                            SampleTime = "2020-06-03 16:08:57.0735488",
                             TenantId = 1,
                             UsageAmount = 1.0
                         },
@@ -1321,7 +1357,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 4,
                             ResourceType = 3,
-                            SampleTime = "2020-06-03 12:28:48.5400844",
+                            SampleTime = "2020-06-03 16:08:57.0735491",
                             TenantId = 1,
                             UsageAmount = 1.0
                         },
@@ -1329,7 +1365,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 5,
                             ResourceType = 1,
-                            SampleTime = "2020-06-03 12:28:48.5400847",
+                            SampleTime = "2020-06-03 16:08:57.0735494",
                             TenantId = 1,
                             UsageAmount = 40.399999999999999
                         },
@@ -1337,7 +1373,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 6,
                             ResourceType = 2,
-                            SampleTime = "2020-06-03 12:28:48.5400849",
+                            SampleTime = "2020-06-03 16:08:57.0735497",
                             TenantId = 2,
                             UsageAmount = 1.0
                         },
@@ -1345,7 +1381,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 7,
                             ResourceType = 0,
-                            SampleTime = "2020-06-03 12:28:48.5400854",
+                            SampleTime = "2020-06-03 16:08:57.07355",
                             TenantId = 2,
                             UsageAmount = 50.549999999999997
                         },
@@ -1353,7 +1389,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 8,
                             ResourceType = 4,
-                            SampleTime = "2020-06-03 12:28:48.5400857",
+                            SampleTime = "2020-06-03 16:08:57.0735503",
                             TenantId = 2,
                             UsageAmount = 1.0
                         },
@@ -1361,7 +1397,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 9,
                             ResourceType = 3,
-                            SampleTime = "2020-06-03 12:28:48.5400861",
+                            SampleTime = "2020-06-03 16:08:57.0735506",
                             TenantId = 2,
                             UsageAmount = 1.0
                         },
@@ -1369,7 +1405,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 10,
                             ResourceType = 1,
-                            SampleTime = "2020-06-03 12:28:48.5400864",
+                            SampleTime = "2020-06-03 16:08:57.0735508",
                             TenantId = 2,
                             UsageAmount = 30.329999999999998
                         },
@@ -1377,7 +1413,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 11,
                             ResourceType = 2,
-                            SampleTime = "2020-06-03 12:28:48.5400867",
+                            SampleTime = "2020-06-03 16:08:57.0735511",
                             TenantId = 3,
                             UsageAmount = 1.0
                         },
@@ -1385,7 +1421,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 12,
                             ResourceType = 0,
-                            SampleTime = "2020-06-03 12:28:48.540087",
+                            SampleTime = "2020-06-03 16:08:57.0735514",
                             TenantId = 3,
                             UsageAmount = 50.549999999999997
                         },
@@ -1393,7 +1429,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 13,
                             ResourceType = 4,
-                            SampleTime = "2020-06-03 12:28:48.5400873",
+                            SampleTime = "2020-06-03 16:08:57.0735517",
                             TenantId = 3,
                             UsageAmount = 1.0
                         },
@@ -1401,7 +1437,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 14,
                             ResourceType = 3,
-                            SampleTime = "2020-06-03 12:28:48.5400876",
+                            SampleTime = "2020-06-03 16:08:57.0735519",
                             TenantId = 3,
                             UsageAmount = 1.0
                         },
@@ -1409,7 +1445,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 15,
                             ResourceType = 1,
-                            SampleTime = "2020-06-03 12:28:48.5400879",
+                            SampleTime = "2020-06-03 16:08:57.0735522",
                             TenantId = 3,
                             UsageAmount = 30.329999999999998
                         },
@@ -1417,7 +1453,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 16,
                             ResourceType = 2,
-                            SampleTime = "2020-06-03 12:28:48.5400882",
+                            SampleTime = "2020-06-03 16:08:57.0735525",
                             TenantId = 4,
                             UsageAmount = 1.0
                         },
@@ -1425,7 +1461,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 17,
                             ResourceType = 0,
-                            SampleTime = "2020-06-03 12:28:48.5400885",
+                            SampleTime = "2020-06-03 16:08:57.0735528",
                             TenantId = 4,
                             UsageAmount = 50.549999999999997
                         },
@@ -1433,7 +1469,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 18,
                             ResourceType = 4,
-                            SampleTime = "2020-06-03 12:28:48.5400888",
+                            SampleTime = "2020-06-03 16:08:57.073553",
                             TenantId = 4,
                             UsageAmount = 1.0
                         },
@@ -1441,7 +1477,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 19,
                             ResourceType = 3,
-                            SampleTime = "2020-06-03 12:28:48.540089",
+                            SampleTime = "2020-06-03 16:08:57.0735533",
                             TenantId = 4,
                             UsageAmount = 1.0
                         },
@@ -1449,7 +1485,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 20,
                             ResourceType = 1,
-                            SampleTime = "2020-06-03 12:28:48.5400894",
+                            SampleTime = "2020-06-03 16:08:57.0735536",
                             TenantId = 4,
                             UsageAmount = 30.329999999999998
                         },
@@ -1457,7 +1493,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 21,
                             ResourceType = 2,
-                            SampleTime = "2020-06-03 12:28:48.5400897",
+                            SampleTime = "2020-06-03 16:08:57.0735538",
                             TenantId = 5,
                             UsageAmount = 1.0
                         },
@@ -1465,7 +1501,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 22,
                             ResourceType = 0,
-                            SampleTime = "2020-06-03 12:28:48.5400901",
+                            SampleTime = "2020-06-03 16:08:57.0735556",
                             TenantId = 5,
                             UsageAmount = 60.549999999999997
                         },
@@ -1473,7 +1509,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 23,
                             ResourceType = 4,
-                            SampleTime = "2020-06-03 12:28:48.5400905",
+                            SampleTime = "2020-06-03 16:08:57.0735559",
                             TenantId = 5,
                             UsageAmount = 1.0
                         },
@@ -1481,7 +1517,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 24,
                             ResourceType = 3,
-                            SampleTime = "2020-06-03 12:28:48.5400911",
+                            SampleTime = "2020-06-03 16:08:57.0735562",
                             TenantId = 5,
                             UsageAmount = 1.0
                         },
@@ -1489,7 +1525,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 25,
                             ResourceType = 1,
-                            SampleTime = "2020-06-03 12:28:48.5400913",
+                            SampleTime = "2020-06-03 16:08:57.0735565",
                             TenantId = 5,
                             UsageAmount = 40.329999999999998
                         },
@@ -1497,7 +1533,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 26,
                             ResourceType = 2,
-                            SampleTime = "2020-06-03 12:28:48.5400916",
+                            SampleTime = "2020-06-03 16:08:57.0735568",
                             TenantId = 6,
                             UsageAmount = 1.0
                         },
@@ -1505,7 +1541,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 27,
                             ResourceType = 0,
-                            SampleTime = "2020-06-03 12:28:48.5400919",
+                            SampleTime = "2020-06-03 16:08:57.073557",
                             TenantId = 6,
                             UsageAmount = 60.549999999999997
                         },
@@ -1513,7 +1549,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 28,
                             ResourceType = 4,
-                            SampleTime = "2020-06-03 12:28:48.5400922",
+                            SampleTime = "2020-06-03 16:08:57.0735573",
                             TenantId = 6,
                             UsageAmount = 1.0
                         },
@@ -1521,7 +1557,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 29,
                             ResourceType = 3,
-                            SampleTime = "2020-06-03 12:28:48.5400925",
+                            SampleTime = "2020-06-03 16:08:57.0735576",
                             TenantId = 6,
                             UsageAmount = 1.0
                         },
@@ -1529,7 +1565,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 30,
                             ResourceType = 1,
-                            SampleTime = "2020-06-03 12:28:48.5400928",
+                            SampleTime = "2020-06-03 16:08:57.0735578",
                             TenantId = 6,
                             UsageAmount = 31.329999999999998
                         },
@@ -1537,7 +1573,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 31,
                             ResourceType = 2,
-                            SampleTime = "2020-06-03 12:28:48.5400931",
+                            SampleTime = "2020-06-03 16:08:57.0735581",
                             TenantId = 7,
                             UsageAmount = 1.0
                         },
@@ -1545,7 +1581,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 32,
                             ResourceType = 0,
-                            SampleTime = "2020-06-03 12:28:48.5400934",
+                            SampleTime = "2020-06-03 16:08:57.0735584",
                             TenantId = 7,
                             UsageAmount = 50.549999999999997
                         },
@@ -1553,7 +1589,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 33,
                             ResourceType = 4,
-                            SampleTime = "2020-06-03 12:28:48.5400937",
+                            SampleTime = "2020-06-03 16:08:57.0735587",
                             TenantId = 7,
                             UsageAmount = 1.0
                         },
@@ -1561,7 +1597,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 34,
                             ResourceType = 3,
-                            SampleTime = "2020-06-03 12:28:48.5400941",
+                            SampleTime = "2020-06-03 16:08:57.0735589",
                             TenantId = 7,
                             UsageAmount = 1.0
                         },
@@ -1569,7 +1605,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 35,
                             ResourceType = 1,
-                            SampleTime = "2020-06-03 12:28:48.5400943",
+                            SampleTime = "2020-06-03 16:08:57.0735592",
                             TenantId = 7,
                             UsageAmount = 30.329999999999998
                         },
@@ -1577,7 +1613,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 36,
                             ResourceType = 2,
-                            SampleTime = "2020-06-03 12:28:48.5400946",
+                            SampleTime = "2020-06-03 16:08:57.0735595",
                             TenantId = 8,
                             UsageAmount = 1.0
                         },
@@ -1585,7 +1621,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 37,
                             ResourceType = 0,
-                            SampleTime = "2020-06-03 12:28:48.5400949",
+                            SampleTime = "2020-06-03 16:08:57.0735597",
                             TenantId = 8,
                             UsageAmount = 50.549999999999997
                         },
@@ -1593,7 +1629,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 38,
                             ResourceType = 4,
-                            SampleTime = "2020-06-03 12:28:48.5400951",
+                            SampleTime = "2020-06-03 16:08:57.07356",
                             TenantId = 8,
                             UsageAmount = 1.0
                         },
@@ -1601,7 +1637,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 39,
                             ResourceType = 3,
-                            SampleTime = "2020-06-03 12:28:48.5400956",
+                            SampleTime = "2020-06-03 16:08:57.0735603",
                             TenantId = 8,
                             UsageAmount = 1.0
                         },
@@ -1609,7 +1645,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 40,
                             ResourceType = 1,
-                            SampleTime = "2020-06-03 12:28:48.5400959",
+                            SampleTime = "2020-06-03 16:08:57.0735606",
                             TenantId = 8,
                             UsageAmount = 30.329999999999998
                         },
@@ -1617,7 +1653,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 41,
                             ResourceType = 2,
-                            SampleTime = "2020-06-03 12:28:48.5400965",
+                            SampleTime = "2020-06-03 16:08:57.0735608",
                             TenantId = 9,
                             UsageAmount = 1.0
                         },
@@ -1625,7 +1661,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 42,
                             ResourceType = 0,
-                            SampleTime = "2020-06-03 12:28:48.5400968",
+                            SampleTime = "2020-06-03 16:08:57.0735612",
                             TenantId = 9,
                             UsageAmount = 50.549999999999997
                         },
@@ -1633,7 +1669,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 43,
                             ResourceType = 4,
-                            SampleTime = "2020-06-03 12:28:48.5400971",
+                            SampleTime = "2020-06-03 16:08:57.0735615",
                             TenantId = 9,
                             UsageAmount = 1.0
                         },
@@ -1641,7 +1677,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 44,
                             ResourceType = 3,
-                            SampleTime = "2020-06-03 12:28:48.5400974",
+                            SampleTime = "2020-06-03 16:08:57.0735618",
                             TenantId = 9,
                             UsageAmount = 1.0
                         },
@@ -1649,7 +1685,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 45,
                             ResourceType = 1,
-                            SampleTime = "2020-06-03 12:28:48.5400977",
+                            SampleTime = "2020-06-03 16:08:57.073562",
                             TenantId = 9,
                             UsageAmount = 30.329999999999998
                         },
@@ -1657,7 +1693,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 46,
                             ResourceType = 2,
-                            SampleTime = "2020-06-03 12:28:48.5400979",
+                            SampleTime = "2020-06-03 16:08:57.0735623",
                             TenantId = 10,
                             UsageAmount = 1.0
                         },
@@ -1665,7 +1701,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 47,
                             ResourceType = 0,
-                            SampleTime = "2020-06-03 12:28:48.5400982",
+                            SampleTime = "2020-06-03 16:08:57.0735626",
                             TenantId = 10,
                             UsageAmount = 50.549999999999997
                         },
@@ -1673,7 +1709,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 48,
                             ResourceType = 4,
-                            SampleTime = "2020-06-03 12:28:48.5400985",
+                            SampleTime = "2020-06-03 16:08:57.0735629",
                             TenantId = 10,
                             UsageAmount = 1.0
                         },
@@ -1681,7 +1717,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 49,
                             ResourceType = 3,
-                            SampleTime = "2020-06-03 12:28:48.5400987",
+                            SampleTime = "2020-06-03 16:08:57.0735632",
                             TenantId = 10,
                             UsageAmount = 1.0
                         },
@@ -1689,7 +1725,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 50,
                             ResourceType = 1,
-                            SampleTime = "2020-06-03 12:28:48.540099",
+                            SampleTime = "2020-06-03 16:08:57.0735634",
                             TenantId = 10,
                             UsageAmount = 30.329999999999998
                         },
@@ -1697,7 +1733,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 51,
                             ResourceType = 0,
-                            SampleTime = "2020-06-02 12:28:48.5400992",
+                            SampleTime = "2020-06-02 16:08:57.0735637",
                             TenantId = 1,
                             UsageAmount = 30.460000000000001
                         },
@@ -1705,7 +1741,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 52,
                             ResourceType = 0,
-                            SampleTime = "2020-06-01 12:28:48.5400995",
+                            SampleTime = "2020-06-01 16:08:57.073564",
                             TenantId = 1,
                             UsageAmount = 29.850000000000001
                         },
@@ -1713,7 +1749,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 53,
                             ResourceType = 0,
-                            SampleTime = "2020-05-31 12:28:48.5400998",
+                            SampleTime = "2020-05-31 16:08:57.0735642",
                             TenantId = 1,
                             UsageAmount = 5.3300000000000001
                         },
@@ -1721,7 +1757,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 54,
                             ResourceType = 0,
-                            SampleTime = "2020-05-30 12:28:48.5401002",
+                            SampleTime = "2020-05-30 16:08:57.0735645",
                             TenantId = 1,
                             UsageAmount = 50.670000000000002
                         },
@@ -1729,7 +1765,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 55,
                             ResourceType = 0,
-                            SampleTime = "2020-05-29 12:28:48.5401005",
+                            SampleTime = "2020-05-29 16:08:57.0735648",
                             TenantId = 1,
                             UsageAmount = 40.780000000000001
                         },
@@ -1737,7 +1773,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 56,
                             ResourceType = 0,
-                            SampleTime = "2020-05-28 12:28:48.5401008",
+                            SampleTime = "2020-05-28 16:08:57.073565",
                             TenantId = 1,
                             UsageAmount = 30.07
                         },
@@ -1745,7 +1781,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 57,
                             ResourceType = 0,
-                            SampleTime = "2020-05-27 12:28:48.540101",
+                            SampleTime = "2020-05-27 16:08:57.0735653",
                             TenantId = 1,
                             UsageAmount = 31.359999999999999
                         },
@@ -1753,7 +1789,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 58,
                             ResourceType = 0,
-                            SampleTime = "2020-05-26 12:28:48.5401013",
+                            SampleTime = "2020-05-26 16:08:57.0735656",
                             TenantId = 1,
                             UsageAmount = 20.530000000000001
                         },
@@ -1761,7 +1797,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 59,
                             ResourceType = 0,
-                            SampleTime = "2020-05-25 12:28:48.5401016",
+                            SampleTime = "2020-05-25 16:08:57.0735658",
                             TenantId = 1,
                             UsageAmount = 10.73
                         },
@@ -1769,7 +1805,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 60,
                             ResourceType = 0,
-                            SampleTime = "2020-05-24 12:28:48.5401019",
+                            SampleTime = "2020-05-24 16:08:57.0735662",
                             TenantId = 1,
                             UsageAmount = 30.210000000000001
                         },
@@ -1777,7 +1813,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 61,
                             ResourceType = 1,
-                            SampleTime = "2020-06-02 12:28:48.5401022",
+                            SampleTime = "2020-06-02 16:08:57.0735665",
                             TenantId = 1,
                             UsageAmount = 10.41
                         },
@@ -1785,7 +1821,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 62,
                             ResourceType = 1,
-                            SampleTime = "2020-06-01 12:28:48.5401024",
+                            SampleTime = "2020-06-01 16:08:57.0735668",
                             TenantId = 1,
                             UsageAmount = 15.42
                         },
@@ -1793,7 +1829,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 63,
                             ResourceType = 1,
-                            SampleTime = "2020-05-31 12:28:48.5401027",
+                            SampleTime = "2020-05-31 16:08:57.0735671",
                             TenantId = 1,
                             UsageAmount = 6.4299999999999997
                         },
@@ -1801,7 +1837,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 64,
                             ResourceType = 1,
-                            SampleTime = "2020-05-30 12:28:48.5401083",
+                            SampleTime = "2020-05-30 16:08:57.0735673",
                             TenantId = 1,
                             UsageAmount = 21.460000000000001
                         },
@@ -1809,7 +1845,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 65,
                             ResourceType = 1,
-                            SampleTime = "2020-05-29 12:28:48.5401086",
+                            SampleTime = "2020-05-29 16:08:57.0735676",
                             TenantId = 1,
                             UsageAmount = 10.17
                         },
@@ -1817,7 +1853,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 66,
                             ResourceType = 1,
-                            SampleTime = "2020-05-28 12:28:48.5401089",
+                            SampleTime = "2020-05-28 16:08:57.0735679",
                             TenantId = 1,
                             UsageAmount = 16.93
                         },
@@ -1825,7 +1861,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 67,
                             ResourceType = 1,
-                            SampleTime = "2020-05-27 12:28:48.5401093",
+                            SampleTime = "2020-05-27 16:08:57.0735681",
                             TenantId = 1,
                             UsageAmount = 15.74
                         },
@@ -1833,7 +1869,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 68,
                             ResourceType = 1,
-                            SampleTime = "2020-05-26 12:28:48.5401096",
+                            SampleTime = "2020-05-26 16:08:57.0735684",
                             TenantId = 1,
                             UsageAmount = 16.600000000000001
                         },
@@ -1841,7 +1877,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 69,
                             ResourceType = 1,
-                            SampleTime = "2020-05-25 12:28:48.54011",
+                            SampleTime = "2020-05-25 16:08:57.0735687",
                             TenantId = 1,
                             UsageAmount = 14.41
                         },
@@ -1849,7 +1885,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 70,
                             ResourceType = 1,
-                            SampleTime = "2020-05-24 12:28:48.5401102",
+                            SampleTime = "2020-05-24 16:08:57.073569",
                             TenantId = 1,
                             UsageAmount = 16.32
                         },
@@ -1857,7 +1893,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 71,
                             ResourceType = 0,
-                            SampleTime = "2020-06-02 12:28:48.5401106",
+                            SampleTime = "2020-06-02 16:08:57.0735692",
                             TenantId = 2,
                             UsageAmount = 21.460000000000001
                         },
@@ -1865,7 +1901,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 72,
                             ResourceType = 0,
-                            SampleTime = "2020-06-01 12:28:48.5401108",
+                            SampleTime = "2020-06-01 16:08:57.0735695",
                             TenantId = 2,
                             UsageAmount = 25.850000000000001
                         },
@@ -1873,7 +1909,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 73,
                             ResourceType = 0,
-                            SampleTime = "2020-05-31 12:28:48.5401111",
+                            SampleTime = "2020-05-31 16:08:57.0735698",
                             TenantId = 2,
                             UsageAmount = 15.33
                         },
@@ -1881,7 +1917,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 74,
                             ResourceType = 0,
-                            SampleTime = "2020-05-30 12:28:48.5401113",
+                            SampleTime = "2020-05-30 16:08:57.07357",
                             TenantId = 2,
                             UsageAmount = 50.670000000000002
                         },
@@ -1889,7 +1925,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 75,
                             ResourceType = 0,
-                            SampleTime = "2020-05-29 12:28:48.5401116",
+                            SampleTime = "2020-05-29 16:08:57.0735703",
                             TenantId = 2,
                             UsageAmount = 40.780000000000001
                         },
@@ -1897,7 +1933,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 76,
                             ResourceType = 0,
-                            SampleTime = "2020-05-28 12:28:48.5401119",
+                            SampleTime = "2020-05-28 16:08:57.0735706",
                             TenantId = 2,
                             UsageAmount = 29.07
                         },
@@ -1905,7 +1941,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 77,
                             ResourceType = 0,
-                            SampleTime = "2020-05-27 12:28:48.5401121",
+                            SampleTime = "2020-05-27 16:08:57.0735708",
                             TenantId = 2,
                             UsageAmount = 30.359999999999999
                         },
@@ -1913,7 +1949,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 78,
                             ResourceType = 0,
-                            SampleTime = "2020-05-26 12:28:48.5401125",
+                            SampleTime = "2020-05-26 16:08:57.0735712",
                             TenantId = 2,
                             UsageAmount = 20.530000000000001
                         },
@@ -1921,7 +1957,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 79,
                             ResourceType = 0,
-                            SampleTime = "2020-05-25 12:28:48.5401129",
+                            SampleTime = "2020-05-25 16:08:57.0735715",
                             TenantId = 2,
                             UsageAmount = 15.73
                         },
@@ -1929,7 +1965,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 80,
                             ResourceType = 0,
-                            SampleTime = "2020-05-24 12:28:48.5401132",
+                            SampleTime = "2020-05-24 16:08:57.0735718",
                             TenantId = 2,
                             UsageAmount = 40.210000000000001
                         },
@@ -1937,7 +1973,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 81,
                             ResourceType = 1,
-                            SampleTime = "2020-06-02 12:28:48.5401135",
+                            SampleTime = "2020-06-02 16:08:57.0735721",
                             TenantId = 2,
                             UsageAmount = 11.41
                         },
@@ -1945,7 +1981,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 82,
                             ResourceType = 1,
-                            SampleTime = "2020-06-01 12:28:48.5401138",
+                            SampleTime = "2020-06-01 16:08:57.0735723",
                             TenantId = 2,
                             UsageAmount = 14.42
                         },
@@ -1953,7 +1989,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 83,
                             ResourceType = 1,
-                            SampleTime = "2020-05-31 12:28:48.540114",
+                            SampleTime = "2020-05-31 16:08:57.0735726",
                             TenantId = 2,
                             UsageAmount = 19.43
                         },
@@ -1961,7 +1997,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 84,
                             ResourceType = 1,
-                            SampleTime = "2020-05-30 12:28:48.5401143",
+                            SampleTime = "2020-05-30 16:08:57.0735729",
                             TenantId = 2,
                             UsageAmount = 25.460000000000001
                         },
@@ -1969,7 +2005,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 85,
                             ResourceType = 1,
-                            SampleTime = "2020-05-29 12:28:48.5401146",
+                            SampleTime = "2020-05-29 16:08:57.0735732",
                             TenantId = 2,
                             UsageAmount = 10.17
                         },
@@ -1977,7 +2013,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 86,
                             ResourceType = 1,
-                            SampleTime = "2020-05-28 12:28:48.5401149",
+                            SampleTime = "2020-05-28 16:08:57.0735735",
                             TenantId = 2,
                             UsageAmount = 16.93
                         },
@@ -1985,7 +2021,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 87,
                             ResourceType = 1,
-                            SampleTime = "2020-05-27 12:28:48.5401151",
+                            SampleTime = "2020-05-27 16:08:57.0735738",
                             TenantId = 2,
                             UsageAmount = 16.739999999999998
                         },
@@ -1993,7 +2029,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 88,
                             ResourceType = 1,
-                            SampleTime = "2020-05-26 12:28:48.5401154",
+                            SampleTime = "2020-05-26 16:08:57.0735741",
                             TenantId = 2,
                             UsageAmount = 16.600000000000001
                         },
@@ -2001,7 +2037,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 89,
                             ResourceType = 1,
-                            SampleTime = "2020-05-25 12:28:48.5401157",
+                            SampleTime = "2020-05-25 16:08:57.0735743",
                             TenantId = 2,
                             UsageAmount = 14.41
                         },
@@ -2009,7 +2045,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 90,
                             ResourceType = 1,
-                            SampleTime = "2020-05-24 12:28:48.5401163",
+                            SampleTime = "2020-05-24 16:08:57.0735746",
                             TenantId = 2,
                             UsageAmount = 16.32
                         },
@@ -2017,7 +2053,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 91,
                             ResourceType = 0,
-                            SampleTime = "2020-06-02 12:28:48.5401168",
+                            SampleTime = "2020-06-02 16:08:57.0735749",
                             TenantId = 3,
                             UsageAmount = 13.460000000000001
                         },
@@ -2025,7 +2061,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 92,
                             ResourceType = 0,
-                            SampleTime = "2020-06-01 12:28:48.5401171",
+                            SampleTime = "2020-06-01 16:08:57.0735751",
                             TenantId = 3,
                             UsageAmount = 18.850000000000001
                         },
@@ -2033,7 +2069,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 93,
                             ResourceType = 0,
-                            SampleTime = "2020-05-31 12:28:48.5401176",
+                            SampleTime = "2020-05-31 16:08:57.0735754",
                             TenantId = 3,
                             UsageAmount = 5.3300000000000001
                         },
@@ -2041,7 +2077,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 94,
                             ResourceType = 0,
-                            SampleTime = "2020-05-30 12:28:48.5401178",
+                            SampleTime = "2020-05-30 16:08:57.0735757",
                             TenantId = 3,
                             UsageAmount = 30.670000000000002
                         },
@@ -2049,7 +2085,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 95,
                             ResourceType = 0,
-                            SampleTime = "2020-05-29 12:28:48.5401181",
+                            SampleTime = "2020-05-29 16:08:57.073576",
                             TenantId = 3,
                             UsageAmount = 51.780000000000001
                         },
@@ -2057,7 +2093,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 96,
                             ResourceType = 0,
-                            SampleTime = "2020-05-28 12:28:48.5401184",
+                            SampleTime = "2020-05-28 16:08:57.0735763",
                             TenantId = 3,
                             UsageAmount = 35.07
                         },
@@ -2065,7 +2101,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 97,
                             ResourceType = 0,
-                            SampleTime = "2020-05-27 12:28:48.5401186",
+                            SampleTime = "2020-05-27 16:08:57.0735766",
                             TenantId = 3,
                             UsageAmount = 32.359999999999999
                         },
@@ -2073,7 +2109,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 98,
                             ResourceType = 0,
-                            SampleTime = "2020-05-26 12:28:48.540119",
+                            SampleTime = "2020-05-26 16:08:57.0735769",
                             TenantId = 3,
                             UsageAmount = 19.530000000000001
                         },
@@ -2081,7 +2117,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 99,
                             ResourceType = 0,
-                            SampleTime = "2020-05-25 12:28:48.5401197",
+                            SampleTime = "2020-05-25 16:08:57.0735771",
                             TenantId = 3,
                             UsageAmount = 10.73
                         },
@@ -2089,7 +2125,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 100,
                             ResourceType = 0,
-                            SampleTime = "2020-05-24 12:28:48.5401199",
+                            SampleTime = "2020-05-24 16:08:57.0735774",
                             TenantId = 3,
                             UsageAmount = 31.210000000000001
                         },
@@ -2097,7 +2133,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 101,
                             ResourceType = 1,
-                            SampleTime = "2020-06-02 12:28:48.5401202",
+                            SampleTime = "2020-06-02 16:08:57.0735777",
                             TenantId = 3,
                             UsageAmount = 21.41
                         },
@@ -2105,7 +2141,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 102,
                             ResourceType = 1,
-                            SampleTime = "2020-06-01 12:28:48.5401205",
+                            SampleTime = "2020-06-01 16:08:57.0735872",
                             TenantId = 3,
                             UsageAmount = 22.420000000000002
                         },
@@ -2113,7 +2149,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 103,
                             ResourceType = 1,
-                            SampleTime = "2020-05-31 12:28:48.5401207",
+                            SampleTime = "2020-05-31 16:08:57.0735876",
                             TenantId = 3,
                             UsageAmount = 19.43
                         },
@@ -2121,7 +2157,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 104,
                             ResourceType = 1,
-                            SampleTime = "2020-05-30 12:28:48.540121",
+                            SampleTime = "2020-05-30 16:08:57.0735879",
                             TenantId = 3,
                             UsageAmount = 11.460000000000001
                         },
@@ -2129,7 +2165,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 105,
                             ResourceType = 1,
-                            SampleTime = "2020-05-29 12:28:48.5401213",
+                            SampleTime = "2020-05-29 16:08:57.0735882",
                             TenantId = 3,
                             UsageAmount = 50.170000000000002
                         },
@@ -2137,7 +2173,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 106,
                             ResourceType = 1,
-                            SampleTime = "2020-05-28 12:28:48.5401216",
+                            SampleTime = "2020-05-28 16:08:57.0735885",
                             TenantId = 3,
                             UsageAmount = 19.93
                         },
@@ -2145,7 +2181,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 107,
                             ResourceType = 1,
-                            SampleTime = "2020-05-27 12:28:48.5401218",
+                            SampleTime = "2020-05-27 16:08:57.0735887",
                             TenantId = 3,
                             UsageAmount = 15.74
                         },
@@ -2153,7 +2189,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 108,
                             ResourceType = 1,
-                            SampleTime = "2020-05-26 12:28:48.5401221",
+                            SampleTime = "2020-05-26 16:08:57.073589",
                             TenantId = 3,
                             UsageAmount = 25.629999999999999
                         },
@@ -2161,7 +2197,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 109,
                             ResourceType = 1,
-                            SampleTime = "2020-05-25 12:28:48.5401223",
+                            SampleTime = "2020-05-25 16:08:57.0735893",
                             TenantId = 3,
                             UsageAmount = 27.41
                         },
@@ -2169,7 +2205,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 110,
                             ResourceType = 1,
-                            SampleTime = "2020-05-24 12:28:48.5401226",
+                            SampleTime = "2020-05-24 16:08:57.0735895",
                             TenantId = 3,
                             UsageAmount = 13.32
                         },
@@ -2177,7 +2213,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 111,
                             ResourceType = 0,
-                            SampleTime = "2020-06-02 12:28:48.540123",
+                            SampleTime = "2020-06-02 16:08:57.0735898",
                             TenantId = 4,
                             UsageAmount = 3.46
                         },
@@ -2185,7 +2221,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 112,
                             ResourceType = 0,
-                            SampleTime = "2020-06-01 12:28:48.5401233",
+                            SampleTime = "2020-06-01 16:08:57.0735901",
                             TenantId = 4,
                             UsageAmount = 29.850000000000001
                         },
@@ -2193,7 +2229,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 113,
                             ResourceType = 0,
-                            SampleTime = "2020-05-31 12:28:48.5401236",
+                            SampleTime = "2020-05-31 16:08:57.0735905",
                             TenantId = 4,
                             UsageAmount = 16.34
                         },
@@ -2201,7 +2237,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 114,
                             ResourceType = 0,
-                            SampleTime = "2020-05-30 12:28:48.5401239",
+                            SampleTime = "2020-05-30 16:08:57.0735907",
                             TenantId = 4,
                             UsageAmount = 11.67
                         },
@@ -2209,7 +2245,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 115,
                             ResourceType = 0,
-                            SampleTime = "2020-05-29 12:28:48.5401243",
+                            SampleTime = "2020-05-29 16:08:57.073591",
                             TenantId = 4,
                             UsageAmount = 40.780000000000001
                         },
@@ -2217,7 +2253,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 116,
                             ResourceType = 0,
-                            SampleTime = "2020-05-28 12:28:48.5401246",
+                            SampleTime = "2020-05-28 16:08:57.0735913",
                             TenantId = 4,
                             UsageAmount = 20.07
                         },
@@ -2225,7 +2261,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 117,
                             ResourceType = 0,
-                            SampleTime = "2020-05-27 12:28:48.5401249",
+                            SampleTime = "2020-05-27 16:08:57.0735915",
                             TenantId = 4,
                             UsageAmount = 15.359999999999999
                         },
@@ -2233,7 +2269,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 118,
                             ResourceType = 0,
-                            SampleTime = "2020-05-26 12:28:48.5401251",
+                            SampleTime = "2020-05-26 16:08:57.0735918",
                             TenantId = 4,
                             UsageAmount = 10.529999999999999
                         },
@@ -2241,7 +2277,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 119,
                             ResourceType = 0,
-                            SampleTime = "2020-05-25 12:28:48.5401255",
+                            SampleTime = "2020-05-25 16:08:57.0735921",
                             TenantId = 4,
                             UsageAmount = 12.73
                         },
@@ -2249,7 +2285,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 120,
                             ResourceType = 0,
-                            SampleTime = "2020-05-24 12:28:48.5401257",
+                            SampleTime = "2020-05-24 16:08:57.0735923",
                             TenantId = 4,
                             UsageAmount = 11.210000000000001
                         },
@@ -2257,7 +2293,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 121,
                             ResourceType = 1,
-                            SampleTime = "2020-06-02 12:28:48.5401261",
+                            SampleTime = "2020-06-02 16:08:57.0735926",
                             TenantId = 4,
                             UsageAmount = 13.41
                         },
@@ -2265,7 +2301,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 122,
                             ResourceType = 1,
-                            SampleTime = "2020-06-01 12:28:48.5401263",
+                            SampleTime = "2020-06-01 16:08:57.0735929",
                             TenantId = 4,
                             UsageAmount = 30.420000000000002
                         },
@@ -2273,7 +2309,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 123,
                             ResourceType = 1,
-                            SampleTime = "2020-05-31 12:28:48.5401266",
+                            SampleTime = "2020-05-31 16:08:57.0735932",
                             TenantId = 4,
                             UsageAmount = 16.43
                         },
@@ -2281,7 +2317,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 124,
                             ResourceType = 1,
-                            SampleTime = "2020-05-30 12:28:48.5401268",
+                            SampleTime = "2020-05-30 16:08:57.0735934",
                             TenantId = 4,
                             UsageAmount = 11.460000000000001
                         },
@@ -2289,7 +2325,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 125,
                             ResourceType = 1,
-                            SampleTime = "2020-05-29 12:28:48.5401271",
+                            SampleTime = "2020-05-29 16:08:57.0735937",
                             TenantId = 4,
                             UsageAmount = 13.17
                         },
@@ -2297,7 +2333,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 126,
                             ResourceType = 1,
-                            SampleTime = "2020-05-28 12:28:48.5401274",
+                            SampleTime = "2020-05-28 16:08:57.073594",
                             TenantId = 4,
                             UsageAmount = 16.93
                         },
@@ -2305,7 +2341,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 127,
                             ResourceType = 1,
-                            SampleTime = "2020-05-27 12:28:48.5401276",
+                            SampleTime = "2020-05-27 16:08:57.0735942",
                             TenantId = 4,
                             UsageAmount = 15.74
                         },
@@ -2313,7 +2349,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 128,
                             ResourceType = 1,
-                            SampleTime = "2020-05-26 12:28:48.5401279",
+                            SampleTime = "2020-05-26 16:08:57.0735945",
                             TenantId = 4,
                             UsageAmount = 21.600000000000001
                         },
@@ -2321,7 +2357,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 129,
                             ResourceType = 1,
-                            SampleTime = "2020-05-25 12:28:48.5401282",
+                            SampleTime = "2020-05-25 16:08:57.0735948",
                             TenantId = 4,
                             UsageAmount = 11.43
                         },
@@ -2329,7 +2365,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 130,
                             ResourceType = 1,
-                            SampleTime = "2020-05-24 12:28:48.5401286",
+                            SampleTime = "2020-05-24 16:08:57.073595",
                             TenantId = 4,
                             UsageAmount = 16.32
                         },
@@ -2337,7 +2373,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 131,
                             ResourceType = 0,
-                            SampleTime = "2020-06-02 12:28:48.5401292",
+                            SampleTime = "2020-06-02 16:08:57.0735954",
                             TenantId = 5,
                             UsageAmount = 10.460000000000001
                         },
@@ -2345,7 +2381,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 132,
                             ResourceType = 0,
-                            SampleTime = "2020-06-01 12:28:48.5401295",
+                            SampleTime = "2020-06-01 16:08:57.0735956",
                             TenantId = 5,
                             UsageAmount = 19.850000000000001
                         },
@@ -2353,7 +2389,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 133,
                             ResourceType = 0,
-                            SampleTime = "2020-05-31 12:28:48.5401297",
+                            SampleTime = "2020-05-31 16:08:57.0735959",
                             TenantId = 5,
                             UsageAmount = 15.33
                         },
@@ -2361,7 +2397,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 134,
                             ResourceType = 0,
-                            SampleTime = "2020-05-30 12:28:48.54013",
+                            SampleTime = "2020-05-30 16:08:57.0735962",
                             TenantId = 5,
                             UsageAmount = 17.670000000000002
                         },
@@ -2369,7 +2405,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 135,
                             ResourceType = 0,
-                            SampleTime = "2020-05-29 12:28:48.5401303",
+                            SampleTime = "2020-05-29 16:08:57.0735965",
                             TenantId = 5,
                             UsageAmount = 10.779999999999999
                         },
@@ -2377,7 +2413,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 136,
                             ResourceType = 0,
-                            SampleTime = "2020-05-28 12:28:48.5401305",
+                            SampleTime = "2020-05-28 16:08:57.0735967",
                             TenantId = 5,
                             UsageAmount = 18.07
                         },
@@ -2385,7 +2421,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 137,
                             ResourceType = 0,
-                            SampleTime = "2020-05-27 12:28:48.5401308",
+                            SampleTime = "2020-05-27 16:08:57.073597",
                             TenantId = 5,
                             UsageAmount = 11.359999999999999
                         },
@@ -2393,7 +2429,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 138,
                             ResourceType = 0,
-                            SampleTime = "2020-05-26 12:28:48.540131",
+                            SampleTime = "2020-05-26 16:08:57.0735973",
                             TenantId = 5,
                             UsageAmount = 10.529999999999999
                         },
@@ -2401,7 +2437,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 139,
                             ResourceType = 0,
-                            SampleTime = "2020-05-25 12:28:48.5401313",
+                            SampleTime = "2020-05-25 16:08:57.0735975",
                             TenantId = 5,
                             UsageAmount = 4.7300000000000004
                         },
@@ -2409,7 +2445,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 140,
                             ResourceType = 0,
-                            SampleTime = "2020-05-24 12:28:48.5401316",
+                            SampleTime = "2020-05-24 16:08:57.0735978",
                             TenantId = 5,
                             UsageAmount = 10.210000000000001
                         },
@@ -2417,7 +2453,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 141,
                             ResourceType = 1,
-                            SampleTime = "2020-06-02 12:28:48.5401318",
+                            SampleTime = "2020-06-02 16:08:57.0735981",
                             TenantId = 5,
                             UsageAmount = 11.41
                         },
@@ -2425,7 +2461,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 142,
                             ResourceType = 1,
-                            SampleTime = "2020-06-01 12:28:48.5401322",
+                            SampleTime = "2020-06-01 16:08:57.0735984",
                             TenantId = 5,
                             UsageAmount = 11.42
                         },
@@ -2433,7 +2469,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 143,
                             ResourceType = 1,
-                            SampleTime = "2020-05-31 12:28:48.5401326",
+                            SampleTime = "2020-05-31 16:08:57.0735986",
                             TenantId = 5,
                             UsageAmount = 21.43
                         },
@@ -2441,7 +2477,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 144,
                             ResourceType = 1,
-                            SampleTime = "2020-05-30 12:28:48.5401328",
+                            SampleTime = "2020-05-30 16:08:57.0735989",
                             TenantId = 5,
                             UsageAmount = 11.460000000000001
                         },
@@ -2449,7 +2485,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 145,
                             ResourceType = 1,
-                            SampleTime = "2020-05-29 12:28:48.5401331",
+                            SampleTime = "2020-05-29 16:08:57.0735992",
                             TenantId = 5,
                             UsageAmount = 10.17
                         },
@@ -2457,7 +2493,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 146,
                             ResourceType = 1,
-                            SampleTime = "2020-05-28 12:28:48.5401333",
+                            SampleTime = "2020-05-28 16:08:57.0735995",
                             TenantId = 5,
                             UsageAmount = 6.9299999999999997
                         },
@@ -2465,7 +2501,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 147,
                             ResourceType = 1,
-                            SampleTime = "2020-05-27 12:28:48.5401336",
+                            SampleTime = "2020-05-27 16:08:57.0735997",
                             TenantId = 5,
                             UsageAmount = 11.74
                         },
@@ -2473,7 +2509,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 148,
                             ResourceType = 1,
-                            SampleTime = "2020-05-26 12:28:48.5401339",
+                            SampleTime = "2020-05-26 16:08:57.0736",
                             TenantId = 5,
                             UsageAmount = 11.6
                         },
@@ -2481,7 +2517,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 149,
                             ResourceType = 1,
-                            SampleTime = "2020-05-25 12:28:48.5401343",
+                            SampleTime = "2020-05-25 16:08:57.0736004",
                             TenantId = 5,
                             UsageAmount = 16.41
                         },
@@ -2489,7 +2525,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 150,
                             ResourceType = 1,
-                            SampleTime = "2020-05-24 12:28:48.5401346",
+                            SampleTime = "2020-05-24 16:08:57.0736006",
                             TenantId = 5,
                             UsageAmount = 11.32
                         },
@@ -2497,7 +2533,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 151,
                             ResourceType = 0,
-                            SampleTime = "2020-06-02 12:28:48.5401348",
+                            SampleTime = "2020-06-02 16:08:57.0736009",
                             TenantId = 6,
                             UsageAmount = 20.460000000000001
                         },
@@ -2505,7 +2541,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 152,
                             ResourceType = 0,
-                            SampleTime = "2020-06-01 12:28:48.5401352",
+                            SampleTime = "2020-06-01 16:08:57.0736012",
                             TenantId = 6,
                             UsageAmount = 13.85
                         },
@@ -2513,7 +2549,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 153,
                             ResourceType = 0,
-                            SampleTime = "2020-05-31 12:28:48.5401355",
+                            SampleTime = "2020-05-31 16:08:57.0736014",
                             TenantId = 6,
                             UsageAmount = 25.329999999999998
                         },
@@ -2521,7 +2557,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 154,
                             ResourceType = 0,
-                            SampleTime = "2020-05-30 12:28:48.5401358",
+                            SampleTime = "2020-05-30 16:08:57.0736017",
                             TenantId = 6,
                             UsageAmount = 20.670000000000002
                         },
@@ -2529,7 +2565,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 155,
                             ResourceType = 0,
-                            SampleTime = "2020-05-29 12:28:48.540136",
+                            SampleTime = "2020-05-29 16:08:57.073602",
                             TenantId = 6,
                             UsageAmount = 20.780000000000001
                         },
@@ -2537,7 +2573,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 156,
                             ResourceType = 0,
-                            SampleTime = "2020-05-28 12:28:48.5401363",
+                            SampleTime = "2020-05-28 16:08:57.0736022",
                             TenantId = 6,
                             UsageAmount = 25.07
                         },
@@ -2545,7 +2581,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 157,
                             ResourceType = 0,
-                            SampleTime = "2020-05-27 12:28:48.5401366",
+                            SampleTime = "2020-05-27 16:08:57.0736025",
                             TenantId = 6,
                             UsageAmount = 21.359999999999999
                         },
@@ -2553,7 +2589,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 158,
                             ResourceType = 0,
-                            SampleTime = "2020-05-26 12:28:48.5401368",
+                            SampleTime = "2020-05-26 16:08:57.0736028",
                             TenantId = 6,
                             UsageAmount = 20.530000000000001
                         },
@@ -2561,7 +2597,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 159,
                             ResourceType = 0,
-                            SampleTime = "2020-05-25 12:28:48.5401371",
+                            SampleTime = "2020-05-25 16:08:57.0736031",
                             TenantId = 6,
                             UsageAmount = 15.73
                         },
@@ -2569,7 +2605,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 160,
                             ResourceType = 0,
-                            SampleTime = "2020-05-24 12:28:48.5401373",
+                            SampleTime = "2020-05-24 16:08:57.0736033",
                             TenantId = 6,
                             UsageAmount = 20.210000000000001
                         },
@@ -2577,7 +2613,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 161,
                             ResourceType = 1,
-                            SampleTime = "2020-06-02 12:28:48.5401376",
+                            SampleTime = "2020-06-02 16:08:57.0736036",
                             TenantId = 6,
                             UsageAmount = 10.41
                         },
@@ -2585,7 +2621,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 162,
                             ResourceType = 1,
-                            SampleTime = "2020-06-01 12:28:48.5401379",
+                            SampleTime = "2020-06-01 16:08:57.0736039",
                             TenantId = 6,
                             UsageAmount = 19.420000000000002
                         },
@@ -2593,7 +2629,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 163,
                             ResourceType = 1,
-                            SampleTime = "2020-05-31 12:28:48.5401381",
+                            SampleTime = "2020-05-31 16:08:57.0736042",
                             TenantId = 6,
                             UsageAmount = 16.43
                         },
@@ -2601,7 +2637,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 164,
                             ResourceType = 1,
-                            SampleTime = "2020-05-30 12:28:48.5401384",
+                            SampleTime = "2020-05-30 16:08:57.0736044",
                             TenantId = 6,
                             UsageAmount = 11.460000000000001
                         },
@@ -2609,7 +2645,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 165,
                             ResourceType = 1,
-                            SampleTime = "2020-05-29 12:28:48.5401387",
+                            SampleTime = "2020-05-29 16:08:57.0736047",
                             TenantId = 6,
                             UsageAmount = 16.170000000000002
                         },
@@ -2617,7 +2653,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 166,
                             ResourceType = 1,
-                            SampleTime = "2020-05-28 12:28:48.540139",
+                            SampleTime = "2020-05-28 16:08:57.073605",
                             TenantId = 6,
                             UsageAmount = 16.93
                         },
@@ -2625,7 +2661,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 167,
                             ResourceType = 1,
-                            SampleTime = "2020-05-27 12:28:48.5401392",
+                            SampleTime = "2020-05-27 16:08:57.0736054",
                             TenantId = 6,
                             UsageAmount = 15.74
                         },
@@ -2633,7 +2669,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 168,
                             ResourceType = 1,
-                            SampleTime = "2020-05-26 12:28:48.5401395",
+                            SampleTime = "2020-05-26 16:08:57.0736057",
                             TenantId = 6,
                             UsageAmount = 12.6
                         },
@@ -2641,7 +2677,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 169,
                             ResourceType = 1,
-                            SampleTime = "2020-05-25 12:28:48.5401398",
+                            SampleTime = "2020-05-25 16:08:57.0736059",
                             TenantId = 6,
                             UsageAmount = 13.41
                         },
@@ -2649,7 +2685,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 170,
                             ResourceType = 1,
-                            SampleTime = "2020-05-24 12:28:48.5401533",
+                            SampleTime = "2020-05-24 16:08:57.0736063",
                             TenantId = 6,
                             UsageAmount = 15.32
                         },
@@ -2657,7 +2693,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 171,
                             ResourceType = 0,
-                            SampleTime = "2020-06-02 12:28:48.5401537",
+                            SampleTime = "2020-06-02 16:08:57.0736066",
                             TenantId = 7,
                             UsageAmount = 30.460000000000001
                         },
@@ -2665,7 +2701,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 172,
                             ResourceType = 0,
-                            SampleTime = "2020-06-01 12:28:48.540154",
+                            SampleTime = "2020-06-01 16:08:57.0736069",
                             TenantId = 7,
                             UsageAmount = 38.850000000000001
                         },
@@ -2673,7 +2709,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 173,
                             ResourceType = 0,
-                            SampleTime = "2020-05-31 12:28:48.5401542",
+                            SampleTime = "2020-05-31 16:08:57.0736072",
                             TenantId = 7,
                             UsageAmount = 34.329999999999998
                         },
@@ -2681,7 +2717,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 174,
                             ResourceType = 0,
-                            SampleTime = "2020-05-30 12:28:48.5401546",
+                            SampleTime = "2020-05-30 16:08:57.0736074",
                             TenantId = 7,
                             UsageAmount = 29.670000000000002
                         },
@@ -2689,7 +2725,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 175,
                             ResourceType = 0,
-                            SampleTime = "2020-05-29 12:28:48.5401549",
+                            SampleTime = "2020-05-29 16:08:57.0736077",
                             TenantId = 7,
                             UsageAmount = 29.780000000000001
                         },
@@ -2697,7 +2733,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 176,
                             ResourceType = 0,
-                            SampleTime = "2020-05-28 12:28:48.5401552",
+                            SampleTime = "2020-05-28 16:08:57.073608",
                             TenantId = 7,
                             UsageAmount = 33.07
                         },
@@ -2705,7 +2741,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 177,
                             ResourceType = 0,
-                            SampleTime = "2020-05-27 12:28:48.5401554",
+                            SampleTime = "2020-05-27 16:08:57.0736082",
                             TenantId = 7,
                             UsageAmount = 26.359999999999999
                         },
@@ -2713,7 +2749,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 178,
                             ResourceType = 0,
-                            SampleTime = "2020-05-26 12:28:48.5401557",
+                            SampleTime = "2020-05-26 16:08:57.0736085",
                             TenantId = 7,
                             UsageAmount = 26.530000000000001
                         },
@@ -2721,7 +2757,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 179,
                             ResourceType = 0,
-                            SampleTime = "2020-05-25 12:28:48.540156",
+                            SampleTime = "2020-05-25 16:08:57.0736088",
                             TenantId = 7,
                             UsageAmount = 35.729999999999997
                         },
@@ -2729,7 +2765,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 180,
                             ResourceType = 0,
-                            SampleTime = "2020-05-24 12:28:48.5401562",
+                            SampleTime = "2020-05-24 16:08:57.073609",
                             TenantId = 7,
                             UsageAmount = 30.210000000000001
                         },
@@ -2737,7 +2773,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 181,
                             ResourceType = 1,
-                            SampleTime = "2020-06-02 12:28:48.5401566",
+                            SampleTime = "2020-06-02 16:08:57.0736093",
                             TenantId = 7,
                             UsageAmount = 34.409999999999997
                         },
@@ -2745,7 +2781,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 182,
                             ResourceType = 1,
-                            SampleTime = "2020-06-01 12:28:48.5401569",
+                            SampleTime = "2020-06-01 16:08:57.0736095",
                             TenantId = 7,
                             UsageAmount = 35.420000000000002
                         },
@@ -2753,7 +2789,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 183,
                             ResourceType = 1,
-                            SampleTime = "2020-05-31 12:28:48.5401571",
+                            SampleTime = "2020-05-31 16:08:57.0736098",
                             TenantId = 7,
                             UsageAmount = 36.43
                         },
@@ -2761,7 +2797,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 184,
                             ResourceType = 1,
-                            SampleTime = "2020-05-30 12:28:48.5401574",
+                            SampleTime = "2020-05-30 16:08:57.0736102",
                             TenantId = 7,
                             UsageAmount = 31.460000000000001
                         },
@@ -2769,7 +2805,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 185,
                             ResourceType = 1,
-                            SampleTime = "2020-05-29 12:28:48.5401576",
+                            SampleTime = "2020-05-29 16:08:57.0736105",
                             TenantId = 7,
                             UsageAmount = 25.170000000000002
                         },
@@ -2777,7 +2813,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 186,
                             ResourceType = 1,
-                            SampleTime = "2020-05-28 12:28:48.5401579",
+                            SampleTime = "2020-05-28 16:08:57.0736108",
                             TenantId = 7,
                             UsageAmount = 36.93
                         },
@@ -2785,7 +2821,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 187,
                             ResourceType = 1,
-                            SampleTime = "2020-05-27 12:28:48.5401582",
+                            SampleTime = "2020-05-27 16:08:57.073611",
                             TenantId = 7,
                             UsageAmount = 35.740000000000002
                         },
@@ -2793,7 +2829,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 188,
                             ResourceType = 1,
-                            SampleTime = "2020-05-26 12:28:48.5401584",
+                            SampleTime = "2020-05-26 16:08:57.0736113",
                             TenantId = 7,
                             UsageAmount = 41.600000000000001
                         },
@@ -2801,7 +2837,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 189,
                             ResourceType = 1,
-                            SampleTime = "2020-05-25 12:28:48.5401587",
+                            SampleTime = "2020-05-25 16:08:57.0736116",
                             TenantId = 7,
                             UsageAmount = 34.409999999999997
                         },
@@ -2809,7 +2845,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 190,
                             ResourceType = 1,
-                            SampleTime = "2020-05-24 12:28:48.5401589",
+                            SampleTime = "2020-05-24 16:08:57.0736118",
                             TenantId = 7,
                             UsageAmount = 31.32
                         },
@@ -2817,7 +2853,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 191,
                             ResourceType = 0,
-                            SampleTime = "2020-06-02 12:28:48.5401592",
+                            SampleTime = "2020-06-02 16:08:57.0736121",
                             TenantId = 8,
                             UsageAmount = 12.460000000000001
                         },
@@ -2825,7 +2861,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 192,
                             ResourceType = 0,
-                            SampleTime = "2020-06-01 12:28:48.5401595",
+                            SampleTime = "2020-06-01 16:08:57.0736124",
                             TenantId = 8,
                             UsageAmount = 13.85
                         },
@@ -2833,7 +2869,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 193,
                             ResourceType = 0,
-                            SampleTime = "2020-05-31 12:28:48.5401597",
+                            SampleTime = "2020-05-31 16:08:57.0736126",
                             TenantId = 8,
                             UsageAmount = 9.3300000000000001
                         },
@@ -2841,7 +2877,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 194,
                             ResourceType = 0,
-                            SampleTime = "2020-05-30 12:28:48.54016",
+                            SampleTime = "2020-05-30 16:08:57.0736129",
                             TenantId = 8,
                             UsageAmount = 11.67
                         },
@@ -2849,7 +2885,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 195,
                             ResourceType = 0,
-                            SampleTime = "2020-05-29 12:28:48.5401602",
+                            SampleTime = "2020-05-29 16:08:57.0736132",
                             TenantId = 8,
                             UsageAmount = 12.779999999999999
                         },
@@ -2857,7 +2893,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 196,
                             ResourceType = 0,
-                            SampleTime = "2020-05-28 12:28:48.5401605",
+                            SampleTime = "2020-05-28 16:08:57.0736134",
                             TenantId = 8,
                             UsageAmount = 12.07
                         },
@@ -2865,7 +2901,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 197,
                             ResourceType = 0,
-                            SampleTime = "2020-05-27 12:28:48.5401608",
+                            SampleTime = "2020-05-27 16:08:57.0736137",
                             TenantId = 8,
                             UsageAmount = 28.359999999999999
                         },
@@ -2873,7 +2909,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 198,
                             ResourceType = 0,
-                            SampleTime = "2020-05-26 12:28:48.540161",
+                            SampleTime = "2020-05-26 16:08:57.073614",
                             TenantId = 8,
                             UsageAmount = 11.529999999999999
                         },
@@ -2881,7 +2917,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 199,
                             ResourceType = 0,
-                            SampleTime = "2020-05-25 12:28:48.5401613",
+                            SampleTime = "2020-05-25 16:08:57.0736142",
                             TenantId = 8,
                             UsageAmount = 11.73
                         },
@@ -2889,7 +2925,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 200,
                             ResourceType = 0,
-                            SampleTime = "2020-05-24 12:28:48.5401616",
+                            SampleTime = "2020-05-24 16:08:57.0736145",
                             TenantId = 8,
                             UsageAmount = 3.21
                         },
@@ -2897,7 +2933,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 201,
                             ResourceType = 1,
-                            SampleTime = "2020-06-02 12:28:48.5401618",
+                            SampleTime = "2020-06-02 16:08:57.0736148",
                             TenantId = 8,
                             UsageAmount = 14.41
                         },
@@ -2905,7 +2941,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 202,
                             ResourceType = 1,
-                            SampleTime = "2020-06-01 12:28:48.5401622",
+                            SampleTime = "2020-06-01 16:08:57.0736151",
                             TenantId = 8,
                             UsageAmount = 13.42
                         },
@@ -2913,7 +2949,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 203,
                             ResourceType = 1,
-                            SampleTime = "2020-05-31 12:28:48.5401625",
+                            SampleTime = "2020-05-31 16:08:57.0736154",
                             TenantId = 8,
                             UsageAmount = 10.43
                         },
@@ -2921,7 +2957,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 204,
                             ResourceType = 1,
-                            SampleTime = "2020-05-30 12:28:48.5401627",
+                            SampleTime = "2020-05-30 16:08:57.0736157",
                             TenantId = 8,
                             UsageAmount = 18.460000000000001
                         },
@@ -2929,7 +2965,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 205,
                             ResourceType = 1,
-                            SampleTime = "2020-05-29 12:28:48.540163",
+                            SampleTime = "2020-05-29 16:08:57.0736159",
                             TenantId = 8,
                             UsageAmount = 8.1699999999999999
                         },
@@ -2937,7 +2973,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 206,
                             ResourceType = 1,
-                            SampleTime = "2020-05-28 12:28:48.5401634",
+                            SampleTime = "2020-05-28 16:08:57.0736162",
                             TenantId = 8,
                             UsageAmount = 15.93
                         },
@@ -2945,7 +2981,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 207,
                             ResourceType = 1,
-                            SampleTime = "2020-05-27 12:28:48.5401637",
+                            SampleTime = "2020-05-27 16:08:57.0736165",
                             TenantId = 8,
                             UsageAmount = 31.739999999999998
                         },
@@ -2953,7 +2989,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 208,
                             ResourceType = 1,
-                            SampleTime = "2020-05-26 12:28:48.540164",
+                            SampleTime = "2020-05-26 16:08:57.0736167",
                             TenantId = 8,
                             UsageAmount = 16.600000000000001
                         },
@@ -2961,7 +2997,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 209,
                             ResourceType = 1,
-                            SampleTime = "2020-05-25 12:28:48.5401642",
+                            SampleTime = "2020-05-25 16:08:57.073617",
                             TenantId = 8,
                             UsageAmount = 18.41
                         },
@@ -2969,7 +3005,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 210,
                             ResourceType = 1,
-                            SampleTime = "2020-05-24 12:28:48.5401645",
+                            SampleTime = "2020-05-24 16:08:57.0736173",
                             TenantId = 8,
                             UsageAmount = 16.32
                         },
@@ -2977,7 +3013,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 211,
                             ResourceType = 0,
-                            SampleTime = "2020-06-02 12:28:48.5401647",
+                            SampleTime = "2020-06-02 16:08:57.0736175",
                             TenantId = 9,
                             UsageAmount = 38.460000000000001
                         },
@@ -2985,7 +3021,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 212,
                             ResourceType = 0,
-                            SampleTime = "2020-06-01 12:28:48.5401651",
+                            SampleTime = "2020-06-01 16:08:57.0736178",
                             TenantId = 9,
                             UsageAmount = 29.850000000000001
                         },
@@ -2993,7 +3029,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 213,
                             ResourceType = 0,
-                            SampleTime = "2020-05-31 12:28:48.5401654",
+                            SampleTime = "2020-05-31 16:08:57.0736181",
                             TenantId = 9,
                             UsageAmount = 25.329999999999998
                         },
@@ -3001,7 +3037,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 214,
                             ResourceType = 0,
-                            SampleTime = "2020-05-30 12:28:48.5401657",
+                            SampleTime = "2020-05-30 16:08:57.0736183",
                             TenantId = 9,
                             UsageAmount = 10.67
                         },
@@ -3009,7 +3045,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 215,
                             ResourceType = 0,
-                            SampleTime = "2020-05-29 12:28:48.540166",
+                            SampleTime = "2020-05-29 16:08:57.0736186",
                             TenantId = 9,
                             UsageAmount = 40.780000000000001
                         },
@@ -3017,7 +3053,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 216,
                             ResourceType = 0,
-                            SampleTime = "2020-05-28 12:28:48.5401662",
+                            SampleTime = "2020-05-28 16:08:57.0736189",
                             TenantId = 9,
                             UsageAmount = 18.07
                         },
@@ -3025,7 +3061,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 217,
                             ResourceType = 0,
-                            SampleTime = "2020-05-27 12:28:48.5401665",
+                            SampleTime = "2020-05-27 16:08:57.0736192",
                             TenantId = 9,
                             UsageAmount = 12.359999999999999
                         },
@@ -3033,7 +3069,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 218,
                             ResourceType = 0,
-                            SampleTime = "2020-05-26 12:28:48.5401668",
+                            SampleTime = "2020-05-26 16:08:57.0736194",
                             TenantId = 9,
                             UsageAmount = 20.52
                         },
@@ -3041,7 +3077,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 219,
                             ResourceType = 0,
-                            SampleTime = "2020-05-25 12:28:48.5401671",
+                            SampleTime = "2020-05-25 16:08:57.0736197",
                             TenantId = 9,
                             UsageAmount = 15.73
                         },
@@ -3049,7 +3085,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 220,
                             ResourceType = 0,
-                            SampleTime = "2020-05-24 12:28:48.5401675",
+                            SampleTime = "2020-05-24 16:08:57.0736201",
                             TenantId = 9,
                             UsageAmount = 30.210000000000001
                         },
@@ -3057,7 +3093,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 221,
                             ResourceType = 1,
-                            SampleTime = "2020-06-02 12:28:48.5401678",
+                            SampleTime = "2020-06-02 16:08:57.0736203",
                             TenantId = 9,
                             UsageAmount = 20.41
                         },
@@ -3065,7 +3101,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 222,
                             ResourceType = 1,
-                            SampleTime = "2020-06-01 12:28:48.5401681",
+                            SampleTime = "2020-06-01 16:08:57.0736206",
                             TenantId = 9,
                             UsageAmount = 29.420000000000002
                         },
@@ -3073,7 +3109,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 223,
                             ResourceType = 1,
-                            SampleTime = "2020-05-31 12:28:48.5401684",
+                            SampleTime = "2020-05-31 16:08:57.0736209",
                             TenantId = 9,
                             UsageAmount = 26.43
                         },
@@ -3081,7 +3117,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 224,
                             ResourceType = 1,
-                            SampleTime = "2020-05-30 12:28:48.5401686",
+                            SampleTime = "2020-05-30 16:08:57.0736211",
                             TenantId = 9,
                             UsageAmount = 21.460000000000001
                         },
@@ -3089,7 +3125,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 225,
                             ResourceType = 1,
-                            SampleTime = "2020-05-29 12:28:48.5401689",
+                            SampleTime = "2020-05-29 16:08:57.0736214",
                             TenantId = 9,
                             UsageAmount = 20.170000000000002
                         },
@@ -3097,7 +3133,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 226,
                             ResourceType = 1,
-                            SampleTime = "2020-05-28 12:28:48.5401692",
+                            SampleTime = "2020-05-28 16:08:57.0736217",
                             TenantId = 9,
                             UsageAmount = 13.960000000000001
                         },
@@ -3105,7 +3141,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 227,
                             ResourceType = 1,
-                            SampleTime = "2020-05-27 12:28:48.5401694",
+                            SampleTime = "2020-05-27 16:08:57.0736219",
                             TenantId = 9,
                             UsageAmount = 12.74
                         },
@@ -3113,7 +3149,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 228,
                             ResourceType = 1,
-                            SampleTime = "2020-05-26 12:28:48.5401698",
+                            SampleTime = "2020-05-26 16:08:57.0736222",
                             TenantId = 9,
                             UsageAmount = 13.6
                         },
@@ -3121,7 +3157,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 229,
                             ResourceType = 1,
-                            SampleTime = "2020-05-25 12:28:48.5401701",
+                            SampleTime = "2020-05-25 16:08:57.0736225",
                             TenantId = 9,
                             UsageAmount = 4.4100000000000001
                         },
@@ -3129,7 +3165,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 230,
                             ResourceType = 1,
-                            SampleTime = "2020-05-24 12:28:48.5401704",
+                            SampleTime = "2020-05-24 16:08:57.0736227",
                             TenantId = 9,
                             UsageAmount = 6.3200000000000003
                         },
@@ -3137,7 +3173,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 231,
                             ResourceType = 0,
-                            SampleTime = "2020-06-02 12:28:48.5401708",
+                            SampleTime = "2020-06-02 16:08:57.073623",
                             TenantId = 10,
                             UsageAmount = 30.460000000000001
                         },
@@ -3145,7 +3181,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 232,
                             ResourceType = 0,
-                            SampleTime = "2020-06-01 12:28:48.540171",
+                            SampleTime = "2020-06-01 16:08:57.0736233",
                             TenantId = 10,
                             UsageAmount = 32.850000000000001
                         },
@@ -3153,7 +3189,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 233,
                             ResourceType = 0,
-                            SampleTime = "2020-05-31 12:28:48.5401713",
+                            SampleTime = "2020-05-31 16:08:57.0736236",
                             TenantId = 10,
                             UsageAmount = 35.329999999999998
                         },
@@ -3161,7 +3197,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 234,
                             ResourceType = 0,
-                            SampleTime = "2020-05-30 12:28:48.5401716",
+                            SampleTime = "2020-05-30 16:08:57.0736238",
                             TenantId = 10,
                             UsageAmount = 30.670000000000002
                         },
@@ -3169,7 +3205,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 235,
                             ResourceType = 0,
-                            SampleTime = "2020-05-29 12:28:48.5401718",
+                            SampleTime = "2020-05-29 16:08:57.0736241",
                             TenantId = 10,
                             UsageAmount = 30.780000000000001
                         },
@@ -3177,7 +3213,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 236,
                             ResourceType = 0,
-                            SampleTime = "2020-05-28 12:28:48.5401721",
+                            SampleTime = "2020-05-28 16:08:57.0736244",
                             TenantId = 10,
                             UsageAmount = 10.07
                         },
@@ -3185,7 +3221,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 237,
                             ResourceType = 0,
-                            SampleTime = "2020-05-27 12:28:48.5401724",
+                            SampleTime = "2020-05-27 16:08:57.0736246",
                             TenantId = 10,
                             UsageAmount = 17.359999999999999
                         },
@@ -3193,7 +3229,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 238,
                             ResourceType = 0,
-                            SampleTime = "2020-05-26 12:28:48.5401727",
+                            SampleTime = "2020-05-26 16:08:57.073625",
                             TenantId = 10,
                             UsageAmount = 11.529999999999999
                         },
@@ -3201,7 +3237,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 239,
                             ResourceType = 0,
-                            SampleTime = "2020-05-25 12:28:48.540173",
+                            SampleTime = "2020-05-25 16:08:57.0736253",
                             TenantId = 10,
                             UsageAmount = 10.73
                         },
@@ -3209,7 +3245,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 240,
                             ResourceType = 0,
-                            SampleTime = "2020-05-24 12:28:48.5401733",
+                            SampleTime = "2020-05-24 16:08:57.0736255",
                             TenantId = 10,
                             UsageAmount = 17.210000000000001
                         },
@@ -3217,7 +3253,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 241,
                             ResourceType = 1,
-                            SampleTime = "2020-06-02 12:28:48.5401735",
+                            SampleTime = "2020-06-02 16:08:57.0736258",
                             TenantId = 10,
                             UsageAmount = 20.41
                         },
@@ -3225,7 +3261,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 242,
                             ResourceType = 1,
-                            SampleTime = "2020-06-01 12:28:48.5401738",
+                            SampleTime = "2020-06-01 16:08:57.0736261",
                             TenantId = 10,
                             UsageAmount = 25.420000000000002
                         },
@@ -3233,7 +3269,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 243,
                             ResourceType = 1,
-                            SampleTime = "2020-05-31 12:28:48.540174",
+                            SampleTime = "2020-05-31 16:08:57.0736263",
                             TenantId = 10,
                             UsageAmount = 26.43
                         },
@@ -3241,7 +3277,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 244,
                             ResourceType = 1,
-                            SampleTime = "2020-05-30 12:28:48.5401743",
+                            SampleTime = "2020-05-30 16:08:57.0736266",
                             TenantId = 10,
                             UsageAmount = 21.460000000000001
                         },
@@ -3249,7 +3285,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 245,
                             ResourceType = 1,
-                            SampleTime = "2020-05-29 12:28:48.5401746",
+                            SampleTime = "2020-05-29 16:08:57.0736269",
                             TenantId = 10,
                             UsageAmount = 23.170000000000002
                         },
@@ -3257,7 +3293,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 246,
                             ResourceType = 1,
-                            SampleTime = "2020-05-28 12:28:48.5401748",
+                            SampleTime = "2020-05-28 16:08:57.0736271",
                             TenantId = 10,
                             UsageAmount = 16.93
                         },
@@ -3265,7 +3301,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 247,
                             ResourceType = 1,
-                            SampleTime = "2020-05-27 12:28:48.5401751",
+                            SampleTime = "2020-05-27 16:08:57.0736274",
                             TenantId = 10,
                             UsageAmount = 15.74
                         },
@@ -3273,7 +3309,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 248,
                             ResourceType = 1,
-                            SampleTime = "2020-05-26 12:28:48.5401755",
+                            SampleTime = "2020-05-26 16:08:57.0736277",
                             TenantId = 10,
                             UsageAmount = 20.600000000000001
                         },
@@ -3281,7 +3317,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 249,
                             ResourceType = 1,
-                            SampleTime = "2020-05-25 12:28:48.5401758",
+                            SampleTime = "2020-05-25 16:08:57.073628",
                             TenantId = 10,
                             UsageAmount = 14.41
                         },
@@ -3289,7 +3325,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 250,
                             ResourceType = 1,
-                            SampleTime = "2020-05-24 12:28:48.5401761",
+                            SampleTime = "2020-05-24 16:08:57.0736283",
                             TenantId = 10,
                             UsageAmount = 20.32
                         },
@@ -3297,7 +3333,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 251,
                             ResourceType = 2,
-                            SampleTime = "2020-06-03 12:28:48.5401766",
+                            SampleTime = "2020-06-03 16:08:57.0736286",
                             TenantId = 11,
                             UsageAmount = 1.0
                         },
@@ -3305,7 +3341,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 252,
                             ResourceType = 4,
-                            SampleTime = "2020-06-03 12:28:48.5401769",
+                            SampleTime = "2020-06-03 16:08:57.0736288",
                             TenantId = 11,
                             UsageAmount = 1.0
                         },
@@ -3313,7 +3349,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 253,
                             ResourceType = 3,
-                            SampleTime = "2020-06-03 12:28:48.5401772",
+                            SampleTime = "2020-06-03 16:08:57.0736291",
                             TenantId = 11,
                             UsageAmount = 1.0
                         },
@@ -3321,7 +3357,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 254,
                             ResourceType = 0,
-                            SampleTime = "2020-06-02 12:28:48.5401774",
+                            SampleTime = "2020-06-02 16:08:57.0736294",
                             TenantId = 11,
                             UsageAmount = 25.460000000000001
                         },
@@ -3329,7 +3365,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 255,
                             ResourceType = 0,
-                            SampleTime = "2020-06-01 12:28:48.5401777",
+                            SampleTime = "2020-06-01 16:08:57.0736297",
                             TenantId = 11,
                             UsageAmount = 29.850000000000001
                         },
@@ -3337,7 +3373,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 256,
                             ResourceType = 0,
-                            SampleTime = "2020-05-31 12:28:48.5401779",
+                            SampleTime = "2020-05-31 16:08:57.07363",
                             TenantId = 11,
                             UsageAmount = 15.33
                         },
@@ -3345,7 +3381,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 257,
                             ResourceType = 0,
-                            SampleTime = "2020-05-30 12:28:48.5401782",
+                            SampleTime = "2020-05-30 16:08:57.0736303",
                             TenantId = 11,
                             UsageAmount = 30.670000000000002
                         },
@@ -3353,7 +3389,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 258,
                             ResourceType = 0,
-                            SampleTime = "2020-05-29 12:28:48.5401785",
+                            SampleTime = "2020-05-29 16:08:57.0736305",
                             TenantId = 11,
                             UsageAmount = 40.780000000000001
                         },
@@ -3361,7 +3397,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 259,
                             ResourceType = 0,
-                            SampleTime = "2020-05-28 12:28:48.5401787",
+                            SampleTime = "2020-05-28 16:08:57.0736308",
                             TenantId = 11,
                             UsageAmount = 25.07
                         },
@@ -3369,7 +3405,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 260,
                             ResourceType = 0,
-                            SampleTime = "2020-05-27 12:28:48.540179",
+                            SampleTime = "2020-05-27 16:08:57.0736311",
                             TenantId = 11,
                             UsageAmount = 33.359999999999999
                         },
@@ -3377,7 +3413,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 261,
                             ResourceType = 0,
-                            SampleTime = "2020-05-26 12:28:48.5401792",
+                            SampleTime = "2020-05-26 16:08:57.0736313",
                             TenantId = 11,
                             UsageAmount = 15.529999999999999
                         },
@@ -3385,7 +3421,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 262,
                             ResourceType = 0,
-                            SampleTime = "2020-05-25 12:28:48.5401795",
+                            SampleTime = "2020-05-25 16:08:57.0736316",
                             TenantId = 11,
                             UsageAmount = 14.73
                         },
@@ -3393,7 +3429,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 263,
                             ResourceType = 0,
-                            SampleTime = "2020-05-24 12:28:48.5401798",
+                            SampleTime = "2020-05-24 16:08:57.0736319",
                             TenantId = 11,
                             UsageAmount = 25.289999999999999
                         },
@@ -3401,7 +3437,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 264,
                             ResourceType = 0,
-                            SampleTime = "2020-05-23 12:28:48.54018",
+                            SampleTime = "2020-05-23 16:08:57.0736321",
                             TenantId = 11,
                             UsageAmount = 19.210000000000001
                         },
@@ -3409,7 +3445,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 265,
                             ResourceType = 0,
-                            SampleTime = "2020-05-22 12:28:48.5401803",
+                            SampleTime = "2020-05-22 16:08:57.0736324",
                             TenantId = 11,
                             UsageAmount = 16.239999999999998
                         },
@@ -3417,7 +3453,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 266,
                             ResourceType = 0,
-                            SampleTime = "2020-05-21 12:28:48.5401805",
+                            SampleTime = "2020-05-21 16:08:57.0736327",
                             TenantId = 11,
                             UsageAmount = 19.210000000000001
                         },
@@ -3425,7 +3461,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 267,
                             ResourceType = 0,
-                            SampleTime = "2020-05-20 12:28:48.5401808",
+                            SampleTime = "2020-05-20 16:08:57.073633",
                             TenantId = 11,
                             UsageAmount = 30.149999999999999
                         },
@@ -3433,7 +3469,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 268,
                             ResourceType = 1,
-                            SampleTime = "2020-06-02 12:28:48.5401811",
+                            SampleTime = "2020-06-02 16:08:57.0736332",
                             TenantId = 11,
                             UsageAmount = 12.41
                         },
@@ -3441,7 +3477,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 269,
                             ResourceType = 1,
-                            SampleTime = "2020-06-01 12:28:48.5401813",
+                            SampleTime = "2020-06-01 16:08:57.0736335",
                             TenantId = 11,
                             UsageAmount = 8.4000000000000004
                         },
@@ -3449,7 +3485,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 270,
                             ResourceType = 1,
-                            SampleTime = "2020-05-31 12:28:48.5401816",
+                            SampleTime = "2020-05-31 16:08:57.0736338",
                             TenantId = 11,
                             UsageAmount = 6.4299999999999997
                         },
@@ -3457,7 +3493,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 271,
                             ResourceType = 1,
-                            SampleTime = "2020-05-30 12:28:48.5401819",
+                            SampleTime = "2020-05-30 16:08:57.073634",
                             TenantId = 11,
                             UsageAmount = 13.460000000000001
                         },
@@ -3465,7 +3501,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 272,
                             ResourceType = 1,
-                            SampleTime = "2020-05-29 12:28:48.5401821",
+                            SampleTime = "2020-05-29 16:08:57.0736379",
                             TenantId = 11,
                             UsageAmount = 10.17
                         },
@@ -3473,7 +3509,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 273,
                             ResourceType = 1,
-                            SampleTime = "2020-05-28 12:28:48.5401825",
+                            SampleTime = "2020-05-28 16:08:57.0736382",
                             TenantId = 11,
                             UsageAmount = 16.93
                         },
@@ -3481,7 +3517,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 274,
                             ResourceType = 1,
-                            SampleTime = "2020-05-27 12:28:48.5401827",
+                            SampleTime = "2020-05-27 16:08:57.0736385",
                             TenantId = 11,
                             UsageAmount = 10.74
                         },
@@ -3489,7 +3525,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 275,
                             ResourceType = 1,
-                            SampleTime = "2020-05-26 12:28:48.540183",
+                            SampleTime = "2020-05-26 16:08:57.0736388",
                             TenantId = 11,
                             UsageAmount = 19.600000000000001
                         },
@@ -3497,7 +3533,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 276,
                             ResourceType = 1,
-                            SampleTime = "2020-05-25 12:28:48.5401833",
+                            SampleTime = "2020-05-25 16:08:57.0736391",
                             TenantId = 11,
                             UsageAmount = 12.41
                         },
@@ -3505,7 +3541,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 277,
                             ResourceType = 1,
-                            SampleTime = "2020-05-24 12:28:48.5401835",
+                            SampleTime = "2020-05-24 16:08:57.0736393",
                             TenantId = 11,
                             UsageAmount = 15.32
                         },
@@ -3513,7 +3549,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 278,
                             ResourceType = 1,
-                            SampleTime = "2020-05-23 12:28:48.5401838",
+                            SampleTime = "2020-05-23 16:08:57.0736396",
                             TenantId = 11,
                             UsageAmount = 21.399999999999999
                         },
@@ -3521,7 +3557,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 279,
                             ResourceType = 1,
-                            SampleTime = "2020-05-22 12:28:48.5401841",
+                            SampleTime = "2020-05-22 16:08:57.0736399",
                             TenantId = 11,
                             UsageAmount = 23.66
                         },
@@ -3529,7 +3565,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 280,
                             ResourceType = 1,
-                            SampleTime = "2020-05-21 12:28:48.5401844",
+                            SampleTime = "2020-05-21 16:08:57.0736401",
                             TenantId = 11,
                             UsageAmount = 13.109999999999999
                         },
@@ -3537,7 +3573,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 281,
                             ResourceType = 1,
-                            SampleTime = "2020-05-20 12:28:48.5401846",
+                            SampleTime = "2020-05-20 16:08:57.0736404",
                             TenantId = 11,
                             UsageAmount = 18.390000000000001
                         });

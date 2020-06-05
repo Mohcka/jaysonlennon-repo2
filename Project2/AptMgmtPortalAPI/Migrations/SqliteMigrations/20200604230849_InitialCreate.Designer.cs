@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
 {
     [DbContext(typeof(TestAptMgmtDbContext))]
-    [Migration("20200604192841_InitialCreate")]
+    [Migration("20200604230849_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -48,117 +48,117 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                         {
                             AgreementId = 1,
                             AgreementTemplateId = 1,
-                            EndDate = new DateTime(2020, 7, 4, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(5198),
-                            SignedDate = new DateTime(2020, 3, 6, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
-                            StartDate = new DateTime(2020, 3, 6, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
+                            EndDate = new DateTime(2020, 7, 4, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(8070),
+                            SignedDate = new DateTime(2020, 3, 6, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
+                            StartDate = new DateTime(2020, 3, 6, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
                             TenantId = 1
                         },
                         new
                         {
                             AgreementId = 2,
                             AgreementTemplateId = 2,
-                            EndDate = new DateTime(2020, 7, 4, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(6274),
-                            SignedDate = new DateTime(2019, 12, 7, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
-                            StartDate = new DateTime(2019, 12, 7, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
+                            EndDate = new DateTime(2020, 7, 4, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(9156),
+                            SignedDate = new DateTime(2019, 12, 7, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
+                            StartDate = new DateTime(2019, 12, 7, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
                             TenantId = 2
                         },
                         new
                         {
                             AgreementId = 3,
                             AgreementTemplateId = 3,
-                            EndDate = new DateTime(2020, 7, 4, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(6304),
-                            SignedDate = new DateTime(2019, 6, 10, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
-                            StartDate = new DateTime(2019, 6, 10, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
+                            EndDate = new DateTime(2020, 7, 4, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(9186),
+                            SignedDate = new DateTime(2019, 6, 10, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
+                            StartDate = new DateTime(2019, 6, 10, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
                             TenantId = 3
                         },
                         new
                         {
                             AgreementId = 4,
                             AgreementTemplateId = 1,
-                            EndDate = new DateTime(2020, 7, 4, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(6310),
-                            SignedDate = new DateTime(2020, 3, 6, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
-                            StartDate = new DateTime(2020, 3, 6, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
+                            EndDate = new DateTime(2020, 7, 4, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(9190),
+                            SignedDate = new DateTime(2020, 3, 6, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
+                            StartDate = new DateTime(2020, 3, 6, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
                             TenantId = 4
                         },
                         new
                         {
                             AgreementId = 5,
                             AgreementTemplateId = 2,
-                            EndDate = new DateTime(2020, 7, 4, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(6313),
-                            SignedDate = new DateTime(2019, 12, 7, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
-                            StartDate = new DateTime(2019, 12, 7, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
+                            EndDate = new DateTime(2020, 7, 4, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(9193),
+                            SignedDate = new DateTime(2019, 12, 7, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
+                            StartDate = new DateTime(2019, 12, 7, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
                             TenantId = 5
                         },
                         new
                         {
                             AgreementId = 6,
                             AgreementTemplateId = 3,
-                            EndDate = new DateTime(2020, 7, 4, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(6316),
-                            SignedDate = new DateTime(2019, 6, 10, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
-                            StartDate = new DateTime(2019, 6, 10, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
+                            EndDate = new DateTime(2020, 7, 4, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(9196),
+                            SignedDate = new DateTime(2019, 6, 10, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
+                            StartDate = new DateTime(2019, 6, 10, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
                             TenantId = 6
                         },
                         new
                         {
                             AgreementId = 7,
                             AgreementTemplateId = 1,
-                            EndDate = new DateTime(2020, 7, 4, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(6319),
-                            SignedDate = new DateTime(2020, 3, 6, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
-                            StartDate = new DateTime(2020, 3, 6, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
+                            EndDate = new DateTime(2020, 7, 4, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(9199),
+                            SignedDate = new DateTime(2020, 3, 6, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
+                            StartDate = new DateTime(2020, 3, 6, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
                             TenantId = 7
                         },
                         new
                         {
                             AgreementId = 8,
                             AgreementTemplateId = 2,
-                            EndDate = new DateTime(2020, 7, 4, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(6322),
-                            SignedDate = new DateTime(2019, 12, 7, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
-                            StartDate = new DateTime(2019, 12, 7, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
+                            EndDate = new DateTime(2020, 7, 4, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(9202),
+                            SignedDate = new DateTime(2019, 12, 7, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
+                            StartDate = new DateTime(2019, 12, 7, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
                             TenantId = 8
                         },
                         new
                         {
                             AgreementId = 9,
                             AgreementTemplateId = 3,
-                            EndDate = new DateTime(2020, 7, 4, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(6326),
-                            SignedDate = new DateTime(2019, 6, 10, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
-                            StartDate = new DateTime(2019, 6, 10, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
+                            EndDate = new DateTime(2020, 7, 4, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(9206),
+                            SignedDate = new DateTime(2019, 6, 10, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
+                            StartDate = new DateTime(2019, 6, 10, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
                             TenantId = 9
                         },
                         new
                         {
                             AgreementId = 10,
                             AgreementTemplateId = 1,
-                            EndDate = new DateTime(2020, 7, 4, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(6329),
-                            SignedDate = new DateTime(2020, 3, 6, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
-                            StartDate = new DateTime(2020, 3, 6, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
+                            EndDate = new DateTime(2020, 7, 4, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(9209),
+                            SignedDate = new DateTime(2020, 3, 6, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
+                            StartDate = new DateTime(2020, 3, 6, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
                             TenantId = 10
                         },
                         new
                         {
                             AgreementId = 11,
                             AgreementTemplateId = 1,
-                            EndDate = new DateTime(2020, 7, 4, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(6332),
-                            SignedDate = new DateTime(2020, 3, 6, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
-                            StartDate = new DateTime(2020, 3, 6, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
+                            EndDate = new DateTime(2020, 7, 4, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(9212),
+                            SignedDate = new DateTime(2020, 3, 6, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
+                            StartDate = new DateTime(2020, 3, 6, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
                             TenantId = 11
                         },
                         new
                         {
                             AgreementId = 12,
                             AgreementTemplateId = 2,
-                            EndDate = new DateTime(2020, 7, 4, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(6335),
-                            SignedDate = new DateTime(2020, 3, 6, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
-                            StartDate = new DateTime(2020, 3, 6, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
+                            EndDate = new DateTime(2020, 7, 4, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(9215),
+                            SignedDate = new DateTime(2020, 3, 6, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
+                            StartDate = new DateTime(2020, 3, 6, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
                             TenantId = 11
                         },
                         new
                         {
                             AgreementId = 13,
                             AgreementTemplateId = 3,
-                            EndDate = new DateTime(2020, 7, 4, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(6339),
-                            SignedDate = new DateTime(2020, 3, 6, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
-                            StartDate = new DateTime(2020, 3, 6, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
+                            EndDate = new DateTime(2020, 7, 4, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(9218),
+                            SignedDate = new DateTime(2020, 3, 6, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
+                            StartDate = new DateTime(2020, 3, 6, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
                             TenantId = 11
                         });
                 });
@@ -185,32 +185,59 @@ namespace AptMgmtPortalAPI.Migrations.SqliteMigrations
                             AgreementTemplateId = 1,
                             Text = @"
 1. PROPERTY: TENANT agrees to rent from LANDLORD and LANDLORD agrees to rent to TENANT, City of Loose Coupling, State of Texas (the PREMISES).
+
 2. USE OF THE PREMISES: The TENANT may use the PREMISES only as a single-family residence.
+
 3. UTILITIES: The TENANT will pay for the following utilities: Water and Sewer, Electricity, Garbage Removal, Gas, Oil.
+
 4. EVICTION: If the TENANT does not pay the rent within 30 days of the date when it is due, the TENANT may be evicted. The LANDLORD may also evict the TENANT if the TENANT does not comply with all of the terms of this Lease, or for any other causes allowed by law. If evicted, the TENANT must continue to pay the rent for the rest of the term. The TENANT must also pay all costs, including reasonable attorney fees, related to the eviction and the collection of any monies owed to the LANDLORD, along with the cost of re-entering, re-renting, cleaning and repairing the PREMISES. Rent received from any new tenant during the remaining term of this lease will be applied by the LANDLORD to reduce rent only, which may be owed by the TENANT. 
+
 5. PAYMENTS BY LANDLORD: If the TENANT fails to comply with the terms of this Lease, the LANDLORD may take any required action and charge the cost, including reasonable attorney fees, to the TENANT. Failure to pay such costs upon demand is a violation of this Lease.
+
 6. CARE OF THE PREMISES: The TENANT has examined the PREMISES, including (where applicable) the living quarters, all facilities, furniture and appliances, and is satisfied with its present physical condition. The TENANT agrees to maintain the PREMISES in as good condition as it is at the start of this Lease except for ordinary wear and tear. The TENANT must pay for all repairs, replacements, and damages, whether or not caused by the act or neglect of the TENANT. The TENANT will remove all of the TENANT's property at the end of this Lease. Any property that is left becomes the property of the LANDLORD and may be thrown out. All of TENANT'S garbage will be disposed of properly by TENANT in the appropriate receptacles for garbage collection. Accumulations of garbage in and around the PREMISES or depositing by TENANT or those residing with TENANT of garbage in areas not designated and designed as garbage receptacles shall constitute a violation of this lease. TENANT shall generally maintain the PREMISES in a neat and orderly condition. Damage or destruction by TENANT, TENANT's employees or TENANT's visitors of the PREMISES shall constitute a violation of this Lease.
+
 7. DESTRUCTION OF PREMISES: If the PREMISES are destroyed through no fault of the TENANT, the TENANT's employees or TENANT's visitors, then the Lease will end, and the TENANT will pay rent up to the date of destruction.
+
 8. INTERRUPTION OF SERVICES: The LANDLORD is not responsible for any inconvenience or interruption of services due to repairs, improvements or for any reason beyond the LANDLORD’s control.
+
 9. ALTERATIONS: The TENANT must get the LANDLORD's prior written consent to alter, improve, paint or wallpaper the PREMISES. Alterations, additions, and improvements become the LANDLORD's property.
+
 10. COMPLIANCE WITH LAWS: The TENANT must comply with laws, orders, rules, and requirements of governmental authorities and insurance companies which have issued or are about to issue policies covering the PREMISES and/or its contents.
+
 11. NO WAIVER BY LANDLORD: The LANDLORD does not give up or waive any rights by accepting rent or by failing to enforce any terms of this Lease.
+
 12. NO ASSIGNMENT OR SUBLEASE: The TENANT may not sublease the PREMISES or assign this Lease without the LANDLORD's prior written consent.
+
 13. ENTRY BY LANDLORD: Upon reasonable notice, the LANDLORD may enter the PREMISES to provide services, inspect, repair, improve or show it. The TENANT must notify the LANDLORD if the TENANT is away for 14 days or more. In case of an emergency or the TENANT's absence, the LANDLORD may enter the PREMISES without the TENANT's consent. 
+
 14. QUIET ENJOYMENT: The TENANT may live in and use the PREMISES without interference subject to the terms of this Lease.
+
 15. SUBORDINATION: This Lease and the TENANT's rights are subject and subordinate to present and future mortgages on the property which include the PREMISES. The LANDLORD may execute any papers on the TENANT's behalf as the TENANT's attorney in fact to accomplish this.
+
 16. HAZARDOUS USE: The TENANT will not keep anything in the PREMISES which is dangerous, flammable, explosive or which might increase the danger of fire or any other hazard, or which would increase LANDLORD's fire or hazard insurance.
+
 17. INJURY OR DAMAGE: The TENANT will be responsible for any injury or damage caused by the act or neglect of the TENANT, the TENANT's employees or TENANT's visitors. The LANDLORD is not responsible for any injury or damage unless due to the negligence or improper conduct of the LANDLORD.
+
 18. RENEWALS AND CHANGES IN LEASE: Upon expiration of the rental term provided for above, this lease shall automatically renew itself, indefinitely, for successive one-month periods, unless modified by the parties. The LANDLORD may modify this lease or offer the TENANT a new lease by forwarding to the TENANT a copy of the proposed changes or a copy of the new lease. If changes in this lease or a new lease are offered, the TENANT must notify the LANDLORD of the TENANT's decision to stay within thirty (30) days of the date the proposed changes or the copy of the new lease is received by the TENANT. If the TENANT fails to accept the lease changes or the new lease within thirty (30) days of the date the proposed changes or new lease is offered, the TENANT may be evicted by the LANDLORD, as provided for in State law. Nevertheless, if the rent is increased by the lease changes or new lease, the TENANT will be obligated to pay the new rent, regardless of whether the TENANT has affirmatively accepted the lease changes or new lease, if the TENANT continues to occupy the property on the date the new rent becomes effective.
+
 19. PETS: No dogs, cats, or other animals are allowed on the PREMISES without the LANDLORD's prior written consent.
+
 20. NOTICES: All notices provided by this Lease must be written and delivered personally or by certified mail, return receipt requested, to the parties at their addresses listed above, or to such other address as the parties may from time to time designate. Notices to the LANDLORD must also be sent to the LANDLORD's agent listed above (if any).
+
 21. SIGNS: The TENANT may not put any sign or projection (such as a T.V. or radio antenna) in or out of the windows or exteriors of the PREMISES without the LANDLORD's prior written consent.
+
 22. HOLDOVER RENT: Should this Lease be terminated, either through a valid notice of dispossession by the LANDLORD, or through order of a court, and should TENANT remain on the PREMISES thereafter, then TENANT shall be liable to pay rent at a rate of double the base rent provided for under this lease, from the date of termination until such time as TENANT vacates the PREMISES, whether TENANT vacates the PREMISES voluntarily or through enforcement of an order for eviction.
+
 23. VALIDITY OF LEASE: If a clause or provision of this Lease is legally invalid, the rest of this Lease remains in effect. If a clause or provision of this lease is ambiguous, and it may be interpreted in a manner either consistent or inconsistent with existing law, it shall be interpreted in a manner consistent with existing law.
+
 24. PARTIES: The LANDLORD and each of the TENANTS are bound by this Lease. All parties who lawfully succeed to their rights and responsibilities are also bound.
+
 25. GENDER: The use of any particular gender (masculine, feminine or neuter) and case (singular or plural) in this Lease is for convenience, only. No inference is to be drawn therefrom. The correct gender and case is to be freely substituted throughout, as appropriate.
+
 26. TENANT'S ACKNOWLEDGMENT: The TENANT acknowledges having read all of the terms and conditions of this lease and the attached rules and regulations. TENANT acknowledges that no oral representations have been made to him by the LANDLORD or the LANDLORD's agent(s) other than the representations contained in this Lease. The TENANT acknowledges that he/she is relying only upon the promises and representations contained in this Lease.
+
 27. ENTIRE LEASE: All promises the LANDLORD has made are contained in this written Lease. This Lease can only be changed by an agreement in writing by both the TENANT and the LANDLORD.
+
 28. SIGNATURES: The LANDLORD and the TENANT agree to the terms of this Lease. If this Lease is made by a corporation, its proper corporate officers sign and its corporate seal is affixed.
                 ",
                             Title = "Lease Agreement"
@@ -240,6 +267,7 @@ Risk and Title of Goods & Property
 Warranty
 
 Sender.Company has, to the best of their knowledge has provided installation and quality parts for overall best quality of product. Furthermore all parts will be warrantied for a 12 month period after installation for any technical defects.
+
 Acceptance
 
 By signing below, Customer understands and accepts all terms and conditions outlined in this electrical services agreement.
@@ -253,11 +281,13 @@ By signing below, Customer understands and accepts all terms and conditions outl
 Internet Service Agreement
 
 Terms of use.
+
 Term
 
 The Agreement will run from START DATE until the services in this Agreement have been provided in full unless premature termination is allowed by this Agreement.
 
 The length of the Agreement may be changed provided that both Sender.Company and Signer.Company give prior notice via written consent.
+
 Payment, Pricing, and Tax
 
 Sender.Company will pay PAYMENT to Signer.Company for the services detailed in this Agreement.
@@ -280,6 +310,7 @@ Any intellectual property which is produced under this Agreement is exclusively 
 Signer.Company may only use the intellectual property with explicit permission from Sender.Company.
 
 Signer.Company will be liable for any damages arising from the unpermitted use of the intellectual property.
+
 Licensing
 
 If Sender.Company buys any equipment as part of the Service, Signer.Company grants Sender.Company a limited license to use software provided with the equipment subject to the following terms:
@@ -293,6 +324,7 @@ If Sender.Company buys any equipment as part of the Service, Signer.Company gran
 Indemnification
 
 Each party agrees to indemnify the other party and its respective permitted successors, assigns, officers, affiliates, agents and employees against attorney’s fees and any claims and costs resulting from any actions or omissions of the indemnifying party or its permitted successors, assigns, officers, affiliates, agents and employees in relation to this Agreement, unless paid as part of a relevant insurance policy or required by applicable law.
+
 Termination
 
     If any of the following events occur in respect to one party, the other party may terminate the agreement at their sole discretion with prior written notice:
@@ -304,6 +336,7 @@ Termination
 Export Compliance
 
 Transferring of technologies across national boundaries are regulated by United States law. Sender.Company agrees not to export any technologies transmitted via Signer.Company prior to obtaining any relevant export licenses or official government approval.
+
 Force Majeure
 
 Force Majeure refers to any act beyond the reasonable control of either party, including but not limited to acts of God, fires, and war.
@@ -311,28 +344,31 @@ Force Majeure refers to any act beyond the reasonable control of either party, i
 In the case of events of Force Majeure interfering with the completion of this Agreement, neither party shall be held responsible by the other.
 
 If either party’s agreed obligations are restricted by Force Majeure, the affected party must take reasonable action to fulfill their obligations. The other party must continue to fulfill their own agreed obligations.
+
 Notice and Payment
 
 Any notices or other forms of communication between Signer.Company and Sender.Company must be delivered via written notice to the following addresses:
 
-Address
-
-To Sender.Company:
 Laws
 
 This Agreement is governable in relation to the laws of LAW.
+
 Successors
 
 This agreement will be binding for and will inure to the benefit of the Parties hereto, their administrators, successors, assigns and heirs.
+
 Assignability
 
 The obligations of Signer.Company shall not be transferred in any way or for any reason to another party, unless Sender.Company has given prior notice via approval in writing.
+
 Waiver
 
 Any waiver of any default by either Party shall not be accepted as a waiver of any subsequent or prior default of other or the same provisions of this agreement.
+
 Severability
 
 If any elements of this Agreement become invalid or unenforceable, all other elements of the Agreement will remain valid and enforceable.
+
 Integration
 
 This Agreement represents the entire agreement between Sender.Company and Signer.Company, relevant to the content of the Agreement.
@@ -361,32 +397,32 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         new
                         {
                             BillingPeriodId = 1,
-                            PeriodEnd = new DateTime(2020, 3, 6, 12, 28, 40, 942, DateTimeKind.Local).AddTicks(2716),
-                            PeriodStart = new DateTime(2020, 2, 5, 12, 28, 40, 942, DateTimeKind.Local).AddTicks(2223)
+                            PeriodEnd = new DateTime(2020, 3, 6, 16, 8, 49, 48, DateTimeKind.Local).AddTicks(5576),
+                            PeriodStart = new DateTime(2020, 2, 5, 16, 8, 49, 48, DateTimeKind.Local).AddTicks(5091)
                         },
                         new
                         {
                             BillingPeriodId = 2,
-                            PeriodEnd = new DateTime(2020, 4, 5, 12, 28, 40, 942, DateTimeKind.Local).AddTicks(3238),
-                            PeriodStart = new DateTime(2020, 3, 6, 12, 28, 40, 942, DateTimeKind.Local).AddTicks(3217)
+                            PeriodEnd = new DateTime(2020, 4, 5, 16, 8, 49, 48, DateTimeKind.Local).AddTicks(6079),
+                            PeriodStart = new DateTime(2020, 3, 6, 16, 8, 49, 48, DateTimeKind.Local).AddTicks(6061)
                         },
                         new
                         {
                             BillingPeriodId = 3,
-                            PeriodEnd = new DateTime(2020, 5, 5, 12, 28, 40, 942, DateTimeKind.Local).AddTicks(3252),
-                            PeriodStart = new DateTime(2020, 4, 5, 12, 28, 40, 942, DateTimeKind.Local).AddTicks(3249)
+                            PeriodEnd = new DateTime(2020, 5, 5, 16, 8, 49, 48, DateTimeKind.Local).AddTicks(6092),
+                            PeriodStart = new DateTime(2020, 4, 5, 16, 8, 49, 48, DateTimeKind.Local).AddTicks(6089)
                         },
                         new
                         {
                             BillingPeriodId = 4,
-                            PeriodEnd = new DateTime(2020, 5, 20, 12, 28, 40, 942, DateTimeKind.Local).AddTicks(3257),
-                            PeriodStart = new DateTime(2020, 5, 5, 12, 28, 40, 942, DateTimeKind.Local).AddTicks(3254)
+                            PeriodEnd = new DateTime(2020, 5, 20, 16, 8, 49, 48, DateTimeKind.Local).AddTicks(6097),
+                            PeriodStart = new DateTime(2020, 5, 5, 16, 8, 49, 48, DateTimeKind.Local).AddTicks(6094)
                         },
                         new
                         {
                             BillingPeriodId = 5,
-                            PeriodEnd = new DateTime(2020, 6, 19, 12, 28, 40, 942, DateTimeKind.Local).AddTicks(3262),
-                            PeriodStart = new DateTime(2020, 5, 20, 12, 28, 40, 942, DateTimeKind.Local).AddTicks(3260)
+                            PeriodEnd = new DateTime(2020, 6, 19, 16, 8, 49, 48, DateTimeKind.Local).AddTicks(6102),
+                            PeriodStart = new DateTime(2020, 5, 20, 16, 8, 49, 48, DateTimeKind.Local).AddTicks(6099)
                         });
                 });
 
@@ -441,8 +477,8 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             OpenNotes = "No water",
                             OpeningUserId = 1,
                             ResolutionNotes = "Fully restored.",
-                            TimeClosed = new DateTime(2020, 6, 4, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(9298),
-                            TimeOpened = new DateTime(2020, 3, 6, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
+                            TimeClosed = new DateTime(2020, 6, 4, 16, 8, 49, 48, DateTimeKind.Local).AddTicks(2350),
+                            TimeOpened = new DateTime(2020, 3, 6, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
                             UnitNumber = "101"
                         },
                         new
@@ -454,8 +490,8 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             OpenNotes = "No Interet",
                             OpeningUserId = 1,
                             ResolutionNotes = "Fixed",
-                            TimeClosed = new DateTime(2020, 5, 5, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
-                            TimeOpened = new DateTime(2020, 3, 6, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
+                            TimeClosed = new DateTime(2020, 5, 5, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
+                            TimeOpened = new DateTime(2020, 3, 6, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
                             UnitNumber = "101"
                         },
                         new
@@ -467,8 +503,8 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             OpenNotes = "Dirty water",
                             OpeningUserId = 1,
                             ResolutionNotes = "Fixed",
-                            TimeClosed = new DateTime(2020, 5, 5, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
-                            TimeOpened = new DateTime(2019, 12, 7, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
+                            TimeClosed = new DateTime(2020, 5, 5, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
+                            TimeOpened = new DateTime(2019, 12, 7, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
                             UnitNumber = "101"
                         },
                         new
@@ -480,8 +516,8 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             OpenNotes = "Low water pressure",
                             OpeningUserId = 2,
                             ResolutionNotes = "Fixed",
-                            TimeClosed = new DateTime(2020, 5, 5, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
-                            TimeOpened = new DateTime(2020, 3, 6, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
+                            TimeClosed = new DateTime(2020, 5, 5, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
+                            TimeOpened = new DateTime(2020, 3, 6, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
                             UnitNumber = "102"
                         },
                         new
@@ -493,8 +529,8 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             OpenNotes = "No water",
                             OpeningUserId = 3,
                             ResolutionNotes = "Fixed",
-                            TimeClosed = new DateTime(2020, 5, 5, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
-                            TimeOpened = new DateTime(2020, 3, 6, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
+                            TimeClosed = new DateTime(2020, 5, 5, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
+                            TimeOpened = new DateTime(2020, 3, 6, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
                             UnitNumber = "103"
                         },
                         new
@@ -503,7 +539,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             InternalNotes = "Call electric company",
                             OpenNotes = "Power out",
                             OpeningUserId = 4,
-                            TimeOpened = new DateTime(2020, 3, 6, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
+                            TimeOpened = new DateTime(2020, 3, 6, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
                             UnitNumber = "104"
                         },
                         new
@@ -512,7 +548,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             InternalNotes = "Call plumber",
                             OpenNotes = "Low water pressure",
                             OpeningUserId = 5,
-                            TimeOpened = new DateTime(2020, 3, 6, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
+                            TimeOpened = new DateTime(2020, 3, 6, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
                             UnitNumber = "105"
                         },
                         new
@@ -521,7 +557,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             InternalNotes = "Call Plumber",
                             OpenNotes = "No hot water",
                             OpeningUserId = 6,
-                            TimeOpened = new DateTime(2020, 3, 6, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
+                            TimeOpened = new DateTime(2020, 3, 6, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
                             UnitNumber = "106"
                         },
                         new
@@ -530,7 +566,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             InternalNotes = "Send maintenance",
                             OpenNotes = "Oven not working",
                             OpeningUserId = 7,
-                            TimeOpened = new DateTime(2020, 3, 6, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
+                            TimeOpened = new DateTime(2020, 3, 6, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
                             UnitNumber = "107"
                         },
                         new
@@ -539,7 +575,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             InternalNotes = "Send maintenance",
                             OpenNotes = "Dead lightbulb",
                             OpeningUserId = 8,
-                            TimeOpened = new DateTime(2020, 3, 6, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
+                            TimeOpened = new DateTime(2020, 3, 6, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
                             UnitNumber = "108"
                         },
                         new
@@ -551,8 +587,8 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             OpenNotes = "Low water pressure",
                             OpeningUserId = 13,
                             ResolutionNotes = "Fixed",
-                            TimeClosed = new DateTime(2020, 5, 22, 12, 28, 40, 942, DateTimeKind.Local).AddTicks(425),
-                            TimeOpened = new DateTime(2020, 5, 21, 12, 28, 40, 942, DateTimeKind.Local).AddTicks(411),
+                            TimeClosed = new DateTime(2020, 5, 22, 16, 8, 49, 48, DateTimeKind.Local).AddTicks(3430),
+                            TimeOpened = new DateTime(2020, 5, 21, 16, 8, 49, 48, DateTimeKind.Local).AddTicks(3417),
                             UnitNumber = "111"
                         },
                         new
@@ -561,7 +597,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             InternalNotes = "Call electric company",
                             OpenNotes = "Power out",
                             OpeningUserId = 2,
-                            TimeOpened = new DateTime(2020, 5, 25, 12, 28, 40, 942, DateTimeKind.Local).AddTicks(428),
+                            TimeOpened = new DateTime(2020, 5, 25, 16, 8, 49, 48, DateTimeKind.Local).AddTicks(3433),
                             UnitNumber = "111"
                         },
                         new
@@ -570,7 +606,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             InternalNotes = "Send maintenance",
                             OpenNotes = "Leaky faucet",
                             OpeningUserId = 13,
-                            TimeOpened = new DateTime(2020, 5, 28, 12, 28, 40, 942, DateTimeKind.Local).AddTicks(431),
+                            TimeOpened = new DateTime(2020, 5, 28, 16, 8, 49, 48, DateTimeKind.Local).AddTicks(3436),
                             UnitNumber = "111"
                         },
                         new
@@ -579,7 +615,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             InternalNotes = "Call plumber",
                             OpenNotes = "Clogged toilet",
                             OpeningUserId = 13,
-                            TimeOpened = new DateTime(2020, 6, 1, 12, 28, 40, 942, DateTimeKind.Local).AddTicks(435),
+                            TimeOpened = new DateTime(2020, 6, 1, 16, 8, 49, 48, DateTimeKind.Local).AddTicks(3439),
                             UnitNumber = "111"
                         });
                 });
@@ -617,7 +653,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 2,
                             TenantId = 1,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(3388)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(6418)
                         },
                         new
                         {
@@ -626,7 +662,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 0,
                             TenantId = 1,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(3928)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7126)
                         },
                         new
                         {
@@ -635,7 +671,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 4,
                             TenantId = 1,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(3950)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7146)
                         },
                         new
                         {
@@ -644,7 +680,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 3,
                             TenantId = 1,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(3953)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7149)
                         },
                         new
                         {
@@ -653,7 +689,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 1,
                             TenantId = 1,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(3956)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7152)
                         },
                         new
                         {
@@ -662,7 +698,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 2,
                             TenantId = 2,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(3959)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7156)
                         },
                         new
                         {
@@ -671,7 +707,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 0,
                             TenantId = 2,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(3962)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7158)
                         },
                         new
                         {
@@ -680,7 +716,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 4,
                             TenantId = 2,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(3965)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7161)
                         },
                         new
                         {
@@ -689,7 +725,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 3,
                             TenantId = 2,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(3968)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7164)
                         },
                         new
                         {
@@ -698,7 +734,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 1,
                             TenantId = 2,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(3970)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7167)
                         },
                         new
                         {
@@ -707,7 +743,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 2,
                             TenantId = 3,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(3973)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7169)
                         },
                         new
                         {
@@ -716,7 +752,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 0,
                             TenantId = 3,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(3976)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7172)
                         },
                         new
                         {
@@ -725,7 +761,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 4,
                             TenantId = 3,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(3979)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7174)
                         },
                         new
                         {
@@ -734,7 +770,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 3,
                             TenantId = 3,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(3982)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7177)
                         },
                         new
                         {
@@ -743,7 +779,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 1,
                             TenantId = 3,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(3985)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7179)
                         },
                         new
                         {
@@ -752,7 +788,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 2,
                             TenantId = 4,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(3988)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7182)
                         },
                         new
                         {
@@ -761,7 +797,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 0,
                             TenantId = 4,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(3992)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7185)
                         },
                         new
                         {
@@ -770,7 +806,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 4,
                             TenantId = 4,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(3995)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7187)
                         },
                         new
                         {
@@ -779,7 +815,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 3,
                             TenantId = 4,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(3998)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7190)
                         },
                         new
                         {
@@ -788,7 +824,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 1,
                             TenantId = 4,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(4002)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7192)
                         },
                         new
                         {
@@ -797,7 +833,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 2,
                             TenantId = 5,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(4004)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7194)
                         },
                         new
                         {
@@ -806,7 +842,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 0,
                             TenantId = 5,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(4008)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7197)
                         },
                         new
                         {
@@ -815,7 +851,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 4,
                             TenantId = 5,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(4011)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7200)
                         },
                         new
                         {
@@ -824,7 +860,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 3,
                             TenantId = 5,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(4013)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7203)
                         },
                         new
                         {
@@ -833,7 +869,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 1,
                             TenantId = 5,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(4016)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7205)
                         },
                         new
                         {
@@ -842,7 +878,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 2,
                             TenantId = 6,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(4019)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7208)
                         },
                         new
                         {
@@ -851,7 +887,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 0,
                             TenantId = 6,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(4021)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7210)
                         },
                         new
                         {
@@ -860,7 +896,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 4,
                             TenantId = 6,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(4024)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7213)
                         },
                         new
                         {
@@ -869,7 +905,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 3,
                             TenantId = 6,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(4027)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7216)
                         },
                         new
                         {
@@ -878,7 +914,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 1,
                             TenantId = 6,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(4029)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7218)
                         },
                         new
                         {
@@ -887,7 +923,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 2,
                             TenantId = 7,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(4032)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7221)
                         },
                         new
                         {
@@ -896,7 +932,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 0,
                             TenantId = 7,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(4034)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7223)
                         },
                         new
                         {
@@ -905,7 +941,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 4,
                             TenantId = 7,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(4037)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7226)
                         },
                         new
                         {
@@ -914,7 +950,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 3,
                             TenantId = 7,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(4040)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7228)
                         },
                         new
                         {
@@ -923,7 +959,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 1,
                             TenantId = 7,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(4043)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7231)
                         },
                         new
                         {
@@ -932,7 +968,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 2,
                             TenantId = 8,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(4045)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7233)
                         },
                         new
                         {
@@ -941,7 +977,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 0,
                             TenantId = 8,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(4048)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7236)
                         },
                         new
                         {
@@ -950,7 +986,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 4,
                             TenantId = 8,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(4051)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7238)
                         },
                         new
                         {
@@ -959,7 +995,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 3,
                             TenantId = 8,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(4054)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7241)
                         },
                         new
                         {
@@ -968,7 +1004,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 1,
                             TenantId = 8,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(4056)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7243)
                         },
                         new
                         {
@@ -977,7 +1013,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 2,
                             TenantId = 9,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(4060)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7247)
                         },
                         new
                         {
@@ -986,7 +1022,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 0,
                             TenantId = 9,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(4063)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7249)
                         },
                         new
                         {
@@ -995,7 +1031,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 4,
                             TenantId = 9,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(4065)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7251)
                         },
                         new
                         {
@@ -1004,7 +1040,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 3,
                             TenantId = 9,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(4068)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7254)
                         },
                         new
                         {
@@ -1013,7 +1049,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 1,
                             TenantId = 9,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(4070)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7257)
                         },
                         new
                         {
@@ -1022,7 +1058,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 2,
                             TenantId = 10,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(4073)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7259)
                         },
                         new
                         {
@@ -1031,7 +1067,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 0,
                             TenantId = 10,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(4129)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7262)
                         },
                         new
                         {
@@ -1040,7 +1076,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 4,
                             TenantId = 10,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(4133)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7265)
                         },
                         new
                         {
@@ -1049,7 +1085,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 3,
                             TenantId = 10,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(4135)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7267)
                         },
                         new
                         {
@@ -1058,7 +1094,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                             BillingPeriodId = 1,
                             ResourceType = 1,
                             TenantId = 10,
-                            TimePaid = new DateTime(2020, 6, 3, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(4138)
+                            TimePaid = new DateTime(2020, 6, 3, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(7270)
                         });
                 });
 
@@ -1088,40 +1124,40 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         new
                         {
                             ResourceUsageRateId = 1,
-                            PeriodEnd = new DateTime(2020, 12, 1, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(9070),
-                            PeriodStart = new DateTime(2019, 12, 7, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
+                            PeriodEnd = new DateTime(2020, 12, 1, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(1932),
+                            PeriodStart = new DateTime(2019, 12, 7, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
                             Rate = 50.0,
                             ResourceType = 2
                         },
                         new
                         {
                             ResourceUsageRateId = 2,
-                            PeriodEnd = new DateTime(2020, 12, 1, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(17),
-                            PeriodStart = new DateTime(2019, 12, 7, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
+                            PeriodEnd = new DateTime(2020, 12, 1, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(2889),
+                            PeriodStart = new DateTime(2019, 12, 7, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
                             Rate = 0.13,
                             ResourceType = 0
                         },
                         new
                         {
                             ResourceUsageRateId = 3,
-                            PeriodEnd = new DateTime(2020, 12, 1, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(46),
-                            PeriodStart = new DateTime(2019, 12, 7, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
+                            PeriodEnd = new DateTime(2020, 12, 1, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(2920),
+                            PeriodStart = new DateTime(2019, 12, 7, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
                             Rate = 1100.0,
                             ResourceType = 4
                         },
                         new
                         {
                             ResourceUsageRateId = 4,
-                            PeriodEnd = new DateTime(2020, 12, 1, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(50),
-                            PeriodStart = new DateTime(2019, 12, 7, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
+                            PeriodEnd = new DateTime(2020, 12, 1, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(2923),
+                            PeriodStart = new DateTime(2019, 12, 7, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
                             Rate = 30.0,
                             ResourceType = 3
                         },
                         new
                         {
                             ResourceUsageRateId = 5,
-                            PeriodEnd = new DateTime(2020, 12, 1, 12, 28, 40, 941, DateTimeKind.Local).AddTicks(53),
-                            PeriodStart = new DateTime(2019, 12, 7, 12, 28, 40, 932, DateTimeKind.Local).AddTicks(8876),
+                            PeriodEnd = new DateTime(2020, 12, 1, 16, 8, 49, 47, DateTimeKind.Local).AddTicks(2926),
+                            PeriodStart = new DateTime(2019, 12, 7, 16, 8, 49, 39, DateTimeKind.Local).AddTicks(831),
                             Rate = 0.10000000000000001,
                             ResourceType = 1
                         });
@@ -1281,7 +1317,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 1,
                             ResourceType = 2,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(104),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3178),
                             TenantId = 1,
                             UsageAmount = 1.0
                         },
@@ -1289,7 +1325,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 2,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(858),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3820),
                             TenantId = 1,
                             UsageAmount = 50.549999999999997
                         },
@@ -1297,7 +1333,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 3,
                             ResourceType = 4,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(884),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3844),
                             TenantId = 1,
                             UsageAmount = 1.0
                         },
@@ -1305,7 +1341,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 4,
                             ResourceType = 3,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(887),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3848),
                             TenantId = 1,
                             UsageAmount = 1.0
                         },
@@ -1313,7 +1349,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 5,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(890),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3851),
                             TenantId = 1,
                             UsageAmount = 40.399999999999999
                         },
@@ -1321,7 +1357,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 6,
                             ResourceType = 2,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(893),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3853),
                             TenantId = 2,
                             UsageAmount = 1.0
                         },
@@ -1329,7 +1365,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 7,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(896),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3856),
                             TenantId = 2,
                             UsageAmount = 50.549999999999997
                         },
@@ -1337,7 +1373,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 8,
                             ResourceType = 4,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(899),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3859),
                             TenantId = 2,
                             UsageAmount = 1.0
                         },
@@ -1345,7 +1381,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 9,
                             ResourceType = 3,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(901),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3862),
                             TenantId = 2,
                             UsageAmount = 1.0
                         },
@@ -1353,7 +1389,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 10,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(904),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3864),
                             TenantId = 2,
                             UsageAmount = 30.329999999999998
                         },
@@ -1361,7 +1397,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 11,
                             ResourceType = 2,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(908),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3868),
                             TenantId = 3,
                             UsageAmount = 1.0
                         },
@@ -1369,7 +1405,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 12,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(911),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3871),
                             TenantId = 3,
                             UsageAmount = 50.549999999999997
                         },
@@ -1377,7 +1413,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 13,
                             ResourceType = 4,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(914),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3874),
                             TenantId = 3,
                             UsageAmount = 1.0
                         },
@@ -1385,7 +1421,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 14,
                             ResourceType = 3,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(917),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3877),
                             TenantId = 3,
                             UsageAmount = 1.0
                         },
@@ -1393,7 +1429,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 15,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(919),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3880),
                             TenantId = 3,
                             UsageAmount = 30.329999999999998
                         },
@@ -1401,7 +1437,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 16,
                             ResourceType = 2,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(922),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3882),
                             TenantId = 4,
                             UsageAmount = 1.0
                         },
@@ -1409,7 +1445,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 17,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(925),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3885),
                             TenantId = 4,
                             UsageAmount = 50.549999999999997
                         },
@@ -1417,7 +1453,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 18,
                             ResourceType = 4,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(928),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3888),
                             TenantId = 4,
                             UsageAmount = 1.0
                         },
@@ -1425,7 +1461,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 19,
                             ResourceType = 3,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(930),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3891),
                             TenantId = 4,
                             UsageAmount = 1.0
                         },
@@ -1433,7 +1469,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 20,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(933),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3893),
                             TenantId = 4,
                             UsageAmount = 30.329999999999998
                         },
@@ -1441,7 +1477,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 21,
                             ResourceType = 2,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(936),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3896),
                             TenantId = 5,
                             UsageAmount = 1.0
                         },
@@ -1449,7 +1485,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 22,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(938),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3899),
                             TenantId = 5,
                             UsageAmount = 60.549999999999997
                         },
@@ -1457,7 +1493,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 23,
                             ResourceType = 4,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(941),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3901),
                             TenantId = 5,
                             UsageAmount = 1.0
                         },
@@ -1465,7 +1501,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 24,
                             ResourceType = 3,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(944),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3904),
                             TenantId = 5,
                             UsageAmount = 1.0
                         },
@@ -1473,7 +1509,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 25,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(947),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3907),
                             TenantId = 5,
                             UsageAmount = 40.329999999999998
                         },
@@ -1481,7 +1517,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 26,
                             ResourceType = 2,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(949),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3909),
                             TenantId = 6,
                             UsageAmount = 1.0
                         },
@@ -1489,7 +1525,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 27,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(952),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3912),
                             TenantId = 6,
                             UsageAmount = 60.549999999999997
                         },
@@ -1497,7 +1533,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 28,
                             ResourceType = 4,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(955),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3915),
                             TenantId = 6,
                             UsageAmount = 1.0
                         },
@@ -1505,7 +1541,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 29,
                             ResourceType = 3,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(958),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3918),
                             TenantId = 6,
                             UsageAmount = 1.0
                         },
@@ -1513,7 +1549,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 30,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(961),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3921),
                             TenantId = 6,
                             UsageAmount = 31.329999999999998
                         },
@@ -1521,7 +1557,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 31,
                             ResourceType = 2,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(963),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3924),
                             TenantId = 7,
                             UsageAmount = 1.0
                         },
@@ -1529,7 +1565,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 32,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(966),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3926),
                             TenantId = 7,
                             UsageAmount = 50.549999999999997
                         },
@@ -1537,7 +1573,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 33,
                             ResourceType = 4,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(969),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3929),
                             TenantId = 7,
                             UsageAmount = 1.0
                         },
@@ -1545,7 +1581,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 34,
                             ResourceType = 3,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(971),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3931),
                             TenantId = 7,
                             UsageAmount = 1.0
                         },
@@ -1553,7 +1589,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 35,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(974),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3934),
                             TenantId = 7,
                             UsageAmount = 30.329999999999998
                         },
@@ -1561,7 +1597,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 36,
                             ResourceType = 2,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(977),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3937),
                             TenantId = 8,
                             UsageAmount = 1.0
                         },
@@ -1569,7 +1605,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 37,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(979),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3939),
                             TenantId = 8,
                             UsageAmount = 50.549999999999997
                         },
@@ -1577,7 +1613,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 38,
                             ResourceType = 4,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(982),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3942),
                             TenantId = 8,
                             UsageAmount = 1.0
                         },
@@ -1585,7 +1621,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 39,
                             ResourceType = 3,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(985),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3945),
                             TenantId = 8,
                             UsageAmount = 1.0
                         },
@@ -1593,7 +1629,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 40,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(988),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3947),
                             TenantId = 8,
                             UsageAmount = 30.329999999999998
                         },
@@ -1601,7 +1637,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 41,
                             ResourceType = 2,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(991),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3950),
                             TenantId = 9,
                             UsageAmount = 1.0
                         },
@@ -1609,7 +1645,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 42,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(993),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3952),
                             TenantId = 9,
                             UsageAmount = 50.549999999999997
                         },
@@ -1617,7 +1653,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 43,
                             ResourceType = 4,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(996),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3955),
                             TenantId = 9,
                             UsageAmount = 1.0
                         },
@@ -1625,7 +1661,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 44,
                             ResourceType = 3,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(999),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3958),
                             TenantId = 9,
                             UsageAmount = 1.0
                         },
@@ -1633,7 +1669,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 45,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1001),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3960),
                             TenantId = 9,
                             UsageAmount = 30.329999999999998
                         },
@@ -1641,7 +1677,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 46,
                             ResourceType = 2,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1005),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3963),
                             TenantId = 10,
                             UsageAmount = 1.0
                         },
@@ -1649,7 +1685,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 47,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1007),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3966),
                             TenantId = 10,
                             UsageAmount = 50.549999999999997
                         },
@@ -1657,7 +1693,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 48,
                             ResourceType = 4,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1010),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3969),
                             TenantId = 10,
                             UsageAmount = 1.0
                         },
@@ -1665,7 +1701,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 49,
                             ResourceType = 3,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1013),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3971),
                             TenantId = 10,
                             UsageAmount = 1.0
                         },
@@ -1673,7 +1709,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 50,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1015),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3974),
                             TenantId = 10,
                             UsageAmount = 30.329999999999998
                         },
@@ -1681,7 +1717,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 51,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 2, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1018),
+                            SampleTime = new DateTime(2020, 6, 2, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3977),
                             TenantId = 1,
                             UsageAmount = 30.460000000000001
                         },
@@ -1689,7 +1725,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 52,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 1, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1021),
+                            SampleTime = new DateTime(2020, 6, 1, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3979),
                             TenantId = 1,
                             UsageAmount = 29.850000000000001
                         },
@@ -1697,7 +1733,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 53,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 31, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1023),
+                            SampleTime = new DateTime(2020, 5, 31, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3982),
                             TenantId = 1,
                             UsageAmount = 5.3300000000000001
                         },
@@ -1705,7 +1741,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 54,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 30, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1026),
+                            SampleTime = new DateTime(2020, 5, 30, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3984),
                             TenantId = 1,
                             UsageAmount = 50.670000000000002
                         },
@@ -1713,7 +1749,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 55,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 29, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1028),
+                            SampleTime = new DateTime(2020, 5, 29, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3987),
                             TenantId = 1,
                             UsageAmount = 40.780000000000001
                         },
@@ -1721,7 +1757,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 56,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 28, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1123),
+                            SampleTime = new DateTime(2020, 5, 28, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3989),
                             TenantId = 1,
                             UsageAmount = 30.07
                         },
@@ -1729,7 +1765,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 57,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 27, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1127),
+                            SampleTime = new DateTime(2020, 5, 27, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3992),
                             TenantId = 1,
                             UsageAmount = 31.359999999999999
                         },
@@ -1737,7 +1773,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 58,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 26, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1130),
+                            SampleTime = new DateTime(2020, 5, 26, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3995),
                             TenantId = 1,
                             UsageAmount = 20.530000000000001
                         },
@@ -1745,7 +1781,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 59,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 25, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1133),
+                            SampleTime = new DateTime(2020, 5, 25, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(3997),
                             TenantId = 1,
                             UsageAmount = 10.73
                         },
@@ -1753,7 +1789,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 60,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 24, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1135),
+                            SampleTime = new DateTime(2020, 5, 24, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4000),
                             TenantId = 1,
                             UsageAmount = 30.210000000000001
                         },
@@ -1761,7 +1797,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 61,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 2, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1138),
+                            SampleTime = new DateTime(2020, 6, 2, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4003),
                             TenantId = 1,
                             UsageAmount = 10.41
                         },
@@ -1769,7 +1805,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 62,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 1, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1141),
+                            SampleTime = new DateTime(2020, 6, 1, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4059),
                             TenantId = 1,
                             UsageAmount = 15.42
                         },
@@ -1777,7 +1813,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 63,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 31, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1143),
+                            SampleTime = new DateTime(2020, 5, 31, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4062),
                             TenantId = 1,
                             UsageAmount = 6.4299999999999997
                         },
@@ -1785,7 +1821,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 64,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 30, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1146),
+                            SampleTime = new DateTime(2020, 5, 30, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4065),
                             TenantId = 1,
                             UsageAmount = 21.460000000000001
                         },
@@ -1793,7 +1829,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 65,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 29, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1149),
+                            SampleTime = new DateTime(2020, 5, 29, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4068),
                             TenantId = 1,
                             UsageAmount = 10.17
                         },
@@ -1801,7 +1837,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 66,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 28, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1152),
+                            SampleTime = new DateTime(2020, 5, 28, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4070),
                             TenantId = 1,
                             UsageAmount = 16.93
                         },
@@ -1809,7 +1845,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 67,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 27, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1155),
+                            SampleTime = new DateTime(2020, 5, 27, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4073),
                             TenantId = 1,
                             UsageAmount = 15.74
                         },
@@ -1817,7 +1853,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 68,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 26, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1157),
+                            SampleTime = new DateTime(2020, 5, 26, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4076),
                             TenantId = 1,
                             UsageAmount = 16.600000000000001
                         },
@@ -1825,7 +1861,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 69,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 25, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1160),
+                            SampleTime = new DateTime(2020, 5, 25, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4078),
                             TenantId = 1,
                             UsageAmount = 14.41
                         },
@@ -1833,7 +1869,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 70,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 24, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1163),
+                            SampleTime = new DateTime(2020, 5, 24, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4081),
                             TenantId = 1,
                             UsageAmount = 16.32
                         },
@@ -1841,7 +1877,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 71,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 2, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1165),
+                            SampleTime = new DateTime(2020, 6, 2, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4083),
                             TenantId = 2,
                             UsageAmount = 21.460000000000001
                         },
@@ -1849,7 +1885,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 72,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 1, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1168),
+                            SampleTime = new DateTime(2020, 6, 1, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4086),
                             TenantId = 2,
                             UsageAmount = 25.850000000000001
                         },
@@ -1857,7 +1893,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 73,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 31, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1171),
+                            SampleTime = new DateTime(2020, 5, 31, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4089),
                             TenantId = 2,
                             UsageAmount = 15.33
                         },
@@ -1865,7 +1901,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 74,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 30, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1174),
+                            SampleTime = new DateTime(2020, 5, 30, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4091),
                             TenantId = 2,
                             UsageAmount = 50.670000000000002
                         },
@@ -1873,7 +1909,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 75,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 29, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1176),
+                            SampleTime = new DateTime(2020, 5, 29, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4094),
                             TenantId = 2,
                             UsageAmount = 40.780000000000001
                         },
@@ -1881,7 +1917,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 76,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 28, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1179),
+                            SampleTime = new DateTime(2020, 5, 28, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4097),
                             TenantId = 2,
                             UsageAmount = 29.07
                         },
@@ -1889,7 +1925,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 77,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 27, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1182),
+                            SampleTime = new DateTime(2020, 5, 27, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4099),
                             TenantId = 2,
                             UsageAmount = 30.359999999999999
                         },
@@ -1897,7 +1933,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 78,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 26, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1184),
+                            SampleTime = new DateTime(2020, 5, 26, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4102),
                             TenantId = 2,
                             UsageAmount = 20.530000000000001
                         },
@@ -1905,7 +1941,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 79,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 25, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1188),
+                            SampleTime = new DateTime(2020, 5, 25, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4104),
                             TenantId = 2,
                             UsageAmount = 15.73
                         },
@@ -1913,7 +1949,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 80,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 24, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1190),
+                            SampleTime = new DateTime(2020, 5, 24, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4107),
                             TenantId = 2,
                             UsageAmount = 40.210000000000001
                         },
@@ -1921,7 +1957,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 81,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 2, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1193),
+                            SampleTime = new DateTime(2020, 6, 2, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4109),
                             TenantId = 2,
                             UsageAmount = 11.41
                         },
@@ -1929,7 +1965,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 82,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 1, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1197),
+                            SampleTime = new DateTime(2020, 6, 1, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4113),
                             TenantId = 2,
                             UsageAmount = 14.42
                         },
@@ -1937,7 +1973,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 83,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 31, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1200),
+                            SampleTime = new DateTime(2020, 5, 31, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4116),
                             TenantId = 2,
                             UsageAmount = 19.43
                         },
@@ -1945,7 +1981,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 84,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 30, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1203),
+                            SampleTime = new DateTime(2020, 5, 30, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4118),
                             TenantId = 2,
                             UsageAmount = 25.460000000000001
                         },
@@ -1953,7 +1989,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 85,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 29, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1205),
+                            SampleTime = new DateTime(2020, 5, 29, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4121),
                             TenantId = 2,
                             UsageAmount = 10.17
                         },
@@ -1961,7 +1997,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 86,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 28, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1208),
+                            SampleTime = new DateTime(2020, 5, 28, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4124),
                             TenantId = 2,
                             UsageAmount = 16.93
                         },
@@ -1969,7 +2005,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 87,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 27, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1211),
+                            SampleTime = new DateTime(2020, 5, 27, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4126),
                             TenantId = 2,
                             UsageAmount = 16.739999999999998
                         },
@@ -1977,7 +2013,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 88,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 26, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1214),
+                            SampleTime = new DateTime(2020, 5, 26, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4129),
                             TenantId = 2,
                             UsageAmount = 16.600000000000001
                         },
@@ -1985,7 +2021,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 89,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 25, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1216),
+                            SampleTime = new DateTime(2020, 5, 25, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4131),
                             TenantId = 2,
                             UsageAmount = 14.41
                         },
@@ -1993,7 +2029,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 90,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 24, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1219),
+                            SampleTime = new DateTime(2020, 5, 24, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4134),
                             TenantId = 2,
                             UsageAmount = 16.32
                         },
@@ -2001,7 +2037,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 91,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 2, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1222),
+                            SampleTime = new DateTime(2020, 6, 2, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4137),
                             TenantId = 3,
                             UsageAmount = 13.460000000000001
                         },
@@ -2009,7 +2045,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 92,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 1, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1224),
+                            SampleTime = new DateTime(2020, 6, 1, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4139),
                             TenantId = 3,
                             UsageAmount = 18.850000000000001
                         },
@@ -2017,7 +2053,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 93,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 31, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1227),
+                            SampleTime = new DateTime(2020, 5, 31, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4142),
                             TenantId = 3,
                             UsageAmount = 5.3300000000000001
                         },
@@ -2025,7 +2061,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 94,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 30, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1230),
+                            SampleTime = new DateTime(2020, 5, 30, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4144),
                             TenantId = 3,
                             UsageAmount = 30.670000000000002
                         },
@@ -2033,7 +2069,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 95,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 29, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1233),
+                            SampleTime = new DateTime(2020, 5, 29, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4147),
                             TenantId = 3,
                             UsageAmount = 51.780000000000001
                         },
@@ -2041,7 +2077,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 96,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 28, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1236),
+                            SampleTime = new DateTime(2020, 5, 28, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4149),
                             TenantId = 3,
                             UsageAmount = 35.07
                         },
@@ -2049,7 +2085,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 97,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 27, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1238),
+                            SampleTime = new DateTime(2020, 5, 27, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4152),
                             TenantId = 3,
                             UsageAmount = 32.359999999999999
                         },
@@ -2057,7 +2093,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 98,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 26, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1242),
+                            SampleTime = new DateTime(2020, 5, 26, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4154),
                             TenantId = 3,
                             UsageAmount = 19.530000000000001
                         },
@@ -2065,7 +2101,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 99,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 25, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1244),
+                            SampleTime = new DateTime(2020, 5, 25, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4157),
                             TenantId = 3,
                             UsageAmount = 10.73
                         },
@@ -2073,7 +2109,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 100,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 24, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1248),
+                            SampleTime = new DateTime(2020, 5, 24, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4160),
                             TenantId = 3,
                             UsageAmount = 31.210000000000001
                         },
@@ -2081,7 +2117,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 101,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 2, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1251),
+                            SampleTime = new DateTime(2020, 6, 2, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4163),
                             TenantId = 3,
                             UsageAmount = 21.41
                         },
@@ -2089,7 +2125,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 102,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 1, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1253),
+                            SampleTime = new DateTime(2020, 6, 1, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4166),
                             TenantId = 3,
                             UsageAmount = 22.420000000000002
                         },
@@ -2097,7 +2133,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 103,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 31, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1256),
+                            SampleTime = new DateTime(2020, 5, 31, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4169),
                             TenantId = 3,
                             UsageAmount = 19.43
                         },
@@ -2105,7 +2141,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 104,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 30, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1260),
+                            SampleTime = new DateTime(2020, 5, 30, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4171),
                             TenantId = 3,
                             UsageAmount = 11.460000000000001
                         },
@@ -2113,7 +2149,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 105,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 29, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1263),
+                            SampleTime = new DateTime(2020, 5, 29, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4174),
                             TenantId = 3,
                             UsageAmount = 50.170000000000002
                         },
@@ -2121,7 +2157,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 106,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 28, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1267),
+                            SampleTime = new DateTime(2020, 5, 28, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4177),
                             TenantId = 3,
                             UsageAmount = 19.93
                         },
@@ -2129,7 +2165,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 107,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 27, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1271),
+                            SampleTime = new DateTime(2020, 5, 27, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4179),
                             TenantId = 3,
                             UsageAmount = 15.74
                         },
@@ -2137,7 +2173,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 108,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 26, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1275),
+                            SampleTime = new DateTime(2020, 5, 26, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4182),
                             TenantId = 3,
                             UsageAmount = 25.629999999999999
                         },
@@ -2145,7 +2181,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 109,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 25, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1277),
+                            SampleTime = new DateTime(2020, 5, 25, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4184),
                             TenantId = 3,
                             UsageAmount = 27.41
                         },
@@ -2153,7 +2189,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 110,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 24, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1280),
+                            SampleTime = new DateTime(2020, 5, 24, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4187),
                             TenantId = 3,
                             UsageAmount = 13.32
                         },
@@ -2161,7 +2197,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 111,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 2, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1282),
+                            SampleTime = new DateTime(2020, 6, 2, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4190),
                             TenantId = 4,
                             UsageAmount = 3.46
                         },
@@ -2169,7 +2205,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 112,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 1, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1287),
+                            SampleTime = new DateTime(2020, 6, 1, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4192),
                             TenantId = 4,
                             UsageAmount = 29.850000000000001
                         },
@@ -2177,7 +2213,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 113,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 31, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1289),
+                            SampleTime = new DateTime(2020, 5, 31, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4195),
                             TenantId = 4,
                             UsageAmount = 16.34
                         },
@@ -2185,7 +2221,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 114,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 30, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1292),
+                            SampleTime = new DateTime(2020, 5, 30, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4197),
                             TenantId = 4,
                             UsageAmount = 11.67
                         },
@@ -2193,7 +2229,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 115,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 29, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1295),
+                            SampleTime = new DateTime(2020, 5, 29, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4200),
                             TenantId = 4,
                             UsageAmount = 40.780000000000001
                         },
@@ -2201,7 +2237,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 116,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 28, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1297),
+                            SampleTime = new DateTime(2020, 5, 28, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4202),
                             TenantId = 4,
                             UsageAmount = 20.07
                         },
@@ -2209,7 +2245,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 117,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 27, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1300),
+                            SampleTime = new DateTime(2020, 5, 27, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4205),
                             TenantId = 4,
                             UsageAmount = 15.359999999999999
                         },
@@ -2217,7 +2253,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 118,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 26, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1304),
+                            SampleTime = new DateTime(2020, 5, 26, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4209),
                             TenantId = 4,
                             UsageAmount = 10.529999999999999
                         },
@@ -2225,7 +2261,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 119,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 25, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1307),
+                            SampleTime = new DateTime(2020, 5, 25, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4212),
                             TenantId = 4,
                             UsageAmount = 12.73
                         },
@@ -2233,7 +2269,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 120,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 24, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1309),
+                            SampleTime = new DateTime(2020, 5, 24, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4215),
                             TenantId = 4,
                             UsageAmount = 11.210000000000001
                         },
@@ -2241,7 +2277,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 121,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 2, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1312),
+                            SampleTime = new DateTime(2020, 6, 2, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4219),
                             TenantId = 4,
                             UsageAmount = 13.41
                         },
@@ -2249,7 +2285,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 122,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 1, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1315),
+                            SampleTime = new DateTime(2020, 6, 1, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4222),
                             TenantId = 4,
                             UsageAmount = 30.420000000000002
                         },
@@ -2257,7 +2293,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 123,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 31, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1317),
+                            SampleTime = new DateTime(2020, 5, 31, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4225),
                             TenantId = 4,
                             UsageAmount = 16.43
                         },
@@ -2265,7 +2301,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 124,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 30, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1320),
+                            SampleTime = new DateTime(2020, 5, 30, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4228),
                             TenantId = 4,
                             UsageAmount = 11.460000000000001
                         },
@@ -2273,7 +2309,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 125,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 29, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1323),
+                            SampleTime = new DateTime(2020, 5, 29, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4230),
                             TenantId = 4,
                             UsageAmount = 13.17
                         },
@@ -2281,7 +2317,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 126,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 28, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1325),
+                            SampleTime = new DateTime(2020, 5, 28, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4233),
                             TenantId = 4,
                             UsageAmount = 16.93
                         },
@@ -2289,7 +2325,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 127,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 27, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1328),
+                            SampleTime = new DateTime(2020, 5, 27, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4235),
                             TenantId = 4,
                             UsageAmount = 15.74
                         },
@@ -2297,7 +2333,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 128,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 26, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1331),
+                            SampleTime = new DateTime(2020, 5, 26, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4238),
                             TenantId = 4,
                             UsageAmount = 21.600000000000001
                         },
@@ -2305,7 +2341,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 129,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 25, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1334),
+                            SampleTime = new DateTime(2020, 5, 25, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4240),
                             TenantId = 4,
                             UsageAmount = 11.43
                         },
@@ -2313,7 +2349,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 130,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 24, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1336),
+                            SampleTime = new DateTime(2020, 5, 24, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4243),
                             TenantId = 4,
                             UsageAmount = 16.32
                         },
@@ -2321,7 +2357,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 131,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 2, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1339),
+                            SampleTime = new DateTime(2020, 6, 2, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4246),
                             TenantId = 5,
                             UsageAmount = 10.460000000000001
                         },
@@ -2329,7 +2365,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 132,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 1, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1341),
+                            SampleTime = new DateTime(2020, 6, 1, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4248),
                             TenantId = 5,
                             UsageAmount = 19.850000000000001
                         },
@@ -2337,7 +2373,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 133,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 31, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1344),
+                            SampleTime = new DateTime(2020, 5, 31, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4251),
                             TenantId = 5,
                             UsageAmount = 15.33
                         },
@@ -2345,7 +2381,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 134,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 30, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1347),
+                            SampleTime = new DateTime(2020, 5, 30, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4253),
                             TenantId = 5,
                             UsageAmount = 17.670000000000002
                         },
@@ -2353,7 +2389,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 135,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 29, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1349),
+                            SampleTime = new DateTime(2020, 5, 29, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4256),
                             TenantId = 5,
                             UsageAmount = 10.779999999999999
                         },
@@ -2361,7 +2397,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 136,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 28, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1353),
+                            SampleTime = new DateTime(2020, 5, 28, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4259),
                             TenantId = 5,
                             UsageAmount = 18.07
                         },
@@ -2369,7 +2405,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 137,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 27, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1356),
+                            SampleTime = new DateTime(2020, 5, 27, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4262),
                             TenantId = 5,
                             UsageAmount = 11.359999999999999
                         },
@@ -2377,7 +2413,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 138,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 26, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1359),
+                            SampleTime = new DateTime(2020, 5, 26, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4265),
                             TenantId = 5,
                             UsageAmount = 10.529999999999999
                         },
@@ -2385,7 +2421,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 139,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 25, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1361),
+                            SampleTime = new DateTime(2020, 5, 25, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4267),
                             TenantId = 5,
                             UsageAmount = 4.7300000000000004
                         },
@@ -2393,7 +2429,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 140,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 24, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1364),
+                            SampleTime = new DateTime(2020, 5, 24, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4270),
                             TenantId = 5,
                             UsageAmount = 10.210000000000001
                         },
@@ -2401,7 +2437,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 141,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 2, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1367),
+                            SampleTime = new DateTime(2020, 6, 2, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4272),
                             TenantId = 5,
                             UsageAmount = 11.41
                         },
@@ -2409,7 +2445,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 142,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 1, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1369),
+                            SampleTime = new DateTime(2020, 6, 1, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4275),
                             TenantId = 5,
                             UsageAmount = 11.42
                         },
@@ -2417,7 +2453,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 143,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 31, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1372),
+                            SampleTime = new DateTime(2020, 5, 31, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4277),
                             TenantId = 5,
                             UsageAmount = 21.43
                         },
@@ -2425,7 +2461,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 144,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 30, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1374),
+                            SampleTime = new DateTime(2020, 5, 30, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4280),
                             TenantId = 5,
                             UsageAmount = 11.460000000000001
                         },
@@ -2433,7 +2469,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 145,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 29, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1377),
+                            SampleTime = new DateTime(2020, 5, 29, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4283),
                             TenantId = 5,
                             UsageAmount = 10.17
                         },
@@ -2441,7 +2477,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 146,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 28, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1380),
+                            SampleTime = new DateTime(2020, 5, 28, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4285),
                             TenantId = 5,
                             UsageAmount = 6.9299999999999997
                         },
@@ -2449,7 +2485,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 147,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 27, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1383),
+                            SampleTime = new DateTime(2020, 5, 27, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4288),
                             TenantId = 5,
                             UsageAmount = 11.74
                         },
@@ -2457,7 +2493,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 148,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 26, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1385),
+                            SampleTime = new DateTime(2020, 5, 26, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4291),
                             TenantId = 5,
                             UsageAmount = 11.6
                         },
@@ -2465,7 +2501,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 149,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 25, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1388),
+                            SampleTime = new DateTime(2020, 5, 25, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4293),
                             TenantId = 5,
                             UsageAmount = 16.41
                         },
@@ -2473,7 +2509,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 150,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 24, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1391),
+                            SampleTime = new DateTime(2020, 5, 24, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4296),
                             TenantId = 5,
                             UsageAmount = 11.32
                         },
@@ -2481,7 +2517,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 151,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 2, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1393),
+                            SampleTime = new DateTime(2020, 6, 2, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4298),
                             TenantId = 6,
                             UsageAmount = 20.460000000000001
                         },
@@ -2489,7 +2525,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 152,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 1, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1396),
+                            SampleTime = new DateTime(2020, 6, 1, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4301),
                             TenantId = 6,
                             UsageAmount = 13.85
                         },
@@ -2497,7 +2533,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 153,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 31, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1399),
+                            SampleTime = new DateTime(2020, 5, 31, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4304),
                             TenantId = 6,
                             UsageAmount = 25.329999999999998
                         },
@@ -2505,7 +2541,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 154,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 30, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1402),
+                            SampleTime = new DateTime(2020, 5, 30, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4307),
                             TenantId = 6,
                             UsageAmount = 20.670000000000002
                         },
@@ -2513,7 +2549,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 155,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 29, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1405),
+                            SampleTime = new DateTime(2020, 5, 29, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4310),
                             TenantId = 6,
                             UsageAmount = 20.780000000000001
                         },
@@ -2521,7 +2557,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 156,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 28, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1407),
+                            SampleTime = new DateTime(2020, 5, 28, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4312),
                             TenantId = 6,
                             UsageAmount = 25.07
                         },
@@ -2529,7 +2565,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 157,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 27, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1410),
+                            SampleTime = new DateTime(2020, 5, 27, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4315),
                             TenantId = 6,
                             UsageAmount = 21.359999999999999
                         },
@@ -2537,7 +2573,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 158,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 26, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1413),
+                            SampleTime = new DateTime(2020, 5, 26, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4317),
                             TenantId = 6,
                             UsageAmount = 20.530000000000001
                         },
@@ -2545,7 +2581,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 159,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 25, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1415),
+                            SampleTime = new DateTime(2020, 5, 25, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4320),
                             TenantId = 6,
                             UsageAmount = 15.73
                         },
@@ -2553,7 +2589,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 160,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 24, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1418),
+                            SampleTime = new DateTime(2020, 5, 24, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4322),
                             TenantId = 6,
                             UsageAmount = 20.210000000000001
                         },
@@ -2561,7 +2597,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 161,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 2, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1421),
+                            SampleTime = new DateTime(2020, 6, 2, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4325),
                             TenantId = 6,
                             UsageAmount = 10.41
                         },
@@ -2569,7 +2605,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 162,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 1, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1424),
+                            SampleTime = new DateTime(2020, 6, 1, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4328),
                             TenantId = 6,
                             UsageAmount = 19.420000000000002
                         },
@@ -2577,7 +2613,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 163,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 31, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1426),
+                            SampleTime = new DateTime(2020, 5, 31, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4330),
                             TenantId = 6,
                             UsageAmount = 16.43
                         },
@@ -2585,7 +2621,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 164,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 30, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1429),
+                            SampleTime = new DateTime(2020, 5, 30, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4333),
                             TenantId = 6,
                             UsageAmount = 11.460000000000001
                         },
@@ -2593,7 +2629,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 165,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 29, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1432),
+                            SampleTime = new DateTime(2020, 5, 29, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4335),
                             TenantId = 6,
                             UsageAmount = 16.170000000000002
                         },
@@ -2601,7 +2637,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 166,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 28, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1434),
+                            SampleTime = new DateTime(2020, 5, 28, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4338),
                             TenantId = 6,
                             UsageAmount = 16.93
                         },
@@ -2609,7 +2645,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 167,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 27, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1437),
+                            SampleTime = new DateTime(2020, 5, 27, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4341),
                             TenantId = 6,
                             UsageAmount = 15.74
                         },
@@ -2617,7 +2653,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 168,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 26, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1440),
+                            SampleTime = new DateTime(2020, 5, 26, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4343),
                             TenantId = 6,
                             UsageAmount = 12.6
                         },
@@ -2625,7 +2661,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 169,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 25, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1442),
+                            SampleTime = new DateTime(2020, 5, 25, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4346),
                             TenantId = 6,
                             UsageAmount = 13.41
                         },
@@ -2633,7 +2669,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 170,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 24, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1445),
+                            SampleTime = new DateTime(2020, 5, 24, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4348),
                             TenantId = 6,
                             UsageAmount = 15.32
                         },
@@ -2641,7 +2677,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 171,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 2, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1449),
+                            SampleTime = new DateTime(2020, 6, 2, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4352),
                             TenantId = 7,
                             UsageAmount = 30.460000000000001
                         },
@@ -2649,7 +2685,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 172,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 1, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1451),
+                            SampleTime = new DateTime(2020, 6, 1, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4355),
                             TenantId = 7,
                             UsageAmount = 38.850000000000001
                         },
@@ -2657,7 +2693,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 173,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 31, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1454),
+                            SampleTime = new DateTime(2020, 5, 31, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4357),
                             TenantId = 7,
                             UsageAmount = 34.329999999999998
                         },
@@ -2665,7 +2701,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 174,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 30, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1457),
+                            SampleTime = new DateTime(2020, 5, 30, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4360),
                             TenantId = 7,
                             UsageAmount = 29.670000000000002
                         },
@@ -2673,7 +2709,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 175,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 29, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1459),
+                            SampleTime = new DateTime(2020, 5, 29, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4362),
                             TenantId = 7,
                             UsageAmount = 29.780000000000001
                         },
@@ -2681,7 +2717,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 176,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 28, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1462),
+                            SampleTime = new DateTime(2020, 5, 28, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4365),
                             TenantId = 7,
                             UsageAmount = 33.07
                         },
@@ -2689,7 +2725,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 177,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 27, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1465),
+                            SampleTime = new DateTime(2020, 5, 27, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4368),
                             TenantId = 7,
                             UsageAmount = 26.359999999999999
                         },
@@ -2697,7 +2733,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 178,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 26, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1468),
+                            SampleTime = new DateTime(2020, 5, 26, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4371),
                             TenantId = 7,
                             UsageAmount = 26.530000000000001
                         },
@@ -2705,7 +2741,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 179,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 25, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1471),
+                            SampleTime = new DateTime(2020, 5, 25, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4373),
                             TenantId = 7,
                             UsageAmount = 35.729999999999997
                         },
@@ -2713,7 +2749,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 180,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 24, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1473),
+                            SampleTime = new DateTime(2020, 5, 24, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4376),
                             TenantId = 7,
                             UsageAmount = 30.210000000000001
                         },
@@ -2721,7 +2757,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 181,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 2, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1476),
+                            SampleTime = new DateTime(2020, 6, 2, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4378),
                             TenantId = 7,
                             UsageAmount = 34.409999999999997
                         },
@@ -2729,7 +2765,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 182,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 1, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1479),
+                            SampleTime = new DateTime(2020, 6, 1, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4381),
                             TenantId = 7,
                             UsageAmount = 35.420000000000002
                         },
@@ -2737,7 +2773,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 183,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 31, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1481),
+                            SampleTime = new DateTime(2020, 5, 31, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4384),
                             TenantId = 7,
                             UsageAmount = 36.43
                         },
@@ -2745,7 +2781,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 184,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 30, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1484),
+                            SampleTime = new DateTime(2020, 5, 30, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4386),
                             TenantId = 7,
                             UsageAmount = 31.460000000000001
                         },
@@ -2753,7 +2789,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 185,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 29, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1487),
+                            SampleTime = new DateTime(2020, 5, 29, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4389),
                             TenantId = 7,
                             UsageAmount = 25.170000000000002
                         },
@@ -2761,7 +2797,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 186,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 28, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1489),
+                            SampleTime = new DateTime(2020, 5, 28, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4391),
                             TenantId = 7,
                             UsageAmount = 36.93
                         },
@@ -2769,7 +2805,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 187,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 27, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1492),
+                            SampleTime = new DateTime(2020, 5, 27, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4394),
                             TenantId = 7,
                             UsageAmount = 35.740000000000002
                         },
@@ -2777,7 +2813,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 188,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 26, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1494),
+                            SampleTime = new DateTime(2020, 5, 26, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4396),
                             TenantId = 7,
                             UsageAmount = 41.600000000000001
                         },
@@ -2785,7 +2821,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 189,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 25, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1498),
+                            SampleTime = new DateTime(2020, 5, 25, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4400),
                             TenantId = 7,
                             UsageAmount = 34.409999999999997
                         },
@@ -2793,7 +2829,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 190,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 24, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1501),
+                            SampleTime = new DateTime(2020, 5, 24, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4402),
                             TenantId = 7,
                             UsageAmount = 31.32
                         },
@@ -2801,7 +2837,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 191,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 2, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1503),
+                            SampleTime = new DateTime(2020, 6, 2, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4405),
                             TenantId = 8,
                             UsageAmount = 12.460000000000001
                         },
@@ -2809,7 +2845,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 192,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 1, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1506),
+                            SampleTime = new DateTime(2020, 6, 1, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4407),
                             TenantId = 8,
                             UsageAmount = 13.85
                         },
@@ -2817,7 +2853,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 193,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 31, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1508),
+                            SampleTime = new DateTime(2020, 5, 31, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4410),
                             TenantId = 8,
                             UsageAmount = 9.3300000000000001
                         },
@@ -2825,7 +2861,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 194,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 30, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1511),
+                            SampleTime = new DateTime(2020, 5, 30, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4412),
                             TenantId = 8,
                             UsageAmount = 11.67
                         },
@@ -2833,7 +2869,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 195,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 29, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1514),
+                            SampleTime = new DateTime(2020, 5, 29, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4415),
                             TenantId = 8,
                             UsageAmount = 12.779999999999999
                         },
@@ -2841,7 +2877,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 196,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 28, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1516),
+                            SampleTime = new DateTime(2020, 5, 28, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4418),
                             TenantId = 8,
                             UsageAmount = 12.07
                         },
@@ -2849,7 +2885,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 197,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 27, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1519),
+                            SampleTime = new DateTime(2020, 5, 27, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4420),
                             TenantId = 8,
                             UsageAmount = 28.359999999999999
                         },
@@ -2857,7 +2893,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 198,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 26, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1522),
+                            SampleTime = new DateTime(2020, 5, 26, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4423),
                             TenantId = 8,
                             UsageAmount = 11.529999999999999
                         },
@@ -2865,7 +2901,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 199,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 25, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1525),
+                            SampleTime = new DateTime(2020, 5, 25, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4426),
                             TenantId = 8,
                             UsageAmount = 11.73
                         },
@@ -2873,7 +2909,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 200,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 24, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1527),
+                            SampleTime = new DateTime(2020, 5, 24, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4428),
                             TenantId = 8,
                             UsageAmount = 3.21
                         },
@@ -2881,7 +2917,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 201,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 2, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1530),
+                            SampleTime = new DateTime(2020, 6, 2, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4431),
                             TenantId = 8,
                             UsageAmount = 14.41
                         },
@@ -2889,7 +2925,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 202,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 1, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1533),
+                            SampleTime = new DateTime(2020, 6, 1, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4434),
                             TenantId = 8,
                             UsageAmount = 13.42
                         },
@@ -2897,7 +2933,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 203,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 31, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1535),
+                            SampleTime = new DateTime(2020, 5, 31, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4436),
                             TenantId = 8,
                             UsageAmount = 10.43
                         },
@@ -2905,7 +2941,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 204,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 30, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1538),
+                            SampleTime = new DateTime(2020, 5, 30, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4439),
                             TenantId = 8,
                             UsageAmount = 18.460000000000001
                         },
@@ -2913,7 +2949,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 205,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 29, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1540),
+                            SampleTime = new DateTime(2020, 5, 29, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4442),
                             TenantId = 8,
                             UsageAmount = 8.1699999999999999
                         },
@@ -2921,7 +2957,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 206,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 28, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1543),
+                            SampleTime = new DateTime(2020, 5, 28, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4445),
                             TenantId = 8,
                             UsageAmount = 15.93
                         },
@@ -2929,7 +2965,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 207,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 27, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1548),
+                            SampleTime = new DateTime(2020, 5, 27, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4448),
                             TenantId = 8,
                             UsageAmount = 31.739999999999998
                         },
@@ -2937,7 +2973,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 208,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 26, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1551),
+                            SampleTime = new DateTime(2020, 5, 26, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4451),
                             TenantId = 8,
                             UsageAmount = 16.600000000000001
                         },
@@ -2945,7 +2981,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 209,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 25, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1554),
+                            SampleTime = new DateTime(2020, 5, 25, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4454),
                             TenantId = 8,
                             UsageAmount = 18.41
                         },
@@ -2953,7 +2989,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 210,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 24, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1556),
+                            SampleTime = new DateTime(2020, 5, 24, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4456),
                             TenantId = 8,
                             UsageAmount = 16.32
                         },
@@ -2961,7 +2997,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 211,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 2, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1559),
+                            SampleTime = new DateTime(2020, 6, 2, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4459),
                             TenantId = 9,
                             UsageAmount = 38.460000000000001
                         },
@@ -2969,7 +3005,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 212,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 1, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1562),
+                            SampleTime = new DateTime(2020, 6, 1, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4461),
                             TenantId = 9,
                             UsageAmount = 29.850000000000001
                         },
@@ -2977,7 +3013,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 213,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 31, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1564),
+                            SampleTime = new DateTime(2020, 5, 31, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4464),
                             TenantId = 9,
                             UsageAmount = 25.329999999999998
                         },
@@ -2985,7 +3021,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 214,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 30, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1567),
+                            SampleTime = new DateTime(2020, 5, 30, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4467),
                             TenantId = 9,
                             UsageAmount = 10.67
                         },
@@ -2993,7 +3029,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 215,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 29, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1570),
+                            SampleTime = new DateTime(2020, 5, 29, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4469),
                             TenantId = 9,
                             UsageAmount = 40.780000000000001
                         },
@@ -3001,7 +3037,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 216,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 28, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1573),
+                            SampleTime = new DateTime(2020, 5, 28, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4472),
                             TenantId = 9,
                             UsageAmount = 18.07
                         },
@@ -3009,7 +3045,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 217,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 27, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1576),
+                            SampleTime = new DateTime(2020, 5, 27, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4474),
                             TenantId = 9,
                             UsageAmount = 12.359999999999999
                         },
@@ -3017,7 +3053,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 218,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 26, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1578),
+                            SampleTime = new DateTime(2020, 5, 26, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4477),
                             TenantId = 9,
                             UsageAmount = 20.52
                         },
@@ -3025,7 +3061,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 219,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 25, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1581),
+                            SampleTime = new DateTime(2020, 5, 25, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4480),
                             TenantId = 9,
                             UsageAmount = 15.73
                         },
@@ -3033,7 +3069,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 220,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 24, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1584),
+                            SampleTime = new DateTime(2020, 5, 24, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4482),
                             TenantId = 9,
                             UsageAmount = 30.210000000000001
                         },
@@ -3041,7 +3077,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 221,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 2, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1586),
+                            SampleTime = new DateTime(2020, 6, 2, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4485),
                             TenantId = 9,
                             UsageAmount = 20.41
                         },
@@ -3049,7 +3085,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 222,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 1, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1589),
+                            SampleTime = new DateTime(2020, 6, 1, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4487),
                             TenantId = 9,
                             UsageAmount = 29.420000000000002
                         },
@@ -3057,7 +3093,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 223,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 31, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1591),
+                            SampleTime = new DateTime(2020, 5, 31, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4490),
                             TenantId = 9,
                             UsageAmount = 26.43
                         },
@@ -3065,7 +3101,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 224,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 30, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1595),
+                            SampleTime = new DateTime(2020, 5, 30, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4494),
                             TenantId = 9,
                             UsageAmount = 21.460000000000001
                         },
@@ -3073,7 +3109,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 225,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 29, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1598),
+                            SampleTime = new DateTime(2020, 5, 29, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4496),
                             TenantId = 9,
                             UsageAmount = 20.170000000000002
                         },
@@ -3081,7 +3117,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 226,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 28, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1653),
+                            SampleTime = new DateTime(2020, 5, 28, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4499),
                             TenantId = 9,
                             UsageAmount = 13.960000000000001
                         },
@@ -3089,7 +3125,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 227,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 27, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1656),
+                            SampleTime = new DateTime(2020, 5, 27, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4501),
                             TenantId = 9,
                             UsageAmount = 12.74
                         },
@@ -3097,7 +3133,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 228,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 26, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1659),
+                            SampleTime = new DateTime(2020, 5, 26, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4504),
                             TenantId = 9,
                             UsageAmount = 13.6
                         },
@@ -3105,7 +3141,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 229,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 25, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1662),
+                            SampleTime = new DateTime(2020, 5, 25, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4506),
                             TenantId = 9,
                             UsageAmount = 4.4100000000000001
                         },
@@ -3113,7 +3149,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 230,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 24, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1664),
+                            SampleTime = new DateTime(2020, 5, 24, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4509),
                             TenantId = 9,
                             UsageAmount = 6.3200000000000003
                         },
@@ -3121,7 +3157,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 231,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 2, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1667),
+                            SampleTime = new DateTime(2020, 6, 2, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4512),
                             TenantId = 10,
                             UsageAmount = 30.460000000000001
                         },
@@ -3129,7 +3165,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 232,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 1, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1670),
+                            SampleTime = new DateTime(2020, 6, 1, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4514),
                             TenantId = 10,
                             UsageAmount = 32.850000000000001
                         },
@@ -3137,7 +3173,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 233,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 31, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1672),
+                            SampleTime = new DateTime(2020, 5, 31, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4565),
                             TenantId = 10,
                             UsageAmount = 35.329999999999998
                         },
@@ -3145,7 +3181,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 234,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 30, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1675),
+                            SampleTime = new DateTime(2020, 5, 30, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4568),
                             TenantId = 10,
                             UsageAmount = 30.670000000000002
                         },
@@ -3153,7 +3189,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 235,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 29, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1678),
+                            SampleTime = new DateTime(2020, 5, 29, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4571),
                             TenantId = 10,
                             UsageAmount = 30.780000000000001
                         },
@@ -3161,7 +3197,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 236,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 28, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1680),
+                            SampleTime = new DateTime(2020, 5, 28, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4573),
                             TenantId = 10,
                             UsageAmount = 10.07
                         },
@@ -3169,7 +3205,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 237,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 27, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1683),
+                            SampleTime = new DateTime(2020, 5, 27, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4576),
                             TenantId = 10,
                             UsageAmount = 17.359999999999999
                         },
@@ -3177,7 +3213,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 238,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 26, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1685),
+                            SampleTime = new DateTime(2020, 5, 26, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4578),
                             TenantId = 10,
                             UsageAmount = 11.529999999999999
                         },
@@ -3185,7 +3221,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 239,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 25, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1688),
+                            SampleTime = new DateTime(2020, 5, 25, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4581),
                             TenantId = 10,
                             UsageAmount = 10.73
                         },
@@ -3193,7 +3229,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 240,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 24, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1691),
+                            SampleTime = new DateTime(2020, 5, 24, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4584),
                             TenantId = 10,
                             UsageAmount = 17.210000000000001
                         },
@@ -3201,7 +3237,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 241,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 2, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1693),
+                            SampleTime = new DateTime(2020, 6, 2, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4586),
                             TenantId = 10,
                             UsageAmount = 20.41
                         },
@@ -3209,7 +3245,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 242,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 1, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1697),
+                            SampleTime = new DateTime(2020, 6, 1, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4590),
                             TenantId = 10,
                             UsageAmount = 25.420000000000002
                         },
@@ -3217,7 +3253,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 243,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 31, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1700),
+                            SampleTime = new DateTime(2020, 5, 31, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4592),
                             TenantId = 10,
                             UsageAmount = 26.43
                         },
@@ -3225,7 +3261,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 244,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 30, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1702),
+                            SampleTime = new DateTime(2020, 5, 30, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4595),
                             TenantId = 10,
                             UsageAmount = 21.460000000000001
                         },
@@ -3233,7 +3269,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 245,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 29, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1705),
+                            SampleTime = new DateTime(2020, 5, 29, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4598),
                             TenantId = 10,
                             UsageAmount = 23.170000000000002
                         },
@@ -3241,7 +3277,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 246,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 28, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1708),
+                            SampleTime = new DateTime(2020, 5, 28, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4600),
                             TenantId = 10,
                             UsageAmount = 16.93
                         },
@@ -3249,7 +3285,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 247,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 27, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1711),
+                            SampleTime = new DateTime(2020, 5, 27, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4603),
                             TenantId = 10,
                             UsageAmount = 15.74
                         },
@@ -3257,7 +3293,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 248,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 26, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1713),
+                            SampleTime = new DateTime(2020, 5, 26, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4605),
                             TenantId = 10,
                             UsageAmount = 20.600000000000001
                         },
@@ -3265,7 +3301,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 249,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 25, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1716),
+                            SampleTime = new DateTime(2020, 5, 25, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4608),
                             TenantId = 10,
                             UsageAmount = 14.41
                         },
@@ -3273,7 +3309,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 250,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 24, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1718),
+                            SampleTime = new DateTime(2020, 5, 24, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4610),
                             TenantId = 10,
                             UsageAmount = 20.32
                         },
@@ -3281,7 +3317,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 251,
                             ResourceType = 2,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1721),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4613),
                             TenantId = 11,
                             UsageAmount = 1.0
                         },
@@ -3289,7 +3325,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 252,
                             ResourceType = 4,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1724),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4616),
                             TenantId = 11,
                             UsageAmount = 1.0
                         },
@@ -3297,7 +3333,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 253,
                             ResourceType = 3,
-                            SampleTime = new DateTime(2020, 6, 3, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1726),
+                            SampleTime = new DateTime(2020, 6, 3, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4618),
                             TenantId = 11,
                             UsageAmount = 1.0
                         },
@@ -3305,7 +3341,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 254,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 2, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1729),
+                            SampleTime = new DateTime(2020, 6, 2, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4621),
                             TenantId = 11,
                             UsageAmount = 25.460000000000001
                         },
@@ -3313,7 +3349,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 255,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 6, 1, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1731),
+                            SampleTime = new DateTime(2020, 6, 1, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4624),
                             TenantId = 11,
                             UsageAmount = 29.850000000000001
                         },
@@ -3321,7 +3357,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 256,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 31, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1734),
+                            SampleTime = new DateTime(2020, 5, 31, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4626),
                             TenantId = 11,
                             UsageAmount = 15.33
                         },
@@ -3329,7 +3365,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 257,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 30, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1737),
+                            SampleTime = new DateTime(2020, 5, 30, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4629),
                             TenantId = 11,
                             UsageAmount = 30.670000000000002
                         },
@@ -3337,7 +3373,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 258,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 29, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1739),
+                            SampleTime = new DateTime(2020, 5, 29, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4632),
                             TenantId = 11,
                             UsageAmount = 40.780000000000001
                         },
@@ -3345,7 +3381,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 259,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 28, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1742),
+                            SampleTime = new DateTime(2020, 5, 28, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4634),
                             TenantId = 11,
                             UsageAmount = 25.07
                         },
@@ -3353,7 +3389,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 260,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 27, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1745),
+                            SampleTime = new DateTime(2020, 5, 27, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4638),
                             TenantId = 11,
                             UsageAmount = 33.359999999999999
                         },
@@ -3361,7 +3397,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 261,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 26, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1748),
+                            SampleTime = new DateTime(2020, 5, 26, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4641),
                             TenantId = 11,
                             UsageAmount = 15.529999999999999
                         },
@@ -3369,7 +3405,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 262,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 25, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1751),
+                            SampleTime = new DateTime(2020, 5, 25, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4643),
                             TenantId = 11,
                             UsageAmount = 14.73
                         },
@@ -3377,7 +3413,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 263,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 24, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1753),
+                            SampleTime = new DateTime(2020, 5, 24, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4646),
                             TenantId = 11,
                             UsageAmount = 25.289999999999999
                         },
@@ -3385,7 +3421,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 264,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 23, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1756),
+                            SampleTime = new DateTime(2020, 5, 23, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4649),
                             TenantId = 11,
                             UsageAmount = 19.210000000000001
                         },
@@ -3393,7 +3429,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 265,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 22, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1759),
+                            SampleTime = new DateTime(2020, 5, 22, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4651),
                             TenantId = 11,
                             UsageAmount = 16.239999999999998
                         },
@@ -3401,7 +3437,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 266,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 21, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1761),
+                            SampleTime = new DateTime(2020, 5, 21, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4654),
                             TenantId = 11,
                             UsageAmount = 19.210000000000001
                         },
@@ -3409,7 +3445,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 267,
                             ResourceType = 0,
-                            SampleTime = new DateTime(2020, 5, 20, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1764),
+                            SampleTime = new DateTime(2020, 5, 20, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4656),
                             TenantId = 11,
                             UsageAmount = 30.149999999999999
                         },
@@ -3417,7 +3453,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 268,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 2, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1766),
+                            SampleTime = new DateTime(2020, 6, 2, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4659),
                             TenantId = 11,
                             UsageAmount = 12.41
                         },
@@ -3425,7 +3461,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 269,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 6, 1, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1769),
+                            SampleTime = new DateTime(2020, 6, 1, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4662),
                             TenantId = 11,
                             UsageAmount = 8.4000000000000004
                         },
@@ -3433,7 +3469,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 270,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 31, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1772),
+                            SampleTime = new DateTime(2020, 5, 31, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4664),
                             TenantId = 11,
                             UsageAmount = 6.4299999999999997
                         },
@@ -3441,7 +3477,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 271,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 30, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1774),
+                            SampleTime = new DateTime(2020, 5, 30, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4667),
                             TenantId = 11,
                             UsageAmount = 13.460000000000001
                         },
@@ -3449,7 +3485,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 272,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 29, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1777),
+                            SampleTime = new DateTime(2020, 5, 29, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4670),
                             TenantId = 11,
                             UsageAmount = 10.17
                         },
@@ -3457,7 +3493,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 273,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 28, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1780),
+                            SampleTime = new DateTime(2020, 5, 28, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4672),
                             TenantId = 11,
                             UsageAmount = 16.93
                         },
@@ -3465,7 +3501,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 274,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 27, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1782),
+                            SampleTime = new DateTime(2020, 5, 27, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4675),
                             TenantId = 11,
                             UsageAmount = 10.74
                         },
@@ -3473,7 +3509,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 275,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 26, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1785),
+                            SampleTime = new DateTime(2020, 5, 26, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4678),
                             TenantId = 11,
                             UsageAmount = 19.600000000000001
                         },
@@ -3481,7 +3517,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 276,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 25, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1788),
+                            SampleTime = new DateTime(2020, 5, 25, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4680),
                             TenantId = 11,
                             UsageAmount = 12.41
                         },
@@ -3489,7 +3525,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 277,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 24, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1790),
+                            SampleTime = new DateTime(2020, 5, 24, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4683),
                             TenantId = 11,
                             UsageAmount = 15.32
                         },
@@ -3497,7 +3533,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 278,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 23, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1794),
+                            SampleTime = new DateTime(2020, 5, 23, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4685),
                             TenantId = 11,
                             UsageAmount = 21.399999999999999
                         },
@@ -3505,7 +3541,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 279,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 22, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1796),
+                            SampleTime = new DateTime(2020, 5, 22, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4688),
                             TenantId = 11,
                             UsageAmount = 23.66
                         },
@@ -3513,7 +3549,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 280,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 21, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1799),
+                            SampleTime = new DateTime(2020, 5, 21, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4690),
                             TenantId = 11,
                             UsageAmount = 13.109999999999999
                         },
@@ -3521,7 +3557,7 @@ This Agreement represents the entire agreement between Sender.Company and Signer
                         {
                             TenantResourceUsageId = 281,
                             ResourceType = 1,
-                            SampleTime = new DateTime(2020, 5, 20, 12, 28, 40, 940, DateTimeKind.Local).AddTicks(1802),
+                            SampleTime = new DateTime(2020, 5, 20, 16, 8, 49, 46, DateTimeKind.Local).AddTicks(4693),
                             TenantId = 11,
                             UsageAmount = 18.390000000000001
                         });

@@ -87,16 +87,15 @@ namespace AptMgmtPortalAPI.Repository
 
         public async Task<MaintenanceRequest> UpdateMaintenanceRequest(MaintenanceRequest original,
                                                                        MaintenanceRequestModel updated,
-                                                                       int userId,
-                                                                       MaintenanceCloseReason reason)
+                                                                       int userId)
         {
             // Maintenance requests are immutable once closed.
             if (original.TimeClosed != null) return original;
 
-            if (updated.Closed == true) {
+            if (updated.CloseReason != null) {
                 original.ClosingUserId = userId;
                 original.TimeClosed = DateTime.Now;
-                original.CloseReason = reason;
+                original.CloseReason = updated.CloseReason;
             }
 
             original.MaintenanceRequestType = updated.MaintenanceRequestType;

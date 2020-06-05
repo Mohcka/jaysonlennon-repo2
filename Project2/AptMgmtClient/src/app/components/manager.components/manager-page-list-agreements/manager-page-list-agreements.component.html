@@ -1,24 +1,25 @@
-<div *ngIf="!agreements && !tenant">Loading agreements...</div>
-<div *ngIf="agreements && tenant" class="offset-2">
-  <h2>{{tenant.firstName}}'s Agreements</h2>
+<div *ngIf="!agreements && !tenants">Loading agreements...</div>
+<div *ngIf="agreements && tenants" class="offset-2">
+  <h2>All Agreements</h2>
   <table class="table">
     <thead>
       <tr>
+        <th scope="col">Tenant</th>
         <th scope="col">Title</th>
         <th scope="col">Signed Date</th>
         <th scope="col">Effective Date</th>
         <th scope="col">End Date</th>
-        <th scope="col"></th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let agreement of agreements">
+        <td>{{ getTenantNameFromId(agreement.tenantId) }}</td>
         <td>{{ agreement.title }}</td>
         <td>
           <span *ngIf="agreement.signedDate">{{
             agreement.signedDate | date
           }}</span>
-          <span *ngIf="!agreement.signedDate">Not Signed</span>
+          <span *ngIf="!agreement.signedDate" class="bg-danger text-light">Not Signed</span>
         </td>
         <td>{{ agreement.startDate | date }}</td>
         <td>{{ agreement.endDate | date }}</td>
@@ -28,16 +29,6 @@
               <a [routerLink]="['/tenant/agreement/detail', agreement.agreementId]"
                   class="btn btn-primary">View</a>
             </div>
-            <button
-              *ngIf="!agreement.signedDate"
-              class="btn btn-primary"
-              (click)="signAgreement(agreement)"
-            >
-              Sign
-            </button>
-            <button *ngIf="agreement.signedDate" class="btn btn-secondary" disabled>
-              Signed
-            </button>
           </div>
         </td>
       </tr>

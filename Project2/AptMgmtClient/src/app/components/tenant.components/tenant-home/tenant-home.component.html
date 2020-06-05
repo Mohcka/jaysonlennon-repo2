@@ -1,4 +1,4 @@
-<h2>Welcome {{ this.authService.currentUserValue.loginName }}</h2>
+<h2 *ngIf="tenant">Welcome {{ tenant.firstName }}</h2>
 
 <hr />
 
