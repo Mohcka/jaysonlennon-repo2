@@ -5,9 +5,9 @@ import { MaintenanceService } from 'src/app/services/maintenance.service';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import { TenantService } from 'src/app/services/tenant.service';
 import { Tenant } from 'src/app/model/tenant';
-import { ResourcesStrArr } from 'src/enums/Resource';
 import { MaintenanceRequestData } from 'src/app/model/maintenance-request-data';
 import { HttpErrorResponse } from '@angular/common/http';
+import { MaintenanceRequestTypes } from 'src/enums/maintenance-request-types';
 
 @Component({
   selector: 'app-maintenance-request-form',
@@ -30,7 +30,7 @@ export class MaintenanceRequestFormComponent implements OnInit {
   public tenants: Tenant[];
 
   // TODO: Get maintenance request type samples from server
-  public maintenanceRequestTypes: string[] = ResourcesStrArr;
+  public maintenanceRequestTypes: string[] = MaintenanceRequestTypes;
 
   constructor(
     private maintenanceService: MaintenanceService,
@@ -45,7 +45,7 @@ export class MaintenanceRequestFormComponent implements OnInit {
     this.getTenants();
 
     let formGroupFields: any = {
-      type: [ResourcesStrArr[0], Validators.required],
+      type: [MaintenanceRequestTypes[0], Validators.required],
       notes: ['', Validators.required],
     };
 

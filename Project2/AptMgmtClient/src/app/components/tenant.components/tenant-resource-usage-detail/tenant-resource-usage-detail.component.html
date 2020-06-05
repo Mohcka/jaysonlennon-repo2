@@ -1,8 +1,8 @@
 <div *ngIf="usageSummary.resource == 0 || usageSummary.resource == 1">
-  <h3>{{usageSummary.resource | resourceAsString }}</h3>
+  <h3>{{usageSummary.resource | resourceAsString }} usage detail</h3>
   <div class="summary">
     <div>Current bill</div>
-    <div>${{usageSummary.currentCost | number: '1.2-2'}}</div>
+    <div>{{usageSummary.currentCost | currency: 'USD' }}</div>
 
     <div>Total usage</div>
     <div>{{usageSummary.actualUsage | number: '1.2-2'}} {{unitName}}</div>
@@ -11,10 +11,10 @@
     <div>{{usageSummary.averageDailyUsage | number: '1.2-2'}} {{unitName}}</div>
 
     <div>Billing rate</div>
-    <div>${{usageSummary.rate | number: '1.2-2'}} per {{unitName}}</div>
+    <div>{{usageSummary.rate | currency: 'USD' }} per {{unitName}}</div>
 
     <div>Projected cost this period</div>
-    <div>${{usageSummary.projectedCost | number: '1.2-2'}}</div>
+    <div>{{usageSummary.projectedCost | currency: 'USD' }}</div>
 
     <div>Projected usage this period</div>
     <div>{{usageSummary.projectedUsageTotal | number: '1.2-2'}} {{unitName}}</div>

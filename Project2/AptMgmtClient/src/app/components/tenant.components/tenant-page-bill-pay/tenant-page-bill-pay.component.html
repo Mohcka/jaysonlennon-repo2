@@ -1,8 +1,6 @@
-<h1>Tenant pay single bill page</h1>
-<h3>this page should use a bill component to display the billing info</h3>
-
+<div *ngIf="!bill">Loading summary...</div>
 <div *ngIf="bill">
-  <h2>{{ bill.resource | resourceAsString }}</h2>
+  <h2>{{ bill.resource | resourceAsString }} usage summary</h2>
   <div>
     <hr />
     <table class="table">
@@ -21,10 +19,10 @@
         <tr>
           <td>{{ bill.periodStart | date }}</td>
           <td>{{ bill.periodEnd | date }}</td>
-          <td>{{ bill.usage }}</td>
+          <td>{{ bill.usage | number: '1.2-2' }} {{ unitName }}</td>
           <td>{{ bill.rate | currency: 'USD' }}</td>
-          <td>{{ bill.paid | currency: 'USD' }}</td>
           <td>{{ bill.cost | currency: 'USD' }}</td>
+          <td>{{ bill.paid | currency: 'USD' }}</td>
           <td>{{ bill.owed | currency: 'USD' }}</td>
         </tr>
       </tbody>
@@ -47,6 +45,12 @@
   </div>
 </div>
 
-<div *ngIf="!bill">Processing...</div>
+<hr>
 
-<div *ngIf="error" class="alert-danger">{{ error }}</div>
+<div *ngIf="hasDetails && (!usageData || !usageSummary)">Loading usage data...</div>
+<div *ngIf="usageSummary && usageData">
+  <app-tenant-resource-usage-detail
+    [usageSummary]="usageSummary"
+    [usageData]="usageData">
+  </app-tenant-resource-usage-detail>
+</div>

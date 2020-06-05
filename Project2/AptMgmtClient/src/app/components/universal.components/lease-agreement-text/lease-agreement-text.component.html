@@ -1,0 +1,5 @@
+<div *ngIf="!agreement">Loading agreement...</div>
+<div *ngIf="agreement">
+  <h1>{{agreement.title}}</h1>
+  <div style="white-space: pre-wrap;">{{agreement.text}}</div>
+</div>

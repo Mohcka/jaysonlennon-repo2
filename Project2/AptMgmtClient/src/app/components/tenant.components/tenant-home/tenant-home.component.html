@@ -1,28 +1,4 @@
-<h2>Welcome {{ this.authService.currentUserValue.loginName }}</h2>
-<hr />
-
-<h4>Due payments</h4>
-<ul class="list-group col-3">
-  <li
-    class="list-group-item d-flex justify-content-between align-items-center"
-    *ngFor="let unpaidBill of unpaidBills"
-  >
-    <div style="font-size: large;">
-      {{ unpaidBill.resource | resourceAsString }}
-    </div>
-    <div>
-      <a
-        class="btn btn-primary"
-        [routerLink]="[
-          '/tenant/bill/pay',
-          unpaidBill.billingPeriodId,
-          unpaidBill.resource
-        ]"
-        >View Bill</a
-      >
-    </div>
-  </li>
-</ul>
+<h2 *ngIf="tenant">Welcome {{ tenant.firstName }}</h2>
 
 <hr />
 
@@ -35,53 +11,3 @@
 </a>
 
 <hr />
-
-<!-- <div *ngIf="bills">
-  <h2>Bills for {{ authService.currentUserValue.loginName }}</h2>
-  <div *ngFor="let bill of bills">
-    <hr />
-    <div>Tenant id: {{ bill.tenantId }}</div>
-    <div>Resource: {{ bill.resource | resourceAsString }}</div>
-    <div>period start: {{ bill.periodStart | date }}</div>
-    <div>period end: {{ bill.periodEnd | date }}</div>
-    <div>period id: {{ bill.billingPeriodId }}</div>
-    <div>usage: {{ bill.usage }}</div>
-    <div>rate: {{ bill.rate | currency: 'USD' }}</div>
-    <div>cost: {{ bill.cost | currency: 'USD' }}</div>
-    <div>paid: {{ bill.paid | currency: 'USD' }}</div>
-    <div>owed: {{ bill.owed | currency: 'USD' }}</div>
-    <button
-      class="btn btn-primary"
-      *ngIf="bill.owed > 0"
-      (click)="payBill(bill.resource, bill.billingPeriodId, bill.owed)"
-    >
-      Pay {{ bill.resource | resourceAsString }}
-    </button>
-  </div>
-</div> -->
-
-<div *ngIf="agreements" class="offset-2">
-  <h2>{{ authService.currentUserValue.loginName }}'s Agreements</h2>
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Agreement#</th>
-        <th scope="col">Title</th>
-        <th scope="col">Agreement</th>
-        <th scope="col">Signed Date</th>
-        <th scope="col">Start Date</th>
-        <th scope="col">EndDate</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let agreement of agreements">
-        <th scope="row">{{ agreement.agreementId }}</th>
-        <td>{{ agreement.title }}</td>
-        <td>{{ agreement.text }}</td>
-        <td>{{ agreement.signedDate | date }}</td>
-        <td>{{ agreement.startDate | date }}</td>
-        <td>{{ agreement.endDate | date }}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>

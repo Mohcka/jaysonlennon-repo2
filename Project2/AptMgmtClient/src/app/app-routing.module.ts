@@ -1,3 +1,5 @@
+import { LeaseAgreementTextComponent } from './components/universal.components/lease-agreement-text/lease-agreement-text.component';
+import { AppIndexComponent } from './components/universal.components/app-index/app-index.component';
 import { TenantPageViewResourceUsageComponent } from './components/tenant.components/tenant-page-view-resource-usage/tenant-page-view-resource-usage.component';
 import { TenantPageListAgreementsComponent } from './components/tenant.components/tenant-page-list-agreements/tenant-page-list-agreements.component';
 import { TenantPageBillPayComponent } from './components/tenant.components/tenant-page-bill-pay/tenant-page-bill-pay.component';
@@ -18,23 +20,21 @@ import { TenantPageListBillsComponent } from './components/tenant.components/ten
 import { TenantEditInfoComponent } from './components/tenant.components/tenant-edit-info/tenant-edit-info.component';
 import { AssignLeasePageComponent } from './components/manager.components/manager-assign-lease-page/assign-lease-page.component';
 import { ManagerCreateAgreementTempalteComponent } from './components/manager.components/manager-create-agreement-template/manager-create-agreement-template.component';
-import { LeaseAgreementsOageComponent } from './components/universal.components/lease-agreements-page/lease-agreements-page.component';
 import { ManagerCreateTenantPageComponent } from './components/manager.components/manager-create-tenant-page/manager-create-tenant-page.component';
 import { TenantSignupPageComponent } from './components/tenant.components/tenant-signup-page/tenant-signup-page.component';
+import { ManagerPageListAgreementsComponent } from './components/manager.components/manager-page-list-agreements/manager-page-list-agreements.component';
 
 // Define routes for the application
 const routes: Routes = [
   // Universal routes
+  { path: '', component: AppIndexComponent },
   { path: 'hub', component: RouterHubComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: TenantSignupPageComponent, },
   { path: '403', component: UnauthorizedAccessComponent },
   { path: 'maintenance', component: MaintenanceRequestsComponent,
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Admin, UserAccountType.Tenant, UserAccountType.Manager]}},
-  { path: 'agreements', component: LeaseAgreementsOageComponent,
-    canActivate: [AuthGuard], data: { roles: [UserAccountType.Admin, UserAccountType.Tenant, UserAccountType.Manager]}},
-  { path: 'agreements', component: LeaseAgreementsOageComponent,
-    canActivate: [AuthGuard], data: { roles: [UserAccountType.Admin, UserAccountType.Tenant, UserAccountType.Manager]}},
+
 
   // Tenants
   { path: 'tenant', component: TenantHomeComponent,
@@ -61,6 +61,9 @@ const routes: Routes = [
   { path: 'tenant/agreement/list', component: TenantPageListAgreementsComponent,
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },
 
+  { path: 'tenant/agreement/detail/:agreementId', component: LeaseAgreementTextComponent,
+    canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },
+
   { path: 'tenant/resource/home', component: TenantPageViewResourceUsageComponent,
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },
 
@@ -80,10 +83,13 @@ const routes: Routes = [
   { path: 'manager/maintenance/new', component: MaintenanceRequestFormComponent,
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Manager] } },
 
-  { path: 'manager/lease-agreement/assign', component: AssignLeasePageComponent,
+  { path: 'manager/agreement/list', component: ManagerPageListAgreementsComponent,
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Manager] } },
 
-  { path: 'manager/lease-agreement/new-template', component: ManagerCreateAgreementTempalteComponent,
+  { path: 'manager/agreement/assign', component: AssignLeasePageComponent,
+    canActivate: [AuthGuard], data: { roles: [UserAccountType.Manager] } },
+
+  { path: 'manager/agreement/new-template', component: ManagerCreateAgreementTempalteComponent,
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Manager] } },
 ];
 
