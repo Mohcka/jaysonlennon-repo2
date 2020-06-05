@@ -17,7 +17,8 @@
       <a
         href="#"
         *ngIf="openMaintenanceRequests && !openMaintenanceRequests.length"
-        class="btn btn-primary mb-1 w-100 disabled"
+        class="btn btn-success mb-1 w-100 "
+        [routerLink]="['/tenant/maintenance/list']"
       >
         No Open Maintenance Requests
       </a>
@@ -44,7 +45,8 @@
       <a
         href="#"
         *ngIf="bills && !bills.length"
-        class="btn btn-primary mb-1 w-100 disabled"
+        class="btn btn-success mb-1 w-100"
+        [routerLink]="['/tenant/bill/list']"
       >
         No Unpaid Bills
       </a>
@@ -65,7 +67,8 @@
       <a
         href="#"
         *ngIf="unsignedAgreements && !unsignedAgreements.length"
-        class="btn btn-primary mb-1 w-100 disabled"
+        [routerLink]="['/tenant/agreement/list']"
+        class="btn btn-success mb-1 w-100"
       >
         All Agreements Signed
       </a>

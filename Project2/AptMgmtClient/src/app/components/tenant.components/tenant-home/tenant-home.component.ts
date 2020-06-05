@@ -9,6 +9,8 @@ import { AgreementService } from 'src/app/services/agreement.service';
 import { MaintenanceRequest } from 'src/app/model/maintenance-request';
 import { TenantService } from 'src/app/services/tenant.service';
 import { Tenant } from 'src/app/model/tenant';
+import { Bill } from 'src/app/model/bill';
+import { BillService } from 'src/app/services/bill.service';
 
 @Component({
   selector: 'app-home',
