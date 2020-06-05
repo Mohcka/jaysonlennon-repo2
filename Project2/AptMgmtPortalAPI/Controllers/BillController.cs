@@ -60,6 +60,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                 .Message("You are not authorized to view billing information.")
                                 .Code(403)
                                 .Build();
+                _logger.LogWarning($"Unauthorized access attempt to view billing information.");
                 return err;
             }
         }
@@ -109,6 +110,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                 .Message("You are not authorized to view billing information.")
                                 .Code(403)
                                 .Build();
+                _logger.LogWarning($"Unauthorized access attempt to view billing information.");
                 return err;
             }
         }
@@ -154,6 +156,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                 .Message("You are not authorized to view billing information.")
                                 .Code(403)
                                 .Build();
+                _logger.LogWarning($"Unauthorized access attempt to view billing information.");
                 return err;
             }
         }
@@ -199,6 +202,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                 .Message("You are not authorized to view billing information.")
                                 .Code(403)
                                 .Build();
+                _logger.LogWarning($"Unauthorized access attempt to view billing information.");
                 return err;
             }
         }
@@ -252,6 +256,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                 .Message("You are not authorized to view billing information.")
                                 .Code(403)
                                 .Build();
+                _logger.LogWarning($"Unauthorized access attempt to view billing information.");
                 return err;
             }
         }
@@ -305,6 +310,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                 .Message("You are not authorized to view billing information.")
                                 .Code(403)
                                 .Build();
+                _logger.LogWarning($"Unauthorized access attempt to view billing information.");
                 return err;
             }
         }
@@ -353,6 +359,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                 .Message("You are not authorized to make bill payments.")
                                 .Code(403)
                                 .Build();
+                _logger.LogWarning($"Unauthorized access attempt to make a billing payment.");
                 return err;
             }
         }

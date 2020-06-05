@@ -56,6 +56,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                 .Message("You are not authorized to view resource usage.")
                                 .Code(403)
                                 .Build();
+                _logger.LogWarning($"Unauthorized access attempt to view resource usage.");
                 return err;
             }
         }
@@ -89,6 +90,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                 .Message("You are not authorized to view resource usage.")
                                 .Code(403)
                                 .Build();
+                _logger.LogWarning($"Unauthorized access attempt to view resource usage.");
                 return err;
             }
         }
@@ -123,6 +125,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                 .Message("You are not authorized to view resource projections.")
                                 .Code(403)
                                 .Build();
+                _logger.LogWarning($"Unauthorized access attempt to view resource projections.");
                 return err;
             }
         }
@@ -166,6 +169,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                 .Message("You are not authorized to view resource projections.")
                                 .Code(403)
                                 .Build();
+                _logger.LogWarning($"Unauthorized access attempt to view resource projections.");
                 return err;
             }
         }

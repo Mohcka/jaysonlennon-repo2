@@ -36,6 +36,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                 .Message("You are not authorized to view agreement templates.")
                                 .Code(403)
                                 .Build();
+                _logger.LogWarning($"Unauthorized access attempt to view agreement templates.");
                 return err;
             }
         }
@@ -56,6 +57,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                 .Message("You are not authorized to update agreement templates.")
                                 .Code(403)
                                 .Build();
+                _logger.LogWarning($"Unauthorized access attempt to update agreement templates.");
                 return err;
             }
         }
