@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { MaintenanceService } from 'src/app/services/maintenance.service';
 import { MaintenanceRequest } from 'src/app/model/maintenance-request';
 import { AuthenticationService } from 'src/app/services/authentication.service';
-import { MaintenanceRequestData } from 'src/app/model/maintenance-request-data';
 import { MaintenanceRequestUpdate } from 'src/app/model/maintenance-update';
 import { MaintenanceCloseReason } from 'src/enums/maintenance-close-reason';
 import { Tenant } from 'src/app/model/tenant';
@@ -11,7 +10,6 @@ import { Tenant } from 'src/app/model/tenant';
 @Component({
   selector: 'app-maintenance-requests',
   templateUrl: './maintenance-requests.component.html',
-  styleUrls: ['./maintenance-requests.component.css'],
 })
 export class MaintenanceRequestsComponent implements OnInit {
   public closeReason = MaintenanceCloseReason;

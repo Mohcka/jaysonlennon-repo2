@@ -308,7 +308,7 @@ namespace AptMgmtPortalAPI.Repository
                 .ToListAsync();
         }
 
-        public async Task<IEnumerable<ProjectedResourceUsage>> GetProjectedResourceUsages(int tenantId, BillingPeriod period)
+        public async Task<IEnumerable<ProjectedResourceUsage>> GetProjectedResourceUsages(int tenantId, BillingPeriod period, DateTime now)
         {
             var usages = await GetResourceUsage(tenantId, period);
             var usageRates = await GetResourceUsageRates(period);
@@ -322,7 +322,7 @@ namespace AptMgmtPortalAPI.Repository
                 var projectedUsageTotal = Util.ResourceProjection.TotalForPeriod(usage.Usage,
                                                                                  period.PeriodStart,
                                                                                  period.PeriodEnd,
-                                                                                 DateTime.Now);
+                                                                                 now);
 
                 var rate = usageRates
                     .Where(r => r.ResourceType == usage.ResourceType)
@@ -348,9 +348,9 @@ namespace AptMgmtPortalAPI.Repository
             return projections;
         }
 
-        public async Task<ProjectedResourceUsage> GetProjectedResourceUsage(int tenantId, ResourceType resource, BillingPeriod period)
+        public async Task<ProjectedResourceUsage> GetProjectedResourceUsage(int tenantId, ResourceType resource, BillingPeriod period, DateTime now)
         {
-            return (await GetProjectedResourceUsages(tenantId, period))
+            return (await GetProjectedResourceUsages(tenantId, period, now))
                 .Where(p => p.Resource == resource)
                 .Select(p => p)
                 .FirstOrDefault();

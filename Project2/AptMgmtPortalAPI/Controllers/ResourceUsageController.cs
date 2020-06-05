@@ -1,3 +1,4 @@
+using System;
 using AptMgmtPortalAPI.Types;
 using AptMgmtPortalAPI.Util.Auth;
 using AptMgmtPortalAPI.Util.Auth.Extensions;
@@ -55,6 +56,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                 .Message("You are not authorized to view resource usage.")
                                 .Code(403)
                                 .Build();
+                _logger.LogWarning($"Unauthorized access attempt to view resource usage.");
                 return err;
             }
         }
@@ -88,6 +90,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                 .Message("You are not authorized to view resource usage.")
                                 .Code(403)
                                 .Build();
+                _logger.LogWarning($"Unauthorized access attempt to view resource usage.");
                 return err;
             }
         }
@@ -111,7 +114,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                     return err;
                 }
 
-                var projections = await _billRepository.GetProjectedResourceUsages((int)tenantId, currentBillingPeriod);
+                var projections = await _billRepository.GetProjectedResourceUsages((int)tenantId, currentBillingPeriod, DateTime.Now);
                 var projectionDTOs = projections.Select(p => new DTO.ProjectedResourceUsageDTO(p)).ToList();
 
                 return new ObjectResult(projectionDTOs);
@@ -122,6 +125,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                 .Message("You are not authorized to view resource projections.")
                                 .Code(403)
                                 .Build();
+                _logger.LogWarning($"Unauthorized access attempt to view resource projections.");
                 return err;
             }
         }
@@ -145,7 +149,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                     return err;
                 }
 
-                var projection = await _billRepository.GetProjectedResourceUsage((int)tenantId, resource, currentBillingPeriod);
+                var projection = await _billRepository.GetProjectedResourceUsage((int)tenantId, resource, currentBillingPeriod, DateTime.Now);
                 if (projection == null)
                 {
                     var err = new DTO.ErrorBuilder()
@@ -165,6 +169,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                 .Message("You are not authorized to view resource projections.")
                                 .Code(403)
                                 .Build();
+                _logger.LogWarning($"Unauthorized access attempt to view resource projections.");
                 return err;
             }
         }

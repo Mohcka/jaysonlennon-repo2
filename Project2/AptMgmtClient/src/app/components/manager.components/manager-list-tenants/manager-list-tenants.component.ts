@@ -5,7 +5,6 @@ import { Tenant } from '../../../model/tenant';
 @Component({
   selector: 'app-tenants',
   templateUrl: './manager-list-tenants.component.html',
-  styleUrls: ['./manager-list-tenants.component.css'],
 })
 export class ManagerListTenantsComponent implements OnInit {
   /**

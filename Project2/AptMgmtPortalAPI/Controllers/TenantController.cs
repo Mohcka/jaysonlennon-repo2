@@ -47,6 +47,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                  .Message("You are not authorized to view tenant lists.")
                                  .Code(403)
                                  .Build();
+                _logger.LogWarning($"Unauthorized access attempt to view tenant list.");
                 return err;
             }
         }
@@ -80,6 +81,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                  .Message("You are not authorized to view tenants by ID.")
                                  .Code(403)
                                  .Build();
+                _logger.LogWarning($"Unauthorized access attempt to view tenant info.");
                 return err;
             }
         }
@@ -121,6 +123,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                  .Message("You are not authorized to view tenant info.")
                                  .Code(403)
                                  .Build();
+                _logger.LogWarning($"Unauthorized access attempt to view tenant info.");
                 return new ObjectResult(err);
 
             }
@@ -188,6 +191,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                 .Message("Not authorized to edit tenant information.")
                                 .Code(403)
                                 .Build();
+                _logger.LogWarning($"Unauthorized access attempt to edit tenant info.");
                 return err;
 
             }

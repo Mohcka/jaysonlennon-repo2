@@ -4,7 +4,6 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { TenantService } from 'src/app/services/tenant.service';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Agreement } from 'src/app/model/agreement';
 import { Tenant } from 'src/app/model/tenant';
 import { AgreementTemplate } from 'src/app/model/agreement-template';
 import { HttpErrorResponse } from '@angular/common/http';
@@ -12,7 +11,6 @@ import { HttpErrorResponse } from '@angular/common/http';
 @Component({
   selector: 'app-assign-lease-page',
   templateUrl: './assign-lease-page.component.html',
-  styleUrls: ['./assign-lease-page.component.css'],
 })
 export class AssignLeasePageComponent implements OnInit {
   public leaseAgreementForm: FormGroup;

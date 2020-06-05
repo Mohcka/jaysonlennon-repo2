@@ -8,7 +8,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-manager-create-agreement-template',
   templateUrl: './manager-create-agreement-template.component.html',
-  styleUrls: ['./manager-create-agreement-template.component.css'],
 })
 export class ManagerCreateAgreementTempalteComponent implements OnInit {
   public leaseAgreementTemplateForm: FormGroup;

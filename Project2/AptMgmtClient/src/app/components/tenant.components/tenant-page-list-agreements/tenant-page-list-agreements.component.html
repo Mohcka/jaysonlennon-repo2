@@ -1,7 +1,7 @@
 <div *ngIf="!agreements && !tenant">Loading agreements...</div>
-<div *ngIf="agreements && tenant">
-  <h2>{{tenant.firstName}}'s Agreements</h2>
+<div *ngIf="agreements && tenant" class="offset-2">
   <table class="table">
+    <caption>{{tenant.firstName}}'s Agreements</caption>
     <thead>
       <tr>
         <th scope="col">Title</th>

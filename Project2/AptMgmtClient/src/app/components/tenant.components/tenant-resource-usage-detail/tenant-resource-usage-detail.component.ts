@@ -3,7 +3,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import { MeteredResouceUsageEntry } from 'src/app/model/metered-resource-usage-entry';
 import { ChartType } from 'angular-google-charts';
 import { Resource } from 'src/enums/Resource';
-import { DecimalPipe } from '@angular/common';
 
 @Component({
   selector: 'app-tenant-resource-usage-detail',

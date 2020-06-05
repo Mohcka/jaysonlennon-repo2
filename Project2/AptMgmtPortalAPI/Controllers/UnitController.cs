@@ -36,6 +36,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                  .Message("You are not authorized to view units.")
                                  .Code(403)
                                  .Build();
+                _logger.LogWarning($"Unauthorized access attempt to view units.");
                 return err;
             }
         }
@@ -65,6 +66,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                  .Message("You are not authorized to query units.")
                                  .Code(403)
                                  .Build();
+                _logger.LogWarning($"Unauthorized access attempt to query units.");
                 return err;
             }
         }
@@ -85,6 +87,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                  .Message("You are not authorized to update units.")
                                  .Code(403)
                                  .Build();
+                _logger.LogWarning($"Unauthorized access attempt to update units.");
                 return new ObjectResult(err);
 
             }
@@ -118,6 +121,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                  .Message("You are not authorized to delete units.")
                                  .Code(403)
                                  .Build();
+                _logger.LogWarning($"Unauthorized access attempt to delete units.");
                 return err;
             }
         }

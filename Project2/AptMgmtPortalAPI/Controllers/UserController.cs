@@ -61,6 +61,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                 .Message("You do not have the proper authorization to view user accounts.")
                                 .Code(403)
                                 .Build();
+                _logger.LogWarning($"Unauthorized access attempt to view user accounts.");
                 return err;
             }
         }

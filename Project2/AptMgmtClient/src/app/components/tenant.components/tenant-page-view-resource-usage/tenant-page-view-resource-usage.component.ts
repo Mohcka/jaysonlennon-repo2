@@ -7,7 +7,6 @@ import { Dictionary } from 'src/app/model/dictionary';
 @Component({
   selector: 'app-tenant-page-view-resource-usage',
   templateUrl: './tenant-page-view-resource-usage.component.html',
-  styleUrls: ['./tenant-page-view-resource-usage.component.css']
 })
 export class TenantPageViewResourceUsageComponent implements OnInit {
 

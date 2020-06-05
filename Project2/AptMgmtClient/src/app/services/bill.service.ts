@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { GenericRest } from './generic-rest.service';
 import { ApiBase } from 'src/ApiBase';
 import { PayBillData } from '../model/pay-bill-data';
 import { Observable } from 'rxjs';

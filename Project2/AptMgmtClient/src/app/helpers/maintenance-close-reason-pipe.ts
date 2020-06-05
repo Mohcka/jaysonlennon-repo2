@@ -9,11 +9,11 @@ import { MaintenanceCloseReason } from 'src/enums/maintenance-close-reason';
 
 export class MaintenanceCloseReasonEnumPipe implements PipeTransform {
 
-  transform(value: MaintenanceCloseReason, args?: any): String {
+  transform(value: MaintenanceCloseReason, args?: any): string {
     return this.resourceAsString(value);
   }
 
-  resourceAsString(value: MaintenanceCloseReason): String {
+  resourceAsString(value: MaintenanceCloseReason): string {
       switch (value) {
           case MaintenanceCloseReason.Completed: return 'Completed';
           case MaintenanceCloseReason.CanceledByManagement: return 'Canceled by Management';

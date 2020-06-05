@@ -9,7 +9,6 @@ import { HttpErrorResponse } from '@angular/common/http';
 @Component({
   selector: 'app-tenant-edit-info',
   templateUrl: './tenant-edit-info.component.html',
-  styleUrls: ['./tenant-edit-info.component.css'],
 })
 export class TenantEditInfoComponent implements OnInit {
   public tenantForm: FormGroup;

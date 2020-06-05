@@ -9,11 +9,11 @@ import { Resource } from 'src/enums/Resource';
 
 export class ResourceEnumPipe implements PipeTransform {
 
-  transform(value: Resource, args?: any): String {
+  transform(value: Resource, args?: any): string {
     return this.resourceAsString(value);
   }
 
-  resourceAsString(value: Resource): String {
+  resourceAsString(value: Resource): string {
       switch (value) {
           case Resource.Internet: return Resource[Resource.Internet];
           case Resource.Power: return Resource[Resource.Power];

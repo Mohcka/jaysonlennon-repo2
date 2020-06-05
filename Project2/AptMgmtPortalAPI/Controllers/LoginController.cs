@@ -37,6 +37,7 @@ namespace AptMgmtPortalAPI.Controllers.User
                                    .Message("Invalid credentials")
                                    .Code(401)
                                    .Build();
+                _logger.LogWarning($"Invalid login attempt with login name '{loginInfo.UserName}'.");
                 return error;
             }
         }

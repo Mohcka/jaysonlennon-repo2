@@ -12,7 +12,6 @@ import { MaintenanceRequestTypes } from 'src/enums/maintenance-request-types';
 @Component({
   selector: 'app-maintenance-request-form',
   templateUrl: './maintenance-request-form.component.html',
-  styleUrls: ['./maintenance-request-form.component.css'],
 })
 export class MaintenanceRequestFormComponent implements OnInit {
   public maintenanceRequestForm: FormGroup;

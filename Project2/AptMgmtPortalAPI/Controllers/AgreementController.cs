@@ -42,6 +42,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                     .Message("You are not a tenant of this property")
                                     .Code(403)
                                     .Build();
+                    _logger.LogWarning($"User {userId} attempted to access tenant information without being a tenant.");
                     return err;
                 }
 
@@ -60,6 +61,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                 .Message("You are not authorized to view agreements.")
                                 .Code(403)
                                 .Build();
+                _logger.LogWarning($"Unauthorized access attempt to view agreements.");
                 return err;
             }
         }
@@ -92,6 +94,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                     .Message("You are not a tenant of this property")
                                     .Code(403)
                                     .Build();
+                    _logger.LogWarning($"Attempt by user {userId} to access tenant information without being a tenant.");
                     return err;
                 }
                 if ((int)checkTenantId != tenantId)
@@ -112,6 +115,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                 .Message("You are not authorized to list agreements.")
                                 .Code(403)
                                 .Build();
+                _logger.LogWarning($"Unauthorized access attempt to query agreements.");
                 return err;
             }
         }
@@ -133,6 +137,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                     .Message("You are not a tenant of this property.")
                                     .Code(403)
                                     .Build();
+                    _logger.LogWarning($"Attempt by user {userId} to access tenant information without being a tenant.");
                     return err;
                 }
 
@@ -169,6 +174,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                 .Message("You are not authorized to view agreements.")
                                 .Code(403)
                                 .Build();
+                _logger.LogWarning($"Unauthorized access attempt to query agreements.");
                 return err;
             }
         }
@@ -188,6 +194,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                     .Message("You are not a tenant of this property.")
                                     .Code(403)
                                     .Build();
+                    _logger.LogWarning($"Attempt by user {userId} to access tenant information without being a tenant.");
                     return err;
                 }
 
@@ -232,6 +239,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                                 .Message("You are not authorized to update agreements")
                                 .Code(403)
                                 .Build();
+                _logger.LogWarning($"Unauthorized access attempt to update agreements.");
                 return err;
             }
         }

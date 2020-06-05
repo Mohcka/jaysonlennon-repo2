@@ -2,6 +2,7 @@
   <h2>Edit</h2>
   <form [formGroup]="tenantForm" (ngSubmit)="onSubmit()">
     <fieldset [disabled]="!tenant || loading">
+      <legend>Edit Tenant Information</legend>
       <div class="form-row">
         <div class="form-group col">
           <label for="firstName">First Name</label>
