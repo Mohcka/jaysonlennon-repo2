@@ -29,7 +29,6 @@ export class MaintenanceService {
   }
 
   public cancelRequest(data: MaintenanceRequestUpdate): Observable<MaintenanceRequest> {
-    data.closed = true;
     return this.http
       .post<MaintenanceRequest>(this.apiUrl, data, this.httpOptions)
       .pipe(catchError(handleError<null>('maintenance.service(createNewRequest)')));

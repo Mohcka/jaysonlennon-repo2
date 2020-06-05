@@ -1,34 +1,72 @@
 <div>
   <h2 class="mb-4">Welcome Manager</h2>
-  <div class="mb-4">
-    <h4>Manage Lease Agreements</h4>
-    <hr />
-    <div class="col-3 p-0">
-      <a
-        [routerLink]="['/manager/lease-agreement/assign']"
+
+  <!-- * Tenants * -->
+
+  <div class="manager-links col-4 p-0">
+    <div class="mb-4">
+      <h4>Tenants</h4>
+      <hr class="mt-0" />
+      <!-- <a
+        [routerLink]="['/manager/tenants/list']"
         class="btn btn-primary mb-1 w-100"
       >
-        Assign Lease To a Tenant
-      </a>
+        View Tenants
+      </a> -->
       <a
-        [routerLink]="['/manager/lease-agreement/new-template']"
+        [routerLink]="['/manager/tenants/create']"
         class="btn btn-primary mb-1 w-100"
       >
-        Create a New Lease Template
-      </a>
-      <a [routerLink]="['/']" class="btn btn-primary mb-1 w-100">
-        View Lease Agreements
+        Register New Tenant
       </a>
     </div>
-  </div>
 
-  <div class="mb-4">
-    <h4>Maintenance Requests</h4>
-    <hr />
-    <div class="d-inline-block col-3 p-0">
-      <a [routerLink]="['/']" class="btn btn-primary mb-1 w-100">
-        View Maintenace Requests
-      </a>
+    <!-- * Lease * -->
+
+    <div class="mb-4">
+      <h4>Manage Lease Agreements</h4>
+      <hr class="mt-0" />
+      <div class="p-0">
+        <a
+          [routerLink]="['/manager/lease-agreement/assign']"
+          class="btn btn-primary mb-1 w-100"
+        >
+          Assign Lease To a Tenant
+        </a>
+        <a
+          [routerLink]="['/manager/lease-agreement/new-template']"
+          class="btn btn-primary mb-1 w-100"
+        >
+          Create a New Lease Template
+        </a>
+        <a
+          [routerLink]="['/manager/agreement/list']"
+          class="btn btn-primary mb-1 w-100"
+        >
+          View Lease Agreements
+        </a>
+      </div>
+    </div>
+
+    <!-- * Maintenance * -->
+
+    <div class="mb-4">
+      <h4>Maintenance Requests</h4>
+      <hr class="mt-0" />
+      <div class="p-0">
+        <a
+          [routerLink]="['/manager/maintenance/list']"
+          class="btn btn-primary mb-1 w-100"
+        >
+          View Maintenace Requests
+        </a>
+        <a
+          [routerLink]="['/manager/maintenance/new']"
+          class="btn btn-primary mb-1 w-100"
+        >
+          New Maintenance Request
+        </a>
+      </div>
     </div>
   </div>
 </div>

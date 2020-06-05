@@ -39,7 +39,7 @@
         <td>{{ request.openNotes }}</td>
         <td>
           <span *ngIf="!request.closedBy">
-            <button class="btn btn-primary" (click)="cancelRequest(request)">
+            <button class="btn btn-primary" (click)="completeRequest(request)">
               Complete
             </button>
             <button class="btn btn-danger" (click)="cancelRequest(request)">
@@ -48,11 +48,20 @@
           </span>
           <button
             style="cursor: default;"
+            s
             *ngIf="request.closedBy"
-            class="btn btn-secondary"
+            class="btn {{
+              request.closeReason === closeReason.Completed
+                ? 'btn-secondary'
+                : 'btn-danger'
+            }}"
             disabled
           >
-            Completed
+            {{
+              request.closeReason === closeReason.Completed
+                ? 'Completed'
+                : 'Canceled'
+            }}
           </button>
         </td>
       </tr>

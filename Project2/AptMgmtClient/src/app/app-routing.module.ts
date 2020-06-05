@@ -24,6 +24,8 @@ import { ManagerCreateTenantPageComponent } from './components/manager.component
 import { TenantSignupPageComponent } from './components/tenant.components/tenant-signup-page/tenant-signup-page.component';
 import { ManagerPageListAgreementsComponent } from './components/manager.components/manager-page-list-agreements/manager-page-list-agreements.component';
 
+const allRoles = [UserAccountType.Admin, UserAccountType.Tenant, UserAccountType.Manager];
+
 // Define routes for the application
 const routes: Routes = [
   // Universal routes
@@ -33,7 +35,7 @@ const routes: Routes = [
   { path: 'signup', component: TenantSignupPageComponent, },
   { path: '403', component: UnauthorizedAccessComponent },
   { path: 'maintenance', component: MaintenanceRequestsComponent,
-    canActivate: [AuthGuard], data: { roles: [UserAccountType.Admin, UserAccountType.Tenant, UserAccountType.Manager]}},
+    canActivate: [AuthGuard], data: { roles: [...allRoles]}},
 
 
   // Tenants
@@ -44,7 +46,7 @@ const routes: Routes = [
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },
 
   { path: 'tenant/tenantInfo/:id', component: TenantDetailsComponent,
-    canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },
+    canActivate: [AuthGuard], data: { roles: [...allRoles] } },
 
   { path: 'tenant/maintenance/new', component: MaintenanceRequestFormComponent,
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },
@@ -62,7 +64,7 @@ const routes: Routes = [
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },
 
   { path: 'tenant/agreement/detail/:agreementId', component: LeaseAgreementTextComponent,
-    canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },
+    canActivate: [AuthGuard], data: { roles: [...allRoles] } },
 
   { path: 'tenant/resource/home', component: TenantPageViewResourceUsageComponent,
     canActivate: [AuthGuard], data: { roles: [UserAccountType.Tenant] } },

@@ -14,8 +14,8 @@ import { Tenant } from 'src/app/model/tenant';
   styleUrls: ['./maintenance-requests.component.css'],
 })
 export class MaintenanceRequestsComponent implements OnInit {
+  public closeReason = MaintenanceCloseReason;
   public maintenanceRequests: MaintenanceRequest[];
-  public closeReasons = MaintenanceCloseReason;
   tenant: Tenant;
 
   constructor(
@@ -30,7 +30,7 @@ export class MaintenanceRequestsComponent implements OnInit {
   }
 
   getTenant(): void {
-    this.tenantService.getTenant().subscribe(t => this.tenant = t);
+    this.tenantService.getTenant().subscribe((t) => (this.tenant = t));
   }
 
   get isManager(): boolean {
@@ -43,17 +43,20 @@ export class MaintenanceRequestsComponent implements OnInit {
 
   completeRequest(request: MaintenanceRequestUpdate): void {
     this.maintenanceService
-      .cancelRequest({ ...request, closed: true })
+      .cancelRequest({
+        ...request,
+        closeReason: MaintenanceCloseReason.Completed,
+      })
       .toPromise()
       .then((_) => this.getAllRequests());
   }
 
   cancelRequest(request: MaintenanceRequestUpdate): void {
     const closeReason = this.isManager
-      ? this.closeReasons.CanceledByManagement
-      : this.closeReasons.CanceledByTenant;
+      ? MaintenanceCloseReason.CanceledByManagement
+      : MaintenanceCloseReason.CanceledByTenant;
     this.maintenanceService
-      .cancelRequest({ ...request, closed: true })
+      .cancelRequest({ ...request, closeReason: closeReason })
       .subscribe((_) => this.getAllRequests());
   }
 

@@ -3,14 +3,20 @@
   <p>Apartment Property Management</p>
 </div>
 <div class="sidenav">
+  <a style="cursor: pointer;" (click)="goHome()">Home</a>
+
+  <!-- * User Specific * -->
   <span *ngIf="currentUser">
+    <!-- * Manager specific * -->
     <span *ngIf="isManager">
+      <a [routerLink]="['/manager/agreement/list']">Agreements</a>
       <a [routerLink]="['/manager/agreement/assign']">Assign Lease</a>
-      <a [routerLink]="['/manager/agreement/new-template']"
-        >Create Lease Template</a
-      >
+      <a [routerLink]="['/manager/agreement/new-template']">
+        Create Lease Template
+      </a>
     </span>
 
+    <!-- * Tenant Specific * -->
     <span *ngIf="isTenant">
       <a [routerLink]="['/tenant/bill/list']">Bills</a>
       <a [routerLink]="['/tenant/edit']">Edit Info</a>
@@ -19,16 +25,10 @@
     <a [routerLink]="['/maintenance']">Maintenance Request</a>
     <a [routerLink]="[leaseAgreementsPage()]">Lease Agreements</a>
   </span>
+
+  <!-- * Anyone * -->
   <a [routerLink]="['/hub']">RouteHub</a>
-  <a style="cursor: pointer;" (click)="goHome()">Home</a>
-  <!-- <a>Payments</a>
-  <a *ngIf="isTenant" [routerLink]="['/maintenance-requests']">
-    Maintenance<br />Requests
-  </a>
-  <a>Lease<br />Agreement</a>
-  <a *ngIf="currentUser" [routerLink]="isManager ? ['/manager'] : ['/tenant']">
-    Details
-  </a> -->
-  <a *ngIf="!currentUser" [routerLink]="['/login']">Login</a>
   <a style="cursor: pointer;" *ngIf="currentUser" (click)="logout()">Logout</a>
+  <a *ngIf="!currentUser" [routerLink]="['/login']">Login</a>
+  <a *ngIf="!currentUser" [routerLink]="['/signup']">Register</a>
 </div>
