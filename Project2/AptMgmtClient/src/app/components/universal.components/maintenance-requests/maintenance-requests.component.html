@@ -33,22 +33,28 @@
         <td>
           <span *ngIf="request.timeClosed">
             Closed by: {{ request.closedBy }}<br />
-            on: {{ request.timeClosed | date: 'MM/dd/yy HH:mm' }}<br/>
+            on: {{ request.timeClosed | date: 'MM/dd/yy h:mm aa' }}<br />
             Reason: {{ request.closeReason | maintenanceCloseReasonAsString }}
           </span>
           <span *ngIf="!request.timeClosed">Open</span>
         </td>
         <td>{{ request.openNotes }}</td>
         <td>
+          <span *ngIf="!request.closedBy">
+            <button class="btn btn-primary" (click)="cancelRequest(request)">
+              Complete
+            </button>
+            <button class="btn btn-danger" (click)="cancelRequest(request)">
+              Cancel
+            </button>
+          </span>
           <button
-            *ngIf="!request.closedBy"
-            class="btn btn-primary"
-            (click)="cancelRequest(request)"
+            style="cursor: default;"
+            *ngIf="request.closedBy"
+            class="btn btn-secondary"
+            disabled
           >
-            Cancel
-          </button>
-          <button *ngIf="request.closedBy" class="btn btn-secondary" disabled>
-            Closed
+            Completed
           </button>
         </td>
       </tr>

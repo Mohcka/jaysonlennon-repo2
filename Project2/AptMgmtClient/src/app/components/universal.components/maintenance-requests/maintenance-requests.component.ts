@@ -4,6 +4,7 @@ import { MaintenanceRequest } from 'src/app/model/maintenance-request';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import { MaintenanceRequestData } from 'src/app/model/maintenance-request-data';
 import { MaintenanceRequestUpdate } from 'src/app/model/maintenance-update';
+import { MaintenanceCloseReason } from 'src/enums/maintenance-close-reason';
 
 @Component({
   selector: 'app-maintenance-requests',
@@ -12,6 +13,7 @@ import { MaintenanceRequestUpdate } from 'src/app/model/maintenance-update';
 })
 export class MaintenanceRequestsComponent implements OnInit {
   public maintenanceRequests: MaintenanceRequest[];
+  public closeReasons = MaintenanceCloseReason;
   constructor(
     private maintenanceService: MaintenanceService,
     public authService: AuthenticationService
@@ -29,7 +31,17 @@ export class MaintenanceRequestsComponent implements OnInit {
     return this.authService.currentUserIsTenant();
   }
 
+  completeRequest(request: MaintenanceRequestUpdate): void {
+    this.maintenanceService
+      .cancelRequest({ ...request, closed: true })
+      .toPromise()
+      .then((_) => this.getAllRequests());
+  }
+
   cancelRequest(request: MaintenanceRequestUpdate): void {
+    const closeReason = this.isManager
+      ? this.closeReasons.CanceledByManagement
+      : this.closeReasons.CanceledByTenant;
     this.maintenanceService
       .cancelRequest({ ...request, closed: true })
       .subscribe((_) => this.getAllRequests());
