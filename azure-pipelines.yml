@@ -27,7 +27,7 @@ stages:
     - bash: |
         cd Project2/AptMgmtClient
         npm install
-        ./node_modules/@angular/cli/bin/ng build --prod
+        ./node_modules/@angular/cli/bin/ng build
         
     - publish: $(System.DefaultWorkingDirectory)/Project2/AptMgmtClient/dist
       artifact: ClientRelease
