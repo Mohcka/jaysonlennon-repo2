@@ -1,6 +1,5 @@
-using System;
-using System.ComponentModel.DataAnnotations.Schema;
 using AptMgmtPortalAPI.Types;
+using System;
 
 namespace AptMgmtPortalAPI.DataModel
 {

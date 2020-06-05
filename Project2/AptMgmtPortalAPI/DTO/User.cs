@@ -1,6 +1,7 @@
 using AptMgmtPortalAPI.Types;
 
-namespace AptMgmtPortalAPI.DTO {
+namespace AptMgmtPortalAPI.DTO
+{
     public class User
     {
         public int UserId { get; set; }

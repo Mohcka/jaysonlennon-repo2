@@ -1,8 +1,10 @@
-using System;
 using AptMgmtPortalAPI.Types;
+using System;
 
-namespace AptMgmtPortalAPI.DTO {
-    public class BillDTO {
+namespace AptMgmtPortalAPI.DTO
+{
+    public class BillDTO
+    {
         public int TenantId { get; set; }
         public ResourceType Resource { get; set; }
         public DateTime PeriodStart { get; set; }
@@ -14,7 +16,8 @@ namespace AptMgmtPortalAPI.DTO {
         public double Cost { get; set; }
         public double Owed { get; set; }
 
-        public BillDTO(DataModel.Bill bill) {
+        public BillDTO(DataModel.Bill bill)
+        {
             this.TenantId = bill.TenantId;
             this.Resource = bill.Resource;
             this.PeriodStart = bill.Period.PeriodStart;

@@ -1,7 +1,9 @@
 using System;
 
-namespace AptMgmtPortalAPI.DataModel {
-    public class Agreement {
+namespace AptMgmtPortalAPI.DataModel
+{
+    public class Agreement
+    {
         public int AgreementId { get; set; }
         public int AgreementTemplateId { get; set; }
         public int TenantId { get; set; }

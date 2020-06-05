@@ -1,14 +1,10 @@
-using System;
-using System.Reflection;
-using Xunit;
-using System.Linq;
-
-using AptMgmtPortalAPI;
-using AptMgmtPortalAPI.Entity;
 using AptMgmtPortalAPI.Data;
+using AptMgmtPortalAPI.Entity;
 using AptMgmtPortalAPI.Repository;
-using AptMgmtPortalAPI.Data.Repository;
 using AptMgmtPortalAPI.Types;
+using System;
+using System.Linq;
+using Xunit;
 
 namespace TestAptMgmtPortal
 {
@@ -237,8 +233,8 @@ namespace TestAptMgmtPortal
                 outOfPeriodPayment.Amount = 10;
 
                 var oldPeriod = TestUtil.NewBillingPeriod(db);
-                oldPeriod.PeriodStart = DateTime.Now - new TimeSpan(22,0,0,0);
-                oldPeriod.PeriodEnd = DateTime.Now - new TimeSpan(20,0,0,0);
+                oldPeriod.PeriodStart = DateTime.Now - new TimeSpan(22, 0, 0, 0);
+                oldPeriod.PeriodEnd = DateTime.Now - new TimeSpan(20, 0, 0, 0);
 
                 outOfPeriodPayment.BillingPeriodId = oldPeriod.BillingPeriodId;
 
@@ -456,7 +452,7 @@ namespace TestAptMgmtPortal
                 ITenant repo = (ITenant)new TenantRepository(db);
                 var getTenants = await repo.GetTenants();
                 var tenantCount = getTenants.Count();
-                Assert.Equal(tenantCount,count);
+                Assert.Equal(tenantCount, count);
             }
         }
 
@@ -507,7 +503,7 @@ namespace TestAptMgmtPortal
             var firstName = "";
             using (var db = new AptMgmtDbContext(options))
             {
-                tenant = TestUtil.NewTenant(db);             
+                tenant = TestUtil.NewTenant(db);
             }
             using (var db = new AptMgmtDbContext(options))
             {
@@ -573,7 +569,7 @@ namespace TestAptMgmtPortal
             {
                 var repo = (ITenant)new TenantRepository(db);
                 tenantId = await repo.TenantIdFromUserId(tenant.UserId ?? default);
-                Assert.Equal(tenantId,tenant.TenantId);
+                Assert.Equal(tenantId, tenant.TenantId);
             }
         }
 

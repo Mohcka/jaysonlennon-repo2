@@ -1,9 +1,6 @@
-using System;
+using AptMgmtPortalAPI.Entity;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-
-using AptMgmtPortalAPI.Entity;
-using AptMgmtPortalAPI.Types;
 
 namespace AptMgmtPortalAPI.Repository
 {

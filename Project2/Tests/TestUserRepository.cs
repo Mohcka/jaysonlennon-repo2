@@ -3,9 +3,6 @@ using AptMgmtPortalAPI.Entity;
 using AptMgmtPortalAPI.Repository;
 using Microsoft.Extensions.Logging;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Xunit;
 
 namespace TestAptMgmtPortal
@@ -113,7 +110,8 @@ namespace TestAptMgmtPortal
             using (var db = new AptMgmtDbContext(options))
             {
                 var repo = (IUser)new UserRepository(mock.Object, db);
-                var userLogin = new User {
+                var userLogin = new User
+                {
                     LoginName = "testuser",
                     Password = "testpassword"
                 };

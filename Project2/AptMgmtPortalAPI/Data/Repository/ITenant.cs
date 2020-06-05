@@ -1,9 +1,6 @@
-using System;
+using AptMgmtPortalAPI.Entity;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-
-using AptMgmtPortalAPI.Entity;
-using AptMgmtPortalAPI.Types;
 
 namespace AptMgmtPortalAPI.Repository
 {
@@ -21,7 +18,7 @@ namespace AptMgmtPortalAPI.Repository
         Task<Unit> UnitFromTenantId(int tenantId);
         Task<Unit> AssignToUnit(int tenantId, string unitNumber);
         Task<Unit> GetUnit(int unitId);
-        
+
         Task<Unit> QueryUnitByNumber(string unitNumber);
         Task<IEnumerable<Unit>> GetUnits();
         Task<Unit> UpdateUnit(Unit unit);

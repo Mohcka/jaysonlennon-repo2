@@ -1,6 +1,7 @@
 using AptMgmtPortalAPI.Types;
 
-namespace AptMgmtPortalAPI.DTO {
+namespace AptMgmtPortalAPI.DTO
+{
     public class UserDTO
     {
         public int UserId { get; set; }
@@ -11,7 +12,8 @@ namespace AptMgmtPortalAPI.DTO {
         public string Password { get; set; }
         public string ApiKey { get; set; }
         public UserDTO() { }
-        public UserDTO(Entity.User user) {
+        public UserDTO(Entity.User user)
+        {
             this.UserId = user.UserId;
             this.UserAccountType = user.UserAccountType;
             this.LoginName = user.LoginName;
