@@ -6,7 +6,7 @@ export class ApiBase {
             if (environment.memoryApi === true) {
                 return 'api/';
             } else {
-                return 'https://localhost:5001/api/v1/';
+                return 'https://pipeline-app-jwl.azurewebsites.net/api/v1/';
             }
         } else {
             return 'https://pipeline-app-jwl.azurewebsites.net/api/v1/';
