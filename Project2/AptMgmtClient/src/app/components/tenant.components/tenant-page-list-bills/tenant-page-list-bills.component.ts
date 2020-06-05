@@ -4,7 +4,6 @@ import { Bill } from 'src/app/model/bill';
 import { Resource } from 'src/enums/Resource';
 import { PayBillData } from 'src/app/model/pay-bill-data';
 import { Tenant } from 'src/app/model/tenant';
-import { TenantService } from 'src/app/services/tenant.service';
 
 @Component({
   selector: 'app-tenant-page-list-bills',
@@ -16,8 +15,7 @@ export class TenantPageListBillsComponent implements OnInit {
   public paidBills: Bill[];
   public tenant: Tenant;
 
-  constructor(private billService: BillService,
-              private tenantService: TenantService) {}
+  constructor(private billService: BillService) {}
 
   ngOnInit(): void {
     this.getBillsThisPeriod();
