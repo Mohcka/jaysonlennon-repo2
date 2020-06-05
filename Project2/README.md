@@ -26,7 +26,13 @@ The application will be responsively designed, taking into account that many use
 
 ## Third-Party APIs
 * [Google Charts](https://developers.google.com/chart/)
-* [Auth0](https://auth0.com)
+* ~~[Auth0](https://auth0.com)~~
 
 
-[Sonarcloud code analysis](https://sonarcloud.io/dashboard?id=21192782-9959-441f-9311-e9efbb0a57ef)
+[SonarCloud code analysis](https://sonarcloud.io/dashboard?id=21192782-9959-441f-9311-e9efbb0a57ef)
+
+[Live Demo](https://revp2t3fe.azurewebsites.net/)
+
+[API Reference](https://pipeline-app-jwl.azurewebsites.net/swagger/index.html)
+
+[Presentation slides](https://docs.google.com/presentation/d/1OQRKiXf7BCX5GVNY05GVr2FgwkrIiUodQfxo5ymkfiA)
