@@ -139,6 +139,9 @@ namespace AptMgmtPortalAPI.Repository
             // No tenant found with corresponding login name, so cannot create account.
             if (tenant == null) return null;
 
+            userInfo.FirstName = tenant.FirstName;
+            userInfo.LastName = tenant.LastName;
+
             return await NewUser(userInfo);
         }
     }

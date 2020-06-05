@@ -23,10 +23,10 @@
     <span *ngIf="isTenant">
       <a [routerLink]="['/tenant/bill/list']">Bills</a>
       <a [routerLink]="['/tenant/edit']">My Info</a>
+      <a [routerLink]="[leaseAgreementsPage()]">Agreements</a>
     </span>
 
     <a [routerLink]="['/maintenance']">Maintenance</a>
-    <a [routerLink]="[leaseAgreementsPage()]">Agreements</a>
   </span>
 
   <!-- * Anyone * -->

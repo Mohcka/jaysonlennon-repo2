@@ -45,8 +45,6 @@ export class TenantSignupPageComponent implements OnInit {
         tenantEmail: ['', [Validators.required, Validators.email]],
         tenantPassword: ['', Validators.required],
         tenantConfirmPassword: ['', Validators.required],
-        firstName: ['', Validators.required],
-        lastName: ['', Validators.required],
       },
       {
         validators: this.confirmValidator(
@@ -68,14 +66,11 @@ export class TenantSignupPageComponent implements OnInit {
       return;
     }
 
-    // TODO: find tenant by email to validat they exist
-
-    // return;
 
     const newUser: User = {
       loginName: this.f.tenantEmail.value,
-      firstName: this.f.firstName.value,
-      lastName: this.f.lastName.value,
+      firstName: '', // this will get populated by the server.
+      lastName: '', // this will get populated by the server.
       password: this.f.tenantPassword.value,
       userAccountType: UserAccountType.Tenant,
     };
