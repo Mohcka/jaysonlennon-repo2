@@ -129,7 +129,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                 {
                     if (existingRequest.UnitNumber == unit.UnitNumber)
                     {
-                        existingRequest = await _maintenanceRepository.UpdateMaintenanceRequest(existingRequest, model, userId, MaintenanceCloseReason.CanceledByTenant);
+                        existingRequest = await _maintenanceRepository.UpdateMaintenanceRequest(existingRequest, model, userId);
                         var flatRequest = await DTO.MaintenanceRequestDTO.Build(existingRequest, _userRepository);
                         return new ObjectResult(flatRequest);
                     }
@@ -154,7 +154,7 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                 var existingRequest = await _maintenanceRepository.GetMaintenanceRequest(model.MaintenanceRequestId);
                 if (existingRequest != null)
                 {
-                    existingRequest = await _maintenanceRepository.UpdateMaintenanceRequest(existingRequest, model, userId, MaintenanceCloseReason.Completed);
+                    existingRequest = await _maintenanceRepository.UpdateMaintenanceRequest(existingRequest, model, userId);
                     var flatRequest = await DTO.MaintenanceRequestDTO.Build(existingRequest, _userRepository);
                     return new ObjectResult(flatRequest);
                 }

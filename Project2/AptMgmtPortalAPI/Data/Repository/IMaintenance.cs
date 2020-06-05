@@ -20,7 +20,6 @@ namespace AptMgmtPortalAPI.Repository
         Task<MaintenanceRequest> GetMaintenanceRequest(int requestId);
         Task<MaintenanceRequest> UpdateMaintenanceRequest(MaintenanceRequest original,
                                                           DataModel.MaintenanceRequestModel updated,
-                                                          int userId,
-                                                          MaintenanceCloseReason reason);
+                                                          int userId);
     }
 }
