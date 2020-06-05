@@ -1,6 +1,7 @@
 using AptMgmtPortalAPI.Types;
 
-namespace AptMgmtPortalAPI.DTO {
+namespace AptMgmtPortalAPI.DTO
+{
     public class LoginOk
     {
         public UserAccountType UserAccountType { get; set; }

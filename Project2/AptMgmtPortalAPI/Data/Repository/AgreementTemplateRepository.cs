@@ -1,14 +1,8 @@
+using AptMgmtPortalAPI.Data;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-
-using AptMgmtPortalAPI.Entity;
-using AptMgmtPortalAPI.Data;
-using AptMgmtPortalAPI.Types;
-using AptMgmtPortalAPI.DataModel;
 
 namespace AptMgmtPortalAPI.Repository
 {

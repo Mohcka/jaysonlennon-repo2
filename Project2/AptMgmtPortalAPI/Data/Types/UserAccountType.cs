@@ -1,7 +1,8 @@
 
 namespace AptMgmtPortalAPI.Types
 {
-    public enum UserAccountType {
+    public enum UserAccountType
+    {
         Admin,
         Manager,
         Tenant

@@ -1,15 +1,12 @@
 
+using AptMgmtPortalAPI.Data;
+using AptMgmtPortalAPI.DataModel;
+using AptMgmtPortalAPI.Entity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-
-using AptMgmtPortalAPI.Entity;
-using AptMgmtPortalAPI.Data;
-using AptMgmtPortalAPI.Types;
-using AptMgmtPortalAPI.DataModel;
 
 namespace AptMgmtPortalAPI.Repository
 {
@@ -92,7 +89,8 @@ namespace AptMgmtPortalAPI.Repository
             // Maintenance requests are immutable once closed.
             if (original.TimeClosed != null) return original;
 
-            if (updated.CloseReason != null) {
+            if (updated.CloseReason != null)
+            {
                 original.ClosingUserId = userId;
                 original.TimeClosed = DateTime.Now;
                 original.CloseReason = updated.CloseReason;

@@ -1,22 +1,27 @@
-using System;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
-namespace AptMgmtPortalAPI.DTO {
-    public class ErrorBuilder {
+namespace AptMgmtPortalAPI.DTO
+{
+    public class ErrorBuilder
+    {
         private int _statusCode;
         private string _message;
 
-        public ErrorBuilder Message(string message) {
+        public ErrorBuilder Message(string message)
+        {
             this._message = message;
             return this;
         }
 
-        public ErrorBuilder Code(int statusCode) {
+        public ErrorBuilder Code(int statusCode)
+        {
             this._statusCode = statusCode;
             return this;
         }
 
-        public ObjectResult Build() {
+        public ObjectResult Build()
+        {
             var error = new Error();
             error.Message = String.IsNullOrEmpty(this._message) ? "An error has occurred" : this._message;
 

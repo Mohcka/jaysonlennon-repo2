@@ -1,16 +1,10 @@
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using AptMgmtPortalAPI.Entity;
 using AptMgmtPortalAPI.Data;
-using AptMgmtPortalAPI.Types;
-using AptMgmtPortalAPI.DataModel;
-using Microsoft.Extensions.Logging;
 using AptMgmtPortalAPI.DTO;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace AptMgmtPortalAPI.Repository
 {
@@ -67,7 +61,7 @@ namespace AptMgmtPortalAPI.Repository
                 .Where(t => t.Email == user.LoginName)
                 .Select(t => t)
                 .FirstOrDefaultAsync();
-            
+
             if (tenant == null) return null;
 
             tenant.UserId = user.UserId;
@@ -127,7 +121,8 @@ namespace AptMgmtPortalAPI.Repository
                 .FirstOrDefaultAsync();
         }
 
-        public async Task<Entity.User> TryCreateAccount(DTO.UserDTO userInfo) {
+        public async Task<Entity.User> TryCreateAccount(DTO.UserDTO userInfo)
+        {
             var userExists = await _context.Users
                 .Where(u => u.LoginName == userInfo.LoginName)
                 .Select(u => u)
@@ -140,7 +135,7 @@ namespace AptMgmtPortalAPI.Repository
                 .Where(t => t.Email == userInfo.LoginName)
                 .Select(t => t)
                 .FirstOrDefaultAsync();
-            
+
             // No tenant found with corresponding login name, so cannot create account.
             if (tenant == null) return null;
 

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AptMgmtPortalAPI.Types
+﻿namespace AptMgmtPortalAPI.Types
 {
     // This should mirror Resource.ts in the client app.
     public enum ResourceType

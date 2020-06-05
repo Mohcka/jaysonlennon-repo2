@@ -1,7 +1,7 @@
-﻿using System;
+﻿using AptMgmtPortalAPI.Types;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using AptMgmtPortalAPI.Types;
 
 namespace AptMgmtPortalAPI.Entity
 {
@@ -9,11 +9,11 @@ namespace AptMgmtPortalAPI.Entity
     {
         [Key]
         public int MaintenanceRequestId { get; set; }
-      
-        [Column(TypeName="NVARCHAR(48)")]
+
+        [Column(TypeName = "NVARCHAR(48)")]
         public DateTime TimeOpened { get; set; }
 
-        [Column(TypeName="NVARCHAR(48)")]
+        [Column(TypeName = "NVARCHAR(48)")]
         public DateTime? TimeClosed { get; set; }
 
         public int OpeningUserId { get; set; }

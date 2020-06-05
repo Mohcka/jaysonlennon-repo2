@@ -1,12 +1,11 @@
+using AptMgmtPortalAPI.Types;
+using AptMgmtPortalAPI.Util.Auth;
+using AptMgmtPortalAPI.Util.Auth.Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using System.Threading.Tasks;
-
-using AptMgmtPortalAPI.Util.Auth;
-using AptMgmtPortalAPI.Types;
-using AptMgmtPortalAPI.Util.Auth.Extensions;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace AptMgmtPortalAPI.Controllers.Tenant
 {

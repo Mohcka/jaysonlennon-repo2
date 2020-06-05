@@ -1,6 +1,7 @@
 using AptMgmtPortalAPI.Types;
 
-namespace AptMgmtPortalAPI.Entity {
+namespace AptMgmtPortalAPI.Entity
+{
     public class User
     {
         public User() { }
