@@ -217,6 +217,13 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
             else if (this.UserInRole(Role.Manager) || this.UserInRole(Role.Admin))
             {
                 var updated = await _agreementRepository.UpdateAgreement(newInfo);
+                if (updated == null) {
+                var err = new DTO.ErrorBuilder()
+                                .Message("An error occurred while updating the agreement.")
+                                .Code(400)
+                                .Build();
+                    return err;
+                }
                 return new ObjectResult(updated);
             }
             else

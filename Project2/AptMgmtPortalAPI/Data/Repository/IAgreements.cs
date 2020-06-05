@@ -10,10 +10,6 @@ namespace AptMgmtPortalAPI.Repository
     /// </summary>
     public interface IAgreement
     {
-        Task<Agreement> AddAgreement(int tenantId,
-                                           int agreementTemplateId,
-                                           DateTime startDate,
-                                           DateTime endDate);
         Task<IEnumerable<DataModel.Agreement>> GetAgreements();
         Task<IEnumerable<DataModel.Agreement>> GetAgreements(int tenantId);
         Task<DataModel.Agreement> GetAgreement(int agreementId);
