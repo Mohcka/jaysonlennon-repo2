@@ -38,15 +38,21 @@ export class ManagerCreateTenantPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.tenantCreationForm = this.formBuilder.group({
-      tenantEmail: ['', Validators.email],
-      unitNumber: [ '', Validators.required ],
+      tenantEmail: ['', [Validators.email, Validators.required]],
+      unitNumber: ['', Validators.required],
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
     });
 
     this.getEmptyUnits();
   }
 
   getEmptyUnits(): void {
-    this.unitService.getUnits().subscribe(units => this.emptyUnits = units.filter(u => u.tenantId === null))
+    this.unitService
+      .getUnits()
+      .subscribe(
+        (units) => (this.emptyUnits = units.filter((u) => u.tenantId === null))
+      );
   }
 
   get f() {
@@ -67,8 +73,8 @@ export class ManagerCreateTenantPageComponent implements OnInit {
       email: this.f.tenantEmail.value,
       unitNumber: this.f.unitNumber.value,
       phoneNumber: null,
-      firstName: null,
-      lastName: null,
+      firstName: this.f.firstName.value,
+      lastName: this.f.lastName.value,
     };
 
     // console.log(this.f.unitNumber.value);
@@ -79,7 +85,8 @@ export class ManagerCreateTenantPageComponent implements OnInit {
       .pipe(first())
       .toPromise()
       .then(
-        (_) => this.router.navigate([this.authenticationService.getHomeRoute()]),
+        (_) =>
+          this.router.navigate([this.authenticationService.getHomeRoute()]),
         (error: HttpErrorResponse) => {
           this.error =
             error.error && error.error.message
