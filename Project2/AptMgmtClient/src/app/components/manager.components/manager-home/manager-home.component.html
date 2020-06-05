@@ -1,1 +1,72 @@
-<p>manager-home works!</p>
+<div>
+  <h2 class="mb-4">Welcome Manager</h2>
+
+  <!-- * Tenants * -->
+
+  <div class="manager-links col-4 p-0">
+    <div class="mb-4">
+      <h4>Tenants</h4>
+      <hr class="mt-0" />
+      <!-- <a
+        [routerLink]="['/manager/tenants/list']"
+        class="btn btn-primary mb-1 w-100"
+      >
+        View Tenants
+      </a> -->
+      <a
+        [routerLink]="['/manager/tenants/create']"
+        class="btn btn-primary mb-1 w-100"
+      >
+        Register New Tenant
+      </a>
+    </div>
+
+    <!-- * Lease * -->
+
+    <div class="mb-4">
+      <h4>Manage Agreements</h4>
+      <hr class="mt-0" />
+      <div class="p-0">
+        <a
+          [routerLink]="['/manager/agreement/assign']"
+          class="btn btn-primary mb-1 w-100"
+        >
+          Assign Agreement To a Tenant
+        </a>
+        <a
+          [routerLink]="['/manager/agreement/new-template']"
+          class="btn btn-primary mb-1 w-100"
+        >
+          Create a New Agreement Template
+        </a>
+        <a
+          [routerLink]="['/manager/agreement/list']"
+          class="btn btn-primary mb-1 w-100"
+        >
+          View Agreements
+        </a>
+      </div>
+    </div>
+
+    <!-- * Maintenance * -->
+
+    <div class="mb-4">
+      <h4>Maintenance Requests</h4>
+      <hr class="mt-0" />
+      <div class="p-0">
+        <a
+          [routerLink]="['/manager/maintenance/list']"
+          class="btn btn-primary mb-1 w-100"
+        >
+          View Maintenance Requests
+        </a>
+        <a
+          [routerLink]="['/manager/maintenance/new']"
+          class="btn btn-primary mb-1 w-100"
+        >
+          New Maintenance Request
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -4,6 +4,7 @@ import { MaintenanceService } from 'src/app/services/maintenance.service';
 import { MaintenanceRequest } from 'src/app/model/maintenance-request';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import { MaintenanceRequestUpdate } from 'src/app/model/maintenance-update';
+import { MaintenanceCloseReason } from 'src/enums/maintenance-close-reason';
 import { Tenant } from 'src/app/model/tenant';
 
 @Component({
@@ -11,6 +12,7 @@ import { Tenant } from 'src/app/model/tenant';
   templateUrl: './maintenance-requests.component.html',
 })
 export class MaintenanceRequestsComponent implements OnInit {
+  public closeReason = MaintenanceCloseReason;
   public maintenanceRequests: MaintenanceRequest[];
   tenant: Tenant;
 
@@ -26,7 +28,7 @@ export class MaintenanceRequestsComponent implements OnInit {
   }
 
   getTenant(): void {
-    this.tenantService.getTenant().subscribe(t => this.tenant = t);
+    this.tenantService.getTenant().subscribe((t) => (this.tenant = t));
   }
 
   get isManager(): boolean {
@@ -37,9 +39,22 @@ export class MaintenanceRequestsComponent implements OnInit {
     return this.authService.currentUserIsTenant();
   }
 
-  cancelRequest(request: MaintenanceRequestUpdate): void {
+  completeRequest(request: MaintenanceRequestUpdate): void {
     this.maintenanceService
-      .cancelRequest({ ...request, closed: true })
+      .cancelRequest({
+        ...request,
+        closeReason: MaintenanceCloseReason.Completed,
+      })
+      .toPromise()
+      .then((_) => this.getAllRequests());
+  }
+
+  cancelRequest(request: MaintenanceRequestUpdate): void {
+    const closeReason = this.isManager
+      ? MaintenanceCloseReason.CanceledByManagement
+      : MaintenanceCloseReason.CanceledByTenant;
+    this.maintenanceService
+      .cancelRequest({ ...request, closeReason: closeReason })
       .subscribe((_) => this.getAllRequests());
   }
 

@@ -1,13 +1,77 @@
-<h2 *ngIf="tenant">Welcome {{ tenant.firstName }}</h2>
+<div class="col-4">
+  <h2 *ngIf="tenant">Welcome {{ tenant.firstName }}</h2>
 
-<hr />
+  <hr />
 
-<a
-  *ngIf="maintenanceRequests && maintenanceRequests.length"
-  class="btn btn-primary"
-  [routerLink]="['/tenant/maintenance/list']"
->
-  {{ maintenanceRequests.length }} maintenance requests
-</a>
+  <div class="mb-4">
+    <h4>Maintenance Requests</h4>
+    <hr class="mt-0" />
+    <div class="p-0">
+      <a
+        *ngIf="openMaintenanceRequests && openMaintenanceRequests.length"
+        class="btn btn-primary mb-1 w-100"
+        [routerLink]="['/tenant/maintenance/list']"
+      >
+        {{ openMaintenanceRequests.length }} Open Maintenance Requests
+      </a>
+      <a
+        href="#"
+        *ngIf="openMaintenanceRequests && !openMaintenanceRequests.length"
+        class="btn btn-success mb-1 w-100 "
+        [routerLink]="['/tenant/maintenance/list']"
+      >
+        No Open Maintenance Requests
+      </a>
+      <a
+        [routerLink]="['/tenant/maintenance/new']"
+        class="btn btn-primary mb-1 w-100"
+      >
+        New Maintenance Request
+      </a>
+    </div>
+  </div>
 
-<hr />
+  <div class="mb-4">
+    <h4>Bills</h4>
+    <hr class="mt-0" />
+    <div class="p-0">
+      <a
+        *ngIf="bills && bills.length"
+        class="btn btn-primary mb-1 w-100"
+        [routerLink]="['/tenant/bill/list']"
+      >
+        {{ bills.length }} unpaid bills
+      </a>
+      <a
+        href="#"
+        *ngIf="bills && !bills.length"
+        class="btn btn-success mb-1 w-100"
+        [routerLink]="['/tenant/bill/list']"
+      >
+        No Unpaid Bills
+      </a>
+    </div>
+  </div>
+
+  <div class="mb-4">
+    <h4>Agreements Agreements</h4>
+    <hr class="mt-0" />
+    <div class="p-0">
+      <a
+        *ngIf="unsignedAgreements && unsignedAgreements.length"
+        class="btn btn-primary mb-1 w-100"
+        [routerLink]="['/tenant/agreement/list']"
+      >
+        {{ unsignedAgreements.length }} Unsigned Agreements
+      </a>
+      <a
+        href="#"
+        *ngIf="unsignedAgreements && !unsignedAgreements.length"
+        [routerLink]="['/tenant/agreement/list']"
+        class="btn btn-success mb-1 w-100"
+      >
+        All Agreements Signed
+      </a>
+    </div>
+  </div>
+</div>

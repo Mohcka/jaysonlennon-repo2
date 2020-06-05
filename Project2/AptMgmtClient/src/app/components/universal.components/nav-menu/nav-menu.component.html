@@ -1,34 +1,37 @@
 <div class="header">
-  <h1>Project 2</h1>
-  <p>Apartment Property Management</p>
+  <h1>Apartment Management Portal</h1>
 </div>
 <div class="sidenav">
+  <span>
+    <span>
+      <a href="#" style="cursor: pointer;" (click)="goHome()">Home</a>
+    </span>
+  </span>
+
+  <!-- * User Specific * -->
   <span *ngIf="currentUser">
+    <!-- * Manager specific * -->
     <span *ngIf="isManager">
+      <a [routerLink]="['/manager/agreement/list']">Agreements</a>
       <a [routerLink]="['/manager/agreement/assign']">Assign Lease</a>
-      <a [routerLink]="['/manager/agreement/new-template']"
-        >Create Lease Template</a
-      >
+      <a [routerLink]="['/manager/agreement/new-template']">
+        Create Lease Template
+      </a>
     </span>
 
+    <!-- * Tenant Specific * -->
     <span *ngIf="isTenant">
       <a [routerLink]="['/tenant/bill/list']">Bills</a>
-      <a [routerLink]="['/tenant/edit']">Edit Info</a>
+      <a [routerLink]="['/tenant/edit']">My Info</a>
     </span>
 
-    <a [routerLink]="['/maintenance']">Maintenance Request</a>
-    <a [routerLink]="[leaseAgreementsPage()]">Lease Agreements</a>
+    <a [routerLink]="['/maintenance']">Maintenance</a>
+    <a [routerLink]="[leaseAgreementsPage()]">Agreements</a>
   </span>
-  <a [routerLink]="['/hub']">RouteHub</a>
-  <a style="cursor: pointer;" (click)="goHome()">Home</a>
-  <!-- <a>Payments</a>
-  <a *ngIf="isTenant" [routerLink]="['/maintenance-requests']">
-    Maintenance<br />Requests
-  </a>
-  <a>Lease<br />Agreement</a>
-  <a *ngIf="currentUser" [routerLink]="isManager ? ['/manager'] : ['/tenant']">
-    Details
-  </a> -->
-  <a *ngIf="!currentUser" [routerLink]="['/login']">Login</a>
-  <a style="cursor: pointer;" *ngIf="currentUser" (click)="logout()">Logout</a>
+
+  <!-- * Anyone * -->
+  <!--<a [routerLink]="['/hub']">RouteHub</a>-->
+  <a href="#" style="cursor: pointer;" *ngIf="currentUser" (click)="logout()">Logout</a>
+  <a href="#" *ngIf="!currentUser" [routerLink]="['/login']">Login</a>
+  <a href="#" *ngIf="!currentUser" [routerLink]="['/signup']">Register</a>
 </div>
