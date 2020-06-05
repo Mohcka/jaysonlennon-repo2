@@ -1,12 +1,10 @@
+using AptMgmtPortalAPI.Util.Auth;
+using AptMgmtPortalAPI.Util.Auth.Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using System.Threading.Tasks;
-
-using AptMgmtPortalAPI.Util.Auth.Extensions;
-using AptMgmtPortalAPI.Util.Auth;
-using AptMgmtPortalAPI.Types;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace AptMgmtPortalAPI.Controllers.Tenant
 {
@@ -161,7 +159,8 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                 info.UnitNumber = unitNumber.UnitNumber;
 
                 var tenant = await _tenantRepository.UpdateTenantInfo((int)tenantId, info);
-                if (tenant == null) {
+                if (tenant == null)
+                {
                     var err = new DTO.ErrorBuilder()
                                     .Message("Tenant already exists with that login information.")
                                     .Code(409)
@@ -173,7 +172,8 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
             else if (this.UserInRole(Role.Manager) || this.UserInRole(Role.Admin))
             {
                 var tenant = await _tenantRepository.UpdateTenantInfo(info.TenantId, info);
-                if (tenant == null) {
+                if (tenant == null)
+                {
                     var err = new DTO.ErrorBuilder()
                                     .Message("Tenant already exists with that login information.")
                                     .Code(409)

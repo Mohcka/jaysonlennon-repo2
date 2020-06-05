@@ -1,11 +1,10 @@
+using AptMgmtPortalAPI.Types;
+using AptMgmtPortalAPI.Util.Auth;
+using AptMgmtPortalAPI.Util.Auth.Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
-
-using AptMgmtPortalAPI.Util.Auth.Extensions;
-using AptMgmtPortalAPI.Util.Auth;
-using AptMgmtPortalAPI.Types;
 
 namespace AptMgmtPortalAPI.Controllers.Tenant
 {
@@ -77,7 +76,8 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
                 userInfo.UserId = thisUserId;
 
                 var updatedUser = await _userRepository.UpdateUserInfo(userInfo);
-                if (updatedUser == null) {
+                if (updatedUser == null)
+                {
                     var err = new DTO.ErrorBuilder()
                                     .Message("User already exists with that login information or user not found.")
                                     .Code(409)
@@ -89,7 +89,8 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
             else if (this.UserInRole(Role.Manager) || this.UserInRole(Role.Admin))
             {
                 var updatedUser = await _userRepository.UpdateUserInfo(userInfo);
-                if (updatedUser == null) {
+                if (updatedUser == null)
+                {
                     var err = new DTO.ErrorBuilder()
                                     .Message("User already exists with that login information or user not found.")
                                     .Code(409)

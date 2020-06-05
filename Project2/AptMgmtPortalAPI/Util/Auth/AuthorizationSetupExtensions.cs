@@ -1,10 +1,5 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.DependencyInjection;
-using System.Linq;
-
-using AptMgmtPortalAPI.Data;
-using Microsoft.Extensions.Logging;
-using System;
 
 namespace AptMgmtPortalAPI.Util.Auth
 {

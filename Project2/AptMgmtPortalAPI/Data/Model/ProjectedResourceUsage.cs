@@ -1,8 +1,10 @@
 using AptMgmtPortalAPI.Entity;
 using AptMgmtPortalAPI.Types;
 
-namespace AptMgmtPortalAPI.DataModel {
-    public class ProjectedResourceUsage {
+namespace AptMgmtPortalAPI.DataModel
+{
+    public class ProjectedResourceUsage
+    {
         public int TenantId { get; set; }
         public ResourceType Resource { get; set; }
         public BillingPeriod Period { get; set; }

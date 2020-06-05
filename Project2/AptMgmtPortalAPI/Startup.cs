@@ -1,16 +1,14 @@
-using System;
+using AptMgmtPortalAPI.Data;
+using AptMgmtPortalAPI.Util;
+using AptMgmtPortalAPI.Util.Auth;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using AptMgmtPortalAPI.Data;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-
-using AptMgmtPortalAPI.Util.Auth;
-using AptMgmtPortalAPI.Util;
+using System;
 
 namespace AptMgmtPortalAPI
 {
@@ -30,12 +28,13 @@ namespace AptMgmtPortalAPI
 
             services.AddDbContext<AptMgmtDbContext>(options => options
                 .UseSqlServer(Configuration.GetConnectionString("AptMgmtDbContext")));
-                //.UseSqlite("Filename=app.sqlite"));
+            //.UseSqlite("Filename=app.sqlite"));
 
-            services.AddLogging(logger => 
+            services.AddLogging(logger =>
             {
                 Host.CreateDefaultBuilder()
-                .ConfigureLogging(logging => {
+                .ConfigureLogging(logging =>
+                {
                     logging.ClearProviders();
                     logging.AddConsole();
                 });
@@ -44,7 +43,8 @@ namespace AptMgmtPortalAPI
             services.AddCors(options =>
             {
                 options.AddDefaultPolicy(
-                                  builder => {
+                                  builder =>
+                                  {
                                       builder.AllowAnyHeader();
                                       builder.AllowAnyMethod();
                                       builder.WithOrigins(
@@ -80,7 +80,8 @@ namespace AptMgmtPortalAPI
                 context.Database.Migrate();
                 context.SaveChanges();
             }
-            catch (Exception e) {
+            catch (Exception e)
+            {
                 Console.WriteLine($"Failed to apply migrations: {e}");
             }
 

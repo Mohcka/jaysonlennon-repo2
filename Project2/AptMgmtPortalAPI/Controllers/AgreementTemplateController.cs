@@ -1,12 +1,9 @@
-using System.Linq;
+using AptMgmtPortalAPI.Util.Auth;
+using AptMgmtPortalAPI.Util.Auth.Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
-
-using AptMgmtPortalAPI.Util.Auth.Extensions;
-using AptMgmtPortalAPI.Util.Auth;
-using AptMgmtPortalAPI.Types;
 
 namespace AptMgmtPortalAPI.Controllers.Tenant
 {
@@ -15,8 +12,6 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
     public class AgreementTemplateController : ControllerBase
     {
         private readonly ILogger<AgreementTemplateController> _logger;
-        private readonly Repository.IUser _userRepository;
-        private readonly Repository.ITenant _tenantRepository;
         private readonly Repository.IAgreementTemplate _agreementTemplateRepository;
         public AgreementTemplateController(ILogger<AgreementTemplateController> logger,
                                    Repository.IAgreementTemplate agreementTemplateRepository)

@@ -1,15 +1,9 @@
+using AptMgmtPortalAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-
-using AptMgmtPortalAPI.Entity;
-using AptMgmtPortalAPI.Data;
-using AptMgmtPortalAPI.Types;
-using AptMgmtPortalAPI.DataModel;
-using AptMgmtPortalAPI.DTO;
 
 namespace AptMgmtPortalAPI.Repository
 {
@@ -93,6 +87,11 @@ namespace AptMgmtPortalAPI.Repository
 
         public async Task<Entity.Agreement> UpdateAgreement(Entity.Agreement updated)
         {
+            if (updated.StartDate != null && updated.EndDate != null)
+            {
+                if (updated.StartDate > updated.EndDate) return null;
+            }
+
             var existingAgreement = await _context.Agreements
                 .Where(a => a.AgreementId == updated.AgreementId)
                 .Select(a => a)
@@ -106,7 +105,6 @@ namespace AptMgmtPortalAPI.Repository
             }
             else
             {
-                Console.WriteLine($"updated start date = {updated.StartDate}");
                 existingAgreement.AgreementTemplateId = updated.AgreementTemplateId;
                 if (updated.StartDate != null) existingAgreement.StartDate = updated.StartDate;
                 if (updated.EndDate != null) existingAgreement.EndDate = updated.EndDate;
@@ -120,21 +118,6 @@ namespace AptMgmtPortalAPI.Repository
                     .Select(a => a)
                     .FirstOrDefaultAsync();
             }
-
-        }
-
-        public async Task<Entity.Agreement> AddAgreement(int tenantId, int agreementTemplateId, DateTime startDate, DateTime endDate)
-        {
-            var agreement = new Entity.Agreement();
-            agreement.AgreementTemplateId = agreementTemplateId;
-            agreement.TenantId = tenantId;
-            agreement.StartDate = startDate;
-            agreement.EndDate = endDate;
-
-            await _context.AddAsync(agreement);
-            await _context.SaveChangesAsync();
-
-            return agreement;
         }
     }
 }

@@ -1,11 +1,12 @@
-using System;
-using System.Linq;
-using System.Threading.Tasks;
 using AptMgmtPortalAPI.Repository;
 using AptMgmtPortalAPI.Types;
+using System;
+using System.Threading.Tasks;
 
-namespace AptMgmtPortalAPI.DTO {
-    public class MaintenanceRequestDTO {
+namespace AptMgmtPortalAPI.DTO
+{
+    public class MaintenanceRequestDTO
+    {
         public int MaintenanceRequestId { get; set; }
         public DateTime TimeOpened { get; set; }
         public DateTime? TimeClosed { get; set; }
@@ -18,7 +19,8 @@ namespace AptMgmtPortalAPI.DTO {
         public string ResolutionNotes { get; set; }
         public string UnitNumber { get; set; }
 
-        public static async Task<MaintenanceRequestDTO> Build(Entity.MaintenanceRequest request, IUser userRepository) {
+        public static async Task<MaintenanceRequestDTO> Build(Entity.MaintenanceRequest request, IUser userRepository)
+        {
             var obj = new MaintenanceRequestDTO();
             obj.MaintenanceRequestId = request.MaintenanceRequestId;
             obj.TimeOpened = request.TimeOpened;
@@ -26,11 +28,16 @@ namespace AptMgmtPortalAPI.DTO {
 
             var openingUser = await userRepository.UserFromId(request.OpeningUserId);
 
-            if (openingUser.UserAccountType == UserAccountType.Manager) {
+            if (openingUser.UserAccountType == UserAccountType.Manager)
+            {
                 obj.OpenedBy = $"{openingUser.FirstName} (Manager)";
-            } else if (openingUser.UserAccountType == UserAccountType.Admin) {
+            }
+            else if (openingUser.UserAccountType == UserAccountType.Admin)
+            {
                 obj.OpenedBy = $"{openingUser.FirstName} (Admin)";
-            } else {
+            }
+            else
+            {
                 obj.OpenedBy = $"{openingUser.FirstName}";
             }
 
@@ -39,11 +46,16 @@ namespace AptMgmtPortalAPI.DTO {
                 var closingUser = await userRepository.UserFromId((int)request.ClosingUserId);
                 if (closingUser != null)
                 {
-                    if (closingUser.UserAccountType == UserAccountType.Manager) {
+                    if (closingUser.UserAccountType == UserAccountType.Manager)
+                    {
                         obj.ClosedBy = $"{closingUser.FirstName} (Manager)";
-                    } else if (closingUser.UserAccountType == UserAccountType.Admin) {
+                    }
+                    else if (closingUser.UserAccountType == UserAccountType.Admin)
+                    {
                         obj.ClosedBy = $"{closingUser.FirstName} (Admin)";
-                    } else {
+                    }
+                    else
+                    {
                         obj.ClosedBy = $"{closingUser.FirstName}";
                     }
                 }

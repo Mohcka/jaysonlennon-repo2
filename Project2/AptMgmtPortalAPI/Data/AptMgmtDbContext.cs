@@ -40,7 +40,7 @@ namespace AptMgmtPortalAPI.Data
             modelBuilder.Seed();
         }
 
-       
+
 
     }
 

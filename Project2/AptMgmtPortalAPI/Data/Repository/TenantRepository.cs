@@ -1,14 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AptMgmtPortalAPI.Data;
+using AptMgmtPortalAPI.Entity;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-
-using AptMgmtPortalAPI.Entity;
-using AptMgmtPortalAPI.Data;
-using AptMgmtPortalAPI.Types;
-using AptMgmtPortalAPI.DataModel;
 
 namespace AptMgmtPortalAPI.Repository
 {
@@ -95,7 +91,7 @@ namespace AptMgmtPortalAPI.Repository
                 .Where(t => t.Email.ToLower() == newInfo.Email.ToLower())
                 .Where(t => t.TenantId != tenantId)
                 .CountAsync() > 0;
-            
+
             if (emailAlreadyExists) return null;
 
             var tenant = await TenantFromId(tenantId);
@@ -111,9 +107,12 @@ namespace AptMgmtPortalAPI.Repository
 
             await _context.SaveChangesAsync();
 
-            if (unit == null) {
+            if (unit == null)
+            {
                 return new DTO.TenantInfoDTO(tenant, null);
-            } else {
+            }
+            else
+            {
                 return new DTO.TenantInfoDTO(tenant, unit.UnitNumber);
             }
         }
@@ -184,9 +183,12 @@ namespace AptMgmtPortalAPI.Repository
                 .Select(u => u)
                 .FirstOrDefaultAsync();
 
-            if (existingUnit == null) {
+            if (existingUnit == null)
+            {
                 await _context.AddAsync(unit);
-            } else {
+            }
+            else
+            {
                 existingUnit.UnitNumber = unit.UnitNumber;
                 existingUnit.TenantId = unit.TenantId;
             }

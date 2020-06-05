@@ -1,10 +1,9 @@
-using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Data.Sqlite;
-
 using AptMgmtPortalAPI.Data;
 using AptMgmtPortalAPI.Entity;
 using AptMgmtPortalAPI.Types;
+using Microsoft.Data.Sqlite;
+using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace TestAptMgmtPortal
 {
@@ -37,9 +36,9 @@ namespace TestAptMgmtPortal
             return tenant;
         }
 
-        public static Unit NewUnit(AptMgmtDbContext context) 
+        public static Unit NewUnit(AptMgmtDbContext context)
         {
-            
+
             var unit = new Unit();
             unit.UnitNumber = "3111";
             unit.TenantId = TestUtil.NewTenant(context).TenantId;
@@ -69,7 +68,7 @@ namespace TestAptMgmtPortal
 
         public static AptMgmtPortalAPI.DTO.UserDTO NewUserDtoWithCredential(AptMgmtDbContext context)
         {
-            var userDto = new AptMgmtPortalAPI.DTO.UserDTO 
+            var userDto = new AptMgmtPortalAPI.DTO.UserDTO
             {
                 FirstName = "original first name",
                 LoginName = "testUser",
@@ -78,7 +77,7 @@ namespace TestAptMgmtPortal
             return userDto;
         }
 
-        public static (AptMgmtPortalAPI.DTO.UserDTO, Tenant) UserInfoAndTenantForUserRepo(AptMgmtDbContext context) 
+        public static (AptMgmtPortalAPI.DTO.UserDTO, Tenant) UserInfoAndTenantForUserRepo(AptMgmtDbContext context)
         {
             var userInfo = TestUtil.NewUserDtoWithCredential(context);
             var tenant = new Tenant
@@ -89,7 +88,7 @@ namespace TestAptMgmtPortal
             };
             context.Add(tenant);
             context.SaveChanges();
-            return (userInfo,tenant);
+            return (userInfo, tenant);
 
         }
 
@@ -128,7 +127,7 @@ namespace TestAptMgmtPortal
         public static BillingPeriod NewBillingPeriod(AptMgmtDbContext context)
         {
             var period = new BillingPeriod();
-            var timeSpan = new TimeSpan(0,0,5);
+            var timeSpan = new TimeSpan(0, 0, 5);
 
             // All test data is 2 years into the future.
             var testPeriod = new TimeSpan(730, 0, 0, 0);

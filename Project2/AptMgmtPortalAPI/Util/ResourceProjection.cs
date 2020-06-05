@@ -12,11 +12,14 @@ namespace AptMgmtPortalAPI.Util
             double daysRemainingInPeriod = (periodEnd - now).TotalDays;
             double daysSampled = daysInPeriod - daysRemainingInPeriod;
 
-            if (daysRemainingInPeriod > 0) {
-                var averageDailyUsage = usageInPeriod/ daysSampled;
+            if (daysRemainingInPeriod > 0)
+            {
+                var averageDailyUsage = usageInPeriod / daysSampled;
                 var projectedUsageTotal = usageInPeriod + (averageDailyUsage * daysRemainingInPeriod);
                 return projectedUsageTotal;
-            } else {
+            }
+            else
+            {
                 return usageInPeriod;
             }
         }

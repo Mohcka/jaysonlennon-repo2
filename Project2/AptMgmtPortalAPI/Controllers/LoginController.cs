@@ -1,10 +1,6 @@
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
-
-using AptMgmtPortalAPI.Util.Auth;
-using AptMgmtPortalAPI.Types;
 
 namespace AptMgmtPortalAPI.Controllers.User
 {
@@ -30,10 +26,13 @@ namespace AptMgmtPortalAPI.Controllers.User
         {
             var user = await _userRepository.Login(loginInfo.UserName, loginInfo.Password);
 
-            if (user != null) {
+            if (user != null)
+            {
                 var loginOkDTO = new DTO.LoginOk(user);
                 return new ObjectResult(loginOkDTO);
-            } else {
+            }
+            else
+            {
                 var error = new DTO.ErrorBuilder()
                                    .Message("Invalid credentials")
                                    .Code(401)

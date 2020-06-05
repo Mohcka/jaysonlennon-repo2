@@ -1,12 +1,10 @@
-using System.Linq;
+using AptMgmtPortalAPI.Util.Auth;
+using AptMgmtPortalAPI.Util.Auth.Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System.Linq;
 using System.Threading.Tasks;
-
-using AptMgmtPortalAPI.Util.Auth.Extensions;
-using AptMgmtPortalAPI.Util.Auth;
-using AptMgmtPortalAPI.Types;
 
 namespace AptMgmtPortalAPI.Controllers.Tenant
 {
@@ -219,6 +217,13 @@ namespace AptMgmtPortalAPI.Controllers.Tenant
             else if (this.UserInRole(Role.Manager) || this.UserInRole(Role.Admin))
             {
                 var updated = await _agreementRepository.UpdateAgreement(newInfo);
+                if (updated == null) {
+                var err = new DTO.ErrorBuilder()
+                                .Message("An error occurred while updating the agreement.")
+                                .Code(400)
+                                .Build();
+                    return err;
+                }
                 return new ObjectResult(updated);
             }
             else
